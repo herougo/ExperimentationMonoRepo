@@ -43,7 +43,7 @@ namespace HearthstoneFormsApp.UI.WebForm.ControlManager
                 int panelXOffset = i * (pbCardWidth + _margin) + _margin;
                 PBOpponentHand[i] = new PictureBox();
                 PBOpponentHand[i].Location = new System.Drawing.Point(panelXOffset, _margin);
-                PBOpponentHand[i].Name = "pbOpponentHand";
+                PBOpponentHand[i].Name = "pbOpponentHand" + i;
                 PBOpponentHand[i].Size = new System.Drawing.Size(pbCardWidth, pbCardHeight);
                 PBOpponentHand[i].BackColor = System.Drawing.Color.LightGray; // TODO: remove
 
@@ -54,32 +54,35 @@ namespace HearthstoneFormsApp.UI.WebForm.ControlManager
             #endregion
 
             int offsetAfterOpponentHand = _margin * 2 + panelHeight;
-
+            int offsetAfterOpponent = offsetAfterOpponentHand + _margin + panelHeight;
+            int offsetAfterOpponentBattleboard = offsetAfterOpponent + _margin + panelHeight;
+            int offsetAfterPlayerBattleboard = offsetAfterOpponentBattleboard + _margin + panelHeight;
+            int offsetAfterPlayer = offsetAfterPlayerBattleboard + _margin + panelHeight;
 
             #region PlayerHand
-            // POpponentHand
-            POpponentHand = new Panel();
-            POpponentHand.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
-            POpponentHand.Location = new System.Drawing.Point(_margin, _margin);
-            POpponentHand.Name = "pOpponentHand";
-            POpponentHand.Size = new System.Drawing.Size(handPanelWidth, panelHeight);
+            // PPlayerHand
+            PPlayerHand = new Panel();
+            PPlayerHand.BackColor = System.Drawing.Color.FromArgb(192, 192, 255);
+            PPlayerHand.Location = new System.Drawing.Point(_margin, offsetAfterPlayer);
+            PPlayerHand.Name = "pOpponentHand";
+            PPlayerHand.Size = new System.Drawing.Size(handPanelWidth, panelHeight);
 
-            // PBOpponentHand
-            PBOpponentHand = new PictureBox[_handLimit];
+            // PBPlayerHand
+            PBPlayerHand = new PictureBox[_handLimit];
 
             for (int i = 0; i < _handLimit; i++)
             {
                 int panelXOffset = i * (pbCardWidth + _margin) + _margin;
-                PBOpponentHand[i] = new PictureBox();
-                PBOpponentHand[i].Location = new System.Drawing.Point(panelXOffset, _margin);
-                PBOpponentHand[i].Name = "pbOpponentHand";
-                PBOpponentHand[i].Size = new System.Drawing.Size(pbCardWidth, pbCardHeight);
-                PBOpponentHand[i].BackColor = System.Drawing.Color.LightGray; // TODO: remove
+                PBPlayerHand[i] = new PictureBox();
+                PBPlayerHand[i].Location = new System.Drawing.Point(panelXOffset, _margin);
+                PBPlayerHand[i].Name = "pbOpponentHand" + i;
+                PBPlayerHand[i].Size = new System.Drawing.Size(pbCardWidth, pbCardHeight);
+                PBPlayerHand[i].BackColor = System.Drawing.Color.LightGray; // TODO: remove
 
-                POpponentHand.Controls.Add(PBOpponentHand[i]);
+                PPlayerHand.Controls.Add(PBPlayerHand[i]);
             }
 
-            PMain.Controls.Add(POpponentHand);
+            PMain.Controls.Add(PPlayerHand);
             #endregion
             /*
             
