@@ -1,4 +1,7 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
+using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace HearthstoneFormsApp.UI.WebForm.ControlManager
 {
@@ -83,6 +86,42 @@ namespace HearthstoneFormsApp.UI.WebForm.ControlManager
             }
 
             PMain.Controls.Add(PPlayerHand);
+            #endregion
+
+            #region Tab Control
+            int tcInfoHeight = offsetAfterPlayer - _margin - offsetAfterOpponentHand;
+            int tcInfoWidth = (tcInfoHeight * _baseCardWidth) / _baseCardHeight;
+            TCInfo = new TabControl();
+            TabPage tpCardView = new TabPage();
+            TabPage tpGameLog = new TabPage();
+            int pageContentsHeight = tcInfoHeight - _margin * 2 - 10 - 3*2;
+            int pageContentsWidth = tcInfoWidth - _margin * 2 - 3*2;
+
+            TCInfo.Controls.Add(tpCardView);
+            TCInfo.Controls.Add(tpGameLog);
+            TCInfo.Size = new System.Drawing.Size(tcInfoWidth, tcInfoHeight);
+            TCInfo.Name = "tcInfo";
+            TCInfo.SelectedIndex = 0;
+            TCInfo.Location = new System.Drawing.Point(_margin, offsetAfterOpponentHand);
+
+            tpCardView.Name = "tpCardView";
+            tpCardView.Location = new System.Drawing.Point(10, 47);
+            tpCardView.Padding = new System.Windows.Forms.Padding(3);
+            tpCardView.Text = "Card View";
+
+            PBCardView = new PictureBox();
+            PBCardView.Location = new System.Drawing.Point(_margin, _margin);
+            PBCardView.Name = "pbCardView";
+            PBCardView.Size = new System.Drawing.Size(pageContentsWidth, pageContentsHeight);
+            PBCardView.BackColor = System.Drawing.Color.LightGray; // TODO: remove
+            tpCardView.Controls.Add(PBCardView);
+
+            tpGameLog.Name = "tpGameLog";
+            tpGameLog.Location = new System.Drawing.Point(10, 47);
+            tpGameLog.Padding = new System.Windows.Forms.Padding(3);
+            tpGameLog.Text = "Game Log";
+
+            PMain.Controls.Add(TCInfo);
             #endregion
             /*
             
