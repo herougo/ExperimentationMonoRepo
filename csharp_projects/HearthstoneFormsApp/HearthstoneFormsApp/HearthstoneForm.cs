@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HearthstoneFormsApp.UI.WebForm.ControlManager;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,11 @@ namespace HearthstoneFormsApp
 {
     public partial class HearthstoneForm : Form
     {
+        HSGameControlManager HearthstoneControlManager;
+
         public HearthstoneForm()
         {
+            HearthstoneControlManager = new HSGameControlManager(this);
             InitializeComponent();
         }
     }

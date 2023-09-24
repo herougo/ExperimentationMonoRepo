@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\WebForm\ControlManager\HSGameControlManager.InitializeControls.cs" />
     <Compile Include="UI\WebForm\ControlManager\HSGameControlManager.cs" />
     <EmbeddedResource Include="HearthstoneForm.resx">
       <DependentUpon>HearthstoneForm.cs</DependentUpon>
