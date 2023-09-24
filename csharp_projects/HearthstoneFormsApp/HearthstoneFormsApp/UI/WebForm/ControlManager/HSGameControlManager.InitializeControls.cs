@@ -17,12 +17,15 @@ namespace HearthstoneFormsApp.UI.WebForm.ControlManager
             const int _baseCardHeight = 200;
             const int _baseCardWidth = 140;
             const int _handLimit = 10;
+            const int _boardLimit = 7;
 
             int mainHeightMinusMargins = _mainHeight - _numVerticalMargins * _margin;
             int panelHeight = mainHeightMinusMargins / _numNonMainPanels;
             int pbCardHeight = panelHeight - 2 * _margin;
             int pbCardWidth = (pbCardHeight * _baseCardWidth) / _baseCardHeight;
             int handPanelWidth = _margin * (_handLimit + 1) + pbCardWidth * _handLimit;
+            int battleboardPanelWidth = _margin * (_boardLimit + 1) + pbCardWidth * _boardLimit;
+            int battleboardPanelXOffset = _margin * 2 + pbCardWidth;
 
             // PMain
             PMain = new Panel();
@@ -56,17 +59,63 @@ namespace HearthstoneFormsApp.UI.WebForm.ControlManager
             PMain.Controls.Add(POpponentHand);
             #endregion
 
-            int offsetAfterOpponentHand = _margin * 2 + panelHeight;
-            int offsetAfterOpponent = offsetAfterOpponentHand + _margin + panelHeight;
-            int offsetAfterOpponentBattleboard = offsetAfterOpponent + _margin + panelHeight;
-            int offsetAfterPlayerBattleboard = offsetAfterOpponentBattleboard + _margin + panelHeight;
-            int offsetAfterPlayer = offsetAfterPlayerBattleboard + _margin + panelHeight;
+            int offsetXAfterHands = handPanelWidth + 2 * _margin;
+
+            int offsetYAfterOpponentHand = _margin * 2 + panelHeight;
+            
+            #region Opponent
+            POpponent = new Panel();
+            POpponent.Location = new System.Drawing.Point(battleboardPanelXOffset, offsetYAfterOpponentHand);
+            POpponent.Name = "pOpponent";
+            POpponent.Size = new System.Drawing.Size(battleboardPanelWidth, panelHeight);
+
+            PBOpponentWeapon = new PictureBox();
+            PBOpponentWeapon.Location = new System.Drawing.Point(_margin, _margin);
+            PBOpponentWeapon.Name = "pbOpponentWeapon";
+            PBOpponentWeapon.Size = new System.Drawing.Size(pbCardWidth, pbCardHeight);
+            PBOpponentWeapon.BackColor = System.Drawing.Color.LightGray; // TODO: remove
+            POpponent.Controls.Add(PBOpponentWeapon);
+
+            int pOpponentOffsetXAfterWeapon = pbCardWidth + _margin * 2;
+
+            int tbWeaponDurabilityHeight = 69;
+            TBOpponentWeaponDurability = new TextBox();
+            TBOpponentWeaponDurability.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            TBOpponentWeaponDurability.ForeColor = System.Drawing.Color.Red;
+            TBOpponentWeaponDurability.Text = "300";
+            TBOpponentWeaponDurability.ReadOnly = true;
+            TBOpponentWeaponDurability.Location = new System.Drawing.Point(
+                pOpponentOffsetXAfterWeapon,
+                panelHeight - _margin - tbWeaponDurabilityHeight
+            );
+            TBOpponentWeaponDurability.Name = "tbOpponentWeaponDurability";
+            TBOpponentWeaponDurability.Size = new System.Drawing.Size(61, tbWeaponDurabilityHeight);
+            TBOpponentWeaponDurability.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            POpponent.Controls.Add(TBOpponentWeaponDurability);
+
+
+            /*
+        public Panel POpponent;
+        public PictureBox PBOpponentWeapon;
+        public TextBox TBOpponentWeaponDurability;
+        public PictureBox PBOpponentHero;
+        public TextBox TBOpponentAttack;
+        public TextBox TBOpponentHealth;
+        public PictureBox PBOpponentHeroPower;
+             */
+            PMain.Controls.Add(POpponent);
+            #endregion
+
+            int offsetYAfterOpponent = offsetYAfterOpponentHand + _margin + panelHeight;
+            int offsetYAfterOpponentBattleboard = offsetYAfterOpponent + _margin + panelHeight;
+            int offsetYAfterPlayerBattleboard = offsetYAfterOpponentBattleboard + _margin + panelHeight;
+            int offsetYAfterPlayer = offsetYAfterPlayerBattleboard + _margin + panelHeight;
 
             #region PlayerHand
             // PPlayerHand
             PPlayerHand = new Panel();
             PPlayerHand.BackColor = System.Drawing.Color.FromArgb(192, 192, 255);
-            PPlayerHand.Location = new System.Drawing.Point(_margin, offsetAfterPlayer);
+            PPlayerHand.Location = new System.Drawing.Point(_margin, offsetYAfterPlayer);
             PPlayerHand.Name = "pOpponentHand";
             PPlayerHand.Size = new System.Drawing.Size(handPanelWidth, panelHeight);
 
@@ -89,7 +138,7 @@ namespace HearthstoneFormsApp.UI.WebForm.ControlManager
             #endregion
 
             #region Tab Control
-            int tcInfoHeight = offsetAfterPlayer - _margin - offsetAfterOpponentHand;
+            int tcInfoHeight = offsetYAfterPlayer - _margin - offsetYAfterOpponentHand;
             int tcInfoWidth = (tcInfoHeight * _baseCardWidth) / _baseCardHeight;
             TCInfo = new TabControl();
             TabPage tpCardView = new TabPage();
@@ -102,7 +151,7 @@ namespace HearthstoneFormsApp.UI.WebForm.ControlManager
             TCInfo.Size = new System.Drawing.Size(tcInfoWidth, tcInfoHeight);
             TCInfo.Name = "tcInfo";
             TCInfo.SelectedIndex = 0;
-            TCInfo.Location = new System.Drawing.Point(_margin, offsetAfterOpponentHand);
+            TCInfo.Location = new System.Drawing.Point(offsetXAfterHands, _margin);
 
             tpCardView.Name = "tpCardView";
             tpCardView.Location = new System.Drawing.Point(10, 47);
@@ -123,6 +172,8 @@ namespace HearthstoneFormsApp.UI.WebForm.ControlManager
 
             PMain.Controls.Add(TCInfo);
             #endregion
+
+
             /*
             
             PMain.Controls.Add(PPlayerHand);

@@ -4,6 +4,7 @@ September 24, 2023 - Sunday
 
 - 2h - 1:45pm - 3:40pm: C# project setup and basic layout figure out
 - 25min - 3:40pm - 4:05pm: plan future features
+- 3.3h - 4:30pm - 4: ControlManager class work
 
 
 
@@ -36,6 +37,7 @@ To Do
     - [ ] PlayerActionAttemper
   - [ ] Controller
 - [ ] end turn
+- [ ] play minion
 - [ ] weapons
 - [ ] minion attack action
 - [ ] concede
