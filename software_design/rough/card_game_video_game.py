@@ -46,38 +46,28 @@ class HearthstoneGame:
 '''
 V2 - New Proposed Design
 
-card_game
-- general
-  - card, effects, conditions, selections
-- hearthstone_specific
-  - 
-- implementations
+CardGame
+- CardMechanics
+  - CardTypes, Effects, Conditions, Selections
+- CardImplementations
   - 
 Model classes
 - CardGameState
-  - general
-    - Pile
-    - CardSlot
-    - BoardManager
-    - Deck
-    - EffectManager
-    - Game
-  - hearthstone_specific
-    - HSDeck, HSMetadata
-    - HSBoardManager: hands, decks, players, weapons, battleboard
-    - HSGame
+  - Pile
+  - CardSlot
   - EffectManager
-  - CardGameStateChanger
-    - CardMover
-    - DecisionMaker
-    - PlayerActionAttempter
-      - AttackAction: validate, execute
+  - Deck, HSMetadata
+  - BoardManager: hands, decks, players, weapons, battleboard
+  - Battleboard
+  - HearthstoneGame
+- CardGameStateChange
+  - CardMover
+  - DecisionMaker
+  - PlayerActionAttempter
+    - AttackAction: validate, execute
 Controller
 - 
 View
 - 
 
-
-Advantages
-- separate general from hearthstone-specific
 '''
