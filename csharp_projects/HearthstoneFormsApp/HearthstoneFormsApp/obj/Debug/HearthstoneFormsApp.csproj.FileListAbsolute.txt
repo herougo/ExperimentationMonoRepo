@@ -8,3 +8,4 @@ D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\Hearths
 D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\HearthstoneFormsApp\obj\Debug\HearthstoneFormsApp.csproj.CoreCompileInputs.cache
 D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\HearthstoneFormsApp\obj\Debug\HearthstoneFormsApp.exe
 D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\HearthstoneFormsApp\obj\Debug\HearthstoneFormsApp.pdb
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\HearthstoneFormsApp\obj\Debug\HearthstoneFormsApp.Form1.resources
