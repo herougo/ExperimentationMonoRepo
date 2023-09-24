@@ -1,0 +1,15 @@
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\ConsoleApp\ConsoleApp\bin\Debug\net6.0\ConsoleApp.exe
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\ConsoleApp\ConsoleApp\bin\Debug\net6.0\ConsoleApp.deps.json
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\ConsoleApp\ConsoleApp\bin\Debug\net6.0\ConsoleApp.runtimeconfig.json
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\ConsoleApp\ConsoleApp\bin\Debug\net6.0\ConsoleApp.dll
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\ConsoleApp\ConsoleApp\bin\Debug\net6.0\ConsoleApp.pdb
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\ConsoleApp\ConsoleApp\obj\Debug\net6.0\ConsoleApp.csproj.AssemblyReference.cache
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\ConsoleApp\ConsoleApp\obj\Debug\net6.0\ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\ConsoleApp\ConsoleApp\obj\Debug\net6.0\ConsoleApp.AssemblyInfoInputs.cache
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\ConsoleApp\ConsoleApp\obj\Debug\net6.0\ConsoleApp.AssemblyInfo.cs
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\ConsoleApp\ConsoleApp\obj\Debug\net6.0\ConsoleApp.csproj.CoreCompileInputs.cache
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\ConsoleApp\ConsoleApp\obj\Debug\net6.0\ConsoleApp.dll
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\ConsoleApp\ConsoleApp\obj\Debug\net6.0\refint\ConsoleApp.dll
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\ConsoleApp\ConsoleApp\obj\Debug\net6.0\ConsoleApp.pdb
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\ConsoleApp\ConsoleApp\obj\Debug\net6.0\ConsoleApp.genruntimeconfig.cache
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\ConsoleApp\ConsoleApp\obj\Debug\net6.0\ref\ConsoleApp.dll
