@@ -1,0 +1,20 @@
+
+Form Size: 1900 x 1150
+Lich King (Legendary) size: 423 x 605
+Approximate desired hand card size: 148 x 213
+Approximate Card Preview Size: 442 x 662
+margin against edge: 12
+
+card size: X x 200 -> X = 423/605*200 = 140
+panel width: 12*11+10*140 = 1532
+panel height: 200 + 24 = 224
+- plus margin: 248
+
+half of the height: 575
+- minus hand: 327
+- minus (6+12): 309
+
+battleboard (one side): 155 (height)
+-> cards will be 155-24=131 in height
+  -> 92 width
+-> battleboard is 8*12 + 92*7 = 740
