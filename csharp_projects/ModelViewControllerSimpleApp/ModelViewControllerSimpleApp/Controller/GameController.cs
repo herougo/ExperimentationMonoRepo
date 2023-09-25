@@ -11,18 +11,24 @@ namespace ModelViewControllerSimpleApp.Controller
 {
     internal class GameController
     {
-        GameModel model;
-        GameView view;
+        GameModel _model;
+        GameView _view;
 
         public GameController(Form1 form)
         {
-            model = new GameModel(this);
-            view = new GameView(this, model, form);
+            _model = new GameModel(this);
+            _view = new GameView(this, _model, form);
+            _view.UpdateFullView();
         }
 
         public void Notify(int row, int column)
         {
-            view.UpdateView(row, column);
+            _view.UpdateView(row, column);
+        }
+
+        public void ReceiveInputClick(Tuple<int, int> pictureBoxIndex)
+        {
+            _model.SelectGridCell(pictureBoxIndex);
         }
     }
 }

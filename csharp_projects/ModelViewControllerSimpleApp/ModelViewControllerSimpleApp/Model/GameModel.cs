@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,16 +12,15 @@ namespace ModelViewControllerSimpleApp.Model
     internal class GameModel
     {
         public bool[,] IsSelected;
+        Tuple<int, int> _selectedGridCell;
         public GameController Controller = null;
 
         public GameModel(GameController controller)
         {
             IsSelected = new bool[2, 2];
-            IsSelected[0, 0] = true;
-            IsSelected[0, 1] = false;
-            IsSelected[1, 0] = false;
-            IsSelected[1, 1] = false;
             Controller = controller;
+            _selectedGridCell = new Tuple<int, int>(0, 0);
+            SelectGridCell(_selectedGridCell, false);
         }
 
         public void Notify(int row, int column)
@@ -28,10 +28,17 @@ namespace ModelViewControllerSimpleApp.Model
             Controller.Notify(row, column);
         }
 
-        void SetGridCell(int row, int column, bool value)
+        public void SelectGridCell(Tuple<int, int> newSelectedGridCell, bool notify = true)
         {
-            IsSelected[row, column] = value;
-            Notify(row, column);
+            Tuple<int, int> oldSelectedGridCell = _selectedGridCell;
+            IsSelected[oldSelectedGridCell.Item1, oldSelectedGridCell.Item2] = false;
+            IsSelected[newSelectedGridCell.Item1, newSelectedGridCell.Item2] = true;
+            _selectedGridCell = newSelectedGridCell;
+            if (notify)
+            {
+                Notify(oldSelectedGridCell.Item1, oldSelectedGridCell.Item2);
+                Notify(newSelectedGridCell.Item1, newSelectedGridCell.Item2);
+            }
         }
     }
 }
