@@ -38,6 +38,8 @@ Resolved Ideas
   - ControlInputReceptionManager(ControlManager controlManager)
 - Controller components (some)
   - ViewEventTranslater: translates an event from to something from "ViewModel"
+- "Core" Folder
+  - enums, key interfaces
 
 Rejected Ideas
 

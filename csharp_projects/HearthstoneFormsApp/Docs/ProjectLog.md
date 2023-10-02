@@ -7,6 +7,10 @@ September 24, 2023 - Sunday
 - 3.3h - 4:30pm - 7:50pm: ControlManager class work
 - 3.3h - 10:10pm - 1:30pm: software design brainstorming
 
+September 25, 2023 - Monday
+
+- 2.83 - 10:40am - 1:30pm: MVC simple app
+
 
 
 
