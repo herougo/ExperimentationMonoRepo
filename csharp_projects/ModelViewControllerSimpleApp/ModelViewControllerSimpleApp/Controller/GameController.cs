@@ -11,8 +11,8 @@ namespace ModelViewControllerSimpleApp.Controller
 {
     internal class GameController
     {
-        GameModel _model;
-        GameView _view;
+        readonly GameModel _model;
+        readonly GameView _view;
 
         public GameController(Form1 form)
         {

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Core.MVC
 {
-    public interface IEvent<THandler>
+    public interface IEvent
     {
-        THandler GetHandler();
+
     }
 
     public interface IEventParticipant<TInEvent, TOutEvent>

@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Core.MVC
 {
-    public abstract class ModelInEvent : IEvent<ModelInEventHandler>
+    public abstract class ModelInEvent : IEvent
     {
-        public abstract ModelInEventHandler GetHandler();
+
     }
 
-    public abstract class ModelOutEvent : IEvent<ModelOutEventHandler>
+    public abstract class ModelOutEvent : IEvent
     {
-        public abstract ModelOutEventHandler GetHandler();
+
     }
-    public abstract class ViewOutEvent : IEvent<ViewOutEventHandler>
+    public abstract class ViewOutEvent : IEvent
     {
-        public abstract ViewOutEventHandler GetHandler();
+
     }
 }

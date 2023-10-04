@@ -13,11 +13,11 @@ namespace ModelViewControllerSimpleApp
 {
     public partial class Form1 : Form
     {
-        GameController Controller;
+        readonly GameController _controller;
 
         public Form1()
         {
-            Controller = new GameController(this);
+            _controller = new GameController(this);
             InitializeComponent();
         }
     }
