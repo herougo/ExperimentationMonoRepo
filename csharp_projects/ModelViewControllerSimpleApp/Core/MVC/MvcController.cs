@@ -9,11 +9,11 @@ namespace Core.MVC
 {
     abstract class MvcController
     {
-        protected MvcModel model;
-        protected MvcView view;
+        protected MvcModel _model;
+        protected MvcView _view;
         public void ReceiveModelEvent(ModelOutEvent e)
         {
-            view.ReceiveEvent(e);
+            _view.ReceiveEvent(e);
         }
         public abstract void ReceiveViewEvent(ViewOutEvent e);
     }

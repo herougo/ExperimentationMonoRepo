@@ -8,11 +8,11 @@ namespace Core.MVC
 {
     class MvcModel : IEventParticipant<ModelInEvent, ModelOutEvent>
     {
-        protected MvcController controller;
+        protected MvcController _controller;
 
         public void SendEvent(ModelOutEvent e)
         {
-            controller.ReceiveModelEvent(e);
+            _controller.ReceiveModelEvent(e);
         }
 
         public void ReceiveEvent(ModelInEvent e)
