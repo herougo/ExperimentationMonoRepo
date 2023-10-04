@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Core.MVC
 {
-    abstract class MvcView : IEventParticipant<ModelOutEvent, ViewOutEvent>
+    public abstract class MvcView : IEventParticipant<ModelOutEvent, ViewOutEvent>
     {
         protected MvcController _controller;
         protected MvcModel _model;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Core.MVC
 {
-    class ModelInEventHandler : IEventHandler<ModelInEvent, MvcModel>
+    public class ModelInEventHandler : IEventHandler<ModelInEvent, MvcModel>
     {
         public void Handle(ModelInEvent e, MvcModel eventParticipant)
         {
@@ -15,14 +15,14 @@ namespace Core.MVC
         }
     }
 
-    class ModelOutEventHandler : IEventHandler<ModelOutEvent, MvcController>
+    public class ModelOutEventHandler : IEventHandler<ModelOutEvent, MvcController>
     {
         public void Handle(ModelOutEvent e, MvcController eventParticipant)
         {
 
         }
     }
-    class ViewOutEventHandler : IEventHandler<ViewOutEvent, MvcController>
+    public class ViewOutEventHandler : IEventHandler<ViewOutEvent, MvcController>
     {
         public void Handle(ViewOutEvent e, MvcController eventParticipant)
         {

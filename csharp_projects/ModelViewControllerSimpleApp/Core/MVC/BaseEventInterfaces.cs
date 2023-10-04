@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Core.MVC
 {
-    interface IEvent<THandler>
+    public interface IEvent<THandler>
     {
         THandler GetHandler();
     }
 
-    interface IEventParticipant<TInEvent, TOutEvent>
+    public interface IEventParticipant<TInEvent, TOutEvent>
     {
         void SendEvent(TOutEvent e);
         void ReceiveEvent(TInEvent e);
     }
 
-    interface IEventHandler<TEvent, TEventParticipant>
+    public interface IEventHandler<TEvent, TEventParticipant>
     {
         void Handle(TEvent e, TEventParticipant eventParticipant);
     }

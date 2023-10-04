@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Core.MVC
 {
-    abstract class MvcController
+    public abstract class MvcController
     {
         protected MvcModel _model;
         protected MvcView _view;

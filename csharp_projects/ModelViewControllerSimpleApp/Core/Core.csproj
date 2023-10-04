@@ -38,8 +38,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="MVC\" />
+    <Compile Include="MVC\EventInterfaces.cs" />
+    <Compile Include="MVC\MvcController.cs" />
+    <Compile Include="MVC\MvcModel.cs" />
+    <Compile Include="MVC\EventHandlers.cs" />
+    <Compile Include="MVC\Events.cs" />
+    <Compile Include="MVC\MvcView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

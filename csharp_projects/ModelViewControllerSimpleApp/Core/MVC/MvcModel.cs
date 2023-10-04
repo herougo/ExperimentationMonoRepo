@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.MVC
 {
-    class MvcModel : IEventParticipant<ModelInEvent, ModelOutEvent>
+    public class MvcModel : IEventParticipant<ModelInEvent, ModelOutEvent>
     {
         protected MvcController _controller;
 
