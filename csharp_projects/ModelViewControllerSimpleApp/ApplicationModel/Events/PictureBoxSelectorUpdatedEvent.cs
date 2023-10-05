@@ -9,8 +9,8 @@ namespace ApplicationModel.Events
 {
     public class PictureBoxSelectorUpdatedEvent : ModelOutEvent
     {
-        public readonly Tuple<int, int> OldSelectedGridCell;
-        public readonly Tuple<int, int> NewSelectedGridCell;
+        public Tuple<int, int> OldSelectedGridCell { get; }
+        public Tuple<int, int> NewSelectedGridCell { get; }
 
         public PictureBoxSelectorUpdatedEvent(Tuple<int, int> oldSelected, Tuple<int, int> newSelected)
         {

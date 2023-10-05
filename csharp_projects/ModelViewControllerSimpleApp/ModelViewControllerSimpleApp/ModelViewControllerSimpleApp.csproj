@@ -84,6 +84,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\WebFormController\WebFormController.csproj">
+      <Project>{f6ad2e1f-8eb8-4b28-9d20-39ad5c3ee70e}</Project>
+      <Name>WebFormController</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -40,11 +40,11 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Compile Include="MVC\EventInterfaces.cs" />
+    <Compile Include="MVC\BaseEventInterfaces.cs" />
     <Compile Include="MVC\MvcController.cs" />
     <Compile Include="MVC\MvcModel.cs" />
-    <Compile Include="MVC\EventHandlers.cs" />
-    <Compile Include="MVC\Events.cs" />
+    <Compile Include="MVC\BaseEventHandlers.cs" />
+    <Compile Include="MVC\BaseEvents.cs" />
     <Compile Include="MVC\MvcView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
