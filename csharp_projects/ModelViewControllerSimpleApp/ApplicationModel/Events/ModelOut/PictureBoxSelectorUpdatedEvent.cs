@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ApplicationModel.Events.Enums;
 using Core.MVC;
 
-namespace ApplicationModel.Events
+namespace ApplicationModel.Events.ModelOut
 {
     public class PictureBoxSelectorUpdatedEvent : ModelOutEvent
     {
@@ -16,6 +17,15 @@ namespace ApplicationModel.Events
         {
             OldSelectedGridCell = oldSelected;
             NewSelectedGridCell = newSelected;
+        }
+        public ModelOutEvents GetEnum()
+        {
+            return ModelOutEvents.PictureBoxSelectorUpdated;
+        }
+
+        public override int GetEnumInt()
+        {
+            return (int)GetEnum();
         }
     }
 }

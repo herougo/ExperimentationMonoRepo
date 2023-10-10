@@ -40,8 +40,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Events\PictureBoxSelectorUpdatedEvent.cs" />
+    <Compile Include="Events\Enums\ModelOutEvents.cs" />
+    <Compile Include="Events\ModelIn\PictureBoxSelectorSelectEvent.cs" />
+    <Compile Include="Events\ModelOut\PictureBoxSelectorUpdatedEvent.cs" />
     <Compile Include="MainModel.cs" />
+    <Compile Include="ModelInEventHandlerFactory.cs" />
+    <Compile Include="Events\Enums\ModelInEvents.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">

@@ -11,10 +11,16 @@ namespace Core.MVC
     {
         protected MvcModel _model;
         protected MvcView _view;
+        protected MvcViewOutEventHandlerFactory _eventHandlerFactory;
+
         public void ReceiveModelEvent(ModelOutEvent e)
         {
             _view.ReceiveEvent(e);
         }
-        public abstract void ReceiveViewEvent(ViewOutEvent e);
+        public void ReceiveViewEvent(ViewOutEvent e)
+        {
+            ViewOutEventHandler handler = _eventHandlerFactory.GetEventHandler(e);
+            handler.Handle(e);
+        }
     }
 }

@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Core.MVC;
 
-using ApplicationModel.Events;
+using ApplicationModel.Events.ModelOut;
 
 namespace ApplicationModel
 {
-    class MainModel : MvcModel
+    public class MainModel : MvcModel
     {
         public bool[,] IsSelected;
         Tuple<int, int> SelectedGridCell;

@@ -8,17 +8,17 @@ namespace Core.MVC
 {
     public interface IEvent
     {
-
+        int GetEnumInt();
     }
 
     public interface IEventParticipant<TInEvent, TOutEvent>
     {
-        void SendEvent(TOutEvent e);
         void ReceiveEvent(TInEvent e);
+        void SendEvent(TOutEvent e);
     }
 
-    public interface IEventHandler<TEvent, TEventParticipant>
+    public interface IEventHandler<TEvent>
     {
-        void Handle(TEvent e, TEventParticipant eventParticipant);
+        void Handle(TEvent e);
     }
 }

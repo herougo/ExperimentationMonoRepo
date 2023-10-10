@@ -9,6 +9,7 @@ namespace Core.MVC
     public class MvcModel : IEventParticipant<ModelInEvent, ModelOutEvent>
     {
         protected MvcController _controller;
+        protected MvcModelInEventHandlerFactory _eventHandlerFactory;
 
         public void SendEvent(ModelOutEvent e)
         {
@@ -17,8 +18,8 @@ namespace Core.MVC
 
         public void ReceiveEvent(ModelInEvent e)
         {
-            ModelInEventHandler handler = e.GetHandler();
-            handler.Handle(e, this);
+            ModelInEventHandler handler = _eventHandlerFactory.GetEventHandler(e);
+            handler.Handle(e);
         }
     }
 }

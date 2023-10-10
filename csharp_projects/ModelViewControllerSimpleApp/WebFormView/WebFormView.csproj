@@ -48,5 +48,11 @@
       <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainWebFormView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="EventHandlers\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
