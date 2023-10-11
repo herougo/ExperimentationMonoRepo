@@ -17,10 +17,12 @@ namespace WebFormController
 
         public MainWebFormController(Form form) {
             MainModel model = new MainModel(this);
+            MainWebFormView view = new MainWebFormView(this, model, form);
             _model = model;
-            _view = new MainWebFormView(this, model, form);
+            _view = view;
             _form = form;
             _eventHandlerFactory = new ViewOutEventHandlerFactory(this);
+            view.UpdateFullView();
         }
     }
 }

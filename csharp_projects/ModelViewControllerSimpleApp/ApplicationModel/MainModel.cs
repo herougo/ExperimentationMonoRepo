@@ -19,14 +19,17 @@ namespace ApplicationModel
         {
             _controller = controller;
             _eventHandlerFactory = new ModelInEventHandlerFactory(this);
-            IsSelected = new bool[2, 2];
-            SelectedGridCell = new Tuple<int, int>(0, 0);
-            SelectGridCell(SelectedGridCell, false);
-        }
 
-        public void SelectGridCell(Tuple<int, int> newSelectedGridCell, bool notify = true)
-        {
-            
+            IsSelected = new bool[2, 2];
+            for (int row = 0; row < 2; row++)
+            {
+                for (int col = 0; col < 2; col++)
+                {
+                    IsSelected[row, col] = false;
+                }
+            }
+            SelectedGridCell = new Tuple<int, int>(0, 0);
+            IsSelected[SelectedGridCell.Item1, SelectedGridCell.Item2] = true;
         }
     }
 }
