@@ -41,10 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Events\Enums\ModelOutEvents.cs" />
+    <Compile Include="Events\ModelInEvent.cs" />
+    <Compile Include="Events\ModelInEventHandlers\PictureBoxSelectorSelectEventHandler.cs" />
     <Compile Include="Events\ModelIn\PictureBoxSelectorSelectEvent.cs" />
+    <Compile Include="Events\ModelOutEvent.cs" />
     <Compile Include="Events\ModelOut\PictureBoxSelectorUpdatedEvent.cs" />
     <Compile Include="MainModel.cs" />
-    <Compile Include="ModelInEventHandlerFactory.cs" />
+    <Compile Include="Events\ModelInEventHandlerFactory.cs" />
     <Compile Include="Events\Enums\ModelInEvents.cs" />
   </ItemGroup>
   <ItemGroup>

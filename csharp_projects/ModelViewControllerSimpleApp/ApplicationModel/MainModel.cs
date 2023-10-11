@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Core.MVC;
 
 using ApplicationModel.Events.ModelOut;
+using ApplicationModel.Events;
 
 namespace ApplicationModel
 {
@@ -13,11 +14,11 @@ namespace ApplicationModel
     {
         public bool[,] IsSelected;
         public Tuple<int, int> SelectedGridCell;
-        MvcController _controller;
 
         public MainModel(MvcController controller)
         {
             _controller = controller;
+            _eventHandlerFactory = new ModelInEventHandlerFactory(this);
             IsSelected = new bool[2, 2];
             SelectedGridCell = new Tuple<int, int>(0, 0);
             SelectGridCell(SelectedGridCell, false);

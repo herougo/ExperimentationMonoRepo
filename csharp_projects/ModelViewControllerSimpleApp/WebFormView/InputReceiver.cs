@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebFormView.Events.ViewOut;
 
 namespace WebFormView
 {
@@ -24,11 +25,12 @@ namespace WebFormView
             }
         }
 
-        private void PictureBox_Click(object sender, EventArgs e)
+        private void PictureBox_Click(object sender, EventArgs eventArgs)
         {
             Control control = (Control)sender;
             Tuple<int, int> index = _controlManager.ControlToIndex(control);
-            _controller.ReceiveInputClick(index);
+            MvcViewOutEvent e = new PictureBoxClickedEvent(index);
+            _controller.ReceiveViewEvent(e);
         }
     }
 }

@@ -15,8 +15,8 @@ September 25, 2023 - Monday
 
 October 10, 2023 - Tuesday
 
-- 3.5 - 3:20pm - 6:50pm: Adapting to event handler style
-
+- 3.5h - 3:20pm - 6:50pm: Adapting to event handler style
+- 1h - 11:20pm? - 12:20am: Adapting to event handler style (done)
 
 
 

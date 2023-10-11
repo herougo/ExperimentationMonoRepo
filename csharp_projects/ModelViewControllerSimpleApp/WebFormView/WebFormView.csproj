@@ -49,10 +49,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlManager.cs" />
+    <Compile Include="Events\Enums\ViewOutEvents.cs" />
+    <Compile Include="Events\ViewOutEvent.cs" />
+    <Compile Include="Events\ModelOutEventHandlerFactory.cs" />
+    <Compile Include="Events\ModelOutEventHandlers\PictureBoxSelectorUpdatedEventHandler.cs" />
+    <Compile Include="Events\ViewOut\PictureBoxClickedEvent.cs" />
+    <Compile Include="InputReceiver.cs" />
     <Compile Include="MainWebFormView.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="EventHandlers\" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
