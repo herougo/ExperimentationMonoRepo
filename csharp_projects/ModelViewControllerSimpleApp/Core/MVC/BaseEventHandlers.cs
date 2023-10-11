@@ -7,38 +7,17 @@ using System.Threading.Tasks;
 
 namespace Core.MVC
 {
-    public abstract class ModelInEventHandler : IEventHandler<ModelInEvent>
+    public abstract class ModelInEventHandler : IEventHandler<MvcModelInEvent>
     {
-        protected MvcModel _model;
-        
-        public ModelInEventHandler(MvcModel model)
-        {
-            _model = model;
-        }
-
-        public abstract void Handle(ModelInEvent e);
+        public abstract void Handle(MvcModelInEvent e);
     }
 
-    public abstract class ModelOutEventHandler : IEventHandler<ModelOutEvent>
+    public abstract class ModelOutEventHandler : IEventHandler<MvcModelOutEvent>
     {
-        protected MvcController _controller;
-
-        public ModelOutEventHandler(MvcController controller)
-        {
-            _controller = controller;
-        }
-
-        public abstract void Handle(ModelOutEvent e);
+        public abstract void Handle(MvcModelOutEvent e);
     }
-    public abstract class ViewOutEventHandler : IEventHandler<ViewOutEvent>
+    public abstract class ViewOutEventHandler : IEventHandler<MvcViewOutEvent>
     {
-        protected MvcController _controller;
-
-        public ViewOutEventHandler(MvcController controller)
-        {
-            _controller = controller;
-        }
-
-        public abstract void Handle(ViewOutEvent e);
+        public abstract void Handle(MvcViewOutEvent e);
     }
 }

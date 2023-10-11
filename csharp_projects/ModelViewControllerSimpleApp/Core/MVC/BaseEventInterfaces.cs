@@ -8,7 +8,7 @@ namespace Core.MVC
 {
     public interface IEvent
     {
-        int GetEnumInt();
+
     }
 
     public interface IEventParticipant<TInEvent, TOutEvent>

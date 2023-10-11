@@ -11,6 +11,11 @@ September 25, 2023 - Monday
 
 - 2.83 - 10:40am - 1:30pm: MVC simple app
 
+(some unlogged work)
+
+October 10, 2023 - Tuesday
+
+- 3.5 - 3:20pm - 6:50pm: Adapting to event handler style
 
 
 

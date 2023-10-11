@@ -12,9 +12,12 @@ namespace WebFormController
 {
     public class MainWebFormController : MvcController
     {
-        public MainWebFormController() {
+        Form _form;
+
+        public MainWebFormController(Form form) {
             _model = new MainModel(this);
-            _view = new MainWebFormView(this);
+            _view = new MainWebFormView(this, _model);
+            _form = form;
         }
     }
 }

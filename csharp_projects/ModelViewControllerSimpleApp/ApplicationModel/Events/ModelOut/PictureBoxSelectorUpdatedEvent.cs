@@ -18,14 +18,9 @@ namespace ApplicationModel.Events.ModelOut
             OldSelectedGridCell = oldSelected;
             NewSelectedGridCell = newSelected;
         }
-        public ModelOutEvents GetEnum()
+        public override ModelOutEvents GetEnum()
         {
             return ModelOutEvents.PictureBoxSelectorUpdated;
-        }
-
-        public override int GetEnumInt()
-        {
-            return (int)GetEnum();
         }
     }
 }

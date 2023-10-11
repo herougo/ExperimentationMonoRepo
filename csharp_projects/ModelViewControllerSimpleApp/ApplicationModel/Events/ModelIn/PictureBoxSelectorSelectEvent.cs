@@ -17,14 +17,9 @@ namespace ApplicationModel.Events.ModelIn
             NewSelectedGridCell = newSelected;
         }
 
-        public ModelInEvents GetEnum()
+        public override ModelInEvents GetEnum()
         {
             return ModelInEvents.PictureBoxSelected;
-        }
-
-        public override int GetEnumInt()
-        {
-            return (int)GetEnum();
         }
     }
 }

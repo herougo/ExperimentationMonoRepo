@@ -7,18 +7,17 @@ using System.Threading.Tasks;
 
 namespace Core.MVC
 {
-    public abstract class MvcView : IEventParticipant<ModelOutEvent, ViewOutEvent>
+    public abstract class MvcView : IEventParticipant<MvcModelOutEvent, MvcViewOutEvent>
     {
         protected MvcController _controller;
-        protected MvcModel _model;
         protected MvcModelOutEventHandlerFactory _eventHandlerFactory;
 
-        public void SendEvent(ViewOutEvent e)
+        public void SendEvent(MvcViewOutEvent e)
         {
             _controller.ReceiveViewEvent(e);
         }
 
-        public void ReceiveEvent(ModelOutEvent e)
+        public void ReceiveEvent(MvcModelOutEvent e)
         {
             ModelOutEventHandler handler = _eventHandlerFactory.GetEventHandler(e);
             handler.Handle(e);

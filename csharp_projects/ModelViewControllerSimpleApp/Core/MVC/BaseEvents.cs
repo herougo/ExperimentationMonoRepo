@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Core.MVC
 {
-    public abstract class ModelInEvent : IEvent
+    public abstract class MvcModelInEvent : IEvent
     {
-        public abstract int GetEnumInt();
+
     }
 
-    public abstract class ModelOutEvent : IEvent
+    public abstract class MvcModelOutEvent : IEvent
     {
-        public abstract int GetEnumInt();
+
     }
-    public abstract class ViewOutEvent : IEvent
+    public abstract class MvcViewOutEvent : IEvent
     {
-        public abstract int GetEnumInt();
+
     }
 }
