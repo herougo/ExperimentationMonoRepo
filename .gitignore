@@ -1,6 +1,7 @@
 csharp_projects/HearthstoneFormsApp/.vs/
 csharp_projects/HearthstoneFormsApp/HearthstoneFormsApp/bin/
 csharp_projects/HearthstoneFormsApp/HearthstoneFormsApp/obj/
+
 csharp_projects/ModelViewControllerSimpleApp/.vs/
 csharp_projects/ModelViewControllerSimpleApp/ModelViewControllerSimpleApp/bin/
 csharp_projects/ModelViewControllerSimpleApp/ModelViewControllerSimpleApp/obj/
@@ -12,3 +13,5 @@ csharp_projects/ModelViewControllerSimpleApp/WebFormView/bin/
 csharp_projects/ModelViewControllerSimpleApp/WebFormView/obj/
 csharp_projects/ModelViewControllerSimpleApp/WebFormController/bin/
 csharp_projects/ModelViewControllerSimpleApp/WebFormController/obj/
+
+csharp_projects/ReactASPNetStart/.vs/
