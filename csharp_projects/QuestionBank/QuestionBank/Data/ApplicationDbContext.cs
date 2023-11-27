@@ -13,5 +13,6 @@ namespace QuestionBank.Data
         {
 
         }
+        public DbSet<QuestionBank.Models.Question>? Question { get; set; }
     }
 }
