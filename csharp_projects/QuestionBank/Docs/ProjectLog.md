@@ -6,7 +6,7 @@ To Do
 - [x] base settings page
 - [ ] DB migrations for
   - [ ] courses
-  - [ ] questions
+  - [x] questions
 - [ ] create page
   - [ ] UI figure out
   - [ ] create frontend
