@@ -3,7 +3,7 @@ To Do
 - [ ] Home page
   - [x] basic template
   - [ ] finalize UI
-- [ ] base settings page
+- [x] base settings page
 - [ ] DB migrations for
   - [ ] courses
   - [ ] questions
