@@ -5,7 +5,8 @@ To Do
   - [ ] finalize UI
 - [x] base settings page
 - [ ] DB migrations for
-  - [ ] courses
+  - [x] courses
+  - [ ] tags
   - [x] questions
 - [ ] create page
   - [ ] UI figure out
@@ -36,3 +37,5 @@ To Do
 Log of Time
 
 - 1h - 4:30pm - 5:34pm: Base Implementation, basic home page, and project scope
+- 2.5h - 3pm - 5:24pm: Updated dependencies; Added Questions model, controller, and table
+- ? - 3:30pm - : Added courses
