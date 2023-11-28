@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuestionBank.Data;
 
@@ -11,9 +12,10 @@ using QuestionBank.Data;
 namespace QuestionBank.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231128220046_DeleteQuestionTag")]
+    partial class DeleteQuestionTag
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -418,35 +420,6 @@ namespace QuestionBank.Data.Migrations
                     b.ToTable("Question");
                 });
 
-            modelBuilder.Entity("QuestionBank.Models.QuestionTag", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("QuestionId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("QuestionsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TagId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TagsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("QuestionId");
-
-                    b.HasIndex("TagId");
-
-                    b.ToTable("QuestionTag");
-                });
-
             modelBuilder.Entity("QuestionBank.Models.Tag", b =>
                 {
                     b.Property<int>("Id")
@@ -530,35 +503,6 @@ namespace QuestionBank.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("QuestionBank.Models.QuestionTag", b =>
-                {
-                    b.HasOne("QuestionBank.Models.Question", "Question")
-                        .WithMany("QuestionTags")
-                        .HasForeignKey("QuestionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("QuestionBank.Models.Tag", "Tag")
-                        .WithMany("QuestionTags")
-                        .HasForeignKey("TagId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Question");
-
-                    b.Navigation("Tag");
-                });
-
-            modelBuilder.Entity("QuestionBank.Models.Question", b =>
-                {
-                    b.Navigation("QuestionTags");
-                });
-
-            modelBuilder.Entity("QuestionBank.Models.Tag", b =>
-                {
-                    b.Navigation("QuestionTags");
                 });
 #pragma warning restore 612, 618
         }

@@ -6,8 +6,11 @@ To Do
 - [x] base settings page
 - [ ] DB migrations for
   - [x] courses
-  - [ ] tags
+  - [x] tags
   - [x] questions
+  - [x] question-course
+  - [x] question-tag
+  - [ ] question-user
 - [ ] create page
   - [ ] UI figure out
   - [ ] create frontend
