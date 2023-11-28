@@ -4,13 +4,13 @@ To Do
   - [x] basic template
   - [ ] finalize UI
 - [x] base settings page
-- [ ] DB migrations for
+- [x] DB migrations for
   - [x] courses
   - [x] tags
   - [x] questions
   - [x] question-course
   - [x] question-tag
-  - [ ] question-user
+  - [x] question-tag-user
 - [ ] create page
   - [ ] UI figure out
   - [ ] create frontend
