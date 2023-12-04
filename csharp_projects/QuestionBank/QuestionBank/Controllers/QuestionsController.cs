@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using QuestionBank.Controllers.ReturnResults;
 using QuestionBank.Data;
 using QuestionBank.Models;
 
@@ -158,6 +159,20 @@ namespace QuestionBank.Controllers
         private bool QuestionExists(int id)
         {
           return (_context.Question?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+        [HttpGet]
+        public IEnumerable<FilteredQuestionReturnResult> Filtered()
+        {
+            return Enumerable.Range(1, 5).Select(index => new FilteredQuestionReturnResult
+            {
+                Id = index,
+                QuestionText = "What is " + index + "?",
+                Done = false,
+                Courses = "",
+                Tags = ""
+            })
+            .ToArray();
         }
     }
 }

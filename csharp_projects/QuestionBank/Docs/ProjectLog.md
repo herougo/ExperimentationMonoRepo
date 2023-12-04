@@ -11,10 +11,20 @@ To Do
   - [x] question-course
   - [x] question-tag
   - [x] question-tag-user
+- [ ] questions page
+  - [x] UI figure out
+  - [x] create base frontend
+  - [x] create base backend
+  - [ ] create working backend-frontend combination
+  - [ ] features
+    - [ ] generate sample exam
+    - [ ] tag-based filtering
+    - [ ] collapsible solution
+    - [ ] export questions to pdf
 - [ ] create page
   - [ ] UI figure out
   - [ ] create frontend
-  - [ ] incorporate login
+  - [x] incorporate login
   - [ ] create backend
   - [ ] repeat for
     - [ ] questions
@@ -24,15 +34,6 @@ To Do
 - [ ] courses page
   - [ ] UI figure out
   - [ ] create frontend
-- [ ] questions page
-  - [ ] UI figure out
-  - [ ] create base frontend
-  - [ ] create base backend
-  - [ ] features
-    - [ ] generate sample exam
-    - [ ] tag-based filtering
-    - [ ] collapsible solution
-    - [ ] export questions to pdf
 
 
 
@@ -42,6 +43,7 @@ Log of Time
 - 1h - 4:30pm - 5:34pm: Base Implementation, basic home page, and project scope
 - 2.5h - 3pm - 5:24pm: Updated dependencies; Added Questions model, controller, and table
 - ? - 3:30pm - : Added courses
+- 1.75h - 4pm-5:43pm - Worked on base questions page
 
 Issues
 

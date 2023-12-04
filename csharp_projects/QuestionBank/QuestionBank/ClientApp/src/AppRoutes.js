@@ -3,11 +3,17 @@ import { FetchData } from "./components/FetchData";
 import Home from "./components/Home";
 import Settings from "./components/Settings";
 import Create from "./components/Create";
+import QuestionsPage from "./components/QuestionsPage";
 
 const AppRoutes = [
   {
     index: true,
     element: <Home />
+  },
+  {
+    path: '/questions',
+    requireAuth: true,
+    element: <QuestionsPage />
   },
   {
     path: '/create',
