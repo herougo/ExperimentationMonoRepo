@@ -18,14 +18,16 @@ To Do
   - [ ] create working backend-frontend combination
   - [ ] features
     - [ ] generate sample exam
+    - [ ] export questions to pdf
+    - [ ] view question
     - [ ] tag-based filtering
     - [ ] collapsible solution
-    - [ ] export questions to pdf
 - [ ] create page
-  - [ ] UI figure out
-  - [ ] create frontend
+  - [x] UI figure out
+  - [x] create frontend
   - [x] incorporate login
-  - [ ] create backend
+  - [x] create backend
+  - [ ] create working backend-frontend combination
   - [ ] repeat for
     - [ ] questions
     - [ ] tags

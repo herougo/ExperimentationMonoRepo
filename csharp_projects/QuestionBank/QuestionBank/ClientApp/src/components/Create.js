@@ -1,31 +1,41 @@
-﻿import React from 'react'
+﻿import React, { useCallback, useState } from 'react'
+import CreateQuestion from './CreateQuestion'
+import Select from './reusable/Select'
+import CreateTag from './CreateTag'
+import CreateCourse from './CreateCourse'
 
-const Create = (props) => {
+const DataTypes = {
+    Question: "Question",
+    Tag: "Tag",
+    Course: "Course"
+}
+
+const Create = () => {
+    const options = [DataTypes.Question, DataTypes.Tag, DataTypes.Course]
+    const [selectedOption, setSelectedOption] = useState(options[0])
+
+    const onDropdownChange = useCallback((e) => {
+        setSelectedOption(e.target.value)
+    })
+
+    let form = null
+    if (selectedOption === DataTypes.Question) {
+        form = <CreateQuestion />
+    } else if (selectedOption === DataTypes.Tag) {
+        form = <CreateTag />
+    } else if (selectedOption === DataTypes.Course) {
+        form = <CreateCourse />
+    } else {
+        throw new Error("Invalid selectedOption: " + selectedOption)
+    }
+
     return (
         <>
             <h1>Create</h1>
-            <h4>Question</h4>
+            <div>Type of Data: </div>
+            <Select name="data-type" options={options} onChange={onDropdownChange} />
             <hr />
-            <div class="row">
-                <div class="col-md-4">
-                    <form>
-                        <div class="text-danger"></div>
-                        <div class="form-group">
-                            <label class="control-label">Question Text</label>
-                            <input class="form-control" />
-                            <span class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Answer Text</label>
-                            <input class="form-control" />
-                            <span class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" value="Create" class="btn btn-primary" />
-                        </div>
-                    </form>
-                </div>
-            </div>
+            {form}
         </>
     )
 }
