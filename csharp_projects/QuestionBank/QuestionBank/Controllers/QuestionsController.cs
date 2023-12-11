@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 using QuestionBank.Controllers.ReturnResults;
 using QuestionBank.Data;
 using QuestionBank.Models;
@@ -46,26 +48,26 @@ namespace QuestionBank.Controllers
             return View(question);
         }
 
-        // GET: Questions/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
         // POST: Questions/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,QuestionText,AnswerText")] Question question)
+        public async Task<IActionResult> Create()
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _context.Add(question);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                throw new Exception("Invalid ModelState");
             }
-            return View(question);
+            StreamReader requestReader = new StreamReader(Request.Body);
+            JObject request = JObject.Parse(await requestReader.ReadToEndAsync());
+            Question question = new Question()
+            {
+                QuestionText = request["QuestionText"]?.ToString(),
+                AnswerText = request["AnswerText"]?.ToString()
+            };
+
+            _context.Add(question);
+            await _context.SaveChangesAsync();
+            return new EmptyResult();
+
         }
 
         // GET: Questions/Edit/5
@@ -164,10 +166,10 @@ namespace QuestionBank.Controllers
         [HttpGet]
         public IEnumerable<FilteredQuestionReturnResult> Filtered()
         {
-            return Enumerable.Range(1, 5).Select(index => new FilteredQuestionReturnResult
+            return _context.Question.Select(x => new FilteredQuestionReturnResult
             {
-                Id = index,
-                QuestionText = "What is " + index + "?",
+                Id = x.Id,
+                QuestionText = x.QuestionText,
                 Done = false,
                 Courses = "",
                 Tags = ""

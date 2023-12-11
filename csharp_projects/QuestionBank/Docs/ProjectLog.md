@@ -15,7 +15,7 @@ To Do
   - [x] UI figure out
   - [x] create base frontend
   - [x] create base backend
-  - [ ] create working backend-frontend combination
+  - [x] create working backend-frontend combination
   - [ ] features
     - [ ] generate sample exam
     - [ ] export questions to pdf
@@ -29,7 +29,7 @@ To Do
   - [x] create backend
   - [ ] create working backend-frontend combination
   - [ ] repeat for
-    - [ ] questions
+    - [x] questions
     - [ ] tags
     - [ ] courses
   - [ ] incorporate images

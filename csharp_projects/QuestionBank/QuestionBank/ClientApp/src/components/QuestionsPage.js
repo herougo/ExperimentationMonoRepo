@@ -1,6 +1,6 @@
 ﻿import React, { useEffect, useState } from 'react';
 import QuestionsTable from './QuestionsTable';
-import getFilteredQuestions from '../utils/apiInteraction'
+import { getFilteredQuestions } from '../utils/apiInteraction'
 import useDataLoad from '../hooks/useDataLoad';
 
 const QuestionsPage = () => {
