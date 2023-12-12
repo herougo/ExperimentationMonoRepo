@@ -19,6 +19,8 @@ To Do
   - [ ] features
     - [ ] generate sample exam
     - [ ] export questions to pdf
+    - [ ] mark as done
+    - [ ] display tags, course
     - [ ] view question
     - [ ] tag-based filtering
     - [ ] collapsible solution
@@ -28,10 +30,10 @@ To Do
   - [x] incorporate login
   - [x] create backend
   - [x] create working backend-frontend combination
-  - [ ] repeat for
+  - [x] repeat for
     - [x] questions
     - [x] tags
-    - [ ] courses
+    - [x] courses
   - [ ] incorporate images
 - [ ] courses page
   - [ ] UI figure out

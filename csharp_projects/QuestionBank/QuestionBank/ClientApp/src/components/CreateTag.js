@@ -13,7 +13,7 @@ const CreateTag = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         createTag(inputs, (status, responseData) => {
-            if (status == 200) {
+            if (status === 200) {
                 alert("Create tag succeeded!")
             } else {
                 alert("Create tag failed! Status code = " + status)

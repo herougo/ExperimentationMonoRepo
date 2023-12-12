@@ -24,7 +24,7 @@ async function authorizedPostFetch(fetchUrl, body) {
         body: JSON.stringify(body)
     });
     let responseData = {}
-    if (response.status == 200) {
+    if (response.status === 200) {
         try {
             responseData = await response.json();
         } catch { }
@@ -55,8 +55,18 @@ async function createTag(data, callback) {
     callback(status, responseData)
 }
 
+async function createCourse(data, callback) {
+    const payload = {
+        "Code": data.code || "",
+        "Title": data.title || ""
+    }
+    const [status, responseData] = await authorizedPostFetch('courses/create', payload)
+    callback(status, responseData)
+}
+
 export {
     getFilteredQuestions,
     createQuestion,
-    createTag
+    createTag,
+    createCourse
 }

@@ -13,7 +13,7 @@ const CreateQuestion = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         createQuestion(inputs, (status, responseData) => {
-            if (status == 200) {
+            if (status === 200) {
                 alert("Create question succeeded!")
             } else {
                 alert("Create question failed! Status code = " + status)
