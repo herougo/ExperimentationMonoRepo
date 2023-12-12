@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 using QuestionBank.Data;
 using QuestionBank.Models;
 
@@ -45,26 +46,26 @@ namespace QuestionBank.Controllers
             return View(tag);
         }
 
-        // GET: Tags/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
         // POST: Tags/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description")] Tag tag)
+        public async Task<IActionResult> Create()
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _context.Add(tag);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                throw new Exception("Invalid ModelState");
             }
-            return View(tag);
+            StreamReader requestReader = new StreamReader(Request.Body);
+            JObject request = JObject.Parse(await requestReader.ReadToEndAsync());
+            Tag tag = new Tag()
+            {
+                Name = request["Name"]?.ToString(),
+                Description = request["Description"]?.ToString()
+            };
+
+            _context.Add(tag);
+            await _context.SaveChangesAsync();
+            return new EmptyResult();
+
         }
 
         // GET: Tags/Edit/5

@@ -46,4 +46,17 @@ async function createQuestion(data, callback) {
     callback(status, responseData)
 }
 
-export { getFilteredQuestions, createQuestion }
+async function createTag(data, callback) {
+    const payload = {
+        "Name": data.name || "",
+        "Description": data.description || ""
+    }
+    const [status, responseData] = await authorizedPostFetch('tags/create', payload)
+    callback(status, responseData)
+}
+
+export {
+    getFilteredQuestions,
+    createQuestion,
+    createTag
+}

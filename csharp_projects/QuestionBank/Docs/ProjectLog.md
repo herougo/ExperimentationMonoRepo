@@ -27,10 +27,10 @@ To Do
   - [x] create frontend
   - [x] incorporate login
   - [x] create backend
-  - [ ] create working backend-frontend combination
+  - [x] create working backend-frontend combination
   - [ ] repeat for
     - [x] questions
-    - [ ] tags
+    - [x] tags
     - [ ] courses
   - [ ] incorporate images
 - [ ] courses page
