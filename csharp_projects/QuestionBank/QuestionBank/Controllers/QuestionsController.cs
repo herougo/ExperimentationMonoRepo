@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
 using QuestionBank.Controllers.ReturnResults;
 using QuestionBank.Data;
+using QuestionBank.DataLogic;
 using QuestionBank.Models;
 
 namespace QuestionBank.Controllers
@@ -16,10 +19,13 @@ namespace QuestionBank.Controllers
     public class QuestionsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly DoneTag _doneTag;
 
         public QuestionsController(ApplicationDbContext context)
         {
             _context = context;
+            _doneTag = new DoneTag(context);
+
         }
 
         // GET: Questions
@@ -163,18 +169,40 @@ namespace QuestionBank.Controllers
           return (_context.Question?.Any(e => e.Id == id)).GetValueOrDefault();
         }
 
+        [Authorize]
         [HttpGet]
         public IEnumerable<FilteredQuestionReturnResult> Filtered()
         {
+            string currentUserId = HttpContext.User.FindFirstValue("userID");
+            HashSet<int> doneQuestionIds = _doneTag.GetDoneQuestionIds(currentUserId).ToHashSet<int>();
             return _context.Question.Select(x => new FilteredQuestionReturnResult
             {
                 Id = x.Id,
                 QuestionText = x.QuestionText,
-                Done = false,
+                AnswerText = x.AnswerText,
+                Done = doneQuestionIds.Contains(x.Id),
                 Courses = "",
                 Tags = ""
             })
             .ToArray();
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult MarkAsDone(int id)
+        {
+            string currentUserId = HttpContext.User.FindFirstValue("userID");
+            _doneTag.MarkAsDone(id, currentUserId);
+            return new EmptyResult();
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult MarkAsNotDone(int id)
+        {
+            string currentUserId = HttpContext.User.FindFirstValue("userID");
+            _doneTag.MarkAsNotDone(id, currentUserId);
+            return new EmptyResult();
         }
     }
 }

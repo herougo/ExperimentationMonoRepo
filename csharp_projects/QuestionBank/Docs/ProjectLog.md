@@ -22,6 +22,9 @@ To Do
     - [ ] generate sample exam
     - [ ] export questions to pdf
     - [ ] mark as done
+      - [x] backend
+      - [ ] frontend
+      - [ ] backend and frontend combination and testing
     - [ ] display tags, course
     - [ ] view question
     - [ ] tag-based filtering
@@ -50,6 +53,7 @@ Log of Time
 - 2.5h - 3pm - 5:24pm: Updated dependencies; Added Questions model, controller, and table
 - ? - 3:30pm - : Added courses
 - 1.75h - 4pm-5:43pm - Worked on base questions page
+- ????
 
 Issues
 
