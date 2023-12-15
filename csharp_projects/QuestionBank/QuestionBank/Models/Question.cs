@@ -7,5 +7,6 @@
         public string? AnswerText { get; set; }
         public List<Course> Course { get; } = new();
         public List<QuestionTag> QuestionTags { get; } = new();
+        public List<QuestionUserTag> QuestionUserTags { get; } = new();
     }
 }

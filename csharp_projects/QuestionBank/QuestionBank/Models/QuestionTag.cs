@@ -9,6 +9,5 @@ namespace QuestionBank.Models
         public int TagsId { get; set; }
         public Question Question { get; set; } = null!;
         public Tag Tag { get; set; } = null!;
-        public List<UserQuestionTag> UserQuestionTags { get; } = new();
     }
 }
