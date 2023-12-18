@@ -1,7 +1,7 @@
 ﻿import React, { useState } from 'react'
-import { createCourse } from '../utils/apiInteraction'
+import { createQuestion } from '../../../utils/apiInteraction'
 
-const CreateCourse = () => {
+const CreateQuestion = () => {
     const [inputs, setInputs] = useState({});
 
     const handleChange = (event) => {
@@ -12,11 +12,11 @@ const CreateCourse = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        createCourse(inputs, (status, responseData) => {
+        createQuestion(inputs, (status, responseData) => {
             if (status === 200) {
-                alert("Create course succeeded!")
+                alert("Create question succeeded!")
             } else {
-                alert("Create course failed! Status code = " + status)
+                alert("Create question failed! Status code = " + status)
             }
         })
     }
@@ -26,12 +26,12 @@ const CreateCourse = () => {
             <div class="col-md-4">
                 <form onSubmit={handleSubmit}>
                     <div class="form-group">
-                        <label class="control-label">Course Code</label>
-                        <input name="code" class="form-control" onChange={handleChange} />
+                        <label class="control-label">Question Text</label>
+                        <textarea name="question" class="form-control" onChange={handleChange} />
                     </div>
                     <div class="form-group">
-                        <label class="control-label">Course Title</label>
-                        <input name="title" class="form-control" onChange={handleChange} />
+                        <label class="control-label">Answer Text</label>
+                        <textarea name="answer" class="form-control" onChange={handleChange} />
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Create" class="btn btn-primary" />
@@ -42,4 +42,4 @@ const CreateCourse = () => {
     )
 }
 
-export default CreateCourse
+export default CreateQuestion

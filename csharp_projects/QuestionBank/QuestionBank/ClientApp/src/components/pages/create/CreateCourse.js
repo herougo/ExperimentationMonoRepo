@@ -1,7 +1,7 @@
 ﻿import React, { useState } from 'react'
-import { createTag } from '../utils/apiInteraction'
+import { createCourse } from '../../../utils/apiInteraction'
 
-const CreateTag = () => {
+const CreateCourse = () => {
     const [inputs, setInputs] = useState({});
 
     const handleChange = (event) => {
@@ -12,11 +12,11 @@ const CreateTag = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        createTag(inputs, (status, responseData) => {
+        createCourse(inputs, (status, responseData) => {
             if (status === 200) {
-                alert("Create tag succeeded!")
+                alert("Create course succeeded!")
             } else {
-                alert("Create tag failed! Status code = " + status)
+                alert("Create course failed! Status code = " + status)
             }
         })
     }
@@ -26,12 +26,12 @@ const CreateTag = () => {
             <div class="col-md-4">
                 <form onSubmit={handleSubmit}>
                     <div class="form-group">
-                        <label class="control-label">Tag Name</label>
-                        <input name="name" class="form-control" onChange={handleChange} />
+                        <label class="control-label">Course Code</label>
+                        <input name="code" class="form-control" onChange={handleChange} />
                     </div>
                     <div class="form-group">
-                        <label class="control-label">Tag Description</label>
-                        <textarea name="description" class="form-control" onChange={handleChange} />
+                        <label class="control-label">Course Title</label>
+                        <input name="title" class="form-control" onChange={handleChange} />
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Create" class="btn btn-primary" />
@@ -42,4 +42,4 @@ const CreateTag = () => {
     )
 }
 
-export default CreateTag
+export default CreateCourse

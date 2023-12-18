@@ -1,6 +1,6 @@
 ﻿import React, { useCallback, useState } from 'react'
 import CreateQuestion from './CreateQuestion'
-import Select from './reusable/Select'
+import Select from '../../reusable/Select'
 import CreateTag from './CreateTag'
 import CreateCourse from './CreateCourse'
 

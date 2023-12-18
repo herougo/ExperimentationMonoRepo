@@ -1,7 +1,7 @@
 ﻿import React, { useState } from 'react'
-import { createQuestion } from '../utils/apiInteraction'
+import { createTag } from '../../../utils/apiInteraction'
 
-const CreateQuestion = () => {
+const CreateTag = () => {
     const [inputs, setInputs] = useState({});
 
     const handleChange = (event) => {
@@ -12,11 +12,11 @@ const CreateQuestion = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        createQuestion(inputs, (status, responseData) => {
+        createTag(inputs, (status, responseData) => {
             if (status === 200) {
-                alert("Create question succeeded!")
+                alert("Create tag succeeded!")
             } else {
-                alert("Create question failed! Status code = " + status)
+                alert("Create tag failed! Status code = " + status)
             }
         })
     }
@@ -26,12 +26,12 @@ const CreateQuestion = () => {
             <div class="col-md-4">
                 <form onSubmit={handleSubmit}>
                     <div class="form-group">
-                        <label class="control-label">Question Text</label>
-                        <textarea name="question" class="form-control" onChange={handleChange} />
+                        <label class="control-label">Tag Name</label>
+                        <input name="name" class="form-control" onChange={handleChange} />
                     </div>
                     <div class="form-group">
-                        <label class="control-label">Answer Text</label>
-                        <textarea name="answer" class="form-control" onChange={handleChange} />
+                        <label class="control-label">Tag Description</label>
+                        <textarea name="description" class="form-control" onChange={handleChange} />
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Create" class="btn btn-primary" />
@@ -42,4 +42,4 @@ const CreateQuestion = () => {
     )
 }
 
-export default CreateQuestion
+export default CreateTag

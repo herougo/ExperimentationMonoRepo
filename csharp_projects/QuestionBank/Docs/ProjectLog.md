@@ -19,14 +19,20 @@ To Do
   - [x] create base backend
   - [x] create working backend-frontend combination
   - [ ] features
-    - [ ] generate sample exam
-    - [ ] export questions to pdf
+    - [x] generate sample exam
+    - [x] export questions to pdf
+    - [x] view question
+      - [x] frontend
+    - [ ] display tags, course on the table
     - [ ] mark as done
       - [x] backend
       - [ ] frontend
       - [ ] backend and frontend combination and testing
-    - [ ] display tags, course
-    - [ ] view question
+    - [ ] way to add tag data to questions
+      - [ ] frontend
+      - [ ] backend
+      - [ ] testing
+      - [ ] sample data
     - [ ] tag-based filtering
     - [ ] collapsible solution
 - [ ] create page
@@ -39,7 +45,6 @@ To Do
     - [x] questions
     - [x] tags
     - [x] courses
-  - [ ] incorporate images
 - [ ] courses page
   - [ ] UI figure out
   - [ ] create frontend
