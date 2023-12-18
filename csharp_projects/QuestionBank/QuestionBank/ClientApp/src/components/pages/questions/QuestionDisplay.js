@@ -3,12 +3,12 @@ import { useCallback } from 'react';
 import { toggleDone } from '../../../utils/apiInteraction';
 
 const QuestionDisplay = (props) => {
-    const { selectedQuestion, onQuestionDataChange } = props
-    const [done, setDone] = useState(selectedQuestion.done)
-    const backgroundColour = done ?
+    const { questions, selectedQuestionIx, onQuestionDataChange } = props
+    const selectedQuestion = questions[selectedQuestionIx]
+    const backgroundColour = selectedQuestion.done ?
         "bg-secondary" :
         "bg-primary"
-    const doneBgColour = done ?
+    const doneBgColour = selectedQuestion.done ?
         "bg-success" :
         ""
     const classes = backgroundColour + " text-white p-3 rounded"
@@ -17,7 +17,6 @@ const QuestionDisplay = (props) => {
         toggleDone(selectedQuestion.id, e.target.checked, (status, responseData) => {
             if (status === 200) {
                 onQuestionDataChange()
-                setDone(e.target.checked)
             } else {
                 alert("Saving done result failed: " + status)
             }
@@ -30,7 +29,7 @@ const QuestionDisplay = (props) => {
                 <label>Done</label>
                 <input
                     type="checkbox"
-                    defaultChecked={selectedQuestion.done}
+                    checked={selectedQuestion.done}
                     onChange={doneCheckboxOnChange}
                     className="m-1"
                 />

@@ -6,16 +6,30 @@ import QuestionDisplay from './QuestionDisplay';
 
 const QuestionsPage = () => {
     const [tableData, onChange] = useDataLoad(getFilteredQuestions)
-    const [selectedQuestion, setSelectedQuestion] = useState(null)
+    const [selectedQuestionId, setSelectedQuestionId] = useState(null)
+    let selectedQuestionIx = null
+    if (tableData !== null) {
+        for (var i = 0; i < tableData.length; i++) {
+            if (selectedQuestionId === tableData[i].id) {
+                selectedQuestionIx = i
+                break
+            }
+        }
+    }
+
 
     const contents = tableData === null ?
         "Loading..." :
-        <QuestionsTable questions={tableData} setSelectedQuestion={setSelectedQuestion} />
+        <QuestionsTable questions={tableData} setSelectedQuestionId={setSelectedQuestionId} />
 
-    const questionDisplay = selectedQuestion === null ?
+    const questionDisplay = selectedQuestionIx === null ?
         null :
         <div class="col">
-            <QuestionDisplay selectedQuestion={selectedQuestion} onQuestionDataChange={onChange} />
+            <QuestionDisplay
+                questions={tableData}
+                selectedQuestionIx={selectedQuestionIx}
+                onQuestionDataChange={onChange}
+            />
         </div>
 
     return (
