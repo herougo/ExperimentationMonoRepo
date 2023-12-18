@@ -16,19 +16,19 @@ const QuestionDisplay = (props) => {
             }
             <div>
                 <label>Question Text</label>
-                <textarea readonly className="w-100">{selectedQuestion.questionText}</textarea>
+                <textarea readonly="true" className="w-100">{selectedQuestion.questionText}</textarea>
             </div>
             <div>
                 <label>Answer Text</label>
-                <textarea readonly className="w-100">{selectedQuestion.answerText}</textarea>
+                <textarea readonly="true" className="w-100">{selectedQuestion.answerText}</textarea>
             </div>
             <div>
                 <label>Courses</label>
-                <textarea readonly className="w-100">{selectedQuestion.course}</textarea>
+                <textarea readonly="true" className="w-100">{selectedQuestion.course}</textarea>
             </div>
             <div>
                 <label>Tags</label>
-                <textarea readonly className="w-100">{selectedQuestion.tags}</textarea>
+                <textarea readonly="true" className="w-100">{selectedQuestion.tags}</textarea>
             </div>
         </div>
     )
