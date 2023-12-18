@@ -6,12 +6,11 @@ import QuestionDisplay from './QuestionDisplay';
 
 const QuestionsPage = () => {
     const [tableData, onChange] = useDataLoad(getFilteredQuestions)
-    // const [selectedQuestion, setSelectedQuestion] = useState(null)
-    const selectedQuestion = tableData === null ? null : tableData[tableData.length - 1]
+    const [selectedQuestion, setSelectedQuestion] = useState(null)
 
     const contents = tableData === null ?
         "Loading..." :
-        <QuestionsTable questions={tableData} />
+        <QuestionsTable questions={tableData} setSelectedQuestion={setSelectedQuestion} />
 
     const questionDisplay = selectedQuestion === null ?
         null :
@@ -22,8 +21,8 @@ const QuestionsPage = () => {
     return (
         <div>
             <h1>Questions</h1>
-            <button class="btn btn-primary">Generate Sample Exam</button><br/>
-            <button class="btn btn-primary">Export Questions to PDF</button><br />
+            <button class="btn btn-primary m-1">Generate Sample Exam</button><br/>
+            <button class="btn btn-primary m-1">Export Questions to PDF</button><br />
             <div class="row">
                 <div class="col">
                     {contents}

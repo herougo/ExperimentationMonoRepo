@@ -23,16 +23,16 @@ To Do
     - [x] export questions to pdf
     - [x] view question
       - [x] frontend
-    - [ ] display tags, course on the table
-    - [ ] mark as done
-      - [x] backend
-      - [ ] frontend
-      - [ ] backend and frontend combination and testing
     - [ ] way to add tag data to questions
       - [ ] frontend
       - [ ] backend
       - [ ] testing
       - [ ] sample data
+    - [ ] display tags, course on the table
+    - [ ] mark as done
+      - [x] backend
+      - [ ] frontend
+      - [ ] backend and frontend combination and testing
     - [ ] tag-based filtering
     - [ ] collapsible solution
 - [ ] create page

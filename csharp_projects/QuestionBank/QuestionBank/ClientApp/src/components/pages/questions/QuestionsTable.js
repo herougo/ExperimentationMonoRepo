@@ -1,7 +1,7 @@
-﻿import React from 'react';
+﻿import React, { useCallback } from 'react';
 
 const QuestionsTable = (props) => {
-    const { questions } = props
+    const { questions, setSelectedQuestion } = props
 
     return (
         <table className="table">
@@ -14,8 +14,8 @@ const QuestionsTable = (props) => {
                 </tr>
             </thead>
             <tbody>
-                {questions.map(question =>
-                    <tr key={question.id}>
+                {questions.map((question, ix) =>
+                    <tr key={question.id} onClick={e => setSelectedQuestion(questions[ix])}>
                         <td>{question.questionText}</td>
                         <td>{question.done}</td>
                         <td>{question.course}</td>
