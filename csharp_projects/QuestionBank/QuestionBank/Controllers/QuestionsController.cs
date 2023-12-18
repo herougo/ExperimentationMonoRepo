@@ -13,6 +13,7 @@ using QuestionBank.Controllers.ReturnResults;
 using QuestionBank.Data;
 using QuestionBank.DataLogic;
 using QuestionBank.Models;
+using QuestionBank.Utils;
 
 namespace QuestionBank.Controllers
 {
@@ -173,7 +174,8 @@ namespace QuestionBank.Controllers
         [HttpGet]
         public IEnumerable<FilteredQuestionReturnResult> Filtered()
         {
-            string currentUserId = HttpContext.User.FindFirstValue("userID");
+            string currentUserId = User.GetUserId();
+            // string currentUserId = User.FindFirstValue("userID");
             HashSet<int> doneQuestionIds = _doneTag.GetDoneQuestionIds(currentUserId).ToHashSet<int>();
             return _context.Question.Select(x => new FilteredQuestionReturnResult
             {
@@ -187,20 +189,22 @@ namespace QuestionBank.Controllers
             .ToArray();
         }
 
+        // POST: Questions/MarkAsDone/5
         [Authorize]
         [HttpPost]
         public IActionResult MarkAsDone(int id)
         {
-            string currentUserId = HttpContext.User.FindFirstValue("userID");
+            string currentUserId = User.GetUserId();
             _doneTag.MarkAsDone(id, currentUserId);
             return new EmptyResult();
         }
 
+        // POST: Questions/MarkAsNotDone/5
         [Authorize]
         [HttpPost]
         public IActionResult MarkAsNotDone(int id)
         {
-            string currentUserId = HttpContext.User.FindFirstValue("userID");
+            string currentUserId = User.GetUserId();
             _doneTag.MarkAsNotDone(id, currentUserId);
             return new EmptyResult();
         }

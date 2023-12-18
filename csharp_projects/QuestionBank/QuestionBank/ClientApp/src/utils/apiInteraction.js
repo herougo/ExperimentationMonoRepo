@@ -64,9 +64,20 @@ async function createCourse(data, callback) {
     callback(status, responseData)
 }
 
+async function toggleDone(questionId, newValue, callback) {
+    let status, responseData
+    if (newValue) {
+        [status, responseData] = await authorizedPostFetch('questions/markasdone/' + questionId, {})
+    } else {
+        [status, responseData] = await authorizedPostFetch('questions/markasnotdone/' + questionId, {})
+    }
+    callback(status, responseData)
+}
+
 export {
     getFilteredQuestions,
     createQuestion,
     createTag,
-    createCourse
+    createCourse,
+    toggleDone
 }

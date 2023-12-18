@@ -17,7 +17,7 @@ const QuestionsTable = (props) => {
                 {questions.map((question, ix) =>
                     <tr key={question.id} onClick={e => setSelectedQuestion(questions[ix])}>
                         <td>{question.questionText}</td>
-                        <td>{question.done}</td>
+                        <td><input type="checkbox" readOnly defaultChecked={question.done}></input></td>
                         <td>{question.course}</td>
                         <td>{question.tags}</td>
                     </tr>

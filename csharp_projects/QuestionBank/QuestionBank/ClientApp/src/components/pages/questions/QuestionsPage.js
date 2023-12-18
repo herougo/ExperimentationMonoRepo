@@ -15,7 +15,7 @@ const QuestionsPage = () => {
     const questionDisplay = selectedQuestion === null ?
         null :
         <div class="col">
-            <QuestionDisplay selectedQuestion={selectedQuestion} />
+            <QuestionDisplay selectedQuestion={selectedQuestion} onQuestionDataChange={onChange} />
         </div>
 
     return (

@@ -29,10 +29,10 @@ To Do
       - [ ] testing
       - [ ] sample data
     - [ ] display tags, course on the table
-    - [ ] mark as done
+    - [x] mark as done
       - [x] backend
-      - [ ] frontend
-      - [ ] backend and frontend combination and testing
+      - [x] frontend
+      - [x] backend and frontend combination and testing
     - [ ] tag-based filtering
     - [ ] collapsible solution
 - [ ] create page
