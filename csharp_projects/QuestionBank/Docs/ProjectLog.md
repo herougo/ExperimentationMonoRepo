@@ -35,7 +35,7 @@ To Do
       - [x] backend and frontend combination and testing
     - [ ] tag-based filtering
     - [ ] collapsible solution
-- [ ] create page
+- [x] create page
   - [x] UI figure out
   - [x] create frontend
   - [x] incorporate login

@@ -34,7 +34,7 @@ const CreateCourse = () => {
                         <input name="title" class="form-control" onChange={handleChange} />
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-primary" />
+                        <input type="submit" value="Create" class="btn btn-primary mt-2" />
                     </div>
                 </form>
             </div>
