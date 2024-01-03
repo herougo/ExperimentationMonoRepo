@@ -21,11 +21,10 @@ namespace QuestionBank.Controllers
         }
 
         // GET: Tags
-        public async Task<IActionResult> Index()
+        public async Task<List<QuestionBank.Models.Tag>> Index()
         {
-              return _context.Tag != null ? 
-                          View(await _context.Tag.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Tag'  is null.");
+            List<QuestionBank.Models.Tag> results = await _context.Tag.ToListAsync();
+            return results;
         }
 
         // GET: Tags/Details/5

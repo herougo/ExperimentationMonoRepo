@@ -1,10 +1,10 @@
 ﻿import React, { useState, useCallback, useEffect } from 'react'
 
-const useDataLoad = (asyncDataFetchFunction) => {
-    const [data, setData] = useState(null)
+const useDataLoad = (asyncDataFetchFunction, defaultData=null) => {
+    const [data, setData] = useState(defaultData)
 
     const onChange = useCallback(() => {
-        setData(null)
+        setData(defaultData)
         asyncDataFetchFunction((d) => setData(d))
     })
 

@@ -74,10 +74,21 @@ async function toggleDone(questionId, newValue, callback) {
     callback(status, responseData)
 }
 
+async function getTagsAndCourses(callback) {
+    // TODO: do in parallel
+    const [coursesStatus, coursesData] = await authorizedGetFetch('courses')
+    const [tagsStatus, tagsData] = await authorizedGetFetch('tags')
+    console.log(coursesData, tagsData)
+    const courseCodes = coursesData.map(x => x.code)
+    const tagNames = tagsData.map(x => x.name)
+    callback({ courses: courseCodes, tags: tagNames })
+}
+
 export {
     getFilteredQuestions,
     createQuestion,
     createTag,
     createCourse,
-    toggleDone
+    toggleDone,
+    getTagsAndCourses
 }

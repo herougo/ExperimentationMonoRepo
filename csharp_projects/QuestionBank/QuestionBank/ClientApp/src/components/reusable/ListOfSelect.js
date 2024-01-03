@@ -16,22 +16,20 @@ const ListOfSelect = (props) => {
     const removeSelect = useCallback((ix) => {
         if (array.length > 1) {
             remove(ix)
+            const newArray = [...array.slice(0, ix), ...array.slice(ix + 1, array.length)]
+            const values = new Set(newArray.map(x => x.value))
+            if (values.has(null)) {
+                values.delete(null)
+            }
+            onChange(Array.from(values))
         }
-
-        const newArray = [...array.slice(0, ix), ...array.slice(ix + 1, array.length)]
-        const values = new Set(newArray.map(x => x.value))
-        if (values.has(null)) {
-            values.delete(null)
-        }
-        onChange(Array.from(values))
     })
 
     const selectOnChange = useCallback((e, ix) => {
         const newSingleSelectData = { ...array[ix], value: e.target.value }
         update(ix, newSingleSelectData)
 
-        const values = new Set(array.map(x => x.value))
-        values.add(e.target.value)
+        const values = new Set(array.map((x, i) => i === ix ? e.target.value : x.value))
         if (values.has(null)) {
             values.delete(null)
         }
@@ -42,12 +40,11 @@ const ListOfSelect = (props) => {
         <>
             {
                 array.map((data, ix) => (
-                    <div>
+                    <div key={data.key}>
                         <Select
                             className="m-1"
-                            key={data.key}
                             options={options}
-                            name={name + data.key}
+                            name={name + "-" + data.key}
                             onChange={e => selectOnChange(e, ix)}>
                         </Select>
                         <button type="button" className="btn btn-primary m-1" onClick={e => addSelect()}>+</button>

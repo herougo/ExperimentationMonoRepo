@@ -1,11 +1,14 @@
 ﻿import React, { useState } from 'react'
-import { createQuestion } from '../../../utils/apiInteraction'
+import { createQuestion, getTagsAndCourses } from '../../../utils/apiInteraction'
 import ListOfSelect from '../../reusable/ListOfSelect';
+import useDataLoad from '../../../hooks/useDataLoad';
 
 const CreateQuestion = () => {
-    const [inputs, setInputs] = useState({});
-    const [coursesOptions, setCoursesOptions] = useState([null, "Apple", "Book", "Cat"])
-    const [tagsOptions, setTagsOptions] = useState([null, "Apple", "Book", "Cat"])
+    const [inputs, setInputs] = useState({})
+    const [optionData, optionDataOnChange] = useDataLoad(
+        getTagsAndCourses,
+        {tags: [null], courses: [null]}
+    )
 
     const handleChange = (event) => {
         const name = event.target.name;
@@ -32,6 +35,15 @@ const CreateQuestion = () => {
         })
     }
 
+    if (optionData.tags.length === 1) {
+        return (
+            <div class="row">
+                <div class="col">
+                    Loading...
+                </div>
+            </div>
+        )
+    }
     return (
         <div class="row">
             <div class="col-md-4">
@@ -46,11 +58,11 @@ const CreateQuestion = () => {
                     </div>
                     <div class="form-group">
                         <label class="control-label">Courses</label>
-                        <ListOfSelect options={coursesOptions} onChange={coursesOnChange} name="courses"></ListOfSelect>
+                        <ListOfSelect options={[null, ...optionData.courses]} onChange={coursesOnChange} name="courses"></ListOfSelect>
                     </div>
                     <div class="form-group">
                         <label class="control-label">Tags</label>
-                        <ListOfSelect options={tagsOptions} onChange={tagsOnChange} name="courses"></ListOfSelect>
+                        <ListOfSelect options={[null, ...optionData.tags]} onChange={tagsOnChange} name="tags"></ListOfSelect>
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Create" class="btn btn-primary mt-2" />

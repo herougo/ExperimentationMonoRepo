@@ -21,11 +21,10 @@ namespace QuestionBank.Controllers
         }
 
         // GET: Courses
-        public async Task<IActionResult> Index()
+        public async Task<List<QuestionBank.Models.Course>> Index()
         {
-              return _context.Course != null ? 
-                          View(await _context.Course.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Course'  is null.");
+            List<QuestionBank.Models.Course> results = await _context.Course.ToListAsync();
+            return results;
         }
 
         // GET: Courses/Details/5
