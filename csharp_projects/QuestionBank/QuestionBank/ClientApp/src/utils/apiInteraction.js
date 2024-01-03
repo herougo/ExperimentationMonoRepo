@@ -40,7 +40,9 @@ async function getFilteredQuestions(callback) {
 async function createQuestion(data, callback) {
     const payload = {
         "QuestionText": data.question || "",
-        "AnswerText": data.answer || ""
+        "AnswerText": data.answer || "",
+        "Courses": data.courses || [],
+        "Tags": data.tags || [],
     }
     const [status, responseData] = await authorizedPostFetch('questions/create', payload)
     callback(status, responseData)
@@ -74,14 +76,23 @@ async function toggleDone(questionId, newValue, callback) {
     callback(status, responseData)
 }
 
+function listOfObjToMap(listOfObj, keyKey, valueKey) {
+    // e.g. [{id: 1, val: "hi"}], id, val -> {1: "hi"}
+    const result = {}
+    for (const element of listOfObj) {
+        result[element[keyKey]] = element[valueKey]
+    }
+    return result
+}
+
 async function getTagsAndCourses(callback) {
     // TODO: do in parallel
     const [coursesStatus, coursesData] = await authorizedGetFetch('courses')
     const [tagsStatus, tagsData] = await authorizedGetFetch('tags')
-    console.log(coursesData, tagsData)
-    const courseCodes = coursesData.map(x => x.code)
-    const tagNames = tagsData.map(x => x.name)
-    callback({ courses: courseCodes, tags: tagNames })
+    callback({
+        courses: listOfObjToMap(coursesData, "code", "id"),
+        tags: listOfObjToMap(tagsData, "name", "id") 
+    })
 }
 
 export {

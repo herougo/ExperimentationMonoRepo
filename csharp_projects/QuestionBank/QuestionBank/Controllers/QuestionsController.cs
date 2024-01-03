@@ -21,12 +21,13 @@ namespace QuestionBank.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly DoneTag _doneTag;
+        private readonly CoursesAndTags _coursesAndTags;
 
         public QuestionsController(ApplicationDbContext context)
         {
             _context = context;
             _doneTag = new DoneTag(context);
-
+            _coursesAndTags = new CoursesAndTags(context);
         }
 
         // GET: Questions
@@ -73,6 +74,13 @@ namespace QuestionBank.Controllers
 
             _context.Add(question);
             await _context.SaveChangesAsync();
+
+            _coursesAndTags.AddCoursesAndTags(
+                question.Id,
+                request["Courses"]?.ToObject<List<int>>(),
+                request["Tags"]?.ToObject<List<int>>()
+            );
+
             return new EmptyResult();
 
         }

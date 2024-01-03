@@ -7,8 +7,9 @@ const CreateQuestion = () => {
     const [inputs, setInputs] = useState({})
     const [optionData, optionDataOnChange] = useDataLoad(
         getTagsAndCourses,
-        {tags: [null], courses: [null]}
+        { tags: {}, courses: {} }
     )
+
 
     const handleChange = (event) => {
         const name = event.target.name;
@@ -17,11 +18,19 @@ const CreateQuestion = () => {
     }
 
     const coursesOnChange = (arr) => {
-        setInputs(values => ({ ...values, courses: arr }))
+        const newCourses = []
+        for (const element of arr) {
+            newCourses.push(optionData.courses[element])
+        }
+        setInputs(values => ({ ...values, courses: newCourses }))
     }
 
     const tagsOnChange = (arr) => {
-        setInputs(values => ({ ...values, tags: arr }))
+        const newTags = []
+        for (const element of arr) {
+            newTags.push(optionData.tags[element])
+        }
+        setInputs(values => ({ ...values, tags: newTags }))
     }
 
     const handleSubmit = (event) => {
@@ -44,6 +53,9 @@ const CreateQuestion = () => {
             </div>
         )
     }
+    const courseCodes = Object.keys(optionData.courses)
+    const tagNames = Object.keys(optionData.tags)
+
     return (
         <div class="row">
             <div class="col-md-4">
@@ -58,11 +70,11 @@ const CreateQuestion = () => {
                     </div>
                     <div class="form-group">
                         <label class="control-label">Courses</label>
-                        <ListOfSelect options={[null, ...optionData.courses]} onChange={coursesOnChange} name="courses"></ListOfSelect>
+                        <ListOfSelect options={[null, ...courseCodes]} onChange={coursesOnChange} name="courses"></ListOfSelect>
                     </div>
                     <div class="form-group">
                         <label class="control-label">Tags</label>
-                        <ListOfSelect options={[null, ...optionData.tags]} onChange={tagsOnChange} name="tags"></ListOfSelect>
+                        <ListOfSelect options={[null, ...tagNames]} onChange={tagsOnChange} name="tags"></ListOfSelect>
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Create" class="btn btn-primary mt-2" />
