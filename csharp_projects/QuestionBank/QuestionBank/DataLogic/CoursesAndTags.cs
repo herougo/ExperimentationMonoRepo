@@ -18,10 +18,19 @@ namespace QuestionBank.DataLogic
             {
                 QuestionTag questionTag = new QuestionTag()
                 {
-                    QuestionsId = questionId,
-                    TagsId = tagId
+                    QuestionId = questionId,
+                    TagId = tagId
                 };
                 _context.Add(questionTag);
+            }
+            foreach (int courseId in courseIds)
+            {
+                QuestionCourse questionCourse = new QuestionCourse()
+                {
+                    QuestionId = questionId,
+                    CourseId = courseId
+                };
+                _context.Add(questionCourse);
             }
             _context.SaveChanges();
         }
