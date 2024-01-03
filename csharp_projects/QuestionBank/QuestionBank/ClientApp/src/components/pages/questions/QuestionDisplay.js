@@ -43,11 +43,11 @@ const QuestionDisplay = (props) => {
             </div>
             <div>
                 <label>Courses</label>
-                <textarea readOnly className="w-100" value={selectedQuestion.course || ""}></textarea>
+                <textarea readOnly className="w-100" value={selectedQuestion.courses || []}></textarea>
             </div>
             <div>
                 <label>Tags</label>
-                <textarea readOnly className="w-100" value={selectedQuestion.tags || ""}></textarea>
+                <textarea readOnly className="w-100" value={selectedQuestion.tags || []}></textarea>
             </div>
         </div>
     )

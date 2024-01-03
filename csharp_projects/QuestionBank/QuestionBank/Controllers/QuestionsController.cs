@@ -185,14 +185,16 @@ namespace QuestionBank.Controllers
             string currentUserId = User.GetUserId();
             // string currentUserId = User.FindFirstValue("userID");
             HashSet<int> doneQuestionIds = _doneTag.GetDoneQuestionIds(currentUserId).ToHashSet<int>();
+            Dictionary<int, List<string>> questionTagMap = _coursesAndTags.GetQuestionTagMap();
+            Dictionary<int, List<string>> questionCourseMap = _coursesAndTags.GetQuestionCourseMap();
             return _context.Question.Select(x => new FilteredQuestionReturnResult
             {
                 Id = x.Id,
                 QuestionText = x.QuestionText,
                 AnswerText = x.AnswerText,
                 Done = doneQuestionIds.Contains(x.Id),
-                Courses = "",
-                Tags = ""
+                Courses = questionCourseMap.ContainsKey(x.Id) ? questionCourseMap[x.Id] : null,
+                Tags = questionTagMap.ContainsKey(x.Id) ? questionTagMap[x.Id] : null
             })
             .ToArray();
         }

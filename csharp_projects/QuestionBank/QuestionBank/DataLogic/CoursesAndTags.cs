@@ -34,5 +34,73 @@ namespace QuestionBank.DataLogic
             }
             _context.SaveChanges();
         }
+
+        public Dictionary<int, List<string>> GetQuestionTagMap()
+        {
+            List<Tuple<int, int>> questionTags = _context.QuestionTag.Select(
+                x => new Tuple<int, int>(x.QuestionId, x.TagId)
+            ).ToList();
+            List<Tuple<int, string?>> tags = _context.Tag.Select(
+                x => new Tuple<int, string?>(x.Id, x.Name)
+            ).ToList();
+
+            Dictionary<int, string?> tagIdToTagName = new Dictionary<int, string?>();
+            foreach (Tuple<int, string?> element in tags)
+            {
+                tagIdToTagName[element.Item1] = element.Item2;
+            }
+
+            Dictionary<int, List<string>> result = new Dictionary<int, List<string>>();
+            foreach (Tuple<int, int> element in questionTags)
+            {
+                int questionId = element.Item1;
+                int tagId = element.Item2;
+                string? tagName = tagIdToTagName[tagId];
+                if (!result.ContainsKey(questionId))
+                {
+                    result[questionId] = new List<string>();
+                }
+                if (tagName != null)
+                {
+                    result[questionId].Add(tagName);
+                }
+            }
+
+            return result;
+        }
+
+        public Dictionary<int, List<string>> GetQuestionCourseMap()
+        {
+            List<Tuple<int, int>> questionCourses = _context.QuestionCourse.Select(
+                x => new Tuple<int, int>(x.QuestionId, x.CourseId)
+            ).ToList();
+            List<Tuple<int, string?>> courses = _context.Course.Select(
+                x => new Tuple<int, string?>(x.Id, x.Code)
+            ).ToList();
+
+            Dictionary<int, string?> courseIdToCourseCodes = new Dictionary<int, string?>();
+            foreach (Tuple<int, string?> element in courses)
+            {
+                courseIdToCourseCodes[element.Item1] = element.Item2;
+            }
+
+            Dictionary<int, List<string>> result = new Dictionary<int, List<string>>();
+            foreach (Tuple<int, int> element in questionCourses)
+            {
+                int questionId = element.Item1;
+                int courseId = element.Item2;
+                string? courseCode = courseIdToCourseCodes[courseId];
+                if (!result.ContainsKey(questionId))
+                {
+                    result[questionId] = new List<string>();
+                }
+                if (courseCode != null)
+                {
+                    result[questionId].Add(courseCode);
+                }
+            }
+
+            return result;
+        }
     }
 }

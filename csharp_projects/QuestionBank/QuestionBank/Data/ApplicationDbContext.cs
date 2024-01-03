@@ -17,5 +17,7 @@ namespace QuestionBank.Data
         public DbSet<QuestionBank.Models.Course> Course { get; set; } = null!;
         public DbSet<QuestionBank.Models.Tag> Tag { get; set; } = null!;
         public DbSet<QuestionBank.Models.QuestionUserTag> QuestionUserTag { get; set; } = null!;
+        public DbSet<QuestionBank.Models.QuestionTag> QuestionTag { get; set; } = null!;
+        public DbSet<QuestionBank.Models.QuestionCourse> QuestionCourse { get; set; } = null!;
     }
 }
