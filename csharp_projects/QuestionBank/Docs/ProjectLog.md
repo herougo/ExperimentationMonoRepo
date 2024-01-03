@@ -23,11 +23,11 @@ To Do
     - [x] export questions to pdf
     - [x] view question
       - [x] frontend
-    - [ ] way to add tag data to questions
-      - [ ] frontend
-      - [ ] backend
-      - [ ] testing
-      - [ ] sample data
+    - [x] way to add tag data to questions
+      - [x] frontend
+      - [x] backend
+      - [x] testing
+      - [x] sample data
     - [ ] display tags, course on the table
     - [x] mark as done
       - [x] backend
