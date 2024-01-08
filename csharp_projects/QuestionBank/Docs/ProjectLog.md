@@ -28,9 +28,9 @@ To Do
       - [x] backend
       - [x] testing
       - [x] sample data
-    - [ ] display tags, course on the table
+    - [x] display tags, course on the table
       - [x] access
-      - [ ] good UI
+      - [x] good UI
     - [x] mark as done
       - [x] backend
       - [x] frontend

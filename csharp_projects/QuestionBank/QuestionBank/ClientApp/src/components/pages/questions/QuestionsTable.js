@@ -18,8 +18,12 @@ const QuestionsTable = (props) => {
                     <tr key={question.id} onClick={e => setSelectedQuestionId(question.id)}>
                         <td>{question.questionText}</td>
                         <td><input type="checkbox" disabled defaultChecked={question.done}></input></td>
-                        <td>{question.courses}</td>
-                        <td>{question.tags}</td>
+                        <td>{question.courses.map(course => (
+                            <button className="btn btn-primary">{course}</button>
+                        ))}</td>
+                        <td>{question.tags.map(tag => (
+                            <button className="btn btn-primary">{tag}</button>
+                        ))}</td>
                     </tr>
                 )}
             </tbody>

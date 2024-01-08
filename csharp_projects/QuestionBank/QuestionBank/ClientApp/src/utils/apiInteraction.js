@@ -33,7 +33,16 @@ async function authorizedPostFetch(fetchUrl, body) {
 }
 
 async function getFilteredQuestions(callback) {
-    const [status, data] = await authorizedGetFetch('questions/filtered')
+    let [status, data] = await authorizedGetFetch('questions/filtered')
+    data = data.map(
+        question => ({
+            id: question.id,
+            questionText: question.questionText,
+            done: question.done,
+            tags: question.tags || [],
+            courses: question.courses|| []
+        })
+    )
     callback(data)
 }
 
