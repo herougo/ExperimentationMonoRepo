@@ -179,7 +179,7 @@ namespace QuestionBank.Controllers
         }
 
         [Authorize]
-        [HttpGet]
+        [HttpPost]
         public IEnumerable<FilteredQuestionReturnResult> Filtered()
         {
             string currentUserId = User.GetUserId();

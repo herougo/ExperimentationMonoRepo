@@ -7,6 +7,7 @@ const CreateQuestion = () => {
     const [inputs, setInputs] = useState({})
     const [optionData, optionDataOnChange] = useDataLoad(
         getTagsAndCourses,
+        null,
         { tags: {}, courses: {} }
     )
 

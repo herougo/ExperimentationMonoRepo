@@ -1,14 +1,14 @@
 ﻿import React, { useState, useCallback, useEffect } from 'react'
 
-const useDataLoad = (asyncDataFetchFunction, defaultData=null) => {
+const useDataLoad = (asyncDataFetchFunction, firstBody=null, defaultData=null) => {
     const [data, setData] = useState(defaultData)
 
-    const onChange = useCallback(() => {
+    const onChange = useCallback((newBody) => {
         setData(defaultData)
-        asyncDataFetchFunction((d) => setData(d))
+        asyncDataFetchFunction(newBody, (d) => setData(d))
     })
 
-    useEffect(onChange, [])
+    useEffect(() => onChange(firstBody), [])
 
     return [data, onChange]
 }

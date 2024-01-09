@@ -2,10 +2,10 @@
 import { useState } from 'react'
 
 const Select = (props) => {
-    const { options, name, onChange, ...otherProps } = props
+    const { options, onChange, ...otherProps } = props
     
     return (
-        <select {...otherProps} name={name} onChange={onChange}>
+        <select {...otherProps} onChange={onChange}>
             {options.map(option => <option key={option}>{option}</option>)}
         </select>
     )

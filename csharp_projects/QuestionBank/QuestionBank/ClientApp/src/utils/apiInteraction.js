@@ -5,7 +5,7 @@ async function authorizedGetFetch(fetchUrl) {
     const token = await authService.getAccessToken();
     const response = await fetch(fetchUrl, {
         headers: !token ? {} : { 'Authorization': `Bearer ${token}` }
-    });
+    })
     const data = await response.json();
     return [response.status, data]
 }
@@ -32,15 +32,16 @@ async function authorizedPostFetch(fetchUrl, body) {
     return [response.status, responseData]
 }
 
-async function getFilteredQuestions(callback) {
-    let [status, data] = await authorizedGetFetch('questions/filtered')
+
+async function getFilteredQuestions(body, callback) {
+    let [status, data] = await authorizedPostFetch('questions/filtered', body)
     data = data.map(
         question => ({
             id: question.id,
             questionText: question.questionText,
             done: question.done,
             tags: question.tags || [],
-            courses: question.courses|| []
+            courses: question.courses || []
         })
     )
     callback(data)
@@ -94,7 +95,7 @@ function listOfObjToMap(listOfObj, keyKey, valueKey) {
     return result
 }
 
-async function getTagsAndCourses(callback) {
+async function getTagsAndCourses(unusedBody, callback) {
     // TODO: do in parallel
     const [coursesStatus, coursesData] = await authorizedGetFetch('courses')
     const [tagsStatus, tagsData] = await authorizedGetFetch('tags')
