@@ -1,5 +1,4 @@
 import ApiAuthorzationRoutes from './components/api-authorization/ApiAuthorizationRoutes';
-import { FetchData } from "./components/FetchData";
 import Home from "./components/Home";
 import Settings from "./components/Settings";
 import Create from "./components/pages/create/Create";
@@ -19,11 +18,6 @@ const AppRoutes = [
     path: '/create',
     requireAuth: true,
     element: <Create />
-  },
-  {
-    path: '/fetch-data',
-    requireAuth: true,
-    element: <FetchData />
   },
   {
     path: '/settings',
