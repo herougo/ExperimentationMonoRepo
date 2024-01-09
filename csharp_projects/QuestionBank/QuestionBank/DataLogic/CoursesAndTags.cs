@@ -1,4 +1,5 @@
-﻿using QuestionBank.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using QuestionBank.Data;
 using QuestionBank.Models;
 
 namespace QuestionBank.DataLogic
@@ -35,11 +36,16 @@ namespace QuestionBank.DataLogic
             _context.SaveChanges();
         }
 
-        public Dictionary<int, List<string>> GetQuestionTagMap()
+        public Dictionary<int, List<string>> GetQuestionTagMap(HashSet<int>? tagIds)
         {
-            List<Tuple<int, int>> questionTags = _context.QuestionTag.Select(
-                x => new Tuple<int, int>(x.QuestionId, x.TagId)
-            ).ToList();
+            IQueryable<int> filteredQuestionIds = _context.QuestionTag
+                .Where(x => tagIds == null || tagIds.Contains(x.TagId))
+                .Select(x => x.QuestionId);
+            List<Tuple<int, int>> questionTags = _context.QuestionTag
+                .Where(x => filteredQuestionIds.Contains(x.QuestionId))
+                .Select(
+                    x => new Tuple<int, int>(x.QuestionId, x.TagId)
+                ).ToList();
             List<Tuple<int, string?>> tags = _context.Tag.Select(
                 x => new Tuple<int, string?>(x.Id, x.Name)
             ).ToList();
@@ -69,11 +75,16 @@ namespace QuestionBank.DataLogic
             return result;
         }
 
-        public Dictionary<int, List<string>> GetQuestionCourseMap()
+        public Dictionary<int, List<string>> GetQuestionCourseMap(HashSet<int>? courseIds)
         {
-            List<Tuple<int, int>> questionCourses = _context.QuestionCourse.Select(
-                x => new Tuple<int, int>(x.QuestionId, x.CourseId)
-            ).ToList();
+            IQueryable<int> filteredQuestionIds = _context.QuestionTag
+                .Where(x => courseIds == null || courseIds.Contains(x.TagId))
+                .Select(x => x.QuestionId);
+            List<Tuple<int, int>> questionCourses = _context.QuestionCourse
+                .Where(x => filteredQuestionIds.Contains(x.QuestionId))
+                .Select(
+                    x => new Tuple<int, int>(x.QuestionId, x.CourseId)
+                ).ToList();
             List<Tuple<int, string?>> courses = _context.Course.Select(
                 x => new Tuple<int, string?>(x.Id, x.Code)
             ).ToList();

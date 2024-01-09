@@ -180,23 +180,53 @@ namespace QuestionBank.Controllers
 
         [Authorize]
         [HttpPost]
-        public IEnumerable<FilteredQuestionReturnResult> Filtered()
+        async public Task<IEnumerable<FilteredQuestionReturnResult>> Filtered()
         {
-            string currentUserId = User.GetUserId();
-            // string currentUserId = User.FindFirstValue("userID");
-            HashSet<int> doneQuestionIds = _doneTag.GetDoneQuestionIds(currentUserId).ToHashSet<int>();
-            Dictionary<int, List<string>> questionTagMap = _coursesAndTags.GetQuestionTagMap();
-            Dictionary<int, List<string>> questionCourseMap = _coursesAndTags.GetQuestionCourseMap();
-            return _context.Question.Select(x => new FilteredQuestionReturnResult
+            // TODO: improve performance
+            StreamReader requestReader = new StreamReader(Request.Body);
+            JObject request = JObject.Parse(await requestReader.ReadToEndAsync());
+
+            HashSet<int>? courseIds = request["courses"]?.ToObject<HashSet<int>>();
+            if (courseIds != null && courseIds.Count == 0)
             {
-                Id = x.Id,
-                QuestionText = x.QuestionText,
-                AnswerText = x.AnswerText,
-                Done = doneQuestionIds.Contains(x.Id),
-                Courses = questionCourseMap.ContainsKey(x.Id) ? questionCourseMap[x.Id] : null,
-                Tags = questionTagMap.ContainsKey(x.Id) ? questionTagMap[x.Id] : null
-            })
-            .ToArray();
+                courseIds = null;
+            }
+            HashSet<int>? tagIds = request["tags"]?.ToObject<HashSet<int>>();
+            if (tagIds != null && tagIds.Count == 0)
+            {
+                tagIds = null;
+            }
+
+            string currentUserId = User.GetUserId();
+            HashSet<int> doneQuestionIds = _doneTag.GetDoneQuestionIds(currentUserId).ToHashSet<int>();
+            Dictionary<int, List<string>> questionTagMap = _coursesAndTags.GetQuestionTagMap(tagIds);
+            Dictionary<int, List<string>> questionCourseMap = _coursesAndTags.GetQuestionCourseMap(courseIds);
+            
+            IQueryable<Question> questions = _context.Question;
+            if (tagIds != null)
+            {
+                // x => questionTagMap.ContainsKey(x.Id) cannot be translated
+                List<int> filteredQuestionIds = questionTagMap.Keys.ToList<int>();
+                questions = questions.Where(x => filteredQuestionIds.Contains(x.Id));
+            }
+            if (courseIds != null)
+            {
+                List<int> filteredQuestionIds = questionCourseMap.Keys.ToList<int>();
+                questions = questions.Where(x => filteredQuestionIds.Contains(x.Id));
+            }
+
+            IEnumerable<FilteredQuestionReturnResult> result = questions
+                .Select(x => new FilteredQuestionReturnResult
+                {
+                    Id = x.Id,
+                    QuestionText = x.QuestionText,
+                    AnswerText = x.AnswerText,
+                    Done = doneQuestionIds.Contains(x.Id),
+                    Courses = questionCourseMap.ContainsKey(x.Id) ? questionCourseMap[x.Id] : null,
+                    Tags = questionTagMap.ContainsKey(x.Id) ? questionTagMap[x.Id] : null
+                })
+                .ToArray();
+            return result;
         }
 
         // POST: Questions/MarkAsDone/5

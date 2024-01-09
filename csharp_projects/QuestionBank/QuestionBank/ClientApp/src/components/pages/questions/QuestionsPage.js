@@ -6,7 +6,7 @@ import QuestionDisplay from './QuestionDisplay';
 import QuestionFilter from './QuestionFilter';
 
 const QuestionsPage = () => {
-    const [tableData, onFilterChange] = useDataLoad(getFilteredQuestions)
+    const [tableData, onFilterChange] = useDataLoad(getFilteredQuestions, {courses: [], tags: []})
     const [selectedQuestionId, setSelectedQuestionId] = useState(null)
     let selectedQuestionIx = null
     if (tableData !== null) {
