@@ -1,0 +1,7 @@
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\Core\obj\Debug\Core.csproj.AssemblyReference.cache
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\Core\bin\Debug\Core.dll.config
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\Core\bin\Debug\Core.dll
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\Core\bin\Debug\Core.pdb
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\Core\obj\Debug\Core.dll
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\Core\obj\Debug\Core.pdb

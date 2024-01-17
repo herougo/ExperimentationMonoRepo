@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace HearthstoneFormsApp.UI.WebForm.ControlManager
+namespace WebFormView.UI.WebForm.ControlManager
 {
-    internal partial class HSGameControlManager
+    public partial class HSGameControlManager
     {
         private int _mainHeight = 600;
         private int _mainWidth = 1000;

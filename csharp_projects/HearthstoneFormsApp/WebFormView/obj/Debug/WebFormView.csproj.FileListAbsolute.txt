@@ -1,0 +1,14 @@
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\WebFormView\obj\Debug\WebFormView.csproj.AssemblyReference.cache
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\WebFormView\obj\Debug\WebFormView.csproj.CoreCompileInputs.cache
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\WebFormView\bin\Debug\WebFormView.dll.config
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\WebFormView\bin\Debug\WebFormView.dll
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\WebFormView\bin\Debug\WebFormView.pdb
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\WebFormView\obj\Debug\WebFormView.dll
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\WebFormView\obj\Debug\WebFormView.pdb
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\WebFormView\bin\Debug\Core.dll
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\WebFormView\bin\Debug\GameModel.dll
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\WebFormView\bin\Debug\Core.pdb
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\WebFormView\bin\Debug\Core.dll.config
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\WebFormView\bin\Debug\GameModel.pdb
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\WebFormView\bin\Debug\GameModel.dll.config
+D:\Users\Henri\Doccuments\GitHub\ExperimentationMonoRepo\csharp_projects\HearthstoneFormsApp\WebFormView\obj\Debug\WebFormView.csproj.CopyComplete

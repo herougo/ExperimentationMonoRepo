@@ -1,11 +1,9 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Net.Mime.MediaTypeNames;
 
-namespace HearthstoneFormsApp.UI.WebForm.ControlManager
+namespace WebFormView.UI.WebForm.ControlManager
 {
-    internal partial class HSGameControlManager
+    public partial class HSGameControlManager
     {
         private void InitializeControls()
         {
