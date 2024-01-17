@@ -7,17 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WebFormView.UI.WebForm.ControlManager;
+using WebFormController;
 
 namespace HearthstoneFormsApp
 {
     public partial class HearthstoneForm : Form
     {
-        HSGameControlManager HearthstoneControlManager;
-
+        MvcWebFormController _controller;
         public HearthstoneForm()
         {
-            HearthstoneControlManager = new HSGameControlManager(this);
+            _controller = new MvcWebFormController(this);
             InitializeComponent();
         }
     }

@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace GameModel.Events
 {
-    public class ModelEventReceiver : IEventReceiver
+    public class GameModelEventReceiver : IEventReceiver
     {
         ModelInEventHandlerFactory _modelInEventHandlerFactory;
 
-        public ModelEventReceiver(MvcGameModel model)
+        public GameModelEventReceiver(MvcGameModel model)
         {
             _modelInEventHandlerFactory = new ModelInEventHandlerFactory(model);
         }

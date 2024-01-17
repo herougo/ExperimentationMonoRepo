@@ -18,6 +18,11 @@ October 10, 2023 - Tuesday
 - 3.5h - 3:20pm - 6:50pm: Adapting to event handler style
 - 1h - 11:20pm? - 12:20am: Adapting to event handler style (done)
 
+** My interpretation
+Model: manages the game state
+View:
+- receives events from the model and updates the view
+- receives click events and sends them to the controller
 
 
 To Do
@@ -26,7 +31,7 @@ To Do
 - [x] basic layout figure out
 - [x] create class to manage the game panel view
 - [ ] create basic game with 1 minion type
-  - [ ] boilerplate MVC
+  - [x] boilerplate MVC
   - [ ] View (WebForms and "view model")
     - [ ] both hands
     - [ ] weapon

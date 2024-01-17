@@ -53,7 +53,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\ViewOutEventHandlerFactory.cs" />
+    <Compile Include="Events\WebFormControllerEventReceiver.cs" />
     <Compile Include="MvcWebFormController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Events\ViewOutEventHandlers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

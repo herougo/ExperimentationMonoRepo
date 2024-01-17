@@ -51,7 +51,7 @@
     <Compile Include="Events\ModelInEventHandlerFactory.cs" />
     <Compile Include="Events\ModelOutEvent.cs" />
     <Compile Include="MvcGameModel.cs" />
-    <Compile Include="Events\ModelEventReceiver.cs" />
+    <Compile Include="Events\GameModelEventReceiver.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Events\ModelInEventHandlers\" />

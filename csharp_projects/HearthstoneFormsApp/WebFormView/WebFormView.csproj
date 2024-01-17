@@ -39,8 +39,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\Enums\ViewOutEvents.cs" />
+    <Compile Include="Events\ModelOutEventHandlerFactory.cs" />
+    <Compile Include="Events\WebFormViewEventReceiver.cs" />
+    <Compile Include="MvcWebFormView.cs" />
     <Compile Include="UI\WebForm\ControlManager\HSGameControlManager.cs" />
     <Compile Include="UI\WebForm\ControlManager\HSGameControlManager.InitializeControls.cs" />
+    <Compile Include="Events\ViewOutEvent.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />
@@ -55,6 +60,10 @@
       <Project>{a4b720b5-0433-434c-a3c4-58106cc0ec26}</Project>
       <Name>GameModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Events\ModelOutEventHandlers\" />
+    <Folder Include="Events\ViewOut\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
