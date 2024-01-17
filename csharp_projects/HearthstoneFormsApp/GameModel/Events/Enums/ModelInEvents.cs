@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core
+namespace GameModel.Events.Enums
 {
-    public class Class1
+    public enum ModelInEvents : int
     {
+        
     }
 }

@@ -39,7 +39,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="MVC\EventSender.cs" />
+    <Compile Include="MVC\BaseEventHandlerFactory.cs" />
+    <Compile Include="MVC\BaseEventHandlers.cs" />
+    <Compile Include="MVC\BaseEventInterfaces.cs" />
+    <Compile Include="MVC\BaseEvents.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

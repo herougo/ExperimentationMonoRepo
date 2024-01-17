@@ -44,5 +44,19 @@
       <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Events\Enums\ModelInEvents.cs" />
+    <Compile Include="Events\Enums\ModelOutEvents.cs" />
+    <Compile Include="Events\ModelInEvent.cs" />
+    <Compile Include="Events\ModelInEventHandlerFactory.cs" />
+    <Compile Include="Events\ModelOutEvent.cs" />
+    <Compile Include="MvcGameModel.cs" />
+    <Compile Include="Events\ModelEventReceiver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Events\ModelInEventHandlers\" />
+    <Folder Include="Events\ModelIn\" />
+    <Folder Include="Events\ModelOut\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
