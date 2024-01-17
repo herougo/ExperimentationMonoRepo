@@ -3,8 +3,8 @@ csharp_projects/HearthstoneFormsApp/HearthstoneFormsApp/bin/
 csharp_projects/HearthstoneFormsApp/HearthstoneFormsApp/obj/
 csharp_projects/HearthstoneFormsApp/Core/bin/
 csharp_projects/HearthstoneFormsApp/Core/obj/
-csharp_projects/HearthstoneFormsApp/ApplicationModel/bin/
-csharp_projects/HearthstoneFormsApp/ApplicationModel/obj/
+csharp_projects/HearthstoneFormsApp/GameModel/bin/
+csharp_projects/HearthstoneFormsApp/GameModel/obj/
 csharp_projects/HearthstoneFormsApp/WebFormView/bin/
 csharp_projects/HearthstoneFormsApp/WebFormView/obj/
 csharp_projects/HearthstoneFormsApp/WebFormController/bin/
