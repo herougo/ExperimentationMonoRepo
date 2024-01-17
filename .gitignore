@@ -1,6 +1,14 @@
 csharp_projects/HearthstoneFormsApp/.vs/
 csharp_projects/HearthstoneFormsApp/HearthstoneFormsApp/bin/
 csharp_projects/HearthstoneFormsApp/HearthstoneFormsApp/obj/
+csharp_projects/HearthstoneFormsApp/Core/bin/
+csharp_projects/HearthstoneFormsApp/Core/obj/
+csharp_projects/HearthstoneFormsApp/ApplicationModel/bin/
+csharp_projects/HearthstoneFormsApp/ApplicationModel/obj/
+csharp_projects/HearthstoneFormsApp/WebFormView/bin/
+csharp_projects/HearthstoneFormsApp/WebFormView/obj/
+csharp_projects/HearthstoneFormsApp/WebFormController/bin/
+csharp_projects/HearthstoneFormsApp/WebFormController/obj/
 
 csharp_projects/ModelViewControllerSimpleApp/.vs/
 csharp_projects/ModelViewControllerSimpleApp/ModelViewControllerSimpleApp/bin/
