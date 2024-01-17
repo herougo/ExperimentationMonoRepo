@@ -11,7 +11,7 @@ const QuestionDisplay = (props) => {
     const doneBgColour = selectedQuestion.done ?
         "bg-success" :
         ""
-    const classes = backgroundColour + " text-white p-3 rounded"
+    const classes = backgroundColour + " text-white p-3"
 
     const doneCheckboxOnChange = useCallback(e =>
         toggleDone(selectedQuestion.id, e.target.checked, (status, responseData) => {

@@ -24,7 +24,7 @@ const QuestionFilter = (props) => {
     }
     
     return (
-        <div>
+        <div className="border border-primary my-2 p-2 d-inline-block bg-info">
             <h3>Filter</h3>
             <TagFilterSelector
                 options={Object.keys(tagsAndCourses.courses)}

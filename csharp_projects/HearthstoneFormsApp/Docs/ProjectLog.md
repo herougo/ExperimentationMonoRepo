@@ -24,7 +24,7 @@ To Do
 
 - [x] C# project setup
 - [x] basic layout figure out
-- [ ] create class to manage the game panel view
+- [x] create class to manage the game panel view
 - [ ] create basic game with 1 minion type
   - [ ] boilerplate MVC
   - [ ] View (WebForms and "view model")

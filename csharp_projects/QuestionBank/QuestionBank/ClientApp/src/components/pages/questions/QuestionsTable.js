@@ -4,7 +4,7 @@ const QuestionsTable = (props) => {
     const { questions, setSelectedQuestionId } = props
 
     return (
-        <table className="table">
+        <table className="table table-secondary">
             <thead>
                 <tr>
                     <th>Question</th>

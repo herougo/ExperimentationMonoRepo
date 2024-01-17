@@ -28,6 +28,7 @@ namespace HearthstoneFormsApp.UI.WebForm.ControlManager
         public PictureBox PBPlayerHero;
         public TextBox TBPlayerAttack;
         public TextBox TBPlayerHealth;
+        public TextBox TBPlayerArmour;
         public PictureBox PBPlayerHeroPower;
         public PictureBox PBPlayerDeck;
         public TextBox TBPlayerDeckSize;
@@ -40,6 +41,7 @@ namespace HearthstoneFormsApp.UI.WebForm.ControlManager
         public PictureBox PBOpponentHero;
         public TextBox TBOpponentAttack;
         public TextBox TBOpponentHealth;
+        public TextBox TBOpponentArmour;
         public PictureBox PBOpponentHeroPower;
         public PictureBox PBOpponentDeck;
         public TextBox TBOpponentDeckSize;
