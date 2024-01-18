@@ -32,12 +32,8 @@ To Do
 - [x] create class to manage the game panel view
 - [ ] create basic game with 1 minion type
   - [x] boilerplate MVC
-  - [ ] View (WebForms and "view model")
-    - [ ] both hands
-    - [ ] weapon
-    - [ ] battleboard
-    - [ ] hero health/attack
-    - [ ] deck
+  - [ ] challenges
+    - [ ] handling click-based action getting
   - [ ] boilerplate Model
     - [ ] HearthstoneGame
     - [ ] BoardManager
@@ -50,6 +46,12 @@ To Do
     - [ ] CardMover
     - [ ] DecisionMaker
     - [ ] PlayerActionAttemper
+  - [ ] View (WebForms and "view model")
+    - [ ] both hands
+    - [ ] weapon
+    - [ ] battleboard
+    - [ ] hero health/attack
+    - [ ] deck
   - [ ] Controller
 - [ ] end turn
 - [ ] play minion

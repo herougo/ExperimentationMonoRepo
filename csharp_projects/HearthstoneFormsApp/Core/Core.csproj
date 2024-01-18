@@ -44,6 +44,7 @@
     <Compile Include="MVC\BaseEventHandlers.cs" />
     <Compile Include="MVC\BaseEventInterfaces.cs" />
     <Compile Include="MVC\BaseEvents.cs" />
+    <Compile Include="Utils\HashGenerator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

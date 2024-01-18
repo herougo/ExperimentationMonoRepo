@@ -45,15 +45,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardSlot.cs" />
     <Compile Include="Events\Enums\ModelInEvents.cs" />
     <Compile Include="Events\Enums\ModelOutEvents.cs" />
     <Compile Include="Events\ModelInEvent.cs" />
     <Compile Include="Events\ModelInEventHandlerFactory.cs" />
     <Compile Include="Events\ModelOutEvent.cs" />
+    <Compile Include="Game\DecisionMaker.cs" />
+    <Compile Include="Game\Decklist.cs" />
+    <Compile Include="Game\HearthstoneConstants.cs" />
+    <Compile Include="Game\HearthstoneGame.cs" />
+    <Compile Include="Game\HearthstoneGameArgs.cs" />
+    <Compile Include="Game\Pile.cs" />
     <Compile Include="MvcGameModel.cs" />
     <Compile Include="Events\GameModelEventReceiver.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Cards\" />
     <Folder Include="Events\ModelInEventHandlers\" />
     <Folder Include="Events\ModelIn\" />
     <Folder Include="Events\ModelOut\" />
