@@ -8,5 +8,7 @@ namespace GameModel.Game.Metadata
 {
     public class GameMetadata
     {
+        public int WhoGoesFirst = 0;
+        public int Turn = 0;
     }
 }

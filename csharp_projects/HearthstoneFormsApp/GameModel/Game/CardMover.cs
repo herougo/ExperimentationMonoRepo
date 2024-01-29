@@ -14,5 +14,10 @@ namespace GameModel.Game
         {
             _game = game;
         }
+
+        public void DrawCards(int player, int numCards)
+        {
+            // TODO
+        }
     }
 }

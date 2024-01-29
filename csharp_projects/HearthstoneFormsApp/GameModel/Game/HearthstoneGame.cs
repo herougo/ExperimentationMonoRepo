@@ -66,6 +66,39 @@ namespace GameModel.Game
                 new PlayerMetadata(),
                 new PlayerMetadata()
             };
+            GameMetadata.WhoGoesFirst = 0;
+            int whoGoesSecond = HearthstoneConstants.NumberOfPlayers - 1;
+            Hands = new Pile[HearthstoneConstants.NumberOfPlayers]
+            {
+                new Pile(), // TODO
+                new Pile()
+            };
+            // TODO: log player going first
+
+            CardMover.DrawCards(GameMetadata.WhoGoesFirst, HearthstoneConstants.NumDrawsGoingFirst);
+            CardMover.DrawCards(whoGoesSecond, HearthstoneConstants.NumDrawsGoingSecond);
+            // TODO: Coin CreateCardAndAddToHand(whoGoesSecond, Coin());
+
+            // TODO: Mulligan
+
+            Players = new HeroCardSlot[HearthstoneConstants.NumberOfPlayers]
+            {
+                new HeroCardSlot(Decklists[0].HeroClass, 0, this),
+                new HeroCardSlot(Decklists[1].HeroClass, 1, this)
+            };
+            foreach (HeroCardSlot player in Players)
+            {
+                // player.SetupHeroPower(); TODO
+            }
+            Weapons = new WeaponCardSlot[HearthstoneConstants.NumberOfPlayers]
+            {
+                null, null
+            };
+            Battleboard = new Battleboard(this);
+
+            // Set up in-game effects
+            GameMetadata.Turn = GameMetadata.WhoGoesFirst;
+            // TODO Hero Effects
 
         }
     }

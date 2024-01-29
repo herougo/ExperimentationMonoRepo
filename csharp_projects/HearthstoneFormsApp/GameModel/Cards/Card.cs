@@ -11,12 +11,12 @@ namespace GameModel.Cards
     {
         protected string _cardId;
         protected string _name;
-        protected HSClass _hsClass;
+        protected string _hsClass;
         protected bool _collectible = true;
 
         public string CardId { get { return _cardId; } }
         public string Name { get { return _name; } }
-        public HSClass HsClass { get {  return _hsClass; } }
+        public string HsClass { get {  return _hsClass; } }
         public bool Collectible { get { return _collectible; } }
     }
 }

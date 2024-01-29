@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameModel.Cards.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,13 @@ namespace GameModel.Game
 {
     public class Decklist
     {
-        List<string> CardIdList;
-        public Decklist(List<string> cardIdList)
+        public readonly List<string> CardIdList;
+        public readonly string HeroClass; 
+
+        public Decklist(List<string> cardIdList, string heroClass)
         {
             CardIdList = cardIdList;
+            HeroClass = heroClass;
         }
 
         public bool IsValid()

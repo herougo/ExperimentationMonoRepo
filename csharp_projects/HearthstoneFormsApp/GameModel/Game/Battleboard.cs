@@ -8,5 +8,11 @@ namespace GameModel.Game
 {
     public class Battleboard
     {
+        HearthstoneGame _game;
+
+        public Battleboard(HearthstoneGame game)
+        {
+            _game = game;
+        }
     }
 }

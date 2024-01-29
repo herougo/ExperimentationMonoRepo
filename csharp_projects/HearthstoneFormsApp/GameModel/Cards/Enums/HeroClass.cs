@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace GameModel.Cards.Enums
 {
-    public enum HSClass : int
+    public static class HeroClass
     {
-        Neutral = 0
+        public const string Neutral = "Neutral";
     }
 }

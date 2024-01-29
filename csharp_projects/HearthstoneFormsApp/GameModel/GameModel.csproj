@@ -45,23 +45,37 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CardSlot.cs" />
+    <Compile Include="Cards\Enums\CardType.cs" />
+    <Compile Include="Game\Battleboard.cs" />
+    <Compile Include="Game\CardMover.cs" />
+    <Compile Include="Game\CardSlots\CardSlot.cs" />
+    <Compile Include="Cards\Card.cs" />
+    <Compile Include="Cards\CardFactories\CardFactory.cs" />
+    <Compile Include="Cards\CardTypes\MinionCard.cs" />
+    <Compile Include="Cards\Enums\CardIds.cs" />
+    <Compile Include="Cards\Enums\HeroClass.cs" />
+    <Compile Include="Cards\Implementations\Classic\NeutralCommon.cs" />
     <Compile Include="Events\Enums\ModelInEvents.cs" />
     <Compile Include="Events\Enums\ModelOutEvents.cs" />
     <Compile Include="Events\ModelInEvent.cs" />
     <Compile Include="Events\ModelInEventHandlerFactory.cs" />
     <Compile Include="Events\ModelOutEvent.cs" />
+    <Compile Include="Game\CardSlots\HeroCardSlot.cs" />
+    <Compile Include="Game\CardSlots\MinionCardSlot.cs" />
+    <Compile Include="Game\CardSlots\WeaponCardSlot.cs" />
     <Compile Include="Game\DecisionMaker.cs" />
     <Compile Include="Game\Decklist.cs" />
+    <Compile Include="Game\EffectManager.cs" />
     <Compile Include="Game\HearthstoneConstants.cs" />
     <Compile Include="Game\HearthstoneGame.cs" />
     <Compile Include="Game\HearthstoneGameArgs.cs" />
+    <Compile Include="Game\Metadata\GameMetadata.cs" />
+    <Compile Include="Game\Metadata\PlayerMetadata.cs" />
     <Compile Include="Game\Pile.cs" />
     <Compile Include="MvcGameModel.cs" />
     <Compile Include="Events\GameModelEventReceiver.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Cards\" />
     <Folder Include="Events\ModelInEventHandlers\" />
     <Folder Include="Events\ModelIn\" />
     <Folder Include="Events\ModelOut\" />

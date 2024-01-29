@@ -14,7 +14,7 @@ namespace GameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.Wisp;
             _name = "Wisp";
-            _hsClass = HSClass.Neutral;
+            _hsClass = HeroClass.Neutral;
             _collectible = true;
 
             _mana = 0;
