@@ -77,8 +77,8 @@ namespace QuestionBank.DataLogic
 
         public Dictionary<int, List<string>> GetQuestionCourseMap(HashSet<int>? courseIds)
         {
-            IQueryable<int> filteredQuestionIds = _context.QuestionTag
-                .Where(x => courseIds == null || courseIds.Contains(x.TagId))
+            IQueryable<int> filteredQuestionIds = _context.QuestionCourse
+                .Where(x => courseIds == null || courseIds.Contains(x.CourseId))
                 .Select(x => x.QuestionId);
             List<Tuple<int, int>> questionCourses = _context.QuestionCourse
                 .Where(x => filteredQuestionIds.Contains(x.QuestionId))

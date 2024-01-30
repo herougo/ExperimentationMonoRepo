@@ -38,11 +38,11 @@ const QuestionsPage = () => {
     return (
         <div>
             <h1>Questions</h1>
-            <button class="btn btn-primary">Generate Sample Exam</button>
-            <button class="btn btn-primary mx-1">Export Questions to PDF</button><br />
-            <QuestionFilter onFilterButtonClick={onFilterButtonClick} />
             <div class="row">
                 <div class="col">
+                    <button class="btn btn-primary">Generate Sample Exam</button>
+                    <button class="btn btn-primary mx-1">Export Questions to PDF</button><br />
+                    <QuestionFilter onFilterButtonClick={onFilterButtonClick} />
                     {contents}
                 </div>
                 {questionDisplay}

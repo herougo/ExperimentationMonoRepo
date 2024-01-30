@@ -1,5 +1,7 @@
 ﻿import React, { useCallback } from 'react';
 
+const questionMaxLen = 20
+
 const QuestionsTable = (props) => {
     const { questions, setSelectedQuestionId } = props
 
@@ -16,7 +18,7 @@ const QuestionsTable = (props) => {
             <tbody>
                 {questions.map((question) =>
                     <tr key={question.id} onClick={e => setSelectedQuestionId(question.id)}>
-                        <td>{question.questionText}</td>
+                        <td>{question.questionText?.substr(0, Math.min(questionMaxLen, question.questionText.length))}</td>
                         <td><input type="checkbox" disabled defaultChecked={question.done}></input></td>
                         <td>{question.courses.map(course => (
                             <button className="btn btn-primary">{course}</button>
