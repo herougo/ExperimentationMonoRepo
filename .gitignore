@@ -31,3 +31,5 @@ csharp_projects/ASPNetMVCStart/.vs/
 csharp_projects/QuestionBank/.vs/
 
 csharp_projects/QuestionBank/node_modules/
+
+node_projects/jira_clone/backend/node_modules/
