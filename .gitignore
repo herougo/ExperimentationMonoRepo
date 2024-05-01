@@ -32,4 +32,4 @@ csharp_projects/QuestionBank/.vs/
 
 csharp_projects/QuestionBank/node_modules/
 
-node_projects/JiraClone/backend/node_modules/
+node_projects/JiraClone/jira-backend/node_modules/
