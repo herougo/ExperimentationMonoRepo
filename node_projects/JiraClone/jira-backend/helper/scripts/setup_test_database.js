@@ -3,5 +3,17 @@ const { getDatabase } = require('../../lib/db/database.js');
 const { setupDb } = require('../utils/db_utils.js')
 
 
-const db = getDatabase(Envs.TEST);
-setupDb(db).finally(() => db.close());
+let db = getDatabase(Envs.TEST);
+setupDb(db).then(() => {
+    db.all('SELECT * FROM Users;', [], (err, rows) => {
+        if (err) {
+            console.log(err);
+            db.close();
+            return;
+        }
+        rows.forEach((row) => {
+            console.log(row);
+        });
+        db.close();
+    });
+});

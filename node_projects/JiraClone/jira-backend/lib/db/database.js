@@ -1,5 +1,5 @@
 const sqlite3 = require('sqlite3');
-const { databaseConfig, envVar } = require('../../config/config.js')
+const { databaseConfig, envVar } = require('../config/config.js')
 
 let db = null;
 

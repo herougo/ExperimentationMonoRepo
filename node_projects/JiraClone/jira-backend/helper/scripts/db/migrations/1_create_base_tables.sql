@@ -1,18 +1,18 @@
 CREATE TABLE Users (
-  id SERIAL PRIMARY KEY,
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
   username TEXT NOT NULL UNIQUE,
   password TEXT NOT NULL
 );
 
 CREATE TABLE Epics (
-    id SERIAL PRIMARY KEY,
-    user_id SERIAL,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER,
     FOREIGN KEY (user_id) references Users(id)
 );
 
 CREATE TABLE Tasks (
-    id SERIAL PRIMARY KEY,
-    epic_id SERIAL,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    epic_id INTEGER,
     title VARCHAR(255),
     description TEXT,
     status TINYINT,
