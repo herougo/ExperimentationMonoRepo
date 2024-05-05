@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node lib/index.js",
+    "setup_prod_db": "node helper/scripts/setup_prod_database.js",
+    "setup_test_db": "node helper/scripts/setup_test_database.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
   }
 }
