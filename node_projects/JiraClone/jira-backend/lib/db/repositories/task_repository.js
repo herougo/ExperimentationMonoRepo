@@ -33,11 +33,11 @@ class TaskRepository {
         const sqlStatement = `
             UPDATE Tasks
             SET
-                epicId = ?,
+                epic_id = ?,
                 title = ?,
                 description = ?,
                 status = ?,
-                dateCompleted = ?
+                date_completed = ?
             WHERE id = ?;`
         return dbRunPromise(
             this._db, sqlStatement,
