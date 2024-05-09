@@ -1,14 +1,4 @@
-function dbRunPromise(db, statement) {
-    return new Promise((resolve, reject) => {
-        db.run(statement, (err) => {
-            if (err) {
-                reject(err); 
-            } else {
-                resolve();
-            }
-        });
-    });
-}
+const { dbRunPromise } = require('../../lib/db/database.js')
 
 function runStatementsSerial(db, statements) {
     return new Promise(function(resolve, reject) {

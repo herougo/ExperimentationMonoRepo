@@ -7,6 +7,8 @@ CREATE TABLE Users (
 CREATE TABLE Epics (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER,
+    title VARCHAR(255),
+    description TEXT,
     FOREIGN KEY (user_id) references Users(id)
 );
 

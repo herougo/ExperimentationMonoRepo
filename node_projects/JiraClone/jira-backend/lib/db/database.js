@@ -11,6 +11,18 @@ function getDatabase(version) {
     return db;
 }
 
+function dbRunPromise(db, statement, param) {
+    return new Promise((resolve, reject) => {
+        db.run(statement, (err) => {
+            if (err) {
+                reject(err); 
+            } else {
+                resolve();
+            }
+        });
+    });
+}
+
 module.exports = {
-    getDatabase
+    getDatabase, dbRunPromise
 }
