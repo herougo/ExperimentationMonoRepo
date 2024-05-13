@@ -33,3 +33,9 @@ csharp_projects/QuestionBank/.vs/
 csharp_projects/QuestionBank/node_modules/
 
 node_projects/JiraClone/jira-backend/node_modules/
+
+csharp_projects/HearthstoneSimulatorConsole/HearthstoneGameModel/bin/
+csharp_projects/HearthstoneSimulatorConsole/HearthstoneGameModel/obj/
+csharp_projects/HearthstoneSimulatorConsole/HearthstoneSimulatorConsole/bin/
+csharp_projects/HearthstoneSimulatorConsole/HearthstoneSimulatorConsole/obj/
+csharp_projects/HearthstoneSimulatorConsole/.vs/
