@@ -46,6 +46,21 @@
     <Compile Include="Cards\Enums\CardType.cs" />
     <Compile Include="Cards\Enums\HeroClass.cs" />
     <Compile Include="Cards\Implementations\Classic\NeutralCommon.cs" />
+    <Compile Include="Game\Battleboard.cs" />
+    <Compile Include="Game\CardMover.cs" />
+    <Compile Include="Game\CardSlots\CardSlot.cs" />
+    <Compile Include="Game\CardSlots\HeroCardSlot.cs" />
+    <Compile Include="Game\CardSlots\MinionCardSlot.cs" />
+    <Compile Include="Game\CardSlots\WeaponCardSlot.cs" />
+    <Compile Include="Game\DecisionMaker.cs" />
+    <Compile Include="Game\Decklist.cs" />
+    <Compile Include="Game\EffectManager.cs" />
+    <Compile Include="Game\HearthstoneConstants.cs" />
+    <Compile Include="Game\HearthstoneGame.cs" />
+    <Compile Include="Game\HearthstoneGameArgs.cs" />
+    <Compile Include="Game\Metadata\GameMetadata.cs" />
+    <Compile Include="Game\Metadata\PlayerMetadata.cs" />
+    <Compile Include="Game\Pile.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

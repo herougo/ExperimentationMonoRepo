@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HearthstoneGameModel.Cards.Enums
+namespace HearthstoneGameModel.Game.CardSlots
 {
-    public enum CardType : int
+    public class WeaponCardSlot
     {
-        Minion = 0
     }
 }

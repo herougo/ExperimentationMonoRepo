@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HearthstoneGameModel.Cards.Enums
+namespace HearthstoneGameModel.Game.Metadata
 {
-    public enum CardType : int
+    public class PlayerMetadata
     {
-        Minion = 0
     }
 }

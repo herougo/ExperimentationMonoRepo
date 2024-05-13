@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GameModel.Cards.Enums;
+using HearthstoneGameModel.Cards.Enums;
 
-namespace GameModel.Cards.CardTypes
+namespace HearthstoneGameModel.Cards.CardTypes
 {
     public class MinionCard : Card
     {

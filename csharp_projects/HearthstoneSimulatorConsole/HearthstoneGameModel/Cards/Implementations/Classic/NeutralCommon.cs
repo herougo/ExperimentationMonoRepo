@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GameModel.Cards.CardTypes;
-using GameModel.Cards.Enums;
+using HearthstoneGameModel.Cards.CardTypes;
+using HearthstoneGameModel.Cards.Enums;
 
-namespace GameModel.Cards.Implementations.Classic
+namespace HearthstoneGameModel.Cards.Implementations.Classic
 {
     public class Wisp : MinionCard
     {
