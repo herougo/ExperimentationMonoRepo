@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1A72C44C-EC64-43F3-B154-EFB2D9E772C8}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>HearthstoneGameModel</RootNamespace>
     <AssemblyName>HearthstoneGameModel</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -32,8 +32,20 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cards\Card.cs" />
+    <Compile Include="Cards\CardFactories\CardFactory.cs" />
+    <Compile Include="Cards\CardTypes\MinionCard.cs" />
+    <Compile Include="Cards\Enums\CardIds.cs" />
+    <Compile Include="Cards\Enums\CardType.cs" />
+    <Compile Include="Cards\Enums\HeroClass.cs" />
+    <Compile Include="Cards\Implementations\Classic\NeutralCommon.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
