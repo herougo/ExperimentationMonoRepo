@@ -1,4 +1,4 @@
-﻿using HearthstoneGameModel.Cards.Enums;
+﻿using HearthstoneGameModel.Core.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HearthstoneGameModel.Cards.Enums
+namespace HearthstoneGameModel.Core.Enums
 {
-    public static class CardIds
+    public static class HeroClass
     {
-        public const string Wisp = "C001";
+        public const string Neutral = "Neutral";
     }
 }

@@ -98,8 +98,7 @@ namespace HearthstoneGameModel.Game
 
             // Set up in-game effects
             GameMetadata.Turn = GameMetadata.WhoGoesFirst;
-            // TODO Hero Effects
-
+            // TODO: Hero Effects
         }
     }
 }

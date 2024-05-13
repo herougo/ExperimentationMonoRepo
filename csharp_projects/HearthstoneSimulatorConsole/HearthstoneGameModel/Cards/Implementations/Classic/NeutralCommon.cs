@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HearthstoneGameModel.Cards.CardTypes;
-using HearthstoneGameModel.Cards.Enums;
+using HearthstoneGameModel.Core.Enums;
 
 namespace HearthstoneGameModel.Cards.Implementations.Classic
 {
