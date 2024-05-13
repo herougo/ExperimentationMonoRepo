@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HearthstoneGameModel.Game.Actions;
 
 namespace HearthstoneGameModel.Game
 {
     public class DecisionMaker
     {
-        public ActionGetter ActionGetter;
+        public IActionGetter ActionGetter;
         HearthstoneGame _game = null;
 
-        public DecisionMaker(ActionGetter actionGetter)
+        public DecisionMaker(IActionGetter actionGetter)
         {
             ActionGetter = actionGetter;
         }
@@ -20,5 +16,7 @@ namespace HearthstoneGameModel.Game
         {
             _game = game;
         }
+
+        // TODO: more DecisionMaker stuff
     }
 }
