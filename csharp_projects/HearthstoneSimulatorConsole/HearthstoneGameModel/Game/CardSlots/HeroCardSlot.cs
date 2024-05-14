@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HearthstoneGameModel.Game.CardSlots
 {
-    public class HeroCardSlot : DamageableCardSlot
+    public class HeroCardSlot : BattlerCardSlot
     {
         public int CurrentMana = 0;
         public int AvailableMana = 0;
@@ -26,7 +26,6 @@ namespace HearthstoneGameModel.Game.CardSlots
         public int NumFrozen = 0;
         public int NumElusive = 0;
         public bool HasSleep = false;
-        public int AttacksThisTurn = 0;
 
         public HeroCardSlot(string cardId, int player, HearthstoneGame game)
             : base(cardId, player, game) { }

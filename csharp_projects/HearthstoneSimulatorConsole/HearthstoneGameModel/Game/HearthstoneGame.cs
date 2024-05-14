@@ -193,7 +193,7 @@ namespace HearthstoneGameModel.Game
             throw new GameOverException();
         }
 
-        public void Attack(CardSlot attackerCardSlot, CardSlot defenderCardSlot)
+        public void Attack(BattlerCardSlot attackerCardSlot, BattlerCardSlot defenderCardSlot)
         {
             // TODO: UIManager
             attackerCardSlot.AttacksThisTurn += 1;

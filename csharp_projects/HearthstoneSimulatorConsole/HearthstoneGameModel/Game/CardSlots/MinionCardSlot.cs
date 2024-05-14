@@ -8,11 +8,10 @@ using System.Threading.Tasks;
 
 namespace HearthstoneGameModel.Game.CardSlots
 {
-    public class MinionCardSlot : DamageableCardSlot
+    public class MinionCardSlot : BattlerCardSlot
     {
         // stats
         public int Mana;
-        public int Attack;
         public int MaxHealth;
         public int Health;
 
@@ -21,7 +20,6 @@ namespace HearthstoneGameModel.Game.CardSlots
 
         // need to manage effectively
         public bool Silenced = false;
-        public int AttacksThisTurn = 0;
 
         public MinionCardSlot(string cardId, int player, HearthstoneGame game)
             : base(cardId, player, game)

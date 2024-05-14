@@ -18,9 +18,9 @@ namespace HearthstoneGameModel.Game.Action
 
     public class AttackAction : IAction
     {
-        CardSlot _attackerCardSlot;
-        CardSlot _defenderCardSlot;
-        public AttackAction(CardSlot attackerCardSlot, CardSlot defenderCardSlot)
+        BattlerCardSlot _attackerCardSlot;
+        BattlerCardSlot _defenderCardSlot;
+        public AttackAction(BattlerCardSlot attackerCardSlot, BattlerCardSlot defenderCardSlot)
         {
             _attackerCardSlot = attackerCardSlot;
             _defenderCardSlot = defenderCardSlot;
