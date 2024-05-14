@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HearthstoneSimulatorConsole", "HearthstoneSimulatorConsole\HearthstoneSimulatorConsole.csproj", "{AA65DF1E-593C-458A-AC00-C8FE5B2D3D2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HearthstoneSimulatorConsole", "HearthstoneSimulatorConsole\HearthstoneSimulatorConsole.csproj", "{AA65DF1E-593C-458A-AC00-C8FE5B2D3D2C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HearthstoneGameModel", "HearthstoneGameModel\HearthstoneGameModel.csproj", "{1A72C44C-EC64-43F3-B154-EFB2D9E772C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextView", "TextView\TextView.csproj", "{692E6BA7-6BE1-464C-9C13-4D83C3551AFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1A72C44C-EC64-43F3-B154-EFB2D9E772C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A72C44C-EC64-43F3-B154-EFB2D9E772C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A72C44C-EC64-43F3-B154-EFB2D9E772C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{692E6BA7-6BE1-464C-9C13-4D83C3551AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{692E6BA7-6BE1-464C-9C13-4D83C3551AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{692E6BA7-6BE1-464C-9C13-4D83C3551AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{692E6BA7-6BE1-464C-9C13-4D83C3551AFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

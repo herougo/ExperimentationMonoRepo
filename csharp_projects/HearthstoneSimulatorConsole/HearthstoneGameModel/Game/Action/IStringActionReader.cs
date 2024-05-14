@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace HearthstoneGameModel.Game.Actions
+namespace HearthstoneGameModel.Game.Action
 {
-    public interface IActionGetter
+    public interface IStringActionReader
     {
         // TODO: use class actions
         string GetAction();

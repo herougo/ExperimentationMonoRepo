@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HearthstoneGameModel\HearthstoneGameModel.csproj" />
+    <ProjectReference Include="..\TextView\TextView.csproj" />
   </ItemGroup>
 
 </Project>

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HearthstoneGameModel.Game.CardSlots
 {
-    public class MinionCardSlot : CardSlot
+    public class MinionCardSlot : DamageableCardSlot
     {
         // stats
         public int Mana;
@@ -31,6 +31,11 @@ namespace HearthstoneGameModel.Game.CardSlots
             Attack = minionCard.Attack;
             MaxHealth = minionCard.Health;
             Health = minionCard.Health;
+        }
+
+        public override void TakeDamage(int amount)
+        {
+            Health -= amount;
         }
     }
 }

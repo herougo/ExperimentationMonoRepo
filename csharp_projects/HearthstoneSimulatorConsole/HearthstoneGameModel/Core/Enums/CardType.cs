@@ -8,6 +8,8 @@ namespace HearthstoneGameModel.Core.Enums
 {
     public enum CardType : int
     {
-        Minion = 0
+        Minion = 0,
+        Hero = 1,
+        Weapon = 2
     }
 }

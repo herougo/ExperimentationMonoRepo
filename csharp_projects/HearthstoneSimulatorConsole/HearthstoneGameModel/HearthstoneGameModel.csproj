@@ -41,20 +41,30 @@
   <ItemGroup>
     <Compile Include="Cards\Card.cs" />
     <Compile Include="Cards\CardFactories\CardFactory.cs" />
+    <Compile Include="Cards\CardTypes\HeroCard.cs" />
     <Compile Include="Cards\CardTypes\MinionCard.cs" />
-    <Compile Include="Cards\Enums\CardIds.cs" />
-    <Compile Include="Cards\Enums\CardType.cs" />
-    <Compile Include="Cards\Enums\HeroClass.cs" />
+    <Compile Include="Cards\CardTypes\WeaponCard.cs" />
+    <Compile Include="Core\Enums\Actions.cs" />
+    <Compile Include="Core\Enums\CardIds.cs" />
+    <Compile Include="Core\Enums\CardType.cs" />
+    <Compile Include="Core\Enums\EffectEvent.cs" />
+    <Compile Include="Core\Enums\HeroClass.cs" />
     <Compile Include="Cards\Implementations\Classic\NeutralCommon.cs" />
-    <Compile Include="Game\Actions\ConsoleActionGetter.cs" />
-    <Compile Include="Game\Actions\IActionGetter.cs" />
+    <Compile Include="Core\Enums\HSClass.cs" />
+    <Compile Include="Core\Enums\UIEvent.cs" />
+    <Compile Include="Core\Exceptions.cs" />
+    <Compile Include="Game\UIManager.cs" />
+    <Compile Include="Game\Action\Actions.cs" />
+    <Compile Include="Game\Action\ConsoleActionReader.cs" />
+    <Compile Include="Game\Action\IStringActionReader.cs" />
+    <Compile Include="Game\Action\StringActionParser.cs" />
     <Compile Include="Game\Battleboard.cs" />
     <Compile Include="Game\CardMover.cs" />
     <Compile Include="Game\CardSlots\CardSlot.cs" />
     <Compile Include="Game\CardSlots\HeroCardSlot.cs" />
     <Compile Include="Game\CardSlots\MinionCardSlot.cs" />
     <Compile Include="Game\CardSlots\WeaponCardSlot.cs" />
-    <Compile Include="Game\DecisionMaker.cs" />
+    <Compile Include="Game\Action\DecisionMakers.cs" />
     <Compile Include="Game\Decklist.cs" />
     <Compile Include="Game\EffectManager.cs" />
     <Compile Include="Game\HearthstoneConstants.cs" />
@@ -65,5 +75,6 @@
     <Compile Include="Game\Pile.cs" />
     <Compile Include="Utils\HashGenerator.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

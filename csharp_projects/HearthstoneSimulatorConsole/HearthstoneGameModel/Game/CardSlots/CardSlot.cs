@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using HearthstoneGameModel.Utils;
 using HearthstoneGameModel.Cards;
 using HearthstoneGameModel.Cards.CardFactories;
+using HearthstoneGameModel.Core.Enums;
 
 namespace HearthstoneGameModel.Game.CardSlots
 {
@@ -22,5 +23,7 @@ namespace HearthstoneGameModel.Game.CardSlots
             Player = player;
             Game = game;
         }
+
+        public CardType CardType { get { return Card.CardType; } }
     }
 }

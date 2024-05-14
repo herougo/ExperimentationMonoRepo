@@ -8,5 +8,7 @@ namespace HearthstoneGameModel.Game.Metadata
 {
     public class PlayerMetadata
     {
+        public int HandLimit = HearthstoneConstants.HandLimit;
+
     }
 }

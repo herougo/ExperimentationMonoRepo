@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace HearthstoneGameModel.Game.Actions
+namespace HearthstoneGameModel.Game.Action
 {
-    public class ConsoleActionGetter : IActionGetter
+    public class ConsoleActionReader : IStringActionReader
     {
         public string GetAction()
         {

@@ -1,13 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using HearthstoneGameModel.Game.CardSlots;
 
 namespace HearthstoneGameModel.Game
 {
     public class Pile
     {
+        public int Length
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public void AddCard(CardSlot cardSlot)
+        {
+            throw new NotImplementedException();
+        }
         public void Shuffle()
         {
             throw new NotImplementedException();
