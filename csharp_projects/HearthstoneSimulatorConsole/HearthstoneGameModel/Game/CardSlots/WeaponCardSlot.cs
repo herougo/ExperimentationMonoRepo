@@ -11,7 +11,6 @@ namespace HearthstoneGameModel.Game.CardSlots
 {
     public class WeaponCardSlot : CardSlot
     {
-        public int Mana;
         public int Attack;
         public int Durability;
 
@@ -19,7 +18,6 @@ namespace HearthstoneGameModel.Game.CardSlots
             : base(cardId, player, game)
         {
             WeaponCard weaponCard = (WeaponCard)Card;
-            Mana = weaponCard.Mana;
             Attack = weaponCard.Attack;
             Durability = weaponCard.Durability;
         }

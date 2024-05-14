@@ -16,13 +16,17 @@ namespace HearthstoneGameModel.Game.CardSlots
         public Card Card;
         public int Player;
         public HearthstoneGame Game;
+        public int _originalMana;
 
         public CardSlot(string cardId, int player, HearthstoneGame game) {
             _hash = HashGenerator.GetNextHash();
             Card = CardFactory.CreateCard(cardId);
             Player = player;
             Game = game;
+            _originalMana = Card.Mana;
         }
+
+        public int Mana { get { return _originalMana; } }
 
         public CardType CardType { get { return Card.CardType; } }
     }

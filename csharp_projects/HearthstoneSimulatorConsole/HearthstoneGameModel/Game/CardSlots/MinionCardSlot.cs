@@ -11,7 +11,6 @@ namespace HearthstoneGameModel.Game.CardSlots
     public class MinionCardSlot : BattlerCardSlot
     {
         // stats
-        public int Mana;
         public int MaxHealth;
         public int Health;
 
@@ -25,7 +24,6 @@ namespace HearthstoneGameModel.Game.CardSlots
             : base(cardId, player, game)
         {
             MinionCard minionCard = (MinionCard)Card;
-            Mana = minionCard.Mana;
             Attack = minionCard.Attack;
             MaxHealth = minionCard.Health;
             Health = minionCard.Health;

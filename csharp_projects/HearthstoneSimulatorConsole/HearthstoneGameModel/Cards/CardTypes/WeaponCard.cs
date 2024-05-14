@@ -11,11 +11,9 @@ namespace HearthstoneGameModel.Cards.CardTypes
 {
     public class WeaponCard : Card
     {
-        protected int _mana;
         protected int _attack;
         protected int _durability;
 
-        public int Mana { get { return _mana; } }
         public int Attack { get { return _attack; } }
         public int Durability { get { return _durability; } }
 
