@@ -41,7 +41,7 @@
   <ItemGroup>
     <Compile Include="Cards\Card.cs" />
     <Compile Include="Cards\CardFactories\CardFactory.cs" />
-    <Compile Include="Cards\CardTypes\OriginalHeroCard.cs" />
+    <Compile Include="Cards\CardTypes\HeroCard.cs" />
     <Compile Include="Cards\CardTypes\MinionCard.cs" />
     <Compile Include="Cards\CardTypes\WeaponCard.cs" />
     <Compile Include="Core\Enums\Actions.cs" />

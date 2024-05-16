@@ -10,6 +10,8 @@ namespace HearthstoneGameModel.Game.CardSlots
 {
     public class MinionCardSlot : BattlerCardSlot
     {
+        MinionCard TypedCard;
+
         // stats
         public int MaxHealth;
         public int Health;
@@ -23,10 +25,10 @@ namespace HearthstoneGameModel.Game.CardSlots
         public MinionCardSlot(string cardId, int player, HearthstoneGame game)
             : base(cardId, player, game)
         {
-            MinionCard minionCard = (MinionCard)Card;
-            Attack = minionCard.Attack;
-            MaxHealth = minionCard.Health;
-            Health = minionCard.Health;
+            TypedCard = (MinionCard)Card;
+            Attack = TypedCard.Attack;
+            MaxHealth = TypedCard.Health;
+            Health = TypedCard.Health;
         }
 
         public override void TakeDamage(int amount)

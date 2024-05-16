@@ -10,6 +10,8 @@ namespace HearthstoneGameModel.Game.CardSlots
 {
     public class HeroCardSlot : BattlerCardSlot
     {
+        public HeroCard TypedCard;
+
         public int CurrentMana = 0;
         public int AvailableMana = 0;
         public int MaximumMana = 0;
@@ -19,7 +21,6 @@ namespace HearthstoneGameModel.Game.CardSlots
         public bool HeroPowerUsedThisTurn = false;
 
         // TODO: _heroPowerCost and _heroPowerEffect
-        int _heroPowerCost;
 
         // Other metadata
         public int NumTaunt = 0;
@@ -32,12 +33,12 @@ namespace HearthstoneGameModel.Game.CardSlots
 
         public int HeroPowerCost
         {
-            get { return _heroPowerCost; }
+            get { return TypedCard.HeroPowerCost; }
         }
 
         public HeroCardSlot(string cardId, int player, HearthstoneGame game)
             : base(cardId, player, game) {
-            _heroPowerCost = ((HeroCard)Card).HeroPowerCost;
+            TypedCard = (HeroCard)Card;
         }
         public override void TakeDamage(int amount)
         {
