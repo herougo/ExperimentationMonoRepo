@@ -9,6 +9,7 @@ namespace HearthstoneGameModel.Game.Metadata
     public class PlayerMetadata
     {
         public int HandLimit = HearthstoneConstants.HandLimit;
+        public int BattleboardLimit = HearthstoneConstants.BattleboardLimit;
 
     }
 }

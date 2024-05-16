@@ -1,12 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Effects;
+using HearthstoneGameModel.Effects.ContinuousEffects;
 using HearthstoneGameModel.Game.CardSlots;
+using HearthstoneGameModel.Game.EffectManagement;
 
 namespace HearthstoneGameModel.Game
 {
     public class CardMover
     {
         HearthstoneGame _game;
-        List<CardSlot> _limbo = new List<CardSlot>();
+        HashSet<CardSlot> _limbo = new HashSet<CardSlot>();
 
         public CardMover(HearthstoneGame game)
         {
@@ -21,13 +26,167 @@ namespace HearthstoneGameModel.Game
             string cardName = cardSlot.Card.Name;
             // TODO: UIManager log play card
 
-            // TODO: other
+            CardType cardType = cardSlot.CardType;
+            switch (cardType)
+            {
+                case CardType.Minion:
+                    PlayMinion((MinionCardSlot)cardSlot, destinationIndex);
+                    break;
+                case CardType.Weapon:
+                    break;
+                default:
+                    throw new NotImplementedException("PlayCard");
+            }
+        }
 
+        public void PlayMinion(CardSlot cardSlot, int destinationIndex)
+        {
+            _game.Battleboard.AddCards(
+                cardSlot.Player, new List<CardSlot> { cardSlot },
+                destinationIndex
+            );
+
+            foreach (EffectManagerEffect effect in cardSlot.Card.InPlayEffects)
+            {
+                EffectManagerNode emNode = new EffectManagerNode(
+                    effect, cardSlot, cardSlot, true
+                );
+                _game.EffectManager.AddEffect(emNode);
+            }
+
+            // prevent attacking on the turn it's summoned (via Sleep effect)
+            EffectManagerNode sleepEmNode = new EffectManagerNode(
+                new Sleep(), cardSlot, cardSlot, false
+            );
+            _game.EffectManager.AddEffect(sleepEmNode);
+
+
+            _game.EffectManager.SendEvent(EffectEvent.MinionPutInPlay, cardSlot);
+            _game.EffectManager.SendEvent(EffectEvent.MinionBattlecry, cardSlot);
+            _game.EffectManager.SendEvent(EffectEvent.MinionSummoned, cardSlot);
+        }
+
+        public void KillMinions(List<CardSlot> cardSlots)
+        {
+            foreach (CardSlot cardSlot in cardSlots)
+            {
+                _game.Battleboard.PopCardSlot(cardSlot);
+                SendCardToLimbo(cardSlot);
+            }
+
+            foreach (CardSlot cardSlot in cardSlots)
+            {
+                // TODO: _game.UIManager
+                _game.EffectManager.SendEvent(EffectEvent.MinionDies, cardSlot);
+            }
+
+            foreach (CardSlot cardSlot in cardSlots)
+            {
+                _game.EffectManager.PopEffectsBySlot(cardSlot);
+                RemoveCardSlot(cardSlot);
+            }
         }
 
         public void DrawCards(int player, int numCards)
         {
-            // TODO
+            int numCanDraw = _game.PlayerMetadata[player].HandLimit - _game.Hands[player].Count;
+            int numBurned = Math.Max(0, numCards - numCanDraw);
+            int numDrawn = numCards - numBurned;
+            List<CardSlot> drawnCards = _game.Decks[player].Draw(numDrawn);
+            List<CardSlot> burnedCards = _game.Decks[player].Draw(numBurned);
+            _game.Hands[player].AddCards(drawnCards);
+            foreach (CardSlot cardSlot in burnedCards)
+            {
+                SendCardToLimbo(cardSlot);
+                RemoveCardSlot(cardSlot);
+                // TODO: UIManager
+            }
+        }
+
+        public void SendCardToLimbo(CardSlot cardSlot)
+        {
+            _limbo.Add(cardSlot);
+        }
+
+        public void RemoveCardSlot(CardSlot cardSlot)
+        {
+            _limbo.Remove(cardSlot);
+        }
+
+        public void DestroyWeapon(int player)
+        {
+            WeaponCardSlot weaponCardSlot = _game.Weapons[player];
+            SendCardToLimbo(weaponCardSlot);
+            _game.Weapons[player] = null; // Must be set to None before sending event
+            _game.EffectManager.SendEvent(EffectEvent.WeaponDestroyed, weaponCardSlot);
+            RemoveCardSlot(weaponCardSlot);
+        }
+
+        public void EquipWeapon(int player, WeaponCardSlot cardSlot)
+        {
+            if (_game.Weapons[player] != null)
+            {
+                DestroyWeapon(player);
+            }
+            _game.Weapons[player] = cardSlot; // Must be set before sending event
+            _game.EffectManager.SendEvent(EffectEvent.WeaponEquipped, cardSlot);
+        }
+
+        public void SummonMinion(CardSlot cardSlot)
+        {
+            _game.Battleboard.AddCards(cardSlot.Player, new List<CardSlot>{ cardSlot });
+
+            string cardName = cardSlot.Card.Name;
+            // TODO: UIManager
+
+            foreach (EffectManagerEffect effect in cardSlot.Card.InPlayEffects)
+            {
+                EffectManagerNode emNode = new EffectManagerNode(
+                    effect, cardSlot, cardSlot, true
+                );
+                _game.EffectManager.AddEffect(emNode);
+            }
+
+            // prevent attacking on the turn it's summoned (via Sleep effect)
+            EffectManagerNode sleepEmNode = new EffectManagerNode(
+                new Sleep(), cardSlot, cardSlot, false
+            );
+            _game.EffectManager.AddEffect(sleepEmNode);
+
+
+            _game.EffectManager.SendEvent(EffectEvent.MinionPutInPlay, cardSlot);
+            // (no battlecry event)
+            _game.EffectManager.SendEvent(EffectEvent.MinionSummoned, cardSlot);
+        }
+
+        public void ReturnMinionsToHand(int player, List<CardSlot> cardSlots)
+        {
+            int availableHandSpace = _game.PlayerMetadata[player].HandLimit - _game.Hands[player].Count;
+            int numToDie = Math.Max(cardSlots.Count - availableHandSpace, 0);
+            int numToReturn = cardSlots.Count - numToDie;
+
+            List<CardSlot> toReturn = cardSlots.GetRange(0, numToReturn);
+            List<CardSlot> toDie = cardSlots.GetRange(numToReturn, numToDie);
+
+            foreach (CardSlot cardSlot in toReturn)
+            {
+                _game.Battleboard.PopCardSlot(cardSlot);
+                if (player !=  cardSlot.Player)
+                {
+                    cardSlot.SwitchPlayers();
+                }
+            }
+            _game.Hands[player].AddCards(toReturn);
+
+            foreach (CardSlot cardSlot in toReturn)
+            {
+                // TODO: UIManager
+                _game.EffectManager.SendEvent(EffectEvent.MinionReturnedToHand, cardSlot);
+                _game.EffectManager.PopEffectsBySlot(cardSlot);
+            }
+
+            KillMinions(toDie);
+            // TODO: UIManager
         }
     }
 }

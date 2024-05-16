@@ -10,22 +10,8 @@ using System.Threading.Tasks;
 
 namespace HearthstoneGameModel.Effects
 {
-    public abstract class ContinuousEffect : EventBasedEffect
+    public abstract class ContinuousEffect : EffectManagerEffect
     {
-        public abstract EffectManagerNodePlan Start(HearthstoneGame game, EffectManagerNode emNode);
-
-        public EffectManagerNodePlan Stop(HearthstoneGame game, EffectManagerNode emNode)
-        {
-            return null;
-        }
-
-        public EffectManagerNodePlan SendEvent(
-            string effectEvent, HearthstoneGame game,
-            EffectManagerNode emNode, CardSlot eventSlot)
-        {
-            return null;
-        }
-
-        public abstract ContinuousEffect Copy();
+        
     }
 }

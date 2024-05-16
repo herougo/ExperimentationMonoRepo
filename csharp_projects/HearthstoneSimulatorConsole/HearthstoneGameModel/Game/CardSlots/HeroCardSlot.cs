@@ -29,7 +29,6 @@ namespace HearthstoneGameModel.Game.CardSlots
         public int NumStealth = 0;
         public int NumFrozen = 0;
         public int NumElusive = 0;
-        public bool HasSleep = false;
 
         public int HeroPowerCost
         {

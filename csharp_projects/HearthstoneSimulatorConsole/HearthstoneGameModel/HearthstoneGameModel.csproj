@@ -54,7 +54,8 @@
     <Compile Include="Core\Enums\UIEvent.cs" />
     <Compile Include="Core\Exceptions.cs" />
     <Compile Include="Effects\ContinuousEffect.cs" />
-    <Compile Include="Effects\EventBasedEffect.cs" />
+    <Compile Include="Effects\ContinuousEffects\Sleep.cs" />
+    <Compile Include="Effects\EffectManagerEffect.cs" />
     <Compile Include="Effects\OneTimeEffect.cs" />
     <Compile Include="Game\CardSlots\BattlerCardSlot.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNode.cs" />

@@ -34,6 +34,11 @@ namespace HearthstoneGameModel.Game.CardSlots
 
         public CardType CardType { get { return Card.CardType; } }
 
+        public void SwitchPlayers()
+        {
+            Player = 1 - Player;
+        }
+
         public void UpdateStats()
         {
             // TODO: implement

@@ -10,6 +10,7 @@ namespace HearthstoneGameModel.Game
     {
         public const int DeckLength = 30;
         public const int HandLimit = 10;
+        public const int BattleboardLimit = 7;
         public const int NumberOfPlayers = 2;
         public const int NumDrawsGoingFirst = 3;
         public const int NumDrawsGoingSecond = 4;

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Game;
 using HearthstoneGameModel.Game.CardSlots;
 
@@ -16,12 +17,15 @@ namespace HearthstoneGameModel.Cards
         protected string _hsClass;
         protected bool _collectible = true;
         protected int _mana;
+        protected List<EffectManagerEffect> _inPlayEffects = new List<EffectManagerEffect>();
 
         public string CardId { get { return _cardId; } }
         public string Name { get { return _name; } }
         public string HsClass { get {  return _hsClass; } }
         public bool Collectible { get { return _collectible; } }
         public int Mana { get { return _mana; } }
+
+        public List<EffectManagerEffect> InPlayEffects { get { return _inPlayEffects; } }
 
         abstract public CardType CardType { get; }
 

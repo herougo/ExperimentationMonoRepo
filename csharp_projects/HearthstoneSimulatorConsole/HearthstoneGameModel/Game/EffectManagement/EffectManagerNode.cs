@@ -11,14 +11,14 @@ namespace HearthstoneGameModel.Game.EffectManagement
 {
     public class EffectManagerNode
     {
-        public ContinuousEffect Effect;
+        public EffectManagerEffect Effect;
         public CardSlot AffectedSlot;
         public CardSlot OriginSlot;
         public bool Silencable;
         int _hash;
 
         public EffectManagerNode(
-            ContinuousEffect effect,
+            EffectManagerEffect effect,
             CardSlot affectedSlot,
             CardSlot originSlot,
             bool silenceable) // TODO: add hash parameter?
