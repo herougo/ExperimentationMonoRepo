@@ -26,8 +26,17 @@ namespace HearthstoneGameModel.Game.CardSlots
             _originalMana = Card.Mana;
         }
 
+        public int Hash { get { return _hash; } }
+
+        public override int GetHashCode() { return Hash; }
+
         public int Mana { get { return _originalMana; } }
 
         public CardType CardType { get { return Card.CardType; } }
+
+        public void UpdateStats()
+        {
+            // TODO: implement
+        }
     }
 }

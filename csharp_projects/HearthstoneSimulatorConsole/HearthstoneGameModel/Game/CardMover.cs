@@ -21,6 +21,7 @@ namespace HearthstoneGameModel.Game
             string cardName = cardSlot.Card.Name;
             // TODO: UIManager log play card
 
+            // TODO: other
 
         }
 

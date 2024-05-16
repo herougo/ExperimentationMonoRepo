@@ -8,13 +8,15 @@ namespace HearthstoneGameModel.Utils
 {
     public static class HashGenerator
     {
-        static int HashCounter = 0;
+        public const int NullHash = -1;
+        public const int Player0Hash = 0;
+        public const int Player1Hash = 1;
+        public static int LastHash = 1;
 
         public static int GetNextHash()
         {
-            int result = HashCounter;
-            HashCounter++;
-            return result;
+            LastHash++;
+            return LastHash;
         }
     }
 }

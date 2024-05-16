@@ -41,7 +41,7 @@
   <ItemGroup>
     <Compile Include="Cards\Card.cs" />
     <Compile Include="Cards\CardFactories\CardFactory.cs" />
-    <Compile Include="Cards\CardTypes\HeroCard.cs" />
+    <Compile Include="Cards\CardTypes\OriginalHeroCard.cs" />
     <Compile Include="Cards\CardTypes\MinionCard.cs" />
     <Compile Include="Cards\CardTypes\WeaponCard.cs" />
     <Compile Include="Core\Enums\Actions.cs" />
@@ -53,6 +53,14 @@
     <Compile Include="Core\Enums\HSClass.cs" />
     <Compile Include="Core\Enums\UIEvent.cs" />
     <Compile Include="Core\Exceptions.cs" />
+    <Compile Include="Effects\ContinuousEffect.cs" />
+    <Compile Include="Effects\EventBasedEffect.cs" />
+    <Compile Include="Effects\OneTimeEffect.cs" />
+    <Compile Include="Game\CardSlots\BattlerCardSlot.cs" />
+    <Compile Include="Game\EffectManagement\EffectManagerNode.cs" />
+    <Compile Include="Game\EffectManagement\EffectManagerNodeList.cs" />
+    <Compile Include="Game\EffectManagement\EffectManagerNodePlan.cs" />
+    <Compile Include="Game\EffectManagement\EventCardSlotToEMNodeListDictionary.cs" />
     <Compile Include="Game\UIManager.cs" />
     <Compile Include="Game\Action\Actions.cs" />
     <Compile Include="Game\Action\ConsoleActionReader.cs" />
@@ -66,7 +74,7 @@
     <Compile Include="Game\CardSlots\WeaponCardSlot.cs" />
     <Compile Include="Game\Action\DecisionMakers.cs" />
     <Compile Include="Game\Decklist.cs" />
-    <Compile Include="Game\EffectManager.cs" />
+    <Compile Include="Game\EffectManagement\EffectManager.cs" />
     <Compile Include="Game\HearthstoneConstants.cs" />
     <Compile Include="Game\HearthstoneGame.cs" />
     <Compile Include="Game\HearthstoneGameArgs.cs" />
@@ -74,6 +82,7 @@
     <Compile Include="Game\Metadata\PlayerMetadata.cs" />
     <Compile Include="Game\Pile.cs" />
     <Compile Include="Utils\HashGenerator.cs" />
+    <Compile Include="Utils\LinkedList.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

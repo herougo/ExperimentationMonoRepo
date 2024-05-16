@@ -9,11 +9,16 @@ using HearthstoneGameModel.Core.Enums;
 
 namespace HearthstoneGameModel.Cards.CardTypes
 {
-    public class OriginalHeroCard : Card
+    public class HeroCard : Card
     {
         protected int _heroPowerCost;
         // TODO: protected ???? _heroPowerEffect;
         // TODO: effects
+
+        public int HeroPowerCost
+        {
+            get { return _heroPowerCost; }
+        }
 
         public override CardType CardType { get { return CardType.Hero; } }
         public override CardSlot CreateCardSlot(int player, HearthstoneGame game)

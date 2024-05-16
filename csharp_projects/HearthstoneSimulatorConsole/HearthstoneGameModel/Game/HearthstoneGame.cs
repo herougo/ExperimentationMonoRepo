@@ -10,6 +10,7 @@ using HearthstoneGameModel.Core;
 using System.Linq.Expressions;
 using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Cards;
+using HearthstoneGameModel.Game.EffectManagement;
 
 namespace HearthstoneGameModel.Game
 {
@@ -156,7 +157,7 @@ namespace HearthstoneGameModel.Game
 
         public void CreateCardAndAddToHand(int player, Card card)
         {
-            int numCanDraw = PlayerMetadata[player].HandLimit - Hands[player].Length;
+            int numCanDraw = PlayerMetadata[player].HandLimit - Hands[player].Count;
             if (numCanDraw > 0)
             {
                 CardSlot cardSlot = card.CreateCardSlot(player, this);
@@ -212,7 +213,7 @@ namespace HearthstoneGameModel.Game
                 Weapons[attackerCardSlot.Player].Durability -= 1;
                 if (Weapons[attackerCardSlot.Player].Durability == 0)
                 {
-                    CardMover.DestroyWeapon(attackerCardSlot.player);
+                    // TODO: CardMover.DestroyWeapon(attackerCardSlot.player);
                 }
             }
 
