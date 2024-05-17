@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Cards.CardFactories;
 using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Game;
@@ -15,8 +16,8 @@ namespace HearthstoneGameModel.Cards
         protected string _cardId;
         protected string _name;
         protected string _hsClass;
-        protected bool _collectible = true;
         protected int _mana;
+        protected bool _collectible = true;
         protected List<EMEffect> _inPlayEffects = new List<EMEffect>();
 
         public string CardId { get { return _cardId; } }
@@ -30,5 +31,10 @@ namespace HearthstoneGameModel.Cards
         abstract public CardType CardType { get; }
 
         public abstract CardSlot CreateCardSlot(int player, HearthstoneGame game);
+
+        public Card Copy()
+        {
+            return CardFactory.CreateCard(_cardId);
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HearthstoneGameModel.Cards.Implementations.Classic;
+using HearthstoneGameModel.Cards.Implementations.Heroes;
 
 namespace HearthstoneGameModel.Cards.CardFactories
 {
@@ -17,6 +18,9 @@ namespace HearthstoneGameModel.Cards.CardFactories
             {
                 case CardIds.Wisp:
                     result = new Wisp();
+                    break;
+                case CardIds.SilverHandRecruit:
+                    result = new SilverHandRecruit();
                     break;
             }
             return result;

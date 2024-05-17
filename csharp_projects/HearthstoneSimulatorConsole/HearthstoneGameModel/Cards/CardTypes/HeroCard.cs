@@ -6,13 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Effects;
 
 namespace HearthstoneGameModel.Cards.CardTypes
 {
     public class HeroCard : Card
     {
         protected int _heroPowerCost;
-        // TODO: protected ???? _heroPowerEffect;
+        protected OneTimeEffect _heroPowerEffect;
         // TODO: effects
 
         public int HeroPowerCost
