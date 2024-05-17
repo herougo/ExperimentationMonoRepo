@@ -44,6 +44,8 @@
     <Compile Include="Cards\CardTypes\HeroCard.cs" />
     <Compile Include="Cards\CardTypes\MinionCard.cs" />
     <Compile Include="Cards\CardTypes\WeaponCard.cs" />
+    <Compile Include="Cards\Implementations\Heroes\OriginalHeroes.cs" />
+    <Compile Include="Cards\Implementations\Heroes\Uncollectible.cs" />
     <Compile Include="Core\Enums\Actions.cs" />
     <Compile Include="Core\Enums\CanAttackResponse.cs" />
     <Compile Include="Core\Enums\CardIds.cs" />
@@ -58,6 +60,8 @@
     <Compile Include="Effects\ContinuousEffects\Sleep.cs" />
     <Compile Include="Effects\EMEffect.cs" />
     <Compile Include="Effects\OneTimeEffect.cs" />
+    <Compile Include="Effects\OneTimeEffects\EquipWeapon.cs" />
+    <Compile Include="Effects\OneTimeEffects\SummonMinion.cs" />
     <Compile Include="Game\CardSlots\BattlerCardSlot.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNode.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNodeList.cs" />

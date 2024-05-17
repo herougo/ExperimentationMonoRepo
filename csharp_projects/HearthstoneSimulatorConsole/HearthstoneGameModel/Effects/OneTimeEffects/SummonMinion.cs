@@ -11,13 +11,13 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 
         public SummonMinion(MinionCard minion) { _minion = minion; }
 
-        public override EffectManagerNodePlan Execute(HearthstoneGame game, EffectManagerNode emNode)
+        public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot cardSlot)
         {
-            int player = emNode.AffectedSlot.Player;
+            int player = cardSlot.Player;
             if (game.Battleboard.HasRoom(player))
             {
-                CardSlot cardSlot = _minion.CreateCardSlot(player, game);
-                game.CardMover.SummonMinion(cardSlot);
+                CardSlot newMinionCardSlot = _minion.CreateCardSlot(player, game);
+                game.CardMover.SummonMinion(newMinionCardSlot);
             }
             return null;
         }

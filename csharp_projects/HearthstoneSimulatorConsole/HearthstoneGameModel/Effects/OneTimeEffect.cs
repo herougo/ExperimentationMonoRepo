@@ -1,4 +1,5 @@
 ﻿using HearthstoneGameModel.Game;
+using HearthstoneGameModel.Game.CardSlots;
 using HearthstoneGameModel.Game.EffectManagement;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace HearthstoneGameModel.Effects
     public abstract class OneTimeEffect
     {
         public abstract EffectManagerNodePlan Execute(
-            HearthstoneGame game, EffectManagerNode emNode
+            HearthstoneGame game, CardSlot cardSlot
         );
 
         public abstract OneTimeEffect Copy();
