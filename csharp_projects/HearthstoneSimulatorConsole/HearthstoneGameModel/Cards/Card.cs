@@ -17,7 +17,7 @@ namespace HearthstoneGameModel.Cards
         protected string _hsClass;
         protected bool _collectible = true;
         protected int _mana;
-        protected List<EffectManagerEffect> _inPlayEffects = new List<EffectManagerEffect>();
+        protected List<EMEffect> _inPlayEffects = new List<EMEffect>();
 
         public string CardId { get { return _cardId; } }
         public string Name { get { return _name; } }
@@ -25,7 +25,7 @@ namespace HearthstoneGameModel.Cards
         public bool Collectible { get { return _collectible; } }
         public int Mana { get { return _mana; } }
 
-        public List<EffectManagerEffect> InPlayEffects { get { return _inPlayEffects; } }
+        public List<EMEffect> InPlayEffects { get { return _inPlayEffects; } }
 
         abstract public CardType CardType { get; }
 

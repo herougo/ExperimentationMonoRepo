@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace HearthstoneGameModel.Effects
 {
-    public abstract class ContinuousEffect : EffectManagerEffect
+    public abstract class ContinuousEffect : EMEffect
     {
         
     }

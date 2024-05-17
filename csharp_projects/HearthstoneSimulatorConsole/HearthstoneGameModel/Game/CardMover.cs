@@ -46,7 +46,7 @@ namespace HearthstoneGameModel.Game
                 destinationIndex
             );
 
-            foreach (EffectManagerEffect effect in cardSlot.Card.InPlayEffects)
+            foreach (EMEffect effect in cardSlot.Card.InPlayEffects)
             {
                 EffectManagerNode emNode = new EffectManagerNode(
                     effect, cardSlot, cardSlot, true
@@ -139,7 +139,7 @@ namespace HearthstoneGameModel.Game
             string cardName = cardSlot.Card.Name;
             // TODO: UIManager
 
-            foreach (EffectManagerEffect effect in cardSlot.Card.InPlayEffects)
+            foreach (EMEffect effect in cardSlot.Card.InPlayEffects)
             {
                 EffectManagerNode emNode = new EffectManagerNode(
                     effect, cardSlot, cardSlot, true

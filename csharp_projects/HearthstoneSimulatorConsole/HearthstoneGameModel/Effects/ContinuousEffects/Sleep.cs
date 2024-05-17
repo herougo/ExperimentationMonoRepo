@@ -30,7 +30,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
             return null;
         }
 
-        public override EffectManagerEffect Copy()
+        public override EMEffect Copy()
         {
             return new Sleep();
         }

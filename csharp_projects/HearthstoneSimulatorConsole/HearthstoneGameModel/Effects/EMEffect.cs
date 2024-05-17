@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace HearthstoneGameModel.Effects
 {
-    public abstract class EffectManagerEffect
+    public abstract class EMEffect
     {
         protected List<string> _eventsReceived;
         protected bool _requiresSlotMatchForEvent = false;
@@ -48,6 +48,6 @@ namespace HearthstoneGameModel.Effects
 
         }
 
-        public abstract EffectManagerEffect Copy();
+        public abstract EMEffect Copy();
     }
 }
