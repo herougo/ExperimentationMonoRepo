@@ -24,10 +24,6 @@ namespace HearthstoneGameModel.Game.CardSlots
 
         // Other metadata
         public int NumTaunt = 0;
-        public int NumCharge = 0;
-        public int NumWindfury = 0;
-        public int NumStealth = 0;
-        public int NumFrozen = 0;
         public int NumElusive = 0;
 
         public int HeroPowerCost
