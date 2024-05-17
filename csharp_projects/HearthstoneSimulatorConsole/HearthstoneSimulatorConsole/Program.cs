@@ -4,7 +4,7 @@ using HearthstoneGameModel.Game.Action;
 using TextView;
 
 List<string> cardIdList0 = Enumerable.Repeat(CardIds.Wisp, 30).ToList();
-string hsClass0 = "????";
+string hsClass0 = "hero_paladin";
 Decklist decklist0 = new Decklist(cardIdList0, hsClass0);
 Decklist decklist1 = new Decklist(cardIdList0, hsClass0);
 ConsoleActionReader actionGetter = new ConsoleActionReader();

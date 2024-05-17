@@ -11,6 +11,7 @@ using System.Linq.Expressions;
 using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Cards;
 using HearthstoneGameModel.Game.EffectManagement;
+using HearthstoneGameModel.Cards.CardFactories;
 
 namespace HearthstoneGameModel.Game
 {
@@ -59,8 +60,8 @@ namespace HearthstoneGameModel.Game
             EffectManager = new EffectManager(this);
             Decks = new Pile[HearthstoneConstants.NumberOfPlayers]
             {
-                new Pile(), // TODO
-                new Pile()
+                Decklists[0].ToPile(0, this),
+                Decklists[1].ToPile(1, this)
             };
             if (shuffleDecks)
             {
@@ -79,7 +80,7 @@ namespace HearthstoneGameModel.Game
             int whoGoesSecond = HearthstoneConstants.NumberOfPlayers - 1;
             Hands = new Pile[HearthstoneConstants.NumberOfPlayers]
             {
-                new Pile(), // TODO
+                new Pile(),
                 new Pile()
             };
             // TODO: log player going first

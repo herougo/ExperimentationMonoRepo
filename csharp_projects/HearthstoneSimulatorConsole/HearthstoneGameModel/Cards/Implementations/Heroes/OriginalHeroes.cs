@@ -12,7 +12,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
     public class Paladin : HeroCard
     {
         public Paladin() {
-            _cardId = "paladin";
+            _cardId = "hero_paladin";
             _name = "Paladin";
             _hsClass = HSClass.Paladin;
             _mana = 0;

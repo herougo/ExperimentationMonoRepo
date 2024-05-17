@@ -1,4 +1,7 @@
-﻿using HearthstoneGameModel.Core.Enums;
+﻿using HearthstoneGameModel.Cards;
+using HearthstoneGameModel.Cards.CardFactories;
+using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Game.CardSlots;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +24,18 @@ namespace HearthstoneGameModel.Game
         public bool IsValid()
         {
             return CardIdList.Count == HearthstoneConstants.DeckLength;
+        }
+
+        public Pile ToPile(int player, HearthstoneGame game)
+        {
+            List<CardSlot> cards = new List<CardSlot>();
+            foreach (string cardId in CardIdList)
+            {
+                Card card = CardFactory.CreateCard(cardId);
+                CardSlot cardSlot = card.CreateCardSlot(player, game);
+                cards.Add(cardSlot);
+            }
+            return new Pile(cards);
         }
     }
 }

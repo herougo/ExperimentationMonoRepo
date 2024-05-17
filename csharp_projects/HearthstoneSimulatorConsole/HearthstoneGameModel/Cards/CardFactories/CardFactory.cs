@@ -13,17 +13,17 @@ namespace HearthstoneGameModel.Cards.CardFactories
     {
         public static Card CreateCard(string cardId)
         {
-            Card result = null;
             switch (cardId)
             {
                 case CardIds.Wisp:
-                    result = new Wisp();
-                    break;
+                    return new Wisp();
+                case CardIds.Paladin:
+                    return new Paladin();
                 case CardIds.SilverHandRecruit:
-                    result = new SilverHandRecruit();
-                    break;
+                    return new SilverHandRecruit();
+                default:
+                    throw new ArgumentException("Unsupported cardId");
             }
-            return result;
         }
     }
 }
