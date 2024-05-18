@@ -5,6 +5,7 @@ using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ContinuousEffects;
 using HearthstoneGameModel.Game.CardSlots;
 using HearthstoneGameModel.Game.EffectManagement;
+using HearthstoneGameModel.UI.UIEvents;
 
 namespace HearthstoneGameModel.Game
 {
@@ -24,7 +25,7 @@ namespace HearthstoneGameModel.Game
             _game.Players[_game.GameMetadata.Turn].CurrentMana -= cardSlot.Mana;
 
             string cardName = cardSlot.Card.Name;
-            // TODO: UIManager log play card
+            _game.UIManager.ReceiveUIEvent(new PlayCardUIEvent(cardName));
 
             CardType cardType = cardSlot.CardType;
             switch (cardType)
@@ -137,7 +138,7 @@ namespace HearthstoneGameModel.Game
             _game.Battleboard.AddCards(cardSlot.Player, new List<CardSlot>{ cardSlot });
 
             string cardName = cardSlot.Card.Name;
-            // TODO: UIManager
+            _game.UIManager.ReceiveUIEvent(new SummonMinionUIEvent(cardSlot.Player, cardName));
 
             foreach (EMEffect effect in cardSlot.Card.InPlayEffects)
             {

@@ -11,7 +11,8 @@ using System.Linq.Expressions;
 using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Cards;
 using HearthstoneGameModel.Game.EffectManagement;
-using HearthstoneGameModel.Cards.CardFactories;
+using HearthstoneGameModel.UI;
+using HearthstoneGameModel.UI.UIEvents;
 
 namespace HearthstoneGameModel.Game
 {
@@ -83,7 +84,7 @@ namespace HearthstoneGameModel.Game
                 new Pile(),
                 new Pile()
             };
-            // TODO: log player going first
+            UIManager.ReceiveUIEvent(new PlayerGoingFirstUIEvent(GameMetadata.WhoGoesFirst));
 
             CardMover.DrawCards(GameMetadata.WhoGoesFirst, HearthstoneConstants.NumDrawsGoingFirst);
             CardMover.DrawCards(whoGoesSecond, HearthstoneConstants.NumDrawsGoingSecond);
@@ -118,11 +119,10 @@ namespace HearthstoneGameModel.Game
                 for (int i = 0; i < HearthstoneConstants.MaxTurnNum; i++)
                 {
                     EffectManager.SendEvent(EffectEvent.StartTurn);
-                    UIManager.ReceiveUIEvent(UIEvent.StartTurn);
+                    UIManager.ReceiveUIEvent(new StartTurnUIEvent());
 
                     LoopActionsUntilEndTurn();
 
-                    UIManager.ReceiveUIEvent(UIEvent.EndTurnSelected);
                     EffectManager.SendEvent(EffectEvent.PreEndTurnFrozen);
                     EffectManager.SendEvent(EffectEvent.EndTurn);
 
@@ -152,6 +152,7 @@ namespace HearthstoneGameModel.Game
                     continue;
                 }
                 action.Perform(this);
+                UIManager.ReceiveUIEvent(new ActionCompletedUIEvent());
             }
             GameMetadata.ReadyToEndTurn = false;
         }
@@ -191,13 +192,14 @@ namespace HearthstoneGameModel.Game
 
         public void EndGame(bool player0Dead, bool player1Dead)
         {
-            UIManager.ReceiveUIEvent(UIEvent.GameOver); // TODO: send arguments
+            GameOverUIEvent uiEvent = new GameOverUIEvent(player0Dead, player1Dead);
+            UIManager.ReceiveUIEvent(uiEvent);
             throw new GameOverException();
         }
 
         public void Attack(BattlerCardSlot attackerCardSlot, BattlerCardSlot defenderCardSlot)
         {
-            // TODO: UIManager
+            UIManager.ReceiveUIEvent(new AttackUIEvent(attackerCardSlot, defenderCardSlot));
             attackerCardSlot.AttacksThisTurn += 1;
             GameMetadata.AttackerDamageTaken = defenderCardSlot.Attack;
             GameMetadata.DefenderDamageTaken = attackerCardSlot.Attack;

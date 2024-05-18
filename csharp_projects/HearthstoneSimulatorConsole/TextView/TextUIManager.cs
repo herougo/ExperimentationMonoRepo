@@ -4,21 +4,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.UI;
+using TextView.UIEventHandling;
 
 namespace TextView
 {
     public class TextUIManager : UIManager
     {
-        public override void LogError(string message)
+        public TextUILogger TextUILogger = new TextUILogger();
+
+        public override void SetGame(HearthstoneGame game)
         {
-            Console.WriteLine("ERROR: " + message);
+            TextUILogger.SetGame(game);
+            _game = game;
         }
 
-        public override void ReceiveUIEvent(string uiEvent)
+        public override void LogError(string message)
         {
-            // TODO: implement
-            
-            throw new NotImplementedException();
+            TextUILogger.LogError(message);
         }
+
+        public override void ReceiveUIEvent(UIEvent uiEvent)
+        {
+            UIEventHandler handler = UIEventHandlerFactory.GetHandler(uiEvent, this);
+            handler.Handle(_game);
+        }
+
+
     }
 }

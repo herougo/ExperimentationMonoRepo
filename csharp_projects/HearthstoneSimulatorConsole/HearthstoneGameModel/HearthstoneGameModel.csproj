@@ -67,7 +67,7 @@
     <Compile Include="Game\EffectManagement\EffectManagerNodeList.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNodePlan.cs" />
     <Compile Include="Game\EffectManagement\EventCardSlotToEMNodeListDictionary.cs" />
-    <Compile Include="Game\UIManager.cs" />
+    <Compile Include="UI\UIManager.cs" />
     <Compile Include="Game\Action\Actions.cs" />
     <Compile Include="Game\Action\ConsoleActionReader.cs" />
     <Compile Include="Game\Action\IStringActionReader.cs" />
