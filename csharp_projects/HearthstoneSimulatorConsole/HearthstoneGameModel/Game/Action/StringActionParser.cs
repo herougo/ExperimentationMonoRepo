@@ -76,8 +76,8 @@ namespace HearthstoneGameModel.Game.Action
                 throw new Exception("defender outside range");
             }
 
-            CardSlot attackerSlot = _game.Battleboard.GetSlot(attackerTurn, attackerIndex);
-            CardSlot defenderSlot = _game.Battleboard.GetSlot(defenderTurn, defenderIndex);
+            CardSlot attackerSlot = _game.IndexToSlot(attackerTurn, attackerIndex);
+            CardSlot defenderSlot = _game.IndexToSlot(defenderTurn, defenderIndex);
 
             BattlerCardSlot attackerBattlerSlot, defenderBattlerSlot;
             try

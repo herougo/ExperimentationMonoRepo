@@ -10,7 +10,7 @@ Decklist decklist1 = new Decklist(cardIdList0, hsClass0);
 ConsoleActionReader actionGetter = new ConsoleActionReader();
 PlayerDecisionMaker decisionMaker0 = new PlayerDecisionMaker(actionGetter);
 PlayerDecisionMaker decisionMaker1 = new PlayerDecisionMaker(actionGetter);
-TextUIManager textUIManager = new TextUIManager();
+TextUIManager textUIManager = new TextUIManager(new ConsoleTextLogger());
 
 HearthstoneGameArgs hsArgs = new HearthstoneGameArgs(
     decklist0, decklist1, decisionMaker0, decisionMaker1, textUIManager

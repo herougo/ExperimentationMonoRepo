@@ -11,7 +11,12 @@ namespace TextView
 {
     public class TextUIManager : UIManager
     {
-        public TextUILogger TextUILogger = new TextUILogger();
+        public TextUILogger TextUILogger;
+
+        public TextUIManager(ITextLogger textLogger)
+        {
+            TextUILogger = new TextUILogger(textLogger);
+        }
 
         public override void SetGame(HearthstoneGame game)
         {

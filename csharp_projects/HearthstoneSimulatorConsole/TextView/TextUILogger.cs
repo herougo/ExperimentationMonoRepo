@@ -11,6 +11,9 @@ namespace TextView
     public class TextUILogger
     {
         protected HearthstoneGame _game = null;
+        protected ITextLogger _textLogger;
+        
+        public TextUILogger(ITextLogger logger) { _textLogger = logger; }
 
         public void SetGame(HearthstoneGame game)
         {
@@ -19,7 +22,7 @@ namespace TextView
 
         public void LogText(string text)
         {
-            Console.Write(text);
+            _textLogger.LogText(text);
         }
 
         public void LogError(string message)

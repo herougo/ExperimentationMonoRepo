@@ -62,6 +62,7 @@
     <Compile Include="Effects\OneTimeEffect.cs" />
     <Compile Include="Effects\OneTimeEffects\EquipWeapon.cs" />
     <Compile Include="Effects\OneTimeEffects\SummonMinion.cs" />
+    <Compile Include="Game\Action\ArrayStringActionReader.cs" />
     <Compile Include="Game\CardSlots\BattlerCardSlot.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNode.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNodeList.cs" />

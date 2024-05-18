@@ -39,6 +39,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleTextLogger.cs" />
+    <Compile Include="ITextLogger.cs" />
+    <Compile Include="ListTextLogger.cs" />
     <Compile Include="TextUILogger.cs" />
     <Compile Include="UIEventHandling\Handlers\ActionHandlers.cs" />
     <Compile Include="UIEventHandling\Handlers\GameMechanicsHandlers.cs" />
