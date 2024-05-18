@@ -45,11 +45,7 @@ namespace HearthstoneGameModel.Game.CardSlots
         {
             get
             {
-                if (HasSleep)
-                {
-                    return 0;
-                }
-                else if (HasWindfury)
+                if (HasWindfury)
                 {
                     return 2;
                 }

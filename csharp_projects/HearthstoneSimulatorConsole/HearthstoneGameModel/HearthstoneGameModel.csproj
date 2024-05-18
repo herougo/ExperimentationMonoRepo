@@ -54,7 +54,7 @@
     <Compile Include="Core\Enums\HeroClass.cs" />
     <Compile Include="Cards\Implementations\Classic\NeutralCommon.cs" />
     <Compile Include="Core\Enums\HSClass.cs" />
-    <Compile Include="Core\Enums\UIEvent.cs" />
+    <Compile Include="Core\Enums\UIEventType.cs" />
     <Compile Include="Core\Exceptions.cs" />
     <Compile Include="Effects\ContinuousEffect.cs" />
     <Compile Include="Effects\ContinuousEffects\Sleep.cs" />
@@ -67,6 +67,10 @@
     <Compile Include="Game\EffectManagement\EffectManagerNodeList.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNodePlan.cs" />
     <Compile Include="Game\EffectManagement\EventCardSlotToEMNodeListDictionary.cs" />
+    <Compile Include="UI\UIEvent.cs" />
+    <Compile Include="UI\UIEventHandler.cs" />
+    <Compile Include="UI\UIEvents\ActionUIEvents.cs" />
+    <Compile Include="UI\UIEvents\GameMechanicsUIEvents.cs" />
     <Compile Include="UI\UIManager.cs" />
     <Compile Include="Game\Action\Actions.cs" />
     <Compile Include="Game\Action\ConsoleActionReader.cs" />

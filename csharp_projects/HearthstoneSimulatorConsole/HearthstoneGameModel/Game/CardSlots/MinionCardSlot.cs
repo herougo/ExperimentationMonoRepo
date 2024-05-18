@@ -35,5 +35,10 @@ namespace HearthstoneGameModel.Game.CardSlots
         {
             Health -= amount;
         }
+
+        public override string ToString()
+        {
+            return $"CardSlot('{Card.Name}', Mana={Card.Mana}, {TypedCard.Attack} / {TypedCard.Health})";
+        }
     }
 }

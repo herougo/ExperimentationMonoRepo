@@ -62,6 +62,10 @@ namespace HearthstoneGameModel.Game
 
         public CardSlot GetSlot(int player, int boardIndex)
         {
+            if (boardIndex == HearthstoneConstants.HeroIndex)
+            {
+                return _game.Players[player];
+            }
             return _boards[player][boardIndex];
         }
 

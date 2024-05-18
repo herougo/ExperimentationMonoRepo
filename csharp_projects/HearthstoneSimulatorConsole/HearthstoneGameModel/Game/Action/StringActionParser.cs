@@ -61,8 +61,8 @@ namespace HearthstoneGameModel.Game.Action
             }
 
 
-            int attackerBoardSize = _game.Battleboard.BoardLen(attackerIndex);
-            int defenderBoardSize = _game.Battleboard.BoardLen(defenderIndex);
+            int attackerBoardSize = _game.Battleboard.BoardLen(attackerTurn);
+            int defenderBoardSize = _game.Battleboard.BoardLen(defenderTurn);
 
             if (attackerIndex < HearthstoneConstants.HeroIndex
                 || attackerIndex >= attackerBoardSize)
@@ -197,7 +197,7 @@ namespace HearthstoneGameModel.Game.Action
                 }
 
                 int playerBoardSize = _game.Battleboard.BoardLen(turn);
-                if (destinationIndex < 0 || playerBoardSize <= destinationIndex)
+                if (destinationIndex < 0 || playerBoardSize < destinationIndex)
                 {
                     throw new Exception("destination index outside range");
                 }

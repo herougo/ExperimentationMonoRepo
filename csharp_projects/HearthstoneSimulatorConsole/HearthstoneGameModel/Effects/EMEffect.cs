@@ -12,7 +12,7 @@ namespace HearthstoneGameModel.Effects
 {
     public abstract class EMEffect
     {
-        protected List<string> _eventsReceived;
+        protected List<string> _eventsReceived = new List<string>();
         protected bool _requiresSlotMatchForEvent = false;
         protected bool _requiresSlotPlayerMatchForEvent = false;
 

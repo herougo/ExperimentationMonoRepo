@@ -13,7 +13,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
     public class Sleep : ContinuousEffect
     {
         public Sleep() {
-            _eventsReceived.Add(EffectEvent.EndTurn);
+            _eventsReceived = new List<string> { EffectEvent.EndTurn };
         }
 
         public override EffectManagerNodePlan Start(HearthstoneGame game, EffectManagerNode emNode)

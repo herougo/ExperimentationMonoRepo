@@ -23,5 +23,10 @@ namespace HearthstoneGameModel.Game.CardSlots
             Attack = TypedCard.Attack;
             Durability = TypedCard.Durability;
         }
+
+        public override string ToString()
+        {
+            return $"CardSlot('{Card.Name}', Mana={Card.Mana}, {TypedCard.Attack} / {TypedCard.Durability})";
+        }
     }
 }

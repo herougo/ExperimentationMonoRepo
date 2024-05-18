@@ -24,7 +24,7 @@ namespace TextView
 
         public void LogError(string message)
         {
-            LogText("ERROR: " + message);
+            LogText("ERROR: " + message + "\n");
         }
 
         private void LogHand(int player)
@@ -75,6 +75,7 @@ namespace TextView
 
             LogText("\n");
             LogBoard(opp);
+            LogText("\t------------\n");
             LogBoard(player);
             LogText("\n");
 
