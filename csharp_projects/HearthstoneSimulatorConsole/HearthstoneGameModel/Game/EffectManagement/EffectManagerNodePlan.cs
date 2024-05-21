@@ -24,6 +24,13 @@ namespace HearthstoneGameModel.Game.EffectManagement
             UpdateStats = updateStats;
         }
 
+        public EffectManagerNodePlan()
+        {
+            ToAdd = new List<EffectManagerNode>();
+            ToRemove = new List<EffectManagerNode>();
+            UpdateStats = new List<CardSlot>();
+        }
+
         public void Perform(EffectManager effectManager)
         {
             foreach (EffectManagerNode node in ToAdd)
@@ -42,6 +49,10 @@ namespace HearthstoneGameModel.Game.EffectManagement
 
         public void Update(EffectManagerNodePlan newPlan)
         {
+            if (newPlan == null)
+            {
+                return;
+            }
             ToAdd.AddRange(newPlan.ToAdd);
             ToRemove.AddRange(newPlan.ToRemove);
             UpdateStats.AddRange(newPlan.UpdateStats);

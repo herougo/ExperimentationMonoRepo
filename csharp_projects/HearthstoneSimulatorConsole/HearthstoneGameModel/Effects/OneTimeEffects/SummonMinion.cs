@@ -11,9 +11,9 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 
         public SummonMinion(MinionCard minion) { _minion = minion; }
 
-        public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot cardSlot)
+        public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot affectedCardSlot)
         {
-            int player = cardSlot.Player;
+            int player = affectedCardSlot.Player;
             if (game.Battleboard.HasRoom(player))
             {
                 CardSlot newMinionCardSlot = _minion.CreateCardSlot(player, game);

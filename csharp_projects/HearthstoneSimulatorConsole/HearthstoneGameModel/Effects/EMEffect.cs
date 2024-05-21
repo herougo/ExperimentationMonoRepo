@@ -23,7 +23,7 @@ namespace HearthstoneGameModel.Effects
             return null;
         }
 
-        public EffectManagerNodePlan SendEvent(
+        public virtual EffectManagerNodePlan SendEvent(
             string effectEvent, HearthstoneGame game,
             EffectManagerNode emNode, CardSlot eventSlot)
         {
@@ -43,7 +43,7 @@ namespace HearthstoneGameModel.Effects
             get { return _requiresSlotPlayerMatchForEvent; }
         }
 
-        public void AdjustStats()
+        public virtual void AdjustStats(CardSlot cardSlot)
         {
 
         }
