@@ -8,6 +8,8 @@
         {
             _game = game;
         }
+
+        public abstract IAction GetAction();
     }
     public class PlayerDecisionMaker : DecisionMaker
     {
@@ -25,7 +27,7 @@
             _actionParser = new StringActionParser(game);
         }
 
-        public IAction GetAction()
+        public override IAction GetAction()
         {
             if (_game == null)
             {

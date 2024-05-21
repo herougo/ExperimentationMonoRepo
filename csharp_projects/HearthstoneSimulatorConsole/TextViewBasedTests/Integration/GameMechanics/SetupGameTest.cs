@@ -1,4 +1,5 @@
 ﻿using HearthstoneGameModel.Game;
+using HearthstoneGameModel.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;

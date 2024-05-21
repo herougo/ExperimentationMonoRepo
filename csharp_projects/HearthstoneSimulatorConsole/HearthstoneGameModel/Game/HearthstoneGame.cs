@@ -234,5 +234,30 @@ namespace HearthstoneGameModel.Game
                 minionsToKill.Add(defenderCardSlot);
             }
         }
+
+        public CardSlot GetSelectionFromAction(List<CardSlot> options, int player)
+        {
+            DecisionMaker decisionMaker = DecisionMakers[player];
+            while (true)
+            {
+                try
+                {
+                    IAction action = decisionMaker.GetAction();
+                    SelectAction selectAction = (SelectAction)action;
+                    CardSlot selectedSlot = selectAction.Selection;
+
+                    if (!options.Contains(selectedSlot))
+                    {
+                        throw new Exception("selected card is not one of the possible options");
+                    }
+
+                    return selectedSlot;
+                }
+                catch (Exception ex)
+                {
+                    UIManager.LogError(ex.Message);
+                }
+            }
+        }
     }
 }

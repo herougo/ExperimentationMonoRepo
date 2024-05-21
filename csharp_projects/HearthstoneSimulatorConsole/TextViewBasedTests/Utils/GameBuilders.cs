@@ -1,6 +1,7 @@
 ﻿using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Game;
 using HearthstoneGameModel.Game.Action;
+using HearthstoneGameModel.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace TextViewBasedTests.Utils
         {
             string[] actionInputSplit = actionInput.Split('\n');
 
+            RandomGenerator.SetSeed(0);
             List<string> cardIdList0 = Enumerable.Repeat(CardIds.Wisp, 30).ToList();
             string hsClass0 = "hero_paladin";
             Decklist decklist0 = new Decklist(cardIdList0, hsClass0);

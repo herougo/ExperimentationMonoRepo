@@ -32,6 +32,8 @@ namespace HearthstoneGameModel.Game.Action
                     return ParseAttackAction(split);
                 case Actions.Play:
                     return ParsePlayCardAction(split);
+                case Actions.Select:
+                    return ParseSelectAction(split);
                 case Actions.Concede:
                     return new ConcedeAction();
                 default:
@@ -213,6 +215,33 @@ namespace HearthstoneGameModel.Game.Action
             {
                 throw new NotImplementedException();
             }
+        }
+
+        public SelectAction ParseSelectAction(string[] actionSplit)
+        {
+            if (actionSplit.Length != 3)
+            {
+                throw new Exception("Attack actions need 2 arguments.");
+            }
+
+            int playerIndex, boardIndex;
+            try
+            {
+                playerIndex = Int32.Parse(actionSplit[1]);
+                boardIndex = Int32.Parse(actionSplit[2]);
+            }
+            catch
+            {
+                throw new Exception("Invalid select action argument type");
+            }
+
+            CardSlot targetSlot = _game.IndexToSlot(playerIndex, boardIndex);
+            if (targetSlot == null)
+            {
+                throw new Exception("Invalid selection");
+            }
+
+            return new SelectAction(targetSlot);
         }
     }
 }
