@@ -15,8 +15,6 @@ namespace HearthstoneGameModel.Game.CardSlots
         public int CurrentMana = 0;
         public int AvailableMana = 0;
         public int MaximumMana = 0;
-        public int MaxHealth = 0;
-        public int Health = 0;
         public int Armour = 0;
         public bool HeroPowerUsedThisTurn = false;
 

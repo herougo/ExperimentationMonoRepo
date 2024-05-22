@@ -10,6 +10,8 @@ namespace HearthstoneGameModel.Game.CardSlots
     {
         public int Attack = 0;
         public int AttacksThisTurn = 0;
+        public int MaxHealth = 0;
+        public int Health = 0;
 
         public bool HasSleep = false;
         public int NumFrozen = 0;

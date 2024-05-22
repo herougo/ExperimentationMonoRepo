@@ -56,18 +56,36 @@
     <Compile Include="Core\Enums\HSClass.cs" />
     <Compile Include="Core\Enums\UIEventType.cs" />
     <Compile Include="Core\Exceptions.cs" />
+    <Compile Include="Effects\ActivatedEffect.cs" />
     <Compile Include="Effects\ContinuousEffect.cs" />
     <Compile Include="Effects\ContinuousEffects\Sleep.cs" />
     <Compile Include="Effects\EMEffect.cs" />
+    <Compile Include="Effects\GroupContinuousEffect.cs" />
     <Compile Include="Effects\OneTimeEffect.cs" />
+    <Compile Include="Effects\OneTimeEffectSequence.cs" />
     <Compile Include="Effects\OneTimeEffects\EquipWeapon.cs" />
     <Compile Include="Effects\OneTimeEffects\SummonMinion.cs" />
+    <Compile Include="Effects\TriggerEffect.cs" />
     <Compile Include="Game\Action\ArrayStringActionReader.cs" />
     <Compile Include="Game\CardSlots\BattlerCardSlot.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNode.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNodeList.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNodePlan.cs" />
     <Compile Include="Game\EffectManagement\EventCardSlotToEMNodeListDictionary.cs" />
+    <Compile Include="Selections\CharacterSelection.cs" />
+    <Compile Include="Selections\CharacterSelections\AdjacentMinions.cs" />
+    <Compile Include="Selections\CharacterSelections\AllCharacters.cs" />
+    <Compile Include="Selections\CharacterSelections\AllFriendlyCharacters.cs" />
+    <Compile Include="Selections\CharacterSelections\AllFriendlyMinions.cs" />
+    <Compile Include="Selections\CharacterSelections\AllOtherCharacters.cs" />
+    <Compile Include="Selections\CharacterSelections\AllOtherFriendlyCharacters.cs" />
+    <Compile Include="Selections\CharacterSelections\AllOtherFriendlyMinions.cs" />
+    <Compile Include="Selections\CharacterSelections\AllOtherMinions.cs" />
+    <Compile Include="Selections\CharacterSelections\HeroSelection.cs" />
+    <Compile Include="Selections\CharacterSelections\OwnSelf.cs" />
+    <Compile Include="Selections\CharacterSelections\RandomCharacter.cs" />
+    <Compile Include="Selections\CharacterSelections\SelectCharacterFrom.cs" />
+    <Compile Include="Selections\SelectionConstants.cs" />
     <Compile Include="UI\UIEvent.cs" />
     <Compile Include="UI\UIEventHandler.cs" />
     <Compile Include="UI\UIEvents\ActionUIEvents.cs" />
@@ -94,6 +112,7 @@
     <Compile Include="Game\Pile.cs" />
     <Compile Include="Utils\HashGenerator.cs" />
     <Compile Include="Utils\LinkedList.cs" />
+    <Compile Include="Utils\RandomGenerator.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

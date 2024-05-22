@@ -22,7 +22,7 @@ namespace HearthstoneGameModel.Selections.CharacterSelections
         {
             int player = emNode.AffectedSlot.Player;
             List<CardSlot> options = _selection.GetSelectedCardSlots(game, emNode);
-            options = filterBasedOnEmNode(options);
+            options = filterBasedOnEmNode(options, emNode);
             if (options.Count == 0)
             {
                 return options;
@@ -33,7 +33,7 @@ namespace HearthstoneGameModel.Selections.CharacterSelections
             }
         }
 
-        private List<CardSlot> filterBasedOnEmNode(List<CardSlot> options)
+        private List<CardSlot> filterBasedOnEmNode(List<CardSlot> options, EffectManagerNode emNode)
         {
             // TODO: 
             return options;

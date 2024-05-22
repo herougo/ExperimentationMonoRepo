@@ -13,8 +13,6 @@ namespace HearthstoneGameModel.Game.CardSlots
         MinionCard TypedCard;
 
         // stats
-        public int MaxHealth;
-        public int Health;
 
         // managed by effects 
         // TODO
