@@ -31,7 +31,7 @@ namespace HearthstoneGameModel.Effects
             {
                 throw new Exception("effectEvent not in EventsReceived");
             }
-            return _effect.Execute(game, emNode.AffectedSlot);
+            return _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot);
         }
     }
 }

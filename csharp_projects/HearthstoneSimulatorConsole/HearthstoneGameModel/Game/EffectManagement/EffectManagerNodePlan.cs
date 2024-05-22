@@ -9,9 +9,9 @@ namespace HearthstoneGameModel.Game.EffectManagement
 {
     public class EffectManagerNodePlan
     {
-        List<EffectManagerNode> ToAdd;
-        List<EffectManagerNode> ToRemove;
-        List<CardSlot> UpdateStats;
+        public List<EffectManagerNode> ToAdd;
+        public List<EffectManagerNode> ToRemove;
+        public List<CardSlot> UpdateStats;
 
         public EffectManagerNodePlan(
             List<EffectManagerNode> toAdd,

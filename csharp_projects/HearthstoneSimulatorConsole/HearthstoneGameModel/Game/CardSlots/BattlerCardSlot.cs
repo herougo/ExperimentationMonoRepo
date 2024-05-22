@@ -18,6 +18,7 @@ namespace HearthstoneGameModel.Game.CardSlots
         public int NumWindfury = 0;
         public int NumCharge = 0;
         public int NumStealth = 0;
+        public int NumTaunt = 0;
 
         public BattlerCardSlot(string cardId, int player, HearthstoneGame game)
             : base(cardId, player, game) { }

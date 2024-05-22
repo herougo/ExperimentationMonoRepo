@@ -129,7 +129,7 @@ namespace HearthstoneGameModel.Game
                     GameMetadata.Turn = 1 - GameMetadata.Turn;
                 }
             }
-            catch (GameOverException ex)
+            catch (GameOverException)
             {
 
             }

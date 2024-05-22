@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Core.Enums;
 
 namespace HearthstoneGameModel.Effects
 {
@@ -15,6 +16,7 @@ namespace HearthstoneGameModel.Effects
         protected List<string> _eventsReceived = new List<string>();
         protected bool _requiresSlotMatchForEvent = false;
         protected bool _requiresSlotPlayerMatchForEvent = false;
+        protected EffectArea _effectArea = EffectArea.Field;
 
         public abstract EffectManagerNodePlan Start(HearthstoneGame game, EffectManagerNode emNode);
 
@@ -43,9 +45,22 @@ namespace HearthstoneGameModel.Effects
             get { return _requiresSlotPlayerMatchForEvent; }
         }
 
+        public EffectArea EffectArea
+        {
+            get { return _effectArea; }
+        }
+
         public virtual void AdjustStats(CardSlot cardSlot)
         {
 
+        }
+
+        protected void CheckValidEvent(string effectEvent)
+        {
+            if (!EventsReceived.Contains(effectEvent))
+            {
+                throw new Exception("effectEvent not in EventsReceived");
+            }
         }
 
         public abstract EMEffect Copy();
