@@ -106,7 +106,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
 
         public void Execute(OneTimeEffect effect, HearthstoneGame game, CardSlot cardSlot)
         {
-            EffectManagerNodePlan plan = effect.Execute(game, cardSlot);
+            EffectManagerNodePlan plan = effect.Execute(game, cardSlot, cardSlot);
             if (plan != null)
             {
                 plan.Perform(this);

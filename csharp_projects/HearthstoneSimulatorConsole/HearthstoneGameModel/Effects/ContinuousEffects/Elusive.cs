@@ -11,10 +11,6 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
 {
     public class Elusive : ContinuousEffect
     {
-        public override EffectManagerNodePlan Start(HearthstoneGame game, EffectManagerNode emNode)
-        {
-            return null;
-        }
 
         public override EMEffect Copy()
         {

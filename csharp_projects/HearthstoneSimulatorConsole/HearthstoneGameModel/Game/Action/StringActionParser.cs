@@ -123,6 +123,10 @@ namespace HearthstoneGameModel.Game.Action
             {
                 return CanAttackResponse.Frozen;
             }
+            else if (attacker.HasSleep)
+            {
+                return CanAttackResponse.Asleep;
+            }
             else if (attacker.AttacksThisTurn >= attacker.NumPossibleAttacksIgnoringFrozen)
             {
                 return CanAttackResponse.AttackedEnough;
@@ -130,10 +134,6 @@ namespace HearthstoneGameModel.Game.Action
             else if (attacker.HasCharge)
             {
 
-            }
-            else if (attacker.HasSleep)
-            {
-                return CanAttackResponse.Asleep;
             }
 
             if (!_game.Battleboard.DefenderObeysTaunt(defender))
