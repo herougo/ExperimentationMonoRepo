@@ -21,10 +21,7 @@ namespace HearthstoneGameModel.Effects.ActivatedEffects
             string effectEvent, HearthstoneGame game,
             EffectManagerNode emNode, CardSlot eventSlot)
         {
-            if (!EventsReceived.Contains(effectEvent))
-            {
-                throw new Exception("effectEvent not in EventsReceived");
-            }
+            CheckValidEvent(effectEvent);
             EffectManagerNodePlan result = _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot);
             game.Players[emNode.AffectedSlot.Player].HeroPowerUsedThisTurn = true;
             return result;

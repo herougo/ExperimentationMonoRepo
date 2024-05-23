@@ -13,9 +13,11 @@ namespace HearthstoneGameModel.Cards.CardTypes
     {
         protected int _attack;
         protected int _health;
+        protected MinionTag _tag = MinionTag.None;
 
         public int Attack { get { return _attack; } }
         public int Health { get { return _health; } }
+        public MinionTag Tag { get { return _tag; } }
 
         public override CardType CardType { get { return CardType.Minion; } }
 

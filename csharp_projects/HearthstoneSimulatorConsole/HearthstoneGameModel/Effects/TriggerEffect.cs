@@ -27,10 +27,7 @@ namespace HearthstoneGameModel.Effects
             string effectEvent, HearthstoneGame game,
             EffectManagerNode emNode, CardSlot eventSlot)
         {
-            if (!EventsReceived.Contains(effectEvent))
-            {
-                throw new Exception("effectEvent not in EventsReceived");
-            }
+            CheckValidEvent(effectEvent);
             return _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot);
         }
     }
