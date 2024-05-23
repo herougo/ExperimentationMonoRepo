@@ -15,9 +15,11 @@ namespace HearthstoneGameModel.Selections.CharacterSelections
 
         public HeroSelection(bool opposing) { _opposing = opposing; }
 
-        public override List<CardSlot> GetSelectedCardSlots(HearthstoneGame game, EffectManagerNode emNode)
+        public override List<CardSlot> GetSelectedCardSlots(
+            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
+        )
         {
-            CardSlot cardSlot = emNode.AffectedSlot;
+            CardSlot cardSlot = affectedCardSlot;
             int player = cardSlot.Player;
             if (_opposing)
             {

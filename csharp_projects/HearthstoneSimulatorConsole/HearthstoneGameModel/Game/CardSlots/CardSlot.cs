@@ -16,7 +16,9 @@ namespace HearthstoneGameModel.Game.CardSlots
         public Card Card;
         public int Player;
         public HearthstoneGame Game;
-        public int _originalMana;
+        int _originalMana;
+
+        public bool Silenced = false;
 
         public CardSlot(string cardId, int player, HearthstoneGame game) {
             _hash = HashGenerator.GetNextHash();

@@ -18,9 +18,11 @@ namespace HearthstoneGameModel.Selections.CharacterSelections
             _selection = selection;
         }
 
-        public override List<CardSlot> GetSelectedCardSlots(HearthstoneGame game, EffectManagerNode emNode)
+        public override List<CardSlot> GetSelectedCardSlots(
+            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
+        )
         {
-            List<CardSlot> possibleCardSlots = _selection.GetSelectedCardSlots(game, emNode);
+            List<CardSlot> possibleCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
             if (possibleCardSlots.Count == 0)
             {
                 return possibleCardSlots;

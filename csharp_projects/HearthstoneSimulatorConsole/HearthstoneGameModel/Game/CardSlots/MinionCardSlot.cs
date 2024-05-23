@@ -17,8 +17,6 @@ namespace HearthstoneGameModel.Game.CardSlots
         // managed by effects 
         // TODO
 
-        // need to manage effectively
-        public bool Silenced = false;
 
         public MinionCardSlot(string cardId, int player, HearthstoneGame game)
             : base(cardId, player, game)

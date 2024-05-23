@@ -11,9 +11,11 @@ namespace HearthstoneGameModel.Selections.CharacterSelections
 {
     public class OwnSelf : CharacterSelection
     {
-        public override List<CardSlot> GetSelectedCardSlots(HearthstoneGame game, EffectManagerNode emNode)
+        public override List<CardSlot> GetSelectedCardSlots(
+            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
+        )
         {
-            CardSlot cardSlot = emNode.AffectedSlot;
+            CardSlot cardSlot = affectedCardSlot;
             return new List<CardSlot> { cardSlot };
         }
 

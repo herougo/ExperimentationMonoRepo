@@ -1,5 +1,4 @@
-﻿using HearthstoneGameModel.Cards.CardTypes;
-using HearthstoneGameModel.Game.CardSlots;
+﻿using HearthstoneGameModel.Game.CardSlots;
 using HearthstoneGameModel.Game.EffectManagement;
 using HearthstoneGameModel.Game;
 using HearthstoneGameModel.Selections;
@@ -11,14 +10,19 @@ using System.Threading.Tasks;
 
 namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
-    public class EquipWeapon : OneTimeEffect
+    public class GainManaCrystals : OneTimeEffect
     {
         CharacterSelection _selection;
-        WeaponCard _weapon;
+        int _amount;
 
-        public EquipWeapon(CharacterSelection selection, WeaponCard weapon) {
+        public GainManaCrystals(CharacterSelection selection, int amount)
+        {
             _selection = selection;
-            _weapon = weapon;
+            _amount = amount;
+            if (amount <= 0)
+            {
+                throw new ArgumentException("amount must be positive");
+            }
         }
 
         public override EffectManagerNodePlan Execute(
@@ -26,11 +30,11 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
         )
         {
             List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
-
             foreach (CardSlot slot in selectedCardSlots)
             {
-                WeaponCardSlot weaponCardSlot = (WeaponCardSlot)_weapon.CreateCardSlot(slot.Player, game);
-                game.CardMover.EquipWeapon(slot.Player, weaponCardSlot);
+                HeroCardSlot typedSlot = (HeroCardSlot)slot;
+                typedSlot.AvailableMana = Math.Min(typedSlot.MaximumMana, typedSlot.AvailableMana + _amount);
+                typedSlot.CurrentMana = Math.Min(typedSlot.MaximumMana, typedSlot.CurrentMana + _amount);
             }
 
             return null;
@@ -38,7 +42,7 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 
         public override OneTimeEffect Copy()
         {
-            return new EquipWeapon(_selection.Copy(), (WeaponCard)_weapon.Copy());
+            return new GainManaCrystals(_selection.Copy(), _amount);
         }
     }
 }

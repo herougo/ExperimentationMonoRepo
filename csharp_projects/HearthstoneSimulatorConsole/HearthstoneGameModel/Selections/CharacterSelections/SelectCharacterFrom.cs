@@ -18,11 +18,13 @@ namespace HearthstoneGameModel.Selections.CharacterSelections
             _selection = selection;
         }
 
-        public override List<CardSlot> GetSelectedCardSlots(HearthstoneGame game, EffectManagerNode emNode)
+        public override List<CardSlot> GetSelectedCardSlots(
+            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
+        )
         {
-            int player = emNode.AffectedSlot.Player;
-            List<CardSlot> options = _selection.GetSelectedCardSlots(game, emNode);
-            options = filterBasedOnEmNode(options, emNode);
+            int player = affectedCardSlot.Player;
+            List<CardSlot> options = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
+            options = filterOptions(options, affectedCardSlot, originCardSlot);
             if (options.Count == 0)
             {
                 return options;
@@ -33,7 +35,9 @@ namespace HearthstoneGameModel.Selections.CharacterSelections
             }
         }
 
-        private List<CardSlot> filterBasedOnEmNode(List<CardSlot> options, EffectManagerNode emNode)
+        private List<CardSlot> filterOptions(
+            List<CardSlot> options, CardSlot affectedCardSlot, CardSlot originCardSlot
+        )
         {
             // TODO: 
             return options;

@@ -34,6 +34,7 @@ namespace HearthstoneGameModel.Cards
 
         public Card Copy()
         {
+            // TODO: redo
             return CardFactory.CreateCard(_cardId);
         }
     }

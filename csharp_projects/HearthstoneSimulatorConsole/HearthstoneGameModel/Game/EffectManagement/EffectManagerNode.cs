@@ -14,7 +14,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
         public EMEffect Effect;
         public CardSlot AffectedSlot;
         public CardSlot OriginSlot;
-        public bool Silencable;
+        public bool Silenceable;
         int _hash;
 
         public EffectManagerNode(
@@ -26,7 +26,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
             Effect = effect.Copy();
             AffectedSlot = affectedSlot;
             OriginSlot = originSlot;
-            Silencable = silenceable;
+            Silenceable = silenceable;
             _hash = HashGenerator.GetNextHash();
         }
 

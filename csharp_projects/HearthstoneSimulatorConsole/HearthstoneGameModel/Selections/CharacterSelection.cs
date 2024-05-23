@@ -15,7 +15,9 @@ namespace HearthstoneGameModel.Selections
 
         public List<string> EventsReceived { get {  return _eventsReceived; } }
 
-        public abstract List<CardSlot> GetSelectedCardSlots(HearthstoneGame game, EffectManagerNode emNode);
+        public abstract List<CardSlot> GetSelectedCardSlots
+            (HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
+        );
 
         public abstract CharacterSelection Copy();
     }
