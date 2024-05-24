@@ -12,7 +12,9 @@ Effects
 
 - [ ] Sleep
 
+### Specific Cases
 
+- Timelimited effect then switch players (e.g. sleep)
 
 
 
