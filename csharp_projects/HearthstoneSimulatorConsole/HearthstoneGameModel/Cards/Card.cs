@@ -32,10 +32,6 @@ namespace HearthstoneGameModel.Cards
 
         public abstract CardSlot CreateCardSlot(int player, HearthstoneGame game);
 
-        public Card Copy()
-        {
-            // TODO: redo
-            return CardFactory.CreateCard(_cardId);
-        }
+        public abstract Card Copy();
     }
 }

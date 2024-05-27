@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace HearthstoneGameModel.Effects.WrappedEMEffects
 {
-    public class TimeLimitedEffect : WrappedEMEffect
+    public class TimeLimitedEMEffect : WrappedEMEffect
     {
         EffectTimeLimit _untilWhen;
 
-        public TimeLimitedEffect(EMEffect effect, EffectTimeLimit untilWhen)
+        public TimeLimitedEMEffect(EMEffect effect, EffectTimeLimit untilWhen)
             : base(effect)
         {
             _untilWhen = untilWhen;
@@ -71,7 +71,7 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
             {
                 foreach (EffectManagerNode toAddNode in plan.ToAdd)
                 {
-                    emNode.Effect = new TimeLimitedEffect(toAddNode.Effect, _untilWhen);
+                    toAddNode.Effect = new TimeLimitedEMEffect(toAddNode.Effect, _untilWhen);
                 }
             }
             return plan;
@@ -79,7 +79,7 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
 
         public override EMEffect Copy()
         {
-            return new TimeLimitedEffect(_effect.Copy(), _untilWhen);
+            return new TimeLimitedEMEffect(_effect.Copy(), _untilWhen);
         }
     }
 }
