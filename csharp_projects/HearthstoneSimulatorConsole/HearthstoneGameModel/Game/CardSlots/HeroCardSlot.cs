@@ -12,7 +12,7 @@ namespace HearthstoneGameModel.Game.CardSlots
     {
         public HeroCard TypedCard;
 
-        public int CurrentMana = 0;
+        public int CurrentMana = 0; // CurrentMana / AvailableMana
         public int AvailableMana = 0;
         public int MaximumMana = 0;
         public int Armour = 0;

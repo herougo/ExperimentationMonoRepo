@@ -14,6 +14,7 @@ namespace HearthstoneGameModel.Game
         public const int NumberOfPlayers = 2;
         public const int NumDrawsGoingFirst = 3;
         public const int NumDrawsGoingSecond = 4;
+        public const int MaximumMana = 10;
         public const int MaxTurnNum = 100;
         public const int HeroIndex = -1;
     }

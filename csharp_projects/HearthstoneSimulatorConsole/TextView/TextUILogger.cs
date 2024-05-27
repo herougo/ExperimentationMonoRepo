@@ -83,8 +83,8 @@ namespace TextView
             LogText("\n");
 
             HeroCardSlot playerSlot = _game.Players[player];
-            int playerCurrentMana = _game.Players[opp].CurrentMana;
-            int playerAvailableMana = _game.Players[opp].AvailableMana;
+            int playerCurrentMana = _game.Players[player].CurrentMana;
+            int playerAvailableMana = _game.Players[player].AvailableMana;
             LogText($"Player ({player}) - health: {playerSlot.Health}, armour: {playerSlot.Armour}, ");
             LogText($"mana: {playerCurrentMana} / {playerAvailableMana}\n");
             LogWeapon(_game.Weapons[player]);

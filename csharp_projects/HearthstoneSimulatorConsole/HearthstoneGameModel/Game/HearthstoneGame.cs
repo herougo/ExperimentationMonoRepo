@@ -13,6 +13,10 @@ using HearthstoneGameModel.Cards;
 using HearthstoneGameModel.Game.EffectManagement;
 using HearthstoneGameModel.UI;
 using HearthstoneGameModel.UI.UIEvents;
+using HearthstoneGameModel.Effects.TriggerEffects;
+using HearthstoneGameModel.Effects.OneTimeEffects;
+using HearthstoneGameModel.Selections;
+using HearthstoneGameModel.Effects;
 
 namespace HearthstoneGameModel.Game
 {
@@ -107,9 +111,32 @@ namespace HearthstoneGameModel.Game
             };
             Battleboard = new Battleboard(this);
 
-            // Set up in-game effects
+            addBasePlayerEffects(0);
+            addBasePlayerEffects(1);
             GameMetadata.Turn = GameMetadata.WhoGoesFirst;
-            // TODO: Hero Effects
+            foreach (HeroCardSlot player in Players)
+            {
+                player.MaximumMana = HearthstoneConstants.MaximumMana;
+            }
+        }
+
+        private void addBasePlayerEffects(int player)
+        {
+            EMEffect drawEffect = new OnTurnStart(new DrawCards(SelectionConstants.Player, 1));
+            EMEffect gainManaEffect = new OnTurnStart(new GainManaCrystals(SelectionConstants.Player, 1));
+            EMEffect refreshManaEffect = new OnTurnStart(new RefreshAllManaCrystals(SelectionConstants.Player));
+            EMEffect refreshMinionAttacks = new OnTurnEnd(new RefreshAttacks(SelectionConstants.AllFriendlyCharacters));
+            EMEffect refreshHeroPower = new OnTurnEnd(new RefreshHeroPower(SelectionConstants.Player));
+
+            List<EMEffect> effects = new List<EMEffect> {
+                drawEffect, gainManaEffect, refreshManaEffect, refreshMinionAttacks, refreshHeroPower
+            };
+            
+            foreach (EMEffect effect in effects)
+            {
+                EffectManagerNode emNode = new EffectManagerNode(effect, Players[player], Players[player], false);
+                EffectManager.AddEffect(emNode);
+            }
         }
 
         public void Play()

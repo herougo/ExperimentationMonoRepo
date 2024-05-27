@@ -53,7 +53,7 @@ namespace HearthstoneGameModel.Effects
             return plan;
         }
 
-        public override void AdjustStats(CardSlot cardSlot)
+        public override void AdjustStats(BattlerCardSlot cardSlot)
         {
             foreach (ContinuousEffect effect in _effects)
             {

@@ -22,6 +22,13 @@ namespace HearthstoneGameModel.Effects.TriggerEffects
             _playerChoice = playerChoice;
         }
 
+        public OnTurnEnd(OneTimeEffect effect)
+            : base(effect)
+        {
+            _eventsReceived = new List<string> { EffectEvent.EndTurn };
+            _playerChoice = PlayerChoice.Player;
+        }
+
         public override EffectManagerNodePlan SendEvent(
             string effectEvent, HearthstoneGame game,
             EffectManagerNode emNode, CardSlot eventSlot)

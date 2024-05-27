@@ -57,6 +57,7 @@
     <Compile Include="Core\Enums\CardType.cs" />
     <Compile Include="Core\Enums\EffectArea.cs" />
     <Compile Include="Core\Enums\EffectEvent.cs" />
+    <Compile Include="Core\Enums\EffectTimeLimit.cs" />
     <Compile Include="Core\Enums\HeroClass.cs" />
     <Compile Include="Cards\Implementations\Classic\NeutralCommon.cs" />
     <Compile Include="Core\Enums\HSClass.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Effects\ContinuousEffects\BuffAttack.cs" />
     <Compile Include="Effects\ContinuousEffects\BuffHealth.cs" />
     <Compile Include="Effects\ContinuousEffects\Charge.cs" />
+    <Compile Include="Effects\ContinuousEffects\ContinuousSelectionFieldEffect.cs" />
     <Compile Include="Effects\ContinuousEffects\DivineShield.cs" />
     <Compile Include="Effects\ContinuousEffects\Elusive.cs" />
     <Compile Include="Effects\ContinuousEffects\Frozen.cs" />
@@ -106,6 +108,11 @@
     <Compile Include="Effects\TriggerEffects\OnTurnStart.cs" />
     <Compile Include="Effects\TriggerEffects\WhenOtherMinionDies.cs" />
     <Compile Include="Effects\TriggerEffects\WhenYouSummonMinion.cs" />
+    <Compile Include="Effects\WrappedEMEffects\TimeLimitedEffect.cs" />
+    <Compile Include="Effects\WrappedEMEffect.cs" />
+    <Compile Include="Effects\WrappedEMEffects\ExternalEffect.cs" />
+    <Compile Include="Effects\WrappedOneTimeEffect.cs" />
+    <Compile Include="Effects\WrappedOneTimeEffects\NEffects.cs" />
     <Compile Include="Game\Action\ArrayStringActionReader.cs" />
     <Compile Include="Game\CardSlots\BattlerCardSlot.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNode.cs" />

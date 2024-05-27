@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Selections;
 
 namespace HearthstoneGameModel.Effects.TriggerEffects
 {
@@ -20,6 +21,13 @@ namespace HearthstoneGameModel.Effects.TriggerEffects
         {
             _eventsReceived = new List<string> { EffectEvent.StartTurn };
             _playerChoice = playerChoice;
+        }
+
+        public OnTurnStart(OneTimeEffect effect)
+            : base(effect)
+        {
+            _eventsReceived = new List<string> { EffectEvent.StartTurn };
+            _playerChoice = PlayerChoice.Player;
         }
 
         public override EffectManagerNodePlan SendEvent(
