@@ -11,6 +11,18 @@ Game Mechanics
 Effects
 
 - [ ] Sleep
+- etc
+
+Attack
+
+- [ ] Zero Attack
+- [ ] Frozen
+- [ ] Asleep
+- [ ] Already Attacked
+- [ ] Already Attacked Twice with Windfury
+- [ ] Charge
+- [ ] Disobey Taunt
+- [ ] Obey Taunt
 
 ### Specific Cases
 
@@ -21,13 +33,13 @@ Effects
 
 
 
-### Unimplemeneted Features
+### Unimplemented Features
 
 Game Mechanics
 
 - [ ] Mulligan
 - [ ] Player 2 starts with the coin
-- [ ] Players gain and refresh mana with every turn
-- [ ] Players draw with every turn
+- [x] Players gain and refresh mana with every turn
+- [x] Players draw with every turn
 - [ ] Successful Attack (charge, obeys taunt)
 - [ ] Unsuccessful Attack (frozen, windfury attacked enough, 0 attack, disobeys taunt, defender has stealth)

@@ -1,4 +1,5 @@
 ﻿using HearthstoneGameModel.Cards.CardTypes;
+using HearthstoneGameModel.Cards.Implementations.Classic;
 using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.OneTimeEffects;
@@ -23,6 +24,11 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
             _heroPowerCost = 2;
             _heroPowerEffect = new Heal(SelectionConstants.SelectCharacter, 2);
         }
+
+        public override Card Copy()
+        {
+            return new Priest();
+        }
     }
 
     public class Rogue : HeroCard
@@ -35,6 +41,11 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
             _mana = 0;
             _heroPowerCost = 2;
             _heroPowerEffect = new EquipWeapon(SelectionConstants.Player, new RogueDagger12());
+        }
+
+        public override Card Copy()
+        {
+            return new Rogue();
         }
     }
 
@@ -57,6 +68,11 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
                 }
             );
         }
+
+        public override Card Copy()
+        {
+            return new Druid();
+        }
     }
 
     public class Shaman : HeroCard
@@ -73,6 +89,11 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
                     new SearingTotem(), new HealingTotem(), new StoneclawTotem(), new StrengthTotem()
                 }
             );
+        }
+
+        public override Card Copy()
+        {
+            return new Shaman();
         }
     }
 
@@ -93,6 +114,11 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
                 }
             );
         }
+
+        public override Card Copy()
+        {
+            return new Warlock();
+        }
     }
 
     public class Paladin : HeroCard
@@ -104,6 +130,11 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
             _mana = 0;
             _heroPowerCost = 2;
             _heroPowerEffect = new SummonMinion(new SilverHandRecruit());
+        }
+
+        public override Card Copy()
+        {
+            return new Paladin();
         }
     }
 
@@ -118,6 +149,11 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
             _heroPowerCost = 2;
             _heroPowerEffect = new GainArmour(SelectionConstants.Player, 2);
         }
+
+        public override Card Copy()
+        {
+            return new Warrior();
+        }
     }
 
     public class Hunter : HeroCard
@@ -131,6 +167,11 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
             _heroPowerCost = 2;
             _heroPowerEffect = new DealDamage(SelectionConstants.Opponent, 2);
         }
+
+        public override Card Copy()
+        {
+            return new Hunter();
+        }
     }
 
     public class Mage : HeroCard
@@ -143,6 +184,11 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
             _mana = 0;
             _heroPowerCost = 2;
             _heroPowerEffect = new DealDamage(SelectionConstants.SelectCharacter, 2);
+        }
+
+        public override Card Copy()
+        {
+            return new Mage();
         }
     }
 
@@ -159,6 +205,11 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
                 new ChangeAttack(SelectionConstants.Player, 1),
                 EffectTimeLimit.EndOfTurn
             );
+        }
+
+        public override Card Copy()
+        {
+            return new DemonHunter();
         }
     }
 }

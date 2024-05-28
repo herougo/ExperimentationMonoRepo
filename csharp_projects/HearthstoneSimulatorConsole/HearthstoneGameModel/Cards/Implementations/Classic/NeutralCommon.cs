@@ -22,5 +22,9 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _health = 1;
         }
 
+        public override Card Copy()
+        {
+            return new Wisp();
+        }
     }
 }

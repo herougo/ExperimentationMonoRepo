@@ -10,12 +10,11 @@ using HearthstoneGameModel.Effects;
 
 namespace HearthstoneGameModel.Cards.CardTypes
 {
-    public class HeroCard : Card
+    public abstract class HeroCard : Card
     {
         protected int _heroPowerCost;
         protected OneTimeEffect _heroPowerEffect;
-        // TODO: effects
-
+        
         public int HeroPowerCost
         {
             get { return _heroPowerCost; }

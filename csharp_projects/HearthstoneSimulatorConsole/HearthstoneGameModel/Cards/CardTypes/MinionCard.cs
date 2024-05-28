@@ -9,7 +9,7 @@ using HearthstoneGameModel.Game;
 
 namespace HearthstoneGameModel.Cards.CardTypes
 {
-    public class MinionCard : Card
+    public abstract class MinionCard : Card
     {
         protected int _attack;
         protected int _health;

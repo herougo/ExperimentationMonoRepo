@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HearthstoneGameModel.Cards.CardTypes
 {
-    public class WeaponCard : Card
+    public abstract class WeaponCard : Card
     {
         protected int _attack;
         protected int _durability;

@@ -27,6 +27,11 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
             _attack = 1;
             _durability = 2;
         }
+
+        public override Card Copy()
+        {
+            return new RogueDagger12();
+        }
     }
 
     public class SilverHandRecruit : MinionCard
@@ -40,6 +45,11 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
 
             _attack = 1;
             _health = 1;
+        }
+
+        public override Card Copy()
+        {
+            return new SilverHandRecruit();
         }
     }
 
@@ -56,6 +66,11 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
             _attack = 1;
             _health = 1;
         }
+
+        public override Card Copy()
+        {
+            return new SearingTotem();
+        }
     }
 
     public class StoneclawTotem : MinionCard
@@ -71,6 +86,11 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
             _attack = 0;
             _health = 2;
             _inPlayEffects = new List<EMEffect>{ new Taunt() };
+        }
+
+        public override Card Copy()
+        {
+            return new StoneclawTotem();
         }
     }
 
@@ -90,6 +110,11 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
                 new OnTurnEnd(new ChangeAttack(SelectionConstants.RandomOtherFriendlyMinion, 1))
             };
         }
+
+        public override Card Copy()
+        {
+            return new StrengthTotem();
+        }
     }
 
     public class HealingTotem : MinionCard
@@ -107,6 +132,11 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
             _inPlayEffects = new List<EMEffect> {
                 new OnTurnEnd(new Heal(SelectionConstants.AllFriendlyMinions, 1))
             };
+        }
+
+        public override Card Copy()
+        {
+            return new HealingTotem();
         }
     }
 

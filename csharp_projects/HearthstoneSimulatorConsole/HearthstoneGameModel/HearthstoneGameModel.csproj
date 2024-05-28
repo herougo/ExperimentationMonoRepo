@@ -108,11 +108,12 @@
     <Compile Include="Effects\TriggerEffects\OnTurnStart.cs" />
     <Compile Include="Effects\TriggerEffects\WhenOtherMinionDies.cs" />
     <Compile Include="Effects\TriggerEffects\WhenYouSummonMinion.cs" />
-    <Compile Include="Effects\WrappedEMEffects\TimeLimitedEffect.cs" />
+    <Compile Include="Effects\WrappedEMEffects\TimeLimitedEMEffect.cs" />
     <Compile Include="Effects\WrappedEMEffect.cs" />
     <Compile Include="Effects\WrappedEMEffects\ExternalEffect.cs" />
     <Compile Include="Effects\WrappedOneTimeEffect.cs" />
     <Compile Include="Effects\WrappedOneTimeEffects\NEffects.cs" />
+    <Compile Include="Effects\WrappedOneTimeEffects\TimeLimitedOneTimeEffect.cs" />
     <Compile Include="Game\Action\ArrayStringActionReader.cs" />
     <Compile Include="Game\CardSlots\BattlerCardSlot.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNode.cs" />
