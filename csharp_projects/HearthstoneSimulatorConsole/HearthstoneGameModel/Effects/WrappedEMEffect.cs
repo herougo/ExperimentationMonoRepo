@@ -27,6 +27,7 @@ namespace HearthstoneGameModel.Effects
             string effectEvent, HearthstoneGame game,
             EffectManagerNode emNode, CardSlot eventSlot)
         {
+            CheckValidEvent(effectEvent);
             return _effect.SendEvent(effectEvent, game, emNode, eventSlot);
         }
 

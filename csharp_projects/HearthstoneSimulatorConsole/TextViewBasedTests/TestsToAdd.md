@@ -2,11 +2,12 @@
 
 Game Mechanics
 
-- [ ] Players draw 3 and 4 at the start
+- SetupGameTest.TestConcedeImmediately
+  - [x] Players draw 3 and 4 at the start
+  - [x] GameOver (player 0 and player 1)
 - [ ] Play card (left-most, middle, right-most)
+  - [ ] costs mana
 - [ ] Successful Attack (hero, minion and survive, minion and die)
-- [ ] Unsuccessful Attack (asleep, already attacked)
-- [ ] GameOver (player 0 and player 1)
 
 Effects
 
@@ -27,9 +28,6 @@ Attack
 ### Specific Cases
 
 - Timelimited effect then switch players (e.g. sleep)
-
-
-
 
 
 

@@ -10,6 +10,14 @@ namespace HearthstoneGameModel.Core.Enums
     {
         // Classic Neutral
         public const string Wisp = "C001";
+        public const string AbusiveSergeant = "C002";
+        public const string ArgentSquire = "C003";
+        public const string LeperGnome = "C004";
+        public const string Sheildbearer = "C005";
+        public const string SouthseaDeckhand = "C006";
+        public const string WorgenInfiltrator = "C007";
+        public const string YoungDragonhawk = "C008";
+        public const string AmaniBerserker = "C009";
 
         // Heroes
         public const string Priest = "hero_priest";

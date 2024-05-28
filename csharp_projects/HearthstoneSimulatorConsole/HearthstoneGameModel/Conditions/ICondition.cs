@@ -14,5 +14,7 @@ namespace HearthstoneGameModel.Conditions
         List<string> EventsReceived { get; }
 
         bool Evaluate(HearthstoneGame game, EffectManagerNode emNode);
+
+        ICondition Copy();
     }
 }
