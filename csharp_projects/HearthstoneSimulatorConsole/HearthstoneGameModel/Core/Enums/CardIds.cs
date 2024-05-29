@@ -18,6 +18,27 @@ namespace HearthstoneGameModel.Core.Enums
         public const string WorgenInfiltrator = "C007";
         public const string YoungDragonhawk = "C008";
         public const string AmaniBerserker = "C009";
+        public const string BloodsailRaider = "C010";
+        public const string DireWolfAlpha = "C011";
+        public const string FaerieDragon = "C012";
+        public const string LootHoarder = "C013";
+        public const string MadBomber = "C014";
+        public const string YouthfulBrewmaster = "C015";
+        public const string EarthenRingFarseer = "C016";
+        public const string FlesheatingGhoul = "C017";
+        public const string HarvestGolem = "C018";
+        public const string IronbeakOwl = "C019";
+        public const string JunglePanther = "C020";
+        public const string RagingWorgen = "C021";
+        public const string ScarletCrusader = "C022";
+        public const string TaurenWarrior = "C023";
+        public const string ThrallmarFarseer = "C024";
+        public const string AncientBrewmaster = "C025";
+        public const string CultMaster = "C026";
+        public const string DarkIronDwarf = "C027";
+
+        // Classic Uncollectible
+        public const string DamagedGolem = "CU001";
 
         // Heroes
         public const string Priest = "hero_priest";

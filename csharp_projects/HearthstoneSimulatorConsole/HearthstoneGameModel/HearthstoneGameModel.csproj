@@ -67,6 +67,7 @@
     <Compile Include="Core\Exceptions.cs" />
     <Compile Include="Effects\ActivatedEffect.cs" />
     <Compile Include="Effects\ActivatedEffects\HeroPowerEffect.cs" />
+    <Compile Include="Effects\WrappedEMEffects\ConditionalEffect.cs" />
     <Compile Include="Effects\ContinuousEffect.cs" />
     <Compile Include="Effects\ContinuousEffects\Buff.cs" />
     <Compile Include="Effects\ContinuousEffects\BuffAttack.cs" />

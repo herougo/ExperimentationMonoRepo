@@ -23,6 +23,21 @@ namespace HearthstoneGameModel.Effects
             }
         }
 
+        public override EffectManagerNodePlan SendEvent(string effectEvent, HearthstoneGame game, EffectManagerNode emNode, CardSlot eventSlot)
+        {
+            CheckValidEvent(effectEvent);
+            EffectManagerNodePlan plan = new EffectManagerNodePlan();
+
+            foreach (ContinuousEffect effect in _effects)
+            {
+                if (effect.EventsReceived.Contains(effectEvent))
+                {
+                    plan.Update(effect.SendEvent(effectEvent, game, emNode, eventSlot));
+                }
+            }
+            return plan;
+        }
+
         public override EffectManagerNodePlan Start(HearthstoneGame game, EffectManagerNode emNode)
         {
             EffectManagerNodePlan plan = new EffectManagerNodePlan();
