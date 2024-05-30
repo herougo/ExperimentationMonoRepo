@@ -8,7 +8,7 @@ namespace HearthstoneGameModel.Core.Enums
 {
     public static class CardIds
     {
-        // Classic Neutral
+        // Classic Neutral - Common
         public const string Wisp = "C001";
         public const string AbusiveSergeant = "C002";
         public const string ArgentSquire = "C003";
@@ -36,6 +36,18 @@ namespace HearthstoneGameModel.Core.Enums
         public const string AncientBrewmaster = "C025";
         public const string CultMaster = "C026";
         public const string DarkIronDwarf = "C027";
+        public const string DreadCorsair = "C028";
+        public const string MogushanWarden = "C029";
+        public const string SilvermoonGuardian = "C030";
+        public const string FrostElemental = "C031";
+        public const string PriestessOfElune = "C032";
+        public const string WindfuryHarpy = "C033";
+
+        // Classic Neutral - Rare
+        public const string AngryChicken = "C034";
+        public const string BloodsailCorsair = "C035";
+        public const string Lightwarden = "C036";
+        public const string MurlocTidecaller = "C037";
 
         // Classic Uncollectible
         public const string DamagedGolem = "CU001";

@@ -713,5 +713,153 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new DarkIronDwarf();
         }
     }
+
+    public class DreadCorsair : MinionCard
+    {
+        public DreadCorsair()
+        {
+            _cardId = CardIds.DreadCorsair;
+            _name = "Dread Corsair";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 4;
+            _attack = 3;
+            _health = 3;
+
+            _inPlayEffects = new List<EMEffect> {
+                new Taunt()
+            };
+            // TODO: in-hand effect
+        }
+
+        public override Card Copy()
+        {
+            return new DreadCorsair();
+        }
+    }
+
+    public class MogushanWarden : MinionCard
+    {
+        public MogushanWarden()
+        {
+            _cardId = CardIds.MogushanWarden;
+            _name = "Mogushan Warden";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 4;
+            _attack = 1;
+            _health = 7;
+
+            _inPlayEffects = new List<EMEffect> {
+                new Taunt()
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new MogushanWarden();
+        }
+    }
+
+    public class SilvermoonGuardian : MinionCard
+    {
+        public SilvermoonGuardian()
+        {
+            _cardId = CardIds.SilvermoonGuardian;
+            _name = "Silvermoon Guardian";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 4;
+            _attack = 3;
+            _health = 3;
+
+            _inPlayEffects = new List<EMEffect> {
+                new DivineShield()
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new SilvermoonGuardian();
+        }
+    }
+
+    public class FrostElemental : MinionCard
+    {
+        public FrostElemental()
+        {
+            _cardId = CardIds.FrostElemental;
+            _name = "Frost Elemental";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 6;
+            _attack = 5;
+            _health = 5;
+
+            _inPlayEffects = new List<EMEffect> {
+                new Battlecry(
+                    new Freeze(SelectionConstants.SelectOtherCharacter)
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new FrostElemental();
+        }
+    }
+
+    public class PriestessOfElune : MinionCard
+    {
+        public PriestessOfElune()
+        {
+            _cardId = CardIds.PriestessOfElune;
+            _name = "Priestess Of Elune";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 6;
+            _attack = 5;
+            _health = 4;
+
+            _inPlayEffects = new List<EMEffect> {
+                new Battlecry(
+                    new Heal(SelectionConstants.Player, 4)
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new PriestessOfElune();
+        }
+    }
+    public class WindfuryHarpy : MinionCard
+    {
+        public WindfuryHarpy()
+        {
+            _cardId = CardIds.WindfuryHarpy;
+            _name = "Windfury Harpy";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 6;
+            _attack = 4;
+            _health = 5;
+
+            _inPlayEffects = new List<EMEffect> {
+                new Windfury()
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new WindfuryHarpy();
+        }
+    }
 }
 

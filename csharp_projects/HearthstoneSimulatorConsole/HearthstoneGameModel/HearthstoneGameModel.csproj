@@ -44,6 +44,7 @@
     <Compile Include="Cards\CardTypes\HeroCard.cs" />
     <Compile Include="Cards\CardTypes\MinionCard.cs" />
     <Compile Include="Cards\CardTypes\WeaponCard.cs" />
+    <Compile Include="Cards\Implementations\Classic\Uncollectible.cs" />
     <Compile Include="Cards\Implementations\Heroes\OriginalHeroes.cs" />
     <Compile Include="Cards\Implementations\Heroes\Uncollectible.cs" />
     <Compile Include="Conditions\AndCondition.cs" />
