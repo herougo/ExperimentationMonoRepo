@@ -31,16 +31,17 @@ namespace HearthstoneGameModel.Game
             switch (cardType)
             {
                 case CardType.Minion:
-                    PlayMinion((MinionCardSlot)cardSlot, destinationIndex);
+                    playMinion((MinionCardSlot)cardSlot, destinationIndex);
                     break;
-                case CardType.Weapon:
+                case CardType.Spell:
+                    playSpell((SpellCardSlot)cardSlot);
                     break;
                 default:
                     throw new NotImplementedException("PlayCard");
             }
         }
 
-        public void PlayMinion(CardSlot cardSlot, int destinationIndex)
+        private void playMinion(CardSlot cardSlot, int destinationIndex)
         {
             _game.Battleboard.AddCards(
                 cardSlot.Player, new List<CardSlot> { cardSlot },
@@ -65,6 +66,16 @@ namespace HearthstoneGameModel.Game
             _game.EffectManager.SendEvent(EffectEvent.MinionPutInPlay, cardSlot);
             _game.EffectManager.SendEvent(EffectEvent.MinionBattlecry, cardSlot);
             _game.EffectManager.SendEvent(EffectEvent.MinionSummoned, cardSlot);
+        }
+
+        private void playSpell(SpellCardSlot cardSlot)
+        {
+            SendCardToLimbo(cardSlot);
+            OneTimeEffect effect = cardSlot.TypedCard.WhenPlayedEffect;
+            _game.EffectManager.Execute(effect, _game, cardSlot);
+
+            _game.EffectManager.SendEvent(EffectEvent.AfterSpellActivated, cardSlot);
+            RemoveCardSlot(cardSlot);
         }
 
         public void KillMinions(List<CardSlot> cardSlots)

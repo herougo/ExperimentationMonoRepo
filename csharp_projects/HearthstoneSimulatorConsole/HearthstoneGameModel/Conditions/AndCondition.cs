@@ -32,5 +32,10 @@ namespace HearthstoneGameModel.Conditions
         {
             return _condition1.Evaluate(game, emNode) && _condition2.Evaluate(game, emNode);
         }
+
+        public ICondition Copy()
+        {
+            return new AndCondition(_condition1.Copy(), _condition2.Copy());
+        }
     }
 }

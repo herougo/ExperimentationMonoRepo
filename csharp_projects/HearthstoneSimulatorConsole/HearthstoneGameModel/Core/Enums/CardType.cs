@@ -10,6 +10,7 @@ namespace HearthstoneGameModel.Core.Enums
     {
         Minion = 0,
         Hero = 1,
-        Weapon = 2
+        Weapon = 2,
+        Spell = 3
     }
 }

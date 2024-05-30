@@ -43,8 +43,11 @@
     <Compile Include="Cards\CardFactories\CardFactory.cs" />
     <Compile Include="Cards\CardTypes\HeroCard.cs" />
     <Compile Include="Cards\CardTypes\MinionCard.cs" />
+    <Compile Include="Cards\CardTypes\SpellCard.cs" />
     <Compile Include="Cards\CardTypes\WeaponCard.cs" />
+    <Compile Include="Cards\Implementations\Classic\NeutralRare.cs" />
     <Compile Include="Cards\Implementations\Classic\Uncollectible.cs" />
+    <Compile Include="Cards\Implementations\Fundamental.cs" />
     <Compile Include="Cards\Implementations\Heroes\OriginalHeroes.cs" />
     <Compile Include="Cards\Implementations\Heroes\Uncollectible.cs" />
     <Compile Include="Conditions\AndCondition.cs" />
@@ -118,6 +121,7 @@
     <Compile Include="Effects\WrappedOneTimeEffects\TimeLimitedOneTimeEffect.cs" />
     <Compile Include="Game\Action\ArrayStringActionReader.cs" />
     <Compile Include="Game\CardSlots\BattlerCardSlot.cs" />
+    <Compile Include="Game\CardSlots\SpellCardSlot.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNode.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNodeList.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNodePlan.cs" />
@@ -164,6 +168,9 @@
     <Compile Include="Utils\HashGenerator.cs" />
     <Compile Include="Utils\LinkedList.cs" />
     <Compile Include="Utils\RandomGenerator.cs" />
+    <Compile Include="Values\ConstIntValue.cs" />
+    <Compile Include="Values\IIntValue.cs" />
+    <Compile Include="Values\OwnWeaponAttackIntValue.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

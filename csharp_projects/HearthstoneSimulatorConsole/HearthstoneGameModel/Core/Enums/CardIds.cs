@@ -76,5 +76,8 @@ namespace HearthstoneGameModel.Core.Enums
         public const string StoneclawTotem = "HU004";
         public const string StrengthTotem = "HU005";
         public const string HealingTotem = "HU006";
+
+        // Fundamental
+        public const string Coin = "F001";
     }
 }

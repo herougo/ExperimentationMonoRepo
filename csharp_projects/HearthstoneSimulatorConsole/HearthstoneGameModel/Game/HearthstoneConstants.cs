@@ -17,5 +17,6 @@ namespace HearthstoneGameModel.Game
         public const int MaximumMana = 10;
         public const int MaxTurnNum = 100;
         public const int HeroIndex = -1;
+        public const int NullInt = -1;
     }
 }

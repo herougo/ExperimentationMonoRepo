@@ -33,5 +33,10 @@ namespace HearthstoneGameModel.Conditions
             BattlerCardSlot typedSlot = (BattlerCardSlot)slot;
             return typedSlot.Health < typedSlot.MaxHealth;
         }
+
+        public ICondition Copy()
+        {
+            return new WhileSelfDamaged();
+        }
     }
 }

@@ -34,5 +34,10 @@ namespace HearthstoneGameModel.Conditions
             int player = emNode.AffectedSlot.Player;
             return game.Weapons[player] != null;
         }
+
+        public ICondition Copy()
+        {
+            return new WhileWeaponEquipped();
+        }
     }
 }

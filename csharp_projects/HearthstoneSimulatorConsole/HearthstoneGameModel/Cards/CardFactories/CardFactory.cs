@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HearthstoneGameModel.Cards.Implementations.Classic;
 using HearthstoneGameModel.Cards.Implementations.Heroes;
+using HearthstoneGameModel.Cards.Implementations;
 
 namespace HearthstoneGameModel.Cards.CardFactories
 {
@@ -22,6 +23,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Paladin();
                 case CardIds.SilverHandRecruit:
                     return new SilverHandRecruit();
+                case CardIds.Coin:
+                    return new Coin();
                 default:
                     throw new ArgumentException("Unsupported cardId");
             }

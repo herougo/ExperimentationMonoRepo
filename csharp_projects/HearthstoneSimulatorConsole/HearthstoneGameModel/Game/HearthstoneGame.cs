@@ -17,6 +17,7 @@ using HearthstoneGameModel.Effects.TriggerEffects;
 using HearthstoneGameModel.Effects.OneTimeEffects;
 using HearthstoneGameModel.Selections;
 using HearthstoneGameModel.Effects;
+using HearthstoneGameModel.Cards.Implementations;
 
 namespace HearthstoneGameModel.Game
 {
@@ -92,7 +93,7 @@ namespace HearthstoneGameModel.Game
 
             CardMover.DrawCards(GameMetadata.WhoGoesFirst, HearthstoneConstants.NumDrawsGoingFirst);
             CardMover.DrawCards(whoGoesSecond, HearthstoneConstants.NumDrawsGoingSecond);
-            // TODO: Coin CreateCardAndAddToHand(whoGoesSecond, Coin());
+            CreateCardAndAddToHand(whoGoesSecond, new Coin());
 
             // TODO: Mulligan
 

@@ -180,8 +180,6 @@ namespace HearthstoneGameModel.Game.Action
 
             if (cardSlot.CardType == CardType.Minion)
             {
-                MinionCardSlot cardSlotTyped = (MinionCardSlot)cardSlot;
-
                 if (actionSplit.Length != 3)
                 {
                     throw new Exception("PlayCard actions for minions need 2 arugments");
@@ -210,6 +208,14 @@ namespace HearthstoneGameModel.Game.Action
                 }
 
                 return new PlayCardAction(cardInHandIndex, destinationIndex);
+            }
+            else if (cardSlot.CardType == CardType.Spell)
+            {
+                if (actionSplit.Length != 2)
+                {
+                    throw new Exception("PlayCard actions for spells need 1 arugment");
+                }
+                return new PlayCardAction(cardInHandIndex, HearthstoneConstants.NullInt);
             }
             else
             {
