@@ -39,15 +39,20 @@ namespace HearthstoneGameModel.Core.Enums
         public const string DreadCorsair = "C028";
         public const string MogushanWarden = "C029";
         public const string SilvermoonGuardian = "C030";
-        public const string FrostElemental = "C031";
-        public const string PriestessOfElune = "C032";
-        public const string WindfuryHarpy = "C033";
+        public const string FenCreeper = "C031";
+        public const string SilverHandKnight = "C032";
+        public const string SpitefulSmith = "C033";
+        public const string StranglethornTiger = "C034";
+        public const string VentureCoMercenary = "C035";
+        public const string FrostElemental = "C036";
+        public const string PriestessOfElune = "C037";
+        public const string WindfuryHarpy = "C038";
 
         // Classic Neutral - Rare
-        public const string AngryChicken = "C034";
-        public const string BloodsailCorsair = "C035";
-        public const string Lightwarden = "C036";
-        public const string MurlocTidecaller = "C037";
+        public const string AngryChicken = "C039";
+        public const string BloodsailCorsair = "C040";
+        public const string Lightwarden = "C041";
+        public const string MurlocTidecaller = "C042";
 
         // Classic Uncollectible
         public const string DamagedGolem = "CU001";

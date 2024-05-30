@@ -13,6 +13,7 @@ using HearthstoneGameModel.Effects.TriggerEffects;
 using HearthstoneGameModel.Effects.WrappedEMEffects;
 using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
 using HearthstoneGameModel.Selections;
+using HearthstoneGameModel.Values;
 
 namespace HearthstoneGameModel.Cards.Implementations.Classic
 {
@@ -256,7 +257,12 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _health = 3;
             _tag = MinionTag.Pirate;
 
-            _inPlayEffects = new List<EMEffect> {}; // TODO
+            _inPlayEffects = new List<EMEffect> {
+                new Battlecry(new ChangeAttack(
+                    SelectionConstants.OwnSelf,
+                    new OwnWeaponAttackIntValue()
+                ))
+            };
         }
 
         public override Card Copy()
@@ -784,6 +790,30 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new SilvermoonGuardian();
+        }
+    }
+
+    public class FenCreeper : MinionCard
+    {
+        public FenCreeper()
+        {
+            _cardId = CardIds.FenCreeper;
+            _name = "Fen Creeper";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 5;
+            _attack = 3;
+            _health = 6;
+
+            _inPlayEffects = new List<EMEffect> {
+                new Taunt()
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new FenCreeper();
         }
     }
 

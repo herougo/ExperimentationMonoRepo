@@ -3,6 +3,7 @@ using HearthstoneGameModel.Game;
 using HearthstoneGameModel.Game.CardSlots;
 using HearthstoneGameModel.Game.EffectManagement;
 using HearthstoneGameModel.Selections;
+using HearthstoneGameModel.Values;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,26 +15,33 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
     public class ChangeAttack : OneTimeEffect
     {
         CharacterSelection _selection;
-        int _amount;
+        IIntValue _amount;
 
         public ChangeAttack(CharacterSelection selection, int amount) {
             _selection = selection;
-            _amount = amount;
+            _amount = new ConstIntValue(amount);
             if (amount <= 0)
             {
                 throw new ArgumentException("amount must be positive");
             }
         }
 
+        public ChangeAttack(CharacterSelection selection, IIntValue amount)
+        {
+            _selection = selection;
+            _amount = amount;
+        }
+
         public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot)
         {
             List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
             List<EffectManagerNode> emNodesToAdd = new List<EffectManagerNode>();
+            int amountValue = _amount.Get(game, affectedCardSlot);
 
             foreach (CardSlot selectedCardSlot in selectedCardSlots)
             {
                 EffectManagerNode newEmNode = new EffectManagerNode(
-                    new BuffAttack(_amount), selectedCardSlot, originCardSlot, true
+                    new BuffAttack(amountValue), selectedCardSlot, originCardSlot, true
                 );
                 emNodesToAdd.Add(newEmNode);
             }

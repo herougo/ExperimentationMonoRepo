@@ -8,22 +8,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Values;
 
 namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
     public class ChangeHealth : OneTimeEffect
     {
         CharacterSelection _selection;
-        int _amount;
+        IIntValue _amount;
 
         public ChangeHealth(CharacterSelection selection, int amount)
         {
             _selection = selection;
-            _amount = amount;
+            _amount = new ConstIntValue(amount);
             if (amount <= 0)
             {
                 throw new ArgumentException("amount must be positive");
             }
+        }
+
+        public ChangeHealth(CharacterSelection selection, IIntValue amount)
+        {
+            _selection = selection;
+            _amount = amount;
         }
 
         public override EffectManagerNodePlan Execute(
@@ -32,11 +39,12 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
         {
             List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
             List<EffectManagerNode> emNodesToAdd = new List<EffectManagerNode>();
+            int amountValue = _amount.Get(game, affectedCardSlot);
 
             foreach (CardSlot selectedCardSlot in selectedCardSlots)
             {
                 EffectManagerNode newEmNode = new EffectManagerNode(
-                    new BuffHealth(_amount), selectedCardSlot, originCardSlot, true
+                    new BuffHealth(amountValue), selectedCardSlot, originCardSlot, true
                 );
                 emNodesToAdd.Add(newEmNode);
             }

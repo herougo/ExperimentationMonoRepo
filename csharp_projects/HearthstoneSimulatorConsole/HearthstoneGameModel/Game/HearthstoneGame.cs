@@ -243,7 +243,7 @@ namespace HearthstoneGameModel.Game
                 Weapons[attackerCardSlot.Player].Durability -= 1;
                 if (Weapons[attackerCardSlot.Player].Durability == 0)
                 {
-                    // TODO: CardMover.DestroyWeapon(attackerCardSlot.player);
+                    CardMover.DestroyWeapon(attackerCardSlot.Player);
                 }
             }
 
