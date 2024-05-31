@@ -19,6 +19,7 @@ namespace HearthstoneGameModel.Game.CardSlots
         public int NumCharge = 0;
         public int NumStealth = 0;
         public int NumTaunt = 0;
+        public int NumElusive = 0;
 
         public BattlerCardSlot(string cardId, int player, HearthstoneGame game)
             : base(cardId, player, game) { }
@@ -61,6 +62,11 @@ namespace HearthstoneGameModel.Game.CardSlots
                     return 1;
                 }
             }
+        }
+
+        public bool HasElusive
+        {
+            get { return NumElusive > 0; }
         }
     }
 }

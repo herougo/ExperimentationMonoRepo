@@ -17,6 +17,9 @@ namespace HearthstoneGameModel.Core.Enums
         GameOver = 4,
         PlayCard = 5,
         SummonMinion = 6,
-        Attack = 7
+        Attack = 7,
+        MinionDied = 8,
+        CardBurned = 9,
+        MinionReturnedToHand = 10
     }
 }

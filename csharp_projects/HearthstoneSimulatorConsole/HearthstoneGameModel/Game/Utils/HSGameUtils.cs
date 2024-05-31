@@ -1,4 +1,6 @@
 ﻿using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Game.CardSlots;
+using HearthstoneGameModel.Game.EffectManagement;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +31,24 @@ namespace HearthstoneGameModel.Game.Utils
                 || (desiredTag == MinionTag.All)
                 || (desiredTag == actualTag)
             );
+        }
+
+        public static bool TargetableWithSpell(BattlerCardSlot slot, int playerDoingTargeting)
+        {
+            if (slot.HasStealth && playerDoingTargeting != slot.Player)
+            {
+                return false;
+            }
+            return slot.HasElusive;
+        }
+
+        public static bool TargetableWithHeroPower(BattlerCardSlot slot, int playerDoingTargeting)
+        {
+            if (slot.HasStealth && playerDoingTargeting != slot.Player)
+            {
+                return false;
+            }
+            return slot.HasElusive;
         }
     }
 }

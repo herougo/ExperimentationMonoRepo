@@ -33,6 +33,12 @@ namespace TextView.UIEventHandling
                     return new SummonMinionUIEventHandler((SummonMinionUIEvent)uiEvent, textUiManager);
                 case UIEventType.Attack:
                     return new AttackUIEventHandler((AttackUIEvent)uiEvent, textUiManager);
+                case UIEventType.MinionDied:
+                    return new MinionDiedUIEventHandler((MinionDiedUIEvent)uiEvent, textUiManager);
+                case UIEventType.CardBurned:
+                    return new CardBurnedUIEventHandler((CardBurnedUIEvent)uiEvent, textUiManager);
+                case UIEventType.MinionReturnedToHand:
+                    return new MinionReturnedToHandUIEventHandler((MinionReturnedToHandUIEvent)uiEvent, textUiManager);
             }
             throw new NotImplementedException();
         }

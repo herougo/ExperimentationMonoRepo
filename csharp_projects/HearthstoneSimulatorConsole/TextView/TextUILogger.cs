@@ -136,7 +136,22 @@ namespace TextView
 
         public void LogAttack(BattlerCardSlot attacker, BattlerCardSlot defender)
         {
-            LogText($"{attacker}\n\tattacks {defender}");
+            LogText($"{attacker}\n\tattacks {defender}\n");
+        }
+        
+        public void LogMinionDied(int player, string cardName)
+        {
+            LogText($"Player {player}'s {cardName} died\n");
+        }
+
+        public void LogCardBurned(int player, string cardName)
+        {
+            LogText($"Player {player} burned {cardName}\n");
+        }
+
+        public void LogMinionReturnedToHand(int player, string cardName)
+        {
+            LogText($"{cardName} returned to player {player}'s hand\n");
         }
     }
 }

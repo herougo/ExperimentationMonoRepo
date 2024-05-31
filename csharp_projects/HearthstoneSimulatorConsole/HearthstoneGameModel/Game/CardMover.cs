@@ -5,6 +5,7 @@ using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ContinuousEffects;
 using HearthstoneGameModel.Game.CardSlots;
 using HearthstoneGameModel.Game.EffectManagement;
+using HearthstoneGameModel.UI;
 using HearthstoneGameModel.UI.UIEvents;
 
 namespace HearthstoneGameModel.Game
@@ -88,14 +89,22 @@ namespace HearthstoneGameModel.Game
 
             foreach (CardSlot cardSlot in cardSlots)
             {
-                // TODO: _game.UIManager
+                _game.UIManager.ReceiveUIEvent(
+                    new MinionDiedUIEvent(cardSlot.Player, cardSlot.Card.CardId)
+                );
                 _game.EffectManager.SendEvent(EffectEvent.MinionDies, cardSlot);
             }
 
             foreach (CardSlot cardSlot in cardSlots)
             {
+
                 _game.EffectManager.PopEffectsBySlot(cardSlot);
                 RemoveCardSlot(cardSlot);
+            }
+
+            if (cardSlots.Count > 0)
+            {
+
             }
         }
 
@@ -111,7 +120,9 @@ namespace HearthstoneGameModel.Game
             {
                 SendCardToLimbo(cardSlot);
                 RemoveCardSlot(cardSlot);
-                // TODO: UIManager
+                _game.UIManager.ReceiveUIEvent(
+                    new CardBurnedUIEvent(cardSlot.Player, cardSlot.Card.Name)
+                );
             }
         }
 
@@ -198,7 +209,6 @@ namespace HearthstoneGameModel.Game
             }
 
             KillMinions(toDie);
-            // TODO: UIManager
         }
     }
 }

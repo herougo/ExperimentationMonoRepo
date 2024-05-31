@@ -12,6 +12,24 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
     public class Elusive : ContinuousEffect
     {
 
+        public override EffectManagerNodePlan Start(HearthstoneGame game, EffectManagerNode emNode)
+        {
+            BattlerCardSlot typedSlot = (BattlerCardSlot)emNode.AffectedSlot;
+            typedSlot.NumElusive += 1;
+            return null;
+        }
+
+        public override EffectManagerNodePlan Stop(HearthstoneGame game, EffectManagerNode emNode)
+        {
+            BattlerCardSlot typedSlot = (BattlerCardSlot)emNode.AffectedSlot;
+            typedSlot.NumElusive -= 1;
+            if (typedSlot.NumElusive < 0)
+            {
+                throw new Exception("NumElusive < 0");
+            }
+            return null;
+        }
+
         public override EMEffect Copy()
         {
             return new Elusive();

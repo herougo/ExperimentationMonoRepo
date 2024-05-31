@@ -7,7 +7,14 @@ Game Mechanics
   - [x] GameOver (player 0 and player 1)
 - [ ] Play card (left-most, middle, right-most)
   - [ ] costs mana
-- [ ] Successful Attack (hero, minion and survive, minion and die)
+  - [ ] error: card outside range
+  - [ ] error: not enough mana
+  - [ ] error: destination outside range
+  - [ ] error: not enough space on the battleboard
+- [ ] Hero Power
+  - [ ] not enough mana error
+  - [ ] hero power already used error
+  - [ ] hero power refresh next turn
 
 Effects
 

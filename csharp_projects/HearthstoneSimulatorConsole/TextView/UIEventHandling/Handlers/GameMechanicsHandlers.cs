@@ -123,4 +123,78 @@ namespace TextView.UIEventHandling.Handlers
             );
         }
     }
+
+    public class MinionDiedUIEventHandler : UIEventHandler
+    {
+        MinionDiedUIEvent _uiEvent;
+        TextUIManager _textUiManager;
+
+        public MinionDiedUIEventHandler(
+            MinionDiedUIEvent uiEvent, TextUIManager textUIManager
+        )
+        {
+            _uiEvent = uiEvent;
+            _textUiManager = textUIManager;
+        }
+
+        public override void Handle(HearthstoneGame game)
+        {
+            _textUiManager.TextUILogger.LogMinionDied(_uiEvent.Player, _uiEvent.CardName);
+        }
+    }
+
+    public class CardBurnedUIEventHandler : UIEventHandler
+    {
+        CardBurnedUIEvent _uiEvent;
+        TextUIManager _textUiManager;
+
+        public CardBurnedUIEventHandler(
+            CardBurnedUIEvent uiEvent, TextUIManager textUIManager
+        )
+        {
+            _uiEvent = uiEvent;
+            _textUiManager = textUIManager;
+        }
+
+        public override void Handle(HearthstoneGame game)
+        {
+            _textUiManager.TextUILogger.LogCardBurned(_uiEvent.Player, _uiEvent.CardName);
+        }
+    }
+
+    public class MinionReturnedToHandUIEventHandler : UIEventHandler
+    {
+        MinionReturnedToHandUIEvent _uiEvent;
+        TextUIManager _textUiManager;
+
+        public MinionReturnedToHandUIEventHandler(
+            MinionReturnedToHandUIEvent uiEvent, TextUIManager textUIManager
+        )
+        {
+            _uiEvent = uiEvent;
+            _textUiManager = textUIManager;
+        }
+
+        public override void Handle(HearthstoneGame game)
+        {
+            _textUiManager.TextUILogger.LogMinionReturnedToHand(_uiEvent.Player, _uiEvent.CardName);
+        }
+    }
+
+    public class BattleboardChangedUIEventHandler : UIEventHandler
+    {
+        TextUIManager _textUiManager;
+
+        public BattleboardChangedUIEventHandler(
+            TextUIManager textUIManager
+        )
+        {
+            _textUiManager = textUIManager;
+        }
+
+        public override void Handle(HearthstoneGame game)
+        {
+            _textUiManager.TextUILogger.LogGameState();
+        }
+    }
 }

@@ -261,6 +261,7 @@ namespace HearthstoneGameModel.Game
             {
                 minionsToKill.Add(defenderCardSlot);
             }
+            CardMover.KillMinions(minionsToKill);
         }
 
         public CardSlot GetSelectionFromAction(List<CardSlot> options, int player)
