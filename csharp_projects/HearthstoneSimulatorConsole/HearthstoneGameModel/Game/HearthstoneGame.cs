@@ -104,7 +104,7 @@ namespace HearthstoneGameModel.Game
             };
             foreach (HeroCardSlot player in Players)
             {
-                // player.SetupHeroPower(); TODO
+                player.SetupHeroPower();
             }
             Weapons = new WeaponCardSlot[HearthstoneConstants.NumberOfPlayers]
             {

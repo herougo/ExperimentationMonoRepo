@@ -1,5 +1,8 @@
 ﻿using HearthstoneGameModel.Cards;
 using HearthstoneGameModel.Cards.CardTypes;
+using HearthstoneGameModel.Effects;
+using HearthstoneGameModel.Effects.ActivatedEffects;
+using HearthstoneGameModel.Game.EffectManagement;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,6 +41,15 @@ namespace HearthstoneGameModel.Game.CardSlots
             int damageToArmour = amount - damageToHealth;
             Health -= damageToHealth;
             Armour -= damageToArmour;
+        }
+
+        public void SetupHeroPower()
+        {
+            EMEffect heroPowerEffect = new HeroPowerEffect(TypedCard.HeroPowerEffect);
+            EffectManagerNode emNode = new EffectManagerNode(
+                heroPowerEffect, this, this, false // TODO: make player a card slot
+            );
+            Game.EffectManager.AddEffect(emNode);
         }
     }
 }

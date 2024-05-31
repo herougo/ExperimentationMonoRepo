@@ -32,6 +32,8 @@ namespace HearthstoneGameModel.Game.Action
                     return ParseAttackAction(split);
                 case Actions.Play:
                     return ParsePlayCardAction(split);
+                case Actions.HeroPower:
+                    return ParseHeroPowerAction(split);
                 case Actions.Select:
                     return ParseSelectAction(split);
                 case Actions.Concede:
@@ -221,6 +223,21 @@ namespace HearthstoneGameModel.Game.Action
             {
                 throw new NotImplementedException();
             }
+        }
+
+        public HeroPowerAction ParseHeroPowerAction(string[] actionSplit)
+        {
+            HeroCardSlot playerSlot = _game.Players[_game.GameMetadata.Turn];
+            int manaCost = playerSlot.HeroPowerCost;
+            if (manaCost > _game.Players[_game.GameMetadata.Turn].CurrentMana)
+            {
+                throw new Exception("Not enough Mana for hero power");
+            }
+            if (playerSlot.HeroPowerUsedThisTurn)
+            {
+                throw new Exception("Hero power already used");
+            }
+            return new HeroPowerAction();
         }
 
         public SelectAction ParseSelectAction(string[] actionSplit)

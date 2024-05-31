@@ -20,6 +20,11 @@ namespace HearthstoneGameModel.Cards.CardTypes
             get { return _heroPowerCost; }
         }
 
+        public OneTimeEffect HeroPowerEffect
+        {
+            get { return _heroPowerEffect; }
+        }
+
         public override CardType CardType { get { return CardType.Hero; } }
         public override CardSlot CreateCardSlot(int player, HearthstoneGame game)
         {
