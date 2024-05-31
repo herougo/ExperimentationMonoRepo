@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Core;
 
 namespace HearthstoneGameModel.Effects
 {
@@ -62,7 +63,7 @@ namespace HearthstoneGameModel.Effects
         {
             if (!EventsReceived.Contains(effectEvent))
             {
-                throw new Exception("effectEvent not in EventsReceived");
+                throw new AssertionException("effectEvent not in EventsReceived");
             }
         }
 

@@ -277,12 +277,12 @@ namespace HearthstoneGameModel.Game
 
                     if (!options.Contains(selectedSlot))
                     {
-                        throw new Exception("selected card is not one of the possible options");
+                        throw new ActionException("selected card is not one of the possible options");
                     }
 
                     return selectedSlot;
                 }
-                catch (Exception ex)
+                catch (ActionException ex)
                 {
                     UIManager.LogError(ex.Message);
                 }

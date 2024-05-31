@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Core;
 
 namespace HearthstoneGameModel.Effects.ContinuousEffects
 {
@@ -24,7 +25,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
             typedSlot.NumWindfury -= 1;
             if (typedSlot.NumWindfury < 0)
             {
-                throw new Exception("NumWindfury < 0");
+                throw new AssertionException("NumWindfury < 0");
             }
             return null;
         }

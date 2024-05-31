@@ -1,4 +1,5 @@
-﻿using HearthstoneGameModel.Game;
+﻿using HearthstoneGameModel.Core;
+using HearthstoneGameModel.Game;
 using HearthstoneGameModel.Game.CardSlots;
 using System;
 using System.Collections.Generic;
@@ -120,7 +121,7 @@ namespace TextView
             }
             else
             {
-                throw new Exception("Neither player is dead in LogGameOverResult");
+                throw new ArgumentException("Neither player is dead in LogGameOverResult");
             }
         }
 

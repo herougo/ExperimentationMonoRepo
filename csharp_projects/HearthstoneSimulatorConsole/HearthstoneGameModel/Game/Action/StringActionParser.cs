@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Core;
 using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Game.CardSlots;
 
@@ -21,7 +22,7 @@ namespace HearthstoneGameModel.Game.Action
         {
             string[] split = action.Split(' ');
             if (split.Length == 0) {
-                throw new Exception("Action is empty");
+                throw new ArgumentException("Action is empty");
             }
             string actionType = split[0];
             switch (actionType)
@@ -39,7 +40,7 @@ namespace HearthstoneGameModel.Game.Action
                 case Actions.Concede:
                     return new ConcedeAction();
                 default:
-                    throw new Exception("Unhandled Action");
+                    throw new NotImplementedException("Unhandled Action");
             }
         }
 
@@ -47,7 +48,7 @@ namespace HearthstoneGameModel.Game.Action
         {
             if (actionSplit.Length != 3)
             {
-                throw new Exception("Attack actions need 2 arguments.");
+                throw new ActionException("Attack actions need 2 arguments.");
             }
 
             int attackerTurn = _game.GameMetadata.Turn;
@@ -61,7 +62,7 @@ namespace HearthstoneGameModel.Game.Action
             }
             catch
             {
-                throw new Exception("Invalid action argument type");
+                throw new ActionException("Invalid action argument type");
             }
 
 
@@ -71,13 +72,13 @@ namespace HearthstoneGameModel.Game.Action
             if (attackerIndex < HearthstoneConstants.HeroIndex
                 || attackerIndex >= attackerBoardSize)
             {
-                throw new Exception("attacker outside range");
+                throw new ActionException("attacker outside range");
             }
 
             if (defenderIndex < HearthstoneConstants.HeroIndex
                 || defenderIndex >= defenderBoardSize)
             {
-                throw new Exception("defender outside range");
+                throw new ActionException("defender outside range");
             }
 
             CardSlot attackerSlot = _game.IndexToSlot(attackerTurn, attackerIndex);
@@ -90,7 +91,7 @@ namespace HearthstoneGameModel.Game.Action
                 defenderBattlerSlot = (BattlerCardSlot)defenderSlot;
             }
             catch {
-                throw new Exception("Attacker or defender is not a battler card");
+                throw new ActionException("Attacker or defender is not a battler card");
             }
 
             CanAttackResponse canAttackResponse = CanVoluntarilyAttack(attackerBattlerSlot, defenderBattlerSlot);
@@ -99,17 +100,17 @@ namespace HearthstoneGameModel.Game.Action
                 switch (canAttackResponse)
                 {
                     case CanAttackResponse.ZeroAttack:
-                        throw new Exception("attacker has 0 attack");
+                        throw new ActionException("attacker has 0 attack");
                     case CanAttackResponse.Frozen:
-                        throw new Exception("attacker is frozen");
+                        throw new ActionException("attacker is frozen");
                     case CanAttackResponse.AttackedEnough:
-                        throw new Exception("attacker attacked enough (already attacked enough)");
+                        throw new ActionException("attacker attacked enough (already attacked enough)");
                     case CanAttackResponse.Asleep:
-                        throw new Exception("attacker cannot attack (asleep)");
+                        throw new ActionException("attacker cannot attack (asleep)");
                     case CanAttackResponse.DisobeysTaunt:
-                        throw new Exception("attack disobey taunt");
+                        throw new ActionException("attack disobeys taunt");
                     case CanAttackResponse.DefenderHasStealth:
-                        throw new Exception("defender cannot be attacked (stealth)");
+                        throw new ActionException("defender cannot be attacked (stealth)");
                 }
             }
             return new AttackAction(attackerBattlerSlot, defenderBattlerSlot) ;
@@ -154,7 +155,7 @@ namespace HearthstoneGameModel.Game.Action
         {
             if (actionSplit.Length == 1)
             {
-                throw new Exception("PlayCard actions need at least 1 arugment");
+                throw new ActionException("PlayCard actions need at least 1 arugment");
             }
 
             string cardInHandIndexString = actionSplit[1];
@@ -165,26 +166,26 @@ namespace HearthstoneGameModel.Game.Action
             }
             catch
             {
-                throw new Exception("Invalid action argument type");
+                throw new ActionException("Invalid action argument type");
             }
 
             int turn = _game.GameMetadata.Turn;
             int handSize = _game.Hands[turn].Count;
             if (cardInHandIndex < 0 || handSize <= cardInHandIndex) {
-                throw new Exception("card index outside range");
+                throw new ActionException("card index outside range");
             }
 
             CardSlot cardSlot = _game.Hands[turn][cardInHandIndex];
             if (cardSlot.Mana > _game.Players[turn].CurrentMana)
             {
-                throw new Exception("not enough mana to play the card");
+                throw new ActionException("not enough mana to play the card");
             }
 
             if (cardSlot.CardType == CardType.Minion)
             {
                 if (actionSplit.Length != 3)
                 {
-                    throw new Exception("PlayCard actions for minions need 2 arugments");
+                    throw new ActionException("PlayCard actions for minions need 2 arugments");
                 }
 
                 string destinationIndexString = actionSplit[2];
@@ -195,18 +196,18 @@ namespace HearthstoneGameModel.Game.Action
                 }
                 catch
                 {
-                    throw new Exception("Invalid action argument type");
+                    throw new ActionException("Invalid action argument type");
                 }
 
                 int playerBoardSize = _game.Battleboard.BoardLen(turn);
                 if (destinationIndex < 0 || playerBoardSize < destinationIndex)
                 {
-                    throw new Exception("destination index outside range");
+                    throw new ActionException("destination index outside range");
                 }
 
                 if (!_game.Battleboard.HasRoom(turn))
                 {
-                    throw new Exception("not enough space on the battleboard");
+                    throw new ActionException("not enough space on the battleboard");
                 }
 
                 return new PlayCardAction(cardInHandIndex, destinationIndex);
@@ -215,7 +216,7 @@ namespace HearthstoneGameModel.Game.Action
             {
                 if (actionSplit.Length != 2)
                 {
-                    throw new Exception("PlayCard actions for spells need 1 arugment");
+                    throw new ActionException("PlayCard actions for spells need 1 arugment");
                 }
                 return new PlayCardAction(cardInHandIndex, HearthstoneConstants.NullInt);
             }
@@ -231,11 +232,11 @@ namespace HearthstoneGameModel.Game.Action
             int manaCost = playerSlot.HeroPowerCost;
             if (manaCost > _game.Players[_game.GameMetadata.Turn].CurrentMana)
             {
-                throw new Exception("Not enough Mana for hero power");
+                throw new ActionException("Not enough Mana for hero power");
             }
             if (playerSlot.HeroPowerUsedThisTurn)
             {
-                throw new Exception("Hero power already used");
+                throw new ActionException("Hero power already used");
             }
             return new HeroPowerAction();
         }
@@ -244,7 +245,7 @@ namespace HearthstoneGameModel.Game.Action
         {
             if (actionSplit.Length != 3)
             {
-                throw new Exception("Attack actions need 2 arguments.");
+                throw new ActionException("Attack actions need 2 arguments.");
             }
 
             int playerIndex, boardIndex;
@@ -255,13 +256,13 @@ namespace HearthstoneGameModel.Game.Action
             }
             catch
             {
-                throw new Exception("Invalid select action argument type");
+                throw new ActionException("Invalid select action argument type");
             }
 
             CardSlot targetSlot = _game.IndexToSlot(playerIndex, boardIndex);
             if (targetSlot == null)
             {
-                throw new Exception("Invalid selection");
+                throw new ActionException("Invalid selection");
             }
 
             return new SelectAction(targetSlot);

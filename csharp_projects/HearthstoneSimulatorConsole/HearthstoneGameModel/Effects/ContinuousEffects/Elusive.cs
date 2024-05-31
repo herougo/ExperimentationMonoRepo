@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Core;
 
 namespace HearthstoneGameModel.Effects.ContinuousEffects
 {
@@ -25,7 +26,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
             typedSlot.NumElusive -= 1;
             if (typedSlot.NumElusive < 0)
             {
-                throw new Exception("NumElusive < 0");
+                throw new AssertionException("NumElusive < 0");
             }
             return null;
         }

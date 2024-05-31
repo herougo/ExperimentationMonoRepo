@@ -10,4 +10,14 @@ namespace HearthstoneGameModel.Core
     {
         public GameOverException() :base("Game Over") { }
     }
+
+    public class AssertionException: Exception
+    {
+        public AssertionException(string message) : base(message) { }
+    }
+
+    public class ActionException : Exception
+    {
+        public ActionException(string message) : base(message) { }
+    }
 }

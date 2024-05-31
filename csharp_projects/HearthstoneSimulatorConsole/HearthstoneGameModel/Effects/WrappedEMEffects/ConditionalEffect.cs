@@ -46,7 +46,7 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
         {
             if (plan != null)
             {
-                throw new Exception("ConditionalEffect cannot handle EffectManagerNodePlan objects");
+                throw new ArgumentException("ConditionalEffect cannot handle EffectManagerNodePlan objects");
             }
         }
 

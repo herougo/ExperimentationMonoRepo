@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HearthstoneGameModel.Game.CardSlots;
+using HearthstoneGameModel.Core;
 
 namespace HearthstoneGameModel.Effects.ContinuousEffects
 {
@@ -28,7 +29,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
             typedSlot.NumTaunt -= 1;
             if (typedSlot.NumTaunt < 0)
             {
-                throw new Exception("NumTaunt < 0");
+                throw new AssertionException("NumTaunt < 0");
             }
             if (typedSlot.NumTaunt == 0)
             {

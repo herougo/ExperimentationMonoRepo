@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Core;
 
 namespace HearthstoneGameModel.Effects.ContinuousEffects
 {
@@ -29,7 +30,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
             typedSlot.NumFrozen -= 1;
             if (typedSlot.NumFrozen < 0)
             {
-                throw new Exception("NumFrozen < 0");
+                throw new AssertionException("NumFrozen < 0");
             }
             return null;
         }

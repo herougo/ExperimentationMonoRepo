@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Core;
 
 namespace HearthstoneGameModel.Effects.ContinuousEffects
 {
@@ -31,7 +32,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
             typedSlot.NumStealth -= 1;
             if (typedSlot.NumStealth < 0)
             {
-                throw new Exception("NumStealth < 0");
+                throw new AssertionException("NumStealth < 0");
             }
             return null;
         }

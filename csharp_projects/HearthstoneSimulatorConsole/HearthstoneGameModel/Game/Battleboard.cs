@@ -83,7 +83,7 @@ namespace HearthstoneGameModel.Game
         {
             if (_taunts[cardSlot.Player].Contains(cardSlot))
             {
-                throw new Exception("Taunt already present");
+                throw new ArgumentException("Taunt already present");
             }
             _taunts[cardSlot.Player].Add(cardSlot);
         }

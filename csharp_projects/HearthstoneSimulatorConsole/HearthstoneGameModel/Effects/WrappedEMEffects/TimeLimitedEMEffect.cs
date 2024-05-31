@@ -1,4 +1,5 @@
-﻿using HearthstoneGameModel.Core.Enums;
+﻿using HearthstoneGameModel.Core;
+using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Game;
 using HearthstoneGameModel.Game.CardSlots;
 using HearthstoneGameModel.Game.EffectManagement;
@@ -61,7 +62,7 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
             {
                 return _effect.SendEvent(effectEvent, game, emNode, eventSlot);
             }
-            throw new Exception("shouldn't happen");
+            throw new AssertionException("unhandled event (shouldn't happen)");
         }
 
         public override EffectManagerNodePlan Start(HearthstoneGame game, EffectManagerNode emNode)

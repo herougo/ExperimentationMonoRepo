@@ -60,7 +60,7 @@ namespace HearthstoneGameModel.Game
         {
             if (numCards > Count)
             {
-                throw new Exception("Too few cards to draw");
+                throw new ArgumentException("Too few cards to draw");
             }
 
             List<CardSlot> result = new List<CardSlot>();
