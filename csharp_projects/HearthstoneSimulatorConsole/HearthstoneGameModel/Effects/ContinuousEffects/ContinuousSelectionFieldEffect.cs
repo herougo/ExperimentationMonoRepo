@@ -13,11 +13,11 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
 {
     public class ContinuousSelectionFieldEffect : ContinuousEffect
     {
-        CharacterSelection _selection;
+        SlotSelection _selection;
         EMEffect _effect;
         Dictionary<CardSlot, EffectManagerNode> _memoryCurrentSelection;
 
-        public ContinuousSelectionFieldEffect(CharacterSelection selection, EMEffect effect)
+        public ContinuousSelectionFieldEffect(SlotSelection selection, EMEffect effect)
         {
             _selection = selection;
             _effect = effect;

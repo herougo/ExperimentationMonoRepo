@@ -12,10 +12,10 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
     public class DealDamage : OneTimeEffect
     {
-        CharacterSelection _selection;
+        SlotSelection _selection;
         int _amount;
 
-        public DealDamage(CharacterSelection selection, int amount)
+        public DealDamage(SlotSelection selection, int amount)
         {
             _selection = selection;
             _amount = amount;

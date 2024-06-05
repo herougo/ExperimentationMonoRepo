@@ -13,10 +13,10 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
     public class GainArmour : OneTimeEffect
     {
-        CharacterSelection _selection;
+        SlotSelection _selection;
         int _amount;
 
-        public GainArmour(CharacterSelection selection, int amount)
+        public GainArmour(SlotSelection selection, int amount)
         {
             _selection = selection;
             _amount = amount;

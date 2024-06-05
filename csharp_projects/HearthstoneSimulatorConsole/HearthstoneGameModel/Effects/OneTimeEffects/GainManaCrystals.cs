@@ -12,10 +12,10 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
     public class GainManaCrystals : OneTimeEffect
     {
-        CharacterSelection _selection;
+        SlotSelection _selection;
         int _amount;
 
-        public GainManaCrystals(CharacterSelection selection, int amount)
+        public GainManaCrystals(SlotSelection selection, int amount)
         {
             _selection = selection;
             _amount = amount;

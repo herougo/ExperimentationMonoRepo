@@ -12,10 +12,10 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
     public class DrawCards : OneTimeEffect
     {
-        CharacterSelection _selection;
+        SlotSelection _selection;
         int _amount;
 
-        public DrawCards(CharacterSelection selection, int amount)
+        public DrawCards(SlotSelection selection, int amount)
         {
             _selection = selection;
             _amount = amount;

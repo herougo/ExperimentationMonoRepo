@@ -13,9 +13,9 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
     public class Freeze : OneTimeEffect
     {
-        CharacterSelection _selection;
+        SlotSelection _selection;
 
-        public Freeze(CharacterSelection selection)
+        public Freeze(SlotSelection selection)
         {
             _selection = selection;
         }

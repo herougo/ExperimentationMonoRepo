@@ -8,11 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HearthstoneGameModel.Selections.CharacterSelections
+namespace HearthstoneGameModel.Selections.SlotSelections
 {
-    public class AllOtherFriendlyMinions : CharacterSelection
+    public class AllCharacters : SlotSelection
     {
-        public AllOtherFriendlyMinions()
+        public AllCharacters()
         {
             _eventsReceived = new List<string>
             {
@@ -25,18 +25,15 @@ namespace HearthstoneGameModel.Selections.CharacterSelections
         )
         {
             CardSlot cardSlot = affectedCardSlot;
-            int player = cardSlot.Player;
-            List<CardSlot> result = game.Battleboard.GetAllSlots(player);
-            if (cardSlot.CardType == CardType.Minion)
-            {
-                result.Remove(cardSlot);
-            }
+            List<CardSlot> result = game.Players.ToList<CardSlot>();
+            result.AddRange(game.Battleboard.GetAllSlots(0));
+            result.AddRange(game.Battleboard.GetAllSlots(1));
             return result;
         }
 
-        public override CharacterSelection Copy()
+        public override SlotSelection Copy()
         {
-            return new AllOtherFriendlyMinions();
+            return new AllCharacters();
         }
     }
 }

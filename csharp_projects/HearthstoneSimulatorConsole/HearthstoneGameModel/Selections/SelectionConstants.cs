@@ -1,4 +1,4 @@
-﻿using HearthstoneGameModel.Selections.CharacterSelections;
+﻿using HearthstoneGameModel.Selections.SlotSelections;
 using System;
 using System.Collections.Generic;
 using System.Linq;

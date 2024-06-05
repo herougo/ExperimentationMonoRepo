@@ -8,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HearthstoneGameModel.Selections.CharacterSelections
+namespace HearthstoneGameModel.Selections.SlotSelections
 {
-    public class RandomCharacter : CharacterSelection
+    public class RandomCharacter : SlotSelection
     {
-        protected CharacterSelection _selection;
+        protected SlotSelection _selection;
 
-        public RandomCharacter(CharacterSelection selection) {
+        public RandomCharacter(SlotSelection selection) {
             _selection = selection;
         }
 
@@ -31,7 +31,7 @@ namespace HearthstoneGameModel.Selections.CharacterSelections
             return new List<CardSlot> { possibleCardSlots[chosen] };
         }
 
-        public override CharacterSelection Copy()
+        public override SlotSelection Copy()
         {
             return new RandomCharacter(_selection.Copy());
         }

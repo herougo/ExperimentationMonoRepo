@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HearthstoneGameModel.Selections.CharacterSelections
+namespace HearthstoneGameModel.Selections.SlotSelections
 {
-    public class HeroSelection : CharacterSelection
+    public class HeroSelection : SlotSelection
     {
         bool _opposing;
 
@@ -28,7 +28,7 @@ namespace HearthstoneGameModel.Selections.CharacterSelections
             return new List<CardSlot> { game.Players[player] };
         }
 
-        public override CharacterSelection Copy()
+        public override SlotSelection Copy()
         {
             return new HeroSelection(_opposing);
         }

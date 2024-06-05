@@ -12,9 +12,9 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
     public class Silence : OneTimeEffect
     {
-        CharacterSelection _selection;
+        SlotSelection _selection;
 
-        public Silence(CharacterSelection selection) {
+        public Silence(SlotSelection selection) {
             _selection = selection;
         }
 

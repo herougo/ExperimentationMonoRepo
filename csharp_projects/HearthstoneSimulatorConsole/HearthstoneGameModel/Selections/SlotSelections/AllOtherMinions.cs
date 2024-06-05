@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HearthstoneGameModel.Selections.CharacterSelections
+namespace HearthstoneGameModel.Selections.SlotSelections
 {
-    public class AllOtherMinions : CharacterSelection
+    public class AllOtherMinions : SlotSelection
     {
         public AllOtherMinions()
         {
@@ -35,7 +35,7 @@ namespace HearthstoneGameModel.Selections.CharacterSelections
             return result;
         }
 
-        public override CharacterSelection Copy()
+        public override SlotSelection Copy()
         {
             return new AllOtherMinions();
         }

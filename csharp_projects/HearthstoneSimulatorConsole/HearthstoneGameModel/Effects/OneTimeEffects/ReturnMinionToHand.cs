@@ -12,9 +12,9 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
     public class ReturnMinionToHand : OneTimeEffect
     {
-        CharacterSelection _selection;
+        SlotSelection _selection;
 
-        public ReturnMinionToHand(CharacterSelection selection)
+        public ReturnMinionToHand(SlotSelection selection)
         {
             _selection = selection;
         }

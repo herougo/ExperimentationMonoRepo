@@ -14,10 +14,10 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
     public class ChangeAttack : OneTimeEffect
     {
-        CharacterSelection _selection;
+        SlotSelection _selection;
         IIntValue _amount;
 
-        public ChangeAttack(CharacterSelection selection, int amount) {
+        public ChangeAttack(SlotSelection selection, int amount) {
             _selection = selection;
             _amount = new ConstIntValue(amount);
             if (amount <= 0)
@@ -26,7 +26,7 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
             }
         }
 
-        public ChangeAttack(CharacterSelection selection, IIntValue amount)
+        public ChangeAttack(SlotSelection selection, IIntValue amount)
         {
             _selection = selection;
             _amount = amount;

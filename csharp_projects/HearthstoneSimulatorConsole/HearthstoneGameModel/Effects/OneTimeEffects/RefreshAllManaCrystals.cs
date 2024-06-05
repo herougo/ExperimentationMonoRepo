@@ -12,9 +12,9 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
     public class RefreshAllManaCrystals : OneTimeEffect
     {
-        CharacterSelection _selection;
+        SlotSelection _selection;
 
-        public RefreshAllManaCrystals(CharacterSelection selection)
+        public RefreshAllManaCrystals(SlotSelection selection)
         {
             _selection = selection;
         }

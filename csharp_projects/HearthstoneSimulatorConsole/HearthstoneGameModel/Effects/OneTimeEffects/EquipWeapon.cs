@@ -13,10 +13,10 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
     public class EquipWeapon : OneTimeEffect
     {
-        CharacterSelection _selection;
+        SlotSelection _selection;
         WeaponCard _weapon;
 
-        public EquipWeapon(CharacterSelection selection, WeaponCard weapon) {
+        public EquipWeapon(SlotSelection selection, WeaponCard weapon) {
             _selection = selection;
             _weapon = weapon;
         }

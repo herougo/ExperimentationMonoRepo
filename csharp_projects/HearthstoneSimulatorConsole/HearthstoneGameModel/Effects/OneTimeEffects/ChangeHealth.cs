@@ -14,10 +14,10 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
     public class ChangeHealth : OneTimeEffect
     {
-        CharacterSelection _selection;
+        SlotSelection _selection;
         IIntValue _amount;
 
-        public ChangeHealth(CharacterSelection selection, int amount)
+        public ChangeHealth(SlotSelection selection, int amount)
         {
             _selection = selection;
             _amount = new ConstIntValue(amount);
@@ -27,7 +27,7 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
             }
         }
 
-        public ChangeHealth(CharacterSelection selection, IIntValue amount)
+        public ChangeHealth(SlotSelection selection, IIntValue amount)
         {
             _selection = selection;
             _amount = amount;

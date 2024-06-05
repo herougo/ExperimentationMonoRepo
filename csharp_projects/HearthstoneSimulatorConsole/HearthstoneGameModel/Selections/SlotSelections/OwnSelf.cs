@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HearthstoneGameModel.Selections.CharacterSelections
+namespace HearthstoneGameModel.Selections.SlotSelections
 {
-    public class OwnSelf : CharacterSelection
+    public class OwnSelf : SlotSelection
     {
         public override List<CardSlot> GetSelectedCardSlots(
             HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
@@ -19,7 +19,7 @@ namespace HearthstoneGameModel.Selections.CharacterSelections
             return new List<CardSlot> { cardSlot };
         }
 
-        public override CharacterSelection Copy()
+        public override SlotSelection Copy()
         {
             return new OwnSelf();
         }

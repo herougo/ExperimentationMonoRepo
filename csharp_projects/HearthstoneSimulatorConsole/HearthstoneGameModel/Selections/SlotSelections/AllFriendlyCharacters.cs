@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HearthstoneGameModel.Selections.CharacterSelections
+namespace HearthstoneGameModel.Selections.SlotSelections
 {
-    public class AllFriendlyCharacters : CharacterSelection
+    public class AllFriendlyCharacters : SlotSelection
     {
         public AllFriendlyCharacters() {
             _eventsReceived = new List<string>
@@ -30,7 +30,7 @@ namespace HearthstoneGameModel.Selections.CharacterSelections
             return result;
         }
 
-        public override CharacterSelection Copy()
+        public override SlotSelection Copy()
         {
             return new AllFriendlyCharacters();
         }

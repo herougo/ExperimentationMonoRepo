@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HearthstoneGameModel.Selections
 {
-    public abstract class CharacterSelection
+    public abstract class SlotSelection
     {
         protected List<string> _eventsReceived = new List<string>();
 
@@ -19,6 +19,6 @@ namespace HearthstoneGameModel.Selections
             (HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
         );
 
-        public abstract CharacterSelection Copy();
+        public abstract SlotSelection Copy();
     }
 }

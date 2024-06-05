@@ -12,9 +12,9 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
     public class RefreshAttacks : OneTimeEffect
     {
-        CharacterSelection _selection;
+        SlotSelection _selection;
 
-        public RefreshAttacks(CharacterSelection selection)
+        public RefreshAttacks(SlotSelection selection)
         {
             _selection = selection;
         }
