@@ -872,6 +872,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class StranglethornTiger : MinionCard
+    {
+        public StranglethornTiger()
+        {
+            _cardId = CardIds.StranglethornTiger;
+            _name = "Stranglethorn Tiger";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 5;
+            _attack = 5;
+            _health = 5;
+            _tag = MinionTag.Undead;
+
+            _inPlayEffects = new List<EMEffect> {
+                new Stealth()
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new StranglethornTiger();
+        }
+    }
+
     public class FrostElemental : MinionCard
     {
         public FrostElemental()
