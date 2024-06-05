@@ -24,7 +24,6 @@ namespace HearthstoneGameModel.Game.CardSlots
         // TODO: _heroPowerCost and _heroPowerEffect
 
         // Other metadata
-        public int NumElusive = 0;
 
         public int HeroPowerCost
         {
@@ -47,7 +46,7 @@ namespace HearthstoneGameModel.Game.CardSlots
         {
             EMEffect heroPowerEffect = new HeroPowerEffect(TypedCard.HeroPowerEffect);
             EffectManagerNode emNode = new EffectManagerNode(
-                heroPowerEffect, this, this, false // TODO: make player a card slot
+                heroPowerEffect, this, this, false
             );
             Game.EffectManager.AddEffect(emNode);
         }

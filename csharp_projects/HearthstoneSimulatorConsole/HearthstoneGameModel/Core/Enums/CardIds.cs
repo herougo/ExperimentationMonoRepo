@@ -56,6 +56,7 @@ namespace HearthstoneGameModel.Core.Enums
 
         // Classic Uncollectible
         public const string DamagedGolem = "CU001";
+        public const string Squire = "CU002";
 
         // Heroes
         public const string Priest = "hero_priest";

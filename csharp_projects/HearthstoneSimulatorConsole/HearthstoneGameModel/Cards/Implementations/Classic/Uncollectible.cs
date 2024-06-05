@@ -31,4 +31,24 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new DamagedGolem();
         }
     }
+
+    public class Squire : MinionCard
+    {
+        public Squire()
+        {
+            _cardId = CardIds.Squire;
+            _name = "Squire";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 1;
+            _attack = 2;
+            _health = 2;
+        }
+
+        public override Card Copy()
+        {
+            return new Squire();
+        }
+    }
 }

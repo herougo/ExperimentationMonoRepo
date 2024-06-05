@@ -18,7 +18,7 @@ namespace HearthstoneGameModel.Effects
             _eventsReceived = effect.EventsReceived.ToList();
         }
 
-        public override void AdjustStats(BattlerCardSlot cardSlot)
+        public override void AdjustStats(CardSlot cardSlot)
         {
             _effect.AdjustStats(cardSlot);
         }

@@ -817,6 +817,60 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class SilverHandKnight : MinionCard
+    {
+        public SilverHandKnight()
+        {
+            _cardId = CardIds.SilverHandKnight;
+            _name = "Silver Hand Knight";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 5;
+            _attack = 4;
+            _health = 4;
+
+            _inPlayEffects = new List<EMEffect> {
+                new Battlecry(new SummonMinion(new Squire()))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new SilverHandKnight();
+        }
+    }
+
+    public class SpitefulSmith : MinionCard
+    {
+        public SpitefulSmith()
+        {
+            _cardId = CardIds.SpitefulSmith;
+            _name = "Spiteful Smith";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 5;
+            _attack = 4;
+            _health = 6;
+            _tag = MinionTag.Undead;
+
+            throw new NotImplementedException();
+
+            _inPlayEffects = new List<EMEffect> {
+                new ConditionalEffect(
+                    new AndCondition(new WhileSelfDamaged(), new WhileWeaponEquipped()),
+                    new BuffAttack(2) // TODO: change
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new SpitefulSmith();
+        }
+    }
+
     public class FrostElemental : MinionCard
     {
         public FrostElemental()

@@ -54,7 +54,7 @@ namespace HearthstoneGameModel.Effects
             get { return _effectArea; }
         }
 
-        public virtual void AdjustStats(BattlerCardSlot cardSlot)
+        public virtual void AdjustStats(CardSlot cardSlot)
         {
 
         }
