@@ -30,6 +30,14 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
             return null;
         }
 
+        public override EffectManagerNodePlan SendEvent(string effectEvent, HearthstoneGame game, EffectManagerNode emNode, CardSlot eventSlot)
+        {
+            CheckValidEvent(effectEvent);
+            EffectManagerNodePlan result = new EffectManagerNodePlan();
+            result.ToRemove.Add(emNode);
+            return result;
+        }
+
         public override EMEffect Copy()
         {
             return new Sleep();

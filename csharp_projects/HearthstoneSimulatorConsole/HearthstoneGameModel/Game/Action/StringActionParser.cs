@@ -40,7 +40,7 @@ namespace HearthstoneGameModel.Game.Action
                 case Actions.Concede:
                     return new ConcedeAction();
                 default:
-                    throw new NotImplementedException("Unhandled Action");
+                    throw new NotImplementedException("Unhandled Action: " + actionType);
             }
         }
 

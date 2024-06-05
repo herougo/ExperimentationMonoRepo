@@ -13,7 +13,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string AbusiveSergeant = "C002";
         public const string ArgentSquire = "C003";
         public const string LeperGnome = "C004";
-        public const string Sheildbearer = "C005";
+        public const string Shieldbearer = "C005";
         public const string SouthseaDeckhand = "C006";
         public const string WorgenInfiltrator = "C007";
         public const string YoungDragonhawk = "C008";

@@ -32,6 +32,14 @@ Attack
 - [ ] Disobey Taunt
 - [ ] Obey Taunt
 
+Battle
+
+- attacker choice correct (left, middle, right)
+- defender choice correct (left, middle, right)
+- ...
+
+(10 Heroes and hero powers)
+
 ### Specific Cases
 
 - Timelimited effect then switch players (e.g. sleep)

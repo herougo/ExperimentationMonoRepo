@@ -1,0 +1,138 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 0
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+3: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 1 / 1
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+3: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+0 plays Shieldbearer
+Opponent (1) - health: 30, armour: 0, mana: 0 / 0
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+3: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 0 / 1
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 0
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+3: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 0 / 1
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 1 / 1
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+3: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+	------------
+	0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 0 / 1
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+1 plays Shieldbearer
+Opponent (1) - health: 30, armour: 0, mana: 0 / 1
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+	0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+	------------
+	0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 0 / 1
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 1
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+	0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+	------------
+	0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 0 / 1
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 1
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+	0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+	------------
+	0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 2 / 2
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+3: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+ERROR: attacker has 0 attack
+Game Over: Player 1 Wins

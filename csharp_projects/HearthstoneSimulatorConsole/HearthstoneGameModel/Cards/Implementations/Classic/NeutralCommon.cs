@@ -114,12 +114,12 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
-    public class Sheildbearer : MinionCard
+    public class Shieldbearer : MinionCard
     {
-        public Sheildbearer()
+        public Shieldbearer()
         {
-            _cardId = CardIds.Sheildbearer;
-            _name = "Sheildbearer";
+            _cardId = CardIds.Shieldbearer;
+            _name = "Shieldbearer";
             _hsClass = HeroClass.Neutral;
             _collectible = true;
 
@@ -134,7 +134,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
         public override Card Copy()
         {
-            return new Sheildbearer();
+            return new Shieldbearer();
         }
     }
 

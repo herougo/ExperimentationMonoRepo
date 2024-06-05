@@ -18,7 +18,13 @@ namespace HearthstoneGameModel.Cards.CardFactories
             {
                 case CardIds.Wisp:
                     return new Wisp();
-                
+
+                case CardIds.Shieldbearer:
+                    return new Shieldbearer();
+
+                case CardIds.FrostElemental:
+                    return new FrostElemental();
+
                 case CardIds.Paladin:
                     return new Paladin();
                 case CardIds.SilverHandRecruit:

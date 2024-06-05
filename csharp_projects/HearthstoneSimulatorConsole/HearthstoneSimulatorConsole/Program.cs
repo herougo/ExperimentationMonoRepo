@@ -16,5 +16,5 @@ HearthstoneGameArgs hsArgs = new HearthstoneGameArgs(
     decklist0, decklist1, decisionMaker0, decisionMaker1, textUIManager
 );
 HearthstoneGame game = new HearthstoneGame(hsArgs);
-game.SetupGame(false);
+game.SetupGame(false, false);
 game.Play();

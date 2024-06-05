@@ -141,6 +141,7 @@
     <Compile Include="Selections\SlotSelections\RandomCharacter.cs" />
     <Compile Include="Selections\SlotSelections\SelectCharacterFrom.cs" />
     <Compile Include="Selections\SelectionConstants.cs" />
+    <Compile Include="Selections\SlotSelections\WeaponSelection.cs" />
     <Compile Include="UI\UIEvent.cs" />
     <Compile Include="UI\UIEventHandler.cs" />
     <Compile Include="UI\UIEvents\ActionUIEvents.cs" />

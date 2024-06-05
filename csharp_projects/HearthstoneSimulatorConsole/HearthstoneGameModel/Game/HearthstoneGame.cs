@@ -61,7 +61,7 @@ namespace HearthstoneGameModel.Game
             CardMover = new CardMover(this);
         }
 
-        public void SetupGame(bool shuffleDecks)
+        public void SetupGame(bool shuffleDecks, bool mulligan)
         {
             EffectManager = new EffectManager(this);
             Decks = new Pile[HearthstoneConstants.NumberOfPlayers]
@@ -95,7 +95,10 @@ namespace HearthstoneGameModel.Game
             CardMover.DrawCards(whoGoesSecond, HearthstoneConstants.NumDrawsGoingSecond);
             CreateCardAndAddToHand(whoGoesSecond, new Coin());
 
-            // TODO: Mulligan
+            if (mulligan)
+            {
+                throw new NotImplementedException("Mulligan not implemented");
+            }
 
             Players = new HeroCardSlot[HearthstoneConstants.NumberOfPlayers]
             {
@@ -104,6 +107,8 @@ namespace HearthstoneGameModel.Game
             };
             foreach (HeroCardSlot player in Players)
             {
+                player.Health = HearthstoneConstants.HeroHealth;
+                player.MaxHealth = HearthstoneConstants.HeroHealth;
                 player.SetupHeroPower();
             }
             Weapons = new WeaponCardSlot[HearthstoneConstants.NumberOfPlayers]
