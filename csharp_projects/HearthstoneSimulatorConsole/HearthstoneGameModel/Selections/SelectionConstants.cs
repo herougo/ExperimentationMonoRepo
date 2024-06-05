@@ -30,5 +30,10 @@ namespace HearthstoneGameModel.Selections
         public static OwnSelf OwnSelf = new OwnSelf();
         
         public static AdjacentMinions AdjacentMinions = new AdjacentMinions();
+
+        public static WeaponSelection PlayerWeapon = new WeaponSelection(false);
+        public static WeaponSelection OpponentWeapon = new WeaponSelection(true);
+
+
     }
 }

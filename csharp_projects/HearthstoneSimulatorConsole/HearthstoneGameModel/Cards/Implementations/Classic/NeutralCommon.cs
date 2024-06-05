@@ -855,12 +855,13 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _health = 6;
             _tag = MinionTag.Undead;
 
-            throw new NotImplementedException();
-
             _inPlayEffects = new List<EMEffect> {
                 new ConditionalEffect(
                     new AndCondition(new WhileSelfDamaged(), new WhileWeaponEquipped()),
-                    new BuffAttack(2) // TODO: change
+                    new ContinuousSelectionFieldEffect(
+                        SelectionConstants.PlayerWeapon,
+                        new BuffAttack(2)
+                    )
                 )
             };
         }
