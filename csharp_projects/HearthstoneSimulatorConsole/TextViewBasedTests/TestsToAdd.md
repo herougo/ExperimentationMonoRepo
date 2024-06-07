@@ -23,14 +23,15 @@ Effects
 
 Attack
 
-- [ ] Zero Attack
-- [ ] Frozen
-- [ ] Asleep
-- [ ] Already Attacked
-- [ ] Already Attacked Twice with Windfury
-- [ ] Charge
-- [ ] Disobey Taunt
-- [ ] Obey Taunt
+- [x] Zero Attack
+- [x] Frozen
+- [x] Asleep
+- [x] Already Attacked
+- [x] Already Attacked Twice with Windfury
+- [x] Charge
+- [x] Disobey Taunt
+- [x] Obey Taunt
+- [x] Disobey Stealth
 
 Battle
 

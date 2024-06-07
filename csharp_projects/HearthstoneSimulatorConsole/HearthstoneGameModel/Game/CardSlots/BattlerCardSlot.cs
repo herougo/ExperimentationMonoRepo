@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HearthstoneGameModel.Core.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,11 +50,7 @@ namespace HearthstoneGameModel.Game.CardSlots
         {
             get
             {
-                if (HasSleep)
-                {
-                    return 0;
-                }
-                else if (HasWindfury)
+                if (HasWindfury)
                 {
                     return 2;
                 }
@@ -61,6 +58,43 @@ namespace HearthstoneGameModel.Game.CardSlots
                 {
                     return 1;
                 }
+            }
+        }
+
+        public CanAttackResponse CanAttackIgnoringFrozen
+        {
+            get
+            {
+                if (Attack == 0)
+                {
+                    return CanAttackResponse.ZeroAttack;
+                }
+                else if (AttacksThisTurn >= NumPossibleAttacksIgnoringFrozen)
+                {
+                    return CanAttackResponse.AttackedEnough;
+                }
+                else if (HasCharge)
+                {
+
+                }
+                else if (HasSleep)
+                {
+                    return CanAttackResponse.Asleep;
+                }
+
+                return CanAttackResponse.Yes;
+            }
+        }
+
+        public CanAttackResponse CanAttack
+        {
+            get
+            {
+                if (IsFrozen)
+                {
+                    return CanAttackResponse.Frozen;
+                }
+                return CanAttackIgnoringFrozen;
             }
         }
 

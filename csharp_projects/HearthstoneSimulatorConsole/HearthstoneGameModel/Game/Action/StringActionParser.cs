@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HearthstoneGameModel.Core;
 using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Effects.ContinuousEffects;
 using HearthstoneGameModel.Game.CardSlots;
 
 namespace HearthstoneGameModel.Game.Action
@@ -118,26 +119,16 @@ namespace HearthstoneGameModel.Game.Action
 
         public CanAttackResponse CanVoluntarilyAttack(BattlerCardSlot attacker, BattlerCardSlot defender)
         {
-            if (attacker.Attack == 0)
-            {
-                return CanAttackResponse.ZeroAttack;
-            }
-            else if  (attacker.IsFrozen)
+            if (attacker.IsFrozen)
             {
                 return CanAttackResponse.Frozen;
             }
-            else if (attacker.HasSleep)
-            {
-                return CanAttackResponse.Asleep;
-            }
-            else if (attacker.AttacksThisTurn >= attacker.NumPossibleAttacksIgnoringFrozen)
-            {
-                return CanAttackResponse.AttackedEnough;
-            }
-            else if (attacker.HasCharge)
-            {
 
-            }
+            CanAttackResponse attackerCanAttack = attacker.CanAttackIgnoringFrozen;
+            if (attackerCanAttack != CanAttackResponse.Yes)
+            {
+                return attackerCanAttack;
+            }            
 
             if (!_game.Battleboard.DefenderObeysTaunt(defender))
             {

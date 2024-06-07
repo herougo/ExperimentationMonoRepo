@@ -67,5 +67,85 @@ concede";
             string log = TestGameUtils.RunPaladinGame(actionText, cardIdList0, cardIdList1, true);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestAttackedAlready()
+        {
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.Wisp, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.Wisp, 30).ToList();
+            string actionText = @"play 0 0
+attack 0 -1
+end_turn
+end_turn
+attack 0 -1
+attack 0 -1
+concede";
+            string log = TestGameUtils.RunPaladinGame(actionText, cardIdList0, cardIdList1, true);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestAttackedAlreadyWindfury()
+        {
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.YoungDragonhawk, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.Wisp, 30).ToList();
+            string actionText = @"play 0 0
+attack 0 -1
+end_turn
+end_turn
+attack 0 -1
+attack 0 -1
+attack 0 -1
+concede";
+            string log = TestGameUtils.RunPaladinGame(actionText, cardIdList0, cardIdList1, true);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestCharge()
+        {
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.ArgentCommander, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.Wisp, 30).ToList();
+            string actionText = @"play 0 0
+attack 0 -1
+concede";
+            string log = TestGameUtils.RunPaladinGame(actionText, cardIdList0, cardIdList1, true);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestDisobeyAndObeyTaunt()
+        {
+            List<string> cardIdList0 = new List<string>();
+            for (int i = 0; i < 15; i++)
+            {
+                cardIdList0.Add(CardIds.Shieldbearer);
+                cardIdList0.Add(CardIds.Wisp);
+            }
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.ArgentCommander, 30).ToList();
+            string actionText = @"play 0 0
+play 0 1
+end_turn
+play 0 0
+attack 0 -1
+attack 0 0
+attack 0 1
+concede";
+            string log = TestGameUtils.RunPaladinGame(actionText, cardIdList0, cardIdList1, true);
+            return Verify(log);
+        }
+        [Fact]
+        public Task TestDisobeyStealth()
+        {
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.StranglethornTiger, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.ArgentCommander, 30).ToList();
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+attack 0 0
+concede";
+            string log = TestGameUtils.RunPaladinGame(actionText, cardIdList0, cardIdList1, true);
+            return Verify(log);
+        }
     }
 }

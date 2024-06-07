@@ -112,4 +112,30 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new MurlocTidecaller();
         }
     }
-}
+
+
+    public class ArgentCommander : MinionCard
+    {
+        public ArgentCommander()
+        {
+            _cardId = CardIds.ArgentCommander;
+            _name = "Argent Commander";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 6;
+            _attack = 4;
+            _health = 2;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new DivineShield(), new Charge()
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new ArgentCommander();
+        }
+    }
+    }

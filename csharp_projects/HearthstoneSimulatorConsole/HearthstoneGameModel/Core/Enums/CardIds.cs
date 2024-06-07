@@ -54,6 +54,8 @@ namespace HearthstoneGameModel.Core.Enums
         public const string Lightwarden = "C041";
         public const string MurlocTidecaller = "C042";
 
+        public const string ArgentCommander = "C069";
+
         // Classic Uncollectible
         public const string DamagedGolem = "CU001";
         public const string Squire = "CU002";

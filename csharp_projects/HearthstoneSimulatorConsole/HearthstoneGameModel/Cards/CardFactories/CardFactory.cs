@@ -22,8 +22,17 @@ namespace HearthstoneGameModel.Cards.CardFactories
                 case CardIds.Shieldbearer:
                     return new Shieldbearer();
 
+                case CardIds.YoungDragonhawk:
+                    return new YoungDragonhawk();
+
+                case CardIds.StranglethornTiger:
+                    return new StranglethornTiger();
+
                 case CardIds.FrostElemental:
                     return new FrostElemental();
+
+                case CardIds.ArgentCommander:
+                    return new ArgentCommander();
 
                 case CardIds.Paladin:
                     return new Paladin();

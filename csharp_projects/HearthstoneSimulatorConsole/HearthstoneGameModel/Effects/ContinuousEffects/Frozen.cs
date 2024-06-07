@@ -42,7 +42,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
             CheckValidEvent(effectEvent);
             BattlerCardSlot typedSlot = (BattlerCardSlot)emNode.AffectedSlot;
             if (game.GameMetadata.Turn == typedSlot.Player
-                && typedSlot.AttacksThisTurn < typedSlot.NumPossibleAttacksIgnoringFrozen)
+                && typedSlot.CanAttackIgnoringFrozen == CanAttackResponse.Yes)
             {
                 EffectManagerNodePlan plan = new EffectManagerNodePlan();
                 plan.ToRemove.Add(emNode);

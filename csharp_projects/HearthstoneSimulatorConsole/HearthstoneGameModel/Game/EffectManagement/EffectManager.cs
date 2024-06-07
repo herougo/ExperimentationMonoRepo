@@ -57,9 +57,12 @@ namespace HearthstoneGameModel.Game.EffectManagement
         {
             CardSlot slot = emNode.AffectedSlot;
             emNode.Stop(_game, this);
-            foreach (string effectEvent in _emNodeToEvents[emNode])
+            if (_emNodeToEvents.ContainsKey(emNode))
             {
-                _eventToEffectNodeList.Remove(effectEvent, emNode);
+                foreach (string effectEvent in _emNodeToEvents[emNode])
+                {
+                    _eventToEffectNodeList.Remove(effectEvent, emNode);
+                }
             }
 
             _slotToEmNodeList[slot].Remove(emNode);
