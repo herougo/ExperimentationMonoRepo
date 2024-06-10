@@ -4,6 +4,7 @@ using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ActivatedEffects;
 using HearthstoneGameModel.Game.EffectManagement;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,8 +21,6 @@ namespace HearthstoneGameModel.Game.CardSlots
         public int MaximumMana = 0;
         public int Armour = 0;
         public bool HeroPowerUsedThisTurn = false;
-
-        // TODO: _heroPowerCost and _heroPowerEffect
 
         // Other metadata
 
@@ -48,7 +47,26 @@ namespace HearthstoneGameModel.Game.CardSlots
             EffectManagerNode emNode = new EffectManagerNode(
                 heroPowerEffect, this, this, false
             );
-            Game.EffectManager.AddEffect(emNode);
+            _game.EffectManager.AddEffect(emNode);
+        }
+
+        public override void UpdateStats()
+        {
+            if (_game.Weapons[Player] != null)
+            {
+                Attack = _game.Weapons[Player].Attack;
+            }
+            else
+            {
+                Attack = 0;
+            }
+
+            foreach (EffectManagerNode emNode in GetEMNodes())
+            {
+                emNode.Effect.AdjustStats(this);
+            }
+
+            Attack = Math.Max(0, Attack);
         }
     }
 }

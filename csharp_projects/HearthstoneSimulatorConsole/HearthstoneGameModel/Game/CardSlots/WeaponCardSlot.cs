@@ -1,5 +1,6 @@
 ﻿using HearthstoneGameModel.Cards.CardFactories;
 using HearthstoneGameModel.Cards.CardTypes;
+using HearthstoneGameModel.Game.EffectManagement;
 using HearthstoneGameModel.Utils;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,9 @@ namespace HearthstoneGameModel.Game.CardSlots
     {
         WeaponCard TypedCard;
 
+        // stats
         public int Attack;
+
         public int Durability;
 
         public WeaponCardSlot(string cardId, int player, HearthstoneGame game)
@@ -27,6 +30,18 @@ namespace HearthstoneGameModel.Game.CardSlots
         public override string ToString()
         {
             return $"CardSlot('{Card.Name}', Mana={Card.Mana}, {TypedCard.Attack} / {TypedCard.Durability})";
+        }
+
+        public override void UpdateStats()
+        {
+            Attack = TypedCard.Attack;
+
+            foreach (EffectManagerNode emNode in GetEMNodes())
+            {
+                emNode.Effect.AdjustStats(this);
+            }
+
+            Attack = Math.Max(0, Attack);
         }
     }
 }

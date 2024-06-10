@@ -36,5 +36,24 @@ namespace TextViewBasedTests.Utils
             game.Play();
             return logger.GetLog();
         }
+
+        public static string RunGame(
+            string actionText, List<string> cardIdList0, List<string> cardIdList1,
+            bool maxMana, string hsClass
+        )
+        {
+            ListTextLogger logger = new ListTextLogger();
+            HearthstoneGame game = GameBuilders.BuildGame(
+                actionText, logger, cardIdList0, cardIdList1, hsClass
+            );
+            game.SetupGame(false, false);
+            if (maxMana)
+            {
+                game.Players[0].AvailableMana = 10;
+                game.Players[1].AvailableMana = 10;
+            }
+            game.Play();
+            return logger.GetLog();
+        }
     }
 }

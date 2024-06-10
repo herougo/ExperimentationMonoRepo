@@ -7,6 +7,7 @@ using HearthstoneGameModel.Utils;
 using HearthstoneGameModel.Cards;
 using HearthstoneGameModel.Cards.CardFactories;
 using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Game.EffectManagement;
 
 namespace HearthstoneGameModel.Game.CardSlots
 {
@@ -15,8 +16,8 @@ namespace HearthstoneGameModel.Game.CardSlots
         protected int _hash;
         public Card Card;
         public int Player;
-        public HearthstoneGame Game;
-        int _originalMana;
+        public HearthstoneGame _game;
+        public int Mana;
 
         public bool Silenced = false;
 
@@ -24,15 +25,13 @@ namespace HearthstoneGameModel.Game.CardSlots
             _hash = HashGenerator.GetNextHash();
             Card = CardFactory.CreateCard(cardId);
             Player = player;
-            Game = game;
-            _originalMana = Card.Mana;
+            _game = game;
+            Mana = Card.Mana;
         }
 
         public int Hash { get { return _hash; } }
 
         public override int GetHashCode() { return Hash; }
-
-        public int Mana { get { return _originalMana; } }
 
         public CardType CardType { get { return Card.CardType; } }
 
@@ -41,7 +40,7 @@ namespace HearthstoneGameModel.Game.CardSlots
             Player = 1 - Player;
         }
 
-        public void UpdateStats()
+        public virtual void UpdateStats()
         {
             // TODO: implement
         }
@@ -49,6 +48,11 @@ namespace HearthstoneGameModel.Game.CardSlots
         public override string ToString()
         {
             return $"CardSlot('{Card.Name}', Mana={Card.Mana})";
+        }
+
+        public List<EffectManagerNode> GetEMNodes()
+        {
+            return _game.EffectManager.GetRelevantEMNodes(this);
         }
     }
 }

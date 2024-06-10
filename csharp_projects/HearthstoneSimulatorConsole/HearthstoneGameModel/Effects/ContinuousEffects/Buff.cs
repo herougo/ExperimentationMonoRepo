@@ -28,7 +28,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
                 case CardType.Hero:
                     BattlerCardSlot battlerCardSlot = (BattlerCardSlot)cardSlot;
                     battlerCardSlot.Attack += _attackAmount;
-                    battlerCardSlot.Health += _healthAmount;
+                    // battlerCardSlot.Health += _healthAmount;
                     battlerCardSlot.MaxHealth += _healthAmount;
                     break;
             }

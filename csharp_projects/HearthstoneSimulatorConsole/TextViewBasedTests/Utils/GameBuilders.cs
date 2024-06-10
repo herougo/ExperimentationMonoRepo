@@ -55,5 +55,27 @@ namespace TextViewBasedTests.Utils
             HearthstoneGame game = new HearthstoneGame(hsArgs);
             return game;
         }
+
+        public static HearthstoneGame BuildGame(
+            string actionInput, ITextLogger textLogger,
+            List<string> cardIdList0, List<string> cardIdList1,
+            string hsClass)
+        {
+            string[] actionInputSplit = actionInput.Replace("\r", "").Split("\n");
+
+            RandomGenerator.SetSeed(0);
+            Decklist decklist0 = new Decklist(cardIdList0, hsClass);
+            Decklist decklist1 = new Decklist(cardIdList1, hsClass);
+            ArrayStringActionReader actionGetter = new ArrayStringActionReader(actionInputSplit);
+            PlayerDecisionMaker decisionMaker0 = new PlayerDecisionMaker(actionGetter);
+            PlayerDecisionMaker decisionMaker1 = new PlayerDecisionMaker(actionGetter);
+            TextUIManager textUIManager = new TextUIManager(textLogger);
+
+            HearthstoneGameArgs hsArgs = new HearthstoneGameArgs(
+                decklist0, decklist1, decisionMaker0, decisionMaker1, textUIManager
+            );
+            HearthstoneGame game = new HearthstoneGame(hsArgs);
+            return game;
+        }
     }
 }

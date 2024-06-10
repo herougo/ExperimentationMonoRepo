@@ -141,6 +141,7 @@ namespace HearthstoneGameModel.Game
             WeaponCardSlot weaponCardSlot = _game.Weapons[player];
             SendCardToLimbo(weaponCardSlot);
             _game.Weapons[player] = null; // Must be set to None before sending event
+            _game.Players[player].UpdateStats();
             _game.EffectManager.SendEvent(EffectEvent.WeaponDestroyed, weaponCardSlot);
             RemoveCardSlot(weaponCardSlot);
         }
@@ -152,6 +153,8 @@ namespace HearthstoneGameModel.Game
                 DestroyWeapon(player);
             }
             _game.Weapons[player] = cardSlot; // Must be set before sending event
+            _game.Weapons[player].UpdateStats();
+            _game.Players[player].UpdateStats();
             _game.EffectManager.SendEvent(EffectEvent.WeaponEquipped, cardSlot);
         }
 

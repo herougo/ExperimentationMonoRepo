@@ -10,17 +10,6 @@ namespace TextViewBasedTests.Integration.GameMechanics
 {
     public class AttackTests
     {
-        /*
-        - [x] Zero Attack
-        - [x] Frozen
-        - [ ] Asleep
-        - [ ] Already Attacked
-        - [ ] Already Attacked Twice with Windfury
-        - [ ] Charge
-        - [ ] Disobey Taunt
-        - [ ] Obey Taunt
-         */
-
         [Fact]
         public Task TestZeroAttack()
         {
@@ -134,6 +123,7 @@ concede";
             string log = TestGameUtils.RunPaladinGame(actionText, cardIdList0, cardIdList1, true);
             return Verify(log);
         }
+
         [Fact]
         public Task TestDisobeyStealth()
         {

@@ -34,14 +34,21 @@ namespace HearthstoneGameModel.Cards.CardFactories
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();
 
+                case CardIds.Priest:
+                    return new Priest();
+                case CardIds.Rogue:
+                    return new Rogue();
                 case CardIds.Paladin:
                     return new Paladin();
+
+                case CardIds.RogueDagger12:
+                    return new RogueDagger12();
                 case CardIds.SilverHandRecruit:
                     return new SilverHandRecruit();
                 case CardIds.Coin:
                     return new Coin();
                 default:
-                    throw new ArgumentException("Unsupported cardId");
+                    throw new ArgumentException($"Unsupported cardId: {cardId}");
             }
         }
     }
