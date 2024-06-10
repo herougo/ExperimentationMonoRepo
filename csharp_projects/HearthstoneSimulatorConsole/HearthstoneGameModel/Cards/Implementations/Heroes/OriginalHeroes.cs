@@ -183,7 +183,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
             _hsClass = HSClass.Mage;
             _mana = 0;
             _heroPowerCost = 2;
-            _heroPowerEffect = new DealDamage(SelectionConstants.SelectCharacter, 2);
+            _heroPowerEffect = new DealDamage(SelectionConstants.SelectCharacter, 1);
         }
 
         public override Card Copy()

@@ -1,0 +1,39 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+
+Opponent (1) - health: 28, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+
+Game Over: Player 1 Wins

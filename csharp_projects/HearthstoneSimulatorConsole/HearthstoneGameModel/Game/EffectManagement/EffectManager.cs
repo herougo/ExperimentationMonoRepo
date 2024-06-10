@@ -50,13 +50,17 @@ namespace HearthstoneGameModel.Game.EffectManagement
             }
             AddToSlotToEmNodeList(emNode);
 
-            emNode.Start(_game, this);
+            EffectManagerNodePlan plan = emNode.Start(_game, this);
+            if (plan != null)
+            {
+                plan.Perform(this);
+            }
         }
 
         public void PopEffect(EffectManagerNode emNode)
         {
             CardSlot slot = emNode.AffectedSlot;
-            emNode.Stop(_game, this);
+            EffectManagerNodePlan plan = emNode.Stop(_game, this);
             if (_emNodeToEvents.ContainsKey(emNode))
             {
                 foreach (string effectEvent in _emNodeToEvents[emNode])
@@ -68,6 +72,11 @@ namespace HearthstoneGameModel.Game.EffectManagement
             _slotToEmNodeList[slot].Remove(emNode);
             _emNodes.Remove(emNode);
             _emNodeToEvents.Remove(emNode);
+
+            if (plan != null)
+            {
+                plan.Perform(this);
+            }
         }
 
         public List<EffectManagerNode> GetRelevantEMNodes(CardSlot cardSlot)

@@ -39,7 +39,7 @@ Battle
 - defender choice correct (left, middle, right)
 - ...
 
-(10 Heroes and hero powers)
+[x] 10 Heroes and hero powers
 
 ### Specific Cases
 

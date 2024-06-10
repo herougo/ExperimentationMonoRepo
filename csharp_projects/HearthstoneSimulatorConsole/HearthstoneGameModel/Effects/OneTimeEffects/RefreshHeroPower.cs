@@ -35,7 +35,7 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 
         public override OneTimeEffect Copy()
         {
-            return new RefreshAttacks(_selection.Copy());
+            return new RefreshHeroPower(_selection.Copy());
         }
     }
 }

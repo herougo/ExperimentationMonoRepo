@@ -82,5 +82,10 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
         {
             return new TimeLimitedEMEffect(_effect.Copy(), _untilWhen);
         }
+
+        public override void AdjustStats(CardSlot cardSlot)
+        {
+            _effect.AdjustStats(cardSlot);
+        }
     }
 }

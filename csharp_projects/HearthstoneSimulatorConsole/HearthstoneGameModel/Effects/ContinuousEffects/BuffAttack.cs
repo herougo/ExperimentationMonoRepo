@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Game.EffectManagement;
+using HearthstoneGameModel.Game;
 
 namespace HearthstoneGameModel.Effects.ContinuousEffects
 {
@@ -26,13 +28,27 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
                 case CardType.Hero:
                     BattlerCardSlot battlerCardSlot = (BattlerCardSlot)cardSlot;
                     battlerCardSlot.Attack += _amount;
-                    break;
+                    return;
                 case CardType.Weapon:
                     WeaponCardSlot weaponCardSlot = (WeaponCardSlot)cardSlot;
                     weaponCardSlot.Attack += _amount;
-                    break;
+                    return;
             }
             throw new NotImplementedException("Invalid card type to adjust stats from BuffAttack");
+        }
+
+        public override EffectManagerNodePlan Start(HearthstoneGame game, EffectManagerNode emNode)
+        {
+            EffectManagerNodePlan plan = new EffectManagerNodePlan();
+            plan.UpdateStats.Add(emNode.AffectedSlot);
+            return plan;
+        }
+
+        public override EffectManagerNodePlan Stop(HearthstoneGame game, EffectManagerNode emNode)
+        {
+            EffectManagerNodePlan plan = new EffectManagerNodePlan();
+            plan.UpdateStats.Add(emNode.AffectedSlot);
+            return plan;
         }
 
         public override EMEffect Copy()

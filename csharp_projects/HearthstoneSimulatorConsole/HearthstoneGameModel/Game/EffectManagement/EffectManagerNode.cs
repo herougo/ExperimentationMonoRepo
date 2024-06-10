@@ -30,22 +30,16 @@ namespace HearthstoneGameModel.Game.EffectManagement
             _hash = HashGenerator.GetNextHash();
         }
 
-        public void Start(HearthstoneGame game, EffectManager effectManager)
+        public EffectManagerNodePlan Start(HearthstoneGame game, EffectManager effectManager)
         {
             EffectManagerNodePlan plan = Effect.Start(game, this);
-            if (plan != null)
-            {
-                plan.Perform(effectManager);
-            }
+            return plan;
         }
 
-        public void Stop(HearthstoneGame game, EffectManager effectManager)
+        public EffectManagerNodePlan Stop(HearthstoneGame game, EffectManager effectManager)
         {
             EffectManagerNodePlan plan = Effect.Stop(game, this);
-            if (plan != null)
-            {
-                plan.Perform(effectManager);
-            }
+            return plan;
         }
 
         public void SendEvent(
