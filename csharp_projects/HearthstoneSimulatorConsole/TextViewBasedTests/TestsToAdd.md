@@ -56,8 +56,8 @@ Battle
 Game Mechanics
 
 - [ ] Mulligan
-- [ ] Player 2 starts with the coin
+- [x] Player 2 starts with the coin
 - [x] Players gain and refresh mana with every turn
 - [x] Players draw with every turn
-- [ ] Successful Attack (charge, obeys taunt)
-- [ ] Unsuccessful Attack (frozen, windfury attacked enough, 0 attack, disobeys taunt, defender has stealth)
+- [x] Successful Attack (charge, obeys taunt)
+- [x] Unsuccessful Attack (frozen, windfury attacked enough, 0 attack, disobeys taunt, defender has stealth)

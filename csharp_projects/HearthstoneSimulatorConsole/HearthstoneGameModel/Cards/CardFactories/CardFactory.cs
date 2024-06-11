@@ -25,6 +25,9 @@ namespace HearthstoneGameModel.Cards.CardFactories
                 case CardIds.YoungDragonhawk:
                     return new YoungDragonhawk();
 
+                case CardIds.DireWolfAlpha:
+                    return new DireWolfAlpha();
+
                 case CardIds.StranglethornTiger:
                     return new StranglethornTiger();
 

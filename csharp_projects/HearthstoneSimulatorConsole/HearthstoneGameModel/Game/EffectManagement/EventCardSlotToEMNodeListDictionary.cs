@@ -115,14 +115,18 @@ namespace HearthstoneGameModel.Game.EffectManagement
                 if (eventCardSlot != null)
                 {
                     int player = eventCardSlot.Player;
-                    foreach (EffectManagerNode emNode in _playerAndNullData[effectEvent][player])
+                    if (_playerAndNullData[effectEvent].ContainsKey(player))
                     {
-                        result.Add(emNode);
+                        foreach (EffectManagerNode emNode in _playerAndNullData[effectEvent][player])
+                        {
+                            result.Add(emNode);
+                        }
                     }
                 }
             }
 
-            if (_slotSpecificData.ContainsKey(effectEvent) && eventCardSlot != null)
+            if (_slotSpecificData.ContainsKey(effectEvent) && eventCardSlot != null
+                && _slotSpecificData[effectEvent].ContainsKey(eventCardSlot))
             {
                 foreach (EffectManagerNode emNode in _slotSpecificData[effectEvent][eventCardSlot])
                 {

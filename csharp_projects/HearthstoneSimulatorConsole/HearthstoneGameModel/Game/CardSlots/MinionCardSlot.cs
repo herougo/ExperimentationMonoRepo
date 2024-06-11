@@ -37,7 +37,7 @@ namespace HearthstoneGameModel.Game.CardSlots
 
         public override string ToString()
         {
-            return $"CardSlot('{Card.Name}', Mana={Card.Mana}, {TypedCard.Attack} / {TypedCard.Health})";
+            return $"CardSlot('{Card.Name}', Mana={Mana}, {Attack} / {Health})";
         }
 
         public override void UpdateStats()

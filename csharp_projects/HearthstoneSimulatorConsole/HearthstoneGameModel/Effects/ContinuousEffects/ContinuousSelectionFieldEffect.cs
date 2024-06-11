@@ -1,4 +1,5 @@
-﻿using HearthstoneGameModel.Effects.WrappedEMEffects;
+﻿using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Effects.WrappedEMEffects;
 using HearthstoneGameModel.Game;
 using HearthstoneGameModel.Game.CardSlots;
 using HearthstoneGameModel.Game.EffectManagement;
@@ -21,6 +22,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
         {
             _selection = selection;
             _effect = effect;
+            _eventsReceived.AddRange(selection.EventsReceived);
             _memoryCurrentSelection = new Dictionary<CardSlot, EffectManagerNode>();
         }
 
@@ -74,7 +76,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
         public override EffectManagerNodePlan Stop(HearthstoneGame game, EffectManagerNode emNode)
         {
             EffectManagerNodePlan plan = new EffectManagerNodePlan();
-
+            
             foreach (CardSlot slot in _memoryCurrentSelection.Keys)
             {
                 plan.ToRemove.Add(_memoryCurrentSelection[slot]);
