@@ -1,4 +1,5 @@
-﻿using HearthstoneGameModel.Core.Enums;
+﻿using HearthstoneGameModel.Cards.Implementations.Classic;
+using HearthstoneGameModel.Core.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,6 +59,49 @@ hero_power
 play 0 0
 concede";
             List<string> cardIdList0 = Enumerable.Repeat(CardIds.Wisp, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestPlayLeftCardOnLeft()
+        {
+            string actionText = @"hero_power
+play 0 0
+concede";
+            List<string> cardIdList0 = new List<string>{
+                CardIds.ArgentCommander, CardIds.Wisp, CardIds.Shieldbearer,
+                CardIds.YoungDragonhawk, CardIds.StranglethornTiger
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestPlayRightCardOnRight()
+        {
+            string actionText = @"hero_power
+play 3 1
+concede";
+            List<string> cardIdList0 = new List<string>{
+                CardIds.ArgentCommander, CardIds.Wisp, CardIds.Shieldbearer,
+                CardIds.YoungDragonhawk, CardIds.StranglethornTiger
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestPlayMiddleCards()
+        {
+            string actionText = @"hero_power
+play 1 1
+play 1 1
+concede";
+            List<string> cardIdList0 = new List<string>{
+                CardIds.ArgentCommander, CardIds.Wisp, CardIds.Shieldbearer,
+                CardIds.YoungDragonhawk, CardIds.StranglethornTiger
+            };
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
