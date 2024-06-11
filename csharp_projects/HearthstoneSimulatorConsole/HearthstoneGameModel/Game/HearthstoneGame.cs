@@ -236,8 +236,8 @@ namespace HearthstoneGameModel.Game
             attackerCardSlot.AttacksThisTurn += 1;
             GameMetadata.AttackerDamageTaken = defenderCardSlot.Attack;
             GameMetadata.DefenderDamageTaken = attackerCardSlot.Attack;
-            EffectManager.SendEvent(EffectEvent.AfterAttackerInitialCombatDamage);
-            EffectManager.SendEvent(EffectEvent.AfterDefenderInitialCombatDamage);
+            EffectManager.SendEvent(EffectEvent.AfterAttackerInitialCombatDamage, attackerCardSlot);
+            EffectManager.SendEvent(EffectEvent.AfterDefenderInitialCombatDamage, defenderCardSlot);
             attackerCardSlot.TakeDamage(GameMetadata.AttackerDamageTaken);
             defenderCardSlot.TakeDamage(GameMetadata.DefenderDamageTaken);
             EffectManager.SendEvent(EffectEvent.AfterAttackerAttacked, attackerCardSlot);

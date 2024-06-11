@@ -18,9 +18,16 @@ namespace HearthstoneGameModel.Cards.CardFactories
             {
                 case CardIds.Wisp:
                     return new Wisp();
-
+                case CardIds.AbusiveSergeant:
+                    return new AbusiveSergeant();
+                case CardIds.ArgentSquire:
+                    return new ArgentSquire();
+                case CardIds.LeperGnome:
+                    return new LeperGnome();
                 case CardIds.Shieldbearer:
                     return new Shieldbearer();
+                case CardIds.SouthseaDeckhand:
+                    return new SouthseaDeckhand();
 
                 case CardIds.YoungDragonhawk:
                     return new YoungDragonhawk();

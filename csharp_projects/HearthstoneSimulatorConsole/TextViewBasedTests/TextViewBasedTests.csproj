@@ -28,7 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Integration\Cards\" />
     <Folder Include="Integration\Effects\" />
   </ItemGroup>
 
