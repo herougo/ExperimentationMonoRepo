@@ -28,9 +28,12 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Shieldbearer();
                 case CardIds.SouthseaDeckhand:
                     return new SouthseaDeckhand();
-
+                case CardIds.WorgenInfiltrator:
+                    return new WorgenInfiltrator();
                 case CardIds.YoungDragonhawk:
                     return new YoungDragonhawk();
+                case CardIds.AmaniBerserker:
+                    return new AmaniBerserker();
 
                 case CardIds.DireWolfAlpha:
                     return new DireWolfAlpha();
