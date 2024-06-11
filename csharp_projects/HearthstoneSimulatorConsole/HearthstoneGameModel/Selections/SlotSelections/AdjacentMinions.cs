@@ -28,12 +28,17 @@ namespace HearthstoneGameModel.Selections.SlotSelections
             int player = cardSlot.Player;
             List<CardSlot> result = new List<CardSlot>();
             int boardIndex = game.Battleboard.CardSlotToBoardIndex(cardSlot);
-            int boardLen = game.Battleboard.BoardLen(player);
+
+            if (boardIndex == HearthstoneConstants.NullInt)
+            {
+                return result;
+            }
 
             if (boardIndex > 0)
             {
                 result.Add(game.IndexToSlot(player, boardIndex - 1));
             }
+            int boardLen = game.Battleboard.BoardLen(player);
             if (boardIndex < boardLen - 1)
             {
                 result.Add(game.IndexToSlot(player, boardIndex + 1));

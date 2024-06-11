@@ -46,10 +46,10 @@ namespace HearthstoneGameModel.Game
             int originalBoardIndex = _cardSlotToBoardIndex[cardSlot];
 
             _cardSlotToBoardIndex.Remove(cardSlot);
-            for (int i = originalBoardIndex; i < BoardLen(player); i++)
+            for (int i = originalBoardIndex + 1; i < BoardLen(player); i++)
             {
                 CardSlot currentCardSlot = _boards[player][i];
-                _cardSlotToBoardIndex[cardSlot] = i - 1;
+                _cardSlotToBoardIndex[currentCardSlot] = i - 1;
             }
 
             _boards[player].Pop(originalBoardIndex);
@@ -76,7 +76,11 @@ namespace HearthstoneGameModel.Game
 
         public int CardSlotToBoardIndex(CardSlot cardSlot)
         {
-            return _cardSlotToBoardIndex[cardSlot];
+            if (_cardSlotToBoardIndex.ContainsKey(cardSlot))
+            {
+                return _cardSlotToBoardIndex[cardSlot];
+            }
+            return HearthstoneConstants.NullInt;
         }
 
         public void AddTaunt(CardSlot cardSlot)
