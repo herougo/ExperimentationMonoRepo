@@ -35,8 +35,8 @@ Attack
 
 Battle
 
-- attacker choice correct (left, middle, right)
-- defender choice correct (left, middle, right)
+- [ ] attacker choice correct (left, middle, right)
+- [ ] defender choice correct (left, middle, right)
 - ...
 
 [x] 10 Heroes and hero powers
