@@ -18,6 +18,6 @@ HearthstoneGameArgs hsArgs = new HearthstoneGameArgs(
 );
 HearthstoneGame game = new HearthstoneGame(hsArgs);
 game.SetupGame(false, false);
-game.Players[0].AvailableMana = 10;
-game.Players[1].AvailableMana = 10;
+// game.Players[0].AvailableMana = 10;
+// game.Players[1].AvailableMana = 10;
 game.Play();

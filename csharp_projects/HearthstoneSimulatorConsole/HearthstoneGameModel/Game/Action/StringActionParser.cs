@@ -221,13 +221,13 @@ namespace HearthstoneGameModel.Game.Action
         {
             HeroCardSlot playerSlot = _game.Players[_game.GameMetadata.Turn];
             int manaCost = playerSlot.HeroPowerCost;
-            if (manaCost > _game.Players[_game.GameMetadata.Turn].CurrentMana)
-            {
-                throw new ActionException("Not enough Mana for hero power");
-            }
             if (playerSlot.HeroPowerUsedThisTurn)
             {
                 throw new ActionException("Hero power already used");
+            }
+            if (manaCost > _game.Players[_game.GameMetadata.Turn].CurrentMana)
+            {
+                throw new ActionException("Not enough Mana for hero power");
             }
             return new HeroPowerAction();
         }

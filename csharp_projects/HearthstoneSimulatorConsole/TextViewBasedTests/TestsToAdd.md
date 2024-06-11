@@ -5,6 +5,8 @@ Game Mechanics
 - SetupGameTest.TestConcedeImmediately
   - [x] Players draw 3 and 4 at the start
   - [x] GameOver (player 0 and player 1)
+- [ ] Other
+  - [ ] fatigue
 - [x] Play card
   - [x] left-most
   - [x] middle
@@ -13,10 +15,10 @@ Game Mechanics
   - [x] error: not enough mana
   - [x] error: destination outside range
   - [x] error: not enough space on the battleboard
-- [ ] Hero Power
-  - [ ] not enough mana error
-  - [ ] hero power already used error
-  - [ ] hero power refresh next turn
+- [x] Hero Power
+  - [x] not enough mana error
+  - [x] hero power already used error
+  - [x] hero power refresh next turn
 
 Effects
 
