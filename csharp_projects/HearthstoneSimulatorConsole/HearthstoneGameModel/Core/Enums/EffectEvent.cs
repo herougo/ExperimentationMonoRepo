@@ -26,5 +26,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string MinionReturnedToHand = "minion_returned_to_hand";
         public const string AfterSpellActivated = "after_spell_activated";
         public const string PreEndTurnFrozen = "pre_end_turn_frozen";
+        public const string DamageTaken = "damage_taken";
+        public const string CharacterHealed = "character_healed";
     }
 }

@@ -1,5 +1,6 @@
 ﻿using HearthstoneGameModel.Cards;
 using HearthstoneGameModel.Cards.CardTypes;
+using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ActivatedEffects;
 using HearthstoneGameModel.Game.EffectManagement;
@@ -33,12 +34,19 @@ namespace HearthstoneGameModel.Game.CardSlots
             : base(cardId, player, game) {
             TypedCard = (HeroCard)Card;
         }
-        public override void TakeDamage(int amount)
+        public override EffectManagerNodePlan TakeDamage(int amount)
         {
             int damageToHealth = Math.Max(amount - Armour, 0);
             int damageToArmour = amount - damageToHealth;
             Health -= damageToHealth;
             Armour -= damageToArmour;
+            EffectManagerNodePlan plan = new EffectManagerNodePlan();
+            if (amount > 0)
+            {
+                plan.UpdateStats.Add(this);
+                plan.EffectEventArgs.Add(new EffectEventArgs(EffectEvent.DamageTaken, this));
+            }
+            return plan;
         }
 
         public void SetupHeroPower()

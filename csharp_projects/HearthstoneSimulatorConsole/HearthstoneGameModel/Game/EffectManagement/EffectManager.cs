@@ -116,6 +116,11 @@ namespace HearthstoneGameModel.Game.EffectManagement
             SendEvent(effectEvent, null);
         }
 
+        public void SendEvent(EffectEventArgs args)
+        {
+            SendEvent(args.EffectEvent, args.EventSlot);
+        }
+
         public void Execute(OneTimeEffect effect, HearthstoneGame game, CardSlot cardSlot)
         {
             EffectManagerNodePlan plan = effect.Execute(game, cardSlot, cardSlot);

@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="DesignDecisions.md" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cards\Card.cs" />
@@ -122,6 +123,7 @@
     <Compile Include="Game\Action\ArrayStringActionReader.cs" />
     <Compile Include="Game\CardSlots\BattlerCardSlot.cs" />
     <Compile Include="Game\CardSlots\SpellCardSlot.cs" />
+    <Compile Include="Game\EffectManagement\EffectEventArgs.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNode.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNodeList.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNodePlan.cs" />

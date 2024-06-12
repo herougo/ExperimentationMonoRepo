@@ -1,4 +1,5 @@
 ﻿using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Game.EffectManagement;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,7 @@ namespace HearthstoneGameModel.Game.CardSlots
 
         public BattlerCardSlot(string cardId, int player, HearthstoneGame game)
             : base(cardId, player, game) { }
-        public abstract void TakeDamage(int amount);
+        public abstract EffectManagerNodePlan TakeDamage(int amount);
 
         public bool IsFrozen
         {

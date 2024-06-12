@@ -1,4 +1,5 @@
 ﻿using HearthstoneGameModel.Cards.CardTypes;
+using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Game.EffectManagement;
 using System;
 using System.Collections.Generic;
@@ -30,9 +31,16 @@ namespace HearthstoneGameModel.Game.CardSlots
             Health = TypedCard.Health;
         }
 
-        public override void TakeDamage(int amount)
+        public override EffectManagerNodePlan TakeDamage(int amount)
         {
             Health -= amount;
+            EffectManagerNodePlan plan = new EffectManagerNodePlan();
+            if (amount > 0)
+            {
+                plan.UpdateStats.Add(this);
+                plan.EffectEventArgs.Add(new EffectEventArgs(EffectEvent.DamageTaken, this));
+            }
+            return plan;
         }
 
         public override string ToString()

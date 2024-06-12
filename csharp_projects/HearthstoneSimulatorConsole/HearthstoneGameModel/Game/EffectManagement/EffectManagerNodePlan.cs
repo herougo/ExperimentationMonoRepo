@@ -12,16 +12,19 @@ namespace HearthstoneGameModel.Game.EffectManagement
         public List<EffectManagerNode> ToAdd;
         public List<EffectManagerNode> ToRemove;
         public List<CardSlot> UpdateStats;
+        public List<EffectEventArgs> EffectEventArgs;
 
         public EffectManagerNodePlan(
             List<EffectManagerNode> toAdd,
             List<EffectManagerNode> toRemove,
-            List<CardSlot> updateStats
+            List<CardSlot> updateStats,
+            List<EffectEventArgs> effectEventArgs
         )
         {
             ToAdd = toAdd;
             ToRemove = toRemove;
             UpdateStats = updateStats;
+            EffectEventArgs = effectEventArgs;
         }
 
         public EffectManagerNodePlan()
@@ -29,6 +32,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
             ToAdd = new List<EffectManagerNode>();
             ToRemove = new List<EffectManagerNode>();
             UpdateStats = new List<CardSlot>();
+            EffectEventArgs = new List<EffectEventArgs>();
         }
 
         public void Perform(EffectManager effectManager)
@@ -44,6 +48,10 @@ namespace HearthstoneGameModel.Game.EffectManagement
             foreach (CardSlot cardSlot in UpdateStats)
             {
                 cardSlot.UpdateStats();
+            }
+            foreach (EffectEventArgs args in EffectEventArgs)
+            {
+                effectManager.SendEvent(args);
             }
         }
 

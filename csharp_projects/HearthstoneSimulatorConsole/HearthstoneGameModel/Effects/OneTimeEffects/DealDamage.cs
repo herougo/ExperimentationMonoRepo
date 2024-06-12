@@ -2,6 +2,7 @@
 using HearthstoneGameModel.Game.EffectManagement;
 using HearthstoneGameModel.Game;
 using HearthstoneGameModel.Selections;
+using HearthstoneGameModel.Core.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,14 +29,15 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
         public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot)
         {
             List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
+            EffectManagerNodePlan plan = new EffectManagerNodePlan();
 
             foreach (CardSlot selectedCardSlot in selectedCardSlots)
             {
                 BattlerCardSlot typedCardSlot = (BattlerCardSlot)selectedCardSlot;
-                typedCardSlot.Health -= _amount;
+                plan.Update(typedCardSlot.TakeDamage(_amount));
             }
 
-            return null;
+            return plan;
         }
 
         public override OneTimeEffect Copy()

@@ -238,8 +238,12 @@ namespace HearthstoneGameModel.Game
             GameMetadata.DefenderDamageTaken = attackerCardSlot.Attack;
             EffectManager.SendEvent(EffectEvent.AfterAttackerInitialCombatDamage, attackerCardSlot);
             EffectManager.SendEvent(EffectEvent.AfterDefenderInitialCombatDamage, defenderCardSlot);
-            attackerCardSlot.TakeDamage(GameMetadata.AttackerDamageTaken);
-            defenderCardSlot.TakeDamage(GameMetadata.DefenderDamageTaken);
+
+            EffectManagerNodePlan attackerPlan = attackerCardSlot.TakeDamage(GameMetadata.AttackerDamageTaken);
+            attackerPlan.Perform(EffectManager);
+            EffectManagerNodePlan defenderPlan = defenderCardSlot.TakeDamage(GameMetadata.DefenderDamageTaken);
+            defenderPlan.Perform(EffectManager);
+
             EffectManager.SendEvent(EffectEvent.AfterAttackerAttacked, attackerCardSlot);
             EffectManager.SendEvent(EffectEvent.AfterCombatDamage);
 
