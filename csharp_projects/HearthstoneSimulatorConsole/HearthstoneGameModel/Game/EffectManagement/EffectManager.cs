@@ -51,10 +51,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
             AddToSlotToEmNodeList(emNode);
 
             EffectManagerNodePlan plan = emNode.Start(_game, this);
-            if (plan != null)
-            {
-                plan.Perform(this);
-            }
+            performPlan(plan);
         }
 
         public void PopEffect(EffectManagerNode emNode)
@@ -73,10 +70,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
             _emNodes.Remove(emNode);
             _emNodeToEvents.Remove(emNode);
 
-            if (plan != null)
-            {
-                plan.Perform(this);
-            }
+            performPlan(plan);
         }
 
         public List<EffectManagerNode> GetRelevantEMNodes(CardSlot cardSlot)
@@ -109,6 +103,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
             {
                 emNode.SendEvent(effectEvent, _game, this, eventSlot);
             }
+            _game.KillIfNecessary();
         }
 
         public void SendEvent(string effectEvent)
@@ -124,9 +119,15 @@ namespace HearthstoneGameModel.Game.EffectManagement
         public void Execute(OneTimeEffect effect, HearthstoneGame game, CardSlot cardSlot)
         {
             EffectManagerNodePlan plan = effect.Execute(game, cardSlot, cardSlot);
+            performPlan(plan);
+        }
+
+        private void performPlan(EffectManagerNodePlan plan)
+        {
             if (plan != null)
             {
                 plan.Perform(this);
+                _game.KillIfNecessary();
             }
         }
     }

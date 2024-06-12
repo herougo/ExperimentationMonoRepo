@@ -138,6 +138,7 @@
     <Compile Include="Selections\SlotSelections\AllOtherFriendlyCharacters.cs" />
     <Compile Include="Selections\SlotSelections\AllOtherFriendlyMinions.cs" />
     <Compile Include="Selections\SlotSelections\AllOtherMinions.cs" />
+    <Compile Include="Selections\SlotSelections\AllOtherLivingCharacters.cs" />
     <Compile Include="Selections\SlotSelections\HeroSelection.cs" />
     <Compile Include="Selections\SlotSelections\OwnSelf.cs" />
     <Compile Include="Selections\SlotSelections\RandomCharacter.cs" />

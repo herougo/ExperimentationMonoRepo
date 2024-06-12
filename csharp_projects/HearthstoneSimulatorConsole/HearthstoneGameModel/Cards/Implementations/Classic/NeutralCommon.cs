@@ -358,14 +358,14 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _collectible = true;
 
             _mana = 2;
-            _attack = 2;
-            _health = 1;
+            _attack = 3;
+            _health = 2;
 
             _inPlayEffects = new List<EMEffect> {
                 new Battlecry(
                     new NEffects(
                         new DealDamage(
-                            SelectionConstants.RandomOtherCharacter, 1), 
+                            SelectionConstants.RandomOtherLivingCharacter, 1), 
                             3
                         )
                     )

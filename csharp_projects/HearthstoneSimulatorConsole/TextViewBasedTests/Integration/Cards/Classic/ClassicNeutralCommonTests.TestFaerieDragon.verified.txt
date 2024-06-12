@@ -1,0 +1,58 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+1: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+2: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+3: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+1: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+2: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+3: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+
+0 plays Faerie Dragon
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+1: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+2: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+3: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+1: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+2: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+
+ERROR: selected card is not one of the possible options
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+1: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+2: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+3: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+
+Player (0) - health: 29, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+1: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+2: CardSlot('Faerie Dragon', Mana=2, 3 / 2)
+
+Game Over: Player 1 Wins

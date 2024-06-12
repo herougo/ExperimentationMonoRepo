@@ -22,12 +22,12 @@ namespace HearthstoneGameModel.Effects.WrappedOneTimeEffects
             HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
         )
         {
-            EffectManagerNodePlan plan = new EffectManagerNodePlan();
             for (int i = 0; i < _numExecutes; i++)
             {
-                plan.Update(_effect.Execute(game, affectedCardSlot, originCardSlot));
+                EffectManagerNodePlan plan = _effect.Execute(game, affectedCardSlot, originCardSlot);
+                plan.Perform(game.EffectManager);
             }
-            return plan;
+            return null;
         }
 
         public override OneTimeEffect Copy()

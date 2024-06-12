@@ -244,7 +244,7 @@ namespace HearthstoneGameModel.Game
             EffectManagerNodePlan defenderPlan = defenderCardSlot.TakeDamage(GameMetadata.DefenderDamageTaken);
             defenderPlan.Perform(EffectManager);
 
-            EffectManager.SendEvent(EffectEvent.AfterAttackerAttacked, attackerCardSlot);
+            EffectManager.SendEvent(EffectEvent.AfterAttackerAttacked, attackerCardSlot); // TODO: after KillIfNecessary
             EffectManager.SendEvent(EffectEvent.AfterCombatDamage);
 
             if (attackerCardSlot.CardType == CardType.Hero
@@ -257,18 +257,23 @@ namespace HearthstoneGameModel.Game
                 }
             }
 
+            KillIfNecessary();
+        }
+
+        public void KillIfNecessary()
+        {
             CheckGameOver();
 
             List<CardSlot> minionsToKill = new List<CardSlot>();
-            if (attackerCardSlot.CardType == CardType.Minion
-                && ((MinionCardSlot)attackerCardSlot).Health <= 0)
+            for (int player = 0; player < HearthstoneConstants.NumberOfPlayers; player++)
             {
-                minionsToKill.Add(attackerCardSlot);
-            }
-            if (defenderCardSlot.CardType == CardType.Minion
-                && ((MinionCardSlot)defenderCardSlot).Health <= 0)
-            {
-                minionsToKill.Add(defenderCardSlot);
+                foreach (CardSlot slot in Battleboard.GetAllSlots(player))
+                {
+                    if (slot.CardType == CardType.Minion && ((MinionCardSlot)slot).Health <= 0)
+                    {
+                        minionsToKill.Add(slot);
+                    }
+                }
             }
             CardMover.KillMinions(minionsToKill);
         }

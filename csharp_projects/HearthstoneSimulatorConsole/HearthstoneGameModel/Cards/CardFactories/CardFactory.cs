@@ -34,9 +34,20 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new YoungDragonhawk();
                 case CardIds.AmaniBerserker:
                     return new AmaniBerserker();
-
+                case CardIds.BloodsailRaider:
+                    return new BloodsailRaider();
                 case CardIds.DireWolfAlpha:
                     return new DireWolfAlpha();
+                case CardIds.FaerieDragon:
+                    return new FaerieDragon();
+                case CardIds.LootHoarder:
+                    return new LootHoarder();
+                case CardIds.MadBomber:
+                    return new MadBomber();
+                case CardIds.YouthfulBrewmaster:
+                    return new YouthfulBrewmaster();
+                case CardIds.EarthenRingFarseer:
+                    return new EarthenRingFarseer();
 
                 case CardIds.StranglethornTiger:
                     return new StranglethornTiger();
