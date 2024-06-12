@@ -36,7 +36,6 @@ namespace TextView
             int i = 0;
             foreach (CardSlot cardSlot in _game.Hands[player])
             {
-                cardSlot.UpdateStats();
                 LogText($"{i}: {cardSlot}\n");
                 i += 1;
             }
@@ -47,7 +46,6 @@ namespace TextView
             int i = 0;
             foreach (CardSlot cardSlot in _game.Battleboard.GetAllSlots(player))
             {
-                cardSlot.UpdateStats();
                 LogText($"\t{i}: {cardSlot}\n");
                 i += 1;
             }
