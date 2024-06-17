@@ -56,6 +56,14 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new IronbeakOwl();
                 case CardIds.JunglePanther:
                     return new JunglePanther();
+                case CardIds.RagingWorgen:
+                    return new RagingWorgen();
+                case CardIds.ScarletCrusader:
+                    return new ScarletCrusader();
+                case CardIds.TaurenWarrior:
+                    return new TaurenWarrior();
+                case CardIds.ThrallmarFarseer:
+                    return new ThrallmarFarseer();
 
                 case CardIds.StranglethornTiger:
                     return new StranglethornTiger();

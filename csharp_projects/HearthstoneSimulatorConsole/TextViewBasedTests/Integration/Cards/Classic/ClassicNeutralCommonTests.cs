@@ -314,5 +314,72 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestRagingWorgen()
+        {
+            string actionText = @"play 0 0
+hero_power
+select 0 0
+end_turn
+end_turn
+attack 0 -1
+attack 0 -1
+attack 0 -1
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.RagingWorgen, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.RagingWorgen, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Mage);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestScarletCrusader()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+end_turn
+attack 0 0
+end_turn
+attack 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.ScarletCrusader, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestTaurenWarrior()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+end_turn
+attack 0 -1
+attack 0 0
+hero_power
+select 1 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.TaurenWarrior, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Priest);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestThrallmarFarseer()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+end_turn
+attack 0 -1
+attack 0 -1
+attack 0 -1
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.ThrallmarFarseer, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }

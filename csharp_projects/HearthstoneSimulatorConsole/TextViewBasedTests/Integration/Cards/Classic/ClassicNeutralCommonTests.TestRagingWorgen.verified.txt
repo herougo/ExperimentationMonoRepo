@@ -1,0 +1,178 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+3: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+3: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+
+0 plays Raging Worgen
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+3: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+
+Player (0) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+3: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Raging Worgen', Mana=3, 4 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 5 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+3: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Raging Worgen', Mana=3, 4 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 5 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+3: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+
+	------------
+	0: CardSlot('Raging Worgen', Mana=3, 4 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 5 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+3: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+
+	------------
+	0: CardSlot('Raging Worgen', Mana=3, 4 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 5 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+3: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+
+	------------
+	0: CardSlot('Raging Worgen', Mana=3, 4 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+3: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+
+CardSlot('Raging Worgen', Mana=3, 4 / 2)
+	attacks CardSlot('Mage', Mana=0)
+Opponent (1) - health: 26, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+3: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+
+	------------
+	0: CardSlot('Raging Worgen', Mana=3, 4 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+3: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+
+CardSlot('Raging Worgen', Mana=3, 4 / 2)
+	attacks CardSlot('Mage', Mana=0)
+Opponent (1) - health: 22, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+3: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+
+	------------
+	0: CardSlot('Raging Worgen', Mana=3, 4 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+1: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+2: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+3: CardSlot('Raging Worgen', Mana=3, 3 / 3)
+
+ERROR: attacker attacked enough (already attacked enough)
+Game Over: Player 1 Wins
