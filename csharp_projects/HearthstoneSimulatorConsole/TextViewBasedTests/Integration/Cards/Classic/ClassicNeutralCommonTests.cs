@@ -248,5 +248,56 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestFlesheatingGhoul()
+        {
+            string actionText = @"play 0 0
+play 0 1
+hero_power
+end_turn
+play 0 0
+end_turn
+attack 2 0
+attack 1 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.FlesheatingGhoul, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.FlesheatingGhoul, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestHarvestGolem()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+end_turn
+attack 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.HarvestGolem, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.FaerieDragon, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestJunglePanther()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+end_turn
+attack 0 0
+attack 0 -1
+end_turn
+attack 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.JunglePanther, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.JunglePanther, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }

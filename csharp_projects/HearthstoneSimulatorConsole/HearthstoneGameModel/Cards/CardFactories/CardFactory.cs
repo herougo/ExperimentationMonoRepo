@@ -48,6 +48,13 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new YouthfulBrewmaster();
                 case CardIds.EarthenRingFarseer:
                     return new EarthenRingFarseer();
+                case CardIds.FlesheatingGhoul:
+                    return new FlesheatingGhoul();
+                case CardIds.HarvestGolem:
+                    return new HarvestGolem();
+
+                case CardIds.JunglePanther:
+                    return new JunglePanther();
 
                 case CardIds.StranglethornTiger:
                     return new StranglethornTiger();
@@ -57,6 +64,9 @@ namespace HearthstoneGameModel.Cards.CardFactories
 
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();
+
+                case CardIds.DamagedGolem:
+                    return new DamagedGolem();
 
                 case CardIds.Priest:
                     return new Priest();
