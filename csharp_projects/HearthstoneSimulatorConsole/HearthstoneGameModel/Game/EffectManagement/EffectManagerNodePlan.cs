@@ -64,6 +64,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
             ToAdd.AddRange(newPlan.ToAdd);
             ToRemove.AddRange(newPlan.ToRemove);
             UpdateStats.AddRange(newPlan.UpdateStats);
+            EffectEventArgs.AddRange(newPlan.EffectEventArgs);
         }
 
         public bool IsEmpty {

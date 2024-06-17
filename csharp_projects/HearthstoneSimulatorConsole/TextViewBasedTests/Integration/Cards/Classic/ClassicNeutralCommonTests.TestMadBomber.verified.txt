@@ -20,43 +20,6 @@ Weapon: None
 3: CardSlot('Mad Bomber', Mana=2, 3 / 2)
 
 0 plays Mad Bomber
-Opponent (1) - health: 30, armour: 0, mana: 0 / 10
-Weapon: None
-0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
-1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
-2: CardSlot('Mad Bomber', Mana=2, 3 / 2)
-3: CardSlot('Mad Bomber', Mana=2, 3 / 2)
-4: CardSlot('Coin', Mana=0)
-
-	------------
-	0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
-
-Player (0) - health: 27, armour: 0, mana: 8 / 10
-Weapon: None
-0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
-1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
-2: CardSlot('Mad Bomber', Mana=2, 3 / 2)
-
-0 plays Mad Bomber
-Opponent (1) - health: 28, armour: 0, mana: 0 / 10
-Weapon: None
-0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
-1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
-2: CardSlot('Mad Bomber', Mana=2, 3 / 2)
-3: CardSlot('Mad Bomber', Mana=2, 3 / 2)
-4: CardSlot('Coin', Mana=0)
-
-	------------
-	0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
-	1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
-
-Player (0) - health: 26, armour: 0, mana: 6 / 10
-Weapon: None
-0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
-1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
-
-0 plays Mad Bomber
-Player 0's C014 died
 Opponent (1) - health: 27, armour: 0, mana: 0 / 10
 Weapon: None
 0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
@@ -67,14 +30,51 @@ Weapon: None
 
 	------------
 	0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
+1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
+2: CardSlot('Mad Bomber', Mana=2, 3 / 2)
+
+0 plays Mad Bomber
+Opponent (1) - health: 25, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
+1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
+2: CardSlot('Mad Bomber', Mana=2, 3 / 2)
+3: CardSlot('Mad Bomber', Mana=2, 3 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
 	1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
 
-Player (0) - health: 26, armour: 0, mana: 4 / 10
+Player (0) - health: 29, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
+1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
+
+0 plays Mad Bomber
+Player 0's C014 died
+Opponent (1) - health: 24, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
+1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
+2: CardSlot('Mad Bomber', Mana=2, 3 / 2)
+3: CardSlot('Mad Bomber', Mana=2, 3 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
+	1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
+
+Player (0) - health: 29, armour: 0, mana: 4 / 10
 Weapon: None
 0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
 
 0 plays Mad Bomber
-Opponent (1) - health: 26, armour: 0, mana: 0 / 10
+Opponent (1) - health: 21, armour: 0, mana: 0 / 10
 Weapon: None
 0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
 1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
@@ -87,10 +87,10 @@ Weapon: None
 	1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
 	2: CardSlot('Mad Bomber', Mana=2, 3 / 2)
 
-Player (0) - health: 24, armour: 0, mana: 2 / 10
+Player (0) - health: 29, armour: 0, mana: 2 / 10
 Weapon: None
 
-Opponent (1) - health: 26, armour: 0, mana: 0 / 10
+Opponent (1) - health: 21, armour: 0, mana: 0 / 10
 Weapon: None
 0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
 1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
@@ -103,13 +103,13 @@ Weapon: None
 	1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
 	2: CardSlot('Mad Bomber', Mana=2, 3 / 2)
 
-Player (0) - health: 24, armour: 0, mana: 2 / 10
+Player (0) - health: 29, armour: 0, mana: 2 / 10
 Weapon: None
 
 -------------------------------------------
 1 turn
 -------------------------------------------
-Opponent (1) - health: 26, armour: 0, mana: 10 / 10
+Opponent (1) - health: 21, armour: 0, mana: 10 / 10
 Weapon: None
 0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
 1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
@@ -123,11 +123,11 @@ Weapon: None
 	1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
 	2: CardSlot('Mad Bomber', Mana=2, 3 / 2)
 
-Player (0) - health: 24, armour: 0, mana: 2 / 10
+Player (0) - health: 29, armour: 0, mana: 2 / 10
 Weapon: None
 
 1 plays Mad Bomber
-Opponent (1) - health: 25, armour: 0, mana: 8 / 10
+Opponent (1) - health: 21, armour: 0, mana: 8 / 10
 Weapon: None
 0: CardSlot('Mad Bomber', Mana=2, 3 / 2)
 1: CardSlot('Mad Bomber', Mana=2, 3 / 2)
@@ -139,9 +139,9 @@ Weapon: None
 	------------
 	0: CardSlot('Mad Bomber', Mana=2, 3 / 1)
 	1: CardSlot('Mad Bomber', Mana=2, 3 / 1)
-	2: CardSlot('Mad Bomber', Mana=2, 3 / 2)
+	2: CardSlot('Mad Bomber', Mana=2, 3 / 1)
 
-Player (0) - health: 24, armour: 0, mana: 2 / 10
+Player (0) - health: 29, armour: 0, mana: 2 / 10
 Weapon: None
 
 Game Over: Player 0 Wins

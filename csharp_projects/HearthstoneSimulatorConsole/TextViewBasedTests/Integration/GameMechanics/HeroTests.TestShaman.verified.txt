@@ -120,7 +120,7 @@ Weapon: None
 3: CardSlot('Argent Commander', Mana=6, 4 / 2)
 4: CardSlot('Argent Commander', Mana=6, 4 / 2)
 
-0 summons Healing Totem
+0 summons Strength Totem
 Opponent (1) - health: 30, armour: 0, mana: 10 / 10
 Weapon: None
 0: CardSlot('Argent Commander', Mana=6, 4 / 2)
@@ -132,7 +132,7 @@ Weapon: None
 
 	------------
 	0: CardSlot('Stoneclaw Totem', Mana=1, 0 / 2)
-	1: CardSlot('Healing Totem', Mana=1, 0 / 2)
+	1: CardSlot('Strength Totem', Mana=1, 0 / 2)
 
 Player (0) - health: 30, armour: 0, mana: 8 / 10
 Weapon: None
@@ -153,7 +153,7 @@ Weapon: None
 
 	------------
 	0: CardSlot('Stoneclaw Totem', Mana=1, 0 / 2)
-	1: CardSlot('Healing Totem', Mana=1, 0 / 2)
+	1: CardSlot('Strength Totem', Mana=1, 0 / 2)
 
 Player (0) - health: 30, armour: 0, mana: 8 / 10
 Weapon: None
@@ -177,8 +177,8 @@ Weapon: None
 6: CardSlot('Argent Commander', Mana=6, 4 / 2)
 
 	------------
-	0: CardSlot('Stoneclaw Totem', Mana=1, 0 / 2)
-	1: CardSlot('Healing Totem', Mana=1, 0 / 2)
+	0: CardSlot('Stoneclaw Totem', Mana=1, 1 / 2)
+	1: CardSlot('Strength Totem', Mana=1, 0 / 2)
 
 Player (0) - health: 30, armour: 0, mana: 8 / 10
 Weapon: None
@@ -199,8 +199,8 @@ Weapon: None
 6: CardSlot('Argent Commander', Mana=6, 4 / 2)
 
 	------------
-	0: CardSlot('Stoneclaw Totem', Mana=1, 0 / 2)
-	1: CardSlot('Healing Totem', Mana=1, 0 / 2)
+	0: CardSlot('Stoneclaw Totem', Mana=1, 1 / 2)
+	1: CardSlot('Strength Totem', Mana=1, 0 / 2)
 
 Player (0) - health: 30, armour: 0, mana: 8 / 10
 Weapon: None
@@ -224,8 +224,8 @@ Weapon: None
 6: CardSlot('Argent Commander', Mana=6, 4 / 2)
 
 	------------
-	0: CardSlot('Stoneclaw Totem', Mana=1, 0 / 2)
-	1: CardSlot('Healing Totem', Mana=1, 0 / 2)
+	0: CardSlot('Stoneclaw Totem', Mana=1, 1 / 2)
+	1: CardSlot('Strength Totem', Mana=1, 0 / 2)
 
 Player (0) - health: 30, armour: 0, mana: 10 / 10
 Weapon: None
@@ -235,6 +235,137 @@ Weapon: None
 3: CardSlot('Argent Commander', Mana=6, 4 / 2)
 4: CardSlot('Argent Commander', Mana=6, 4 / 2)
 5: CardSlot('Argent Commander', Mana=6, 4 / 2)
+
+0 summons Healing Totem
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Argent Commander', Mana=6, 4 / 2)
+6: CardSlot('Argent Commander', Mana=6, 4 / 2)
+
+	------------
+	0: CardSlot('Stoneclaw Totem', Mana=1, 1 / 2)
+	1: CardSlot('Strength Totem', Mana=1, 0 / 2)
+	2: CardSlot('Healing Totem', Mana=1, 0 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Argent Commander', Mana=6, 4 / 2)
+5: CardSlot('Argent Commander', Mana=6, 4 / 2)
+
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Argent Commander', Mana=6, 4 / 2)
+6: CardSlot('Argent Commander', Mana=6, 4 / 2)
+
+	------------
+	0: CardSlot('Stoneclaw Totem', Mana=1, 1 / 2)
+	1: CardSlot('Strength Totem', Mana=1, 0 / 2)
+	2: CardSlot('Healing Totem', Mana=1, 0 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Argent Commander', Mana=6, 4 / 2)
+5: CardSlot('Argent Commander', Mana=6, 4 / 2)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Argent Commander', Mana=6, 4 / 2)
+6: CardSlot('Argent Commander', Mana=6, 4 / 2)
+7: CardSlot('Argent Commander', Mana=6, 4 / 2)
+
+	------------
+	0: CardSlot('Stoneclaw Totem', Mana=1, 2 / 2)
+	1: CardSlot('Strength Totem', Mana=1, 0 / 2)
+	2: CardSlot('Healing Totem', Mana=1, 0 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Argent Commander', Mana=6, 4 / 2)
+5: CardSlot('Argent Commander', Mana=6, 4 / 2)
+
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Argent Commander', Mana=6, 4 / 2)
+6: CardSlot('Argent Commander', Mana=6, 4 / 2)
+7: CardSlot('Argent Commander', Mana=6, 4 / 2)
+
+	------------
+	0: CardSlot('Stoneclaw Totem', Mana=1, 2 / 2)
+	1: CardSlot('Strength Totem', Mana=1, 0 / 2)
+	2: CardSlot('Healing Totem', Mana=1, 0 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Argent Commander', Mana=6, 4 / 2)
+5: CardSlot('Argent Commander', Mana=6, 4 / 2)
+
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Argent Commander', Mana=6, 4 / 2)
+6: CardSlot('Argent Commander', Mana=6, 4 / 2)
+7: CardSlot('Argent Commander', Mana=6, 4 / 2)
+
+	------------
+	0: CardSlot('Stoneclaw Totem', Mana=1, 2 / 2)
+	1: CardSlot('Strength Totem', Mana=1, 0 / 2)
+	2: CardSlot('Healing Totem', Mana=1, 0 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Argent Commander', Mana=6, 4 / 2)
+5: CardSlot('Argent Commander', Mana=6, 4 / 2)
+6: CardSlot('Argent Commander', Mana=6, 4 / 2)
 
 0 summons Searing Totem
 Opponent (1) - health: 30, armour: 0, mana: 10 / 10
@@ -246,144 +377,13 @@ Weapon: None
 4: CardSlot('Coin', Mana=0)
 5: CardSlot('Argent Commander', Mana=6, 4 / 2)
 6: CardSlot('Argent Commander', Mana=6, 4 / 2)
-
-	------------
-	0: CardSlot('Stoneclaw Totem', Mana=1, 0 / 2)
-	1: CardSlot('Healing Totem', Mana=1, 0 / 2)
-	2: CardSlot('Searing Totem', Mana=1, 1 / 1)
-
-Player (0) - health: 30, armour: 0, mana: 8 / 10
-Weapon: None
-0: CardSlot('Argent Commander', Mana=6, 4 / 2)
-1: CardSlot('Argent Commander', Mana=6, 4 / 2)
-2: CardSlot('Argent Commander', Mana=6, 4 / 2)
-3: CardSlot('Argent Commander', Mana=6, 4 / 2)
-4: CardSlot('Argent Commander', Mana=6, 4 / 2)
-5: CardSlot('Argent Commander', Mana=6, 4 / 2)
-
-Opponent (1) - health: 30, armour: 0, mana: 10 / 10
-Weapon: None
-0: CardSlot('Argent Commander', Mana=6, 4 / 2)
-1: CardSlot('Argent Commander', Mana=6, 4 / 2)
-2: CardSlot('Argent Commander', Mana=6, 4 / 2)
-3: CardSlot('Argent Commander', Mana=6, 4 / 2)
-4: CardSlot('Coin', Mana=0)
-5: CardSlot('Argent Commander', Mana=6, 4 / 2)
-6: CardSlot('Argent Commander', Mana=6, 4 / 2)
-
-	------------
-	0: CardSlot('Stoneclaw Totem', Mana=1, 0 / 2)
-	1: CardSlot('Healing Totem', Mana=1, 0 / 2)
-	2: CardSlot('Searing Totem', Mana=1, 1 / 1)
-
-Player (0) - health: 30, armour: 0, mana: 8 / 10
-Weapon: None
-0: CardSlot('Argent Commander', Mana=6, 4 / 2)
-1: CardSlot('Argent Commander', Mana=6, 4 / 2)
-2: CardSlot('Argent Commander', Mana=6, 4 / 2)
-3: CardSlot('Argent Commander', Mana=6, 4 / 2)
-4: CardSlot('Argent Commander', Mana=6, 4 / 2)
-5: CardSlot('Argent Commander', Mana=6, 4 / 2)
-
--------------------------------------------
-1 turn
--------------------------------------------
-Opponent (1) - health: 30, armour: 0, mana: 10 / 10
-Weapon: None
-0: CardSlot('Argent Commander', Mana=6, 4 / 2)
-1: CardSlot('Argent Commander', Mana=6, 4 / 2)
-2: CardSlot('Argent Commander', Mana=6, 4 / 2)
-3: CardSlot('Argent Commander', Mana=6, 4 / 2)
-4: CardSlot('Coin', Mana=0)
-5: CardSlot('Argent Commander', Mana=6, 4 / 2)
-6: CardSlot('Argent Commander', Mana=6, 4 / 2)
 7: CardSlot('Argent Commander', Mana=6, 4 / 2)
 
 	------------
-	0: CardSlot('Stoneclaw Totem', Mana=1, 0 / 2)
-	1: CardSlot('Healing Totem', Mana=1, 0 / 2)
-	2: CardSlot('Searing Totem', Mana=1, 1 / 1)
-
-Player (0) - health: 30, armour: 0, mana: 8 / 10
-Weapon: None
-0: CardSlot('Argent Commander', Mana=6, 4 / 2)
-1: CardSlot('Argent Commander', Mana=6, 4 / 2)
-2: CardSlot('Argent Commander', Mana=6, 4 / 2)
-3: CardSlot('Argent Commander', Mana=6, 4 / 2)
-4: CardSlot('Argent Commander', Mana=6, 4 / 2)
-5: CardSlot('Argent Commander', Mana=6, 4 / 2)
-
-Opponent (1) - health: 30, armour: 0, mana: 10 / 10
-Weapon: None
-0: CardSlot('Argent Commander', Mana=6, 4 / 2)
-1: CardSlot('Argent Commander', Mana=6, 4 / 2)
-2: CardSlot('Argent Commander', Mana=6, 4 / 2)
-3: CardSlot('Argent Commander', Mana=6, 4 / 2)
-4: CardSlot('Coin', Mana=0)
-5: CardSlot('Argent Commander', Mana=6, 4 / 2)
-6: CardSlot('Argent Commander', Mana=6, 4 / 2)
-7: CardSlot('Argent Commander', Mana=6, 4 / 2)
-
-	------------
-	0: CardSlot('Stoneclaw Totem', Mana=1, 0 / 2)
-	1: CardSlot('Healing Totem', Mana=1, 0 / 2)
-	2: CardSlot('Searing Totem', Mana=1, 1 / 1)
-
-Player (0) - health: 30, armour: 0, mana: 8 / 10
-Weapon: None
-0: CardSlot('Argent Commander', Mana=6, 4 / 2)
-1: CardSlot('Argent Commander', Mana=6, 4 / 2)
-2: CardSlot('Argent Commander', Mana=6, 4 / 2)
-3: CardSlot('Argent Commander', Mana=6, 4 / 2)
-4: CardSlot('Argent Commander', Mana=6, 4 / 2)
-5: CardSlot('Argent Commander', Mana=6, 4 / 2)
-
--------------------------------------------
-0 turn
--------------------------------------------
-Opponent (1) - health: 30, armour: 0, mana: 10 / 10
-Weapon: None
-0: CardSlot('Argent Commander', Mana=6, 4 / 2)
-1: CardSlot('Argent Commander', Mana=6, 4 / 2)
-2: CardSlot('Argent Commander', Mana=6, 4 / 2)
-3: CardSlot('Argent Commander', Mana=6, 4 / 2)
-4: CardSlot('Coin', Mana=0)
-5: CardSlot('Argent Commander', Mana=6, 4 / 2)
-6: CardSlot('Argent Commander', Mana=6, 4 / 2)
-7: CardSlot('Argent Commander', Mana=6, 4 / 2)
-
-	------------
-	0: CardSlot('Stoneclaw Totem', Mana=1, 0 / 2)
-	1: CardSlot('Healing Totem', Mana=1, 0 / 2)
-	2: CardSlot('Searing Totem', Mana=1, 1 / 1)
-
-Player (0) - health: 30, armour: 0, mana: 10 / 10
-Weapon: None
-0: CardSlot('Argent Commander', Mana=6, 4 / 2)
-1: CardSlot('Argent Commander', Mana=6, 4 / 2)
-2: CardSlot('Argent Commander', Mana=6, 4 / 2)
-3: CardSlot('Argent Commander', Mana=6, 4 / 2)
-4: CardSlot('Argent Commander', Mana=6, 4 / 2)
-5: CardSlot('Argent Commander', Mana=6, 4 / 2)
-6: CardSlot('Argent Commander', Mana=6, 4 / 2)
-
-0 summons Strength Totem
-Opponent (1) - health: 30, armour: 0, mana: 10 / 10
-Weapon: None
-0: CardSlot('Argent Commander', Mana=6, 4 / 2)
-1: CardSlot('Argent Commander', Mana=6, 4 / 2)
-2: CardSlot('Argent Commander', Mana=6, 4 / 2)
-3: CardSlot('Argent Commander', Mana=6, 4 / 2)
-4: CardSlot('Coin', Mana=0)
-5: CardSlot('Argent Commander', Mana=6, 4 / 2)
-6: CardSlot('Argent Commander', Mana=6, 4 / 2)
-7: CardSlot('Argent Commander', Mana=6, 4 / 2)
-
-	------------
-	0: CardSlot('Stoneclaw Totem', Mana=1, 0 / 2)
-	1: CardSlot('Healing Totem', Mana=1, 0 / 2)
-	2: CardSlot('Searing Totem', Mana=1, 1 / 1)
-	3: CardSlot('Strength Totem', Mana=1, 0 / 2)
+	0: CardSlot('Stoneclaw Totem', Mana=1, 2 / 2)
+	1: CardSlot('Strength Totem', Mana=1, 0 / 2)
+	2: CardSlot('Healing Totem', Mana=1, 0 / 2)
+	3: CardSlot('Searing Totem', Mana=1, 1 / 1)
 
 Player (0) - health: 30, armour: 0, mana: 8 / 10
 Weapon: None
@@ -407,10 +407,10 @@ Weapon: None
 7: CardSlot('Argent Commander', Mana=6, 4 / 2)
 
 	------------
-	0: CardSlot('Stoneclaw Totem', Mana=1, 0 / 2)
-	1: CardSlot('Healing Totem', Mana=1, 0 / 2)
-	2: CardSlot('Searing Totem', Mana=1, 1 / 1)
-	3: CardSlot('Strength Totem', Mana=1, 0 / 2)
+	0: CardSlot('Stoneclaw Totem', Mana=1, 2 / 2)
+	1: CardSlot('Strength Totem', Mana=1, 0 / 2)
+	2: CardSlot('Healing Totem', Mana=1, 0 / 2)
+	3: CardSlot('Searing Totem', Mana=1, 1 / 1)
 
 Player (0) - health: 30, armour: 0, mana: 8 / 10
 Weapon: None
@@ -438,10 +438,10 @@ Weapon: None
 8: CardSlot('Argent Commander', Mana=6, 4 / 2)
 
 	------------
-	0: CardSlot('Stoneclaw Totem', Mana=1, 1 / 2)
-	1: CardSlot('Healing Totem', Mana=1, 0 / 2)
-	2: CardSlot('Searing Totem', Mana=1, 1 / 1)
-	3: CardSlot('Strength Totem', Mana=1, 0 / 2)
+	0: CardSlot('Stoneclaw Totem', Mana=1, 2 / 2)
+	1: CardSlot('Strength Totem', Mana=1, 0 / 2)
+	2: CardSlot('Healing Totem', Mana=1, 0 / 2)
+	3: CardSlot('Searing Totem', Mana=1, 2 / 1)
 
 Player (0) - health: 30, armour: 0, mana: 8 / 10
 Weapon: None
@@ -466,10 +466,10 @@ Weapon: None
 8: CardSlot('Argent Commander', Mana=6, 4 / 2)
 
 	------------
-	0: CardSlot('Stoneclaw Totem', Mana=1, 1 / 2)
-	1: CardSlot('Healing Totem', Mana=1, 0 / 2)
-	2: CardSlot('Searing Totem', Mana=1, 1 / 1)
-	3: CardSlot('Strength Totem', Mana=1, 0 / 2)
+	0: CardSlot('Stoneclaw Totem', Mana=1, 2 / 2)
+	1: CardSlot('Strength Totem', Mana=1, 0 / 2)
+	2: CardSlot('Healing Totem', Mana=1, 0 / 2)
+	3: CardSlot('Searing Totem', Mana=1, 2 / 1)
 
 Player (0) - health: 30, armour: 0, mana: 8 / 10
 Weapon: None
@@ -497,10 +497,10 @@ Weapon: None
 8: CardSlot('Argent Commander', Mana=6, 4 / 2)
 
 	------------
-	0: CardSlot('Stoneclaw Totem', Mana=1, 1 / 2)
-	1: CardSlot('Healing Totem', Mana=1, 0 / 2)
-	2: CardSlot('Searing Totem', Mana=1, 1 / 1)
-	3: CardSlot('Strength Totem', Mana=1, 0 / 2)
+	0: CardSlot('Stoneclaw Totem', Mana=1, 2 / 2)
+	1: CardSlot('Strength Totem', Mana=1, 0 / 2)
+	2: CardSlot('Healing Totem', Mana=1, 0 / 2)
+	3: CardSlot('Searing Totem', Mana=1, 2 / 1)
 
 Player (0) - health: 30, armour: 0, mana: 10 / 10
 Weapon: None
@@ -527,10 +527,10 @@ Weapon: None
 8: CardSlot('Argent Commander', Mana=6, 4 / 2)
 
 	------------
-	0: CardSlot('Stoneclaw Totem', Mana=1, 1 / 2)
-	1: CardSlot('Healing Totem', Mana=1, 0 / 2)
-	2: CardSlot('Searing Totem', Mana=1, 1 / 1)
-	3: CardSlot('Strength Totem', Mana=1, 0 / 2)
+	0: CardSlot('Stoneclaw Totem', Mana=1, 2 / 2)
+	1: CardSlot('Strength Totem', Mana=1, 0 / 2)
+	2: CardSlot('Healing Totem', Mana=1, 0 / 2)
+	3: CardSlot('Searing Totem', Mana=1, 2 / 1)
 	4: CardSlot('Healing Totem', Mana=1, 0 / 2)
 
 Player (0) - health: 30, armour: 0, mana: 8 / 10

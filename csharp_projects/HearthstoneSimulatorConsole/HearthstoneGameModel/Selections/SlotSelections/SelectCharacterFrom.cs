@@ -49,16 +49,23 @@ namespace HearthstoneGameModel.Selections.SlotSelections
                     BattlerCardSlot battlerSlot = (BattlerCardSlot)slot;
                     if (affectedCardSlot.CardType == CardType.Spell)
                     {
-                        if (HSGameUtils.TargetableWithSpell(battlerSlot, affectedCardSlot.Player))
+                        if (!HSGameUtils.TargetableWithSpell(battlerSlot, affectedCardSlot.Player))
                         {
                             continue;
                         }
                     }
                     else if (affectedCardSlot.CardType == CardType.Hero)
                     {
-                        if (HSGameUtils.TargetableWithHeroPower(battlerSlot, affectedCardSlot.Player))
+                        if (!HSGameUtils.TargetableWithHeroPower(battlerSlot, affectedCardSlot.Player))
                         {
                             // TODO: handle new hero cards
+                            continue;
+                        }
+                    }
+                    else if (affectedCardSlot.CardType == CardType.Minion)
+                    {
+                        if (!HSGameUtils.TargetableWithMinionEffect(battlerSlot, affectedCardSlot.Player))
+                        {
                             continue;
                         }
                     }

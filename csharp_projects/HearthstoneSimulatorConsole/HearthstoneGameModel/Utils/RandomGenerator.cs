@@ -13,7 +13,7 @@ namespace HearthstoneGameModel.Utils
 
         public static int GetRandomInt(int minValue, int maxValue)
         {
-            return _random.Next(minValue, maxValue);
+            return _random.Next(minValue, maxValue+1);
         }
 
         public static void SetSeed(int seed)

@@ -39,7 +39,7 @@ namespace HearthstoneGameModel.Game.Utils
             {
                 return false;
             }
-            return slot.HasElusive;
+            return !slot.HasElusive;
         }
 
         public static bool TargetableWithHeroPower(BattlerCardSlot slot, int playerDoingTargeting)
@@ -48,7 +48,16 @@ namespace HearthstoneGameModel.Game.Utils
             {
                 return false;
             }
-            return slot.HasElusive;
+            return !slot.HasElusive;
+        }
+
+        public static bool TargetableWithMinionEffect(BattlerCardSlot slot, int playerDoingTargeting)
+        {
+            if (slot.HasStealth && playerDoingTargeting != slot.Player)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

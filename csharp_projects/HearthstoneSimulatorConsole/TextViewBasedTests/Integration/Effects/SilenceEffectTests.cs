@@ -10,24 +10,6 @@ namespace TextViewBasedTests.Integration.Effects
 {
     public class SilenceEffectTests
     {
-        /*
-- [ ] Silence
-  - [x] opponent stealth
-  - [x] your stealth
-  - [x] : Dire Wolf Alpha
-  - [x] External: adjacent minions of DWA
-  - [x] Trigger: Flesheating Ghoul
-  - [x] Deathrattle: Leper Gnome
-  - [x] Taunt: Shieldbearer
-  - [x] Conditional: AmaniBerserker
-  - [x] Buff: BloodsailRaider (ClassicNeutralCommonTests)
-  - [x] Windfury: Young Dragonhawk
-  - [x] Elusive: Faerie Dragon
-  - [x] Divine Shield: Argent Squire
-  - [x] TimeLimitedEffect: AbusiveSergeant
-  - [ ] Sleep
-         */
-
         [Fact]
         public Task TestOpponentStealth()
         {
