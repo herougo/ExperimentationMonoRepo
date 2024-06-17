@@ -1,0 +1,42 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Silver Hand Knight', Mana=5, 4 / 4)
+1: CardSlot('Silver Hand Knight', Mana=5, 4 / 4)
+2: CardSlot('Silver Hand Knight', Mana=5, 4 / 4)
+3: CardSlot('Silver Hand Knight', Mana=5, 4 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Silver Hand Knight', Mana=5, 4 / 4)
+1: CardSlot('Silver Hand Knight', Mana=5, 4 / 4)
+2: CardSlot('Silver Hand Knight', Mana=5, 4 / 4)
+3: CardSlot('Silver Hand Knight', Mana=5, 4 / 4)
+
+0 plays Silver Hand Knight
+0 summons Squire
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Silver Hand Knight', Mana=5, 4 / 4)
+1: CardSlot('Silver Hand Knight', Mana=5, 4 / 4)
+2: CardSlot('Silver Hand Knight', Mana=5, 4 / 4)
+3: CardSlot('Silver Hand Knight', Mana=5, 4 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Silver Hand Knight', Mana=5, 4 / 4)
+	1: CardSlot('Squire', Mana=1, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 5 / 10
+Weapon: None
+0: CardSlot('Silver Hand Knight', Mana=5, 4 / 4)
+1: CardSlot('Silver Hand Knight', Mana=5, 4 / 4)
+2: CardSlot('Silver Hand Knight', Mana=5, 4 / 4)
+
+Game Over: Player 1 Wins

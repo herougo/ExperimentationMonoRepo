@@ -64,7 +64,23 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new TaurenWarrior();
                 case CardIds.ThrallmarFarseer:
                     return new ThrallmarFarseer();
+                case CardIds.AncientBrewmaster:
+                    return new AncientBrewmaster();
+                case CardIds.CultMaster:
+                    return new CultMaster();
+                case CardIds.DarkIronDwarf:
+                    return new DarkIronDwarf();
 
+                case CardIds.MogushanWarden:
+                    return new MogushanWarden();
+                case CardIds.SilvermoonGuardian:
+                    return new SilvermoonGuardian();
+                case CardIds.FenCreeper:
+                    return new FenCreeper();
+                case CardIds.SilverHandKnight:
+                    return new SilverHandKnight();
+                case CardIds.SpitefulSmith:
+                    return new SpitefulSmith();
                 case CardIds.StranglethornTiger:
                     return new StranglethornTiger();
 
@@ -76,6 +92,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
 
                 case CardIds.DamagedGolem:
                     return new DamagedGolem();
+                case CardIds.Squire:
+                    return new Squire();
 
                 case CardIds.Priest:
                     return new Priest();

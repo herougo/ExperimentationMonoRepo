@@ -34,16 +34,17 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
             ).ToHashSet();
 
             EffectManagerNodePlan plan = new EffectManagerNodePlan();
-
+            int buh1 = 0;
             foreach (CardSlot slot in prevSelectedSlots)
             {
                 if (!selectedCardSlots.Contains(slot))
                 {
                     plan.ToRemove.Add(_memoryCurrentSelection[slot]);
                     _memoryCurrentSelection.Remove(slot);
+                    buh1 += 1;
                 }
             }
-
+            int buh2 = 0;
             foreach (CardSlot slot in selectedCardSlots)
             {
                 if (!prevSelectedSlots.Contains(slot))
@@ -54,6 +55,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
                     );
                     plan.ToAdd.Add(node);
                     _memoryCurrentSelection[slot] = node;
+                    buh2 += 1;
                 }
             }
 

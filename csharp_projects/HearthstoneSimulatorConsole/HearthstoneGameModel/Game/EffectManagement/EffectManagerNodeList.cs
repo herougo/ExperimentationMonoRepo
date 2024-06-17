@@ -35,6 +35,10 @@ namespace HearthstoneGameModel.Game.EffectManagement
 
         public void Remove(EffectManagerNode emNode)
         {
+            if (!_emNodeToLLNode.ContainsKey(emNode))
+            {
+                throw new Exception($"bah: {emNode.AffectedSlot.ToString()}");
+            }
             LinkedListNode<EffectManagerNode> llNode = _emNodeToLLNode[emNode];
             _linkedList.RemoveNode(llNode);
             _emNodeToLLNode.Remove(emNode);

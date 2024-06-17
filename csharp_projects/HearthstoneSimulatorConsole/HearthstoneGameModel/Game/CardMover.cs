@@ -101,11 +101,6 @@ namespace HearthstoneGameModel.Game
                 _game.EffectManager.PopEffectsBySlot(cardSlot);
                 RemoveCardSlot(cardSlot);
             }
-
-            if (cardSlots.Count > 0)
-            {
-
-            }
         }
 
         public void DrawCards(int player, int numCards)
@@ -143,6 +138,7 @@ namespace HearthstoneGameModel.Game
             _game.Weapons[player] = null; // Must be set to None before sending event
             _game.Players[player].UpdateStats();
             _game.EffectManager.SendEvent(EffectEvent.WeaponDestroyed, weaponCardSlot);
+            // _game.EffectManager.PopEffectsBySlot(weaponCardSlot);
             RemoveCardSlot(weaponCardSlot);
         }
 

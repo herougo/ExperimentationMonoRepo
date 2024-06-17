@@ -857,7 +857,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect> {
                 new ConditionalEffect(
-                    new AndCondition(new WhileSelfDamaged(), new WhileWeaponEquipped()),
+                    new WhileSelfDamaged(),
                     new ContinuousSelectionFieldEffect(
                         SelectionConstants.PlayerWeapon,
                         new BuffAttack(2)

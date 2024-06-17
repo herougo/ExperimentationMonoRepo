@@ -1,0 +1,79 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+1: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+2: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+3: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+1: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+2: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+3: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+
+0 plays Ancient Brewmaster
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+1: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+2: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+3: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+1: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+2: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+
+0 summons Silver Hand Recruit
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+1: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+2: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+3: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+	1: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 4 / 10
+Weapon: None
+0: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+1: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+2: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+
+0 plays Ancient Brewmaster
+ERROR: selected card is not one of the possible options
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+1: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+2: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+3: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+	1: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+1: CardSlot('Ancient Brewmaster', Mana=4, 5 / 4)
+2: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+
+Game Over: Player 1 Wins

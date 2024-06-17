@@ -381,5 +381,137 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestAncientBrewmaster()
+        {
+            string actionText = @"play 0 0
+hero_power
+play 0 2
+select 0 2
+select 0 1
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.AncientBrewmaster, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestCultMaster()
+        {
+            string actionText = @"play 0 0
+hero_power
+play 0 2
+end_turn
+play 0 0
+hero_power
+play 0 2
+end_turn
+attack 1 1
+attack 1 1
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.CultMaster, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestDarkIronDwarf()
+        {
+            string actionText = @"play 0 0
+play 0 0
+select 0 0
+select 0 1
+end_turn
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.DarkIronDwarf, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestMogushanWarden()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+end_turn
+attack 0 -1
+attack 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.Wisp, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.MogushanWarden, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestSilvermoonGuardian()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+end_turn
+attack 0 0
+end_turn
+attack 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.SilvermoonGuardian, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestFenCreeper()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+end_turn
+attack 0 -1
+attack 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.Wisp, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.FenCreeper, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestSilverHandKnight()
+        {
+            string actionText = @"play 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.SilverHandKnight, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.SilverHandKnight, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestSpitefulSmith()
+        {
+            string actionText = @"play 0 0
+hero_power
+attack -1 -1
+end_turn
+hero_power
+attack -1 0
+end_turn
+attack -1 -1
+end_turn
+end_turn
+attack -1 -1
+hero_power
+attack -1 -1
+end_turn
+end_turn
+hero_power
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.SpitefulSmith, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.SpitefulSmith, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Rogue);
+            return Verify(log);
+        }
     }
 }
