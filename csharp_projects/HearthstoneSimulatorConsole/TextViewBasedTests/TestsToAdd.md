@@ -23,6 +23,19 @@ Game Mechanics
 Effects
 
 - [ ] Sleep
+- [ ] Silence
+  - [ ] opponent stealth
+  - [ ] your stealth
+  - [ ] : Dire Wolf Alpha
+  - [ ] External: adjacent minions of DWA
+  - [ ] Trigger: Flesheating Ghoul
+  - [ ] Deathrattle: Leper Gnome
+  - [ ] Taunt: Shieldbearer
+  - [ ] Conditional: AmaniBerserker
+  - [ ] Buff: BloodsailRaider
+  - [ ] Windfury: Young Dragonhawk
+  - [ ] Elusive: Faerie Dragon
+  - [ ] Divine Shield: Argent Squire
 - etc
 
 Attack

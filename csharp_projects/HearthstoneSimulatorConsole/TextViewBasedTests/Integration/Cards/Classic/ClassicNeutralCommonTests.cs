@@ -283,6 +283,21 @@ concede";
         }
 
         [Fact]
+        public Task TestIronbeakOwl()
+        {
+            string actionText = @"hero_power
+play 0 0
+end_turn
+play 0 0
+select 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.BloodsailRaider, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.IronbeakOwl, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Rogue);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestJunglePanther()
         {
             string actionText = @"play 0 0

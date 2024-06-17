@@ -52,7 +52,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new FlesheatingGhoul();
                 case CardIds.HarvestGolem:
                     return new HarvestGolem();
-
+                case CardIds.IronbeakOwl:
+                    return new IronbeakOwl();
                 case CardIds.JunglePanther:
                     return new JunglePanther();
 

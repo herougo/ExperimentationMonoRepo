@@ -1,0 +1,151 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+3: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=0, 1 / 1)
+1: CardSlot('Flesheating Ghoul', Mana=3, 3 / 3)
+2: CardSlot('Wisp', Mana=0, 1 / 1)
+3: CardSlot('Flesheating Ghoul', Mana=3, 3 / 3)
+
+0 plays Wisp
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+3: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Wisp', Mana=0, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Flesheating Ghoul', Mana=3, 3 / 3)
+1: CardSlot('Wisp', Mana=0, 1 / 1)
+2: CardSlot('Flesheating Ghoul', Mana=3, 3 / 3)
+
+0 plays Flesheating Ghoul
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+3: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Wisp', Mana=0, 1 / 1)
+	1: CardSlot('Flesheating Ghoul', Mana=3, 3 / 3)
+
+Player (0) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=0, 1 / 1)
+1: CardSlot('Flesheating Ghoul', Mana=3, 3 / 3)
+
+0 plays Wisp
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+3: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Wisp', Mana=0, 1 / 1)
+	1: CardSlot('Flesheating Ghoul', Mana=3, 3 / 3)
+	2: CardSlot('Wisp', Mana=0, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('Flesheating Ghoul', Mana=3, 3 / 3)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+3: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Wisp', Mana=0, 1 / 1)
+	1: CardSlot('Flesheating Ghoul', Mana=3, 3 / 3)
+	2: CardSlot('Wisp', Mana=0, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('Flesheating Ghoul', Mana=3, 3 / 3)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+3: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+
+	------------
+	0: CardSlot('Wisp', Mana=0, 1 / 1)
+	1: CardSlot('Flesheating Ghoul', Mana=3, 3 / 3)
+	2: CardSlot('Wisp', Mana=0, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('Flesheating Ghoul', Mana=3, 3 / 3)
+
+1 plays Ironbeak Owl
+Opponent (1) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+
+	0: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+	------------
+	0: CardSlot('Wisp', Mana=0, 1 / 1)
+	1: CardSlot('Flesheating Ghoul', Mana=3, 3 / 3)
+	2: CardSlot('Wisp', Mana=0, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('Flesheating Ghoul', Mana=3, 3 / 3)
+
+Player 0's C001 died
+Opponent (1) - health: 30, armour: 0, mana: 5 / 10
+Weapon: None
+0: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+
+	0: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+	------------
+	0: CardSlot('Wisp', Mana=0, 1 / 1)
+	1: CardSlot('Flesheating Ghoul', Mana=3, 3 / 3)
+
+Player (0) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('Flesheating Ghoul', Mana=3, 3 / 3)
+
+Game Over: Player 0 Wins

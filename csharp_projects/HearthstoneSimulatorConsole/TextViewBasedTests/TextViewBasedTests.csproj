@@ -27,8 +27,4 @@
     <ProjectReference Include="..\TextView\TextView.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Integration\Effects\" />
-  </ItemGroup>
-
 </Project>
