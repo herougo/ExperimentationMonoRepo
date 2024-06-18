@@ -513,5 +513,72 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Rogue);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestStranglethornTiger()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+end_turn
+attack 0 0
+attack 0 -1
+end_turn
+attack 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.StranglethornTiger, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.StranglethornTiger, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestFrostElemental()
+        {
+            string actionText = @"play 0 0
+select 1 -1
+end_turn
+hero_power
+attack -1 -1
+end_turn
+end_turn
+attack -1 -1
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.FrostElemental, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.FrostElemental, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Rogue);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestPriestessOfElune()
+        {
+            string actionText = @"play 0 0
+end_turn
+hero_power
+attack -1 0
+play 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.PriestessOfElune, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.PriestessOfElune, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Rogue);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestWindfuryHarpy()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+end_turn
+attack 0 -1
+attack 0 -1
+attack 0 -1
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.WindfuryHarpy, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }

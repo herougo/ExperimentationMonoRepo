@@ -231,5 +231,24 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Mage);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestFrozen()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+select 0 0
+end_turn
+attack 0 -1
+play 0 1
+select 0 0
+attack 0 -1
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.IronbeakOwl, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.FrostElemental, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Mage);
+            return Verify(log);
+        }
     }
 }

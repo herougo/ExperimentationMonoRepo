@@ -86,6 +86,10 @@ namespace HearthstoneGameModel.Cards.CardFactories
 
                 case CardIds.FrostElemental:
                     return new FrostElemental();
+                case CardIds.PriestessOfElune:
+                    return new PriestessOfElune();
+                case CardIds.WindfuryHarpy:
+                    return new WindfuryHarpy();
 
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();

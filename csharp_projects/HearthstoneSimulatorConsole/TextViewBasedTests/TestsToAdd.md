@@ -37,6 +37,7 @@ Effects
   - [x] Elusive: Faerie Dragon
   - [x] Divine Shield: Argent Squire
   - [x] Sleep
+  - [x] Frozen: Frost Elemental
 - etc
 
 Attack
