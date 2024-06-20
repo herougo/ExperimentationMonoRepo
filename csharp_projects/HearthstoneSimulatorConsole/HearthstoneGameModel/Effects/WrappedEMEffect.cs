@@ -15,6 +15,7 @@ namespace HearthstoneGameModel.Effects
 
         public WrappedEMEffect(EMEffect effect) {
             _effect = effect;
+            _isHandEffect = effect.IsHandEffect;
             _eventsReceived = effect.EventsReceived.ToList();
         }
 

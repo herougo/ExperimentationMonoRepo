@@ -70,7 +70,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new CultMaster();
                 case CardIds.DarkIronDwarf:
                     return new DarkIronDwarf();
-
+                case CardIds.DreadCorsair:
+                    return new DreadCorsair();
                 case CardIds.MogushanWarden:
                     return new MogushanWarden();
                 case CardIds.SilvermoonGuardian:

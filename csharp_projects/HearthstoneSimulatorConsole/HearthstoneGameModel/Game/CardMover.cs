@@ -25,6 +25,8 @@ namespace HearthstoneGameModel.Game
             CardSlot cardSlot = _game.Hands[_game.GameMetadata.Turn].Pop(cardInHandIndex);
             _game.Players[_game.GameMetadata.Turn].CurrentMana -= cardSlot.Mana;
 
+            _game.EffectManager.PopEffectsBySlot(cardSlot);
+
             string cardName = cardSlot.Card.Name;
             _game.UIManager.ReceiveUIEvent(new PlayCardUIEvent(cardName));
 
@@ -49,13 +51,7 @@ namespace HearthstoneGameModel.Game
                 destinationIndex
             );
 
-            foreach (EMEffect effect in cardSlot.Card.InPlayEffects)
-            {
-                EffectManagerNode emNode = new EffectManagerNode(
-                    effect, cardSlot, cardSlot, true
-                );
-                _game.EffectManager.AddEffect(emNode);
-            }
+            _game.EffectManager.AddInPlayEffects(cardSlot);
 
             // prevent attacking on the turn it's summoned (via Sleep effect)
             EffectManagerNode sleepEmNode = new EffectManagerNode(
@@ -110,7 +106,13 @@ namespace HearthstoneGameModel.Game
             int numDrawn = numCards - numBurned;
             List<CardSlot> drawnCards = _game.Decks[player].Draw(numDrawn);
             List<CardSlot> burnedCards = _game.Decks[player].Draw(numBurned);
+            
             _game.Hands[player].AddCards(drawnCards);
+            foreach (CardSlot cardSlot in drawnCards)
+            {
+                _game.EffectManager.AddInHandEffects(cardSlot);
+            }
+
             foreach (CardSlot cardSlot in burnedCards)
             {
                 SendCardToLimbo(cardSlot);
@@ -161,13 +163,7 @@ namespace HearthstoneGameModel.Game
             string cardName = cardSlot.Card.Name;
             _game.UIManager.ReceiveUIEvent(new SummonMinionUIEvent(cardSlot.Player, cardName));
 
-            foreach (EMEffect effect in cardSlot.Card.InPlayEffects)
-            {
-                EffectManagerNode emNode = new EffectManagerNode(
-                    effect, cardSlot, cardSlot, true
-                );
-                _game.EffectManager.AddEffect(emNode);
-            }
+            _game.EffectManager.AddInPlayEffects(cardSlot);
 
             // prevent attacking on the turn it's summoned (via Sleep effect)
             EffectManagerNode sleepEmNode = new EffectManagerNode(
@@ -203,8 +199,11 @@ namespace HearthstoneGameModel.Game
             foreach (CardSlot cardSlot in toReturn)
             {
                 // TODO: UIManager
-                _game.EffectManager.SendEvent(EffectEvent.MinionReturnedToHand, cardSlot);
                 _game.EffectManager.PopEffectsBySlot(cardSlot);
+
+                _game.EffectManager.AddInHandEffects(cardSlot);
+
+                _game.EffectManager.SendEvent(EffectEvent.MinionReturnedToHand, cardSlot);
             }
 
             KillMinions(toDie);

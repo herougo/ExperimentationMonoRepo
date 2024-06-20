@@ -8,11 +8,13 @@ using HearthstoneGameModel.Conditions;
 using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ContinuousEffects;
+using HearthstoneGameModel.Effects.HandContinuousEffects;
 using HearthstoneGameModel.Effects.OneTimeEffects;
 using HearthstoneGameModel.Effects.TriggerEffects;
 using HearthstoneGameModel.Effects.WrappedEMEffects;
 using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
 using HearthstoneGameModel.Selections;
+using HearthstoneGameModel.ValueMonitors;
 using HearthstoneGameModel.Values;
 
 namespace HearthstoneGameModel.Cards.Implementations.Classic
@@ -736,7 +738,12 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _inPlayEffects = new List<EMEffect> {
                 new Taunt()
             };
-            // TODO: in-hand effect
+            _inHandEffects = new List<EMEffect> {
+                new ContinuousMonitorEffect(
+                    new ManaDiscount(new OwnWeaponAttackIntValue()),
+                    new OwnWeaponAttackIntValueMonitor()
+                )
+            };
         }
 
         public override Card Copy()

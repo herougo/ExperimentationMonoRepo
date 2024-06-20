@@ -20,6 +20,10 @@ Game Mechanics
   - [x] hero power already used error
   - [x] hero power refresh next turn
 
+Cards
+- [ ] VentureCoMercenary
+- [ ] DreadCorsair
+
 Effects
 
 - [ ] Sleep
@@ -60,9 +64,15 @@ Battle
 
 [x] 10 Heroes and hero powers
 
+Tricky Effects
+
+[ ] Dread Corsair
+[ ] Lightspawn
+
 ### Specific Cases
 
-- Timelimited effect then switch players (e.g. sleep)
+- [ ] Timelimited effect then switch players (e.g. sleep)
+- [ ] change weapon attack outside destruction/equipping
 
 
 

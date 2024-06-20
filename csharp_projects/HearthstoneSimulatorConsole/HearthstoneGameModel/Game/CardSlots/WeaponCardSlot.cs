@@ -1,5 +1,6 @@
 ﻿using HearthstoneGameModel.Cards.CardFactories;
 using HearthstoneGameModel.Cards.CardTypes;
+using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Game.EffectManagement;
 using HearthstoneGameModel.Utils;
 using System;
@@ -34,6 +35,7 @@ namespace HearthstoneGameModel.Game.CardSlots
 
         public override void UpdateStats()
         {
+            int prevAttack = Attack;
             Attack = TypedCard.Attack;
 
             foreach (EffectManagerNode emNode in GetEMNodes())
@@ -42,6 +44,11 @@ namespace HearthstoneGameModel.Game.CardSlots
             }
 
             Attack = Math.Max(0, Attack);
+
+            if (prevAttack != Attack)
+            {
+                Game.EffectManager.SendEvent(EffectEvent.WeaponChangeStats, this);
+            }
         }
     }
 }

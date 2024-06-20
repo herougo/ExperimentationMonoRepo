@@ -86,14 +86,22 @@ namespace HearthstoneGameModel.Game.EffectManagement
             return result;
         }
 
-        public void PopEffectsBySlot(CardSlot cardSlot)
+        public void PopEffectsBySlot(CardSlot cardSlot, bool handOnly)
         {
             List<EffectManagerNode> emNodes = _slotToEmNodeList[cardSlot].ToList();
             emNodes.Reverse();
             foreach (EffectManagerNode emNode in emNodes)
             {
-                PopEffect(emNode);
+                if (!handOnly || emNode.Effect.IsHandEffect)
+                {
+                    PopEffect(emNode);
+                }
             }
+        }
+
+        public void PopEffectsBySlot(CardSlot cardSlot)
+        {
+            PopEffectsBySlot(cardSlot, false);
         }
 
         public void SendEvent(string effectEvent, CardSlot eventSlot)
@@ -128,6 +136,28 @@ namespace HearthstoneGameModel.Game.EffectManagement
             {
                 plan.Perform(this);
                 _game.KillIfNecessary();
+            }
+        }
+
+        public void AddInPlayEffects(CardSlot cardSlot)
+        {
+            foreach (EMEffect effect in cardSlot.Card.InPlayEffects)
+            {
+                EffectManagerNode emNode = new EffectManagerNode(
+                    effect, cardSlot, cardSlot, true
+                );
+                AddEffect(emNode);
+            }
+        }
+
+        public void AddInHandEffects(CardSlot cardSlot)
+        {
+            foreach (EMEffect effect in cardSlot.Card.InHandEffects)
+            {
+                EffectManagerNode emNode = new EffectManagerNode(
+                    effect, cardSlot, cardSlot, false
+                );
+                AddEffect(emNode);
             }
         }
     }

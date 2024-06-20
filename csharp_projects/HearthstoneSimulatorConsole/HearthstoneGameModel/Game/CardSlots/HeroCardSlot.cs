@@ -55,14 +55,14 @@ namespace HearthstoneGameModel.Game.CardSlots
             EffectManagerNode emNode = new EffectManagerNode(
                 heroPowerEffect, this, this, false
             );
-            _game.EffectManager.AddEffect(emNode);
+            Game.EffectManager.AddEffect(emNode);
         }
 
         public override void UpdateStats()
         {
-            if (_game.Weapons[Player] != null)
+            if (Game.Weapons[Player] != null)
             {
-                Attack = _game.Weapons[Player].Attack;
+                Attack = Game.Weapons[Player].Attack;
             }
             else
             {

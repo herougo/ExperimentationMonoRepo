@@ -16,7 +16,7 @@ namespace HearthstoneGameModel.Game.CardSlots
         protected int _hash;
         public Card Card;
         public int Player;
-        public HearthstoneGame _game;
+        public HearthstoneGame Game;
         public int Mana;
 
         public bool Silenced = false;
@@ -25,7 +25,7 @@ namespace HearthstoneGameModel.Game.CardSlots
             _hash = HashGenerator.GetNextHash();
             Card = CardFactory.CreateCard(cardId);
             Player = player;
-            _game = game;
+            Game = game;
             Mana = Card.Mana;
         }
 
@@ -52,7 +52,7 @@ namespace HearthstoneGameModel.Game.CardSlots
 
         public List<EffectManagerNode> GetEMNodes()
         {
-            return _game.EffectManager.GetRelevantEMNodes(this);
+            return Game.EffectManager.GetRelevantEMNodes(this);
         }
     }
 }

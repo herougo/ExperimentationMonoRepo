@@ -72,6 +72,7 @@
     <Compile Include="Core\Exceptions.cs" />
     <Compile Include="Effects\ActivatedEffect.cs" />
     <Compile Include="Effects\ActivatedEffects\HeroPowerEffect.cs" />
+    <Compile Include="Effects\HandContinuousEffects\ManaDiscount.cs" />
     <Compile Include="Effects\WrappedEMEffects\ConditionalEffect.cs" />
     <Compile Include="Effects\ContinuousEffect.cs" />
     <Compile Include="Effects\ContinuousEffects\Buff.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Effects\TriggerEffects\OnTurnStart.cs" />
     <Compile Include="Effects\TriggerEffects\WhenOtherMinionDies.cs" />
     <Compile Include="Effects\TriggerEffects\WhenYouSummonMinion.cs" />
+    <Compile Include="Effects\WrappedEMEffects\ContinuousMonitorEffect.cs" />
     <Compile Include="Effects\WrappedEMEffects\TimeLimitedEMEffect.cs" />
     <Compile Include="Effects\WrappedEMEffect.cs" />
     <Compile Include="Effects\WrappedEMEffects\ExternalEffect.cs" />
@@ -172,6 +174,8 @@
     <Compile Include="Utils\HashGenerator.cs" />
     <Compile Include="Utils\LinkedList.cs" />
     <Compile Include="Utils\RandomGenerator.cs" />
+    <Compile Include="ValueMonitors\IntValueMonitor.cs" />
+    <Compile Include="ValueMonitors\OwnWeaponAttackIntValueMonitor.cs" />
     <Compile Include="Values\ConstIntValue.cs" />
     <Compile Include="Values\IIntValue.cs" />
     <Compile Include="Values\OwnWeaponAttackIntValue.cs" />
