@@ -430,6 +430,28 @@ concede";
         }
 
         [Fact]
+        public Task TestDreadCorsair()
+        {
+            string actionText = @"hero_power
+attack -1 -1
+play 1 0
+end_turn
+hero_power
+attack -1 0
+end_turn
+play 0 1
+attack -1 -1
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.SpitefulSmith, CardIds.DreadCorsair, CardIds.SpitefulSmith,
+                CardIds.DreadCorsair, CardIds.SpitefulSmith, CardIds.DreadCorsair
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Rogue);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestMogushanWarden()
         {
             string actionText = @"play 0 0

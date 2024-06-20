@@ -3,8 +3,8 @@ using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Game.Action;
 using TextView;
 
-List<string> cardIdList0 = Enumerable.Repeat(CardIds.SpitefulSmith, 30).ToList();
-List<string> cardIdList1 = Enumerable.Repeat(CardIds.SpitefulSmith, 30).ToList();
+List<string> cardIdList0 = Enumerable.Repeat(CardIds.DreadCorsair, 30).ToList();
+List<string> cardIdList1 = Enumerable.Repeat(CardIds.DreadCorsair, 30).ToList();
 string hsClass0 = "hero_rogue";
 Decklist decklist0 = new Decklist(cardIdList0, hsClass0);
 Decklist decklist1 = new Decklist(cardIdList1, hsClass0);

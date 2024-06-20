@@ -89,16 +89,11 @@ namespace HearthstoneGameModel.Game
                 new Pile(),
                 new Pile()
             };
-            UIManager.ReceiveUIEvent(new PlayerGoingFirstUIEvent(GameMetadata.WhoGoesFirst));
-
-            CardMover.DrawCards(GameMetadata.WhoGoesFirst, HearthstoneConstants.NumDrawsGoingFirst);
-            CardMover.DrawCards(whoGoesSecond, HearthstoneConstants.NumDrawsGoingSecond);
-            CreateCardAndAddToHand(whoGoesSecond, new Coin());
-
-            if (mulligan)
+            Weapons = new WeaponCardSlot[HearthstoneConstants.NumberOfPlayers]
             {
-                throw new NotImplementedException("Mulligan not implemented");
-            }
+                null, null
+            };
+            UIManager.ReceiveUIEvent(new PlayerGoingFirstUIEvent(GameMetadata.WhoGoesFirst));
 
             Players = new HeroCardSlot[HearthstoneConstants.NumberOfPlayers]
             {
@@ -111,10 +106,6 @@ namespace HearthstoneGameModel.Game
                 player.MaxHealth = HearthstoneConstants.HeroHealth;
                 player.SetupHeroPower();
             }
-            Weapons = new WeaponCardSlot[HearthstoneConstants.NumberOfPlayers]
-            {
-                null, null
-            };
             Battleboard = new Battleboard(this);
 
             addBasePlayerEffects(0);
@@ -123,6 +114,15 @@ namespace HearthstoneGameModel.Game
             foreach (HeroCardSlot player in Players)
             {
                 player.MaximumMana = HearthstoneConstants.MaximumMana;
+            }
+
+            CardMover.DrawCards(GameMetadata.WhoGoesFirst, HearthstoneConstants.NumDrawsGoingFirst);
+            CardMover.DrawCards(whoGoesSecond, HearthstoneConstants.NumDrawsGoingSecond);
+            CreateCardAndAddToHand(whoGoesSecond, new Coin());
+
+            if (mulligan)
+            {
+                throw new NotImplementedException("Mulligan not implemented");
             }
         }
 
