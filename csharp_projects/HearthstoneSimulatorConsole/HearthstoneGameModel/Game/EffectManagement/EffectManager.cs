@@ -97,7 +97,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
             emNodes.Reverse();
             foreach (EffectManagerNode emNode in emNodes)
             {
-                if (!handOnly || emNode.Effect.IsHandEffect)
+                if (!emNode.Effect.IsExternal && (!handOnly || emNode.Effect.IsHandEffect))
                 {
                     PopEffect(emNode);
                 }

@@ -740,7 +740,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             };
             _inHandEffects = new List<EMEffect> {
                 new ContinuousMonitorEffect(
-                    new ManaDiscount(new OwnWeaponAttackIntValue()),
+                    new ManaChange(new OwnWeaponAttackIntValue(), -1),
                     new OwnWeaponAttackIntValueMonitor()
                 )
             };
@@ -901,6 +901,33 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new StranglethornTiger();
+        }
+    }
+
+    public class VentureCoMercenary : MinionCard
+    {
+        public VentureCoMercenary()
+        {
+            _cardId = CardIds.VentureCoMercenary;
+            _name = "Venture Co. Mercenary";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 5;
+            _attack = 7;
+            _health = 6;
+
+            _inPlayEffects = new List<EMEffect> {
+                new ContinuousSelectionFieldEffect(
+                    SelectionConstants.PlayerHandMinions,
+                    new ManaChange(3, 1)
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new VentureCoMercenary();
         }
     }
 

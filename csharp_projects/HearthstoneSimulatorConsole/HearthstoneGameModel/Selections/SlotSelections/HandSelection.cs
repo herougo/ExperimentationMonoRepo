@@ -1,22 +1,23 @@
-﻿using HearthstoneGameModel.Core.Enums;
-using HearthstoneGameModel.Game.CardSlots;
-using HearthstoneGameModel.Game.EffectManagement;
+﻿using HearthstoneGameModel.Game.CardSlots;
 using HearthstoneGameModel.Game;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Core.Enums;
 
 namespace HearthstoneGameModel.Selections.SlotSelections
 {
-    public class AllOtherFriendlyCharacters : SlotSelection
+    public class HandSelection : SlotSelection
     {
-        public AllOtherFriendlyCharacters()
-        {
+        bool _opposing;
+
+        public HandSelection(bool opposing) {
+            _opposing = opposing;
             _eventsReceived = new List<string>
             {
-                EffectEvent.MinionDies, EffectEvent.MinionPutInPlay, EffectEvent.CardMovedToHand
+                EffectEvent.CardPlayed, EffectEvent.CardMovedToHand
             };
         }
 
@@ -26,16 +27,21 @@ namespace HearthstoneGameModel.Selections.SlotSelections
         {
             CardSlot cardSlot = affectedCardSlot;
             int player = cardSlot.Player;
-            CardSlot playerSlot = game.Players[player];
-            List<CardSlot> result = game.Battleboard.GetAllSlots(player);
-            result.Add(playerSlot);
-            result.Remove(cardSlot);
+            if (_opposing)
+            {
+                player = 1 - player;
+            }
+            List<CardSlot> result = new List<CardSlot>();
+            foreach (CardSlot handCardSlot in game.Hands[player])
+            {
+                result.Add(handCardSlot);
+            }
             return result;
         }
 
         public override SlotSelection Copy()
         {
-            return new AllOtherFriendlyCharacters();
+            return new HandSelection(_opposing);
         }
     }
 }

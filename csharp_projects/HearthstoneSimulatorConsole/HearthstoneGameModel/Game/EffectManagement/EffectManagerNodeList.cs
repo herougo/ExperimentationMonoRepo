@@ -37,7 +37,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
         {
             if (!_emNodeToLLNode.ContainsKey(emNode))
             {
-                throw new Exception($"bah: {emNode.AffectedSlot.ToString()}");
+                throw new Exception($"missing slot: {emNode.AffectedSlot.ToString()}");
             }
             LinkedListNode<EffectManagerNode> llNode = _emNodeToLLNode[emNode];
             _linkedList.RemoveNode(llNode);

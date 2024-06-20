@@ -73,6 +73,8 @@ namespace HearthstoneGameModel.Effects
             }
         }
 
+        public virtual bool IsExternal { get { return false; } }
+
         public abstract EMEffect Copy();
     }
 }

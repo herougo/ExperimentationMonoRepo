@@ -1,4 +1,6 @@
-﻿using HearthstoneGameModel.Selections.SlotSelections;
+﻿using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Selections.SelectionFilters;
+using HearthstoneGameModel.Selections.SlotSelections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +35,11 @@ namespace HearthstoneGameModel.Selections
 
         public static WeaponSelection PlayerWeapon = new WeaponSelection(false);
         public static WeaponSelection OpponentWeapon = new WeaponSelection(true);
+
+        public static CardTypeSelectionFilter PlayerHandMinions = new CardTypeSelectionFilter(
+            new HandSelection(false),
+            CardType.Minion
+        );
 
 
     }

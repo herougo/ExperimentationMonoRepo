@@ -12,25 +12,28 @@ using HearthstoneGameModel.Values;
 
 namespace HearthstoneGameModel.Effects.HandContinuousEffects
 {
-    public class ManaDiscount : ContinuousEffect
+    public class ManaChange : ContinuousEffect
     {
         IIntValue _amount;
+        int _multiplier;
 
-        public ManaDiscount(IIntValue amount)
+        public ManaChange(IIntValue amount, int multiplier)
         {
             _amount = amount;
+            _multiplier = multiplier;
             _isHandEffect = true;
         }
 
-        public ManaDiscount(int amount)
+        public ManaChange(int amount, int multiplier)
         {
             _amount = new ConstIntValue(amount);
+            _multiplier = multiplier;
         }
 
         public override void AdjustStats(CardSlot cardSlot)
         {
-            int discount = _amount.Get(cardSlot.Game, cardSlot);
-            cardSlot.Mana -= discount;
+            int change = _amount.Get(cardSlot.Game, cardSlot);
+            cardSlot.Mana += change * _multiplier;
         }
 
         public override EffectManagerNodePlan Start(HearthstoneGame game, EffectManagerNode emNode)
@@ -49,7 +52,7 @@ namespace HearthstoneGameModel.Effects.HandContinuousEffects
 
         public override EMEffect Copy()
         {
-            return new ManaDiscount(_amount);
+            return new ManaChange(_amount, _multiplier);
         }
     }
 }

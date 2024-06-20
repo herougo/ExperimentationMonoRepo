@@ -555,6 +555,29 @@ concede";
         }
 
         [Fact]
+        public Task TestVentureCoMercenary()
+        {
+            string actionText = @"play 0 0
+hero_power
+end_turn
+play 0 0
+play 1 1
+select 1 0
+end_turn
+play 0 1
+play 0 2
+select 0 1
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.YouthfulBrewmaster, CardIds.VentureCoMercenary, CardIds.YouthfulBrewmaster,
+                CardIds.YouthfulBrewmaster, CardIds.Wisp, CardIds.VentureCoMercenary
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Warlock);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestFrostElemental()
         {
             string actionText = @"play 0 0

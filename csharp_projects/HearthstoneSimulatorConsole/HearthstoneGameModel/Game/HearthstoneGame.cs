@@ -199,6 +199,7 @@ namespace HearthstoneGameModel.Game
                 Hands[player].AddCard(cardSlot);
 
                 EffectManager.AddInHandEffects(cardSlot);
+                EffectManager.SendEvent(EffectEvent.CardMovedToHand, cardSlot);
             }
         }
 

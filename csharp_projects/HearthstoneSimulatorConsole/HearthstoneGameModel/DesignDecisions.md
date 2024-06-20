@@ -17,7 +17,7 @@ Plan add EventArgs
 ```C#
 _inHandEffects = new List<EMEffect> {
 	new ContinuousMonitorEffect(
-		new ManaDiscount(new OwnWeaponAttackIntValue()),
+		new ManaChange(new OwnWeaponAttackIntValue(), -1),
 		new OwnWeaponAttackIntValueMonitor()
 	)
 }

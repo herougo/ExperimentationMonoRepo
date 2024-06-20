@@ -29,5 +29,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string DamageTaken = "damage_taken";
         public const string CharacterHealed = "character_healed";
         public const string WeaponChangeStats = "weapon_change_stats";
+        public const string CardMovedToHand = "card_moved_to_hand";
+        public const string CardPlayed = "card_played";
     }
 }

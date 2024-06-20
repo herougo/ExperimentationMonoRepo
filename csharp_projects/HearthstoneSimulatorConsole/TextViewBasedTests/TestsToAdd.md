@@ -21,8 +21,8 @@ Game Mechanics
   - [x] hero power refresh next turn
 
 Cards
-- [ ] VentureCoMercenary
-- [ ] DreadCorsair
+- [x] VentureCoMercenary
+- [x] DreadCorsair
 
 Effects
 

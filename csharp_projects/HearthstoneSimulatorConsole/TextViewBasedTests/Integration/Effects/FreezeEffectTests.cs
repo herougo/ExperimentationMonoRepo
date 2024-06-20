@@ -33,6 +33,7 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Mage);
             return Verify(log);
         }
+
         [Fact]
         public Task TestAlreadyAttackedOnceWindfuryThenFrozen()
         {

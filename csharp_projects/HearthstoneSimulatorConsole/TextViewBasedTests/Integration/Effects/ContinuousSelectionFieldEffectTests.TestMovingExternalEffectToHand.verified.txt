@@ -1,0 +1,94 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+1: CardSlot('Wisp', Mana=0, 1 / 1)
+2: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+3: CardSlot('Frost Elemental', Mana=6, 5 / 5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+1: CardSlot('Wisp', Mana=0, 1 / 1)
+2: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+3: CardSlot('Frost Elemental', Mana=6, 5 / 5)
+
+0 plays Dire Wolf Alpha
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+1: CardSlot('Wisp', Mana=0, 1 / 1)
+2: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+3: CardSlot('Frost Elemental', Mana=6, 5 / 5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=0, 1 / 1)
+1: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+2: CardSlot('Frost Elemental', Mana=6, 5 / 5)
+
+0 plays Wisp
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+1: CardSlot('Wisp', Mana=0, 1 / 1)
+2: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+3: CardSlot('Frost Elemental', Mana=6, 5 / 5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+	1: CardSlot('Wisp', Mana=0, 2 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+1: CardSlot('Frost Elemental', Mana=6, 5 / 5)
+
+0 plays Youthful Brewmaster
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+1: CardSlot('Wisp', Mana=0, 1 / 1)
+2: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+3: CardSlot('Frost Elemental', Mana=6, 5 / 5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+	1: CardSlot('Youthful Brewmaster', Mana=2, 4 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Frost Elemental', Mana=6, 5 / 5)
+1: CardSlot('Wisp', Mana=0, 1 / 1)
+
+0 plays Wisp
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+1: CardSlot('Wisp', Mana=0, 1 / 1)
+2: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+3: CardSlot('Frost Elemental', Mana=6, 5 / 5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Wisp', Mana=0, 2 / 1)
+	1: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+	2: CardSlot('Youthful Brewmaster', Mana=2, 4 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Frost Elemental', Mana=6, 5 / 5)
+
+Game Over: Player 1 Wins

@@ -15,7 +15,7 @@ namespace HearthstoneGameModel.Selections.SlotSelections
         public AllFriendlyCharacters() {
             _eventsReceived = new List<string>
             {
-                EffectEvent.MinionDies, EffectEvent.MinionPutInPlay
+                EffectEvent.MinionDies, EffectEvent.MinionPutInPlay, EffectEvent.CardMovedToHand
             };
         }
 

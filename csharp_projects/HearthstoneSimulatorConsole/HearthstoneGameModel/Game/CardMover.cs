@@ -42,6 +42,7 @@ namespace HearthstoneGameModel.Game
                 default:
                     throw new NotImplementedException("PlayCard");
             }
+            _game.EffectManager.SendEvent(EffectEvent.CardPlayed, cardSlot);
         }
 
         private void playMinion(CardSlot cardSlot, int destinationIndex)
@@ -111,6 +112,7 @@ namespace HearthstoneGameModel.Game
             foreach (CardSlot cardSlot in drawnCards)
             {
                 _game.EffectManager.AddInHandEffects(cardSlot);
+                _game.EffectManager.SendEvent(EffectEvent.CardMovedToHand, cardSlot);
             }
 
             foreach (CardSlot cardSlot in burnedCards)
@@ -204,6 +206,7 @@ namespace HearthstoneGameModel.Game
                 _game.EffectManager.AddInHandEffects(cardSlot);
 
                 _game.EffectManager.SendEvent(EffectEvent.MinionReturnedToHand, cardSlot);
+                _game.EffectManager.SendEvent(EffectEvent.CardMovedToHand, cardSlot);
             }
 
             KillMinions(toDie);

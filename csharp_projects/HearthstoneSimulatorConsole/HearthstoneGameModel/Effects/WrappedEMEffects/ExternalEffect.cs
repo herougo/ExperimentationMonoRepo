@@ -8,7 +8,9 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
 {
     public class ExternalEffect : WrappedEMEffect
     {
-        public ExternalEffect(EMEffect effect) : base(effect) { }
+        public ExternalEffect(EMEffect effect) : base(effect) {}
+
+        public override bool IsExternal { get { return true; } }
 
         public override EMEffect Copy()
         {

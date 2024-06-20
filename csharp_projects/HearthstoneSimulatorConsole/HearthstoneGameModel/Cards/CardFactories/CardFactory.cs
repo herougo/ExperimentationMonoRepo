@@ -84,7 +84,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new SpitefulSmith();
                 case CardIds.StranglethornTiger:
                     return new StranglethornTiger();
-
+                case CardIds.VentureCoMercenary:
+                    return new VentureCoMercenary();
                 case CardIds.FrostElemental:
                     return new FrostElemental();
                 case CardIds.PriestessOfElune:

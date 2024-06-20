@@ -15,7 +15,7 @@ namespace HearthstoneGameModel.Selections.SlotSelections
         {
             _eventsReceived = new List<string>
             {
-                EffectEvent.MinionDies, EffectEvent.MinionPutInPlay
+                EffectEvent.MinionDies, EffectEvent.MinionPutInPlay, EffectEvent.CardMovedToHand
             };
         }
 

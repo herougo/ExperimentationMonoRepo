@@ -1,0 +1,222 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+1: CardSlot('Wisp', Mana=0, 1 / 1)
+2: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+3: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+1: CardSlot('Wisp', Mana=0, 1 / 1)
+2: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+3: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+
+0 plays Venture Co. Mercenary
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+1: CardSlot('Wisp', Mana=0, 1 / 1)
+2: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+3: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+
+Player (0) - health: 30, armour: 0, mana: 5 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=3, 1 / 1)
+1: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+2: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+1: CardSlot('Wisp', Mana=0, 1 / 1)
+2: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+3: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+
+Player (0) - health: 28, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=3, 1 / 1)
+1: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+2: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+3: CardSlot('Venture Co. Mercenary', Mana=8, 7 / 6)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+1: CardSlot('Wisp', Mana=0, 1 / 1)
+2: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+3: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+
+Player (0) - health: 28, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=3, 1 / 1)
+1: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+2: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+3: CardSlot('Venture Co. Mercenary', Mana=8, 7 / 6)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+1: CardSlot('Wisp', Mana=0, 1 / 1)
+2: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+3: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+
+	------------
+	0: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+
+Player (0) - health: 28, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=3, 1 / 1)
+1: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+2: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+3: CardSlot('Venture Co. Mercenary', Mana=8, 7 / 6)
+
+1 plays Venture Co. Mercenary
+Opponent (1) - health: 30, armour: 0, mana: 5 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=3, 1 / 1)
+1: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+2: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Venture Co. Mercenary', Mana=8, 7 / 6)
+
+	0: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+	------------
+	0: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+
+Player (0) - health: 28, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=3, 1 / 1)
+1: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+2: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+3: CardSlot('Venture Co. Mercenary', Mana=8, 7 / 6)
+
+1 plays Youthful Brewmaster
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=0, 1 / 1)
+1: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+4: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+
+	0: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+	------------
+	0: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+
+Player (0) - health: 28, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=3, 1 / 1)
+1: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+2: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+3: CardSlot('Venture Co. Mercenary', Mana=8, 7 / 6)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=0, 1 / 1)
+1: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+4: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+
+	0: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+	------------
+	0: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+
+Player (0) - health: 28, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=3, 1 / 1)
+1: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+2: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+3: CardSlot('Venture Co. Mercenary', Mana=8, 7 / 6)
+
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=0, 1 / 1)
+1: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+4: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+
+	0: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+	------------
+	0: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+
+Player (0) - health: 28, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=3, 1 / 1)
+1: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+2: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+3: CardSlot('Venture Co. Mercenary', Mana=8, 7 / 6)
+4: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+
+0 plays Wisp
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=0, 1 / 1)
+1: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+4: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+
+	0: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+	------------
+	0: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+	1: CardSlot('Wisp', Mana=0, 1 / 1)
+
+Player (0) - health: 28, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+1: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+2: CardSlot('Venture Co. Mercenary', Mana=8, 7 / 6)
+3: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+
+0 plays Youthful Brewmaster
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=0, 1 / 1)
+1: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+4: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+
+	0: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+	------------
+	0: CardSlot('Venture Co. Mercenary', Mana=5, 7 / 6)
+	1: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+
+Player (0) - health: 28, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+1: CardSlot('Venture Co. Mercenary', Mana=8, 7 / 6)
+2: CardSlot('Youthful Brewmaster', Mana=5, 3 / 2)
+3: CardSlot('Wisp', Mana=3, 1 / 1)
+
+Game Over: Player 1 Wins

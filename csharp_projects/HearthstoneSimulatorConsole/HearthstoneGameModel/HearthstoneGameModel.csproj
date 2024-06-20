@@ -131,6 +131,8 @@
     <Compile Include="Game\EffectManagement\EffectManagerNodePlan.cs" />
     <Compile Include="Game\EffectManagement\EventCardSlotToEMNodeListDictionary.cs" />
     <Compile Include="Game\Utils\HSGameUtils.cs" />
+    <Compile Include="Selections\SelectionFilter.cs" />
+    <Compile Include="Selections\SelectionFilters\CardTypeSelectionFilter.cs" />
     <Compile Include="Selections\SlotSelection.cs" />
     <Compile Include="Selections\SlotSelections\AdjacentMinions.cs" />
     <Compile Include="Selections\SlotSelections\AllCharacters.cs" />
@@ -147,6 +149,7 @@
     <Compile Include="Selections\SlotSelections\SelectCharacterFrom.cs" />
     <Compile Include="Selections\SelectionConstants.cs" />
     <Compile Include="Selections\SlotSelections\WeaponSelection.cs" />
+    <Compile Include="Selections\SlotSelections\HandSelection.cs" />
     <Compile Include="UI\UIEvent.cs" />
     <Compile Include="UI\UIEventHandler.cs" />
     <Compile Include="UI\UIEvents\ActionUIEvents.cs" />
@@ -180,6 +183,8 @@
     <Compile Include="Values\IIntValue.cs" />
     <Compile Include="Values\OwnWeaponAttackIntValue.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Selections\CompoundSelections\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
