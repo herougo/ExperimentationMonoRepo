@@ -198,13 +198,7 @@ namespace HearthstoneGameModel.Game
                 CardSlot cardSlot = card.CreateCardSlot(player, this);
                 Hands[player].AddCard(cardSlot);
 
-                foreach (EMEffect effect in cardSlot.Card.InHandEffects)
-                {
-                    EffectManagerNode emNode = new EffectManagerNode(
-                        effect, cardSlot, cardSlot, false
-                    );
-                    EffectManager.AddEffect(emNode);
-                }
+                EffectManager.AddInHandEffects(cardSlot);
             }
         }
 

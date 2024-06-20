@@ -88,6 +88,11 @@ namespace HearthstoneGameModel.Game.EffectManagement
 
         public void PopEffectsBySlot(CardSlot cardSlot, bool handOnly)
         {
+            if (!_slotToEmNodeList.ContainsKey(cardSlot))
+            {
+                return;
+            }
+
             List<EffectManagerNode> emNodes = _slotToEmNodeList[cardSlot].ToList();
             emNodes.Reverse();
             foreach (EffectManagerNode emNode in emNodes)

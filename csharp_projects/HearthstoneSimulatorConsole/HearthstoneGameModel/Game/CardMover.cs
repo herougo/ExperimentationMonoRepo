@@ -25,7 +25,7 @@ namespace HearthstoneGameModel.Game
             CardSlot cardSlot = _game.Hands[_game.GameMetadata.Turn].Pop(cardInHandIndex);
             _game.Players[_game.GameMetadata.Turn].CurrentMana -= cardSlot.Mana;
 
-            _game.EffectManager.PopEffectsBySlot(cardSlot);
+            _game.EffectManager.PopEffectsBySlot(cardSlot, true);
 
             string cardName = cardSlot.Card.Name;
             _game.UIManager.ReceiveUIEvent(new PlayCardUIEvent(cardName));
