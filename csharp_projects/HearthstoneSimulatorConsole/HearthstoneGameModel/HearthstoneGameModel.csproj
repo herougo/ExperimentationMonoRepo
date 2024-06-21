@@ -116,7 +116,7 @@
     <Compile Include="Effects\TriggerEffects\OnTurnEnd.cs" />
     <Compile Include="Effects\TriggerEffects\OnTurnStart.cs" />
     <Compile Include="Effects\TriggerEffects\WhenOtherMinionDies.cs" />
-    <Compile Include="Effects\TriggerEffects\WhenYouSummonMinion.cs" />
+    <Compile Include="Effects\TriggerEffects\WhenYouSummonOtherMinion.cs" />
     <Compile Include="Effects\WrappedEMEffects\ContinuousMonitorEffect.cs" />
     <Compile Include="Effects\WrappedEMEffects\TimeLimitedEMEffect.cs" />
     <Compile Include="Effects\WrappedEMEffect.cs" />

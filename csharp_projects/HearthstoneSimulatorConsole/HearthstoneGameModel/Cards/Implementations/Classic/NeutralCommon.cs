@@ -891,7 +891,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _mana = 5;
             _attack = 5;
             _health = 5;
-            _tag = MinionTag.Undead;
+            _tag = MinionTag.Beast;
 
             _inPlayEffects = new List<EMEffect> {
                 new Stealth()
@@ -943,6 +943,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _mana = 6;
             _attack = 5;
             _health = 5;
+            _tag = MinionTag.Elemental;
 
             _inPlayEffects = new List<EMEffect> {
                 new Battlecry(

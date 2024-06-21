@@ -78,5 +78,18 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Warlock);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestMurlocTidecaller()
+        {
+            string actionText = @"play 0 0
+play 0 1
+play 0 2
+play 0 3
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.MurlocTidecaller, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }

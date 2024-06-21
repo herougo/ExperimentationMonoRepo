@@ -12,11 +12,11 @@ using HearthstoneGameModel.Cards.CardTypes;
 
 namespace HearthstoneGameModel.Effects.TriggerEffects
 {
-    public class WhenYouSummonMinion : TriggerEffect
+    public class WhenYouSummonOtherMinion : TriggerEffect
     {
         MinionTag _desiredTag;
 
-        public WhenYouSummonMinion(OneTimeEffect effect, MinionTag desiredTag)
+        public WhenYouSummonOtherMinion(OneTimeEffect effect, MinionTag desiredTag)
             : base(effect)
         {
             _eventsReceived = new List<string> { EffectEvent.MinionSummoned };
@@ -30,7 +30,7 @@ namespace HearthstoneGameModel.Effects.TriggerEffects
         {
             CheckValidEvent(effectEvent);
             MinionCard minionCard = (MinionCard)eventSlot.Card;
-            if (HSGameUtils.MatchesTag(_desiredTag, minionCard.Tag))
+            if (HSGameUtils.MatchesTag(_desiredTag, minionCard.Tag) && emNode.AffectedSlot != eventSlot)
             {
                 EffectManagerNodePlan result = _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot);
                 return result;
@@ -40,7 +40,7 @@ namespace HearthstoneGameModel.Effects.TriggerEffects
 
         public override EMEffect Copy()
         {
-            return new WhenYouSummonMinion(_effect.Copy(), _desiredTag);
+            return new WhenYouSummonOtherMinion(_effect.Copy(), _desiredTag);
         }
     }
 }

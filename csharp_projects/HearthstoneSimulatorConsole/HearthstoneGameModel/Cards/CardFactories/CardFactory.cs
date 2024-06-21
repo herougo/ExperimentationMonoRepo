@@ -99,7 +99,10 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new BloodsailCorsair();
                 case CardIds.Lightwarden:
                     return new Lightwarden();
-
+                case CardIds.MurlocTidecaller:
+                    return new MurlocTidecaller();
+                case CardIds.Secretkeeper:
+                    return new Secretkeeper();
                 case CardIds.YoungPriestess:
                     return new YoungPriestess();
                 

@@ -29,6 +29,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _mana = 1;
             _attack = 1;
             _health = 1;
+            _tag = MinionTag.Beast;
 
             _inPlayEffects = new List<EMEffect> {
                 new ConditionalEffect(
@@ -56,6 +57,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _mana = 1;
             _attack = 1;
             _health = 2;
+            _tag = MinionTag.Pirate;
 
             _inPlayEffects = new List<EMEffect> {
                 new Battlecry(new ReduceWeaponDurability(1, true))
@@ -83,7 +85,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new WhenACharacterIsHealed(new ChangeAttack(new OwnSelf(), 2))
+                new WhenACharacterIsHealed(new ChangeAttack(SelectionConstants.OwnSelf, 2))
             };
         }
 
@@ -101,14 +103,15 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _name = "Murloc Tidecaller";
             _hsClass = HeroClass.Neutral;
             _collectible = true;
-
+            
             _mana = 1;
             _attack = 1;
             _health = 2;
+            _tag = MinionTag.Murloc;
 
             _inPlayEffects = new List<EMEffect>
             {
-                // TODO
+                new WhenYouSummonOtherMinion(new ChangeAttack(SelectionConstants.OwnSelf, 1), MinionTag.Murloc)
             };
         }
 
