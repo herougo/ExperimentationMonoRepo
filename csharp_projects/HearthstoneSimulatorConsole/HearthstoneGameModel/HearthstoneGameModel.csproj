@@ -73,6 +73,7 @@
     <Compile Include="Effects\ActivatedEffect.cs" />
     <Compile Include="Effects\ActivatedEffects\HeroPowerEffect.cs" />
     <Compile Include="Effects\HandContinuousEffects\ManaDiscount.cs" />
+    <Compile Include="Effects\OneTimeEffects\ReduceWeaponDurability.cs" />
     <Compile Include="Effects\WrappedEMEffects\ConditionalEffect.cs" />
     <Compile Include="Effects\ContinuousEffect.cs" />
     <Compile Include="Effects\ContinuousEffects\Buff.cs" />

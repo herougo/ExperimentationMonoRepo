@@ -53,6 +53,8 @@ namespace HearthstoneGameModel.Core.Enums
         public const string BloodsailCorsair = "C040";
         public const string Lightwarden = "C041";
         public const string MurlocTidecaller = "C042";
+        public const string Secretkeeper = "C043";
+        public const string YoungPriestess = "C044";
 
         public const string ArgentCommander = "C069";
 

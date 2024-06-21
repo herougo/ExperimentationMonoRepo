@@ -253,14 +253,19 @@ namespace HearthstoneGameModel.Game
             if (attackerCardSlot.CardType == CardType.Hero
                 && Weapons[attackerCardSlot.Player] != null)
             {
-                Weapons[attackerCardSlot.Player].Durability -= 1;
-                if (Weapons[attackerCardSlot.Player].Durability == 0)
-                {
-                    CardMover.DestroyWeapon(attackerCardSlot.Player);
-                }
+                ReduceDurability(attackerCardSlot.Player);
             }
 
             KillIfNecessary();
+        }
+
+        public void ReduceDurability(int player)
+        {
+            Weapons[player].Durability -= 1;
+            if (Weapons[player].Durability == 0)
+            {
+                CardMover.DestroyWeapon(player);
+            }
         }
 
         public void KillIfNecessary()

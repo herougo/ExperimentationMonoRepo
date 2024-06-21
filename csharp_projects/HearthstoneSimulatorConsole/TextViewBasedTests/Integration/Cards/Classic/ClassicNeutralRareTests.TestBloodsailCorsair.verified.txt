@@ -1,0 +1,152 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+1: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+2: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+3: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+1: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+2: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+3: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+1: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+2: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+3: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: Rogue Dagger 1/2, 1 attack, 2 durability
+0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+1: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+2: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+3: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+
+CardSlot('Rogue', Mana=0)
+	attacks CardSlot('Rogue', Mana=0)
+Opponent (1) - health: 29, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+1: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+2: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+3: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
+0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+1: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+2: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+3: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+
+Opponent (1) - health: 29, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+1: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+2: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+3: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
+0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+1: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+2: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+3: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 29, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+1: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+2: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+3: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
+0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+1: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+2: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+3: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+
+1 plays Bloodsail Corsair
+Opponent (1) - health: 29, armour: 0, mana: 9 / 10
+Weapon: None
+0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+1: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+2: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+
+	0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+1: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+2: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+3: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+
+Opponent (1) - health: 29, armour: 0, mana: 7 / 10
+Weapon: Rogue Dagger 1/2, 1 attack, 2 durability
+0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+1: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+2: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+
+	0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+1: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+2: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+3: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+
+1 plays Bloodsail Corsair
+Opponent (1) - health: 29, armour: 0, mana: 6 / 10
+Weapon: Rogue Dagger 1/2, 1 attack, 2 durability
+0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+1: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+
+	0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+	1: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+1: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+2: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+3: CardSlot('Bloodsail Corsair', Mana=1, 1 / 2)
+
+Game Over: Player 0 Wins

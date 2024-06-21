@@ -9,6 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using HearthstoneGameModel.Effects.WrappedEMEffects;
 using HearthstoneGameModel.Conditions;
+using HearthstoneGameModel.Effects.TriggerEffects;
+using HearthstoneGameModel.Effects.OneTimeEffects;
+using HearthstoneGameModel.Game.Action;
+using HearthstoneGameModel.Selections;
 
 namespace HearthstoneGameModel.Cards.Implementations.Classic
 {
@@ -53,7 +57,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _health = 2;
 
             _inPlayEffects = new List<EMEffect> {
-                // TODO
+                new Battlecry(new ReduceWeaponDurability(1, true))
             };
         }
 
@@ -104,6 +108,56 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _inPlayEffects = new List<EMEffect>
             {
                 // TODO
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new MurlocTidecaller();
+        }
+    }
+
+    public class Secretkeeper : MinionCard
+    {
+        public Secretkeeper()
+        {
+            _cardId = CardIds.Secretkeeper;
+            _name = "Secretkeeper";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 1;
+            _attack = 1;
+            _health = 2;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                // TODO
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new MurlocTidecaller();
+        }
+    }
+
+    public class YoungPriestess : MinionCard
+    {
+        public YoungPriestess()
+        {
+            _cardId = CardIds.YoungPriestess;
+            _name = "Young Priestess";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 1;
+            _attack = 2;
+            _health = 1;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new OnTurnEnd(new ChangeHealth(SelectionConstants.RandomOtherFriendlyMinion, 1))
             };
         }
 

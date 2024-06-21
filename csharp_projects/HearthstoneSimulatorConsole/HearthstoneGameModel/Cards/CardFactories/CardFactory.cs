@@ -93,6 +93,15 @@ namespace HearthstoneGameModel.Cards.CardFactories
                 case CardIds.WindfuryHarpy:
                     return new WindfuryHarpy();
 
+                case CardIds.AngryChicken:
+                    return new AngryChicken();
+                case CardIds.BloodsailCorsair:
+                    return new BloodsailCorsair();
+
+                case CardIds.YoungPriestess:
+                    return new YoungPriestess();
+                
+
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();
 
