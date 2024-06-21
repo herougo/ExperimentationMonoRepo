@@ -58,5 +58,25 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestLightwarden()
+        {
+            string actionText = @"hero_power
+play 0 0
+play 0 1
+end_turn
+hero_power
+play 0 0
+play 0 1
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.Lightwarden, CardIds.PriestessOfElune, CardIds.Lightwarden, CardIds.PriestessOfElune,
+                CardIds.Lightwarden, CardIds.PriestessOfElune, CardIds.Lightwarden
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Warlock);
+            return Verify(log);
+        }
     }
 }

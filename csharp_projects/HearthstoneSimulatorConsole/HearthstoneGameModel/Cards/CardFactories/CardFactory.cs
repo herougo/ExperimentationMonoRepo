@@ -97,6 +97,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new AngryChicken();
                 case CardIds.BloodsailCorsair:
                     return new BloodsailCorsair();
+                case CardIds.Lightwarden:
+                    return new Lightwarden();
 
                 case CardIds.YoungPriestess:
                     return new YoungPriestess();

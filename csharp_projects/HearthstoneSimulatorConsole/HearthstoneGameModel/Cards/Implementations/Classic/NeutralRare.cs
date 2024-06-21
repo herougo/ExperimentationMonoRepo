@@ -13,6 +13,7 @@ using HearthstoneGameModel.Effects.TriggerEffects;
 using HearthstoneGameModel.Effects.OneTimeEffects;
 using HearthstoneGameModel.Game.Action;
 using HearthstoneGameModel.Selections;
+using HearthstoneGameModel.Selections.SlotSelections;
 
 namespace HearthstoneGameModel.Cards.Implementations.Classic
 {
@@ -82,7 +83,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                // TODO
+                new WhenACharacterIsHealed(new ChangeAttack(new OwnSelf(), 2))
             };
         }
 
