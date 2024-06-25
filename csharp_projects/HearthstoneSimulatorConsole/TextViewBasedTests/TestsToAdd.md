@@ -55,6 +55,7 @@ Attack
 - [x] Disobey Taunt
 - [x] Obey Taunt
 - [x] Disobey Stealth
+- [x] Can't Attack Effect
 
 Battle
 

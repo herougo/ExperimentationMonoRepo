@@ -105,7 +105,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Secretkeeper();
                 case CardIds.YoungPriestess:
                     return new YoungPriestess();
-                
+                case CardIds.AncientWatcher:
+                    return new AncientWatcher();
 
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();

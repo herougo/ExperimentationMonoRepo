@@ -72,6 +72,7 @@
     <Compile Include="Core\Exceptions.cs" />
     <Compile Include="Effects\ActivatedEffect.cs" />
     <Compile Include="Effects\ActivatedEffects\HeroPowerEffect.cs" />
+    <Compile Include="Effects\ContinuousEffects\CantAttack.cs" />
     <Compile Include="Effects\HandContinuousEffects\ManaDiscount.cs" />
     <Compile Include="Effects\OneTimeEffects\ReduceWeaponDurability.cs" />
     <Compile Include="Effects\TriggerEffects\WhenACharacterIsHealed.cs" />

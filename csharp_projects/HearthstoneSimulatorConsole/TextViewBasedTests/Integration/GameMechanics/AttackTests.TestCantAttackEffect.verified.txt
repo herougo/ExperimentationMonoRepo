@@ -1,0 +1,160 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+3: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+3: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+
+0 plays Ancient Watcher
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+3: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+1: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+2: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+3: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+1: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+2: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+3: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+
+	------------
+	0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+1: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+2: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+3: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+
+	------------
+	0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+1: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+2: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+3: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+
+	------------
+	0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+1: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+2: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+3: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+
+ERROR: attacker has the can't attack effect
+0 plays Ironbeak Owl
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+3: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+
+	------------
+	0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+	1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+
+CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+	attacks CardSlot('Paladin', Mana=0)
+Opponent (1) - health: 26, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+3: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+
+	------------
+	0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+	1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+1: CardSlot('Ironbeak Owl', Mana=3, 2 / 1)
+2: CardSlot('Ancient Watcher', Mana=2, 4 / 5)
+
+Game Over: Player 1 Wins

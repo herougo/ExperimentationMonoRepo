@@ -14,6 +14,7 @@ namespace HearthstoneGameModel.Core.Enums
         DefenderHasStealth = 3,
         ZeroAttack = 4,
         DisobeysTaunt = 5,
-        Frozen = 6
+        Frozen = 6,
+        CantAttackEffect = 7
     }
 }

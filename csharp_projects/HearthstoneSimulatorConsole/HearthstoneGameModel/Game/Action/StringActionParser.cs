@@ -100,6 +100,8 @@ namespace HearthstoneGameModel.Game.Action
             {
                 switch (canAttackResponse)
                 {
+                    case CanAttackResponse.CantAttackEffect:
+                        throw new ActionException("attacker has the can't attack effect");
                     case CanAttackResponse.ZeroAttack:
                         throw new ActionException("attacker has 0 attack");
                     case CanAttackResponse.Frozen:

@@ -86,8 +86,29 @@ concede";
 play 0 1
 play 0 2
 play 0 3
+hero_power
 concede";
             List<string> cardIdList0 = Enumerable.Repeat(CardIds.MurlocTidecaller, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestAncientWatcher()
+        {
+            string actionText = @"play 0 0
+end_turn
+end_turn
+attack 0 -1
+play 0 1
+select 0 0
+attack 0 -1
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AncientWatcher, CardIds.IronbeakOwl, CardIds.AncientWatcher, CardIds.IronbeakOwl,
+                CardIds.AncientWatcher, CardIds.IronbeakOwl, CardIds.AncientWatcher
+            };
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }

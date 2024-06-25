@@ -137,5 +137,26 @@ concede";
             string log = TestGameUtils.RunPaladinGame(actionText, cardIdList0, cardIdList1, true);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestCantAttackEffect()
+        {
+            // COPY OF: TestAncientWatcher
+            string actionText = @"play 0 0
+end_turn
+end_turn
+attack 0 -1
+play 0 1
+select 0 0
+attack 0 -1
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AncientWatcher, CardIds.IronbeakOwl, CardIds.AncientWatcher, CardIds.IronbeakOwl,
+                CardIds.AncientWatcher, CardIds.IronbeakOwl, CardIds.AncientWatcher
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }

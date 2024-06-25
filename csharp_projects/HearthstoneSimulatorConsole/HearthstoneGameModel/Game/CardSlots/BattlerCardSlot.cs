@@ -25,6 +25,7 @@ namespace HearthstoneGameModel.Game.CardSlots
         public int NumStealth = 0;
         public int NumTaunt = 0;
         public int NumElusive = 0;
+        public int NumCantAttackEffect = 0;
 
         public BattlerCardSlot(string cardId, int player, HearthstoneGame game)
             : base(cardId, player, game) { }
@@ -50,6 +51,11 @@ namespace HearthstoneGameModel.Game.CardSlots
             get { return NumStealth > 0; }
         }
 
+        public bool HasCantAttackEffect
+        {
+            get { return NumCantAttackEffect > 0; }
+        }
+
         public int NumPossibleAttacksIgnoringFrozen
         {
             get
@@ -69,7 +75,11 @@ namespace HearthstoneGameModel.Game.CardSlots
         {
             get
             {
-                if (Attack == 0)
+                if (HasCantAttackEffect)
+                {
+                    return CanAttackResponse.CantAttackEffect;
+                }
+                else if (Attack == 0)
                 {
                     return CanAttackResponse.ZeroAttack;
                 }

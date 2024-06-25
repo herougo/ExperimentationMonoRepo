@@ -55,6 +55,9 @@ namespace HearthstoneGameModel.Core.Enums
         public const string MurlocTidecaller = "C042";
         public const string Secretkeeper = "C043";
         public const string YoungPriestess = "C044";
+        public const string AncientWatcher = "C045";
+        public const string CrazedAlchemist = "C046";
+        public const string KnifeJuggler = "C047";
 
         public const string ArgentCommander = "C069";
 

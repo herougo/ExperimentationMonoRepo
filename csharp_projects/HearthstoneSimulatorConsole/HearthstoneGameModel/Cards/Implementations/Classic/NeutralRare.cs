@@ -171,6 +171,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class AncientWatcher : MinionCard
+    {
+        public AncientWatcher()
+        {
+            _cardId = CardIds.AncientWatcher;
+            _name = "Ancient Watcher";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 2;
+            _attack = 4;
+            _health = 5;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new CantAttack()
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new MurlocTidecaller();
+        }
+    }
+
 
     public class ArgentCommander : MinionCard
     {
