@@ -1,24 +1,22 @@
-﻿using HearthstoneGameModel.Game.CardSlots;
+﻿using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Game.CardSlots;
+using HearthstoneGameModel.Game.EffectManagement;
+using HearthstoneGameModel.Game;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HearthstoneGameModel.Core.Enums;
-using HearthstoneGameModel.Game.EffectManagement;
-using HearthstoneGameModel.Game;
 
 namespace HearthstoneGameModel.Effects.ContinuousEffects
 {
-    public class Buff : ContinuousEffect
+    public class SetMaxHealth : ContinuousEffect
     {
-        int _attackAmount;
-        int _healthAmount;
+        int _amount;
 
-        public Buff(int attackAmount, int healthAmount)
+        public SetMaxHealth(int amount)
         {
-            _attackAmount = attackAmount;
-            _healthAmount = healthAmount;
+            _amount = amount;
             _effectArea = EffectArea.All;
         }
 
@@ -29,12 +27,10 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
                 case CardType.Minion:
                 case CardType.Hero:
                     BattlerCardSlot battlerCardSlot = (BattlerCardSlot)cardSlot;
-                    battlerCardSlot.Attack += _attackAmount;
-                    // battlerCardSlot.Health += _healthAmount;
-                    battlerCardSlot.MaxHealth += _healthAmount;
+                    battlerCardSlot.Attack = _amount;
                     return;
             }
-            throw new NotImplementedException("Invalid card type to adjust stats from Buff");
+            throw new NotImplementedException("Invalid card type to adjust stats from SetMaxHealth");
         }
 
         public override EffectManagerNodePlan Start(HearthstoneGame game, EffectManagerNode emNode)
@@ -53,7 +49,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
 
         public override EMEffect Copy()
         {
-            return new Buff(_attackAmount, _healthAmount);
+            return new SetMaxHealth(_amount);
         }
     }
 }

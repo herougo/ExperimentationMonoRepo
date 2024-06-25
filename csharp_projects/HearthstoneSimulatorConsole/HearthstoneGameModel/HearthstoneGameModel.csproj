@@ -73,6 +73,8 @@
     <Compile Include="Effects\ActivatedEffect.cs" />
     <Compile Include="Effects\ActivatedEffects\HeroPowerEffect.cs" />
     <Compile Include="Effects\ContinuousEffects\CantAttack.cs" />
+    <Compile Include="Effects\ContinuousEffects\SetAttack.cs" />
+    <Compile Include="Effects\ContinuousEffects\SetMaxHealth.cs" />
     <Compile Include="Effects\HandContinuousEffects\ManaDiscount.cs" />
     <Compile Include="Effects\OneTimeEffects\ReduceWeaponDurability.cs" />
     <Compile Include="Effects\TriggerEffects\WhenACharacterIsHealed.cs" />
@@ -134,6 +136,7 @@
     <Compile Include="Game\EffectManagement\EffectManagerNodePlan.cs" />
     <Compile Include="Game\EffectManagement\EventCardSlotToEMNodeListDictionary.cs" />
     <Compile Include="Game\Utils\HSGameUtils.cs" />
+    <Compile Include="Selections\SlotSelections\AllOtherLivingEnemies.cs" />
     <Compile Include="Selections\SelectionFilter.cs" />
     <Compile Include="Selections\SelectionFilters\CardTypeSelectionFilter.cs" />
     <Compile Include="Selections\SlotSelection.cs" />

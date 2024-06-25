@@ -196,6 +196,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class KnifeJuggler : MinionCard
+    {
+        public KnifeJuggler()
+        {
+            _cardId = CardIds.KnifeJuggler;
+            _name = "Knife Juggler";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 2;
+            _attack = 3;
+            _health = 2;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new WhenYouSummonOtherMinion(new DealDamage(SelectionConstants.RandomOtherLivingEnemy, 1), MinionTag.Any)
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new KnifeJuggler();
+        }
+    }
+
 
     public class ArgentCommander : MinionCard
     {

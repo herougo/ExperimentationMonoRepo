@@ -112,5 +112,20 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestKnifeJuggler()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+hero_power
+play 0 2
+play 0 3
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.KnifeJuggler, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }
