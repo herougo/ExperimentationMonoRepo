@@ -15,6 +15,7 @@ using HearthstoneGameModel.Game.Action;
 using HearthstoneGameModel.Selections;
 using HearthstoneGameModel.Selections.SlotSelections;
 using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
+using HearthstoneGameModel.Effects.HandContinuousEffects;
 
 namespace HearthstoneGameModel.Cards.Implementations.Classic
 {
@@ -250,6 +251,34 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new ManaAddict();
+        }
+    }
+
+    public class ManaWraith : MinionCard
+    {
+        public ManaWraith()
+        {
+            _cardId = CardIds.ManaWraith;
+            _name = "Mana Wraith";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 2;
+            _attack = 2;
+            _health = 2;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new ContinuousSelectionFieldEffect(
+                    SelectionConstants.AllHandMinions,
+                    new ManaChange(1, 1)
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new ManaWraith();
         }
     }
 

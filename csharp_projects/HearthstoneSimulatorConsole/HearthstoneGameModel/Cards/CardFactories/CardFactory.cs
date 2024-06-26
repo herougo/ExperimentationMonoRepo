@@ -112,6 +112,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new KnifeJuggler();
                 case CardIds.ManaAddict:
                     return new ManaAddict();
+                case CardIds.ManaWraith:
+                    return new ManaWraith();
 
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();

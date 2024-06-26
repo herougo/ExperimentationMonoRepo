@@ -1,0 +1,40 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Mana Wraith', Mana=2, 2 / 2)
+1: CardSlot('Wisp', Mana=0, 1 / 1)
+2: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+3: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Mana Wraith', Mana=2, 2 / 2)
+1: CardSlot('Wisp', Mana=0, 1 / 1)
+2: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+3: CardSlot('Youthful Brewmaster', Mana=2, 3 / 2)
+
+0 plays Mana Wraith
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Mana Wraith', Mana=3, 2 / 2)
+1: CardSlot('Wisp', Mana=1, 1 / 1)
+2: CardSlot('Youthful Brewmaster', Mana=3, 3 / 2)
+3: CardSlot('Youthful Brewmaster', Mana=3, 3 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Mana Wraith', Mana=2, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Wisp', Mana=1, 1 / 1)
+1: CardSlot('Youthful Brewmaster', Mana=3, 3 / 2)
+2: CardSlot('Youthful Brewmaster', Mana=3, 3 / 2)
+
+Game Over: Player 1 Wins

@@ -59,6 +59,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string CrazedAlchemist = "C046";
         public const string KnifeJuggler = "C047";
         public const string ManaAddict = "C048";
+        public const string ManaWraith = "C049";
 
         public const string ArgentCommander = "C069";
 

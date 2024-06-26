@@ -38,10 +38,13 @@ namespace HearthstoneGameModel.Selections
         public static WeaponSelection OpponentWeapon = new WeaponSelection(true);
 
         public static CardTypeSelectionFilter PlayerHandMinions = new CardTypeSelectionFilter(
-            new HandSelection(false),
+            new HandSelection(PlayerChoice.Player),
             CardType.Minion
         );
-
+        public static CardTypeSelectionFilter AllHandMinions = new CardTypeSelectionFilter(
+            new HandSelection(PlayerChoice.Both),
+            CardType.Minion
+        );
 
     }
 }

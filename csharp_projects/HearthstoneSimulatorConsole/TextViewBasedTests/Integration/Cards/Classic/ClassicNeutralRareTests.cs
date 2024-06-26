@@ -141,5 +141,19 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestManaWraith()
+        {
+            string actionText = @"play 0 0
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.YouthfulBrewmaster, CardIds.ManaWraith, CardIds.YouthfulBrewmaster,
+                CardIds.YouthfulBrewmaster, CardIds.Wisp, CardIds.ManaWraith
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Warlock);
+            return Verify(log);
+        }
     }
 }
