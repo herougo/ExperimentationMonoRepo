@@ -14,6 +14,7 @@ using HearthstoneGameModel.Effects.OneTimeEffects;
 using HearthstoneGameModel.Game.Action;
 using HearthstoneGameModel.Selections;
 using HearthstoneGameModel.Selections.SlotSelections;
+using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
 
 namespace HearthstoneGameModel.Cards.Implementations.Classic
 {
@@ -218,6 +219,37 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new KnifeJuggler();
+        }
+    }
+
+    public class ManaAddict : MinionCard
+    {
+        public ManaAddict()
+        {
+            _cardId = CardIds.ManaAddict;
+            _name = "Mana Addict";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 2;
+            _attack = 1;
+            _health = 3;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new AfterSpellActivation(
+                    new TimeLimitedOneTimeEffect(
+                        new ChangeAttack(SelectionConstants.OwnSelf, 2),
+                        EffectTimeLimit.EndOfTurn
+                    ),
+                    PlayerChoice.Player
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new ManaAddict();
         }
     }
 

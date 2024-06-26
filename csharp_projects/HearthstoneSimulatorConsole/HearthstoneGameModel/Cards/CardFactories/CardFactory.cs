@@ -110,6 +110,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
 
                 case CardIds.KnifeJuggler:
                     return new KnifeJuggler();
+                case CardIds.ManaAddict:
+                    return new ManaAddict();
 
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();
