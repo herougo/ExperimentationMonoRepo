@@ -76,6 +76,7 @@
     <Compile Include="Effects\ContinuousEffects\SetAttack.cs" />
     <Compile Include="Effects\ContinuousEffects\SetMaxHealth.cs" />
     <Compile Include="Effects\HandContinuousEffects\ManaDiscount.cs" />
+    <Compile Include="Effects\OneTimeEffects\GiveContinuousEffect.cs" />
     <Compile Include="Effects\OneTimeEffects\ReduceWeaponDurability.cs" />
     <Compile Include="Effects\TriggerEffects\AfterSpellActivation.cs" />
     <Compile Include="Effects\TriggerEffects\WhenACharacterIsHealed.cs" />

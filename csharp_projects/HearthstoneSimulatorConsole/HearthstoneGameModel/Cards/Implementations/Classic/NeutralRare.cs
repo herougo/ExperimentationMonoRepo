@@ -307,6 +307,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class SunfuryProtector : MinionCard
+    {
+        public SunfuryProtector()
+        {
+            _cardId = CardIds.SunfuryProtector;
+            _name = "Sunfury Protector";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 2;
+            _attack = 2;
+            _health = 3;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new GiveContinuousEffect(SelectionConstants.AdjacentMinions, new Taunt()))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new SunfuryProtector();
+        }
+    }
+
 
     public class ArgentCommander : MinionCard
     {

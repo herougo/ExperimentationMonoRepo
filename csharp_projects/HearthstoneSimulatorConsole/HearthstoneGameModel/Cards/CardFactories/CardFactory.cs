@@ -117,6 +117,9 @@ namespace HearthstoneGameModel.Cards.CardFactories
                 case CardIds.MasterSwordsmith:
                     return new MasterSwordsmith();
 
+                case CardIds.SunfuryProtector:
+                    return new SunfuryProtector();
+
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();
 

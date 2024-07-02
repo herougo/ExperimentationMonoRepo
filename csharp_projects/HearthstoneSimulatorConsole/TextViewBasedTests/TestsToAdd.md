@@ -70,6 +70,12 @@ Tricky Effects
 [ ] Dread Corsair
 [ ] Lightspawn
 
+Missing Cards
+
+- [ ] Secretkeeper
+- [ ] Crazed Alchemist
+- [ ] Pint-Sized Summoner
+
 ### Specific Cases
 
 - [ ] Timelimited effect then switch players (e.g. sleep)
