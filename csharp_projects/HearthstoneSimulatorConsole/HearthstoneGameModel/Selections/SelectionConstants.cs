@@ -18,6 +18,7 @@ namespace HearthstoneGameModel.Selections
         public static AllOtherFriendlyMinions AllOtherFriendlyMinions = new AllOtherFriendlyMinions();
         public static AllOtherCharacters AllOtherCharacters = new AllOtherCharacters();
         public static AllOtherMinions AllOtherMinions = new AllOtherMinions();
+        public static AllMinions AllMinions = new AllMinions();
 
         public static SelectCharacterFrom SelectCharacter = new SelectCharacterFrom(new AllCharacters());
         public static SelectCharacterFrom SelectOtherCharacter = new SelectCharacterFrom(new AllOtherCharacters());

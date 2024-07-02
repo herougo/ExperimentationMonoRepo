@@ -138,6 +138,7 @@
     <Compile Include="Game\EffectManagement\EffectManagerNodePlan.cs" />
     <Compile Include="Game\EffectManagement\EventCardSlotToEMNodeListDictionary.cs" />
     <Compile Include="Game\Utils\HSGameUtils.cs" />
+    <Compile Include="Selections\SlotSelections\AllMinions.cs" />
     <Compile Include="Selections\SlotSelections\AllOtherLivingEnemies.cs" />
     <Compile Include="Selections\SelectionFilter.cs" />
     <Compile Include="Selections\SelectionFilters\CardTypeSelectionFilter.cs" />

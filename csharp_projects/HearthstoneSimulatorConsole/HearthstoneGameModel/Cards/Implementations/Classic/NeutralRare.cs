@@ -332,6 +332,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class WildPyromancer : MinionCard
+    {
+        public WildPyromancer()
+        {
+            _cardId = CardIds.WildPyromancer;
+            _name = "Wild Pyromancer";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 2;
+            _attack = 3;
+            _health = 2;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new AfterSpellActivation(new DealDamage(SelectionConstants.AllMinions, 1), PlayerChoice.Player)
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new WildPyromancer();
+        }
+    }
+
 
     public class ArgentCommander : MinionCard
     {

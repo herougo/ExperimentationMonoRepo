@@ -63,6 +63,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string MasterSwordsmith = "C050";
         public const string PintSizedSummoner = "C051";
         public const string SunfuryProtector = "C052";
+        public const string WildPyromancer = "C053";
 
         public const string ArgentCommander = "C069";
 
