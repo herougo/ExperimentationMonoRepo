@@ -382,4 +382,30 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new ArgentCommander();
         }
     }
+
+
+    public class GadgetzanAuctioneer : MinionCard
+    {
+        public GadgetzanAuctioneer()
+        {
+            _cardId = CardIds.GadgetzanAuctioneer;
+            _name = "Gadgetzan Auctioneer";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 6;
+            _attack = 4;
+            _health = 4;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new AfterSpellActivation(new DrawCards(SelectionConstants.Player, 1), PlayerChoice.Player)
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new GadgetzanAuctioneer();
+        }
     }
+}

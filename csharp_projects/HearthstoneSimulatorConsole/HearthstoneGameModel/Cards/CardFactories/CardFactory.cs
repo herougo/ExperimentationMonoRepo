@@ -124,6 +124,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
 
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();
+                case CardIds.GadgetzanAuctioneer:
+                    return new GadgetzanAuctioneer();
 
                 case CardIds.DamagedGolem:
                     return new DamagedGolem();
