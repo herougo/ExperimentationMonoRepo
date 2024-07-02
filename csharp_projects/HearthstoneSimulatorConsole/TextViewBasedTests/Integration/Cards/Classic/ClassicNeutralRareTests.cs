@@ -224,5 +224,20 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestSunwalker()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+attack 0 -1
+attack 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.Sunwalker, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.ArgentCommander, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }

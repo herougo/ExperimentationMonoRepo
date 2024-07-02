@@ -67,7 +67,8 @@ namespace HearthstoneGameModel.Core.Enums
 
         public const string ArgentCommander = "C069";
         public const string GadgetzanAuctioneer = "C070";
-        
+        public const string Sunwalker = "C071";
+
 
 
         // Classic Uncollectible

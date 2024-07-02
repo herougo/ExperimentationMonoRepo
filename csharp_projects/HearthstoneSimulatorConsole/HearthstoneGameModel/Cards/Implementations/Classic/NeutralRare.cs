@@ -344,6 +344,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _mana = 2;
             _attack = 3;
             _health = 2;
+            _tag = MinionTag.Undead;
 
             _inPlayEffects = new List<EMEffect>
             {
@@ -356,7 +357,6 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new WildPyromancer();
         }
     }
-
 
     public class ArgentCommander : MinionCard
     {
@@ -383,7 +383,6 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
-
     public class GadgetzanAuctioneer : MinionCard
     {
         public GadgetzanAuctioneer()
@@ -406,6 +405,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new GadgetzanAuctioneer();
+        }
+    }
+
+    public class Sunwalker : MinionCard
+    {
+        public Sunwalker()
+        {
+            _cardId = CardIds.Sunwalker;
+            _name = "Sunwalker";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 6;
+            _attack = 4;
+            _health = 5;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new DivineShield(), new Taunt()
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new Sunwalker();
         }
     }
 }
