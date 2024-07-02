@@ -282,6 +282,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class MasterSwordsmith : MinionCard
+    {
+        public MasterSwordsmith()
+        {
+            _cardId = CardIds.MasterSwordsmith;
+            _name = "Master Swordsmith";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 2;
+            _attack = 1;
+            _health = 3;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new OnTurnEnd(new ChangeAttack(SelectionConstants.RandomOtherFriendlyMinion, 1))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new MasterSwordsmith();
+        }
+    }
+
 
     public class ArgentCommander : MinionCard
     {

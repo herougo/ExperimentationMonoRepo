@@ -114,6 +114,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new ManaAddict();
                 case CardIds.ManaWraith:
                     return new ManaWraith();
+                case CardIds.MasterSwordsmith:
+                    return new MasterSwordsmith();
 
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();

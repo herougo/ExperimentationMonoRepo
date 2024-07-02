@@ -155,5 +155,17 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Warlock);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestMasterSwordsmith()
+        {
+            string actionText = @"play 0 0
+hero_power
+end_turn
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.MasterSwordsmith, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }
