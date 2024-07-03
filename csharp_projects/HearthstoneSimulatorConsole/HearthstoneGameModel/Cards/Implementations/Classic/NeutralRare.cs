@@ -416,6 +416,37 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class Demolisher : MinionCard
+    {
+        public Demolisher()
+        {
+            _cardId = CardIds.Demolisher;
+            _name = "Demolisher";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 3;
+            _attack = 1;
+            _health = 4;
+            _tag = MinionTag.Mech;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new OnTurnStart(
+                    new DealDamage(
+                        new RandomCharacterFrom(SelectionConstants.OtherLivingEnemies),
+                        2
+                    )
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new Demolisher();
+        }
+    }
+
     public class ArgentCommander : MinionCard
     {
         public ArgentCommander()

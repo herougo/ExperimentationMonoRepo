@@ -67,6 +67,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string AlarmOBot = "C054";
         public const string ArcaneGolem = "C055";
         public const string ColdlightSeer = "C056";
+        public const string Demolisher = "C057";
 
         public const string ArgentCommander = "C069";
         public const string GadgetzanAuctioneer = "C070";
