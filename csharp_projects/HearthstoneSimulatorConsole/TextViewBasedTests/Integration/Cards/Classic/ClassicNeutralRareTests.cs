@@ -215,6 +215,23 @@ concede";
         }
 
         [Fact]
+        public Task TestColdlightSeer()
+        {
+            string actionText = @"play 0 0
+play 0 1
+play 0 2
+play 0 3
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.ColdlightSeer, CardIds.ColdlightSeer, CardIds.ColdlightSeer,
+                CardIds.ColdlightSeer, CardIds.ColdlightSeer, CardIds.MurlocTidecaller
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestArgentCommander()
         {
             string actionText = @"play 0 0

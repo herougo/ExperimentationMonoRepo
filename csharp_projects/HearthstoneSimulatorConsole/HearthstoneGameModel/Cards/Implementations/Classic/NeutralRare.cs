@@ -16,6 +16,7 @@ using HearthstoneGameModel.Selections;
 using HearthstoneGameModel.Selections.SlotSelections;
 using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
 using HearthstoneGameModel.Effects.HandContinuousEffects;
+using HearthstoneGameModel.Selections.SelectionFilters;
 
 namespace HearthstoneGameModel.Cards.Implementations.Classic
 {
@@ -380,6 +381,38 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new ArcaneGolem();
+        }
+    }
+
+    public class ColdlightSeer : MinionCard
+    {
+        public ColdlightSeer()
+        {
+            _cardId = CardIds.ColdlightSeer;
+            _name = "Coldlight Seer";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 3;
+            _attack = 2;
+            _health = 3;
+            _tag = MinionTag.Murloc;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(
+                    new ChangeHealth(
+                        SelectionConstants.AllOtherFriendlyMinions 
+                        & new TagSelectionFilter(MinionTag.Murloc),
+                        2
+                    )
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new ColdlightSeer();
         }
     }
 

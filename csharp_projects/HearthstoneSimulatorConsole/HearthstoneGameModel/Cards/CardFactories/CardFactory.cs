@@ -124,6 +124,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
 
                 case CardIds.ArcaneGolem:
                     return new ArcaneGolem();
+                case CardIds.ColdlightSeer:
+                    return new ColdlightSeer();
 
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();
