@@ -6,6 +6,7 @@ using HearthstoneGameModel.Effects.OneTimeEffects;
 using HearthstoneGameModel.Effects.WrappedEMEffects;
 using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
 using HearthstoneGameModel.Selections;
+using HearthstoneGameModel.Selections.SlotSelections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
             _hsClass = HSClass.Priest;
             _mana = 0;
             _heroPowerCost = 2;
-            _heroPowerEffect = new Heal(SelectionConstants.SelectCharacter, 2);
+            _heroPowerEffect = new Heal(new SelectCharacterFrom(SelectionConstants.AllCharacters), 2);
         }
 
         public override Card Copy()
@@ -183,7 +184,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
             _hsClass = HSClass.Mage;
             _mana = 0;
             _heroPowerCost = 2;
-            _heroPowerEffect = new DealDamage(SelectionConstants.SelectCharacter, 1);
+            _heroPowerEffect = new DealDamage(new SelectCharacterFrom(SelectionConstants.AllCharacters), 1);
         }
 
         public override Card Copy()

@@ -8,25 +8,10 @@ using System.Threading.Tasks;
 
 namespace HearthstoneGameModel.Selections
 {
-    public abstract class SelectionFilter : SlotSelection
+    public abstract class SelectionFilter
     {
-        protected SlotSelection _selection;
+        public abstract List<CardSlot> Filter(List<CardSlot> toFilter, HearthstoneGame game, CardSlot affectedCardSlot);
 
-        public SelectionFilter(SlotSelection selection)
-        {
-            _selection = selection;
-            _eventsReceived.AddRange(selection.EventsReceived);
-        }
-
-        protected abstract List<CardSlot> filter(List<CardSlot> toFilter);
-
-        public override List<CardSlot> GetSelectedCardSlots
-            (HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
-        )
-        {
-            List<CardSlot> results = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
-            results = filter(results);
-            return results;
-        }
+        public abstract SelectionFilter Copy();
     }
 }

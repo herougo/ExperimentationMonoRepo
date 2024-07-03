@@ -14,6 +14,7 @@ using HearthstoneGameModel.Effects.TriggerEffects;
 using HearthstoneGameModel.Effects.WrappedEMEffects;
 using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
 using HearthstoneGameModel.Selections;
+using HearthstoneGameModel.Selections.SlotSelections;
 using HearthstoneGameModel.ValueMonitors;
 using HearthstoneGameModel.Values;
 
@@ -55,7 +56,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _inPlayEffects = new List<EMEffect> {
                 new Battlecry(
                     new TimeLimitedOneTimeEffect(
-                        new ChangeAttack(SelectionConstants.SelectOtherFriendlyMinion, 2),
+                        new ChangeAttack(new SelectCharacterFrom(SelectionConstants.AllOtherFriendlyMinions), 2),
                         EffectTimeLimit.EndOfTurn
                     )
                 )
@@ -367,7 +368,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
                 new Battlecry(
                     new NEffects(
                         new DealDamage(
-                            SelectionConstants.RandomOtherLivingCharacter, 1), 
+                            new RandomCharacterFrom(SelectionConstants.OtherLivingCharacters), 1), 
                             3
                         )
                     )
@@ -395,7 +396,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect> {
                 new Battlecry(
-                    new ReturnMinionToHand(SelectionConstants.SelectOtherFriendlyMinion)
+                    new ReturnMinionToHand(new SelectCharacterFrom(SelectionConstants.AllOtherFriendlyMinions))
                 )
             };
         }
@@ -421,7 +422,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect> {
                 new Battlecry(
-                    new Heal(SelectionConstants.SelectOtherCharacter, 3)
+                    new Heal(new SelectCharacterFrom(SelectionConstants.AllOtherCharacters), 3)
                 )
             };
         }
@@ -499,7 +500,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _tag = MinionTag.Beast;
 
             _inPlayEffects = new List<EMEffect> {
-                new Battlecry(new Silence(SelectionConstants.SelectOtherMinion))
+                new Battlecry(new Silence(new SelectCharacterFrom(SelectionConstants.AllOtherMinions)))
             };
         }
 
@@ -657,7 +658,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect> {
                 new Battlecry(new ReturnMinionToHand(
-                    SelectionConstants.SelectOtherFriendlyMinion
+                    new SelectCharacterFrom(SelectionConstants.AllOtherFriendlyMinions)
                 ))
             };
         }
@@ -710,7 +711,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect> {
                 new Battlecry(new TimeLimitedOneTimeEffect(
-                    new ChangeAttack(SelectionConstants.SelectOtherMinion, 2),
+                    new ChangeAttack(new SelectCharacterFrom(SelectionConstants.AllOtherMinions), 2),
                     EffectTimeLimit.EndOfTurn
                 ))
             };
@@ -947,7 +948,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect> {
                 new Battlecry(
-                    new Freeze(SelectionConstants.SelectOtherCharacter)
+                    new Freeze(new SelectCharacterFrom(SelectionConstants.AllOtherCharacters))
                 )
             };
         }

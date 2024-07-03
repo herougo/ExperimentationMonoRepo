@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace HearthstoneGameModel.Selections.SlotSelections
 {
-    public class RandomCharacter : SlotSelection
+    public class RandomCharacterFrom : SlotSelection
     {
         protected SlotSelection _selection;
 
-        public RandomCharacter(SlotSelection selection) {
+        public RandomCharacterFrom(SlotSelection selection) {
             _selection = selection;
         }
 
@@ -33,7 +33,7 @@ namespace HearthstoneGameModel.Selections.SlotSelections
 
         public override SlotSelection Copy()
         {
-            return new RandomCharacter(_selection.Copy());
+            return new RandomCharacterFrom(_selection.Copy());
         }
     }
 }

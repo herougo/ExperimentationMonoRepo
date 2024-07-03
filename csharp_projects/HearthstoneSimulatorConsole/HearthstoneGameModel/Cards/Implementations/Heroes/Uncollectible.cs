@@ -6,6 +6,7 @@ using HearthstoneGameModel.Effects.OneTimeEffects;
 using HearthstoneGameModel.Effects.TriggerEffects;
 using HearthstoneGameModel.Game.EffectManagement;
 using HearthstoneGameModel.Selections;
+using HearthstoneGameModel.Selections.SlotSelections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -107,7 +108,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
             _attack = 0;
             _health = 2;
             _inPlayEffects = new List<EMEffect> {
-                new OnTurnEnd(new ChangeAttack(SelectionConstants.RandomOtherFriendlyMinion, 1))
+                new OnTurnEnd(new ChangeAttack(new RandomCharacterFrom(SelectionConstants.AllOtherFriendlyMinions), 1))
             };
         }
 

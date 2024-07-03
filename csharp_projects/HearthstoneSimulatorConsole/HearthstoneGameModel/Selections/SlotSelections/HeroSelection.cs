@@ -1,6 +1,8 @@
-﻿using HearthstoneGameModel.Game;
+﻿using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Game;
 using HearthstoneGameModel.Game.CardSlots;
 using HearthstoneGameModel.Game.EffectManagement;
+using HearthstoneGameModel.Game.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,26 +13,33 @@ namespace HearthstoneGameModel.Selections.SlotSelections
 {
     public class HeroSelection : SlotSelection
     {
-        bool _opposing;
+        PlayerChoice _playerChoice;
 
-        public HeroSelection(bool opposing) { _opposing = opposing; }
+        public HeroSelection(PlayerChoice playerChoice)
+        {
+            _playerChoice = playerChoice;
+        }
 
         public override List<CardSlot> GetSelectedCardSlots(
             HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
         )
         {
             CardSlot cardSlot = affectedCardSlot;
-            int player = cardSlot.Player;
-            if (_opposing)
+            int refPlayer = cardSlot.Player;
+            List<CardSlot> result = new List<CardSlot>();
+            for (int player = 0; player < HearthstoneConstants.NumberOfPlayers; player++)
             {
-                player = 1 - player;
+                if (HSGameUtils.IsPlayerAffected(player, refPlayer, _playerChoice))
+                {
+                    result.Add(game.Players[player]);
+                }
             }
-            return new List<CardSlot> { game.Players[player] };
+            return result;
         }
 
         public override SlotSelection Copy()
         {
-            return new HeroSelection(_opposing);
+            return new HeroSelection(_playerChoice);
         }
     }
 }

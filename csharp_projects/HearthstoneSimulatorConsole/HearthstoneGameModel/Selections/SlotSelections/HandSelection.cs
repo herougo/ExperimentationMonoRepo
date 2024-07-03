@@ -27,15 +27,16 @@ namespace HearthstoneGameModel.Selections.SlotSelections
         )
         {
             CardSlot cardSlot = affectedCardSlot;
+            int refPlayer = cardSlot.Player;
             List<CardSlot> result = new List<CardSlot>();
-            for (int refPlayer = 0; refPlayer < HearthstoneConstants.NumberOfPlayers; refPlayer++)
+            for (int player = 0; player < HearthstoneConstants.NumberOfPlayers; player++)
             {
-                if (!HSGameUtils.IsPlayerAffected(cardSlot.Player, refPlayer, _playerChoice))
+                if (!HSGameUtils.IsPlayerAffected(player, refPlayer, _playerChoice))
                 {
                     continue;
                 }
 
-                foreach (CardSlot handCardSlot in game.Hands[refPlayer])
+                foreach (CardSlot handCardSlot in game.Hands[player])
                 {
                     result.Add(handCardSlot);
                 }

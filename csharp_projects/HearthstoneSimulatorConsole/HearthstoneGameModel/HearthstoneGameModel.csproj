@@ -138,23 +138,29 @@
     <Compile Include="Game\EffectManagement\EffectManagerNodePlan.cs" />
     <Compile Include="Game\EffectManagement\EventCardSlotToEMNodeListDictionary.cs" />
     <Compile Include="Game\Utils\HSGameUtils.cs" />
-    <Compile Include="Selections\SlotSelections\AllMinions.cs" />
-    <Compile Include="Selections\SlotSelections\AllOtherLivingEnemies.cs" />
+    <Compile Include="Selections\CompoundSelections\UnionSlotSelection.cs" />
     <Compile Include="Selections\SelectionFilter.cs" />
+    <Compile Include="Selections\SelectionFilters\LivingSelectionFilter.cs" />
+    <Compile Include="Selections\SelectionFilters\OtherSelectionFilter.cs" />
+    <Compile Include="Selections\SelectionFilters\TagSelectionFilter.cs" />
+    <Compile Include="Selections\SlotSelections\BoardSelection.cs" />
+    <Compile Include="Selections\temp\AllMinions.cs" />
+    <Compile Include="Selections\temp\AllOtherLivingEnemies.cs" />
+    <Compile Include="Selections\CompoundSelections\FilteredSelection.cs" />
     <Compile Include="Selections\SelectionFilters\CardTypeSelectionFilter.cs" />
     <Compile Include="Selections\SlotSelection.cs" />
     <Compile Include="Selections\SlotSelections\AdjacentMinions.cs" />
-    <Compile Include="Selections\SlotSelections\AllCharacters.cs" />
-    <Compile Include="Selections\SlotSelections\AllFriendlyCharacters.cs" />
-    <Compile Include="Selections\SlotSelections\AllFriendlyMinions.cs" />
-    <Compile Include="Selections\SlotSelections\AllOtherCharacters.cs" />
-    <Compile Include="Selections\SlotSelections\AllOtherFriendlyCharacters.cs" />
-    <Compile Include="Selections\SlotSelections\AllOtherFriendlyMinions.cs" />
-    <Compile Include="Selections\SlotSelections\AllOtherMinions.cs" />
-    <Compile Include="Selections\SlotSelections\AllOtherLivingCharacters.cs" />
+    <Compile Include="Selections\temp\AllCharacters.cs" />
+    <Compile Include="Selections\temp\AllFriendlyCharacters.cs" />
+    <Compile Include="Selections\temp\AllFriendlyMinions.cs" />
+    <Compile Include="Selections\temp\AllOtherCharacters.cs" />
+    <Compile Include="Selections\temp\AllOtherFriendlyCharacters.cs" />
+    <Compile Include="Selections\temp\AllOtherFriendlyMinions.cs" />
+    <Compile Include="Selections\temp\AllOtherMinions.cs" />
+    <Compile Include="Selections\temp\AllOtherLivingCharacters.cs" />
     <Compile Include="Selections\SlotSelections\HeroSelection.cs" />
     <Compile Include="Selections\SlotSelections\OwnSelf.cs" />
-    <Compile Include="Selections\SlotSelections\RandomCharacter.cs" />
+    <Compile Include="Selections\SlotSelections\RandomCharacterFrom.cs" />
     <Compile Include="Selections\SlotSelections\SelectCharacterFrom.cs" />
     <Compile Include="Selections\SelectionConstants.cs" />
     <Compile Include="Selections\SlotSelections\WeaponSelection.cs" />
@@ -192,8 +198,6 @@
     <Compile Include="Values\IIntValue.cs" />
     <Compile Include="Values\OwnWeaponAttackIntValue.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Selections\CompoundSelections\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

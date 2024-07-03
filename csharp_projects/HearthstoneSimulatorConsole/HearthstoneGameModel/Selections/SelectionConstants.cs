@@ -11,40 +11,61 @@ namespace HearthstoneGameModel.Selections
 {
     public static class SelectionConstants
     {
-        public static AllCharacters AllCharacters = new AllCharacters();
-        public static AllFriendlyCharacters AllFriendlyCharacters = new AllFriendlyCharacters();
-        public static AllFriendlyMinions AllFriendlyMinions = new AllFriendlyMinions();
-        public static AllOtherFriendlyCharacters AllOtherFriendlyCharacters = new AllOtherFriendlyCharacters();
-        public static AllOtherFriendlyMinions AllOtherFriendlyMinions = new AllOtherFriendlyMinions();
-        public static AllOtherCharacters AllOtherCharacters = new AllOtherCharacters();
-        public static AllOtherMinions AllOtherMinions = new AllOtherMinions();
-        public static AllMinions AllMinions = new AllMinions();
-
-        public static SelectCharacterFrom SelectCharacter = new SelectCharacterFrom(new AllCharacters());
-        public static SelectCharacterFrom SelectOtherCharacter = new SelectCharacterFrom(new AllOtherCharacters());
-        public static SelectCharacterFrom SelectOtherMinion = new SelectCharacterFrom(new AllOtherMinions());
-        public static SelectCharacterFrom SelectOtherFriendlyMinion = new SelectCharacterFrom(new AllOtherFriendlyMinions());
-
-        public static RandomCharacter RandomOtherLivingCharacter = new RandomCharacter(new AllOtherLivingCharacters());
-        public static RandomCharacter RandomOtherLivingEnemy = new RandomCharacter(new AllOtherLivingEnemies());
-        public static RandomCharacter RandomOtherFriendlyMinion = new RandomCharacter(new AllOtherFriendlyMinions());
-        
-        public static HeroSelection Player = new HeroSelection(false);
-        public static HeroSelection Opponent = new HeroSelection(true);
-        public static OwnSelf OwnSelf = new OwnSelf();
-        
-        public static AdjacentMinions AdjacentMinions = new AdjacentMinions();
-
-        public static WeaponSelection PlayerWeapon = new WeaponSelection(false);
-        public static WeaponSelection OpponentWeapon = new WeaponSelection(true);
-
-        public static CardTypeSelectionFilter PlayerHandMinions = new CardTypeSelectionFilter(
-            new HandSelection(PlayerChoice.Player),
-            CardType.Minion
+        public static SlotSelection AllCharacters = (
+            new HeroSelection(PlayerChoice.Both) + new BoardSelection(PlayerChoice.Both)
         );
-        public static CardTypeSelectionFilter AllHandMinions = new CardTypeSelectionFilter(
-            new HandSelection(PlayerChoice.Both),
-            CardType.Minion
+        public static SlotSelection AllFriendlyCharacters = (
+            new HeroSelection(PlayerChoice.Player) + new BoardSelection(PlayerChoice.Player)
+        );
+        public static SlotSelection AllFriendlyMinions = (
+            new BoardSelection(PlayerChoice.Player) & new CardTypeSelectionFilter(CardType.Minion)
+        );
+        public static SlotSelection AllOtherFriendlyCharacters = (
+            (new HeroSelection(PlayerChoice.Player) + new BoardSelection(PlayerChoice.Player))
+            & new OtherSelectionFilter()
+        );
+        public static SlotSelection AllOtherFriendlyMinions = (
+            (new BoardSelection(PlayerChoice.Player) & new CardTypeSelectionFilter(CardType.Minion))
+            & new OtherSelectionFilter()
+        );
+        public static SlotSelection AllOtherCharacters = (
+            (new HeroSelection(PlayerChoice.Both) + new BoardSelection(PlayerChoice.Both))
+            & new OtherSelectionFilter()
+        );
+        public static SlotSelection AllOtherMinions = (
+            (new BoardSelection(PlayerChoice.Player) & new CardTypeSelectionFilter(CardType.Minion))
+            & new OtherSelectionFilter()
+        );
+        public static SlotSelection AllMinions = (
+            (new BoardSelection(PlayerChoice.Player) & new CardTypeSelectionFilter(CardType.Minion))
+        );
+        public static SlotSelection OtherLivingEnemies = (
+            ((new HeroSelection(PlayerChoice.Opponent) + new BoardSelection(PlayerChoice.Opponent))
+            & new LivingSelectionFilter())
+            & new OtherSelectionFilter()
+        );
+        public static SlotSelection OtherLivingCharacters = (
+            ((new HeroSelection(PlayerChoice.Both) + new BoardSelection(PlayerChoice.Both))
+            & new LivingSelectionFilter())
+            & new OtherSelectionFilter()
+        );
+
+        public static SlotSelection Player = new HeroSelection(PlayerChoice.Player);
+        public static SlotSelection Opponent = new HeroSelection(PlayerChoice.Opponent);
+        public static SlotSelection OwnSelf = new OwnSelf();
+        
+        public static SlotSelection AdjacentMinions = new AdjacentMinions();
+
+        public static SlotSelection PlayerWeapon = new WeaponSelection(false);
+        public static SlotSelection OpponentWeapon = new WeaponSelection(true);
+
+        public static SlotSelection PlayerHandMinions = (
+            new HandSelection(PlayerChoice.Player)
+            & new CardTypeSelectionFilter(CardType.Minion)
+        );
+        public static SlotSelection AllHandMinions = (
+            new HandSelection(PlayerChoice.Both)
+            & new CardTypeSelectionFilter(CardType.Minion)
         );
 
     }

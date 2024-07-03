@@ -163,7 +163,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new OnTurnEnd(new ChangeHealth(SelectionConstants.RandomOtherFriendlyMinion, 1))
+                new OnTurnEnd(new ChangeHealth(new RandomCharacterFrom(SelectionConstants.AllOtherFriendlyMinions), 1))
             };
         }
 
@@ -213,7 +213,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new WhenYouSummonOtherMinion(new DealDamage(SelectionConstants.RandomOtherLivingEnemy, 1), MinionTag.Any)
+                new WhenYouSummonOtherMinion(new DealDamage(new RandomCharacterFrom(SelectionConstants.OtherLivingEnemies), 1), MinionTag.Any)
             };
         }
 
@@ -297,7 +297,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new OnTurnEnd(new ChangeAttack(SelectionConstants.RandomOtherFriendlyMinion, 1))
+                new OnTurnEnd(new ChangeAttack(new RandomCharacterFrom(SelectionConstants.AllOtherFriendlyMinions), 1))
             };
         }
 

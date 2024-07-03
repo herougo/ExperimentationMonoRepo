@@ -1,6 +1,8 @@
-﻿using HearthstoneGameModel.Core.Enums;
+﻿using HearthstoneGameModel.Cards.CardTypes;
+using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Game;
 using HearthstoneGameModel.Game.CardSlots;
+using HearthstoneGameModel.Game.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,23 +11,23 @@ using System.Threading.Tasks;
 
 namespace HearthstoneGameModel.Selections.SelectionFilters
 {
-    public class CardTypeSelectionFilter : SelectionFilter
+    public class TagSelectionFilter : SelectionFilter
     {
-        CardType _desiredCardType;
+        MinionTag _desiredTag;
 
-        public CardTypeSelectionFilter(CardType desiredCardType)
+        public TagSelectionFilter(MinionTag desiredTag)
         {
-            _desiredCardType = desiredCardType;
+            _desiredTag = desiredTag;
         }
 
         public override List<CardSlot> Filter(List<CardSlot> toFilter, HearthstoneGame game, CardSlot affectedCardSlot)
         {
-            return toFilter.Where(slot => slot.CardType == _desiredCardType).ToList();
+            return toFilter.Where(slot => HSGameUtils.MatchesTag(_desiredTag, ((MinionCard)slot.Card).Tag)).ToList();
         }
 
         public override SelectionFilter Copy()
         {
-            return new CardTypeSelectionFilter(_desiredCardType);
+            return new TagSelectionFilter(_desiredTag);
         }
     }
 }

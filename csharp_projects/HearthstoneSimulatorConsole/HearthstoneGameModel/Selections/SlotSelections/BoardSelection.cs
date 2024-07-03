@@ -1,19 +1,22 @@
 ﻿using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Game.CardSlots;
-using HearthstoneGameModel.Game.EffectManagement;
 using HearthstoneGameModel.Game;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Game.Utils;
 
 namespace HearthstoneGameModel.Selections.SlotSelections
 {
-    public class AllCharacters : SlotSelection
+    public class BoardSelection : SlotSelection
     {
-        public AllCharacters()
+        PlayerChoice _playerChoice;
+
+        public BoardSelection(PlayerChoice playerChoice)
         {
+            _playerChoice = playerChoice;
             _eventsReceived = new List<string>
             {
                 EffectEvent.MinionDies, EffectEvent.MinionPutInPlay, EffectEvent.CardMovedToHand
@@ -25,15 +28,20 @@ namespace HearthstoneGameModel.Selections.SlotSelections
         )
         {
             CardSlot cardSlot = affectedCardSlot;
-            List<CardSlot> result = game.Players.ToList<CardSlot>();
-            result.AddRange(game.Battleboard.GetAllSlots(0));
-            result.AddRange(game.Battleboard.GetAllSlots(1));
+            int refPlayer = cardSlot.Player;
+            List<CardSlot> result = new List<CardSlot>();
+            for (int player = 0; player < HearthstoneConstants.NumberOfPlayers; player++) {
+                if (HSGameUtils.IsPlayerAffected(player, refPlayer, _playerChoice))
+                {
+                    result.AddRange(game.Battleboard.GetAllSlots(0));
+                }
+            }
             return result;
         }
 
         public override SlotSelection Copy()
         {
-            return new AllCharacters();
+            return new BoardSelection(_playerChoice);
         }
     }
 }
