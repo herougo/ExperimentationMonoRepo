@@ -358,6 +358,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class ArcaneGolem : MinionCard
+    {
+        public ArcaneGolem()
+        {
+            _cardId = CardIds.ArcaneGolem;
+            _name = "Arcane Golem";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 3;
+            _attack = 4;
+            _health = 2;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Charge(), new Battlecry(new GainManaCrystals(SelectionConstants.Opponent, 1))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new ArcaneGolem();
+        }
+    }
+
     public class ArgentCommander : MinionCard
     {
         public ArgentCommander()

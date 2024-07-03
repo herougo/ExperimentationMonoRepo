@@ -64,6 +64,8 @@ namespace HearthstoneGameModel.Core.Enums
         public const string PintSizedSummoner = "C051";
         public const string SunfuryProtector = "C052";
         public const string WildPyromancer = "C053";
+        public const string AlarmOBot = "C054";
+        public const string ArcaneGolem = "C055";
 
         public const string ArgentCommander = "C069";
         public const string GadgetzanAuctioneer = "C070";

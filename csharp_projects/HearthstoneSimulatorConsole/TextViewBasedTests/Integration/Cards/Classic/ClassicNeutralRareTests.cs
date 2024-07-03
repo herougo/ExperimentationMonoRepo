@@ -199,6 +199,22 @@ concede";
         }
 
         [Fact]
+        public Task TestArcaneGolem()
+        {
+            string actionText = @"end_turn
+end_turn
+end_turn
+play 4
+play 0 0
+attack 0 -1
+end_turn
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.ArcaneGolem, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, false, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestArgentCommander()
         {
             string actionText = @"play 0 0

@@ -122,6 +122,9 @@ namespace HearthstoneGameModel.Cards.CardFactories
                 case CardIds.WildPyromancer:
                     return new WildPyromancer();
 
+                case CardIds.ArcaneGolem:
+                    return new ArcaneGolem();
+
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();
                 case CardIds.GadgetzanAuctioneer:

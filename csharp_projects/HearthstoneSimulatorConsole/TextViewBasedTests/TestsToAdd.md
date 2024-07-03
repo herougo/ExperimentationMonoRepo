@@ -75,6 +75,7 @@ Missing Cards
 - [ ] Secretkeeper
 - [ ] Crazed Alchemist
 - [ ] Pint-Sized Summoner
+- [ ] Alarm-o-Bot
 
 ### Specific Cases
 
