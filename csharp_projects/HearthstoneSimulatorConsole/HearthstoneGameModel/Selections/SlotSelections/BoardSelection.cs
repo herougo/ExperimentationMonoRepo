@@ -33,7 +33,7 @@ namespace HearthstoneGameModel.Selections.SlotSelections
             for (int player = 0; player < HearthstoneConstants.NumberOfPlayers; player++) {
                 if (HSGameUtils.IsPlayerAffected(player, refPlayer, _playerChoice))
                 {
-                    result.AddRange(game.Battleboard.GetAllSlots(0));
+                    result.AddRange(game.Battleboard.GetAllSlots(player));
                 }
             }
             return result;

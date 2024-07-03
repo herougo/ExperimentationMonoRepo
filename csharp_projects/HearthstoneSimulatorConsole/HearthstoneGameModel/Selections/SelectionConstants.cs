@@ -33,11 +33,11 @@ namespace HearthstoneGameModel.Selections
             & new OtherSelectionFilter()
         );
         public static SlotSelection AllOtherMinions = (
-            (new BoardSelection(PlayerChoice.Player) & new CardTypeSelectionFilter(CardType.Minion))
+            (new BoardSelection(PlayerChoice.Both) & new CardTypeSelectionFilter(CardType.Minion))
             & new OtherSelectionFilter()
         );
         public static SlotSelection AllMinions = (
-            (new BoardSelection(PlayerChoice.Player) & new CardTypeSelectionFilter(CardType.Minion))
+            (new BoardSelection(PlayerChoice.Both) & new CardTypeSelectionFilter(CardType.Minion))
         );
         public static SlotSelection OtherLivingEnemies = (
             ((new HeroSelection(PlayerChoice.Opponent) + new BoardSelection(PlayerChoice.Opponent))

@@ -6,13 +6,12 @@ using TextView;
 // List<string> cardIdList0 = Enumerable.Repeat(CardIds.DreadCorsair, 30).ToList();
 List<string> cardIdList0 = new List<string>
 {
-    CardIds.YouthfulBrewmaster, CardIds.DireWolfAlpha, CardIds.YouthfulBrewmaster,
-    CardIds.YouthfulBrewmaster, CardIds.Wisp, CardIds.DireWolfAlpha
+    CardIds.YouthfulBrewmaster, CardIds.VentureCoMercenary, CardIds.YouthfulBrewmaster,
+    CardIds.YouthfulBrewmaster, CardIds.Wisp, CardIds.VentureCoMercenary
 };
-List<string> cardIdList1 = Enumerable.Repeat(CardIds.KnifeJuggler, 30).ToList();
-string hsClass0 = "hero_rogue";
+string hsClass0 = "hero_warlock";
 Decklist decklist0 = new Decklist(cardIdList0, hsClass0);
-Decklist decklist1 = new Decklist(cardIdList1, hsClass0);
+Decklist decklist1 = new Decklist(cardIdList0, hsClass0);
 ConsoleActionReader actionGetter = new ConsoleActionReader();
 PlayerDecisionMaker decisionMaker0 = new PlayerDecisionMaker(actionGetter);
 PlayerDecisionMaker decisionMaker1 = new PlayerDecisionMaker(actionGetter);
