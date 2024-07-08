@@ -24,3 +24,16 @@ _inHandEffects = new List<EMEffect> {
 ```
 
 ### b) 
+
+## 3) Resolving Crazed Alchemist
+
+Battlecry
+
+- record attack and health
+- add SetAttack and SetMaxHealth
+- set health
+  - set health event
+
+What about external and conditional effects?
+
+- Priority System for EM Nodes

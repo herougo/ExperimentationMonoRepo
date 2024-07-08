@@ -107,7 +107,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new YoungPriestess();
                 case CardIds.AncientWatcher:
                     return new AncientWatcher();
-
+                case CardIds.CrazedAlchemist:
+                    return new CrazedAlchemist();
                 case CardIds.KnifeJuggler:
                     return new KnifeJuggler();
                 case CardIds.ManaAddict:

@@ -195,7 +195,33 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
         public override Card Copy()
         {
-            return new MurlocTidecaller();
+            return new AncientWatcher();
+        }
+    }
+    
+    public class CrazedAlchemist : MinionCard
+    {
+        public CrazedAlchemist()
+        {
+            _cardId = CardIds.CrazedAlchemist;
+            _name = "Crazed Alchemist";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 2;
+            _attack = 2;
+            _health = 2;
+            _tag = MinionTag.Undead;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                // TODO
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new CrazedAlchemist();
         }
     }
 
