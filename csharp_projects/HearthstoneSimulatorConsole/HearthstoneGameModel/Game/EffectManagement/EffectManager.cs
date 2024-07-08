@@ -14,7 +14,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
         HashSet<EffectManagerNode> _emNodes = new HashSet<EffectManagerNode>();
         Dictionary<EffectManagerNode, List<string>> _emNodeToEvents = new Dictionary<EffectManagerNode, List<string>>();
         EventCardSlotToEMNodeListDictionary _eventToEffectNodeList = new EventCardSlotToEMNodeListDictionary();
-        Dictionary<CardSlot, EffectManagerNodeList> _slotToEmNodeList = new Dictionary<CardSlot, EffectManagerNodeList>();
+        Dictionary<CardSlot, PrioritizedEffectManagerNodeList> _slotToEmNodeList = new Dictionary<CardSlot, PrioritizedEffectManagerNodeList>();
 
         public EffectManager(HearthstoneGame game) {
             _game = game;
@@ -34,7 +34,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
             CardSlot slot = emNode.AffectedSlot;
             if (!_slotToEmNodeList.ContainsKey(slot))
             {
-                _slotToEmNodeList[slot] = new EffectManagerNodeList();
+                _slotToEmNodeList[slot] = new PrioritizedEffectManagerNodeList();
             }
             _slotToEmNodeList[slot].Append(emNode);
         }

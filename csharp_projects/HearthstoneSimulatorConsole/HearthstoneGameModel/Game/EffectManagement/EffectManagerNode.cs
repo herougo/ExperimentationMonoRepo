@@ -65,5 +65,6 @@ namespace HearthstoneGameModel.Game.EffectManagement
             return (o as EffectManagerNode)?.Hash == Hash;
         }
 
+        public int Priority { get { return Effect.Priority; } }
     }
 }

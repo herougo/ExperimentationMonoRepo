@@ -19,6 +19,7 @@ namespace HearthstoneGameModel.Effects
         protected bool _requiresSlotPlayerMatchForEvent = false;
         protected EffectArea _effectArea = EffectArea.Field;
         protected bool _isHandEffect = false;
+        protected int _priority = 0;
 
         public virtual EffectManagerNodePlan Start(HearthstoneGame game, EffectManagerNode emNode)
         {
@@ -58,6 +59,11 @@ namespace HearthstoneGameModel.Effects
         public bool IsHandEffect
         {
             get { return _isHandEffect; }
+        }
+
+        public int Priority
+        {
+            get { return _priority; }
         }
 
         public virtual void AdjustStats(CardSlot cardSlot)

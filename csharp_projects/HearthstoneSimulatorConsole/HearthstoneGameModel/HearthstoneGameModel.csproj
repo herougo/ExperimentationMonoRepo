@@ -134,6 +134,7 @@
     <Compile Include="Game\CardSlots\SpellCardSlot.cs" />
     <Compile Include="Game\EffectManagement\EffectEventArgs.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNode.cs" />
+    <Compile Include="Game\EffectManagement\PrioritizedEffectManagerNodeList.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNodeList.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNodePlan.cs" />
     <Compile Include="Game\EffectManagement\EventCardSlotToEMNodeListDictionary.cs" />

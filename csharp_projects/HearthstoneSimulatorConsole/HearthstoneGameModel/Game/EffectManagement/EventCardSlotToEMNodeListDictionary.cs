@@ -20,26 +20,26 @@ namespace HearthstoneGameModel.Game.EffectManagement
             string,
             Dictionary<
                 CardSlot,
-                EffectManagerNodeList
+                PrioritizedEffectManagerNodeList
             >
         > _slotSpecificData = new Dictionary<
             string,
             Dictionary<
                 CardSlot,
-                EffectManagerNodeList
+                PrioritizedEffectManagerNodeList
             >
         >();
         Dictionary<
             string,
             Dictionary<
                 int,
-                EffectManagerNodeList
+                PrioritizedEffectManagerNodeList
             >
         > _playerAndNullData = new Dictionary<
             string,
             Dictionary<
                 int,
-                EffectManagerNodeList
+                PrioritizedEffectManagerNodeList
             >
         >();
 
@@ -48,19 +48,19 @@ namespace HearthstoneGameModel.Game.EffectManagement
             CardSlot slot = emNode.AffectedSlot;
             if (!_slotSpecificData.ContainsKey(effectEvent))
             {
-                _slotSpecificData[effectEvent] = new Dictionary<CardSlot, EffectManagerNodeList>();
-                _playerAndNullData[effectEvent] = new Dictionary<int, EffectManagerNodeList>();
-                _playerAndNullData[effectEvent][HashGenerator.NullHash] = new EffectManagerNodeList();
-                _playerAndNullData[effectEvent][HashGenerator.Player0Hash] = new EffectManagerNodeList();
-                _playerAndNullData[effectEvent][HashGenerator.Player1Hash] = new EffectManagerNodeList();
+                _slotSpecificData[effectEvent] = new Dictionary<CardSlot, PrioritizedEffectManagerNodeList>();
+                _playerAndNullData[effectEvent] = new Dictionary<int, PrioritizedEffectManagerNodeList>();
+                _playerAndNullData[effectEvent][HashGenerator.NullHash] = new PrioritizedEffectManagerNodeList();
+                _playerAndNullData[effectEvent][HashGenerator.Player0Hash] = new PrioritizedEffectManagerNodeList();
+                _playerAndNullData[effectEvent][HashGenerator.Player1Hash] = new PrioritizedEffectManagerNodeList();
             }
 
             if (emNode.Effect.RequiresSlotMatchForEvent)
             {
-                Dictionary<CardSlot, EffectManagerNodeList> slotToEmNodeList = _slotSpecificData[effectEvent];
+                Dictionary<CardSlot, PrioritizedEffectManagerNodeList> slotToEmNodeList = _slotSpecificData[effectEvent];
                 if (!slotToEmNodeList.ContainsKey(slot))
                 {
-                    slotToEmNodeList[slot] = new EffectManagerNodeList();
+                    slotToEmNodeList[slot] = new PrioritizedEffectManagerNodeList();
                 }
                 slotToEmNodeList[slot].Append(emNode);
 

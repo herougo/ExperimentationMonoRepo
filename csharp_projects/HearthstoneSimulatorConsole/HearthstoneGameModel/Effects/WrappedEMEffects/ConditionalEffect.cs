@@ -20,6 +20,7 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
         : base(effect)
         {
             _condition = condition;
+            _priority = 1;
             _eventsReceived.AddRange(_condition.EventsReceived);
         }
 
