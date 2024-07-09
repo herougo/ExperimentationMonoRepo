@@ -499,6 +499,34 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class ImpMaster : MinionCard
+    {
+        public ImpMaster()
+        {
+            _cardId = CardIds.ImpMaster;
+            _name = "Imp Master";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 3;
+            _attack = 1;
+            _health = 5;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new OnTurnEnd(new OneTimeEffectSequence(new List<OneTimeEffect>
+                {
+                    new DealDamage(SelectionConstants.OwnSelf, 1), new SummonMinion(new Imp())
+                }))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new ImpMaster();
+        }
+    }
+
     public class ArgentCommander : MinionCard
     {
         public ArgentCommander()

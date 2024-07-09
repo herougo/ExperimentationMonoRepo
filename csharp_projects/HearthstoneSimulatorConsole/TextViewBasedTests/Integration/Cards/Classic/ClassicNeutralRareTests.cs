@@ -286,6 +286,17 @@ concede";
         }
 
         [Fact]
+        public Task TestImpMaster()
+        {
+            string actionText = @"play 0 0
+end_turn
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.ImpMaster, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestArgentCommander()
         {
             string actionText = @"play 0 0

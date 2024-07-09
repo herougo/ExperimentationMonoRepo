@@ -17,6 +17,7 @@ namespace HearthstoneGameModel.Core.Enums
         Pirate = 6,
         Mech = 7,
         Elemental = 8,
-        Undead = 9
+        Undead = 9,
+        Demon = 10
     }
 }

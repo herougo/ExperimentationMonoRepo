@@ -131,6 +131,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Demolisher();
                 case CardIds.EmperorCobra:
                     return new EmperorCobra();
+                case CardIds.ImpMaster:
+                    return new ImpMaster();
 
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();
@@ -143,6 +145,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new DamagedGolem();
                 case CardIds.Squire:
                     return new Squire();
+                case CardIds.Imp:
+                    return new Imp();
 
                 case CardIds.Priest:
                     return new Priest();

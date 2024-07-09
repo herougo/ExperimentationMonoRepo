@@ -69,6 +69,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string ColdlightSeer = "C056";
         public const string Demolisher = "C057";
         public const string EmperorCobra = "C058";
+        public const string ImpMaster = "C059";
 
         public const string ArgentCommander = "C069";
         public const string GadgetzanAuctioneer = "C070";
@@ -79,6 +80,7 @@ namespace HearthstoneGameModel.Core.Enums
         // Classic Uncollectible
         public const string DamagedGolem = "CU001";
         public const string Squire = "CU002";
+        public const string Imp = "CU003";
 
         // Heroes
         public const string Priest = "hero_priest";

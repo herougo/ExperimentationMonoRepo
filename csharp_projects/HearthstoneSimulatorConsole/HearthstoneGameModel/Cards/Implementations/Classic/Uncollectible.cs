@@ -51,4 +51,25 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Squire();
         }
     }
+
+    public class Imp : MinionCard
+    {
+        public Imp()
+        {
+            _cardId = CardIds.Imp;
+            _name = "Imp";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 1;
+            _attack = 1;
+            _health = 1;
+            _tag = MinionTag.Demon;
+        }
+
+        public override Card Copy()
+        {
+            return new Imp();
+        }
+    }
 }
