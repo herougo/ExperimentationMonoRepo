@@ -297,6 +297,18 @@ concede";
         }
 
         [Fact]
+        public Task TestInjuredBlademaster()
+        {
+            string actionText = @"play 0 0
+hero_power
+select 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.InjuredBlademaster, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Priest);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestArgentCommander()
         {
             string actionText = @"play 0 0

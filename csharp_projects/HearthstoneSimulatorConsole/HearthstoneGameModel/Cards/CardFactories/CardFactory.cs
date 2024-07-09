@@ -133,6 +133,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new EmperorCobra();
                 case CardIds.ImpMaster:
                     return new ImpMaster();
+                case CardIds.InjuredBlademaster:
+                    return new InjuredBlademaster();
 
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();

@@ -527,6 +527,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class InjuredBlademaster : MinionCard
+    {
+        public InjuredBlademaster()
+        {
+            _cardId = CardIds.InjuredBlademaster;
+            _name = "Injured Blademaster";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 3;
+            _attack = 4;
+            _health = 7;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new DealDamage(SelectionConstants.OwnSelf, 4))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new InjuredBlademaster();
+        }
+    }
+
     public class ArgentCommander : MinionCard
     {
         public ArgentCommander()
