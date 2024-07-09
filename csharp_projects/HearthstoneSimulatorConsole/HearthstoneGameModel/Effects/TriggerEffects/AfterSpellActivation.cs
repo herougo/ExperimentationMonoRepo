@@ -24,10 +24,10 @@ namespace HearthstoneGameModel.Effects.TriggerEffects
 
             public override EffectManagerNodePlan SendEvent(
                 string effectEvent, HearthstoneGame game,
-                EffectManagerNode emNode, CardSlot eventSlot)
+                EffectManagerNode emNode, List<CardSlot> eventSlots)
             {
                 CheckValidEvent(effectEvent);
-                if (HSGameUtils.IsPlayerAffected(emNode.AffectedSlot.Player, eventSlot.Player, _playerChoice))
+                if (HSGameUtils.IsPlayerAffected(emNode.AffectedSlot.Player, eventSlots[0].Player, _playerChoice))
                 {
                     EffectManagerNodePlan result = _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot);
                     return result;

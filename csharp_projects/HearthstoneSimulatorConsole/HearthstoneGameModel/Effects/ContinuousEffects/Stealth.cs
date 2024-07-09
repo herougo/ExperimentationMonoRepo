@@ -39,7 +39,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
 
         public override EffectManagerNodePlan SendEvent(
             string effectEvent, HearthstoneGame game,
-            EffectManagerNode emNode, CardSlot eventSlot)
+            EffectManagerNode emNode, List<CardSlot> eventSlots)
         {
             CheckValidEvent(effectEvent);
             EffectManagerNodePlan plan = new EffectManagerNodePlan();

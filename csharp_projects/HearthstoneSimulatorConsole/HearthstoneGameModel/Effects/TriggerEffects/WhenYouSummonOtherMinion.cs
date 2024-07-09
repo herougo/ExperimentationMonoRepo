@@ -26,11 +26,11 @@ namespace HearthstoneGameModel.Effects.TriggerEffects
 
         public override EffectManagerNodePlan SendEvent(
             string effectEvent, HearthstoneGame game,
-            EffectManagerNode emNode, CardSlot eventSlot)
+            EffectManagerNode emNode, List<CardSlot> eventSlots)
         {
             CheckValidEvent(effectEvent);
-            MinionCard minionCard = (MinionCard)eventSlot.Card;
-            if (HSGameUtils.MatchesTag(_desiredTag, minionCard.Tag) && emNode.AffectedSlot != eventSlot)
+            MinionCard minionCard = (MinionCard)eventSlots[0].Card;
+            if (HSGameUtils.MatchesTag(_desiredTag, minionCard.Tag) && emNode.AffectedSlot != eventSlots[0])
             {
                 EffectManagerNodePlan result = _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot);
                 return result;

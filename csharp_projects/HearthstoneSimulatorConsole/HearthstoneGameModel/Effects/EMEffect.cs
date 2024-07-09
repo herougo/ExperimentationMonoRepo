@@ -33,7 +33,7 @@ namespace HearthstoneGameModel.Effects
 
         public virtual EffectManagerNodePlan SendEvent(
             string effectEvent, HearthstoneGame game,
-            EffectManagerNode emNode, CardSlot eventSlot)
+            EffectManagerNode emNode, List<CardSlot> eventSlots)
         {
             return null;
         }

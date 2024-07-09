@@ -17,7 +17,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
             _requiresSlotMatchForEvent = true;
         }
 
-        public override EffectManagerNodePlan SendEvent(string effectEvent, HearthstoneGame game, EffectManagerNode emNode, CardSlot eventSlot)
+        public override EffectManagerNodePlan SendEvent(string effectEvent, HearthstoneGame game, EffectManagerNode emNode, List<CardSlot> eventSlots)
         {
             CheckValidEvent(effectEvent);
             // TODO: 

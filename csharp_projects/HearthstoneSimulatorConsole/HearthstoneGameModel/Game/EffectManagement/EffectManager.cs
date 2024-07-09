@@ -109,24 +109,24 @@ namespace HearthstoneGameModel.Game.EffectManagement
             PopEffectsBySlot(cardSlot, false);
         }
 
-        public void SendEvent(string effectEvent, CardSlot eventSlot)
+        public void SendEvent(string effectEvent, List<CardSlot> eventSlots)
         {
-            List<EffectManagerNode> relevantEMNodes = _eventToEffectNodeList.GetRelevantEMNodes(effectEvent, eventSlot);
+            List<EffectManagerNode> relevantEMNodes = _eventToEffectNodeList.GetRelevantEMNodes(effectEvent, eventSlots[0]);
             foreach (EffectManagerNode emNode in relevantEMNodes)
             {
-                emNode.SendEvent(effectEvent, _game, this, eventSlot);
+                emNode.SendEvent(effectEvent, _game, this, eventSlots);
             }
             _game.KillIfNecessary();
         }
 
         public void SendEvent(string effectEvent)
         {
-            SendEvent(effectEvent, null);
+            SendEvent(new EffectEventArgs(effectEvent));
         }
 
         public void SendEvent(EffectEventArgs args)
         {
-            SendEvent(args.EffectEvent, args.EventSlot);
+            SendEvent(args.EffectEvent, args.EventSlots);
         }
 
         public void Execute(OneTimeEffect effect, HearthstoneGame game, CardSlot cardSlot)

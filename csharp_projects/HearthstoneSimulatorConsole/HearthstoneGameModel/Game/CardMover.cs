@@ -42,7 +42,7 @@ namespace HearthstoneGameModel.Game
                 default:
                     throw new NotImplementedException("PlayCard");
             }
-            _game.EffectManager.SendEvent(EffectEvent.CardPlayed, cardSlot);
+            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.CardPlayed, cardSlot));
         }
 
         private void playMinion(CardSlot cardSlot, int destinationIndex)
@@ -61,9 +61,9 @@ namespace HearthstoneGameModel.Game
             _game.EffectManager.AddEffect(sleepEmNode);
 
 
-            _game.EffectManager.SendEvent(EffectEvent.MinionPutInPlay, cardSlot);
-            _game.EffectManager.SendEvent(EffectEvent.MinionBattlecry, cardSlot);
-            _game.EffectManager.SendEvent(EffectEvent.MinionSummoned, cardSlot);
+            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionPutInPlay, cardSlot));
+            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionBattlecry, cardSlot));
+            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionSummoned, cardSlot));
         }
 
         private void playSpell(SpellCardSlot cardSlot)
@@ -72,7 +72,7 @@ namespace HearthstoneGameModel.Game
             OneTimeEffect effect = cardSlot.TypedCard.WhenPlayedEffect;
             _game.EffectManager.Execute(effect, _game, cardSlot);
 
-            _game.EffectManager.SendEvent(EffectEvent.AfterSpellActivated, cardSlot);
+            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.AfterSpellActivated, cardSlot));
             RemoveCardSlot(cardSlot);
         }
 
@@ -89,7 +89,7 @@ namespace HearthstoneGameModel.Game
                 _game.UIManager.ReceiveUIEvent(
                     new MinionDiedUIEvent(cardSlot.Player, cardSlot.Card.CardId)
                 );
-                _game.EffectManager.SendEvent(EffectEvent.MinionDies, cardSlot);
+                _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionDies, cardSlot));
             }
 
             foreach (CardSlot cardSlot in cardSlots)
@@ -112,7 +112,7 @@ namespace HearthstoneGameModel.Game
             foreach (CardSlot cardSlot in drawnCards)
             {
                 _game.EffectManager.AddInHandEffects(cardSlot);
-                _game.EffectManager.SendEvent(EffectEvent.CardMovedToHand, cardSlot);
+                _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.CardMovedToHand, cardSlot));
             }
 
             foreach (CardSlot cardSlot in burnedCards)
@@ -141,7 +141,7 @@ namespace HearthstoneGameModel.Game
             SendCardToLimbo(weaponCardSlot);
             _game.Weapons[player] = null; // Must be set to None before sending event
             _game.Players[player].UpdateStats();
-            _game.EffectManager.SendEvent(EffectEvent.WeaponDestroyed, weaponCardSlot);
+            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.WeaponDestroyed, weaponCardSlot));
             // _game.EffectManager.PopEffectsBySlot(weaponCardSlot);
             RemoveCardSlot(weaponCardSlot);
         }
@@ -155,7 +155,7 @@ namespace HearthstoneGameModel.Game
             _game.Weapons[player] = cardSlot; // Must be set before sending event
             _game.Weapons[player].UpdateStats();
             _game.Players[player].UpdateStats();
-            _game.EffectManager.SendEvent(EffectEvent.WeaponEquipped, cardSlot);
+            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.WeaponEquipped, cardSlot));
         }
 
         public void SummonMinion(CardSlot cardSlot)
@@ -174,9 +174,9 @@ namespace HearthstoneGameModel.Game
             _game.EffectManager.AddEffect(sleepEmNode);
 
 
-            _game.EffectManager.SendEvent(EffectEvent.MinionPutInPlay, cardSlot);
+            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionPutInPlay, cardSlot));
             // (no battlecry event)
-            _game.EffectManager.SendEvent(EffectEvent.MinionSummoned, cardSlot);
+            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionSummoned, cardSlot));
         }
 
         public void ReturnMinionsToHand(int player, List<CardSlot> cardSlots)
@@ -205,8 +205,8 @@ namespace HearthstoneGameModel.Game
 
                 _game.EffectManager.AddInHandEffects(cardSlot);
 
-                _game.EffectManager.SendEvent(EffectEvent.MinionReturnedToHand, cardSlot);
-                _game.EffectManager.SendEvent(EffectEvent.CardMovedToHand, cardSlot);
+                _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionReturnedToHand, cardSlot));
+                _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.CardMovedToHand, cardSlot));
             }
 
             KillMinions(toDie);

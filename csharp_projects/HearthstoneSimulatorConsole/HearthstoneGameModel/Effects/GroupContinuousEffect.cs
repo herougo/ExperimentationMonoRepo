@@ -23,7 +23,9 @@ namespace HearthstoneGameModel.Effects
             }
         }
 
-        public override EffectManagerNodePlan SendEvent(string effectEvent, HearthstoneGame game, EffectManagerNode emNode, CardSlot eventSlot)
+        public override EffectManagerNodePlan SendEvent(
+            string effectEvent, HearthstoneGame game, EffectManagerNode emNode, List<CardSlot> eventSlots
+        )
         {
             CheckValidEvent(effectEvent);
             EffectManagerNodePlan plan = new EffectManagerNodePlan();
@@ -32,7 +34,7 @@ namespace HearthstoneGameModel.Effects
             {
                 if (effect.EventsReceived.Contains(effectEvent))
                 {
-                    plan.Update(effect.SendEvent(effectEvent, game, emNode, eventSlot));
+                    plan.Update(effect.SendEvent(effectEvent, game, emNode, eventSlots));
                 }
             }
             return plan;

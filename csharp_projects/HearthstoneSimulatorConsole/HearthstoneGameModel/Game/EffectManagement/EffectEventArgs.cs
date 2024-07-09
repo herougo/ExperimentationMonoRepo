@@ -10,16 +10,28 @@ namespace HearthstoneGameModel.Game.EffectManagement
     public class EffectEventArgs
     {
         public string EffectEvent;
-        public CardSlot EventSlot = null;
+        public List<CardSlot> EventSlots;
 
         public EffectEventArgs(string effectEvent) {
             EffectEvent = effectEvent;
+            EventSlots = new List<CardSlot>() { null };
+        }
+
+        public EffectEventArgs(string effectEvent, List<CardSlot> eventSlots)
+        {
+            EffectEvent = effectEvent;
+
+            if (eventSlots.Count == 0)
+            {
+                EventSlots = new List<CardSlot>() { null };
+            }
+            EventSlots = eventSlots;
         }
 
         public EffectEventArgs(string effectEvent, CardSlot eventSlot)
         {
             EffectEvent = effectEvent;
-            EventSlot = eventSlot;
+            EventSlots = new List<CardSlot> { eventSlot };
         }
     }
 }

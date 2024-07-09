@@ -47,7 +47,7 @@ namespace HearthstoneGameModel.Game.CardSlots
 
             if (prevAttack != Attack)
             {
-                Game.EffectManager.SendEvent(EffectEvent.WeaponChangeStats, this);
+                Game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.WeaponChangeStats, this));
             }
         }
     }

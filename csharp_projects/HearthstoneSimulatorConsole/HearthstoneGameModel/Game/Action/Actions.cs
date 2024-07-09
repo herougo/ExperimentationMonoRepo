@@ -1,5 +1,6 @@
 ﻿using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Game.CardSlots;
+using HearthstoneGameModel.Game.EffectManagement;
 
 namespace HearthstoneGameModel.Game.Action
 {
@@ -77,8 +78,8 @@ namespace HearthstoneGameModel.Game.Action
         {
             int turn = game.GameMetadata.Turn;
             game.Players[turn].CurrentMana -= game.Players[turn].HeroPowerCost;
-            game.EffectManager.SendEvent(EffectEvent.ActivateHeroPower, game.Players[turn]);
-            game.EffectManager.SendEvent(EffectEvent.HeroPowerEnd, game.Players[turn]);
+            game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.ActivateHeroPower, game.Players[turn]));
+            game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.HeroPowerEnd, game.Players[turn]));
         }
     }
 

@@ -26,10 +26,10 @@ namespace HearthstoneGameModel.Effects
 
         public override EffectManagerNodePlan SendEvent(
             string effectEvent, HearthstoneGame game,
-            EffectManagerNode emNode, CardSlot eventSlot)
+            EffectManagerNode emNode, List<CardSlot> eventSlots)
         {
             CheckValidEvent(effectEvent);
-            return _effect.SendEvent(effectEvent, game, emNode, eventSlot);
+            return _effect.SendEvent(effectEvent, game, emNode, eventSlots);
         }
 
         public override EffectManagerNodePlan Start(HearthstoneGame game, EffectManagerNode emNode)

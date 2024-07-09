@@ -48,7 +48,7 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
 
         public override EffectManagerNodePlan SendEvent(
             string effectEvent, HearthstoneGame game,
-            EffectManagerNode emNode, CardSlot eventSlot)
+            EffectManagerNode emNode, List<CardSlot> eventSlots)
         {
             CheckValidEvent(effectEvent);
             if (effectEvent == EffectEvent.EndTurn
@@ -60,7 +60,7 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
             }
             else if (_effect.EventsReceived.Contains(effectEvent))
             {
-                return _effect.SendEvent(effectEvent, game, emNode, eventSlot);
+                return _effect.SendEvent(effectEvent, game, emNode, eventSlots);
             }
             throw new AssertionException("unhandled event (shouldn't happen)");
         }

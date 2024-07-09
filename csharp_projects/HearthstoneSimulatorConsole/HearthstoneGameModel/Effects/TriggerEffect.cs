@@ -25,7 +25,7 @@ namespace HearthstoneGameModel.Effects
 
         public override EffectManagerNodePlan SendEvent(
             string effectEvent, HearthstoneGame game,
-            EffectManagerNode emNode, CardSlot eventSlot)
+            EffectManagerNode emNode, List<CardSlot> eventSlots)
         {
             CheckValidEvent(effectEvent);
             return _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot);

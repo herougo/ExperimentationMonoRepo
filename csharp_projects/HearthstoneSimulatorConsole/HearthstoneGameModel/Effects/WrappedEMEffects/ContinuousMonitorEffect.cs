@@ -25,7 +25,7 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
 
         public override EffectManagerNodePlan SendEvent(
             string effectEvent, HearthstoneGame game,
-            EffectManagerNode emNode, CardSlot eventSlot)
+            EffectManagerNode emNode, List<CardSlot> eventSlots)
         {
             CheckValidEvent(effectEvent);
             EffectManagerNodePlan plan = new EffectManagerNodePlan();
@@ -35,7 +35,7 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
             }
             if (_effect.EventsReceived.Contains(effectEvent))
             {
-                plan.Update(_effect.SendEvent(effectEvent, game, emNode, eventSlot));
+                plan.Update(_effect.SendEvent(effectEvent, game, emNode, eventSlots));
             }
             return plan;
         }

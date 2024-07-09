@@ -199,7 +199,7 @@ namespace HearthstoneGameModel.Game
                 Hands[player].AddCard(cardSlot);
 
                 EffectManager.AddInHandEffects(cardSlot);
-                EffectManager.SendEvent(EffectEvent.CardMovedToHand, cardSlot);
+                EffectManager.SendEvent(new EffectEventArgs(EffectEvent.CardMovedToHand, cardSlot));
             }
         }
 
@@ -239,15 +239,15 @@ namespace HearthstoneGameModel.Game
             attackerCardSlot.AttacksThisTurn += 1;
             GameMetadata.AttackerDamageTaken = defenderCardSlot.Attack;
             GameMetadata.DefenderDamageTaken = attackerCardSlot.Attack;
-            EffectManager.SendEvent(EffectEvent.AfterAttackerInitialCombatDamage, attackerCardSlot);
-            EffectManager.SendEvent(EffectEvent.AfterDefenderInitialCombatDamage, defenderCardSlot);
+            EffectManager.SendEvent(new EffectEventArgs(EffectEvent.AfterAttackerInitialCombatDamage, attackerCardSlot));
+            EffectManager.SendEvent(new EffectEventArgs(EffectEvent.AfterDefenderInitialCombatDamage, defenderCardSlot));
 
             EffectManagerNodePlan attackerPlan = attackerCardSlot.TakeDamage(GameMetadata.AttackerDamageTaken);
             attackerPlan.Perform(EffectManager);
             EffectManagerNodePlan defenderPlan = defenderCardSlot.TakeDamage(GameMetadata.DefenderDamageTaken);
             defenderPlan.Perform(EffectManager);
 
-            EffectManager.SendEvent(EffectEvent.AfterAttackerAttacked, attackerCardSlot); // TODO: after KillIfNecessary
+            EffectManager.SendEvent(new EffectEventArgs(EffectEvent.AfterAttackerAttacked, attackerCardSlot)); // TODO: after KillIfNecessary
             EffectManager.SendEvent(EffectEvent.AfterCombatDamage);
 
             if (attackerCardSlot.CardType == CardType.Hero

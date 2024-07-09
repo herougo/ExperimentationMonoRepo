@@ -44,9 +44,9 @@ namespace HearthstoneGameModel.Game.EffectManagement
 
         public void SendEvent(
             string effectEvent, HearthstoneGame game,
-            EffectManager effectManager, CardSlot eventSlot)
+            EffectManager effectManager, List<CardSlot> eventSlots)
         {
-            EffectManagerNodePlan plan = Effect.SendEvent(effectEvent, game, this, eventSlot);
+            EffectManagerNodePlan plan = Effect.SendEvent(effectEvent, game, this, eventSlots);
             if (plan != null)
             {
                 plan.Perform(effectManager);
