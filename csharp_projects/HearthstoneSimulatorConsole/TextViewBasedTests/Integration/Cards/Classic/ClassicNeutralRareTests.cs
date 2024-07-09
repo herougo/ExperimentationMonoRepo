@@ -114,6 +114,25 @@ concede";
         }
 
         [Fact]
+        public Task TestCrazedAlchemist()
+        {
+            string actionText = @"play 0 0
+play 0 1
+select 0 0
+play 1 2
+select 0 0
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.ArgentCommander, CardIds.CrazedAlchemist, CardIds.ArgentCommander, CardIds.CrazedAlchemist,
+                CardIds.ArgentCommander, CardIds.CrazedAlchemist, CardIds.ArgentCommander
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+
+        [Fact]
         public Task TestKnifeJuggler()
         {
             string actionText = @"play 0 0

@@ -37,3 +37,5 @@ Battlecry
 What about external and conditional effects?
 
 - Priority System for EM Nodes
+
+What about Health buffs? -> should work

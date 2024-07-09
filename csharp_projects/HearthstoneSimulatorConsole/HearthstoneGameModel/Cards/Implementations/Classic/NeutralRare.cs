@@ -215,7 +215,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                // TODO
+                new Battlecry(new SwapAttackAndHealth(new SelectCharacterFrom(SelectionConstants.AllOtherMinions)))
             };
         }
 

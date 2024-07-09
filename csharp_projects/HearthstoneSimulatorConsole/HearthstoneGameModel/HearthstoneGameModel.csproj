@@ -78,6 +78,7 @@
     <Compile Include="Effects\HandContinuousEffects\ManaDiscount.cs" />
     <Compile Include="Effects\OneTimeEffects\GiveContinuousEffect.cs" />
     <Compile Include="Effects\OneTimeEffects\ReduceWeaponDurability.cs" />
+    <Compile Include="Effects\OneTimeEffects\SwapAttackAndHealth.cs" />
     <Compile Include="Effects\TriggerEffects\AfterSpellActivation.cs" />
     <Compile Include="Effects\TriggerEffects\WhenACharacterIsHealed.cs" />
     <Compile Include="Effects\WrappedEMEffects\ConditionalEffect.cs" />

@@ -27,7 +27,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
                 case CardType.Minion:
                 case CardType.Hero:
                     BattlerCardSlot battlerCardSlot = (BattlerCardSlot)cardSlot;
-                    battlerCardSlot.Attack = _amount;
+                    battlerCardSlot.MaxHealth = _amount;
                     return;
             }
             throw new NotImplementedException("Invalid card type to adjust stats from SetMaxHealth");

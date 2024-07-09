@@ -16,7 +16,7 @@ namespace HearthstoneGameModel.Conditions
 
         public WhileSelfDamaged()
         {
-            _eventsReceived = new List<string> { EffectEvent.DamageTaken, EffectEvent.CharacterHealed };
+            _eventsReceived = new List<string> { EffectEvent.DamageTaken, EffectEvent.CharacterHealed, EffectEvent.SetHealth };
         }
 
         public List<string> EventsReceived
