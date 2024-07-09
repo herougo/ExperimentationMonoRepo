@@ -265,6 +265,27 @@ concede";
         }
 
         [Fact]
+        public Task TestEmperorCobra()
+        {
+            string actionText = @"play 0 0
+play 0 1
+end_turn
+play 0 0
+play 0 0
+end_turn
+attack 0 0
+attack 1 0
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.ColdlightSeer, CardIds.ColdlightSeer, CardIds.ColdlightSeer,
+                CardIds.EmperorCobra, CardIds.ColdlightSeer, CardIds.EmperorCobra
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestArgentCommander()
         {
             string actionText = @"play 0 0

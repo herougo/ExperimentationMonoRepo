@@ -244,11 +244,18 @@ namespace HearthstoneGameModel.Game
 
             EffectManagerNodePlan attackerPlan = attackerCardSlot.TakeDamage(GameMetadata.AttackerDamageTaken);
             attackerPlan.Perform(EffectManager);
+            EffectManager.SendEvent(new EffectEventArgs(EffectEvent.DefenderInflictDamage, new List<CardSlot>() { defenderCardSlot, attackerCardSlot }));
             EffectManagerNodePlan defenderPlan = defenderCardSlot.TakeDamage(GameMetadata.DefenderDamageTaken);
             defenderPlan.Perform(EffectManager);
+            EffectManager.SendEvent(new EffectEventArgs(EffectEvent.AttackerInflictDamage, new List<CardSlot>() { attackerCardSlot, defenderCardSlot }));
+
 
             EffectManager.SendEvent(new EffectEventArgs(EffectEvent.AfterAttackerAttacked, attackerCardSlot)); // TODO: after KillIfNecessary
             EffectManager.SendEvent(EffectEvent.AfterCombatDamage);
+            if (attackerCardSlot.CardType == CardType.Minion && defenderCardSlot.CardType == CardType.Minion)
+            {
+                
+            }
 
             if (attackerCardSlot.CardType == CardType.Hero
                 && Weapons[attackerCardSlot.Player] != null)

@@ -13,14 +13,17 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
     public class Poisonous : ContinuousEffect
     {
         public Poisonous() {
-            _eventsReceived = new List<string> { }; // TODO
+            _eventsReceived = new List<string> { EffectEvent.AttackerInflictDamage, EffectEvent.DefenderInflictDamage };
             _requiresSlotMatchForEvent = true;
         }
 
         public override EffectManagerNodePlan SendEvent(string effectEvent, HearthstoneGame game, EffectManagerNode emNode, List<CardSlot> eventSlots)
         {
             CheckValidEvent(effectEvent);
-            // TODO: 
+            if (eventSlots[1].CardType == CardType.Minion)
+            {
+                ((MinionCardSlot)eventSlots[1]).IsPoisoned = true;
+            }
             return null;
         }
 
