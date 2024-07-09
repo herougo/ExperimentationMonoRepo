@@ -129,6 +129,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new ColdlightSeer();
                 case CardIds.Demolisher:
                     return new Demolisher();
+                case CardIds.EmperorCobra:
+                    return new EmperorCobra();
 
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();

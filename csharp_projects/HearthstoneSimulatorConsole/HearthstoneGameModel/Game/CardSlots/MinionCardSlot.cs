@@ -13,13 +13,14 @@ namespace HearthstoneGameModel.Game.CardSlots
 {
     public class MinionCardSlot : BattlerCardSlot
     {
-        MinionCard TypedCard;
+        public MinionCard TypedCard;
 
         // stats
 
         // managed by effects 
         // TODO
 
+        public bool IsPoisoned = false;
 
         public MinionCardSlot(string cardId, int player, HearthstoneGame game)
             : base(cardId, player, game)

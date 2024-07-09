@@ -473,6 +473,32 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class EmperorCobra : MinionCard
+    {
+        public EmperorCobra()
+        {
+            _cardId = CardIds.EmperorCobra;
+            _name = "Emperor Cobra";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 3;
+            _attack = 2;
+            _health = 3;
+            _tag = MinionTag.Beast;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Poisonous()
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new EmperorCobra();
+        }
+    }
+
     public class ArgentCommander : MinionCard
     {
         public ArgentCommander()

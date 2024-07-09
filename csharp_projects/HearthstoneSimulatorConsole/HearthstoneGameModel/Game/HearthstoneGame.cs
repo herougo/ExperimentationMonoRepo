@@ -277,9 +277,12 @@ namespace HearthstoneGameModel.Game
             {
                 foreach (CardSlot slot in Battleboard.GetAllSlots(player))
                 {
-                    if (slot.CardType == CardType.Minion && ((MinionCardSlot)slot).Health <= 0)
+                    if (slot.CardType == CardType.Minion)
                     {
-                        minionsToKill.Add(slot);
+                        MinionCardSlot minionSlot = (MinionCardSlot)slot;
+                        if (minionSlot.Health <= 0 || minionSlot.IsPoisoned) {
+                            minionsToKill.Add(slot);
+                        }
                     }
                 }
             }
