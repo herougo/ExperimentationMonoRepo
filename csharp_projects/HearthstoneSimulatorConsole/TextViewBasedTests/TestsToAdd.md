@@ -76,6 +76,10 @@ Missing Cards
 - [ ] Pint-Sized Summoner
 - [ ] Alarm-o-Bot
 
+Missing Tests
+
+- [ ] Ancient Mage (spell damage)
+
 ### Specific Cases
 
 - [ ] Timelimited effect then switch players (e.g. sleep)

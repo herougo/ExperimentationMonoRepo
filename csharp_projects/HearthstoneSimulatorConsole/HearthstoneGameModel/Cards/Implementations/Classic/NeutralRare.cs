@@ -577,6 +577,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class AncientMage : MinionCard
+    {
+        public AncientMage()
+        {
+            _cardId = CardIds.AncientMage;
+            _name = "Ancient Mage";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 4;
+            _attack = 2;
+            _health = 5;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new GiveContinuousEffect(SelectionConstants.AdjacentMinions, new SpellDamage(1)))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new AncientMage();
+        }
+    }
+
     public class ArgentCommander : MinionCard
     {
         public ArgentCommander()

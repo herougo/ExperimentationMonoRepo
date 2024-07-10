@@ -10,5 +10,6 @@ namespace HearthstoneGameModel.Game.Metadata
     {
         public int HandLimit = HearthstoneConstants.HandLimit;
         public int BattleboardLimit = HearthstoneConstants.BattleboardLimit;
+        public int SpellDamage = 0;
     }
 }

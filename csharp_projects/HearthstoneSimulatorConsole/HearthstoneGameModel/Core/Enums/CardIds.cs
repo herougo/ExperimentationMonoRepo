@@ -72,6 +72,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string ImpMaster = "C059";
         public const string InjuredBlademaster = "C060";
         public const string QuestingAdventurer = "C061";
+        public const string AncientMage = "C062";
 
         public const string ArgentCommander = "C069";
         public const string GadgetzanAuctioneer = "C070";
