@@ -602,6 +602,34 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class DefenderOfArgus : MinionCard
+    {
+        public DefenderOfArgus()
+        {
+            _cardId = CardIds.DefenderOfArgus;
+            _name = "Defender Of Argus";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 4;
+            _attack = 3;
+            _health = 3;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new GiveContinuousEffect(
+                    SelectionConstants.AdjacentMinions,
+                    new List<ContinuousEffect>{ new Taunt(), new Buff(1, 1)}
+                ))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new DefenderOfArgus();
+        }
+    }
+
     public class ArgentCommander : MinionCard
     {
         public ArgentCommander()

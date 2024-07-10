@@ -14,12 +14,18 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
     public class GiveContinuousEffect : OneTimeEffect
     {
         SlotSelection _selection;
-        ContinuousEffect _effect;
+        List<ContinuousEffect> _effects;
 
         public GiveContinuousEffect(SlotSelection selection, ContinuousEffect effect)
         {
             _selection = selection;
-            _effect = effect;
+            _effects = new List<ContinuousEffect> { effect };
+        }
+
+        public GiveContinuousEffect(SlotSelection selection, List<ContinuousEffect> effects)
+        {
+            _selection = selection;
+            _effects = effects;
         }
 
         public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot)
@@ -29,17 +35,25 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 
             foreach (CardSlot selectedCardSlot in selectedCardSlots)
             {
-                EffectManagerNode newEmNode = new EffectManagerNode(
-                    _effect.Copy(), selectedCardSlot, originCardSlot, true
-                );
-                plan.ToAdd.Add(newEmNode);
+                foreach (ContinuousEffect effect in _effects)
+                {
+                    EffectManagerNode newEmNode = new EffectManagerNode(
+                        effect.Copy(), selectedCardSlot, originCardSlot, true
+                    );
+                    plan.ToAdd.Add(newEmNode);
+                }
             }
             return plan;
         }
 
         public override OneTimeEffect Copy()
         {
-            return new GiveContinuousEffect(_selection.Copy(), (ContinuousEffect)_effect.Copy());
+            List<ContinuousEffect> effectsCopy = new List<ContinuousEffect>();
+            foreach (ContinuousEffect effect in _effects)
+            {
+                effectsCopy.Add((ContinuousEffect)effect.Copy());
+            }
+            return new GiveContinuousEffect(_selection.Copy(), effectsCopy);
         }
     }
 }

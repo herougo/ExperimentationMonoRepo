@@ -323,6 +323,23 @@ concede";
         }
 
         [Fact]
+        public Task TestDefenderOfArgus()
+        {
+            string actionText = @"play 0 0
+hero_power
+play 0 1
+end_turn
+play 0 0
+attack 0 1
+attack 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.DefenderOfArgus, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.ArgentCommander, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestArgentCommander()
         {
             string actionText = @"play 0 0
