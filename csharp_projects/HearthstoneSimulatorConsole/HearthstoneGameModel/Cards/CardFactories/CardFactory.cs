@@ -135,6 +135,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new ImpMaster();
                 case CardIds.InjuredBlademaster:
                     return new InjuredBlademaster();
+                case CardIds.QuestingAdventurer:
+                    return new QuestingAdventurer();
 
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();

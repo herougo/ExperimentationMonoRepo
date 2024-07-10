@@ -77,11 +77,13 @@
     <Compile Include="Effects\ContinuousEffects\SetAttack.cs" />
     <Compile Include="Effects\ContinuousEffects\SetMaxHealth.cs" />
     <Compile Include="Effects\HandContinuousEffects\ManaDiscount.cs" />
+    <Compile Include="Effects\OneTimeEffects\ChangeStats.cs" />
     <Compile Include="Effects\OneTimeEffects\GiveContinuousEffect.cs" />
     <Compile Include="Effects\OneTimeEffects\ReduceWeaponDurability.cs" />
     <Compile Include="Effects\OneTimeEffects\SwapAttackAndHealth.cs" />
     <Compile Include="Effects\TriggerEffects\AfterSpellActivation.cs" />
     <Compile Include="Effects\TriggerEffects\WhenACharacterIsHealed.cs" />
+    <Compile Include="Effects\TriggerEffects\WhenOtherCardPlayed.cs" />
     <Compile Include="Effects\WrappedEMEffects\ConditionalEffect.cs" />
     <Compile Include="Effects\ContinuousEffect.cs" />
     <Compile Include="Effects\ContinuousEffects\Buff.cs" />

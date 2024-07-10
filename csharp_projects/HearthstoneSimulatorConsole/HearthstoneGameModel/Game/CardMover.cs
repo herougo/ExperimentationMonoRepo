@@ -60,8 +60,8 @@ namespace HearthstoneGameModel.Game
             );
             _game.EffectManager.AddEffect(sleepEmNode);
 
-
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionPutInPlay, cardSlot));
+            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.WhenCardPlayed, cardSlot));
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionBattlecry, cardSlot));
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionSummoned, cardSlot));
         }
@@ -69,6 +69,9 @@ namespace HearthstoneGameModel.Game
         private void playSpell(SpellCardSlot cardSlot)
         {
             SendCardToLimbo(cardSlot);
+
+            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.WhenCardPlayed, cardSlot));
+
             OneTimeEffect effect = cardSlot.TypedCard.WhenPlayedEffect;
             _game.EffectManager.Execute(effect, _game, cardSlot);
 

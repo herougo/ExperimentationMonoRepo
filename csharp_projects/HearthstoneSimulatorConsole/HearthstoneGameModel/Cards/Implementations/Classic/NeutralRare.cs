@@ -552,6 +552,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class QuestingAdventurer : MinionCard
+    {
+        public QuestingAdventurer()
+        {
+            _cardId = CardIds.QuestingAdventurer;
+            _name = "Questing Adventurer";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 3;
+            _attack = 2;
+            _health = 2;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new WhenOtherCardPlayed(new ChangeStats(SelectionConstants.OwnSelf, 1, 1))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new QuestingAdventurer();
+        }
+    }
+
     public class ArgentCommander : MinionCard
     {
         public ArgentCommander()
