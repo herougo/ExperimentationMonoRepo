@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Game.Metadata;
 
 namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
@@ -32,8 +33,9 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
             
             foreach (CardSlot selectedCardSlot in selectedCardSlots)
             {
-                HeroCardSlot typedSlot = (HeroCardSlot)selectedCardSlot;
-                typedSlot.Armour += _amount;
+                int player = selectedCardSlot.Player;
+                PlayerMetadata playerMetadata = game.PlayerMetadata[player];
+                playerMetadata.Armour += _amount;
             }
             return null;
         }

@@ -7,6 +7,7 @@ using HearthstoneGameModel.Core;
 using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects.ContinuousEffects;
 using HearthstoneGameModel.Game.CardSlots;
+using HearthstoneGameModel.Game.Metadata;
 
 namespace HearthstoneGameModel.Game.Action
 {
@@ -169,7 +170,7 @@ namespace HearthstoneGameModel.Game.Action
             }
 
             CardSlot cardSlot = _game.Hands[turn][cardInHandIndex];
-            if (cardSlot.Mana > _game.Players[turn].CurrentMana)
+            if (cardSlot.Mana > _game.PlayerMetadata[turn].CurrentMana)
             {
                 throw new ActionException("not enough mana to play the card");
             }
@@ -221,13 +222,15 @@ namespace HearthstoneGameModel.Game.Action
 
         public HeroPowerAction ParseHeroPowerAction(string[] actionSplit)
         {
-            HeroCardSlot playerSlot = _game.Players[_game.GameMetadata.Turn];
+            int player = _game.GameMetadata.Turn;
+            PlayerMetadata playerMetadata = _game.PlayerMetadata[player];
+            HeroCardSlot playerSlot = _game.Players[player];
             int manaCost = playerSlot.HeroPowerCost;
-            if (playerSlot.HeroPowerUsedThisTurn)
+            if (playerMetadata.HeroPowerUsedThisTurn)
             {
                 throw new ActionException("Hero power already used");
             }
-            if (manaCost > _game.Players[_game.GameMetadata.Turn].CurrentMana)
+            if (manaCost > _game.PlayerMetadata[_game.GameMetadata.Turn].CurrentMana)
             {
                 throw new ActionException("Not enough Mana for hero power");
             }

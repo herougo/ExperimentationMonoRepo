@@ -1,6 +1,7 @@
 ﻿using HearthstoneGameModel.Core;
 using HearthstoneGameModel.Game;
 using HearthstoneGameModel.Game.CardSlots;
+using HearthstoneGameModel.Game.Metadata;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -66,10 +67,11 @@ namespace TextView
         public void LogGameState() {
             int player = 0;
             int opp = 1;
+            PlayerMetadata oppMetadata = _game.PlayerMetadata[opp];
             HeroCardSlot oppSlot = _game.Players[opp];
-            int oppCurrentMana = _game.Players[opp].CurrentMana;
-            int oppAvailableMana = _game.Players[opp].AvailableMana;
-            LogText($"Opponent ({opp}) - health: {oppSlot.Health}, armour: {oppSlot.Armour}, ");
+            int oppCurrentMana = oppMetadata.CurrentMana;
+            int oppAvailableMana = oppMetadata.AvailableMana;
+            LogText($"Opponent ({opp}) - health: {oppSlot.Health}, armour: {oppMetadata.Armour}, ");
             LogText($"mana: {oppCurrentMana} / {oppAvailableMana}\n");
 
             LogWeapon(_game.Weapons[opp]);
@@ -82,9 +84,10 @@ namespace TextView
             LogText("\n");
 
             HeroCardSlot playerSlot = _game.Players[player];
-            int playerCurrentMana = _game.Players[player].CurrentMana;
-            int playerAvailableMana = _game.Players[player].AvailableMana;
-            LogText($"Player ({player}) - health: {playerSlot.Health}, armour: {playerSlot.Armour}, ");
+            PlayerMetadata playerMetadata = _game.PlayerMetadata[player];
+            int playerCurrentMana = playerMetadata.CurrentMana;
+            int playerAvailableMana = playerMetadata.AvailableMana;
+            LogText($"Player ({player}) - health: {playerSlot.Health}, armour: {playerMetadata.Armour}, ");
             LogText($"mana: {playerCurrentMana} / {playerAvailableMana}\n");
             LogWeapon(_game.Weapons[player]);
             LogHand(player);

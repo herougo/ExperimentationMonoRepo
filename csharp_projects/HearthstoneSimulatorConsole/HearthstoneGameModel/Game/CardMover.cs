@@ -5,6 +5,7 @@ using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ContinuousEffects;
 using HearthstoneGameModel.Game.CardSlots;
 using HearthstoneGameModel.Game.EffectManagement;
+using HearthstoneGameModel.Game.Metadata;
 using HearthstoneGameModel.UI;
 using HearthstoneGameModel.UI.UIEvents;
 
@@ -22,8 +23,11 @@ namespace HearthstoneGameModel.Game
 
         public void PlayCard(int cardInHandIndex, int destinationIndex)
         {
-            CardSlot cardSlot = _game.Hands[_game.GameMetadata.Turn].Pop(cardInHandIndex);
-            _game.Players[_game.GameMetadata.Turn].CurrentMana -= cardSlot.Mana;
+            int player = _game.GameMetadata.Turn;
+            CardSlot cardSlot = _game.Hands[player].Pop(cardInHandIndex);
+            PlayerMetadata playerMetadata = _game.PlayerMetadata[player];
+
+            playerMetadata.CurrentMana -= cardSlot.Mana;
 
             _game.EffectManager.PopEffectsBySlot(cardSlot, true);
 

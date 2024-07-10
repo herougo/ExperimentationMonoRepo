@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Game.Metadata;
 
 namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
@@ -32,9 +33,10 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
             List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
             foreach (CardSlot slot in selectedCardSlots)
             {
-                HeroCardSlot typedSlot = (HeroCardSlot)slot;
-                typedSlot.AvailableMana = Math.Min(typedSlot.MaximumMana, typedSlot.AvailableMana + _amount);
-                typedSlot.CurrentMana = Math.Min(typedSlot.MaximumMana, typedSlot.CurrentMana + _amount);
+                int player = slot.Player;
+                PlayerMetadata playerMetadata = game.PlayerMetadata[player];
+                playerMetadata.AvailableMana = Math.Min(playerMetadata.MaximumMana, playerMetadata.AvailableMana + _amount);
+                playerMetadata.CurrentMana = Math.Min(playerMetadata.MaximumMana, playerMetadata.CurrentMana + _amount);
             }
 
             return null;

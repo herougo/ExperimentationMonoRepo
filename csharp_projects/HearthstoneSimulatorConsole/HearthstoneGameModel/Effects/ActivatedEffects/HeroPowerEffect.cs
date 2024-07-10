@@ -23,7 +23,7 @@ namespace HearthstoneGameModel.Effects.ActivatedEffects
         {
             CheckValidEvent(effectEvent);
             EffectManagerNodePlan result = _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot);
-            game.Players[emNode.AffectedSlot.Player].HeroPowerUsedThisTurn = true;
+            game.PlayerMetadata[emNode.AffectedSlot.Player].HeroPowerUsedThisTurn = true;
             return result;
         }
 

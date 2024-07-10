@@ -30,8 +30,8 @@ namespace TextViewBasedTests.Utils
             game.SetupGame(false, false);
             if (maxMana)
             {
-                game.Players[0].AvailableMana = 10;
-                game.Players[1].AvailableMana = 10;
+                game.PlayerMetadata[0].AvailableMana = 10;
+                game.PlayerMetadata[1].AvailableMana = 10;
             }
             game.Play();
             return logger.GetLog();
@@ -49,8 +49,8 @@ namespace TextViewBasedTests.Utils
             game.SetupGame(false, false);
             if (maxMana)
             {
-                game.Players[0].AvailableMana = 10;
-                game.Players[1].AvailableMana = 10;
+                game.PlayerMetadata[0].AvailableMana = 10;
+                game.PlayerMetadata[1].AvailableMana = 10;
             }
             game.Play();
             return logger.GetLog();

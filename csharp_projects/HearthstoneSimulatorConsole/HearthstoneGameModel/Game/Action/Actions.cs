@@ -77,7 +77,7 @@ namespace HearthstoneGameModel.Game.Action
         public void Perform(HearthstoneGame game)
         {
             int turn = game.GameMetadata.Turn;
-            game.Players[turn].CurrentMana -= game.Players[turn].HeroPowerCost;
+            game.PlayerMetadata[turn].CurrentMana -= game.Players[turn].HeroPowerCost;
             game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.ActivateHeroPower, game.Players[turn]));
             game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.HeroPowerEnd, game.Players[turn]));
         }

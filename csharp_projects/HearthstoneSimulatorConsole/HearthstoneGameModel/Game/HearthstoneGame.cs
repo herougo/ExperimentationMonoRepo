@@ -111,9 +111,9 @@ namespace HearthstoneGameModel.Game
             addBasePlayerEffects(0);
             addBasePlayerEffects(1);
             GameMetadata.Turn = GameMetadata.WhoGoesFirst;
-            foreach (HeroCardSlot player in Players)
+            foreach (PlayerMetadata playerMetadata in PlayerMetadata)
             {
-                player.MaximumMana = HearthstoneConstants.MaximumMana;
+                playerMetadata.MaximumMana = HearthstoneConstants.MaximumMana;
             }
 
             CardMover.DrawCards(GameMetadata.WhoGoesFirst, HearthstoneConstants.NumDrawsGoingFirst);

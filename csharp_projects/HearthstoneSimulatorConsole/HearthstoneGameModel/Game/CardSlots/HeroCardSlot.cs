@@ -4,6 +4,7 @@ using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ActivatedEffects;
 using HearthstoneGameModel.Game.EffectManagement;
+using HearthstoneGameModel.Game.Metadata;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,13 +17,7 @@ namespace HearthstoneGameModel.Game.CardSlots
     public class HeroCardSlot : BattlerCardSlot
     {
         public HeroCard TypedCard;
-
-        public int CurrentMana = 0; // CurrentMana / AvailableMana
-        public int AvailableMana = 0;
-        public int MaximumMana = 0;
-        public int Armour = 0;
-        public bool HeroPowerUsedThisTurn = false;
-
+        
         // Other metadata
 
         public int HeroPowerCost
@@ -36,10 +31,12 @@ namespace HearthstoneGameModel.Game.CardSlots
         }
         public override EffectManagerNodePlan TakeDamage(int amount)
         {
-            int damageToHealth = Math.Max(amount - Armour, 0);
+            PlayerMetadata playerMetadata = Game.PlayerMetadata[Player];
+
+            int damageToHealth = Math.Max(amount - playerMetadata.Armour, 0);
             int damageToArmour = amount - damageToHealth;
             Health -= damageToHealth;
-            Armour -= damageToArmour;
+            playerMetadata.Armour -= damageToArmour;
             EffectManagerNodePlan plan = new EffectManagerNodePlan();
             if (amount > 0)
             {
