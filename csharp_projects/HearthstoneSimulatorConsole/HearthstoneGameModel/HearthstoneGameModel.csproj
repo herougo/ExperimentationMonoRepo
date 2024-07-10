@@ -191,6 +191,7 @@
     <Compile Include="ValueMonitors\IntValueMonitor.cs" />
     <Compile Include="ValueMonitors\OwnWeaponAttackIntValueMonitor.cs" />
     <Compile Include="Values\ConstIntValue.cs" />
+    <Compile Include="Values\HandSizeIntValue.cs" />
     <Compile Include="Values\IIntValue.cs" />
     <Compile Include="Values\OwnWeaponAttackIntValue.cs" />
   </ItemGroup>

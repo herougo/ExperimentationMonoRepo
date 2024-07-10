@@ -17,6 +17,7 @@ using HearthstoneGameModel.Selections.SlotSelections;
 using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
 using HearthstoneGameModel.Effects.HandContinuousEffects;
 using HearthstoneGameModel.Selections.SelectionFilters;
+using HearthstoneGameModel.Values;
 
 namespace HearthstoneGameModel.Cards.Implementations.Classic
 {
@@ -627,6 +628,32 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new DefenderOfArgus();
+        }
+    }
+
+    public class TwilightDrake : MinionCard
+    {
+        public TwilightDrake()
+        {
+            _cardId = CardIds.TwilightDrake;
+            _name = "Twilight Drake";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 4;
+            _attack = 4;
+            _health = 1;
+            _tag = MinionTag.Dragon;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new ChangeHealth(SelectionConstants.OwnSelf, new HandSizeIntValue()))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new TwilightDrake();
         }
     }
 

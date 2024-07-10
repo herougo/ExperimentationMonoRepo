@@ -340,6 +340,17 @@ concede";
         }
 
         [Fact]
+        public Task TestTwilightDrake()
+        {
+            string actionText = @"play 0 0
+play 0 1
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.TwilightDrake, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestArgentCommander()
         {
             string actionText = @"play 0 0
