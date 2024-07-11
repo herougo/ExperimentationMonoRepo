@@ -1,0 +1,164 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Abomination', Mana=5, 4 / 4)
+1: CardSlot('Abomination', Mana=5, 4 / 4)
+2: CardSlot('Abomination', Mana=5, 4 / 4)
+3: CardSlot('Abomination', Mana=5, 4 / 4)
+
+0 summons Silver Hand Recruit
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Abomination', Mana=5, 4 / 4)
+1: CardSlot('Abomination', Mana=5, 4 / 4)
+2: CardSlot('Abomination', Mana=5, 4 / 4)
+3: CardSlot('Abomination', Mana=5, 4 / 4)
+
+0 plays Abomination
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+	1: CardSlot('Abomination', Mana=5, 4 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Abomination', Mana=5, 4 / 4)
+1: CardSlot('Abomination', Mana=5, 4 / 4)
+2: CardSlot('Abomination', Mana=5, 4 / 4)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+	1: CardSlot('Abomination', Mana=5, 4 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Abomination', Mana=5, 4 / 4)
+1: CardSlot('Abomination', Mana=5, 4 / 4)
+2: CardSlot('Abomination', Mana=5, 4 / 4)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Argent Commander', Mana=6, 4 / 2)
+
+	------------
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+	1: CardSlot('Abomination', Mana=5, 4 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Abomination', Mana=5, 4 / 4)
+1: CardSlot('Abomination', Mana=5, 4 / 4)
+2: CardSlot('Abomination', Mana=5, 4 / 4)
+
+1 summons Silver Hand Recruit
+Opponent (1) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Argent Commander', Mana=6, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Argent Commander', Mana=6, 4 / 2)
+
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+	------------
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+	1: CardSlot('Abomination', Mana=5, 4 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Abomination', Mana=5, 4 / 4)
+1: CardSlot('Abomination', Mana=5, 4 / 4)
+2: CardSlot('Abomination', Mana=5, 4 / 4)
+
+1 plays Argent Commander
+Opponent (1) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Argent Commander', Mana=6, 4 / 2)
+
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+	1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+	------------
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+	1: CardSlot('Abomination', Mana=5, 4 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Abomination', Mana=5, 4 / 4)
+1: CardSlot('Abomination', Mana=5, 4 / 4)
+2: CardSlot('Abomination', Mana=5, 4 / 4)
+
+CardSlot('Argent Commander', Mana=6, 4 / 2)
+	attacks CardSlot('Abomination', Mana=5, 4 / 4)
+Player 0's C067 died
+Player 0's HU002 died
+Player 1's HU002 died
+Player 1's C069 died
+Opponent (1) - health: 28, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Argent Commander', Mana=6, 4 / 2)
+1: CardSlot('Argent Commander', Mana=6, 4 / 2)
+2: CardSlot('Argent Commander', Mana=6, 4 / 2)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Argent Commander', Mana=6, 4 / 2)
+
+	------------
+
+Player (0) - health: 28, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Abomination', Mana=5, 4 / 4)
+1: CardSlot('Abomination', Mana=5, 4 / 4)
+2: CardSlot('Abomination', Mana=5, 4 / 4)
+
+Game Over: Player 0 Wins

@@ -682,6 +682,32 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class Abomination : MinionCard
+    {
+        public Abomination()
+        {
+            _cardId = CardIds.Abomination;
+            _name = "Abomination";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 5;
+            _attack = 4;
+            _health = 4;
+            _tag = MinionTag.Undead;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Taunt(), new Deathrattle(new DealDamage(SelectionConstants.AllOtherCharacters, 2))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new Abomination();
+        }
+    }
+
     public class ArgentCommander : MinionCard
     {
         public ArgentCommander()

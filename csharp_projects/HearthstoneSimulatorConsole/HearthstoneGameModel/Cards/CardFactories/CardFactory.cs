@@ -146,6 +146,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
 
                 case CardIds.VioletTeacher:
                     return new VioletTeacher();
+                case CardIds.Abomination:
+                    return new Abomination();
 
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();

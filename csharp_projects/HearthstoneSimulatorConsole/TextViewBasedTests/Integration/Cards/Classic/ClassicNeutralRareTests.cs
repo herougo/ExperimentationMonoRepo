@@ -364,6 +364,22 @@ concede";
         }
 
         [Fact]
+        public Task TestAbomination()
+        {
+            string actionText = @"hero_power
+play 0 1
+end_turn
+hero_power
+play 0 1
+attack 1 1
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.Abomination, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.ArgentCommander, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestArgentCommander()
         {
             string actionText = @"play 0 0
