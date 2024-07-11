@@ -657,6 +657,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class VioletTeacher : MinionCard
+    {
+        public VioletTeacher()
+        {
+            _cardId = CardIds.VioletTeacher;
+            _name = "Violet Teacher";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 4;
+            _attack = 3;
+            _health = 5;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new AfterSpellActivation(new SummonMinion(new VioletApprentice()), PlayerChoice.Player)
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new VioletTeacher();
+        }
+    }
+
     public class ArgentCommander : MinionCard
     {
         public ArgentCommander()

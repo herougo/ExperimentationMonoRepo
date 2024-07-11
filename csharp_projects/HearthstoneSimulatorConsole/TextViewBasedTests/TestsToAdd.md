@@ -75,6 +75,7 @@ Missing Cards
 - [ ] Secretkeeper
 - [ ] Pint-Sized Summoner
 - [ ] Alarm-o-Bot
+- [ ] SI:7 Infiltrator
 
 Missing Tests
 

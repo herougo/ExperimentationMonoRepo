@@ -72,4 +72,23 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Imp();
         }
     }
+    public class VioletApprentice : MinionCard
+    {
+        public VioletApprentice()
+        {
+            _cardId = CardIds.VioletApprentice;
+            _name = "Violet Apprentice";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 1;
+            _attack = 1;
+            _health = 1;
+        }
+
+        public override Card Copy()
+        {
+            return new VioletApprentice();
+        }
+    }
 }

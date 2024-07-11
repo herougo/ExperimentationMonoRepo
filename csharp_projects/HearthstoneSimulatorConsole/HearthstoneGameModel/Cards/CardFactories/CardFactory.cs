@@ -144,6 +144,9 @@ namespace HearthstoneGameModel.Cards.CardFactories
                 case CardIds.TwilightDrake:
                     return new TwilightDrake();
 
+                case CardIds.VioletTeacher:
+                    return new VioletTeacher();
+
                 case CardIds.ArgentCommander:
                     return new ArgentCommander();
                 case CardIds.GadgetzanAuctioneer:
@@ -157,6 +160,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Squire();
                 case CardIds.Imp:
                     return new Imp();
+                case CardIds.VioletApprentice:
+                    return new VioletApprentice();
 
                 case CardIds.Priest:
                     return new Priest();

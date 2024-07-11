@@ -75,7 +75,10 @@ namespace HearthstoneGameModel.Core.Enums
         public const string AncientMage = "C062";
         public const string DefenderOfArgus = "C063";
         public const string TwilightDrake = "C064";
-
+        public const string SI7Infiltrator = "C065";
+        public const string VioletTeacher = "C066";
+        public const string Abomination = "C067";
+        public const string StampedingKodo = "C068";
         public const string ArgentCommander = "C069";
         public const string GadgetzanAuctioneer = "C070";
         public const string Sunwalker = "C071";
@@ -86,6 +89,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string DamagedGolem = "CU001";
         public const string Squire = "CU002";
         public const string Imp = "CU003";
+        public const string VioletApprentice = "CU004";
 
         // Heroes
         public const string Priest = "hero_priest";
