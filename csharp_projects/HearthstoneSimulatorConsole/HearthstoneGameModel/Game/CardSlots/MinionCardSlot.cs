@@ -20,7 +20,7 @@ namespace HearthstoneGameModel.Game.CardSlots
         // managed by effects 
         // TODO
 
-        public bool IsPoisoned = false;
+        public bool IsDestroyed = false;
 
         public MinionCardSlot(string cardId, int player, HearthstoneGame game)
             : base(cardId, player, game)

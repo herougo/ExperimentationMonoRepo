@@ -708,6 +708,34 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class StampedingKodo : MinionCard
+    {
+        public StampedingKodo()
+        {
+            _cardId = CardIds.StampedingKodo;
+            _name = "Stampeding Kodo";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 5;
+            _attack = 3;
+            _health = 5;
+            _tag = MinionTag.Beast;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new DestroyMinion(new RandomCharacterFrom(
+                    SelectionConstants.OtherLivingEnemyMinions & new AttackAtMostFilter(2)
+                )))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new StampedingKodo();
+        }
+    }
+
     public class ArgentCommander : MinionCard
     {
         public ArgentCommander()

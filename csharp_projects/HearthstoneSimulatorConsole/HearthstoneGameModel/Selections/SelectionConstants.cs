@@ -44,6 +44,10 @@ namespace HearthstoneGameModel.Selections
             & new LivingSelectionFilter())
             & new OtherSelectionFilter()
         );
+        public static SlotSelection OtherLivingEnemyMinions = (
+            (new BoardSelection(PlayerChoice.Opponent) & new LivingSelectionFilter())
+            & new OtherSelectionFilter()
+        );
         public static SlotSelection OtherLivingCharacters = (
             ((new HeroSelection(PlayerChoice.Both) + new BoardSelection(PlayerChoice.Both))
             & new LivingSelectionFilter())

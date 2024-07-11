@@ -22,7 +22,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
             CheckValidEvent(effectEvent);
             if (eventSlots[1].CardType == CardType.Minion)
             {
-                ((MinionCardSlot)eventSlots[1]).IsPoisoned = true;
+                ((MinionCardSlot)eventSlots[1]).IsDestroyed = true;
             }
             return null;
         }

@@ -79,6 +79,7 @@
     <Compile Include="Effects\ContinuousEffects\SpellDamage.cs" />
     <Compile Include="Effects\HandContinuousEffects\ManaDiscount.cs" />
     <Compile Include="Effects\OneTimeEffects\ChangeStats.cs" />
+    <Compile Include="Effects\OneTimeEffects\DestroyMinion.cs" />
     <Compile Include="Effects\OneTimeEffects\GiveContinuousEffect.cs" />
     <Compile Include="Effects\OneTimeEffects\ReduceWeaponDurability.cs" />
     <Compile Include="Effects\OneTimeEffects\SwapAttackAndHealth.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="Game\Utils\HSGameUtils.cs" />
     <Compile Include="Selections\CompoundSelections\UnionSlotSelection.cs" />
     <Compile Include="Selections\SelectionFilter.cs" />
+    <Compile Include="Selections\SelectionFilters\AttackAtMostFilter.cs" />
     <Compile Include="Selections\SelectionFilters\LivingSelectionFilter.cs" />
     <Compile Include="Selections\SelectionFilters\OtherSelectionFilter.cs" />
     <Compile Include="Selections\SelectionFilters\TagSelectionFilter.cs" />
