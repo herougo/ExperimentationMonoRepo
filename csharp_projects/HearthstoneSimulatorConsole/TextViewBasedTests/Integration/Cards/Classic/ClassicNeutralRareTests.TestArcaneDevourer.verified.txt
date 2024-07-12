@@ -1,0 +1,97 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+1: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+2: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+3: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+1: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+2: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+3: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+1: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+2: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+3: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+1: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+2: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+3: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+1: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+2: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+3: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+1: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+2: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+3: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+
+1 plays Arcane Devourer
+Opponent (1) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+1: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+2: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+
+	0: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+1: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+2: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+3: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+
+1 plays Coin
+Opponent (1) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+1: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+2: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+3: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+
+	0: CardSlot('Arcane Devourer', Mana=8, 6 / 10)
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+1: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+2: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+3: CardSlot('Arcane Devourer', Mana=8, 4 / 8)
+
+Game Over: Player 0 Wins

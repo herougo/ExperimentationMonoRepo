@@ -835,4 +835,30 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new RavenholdtAssassin();
         }
     }
+
+    public class ArcaneDevourer: MinionCard
+    {
+        public ArcaneDevourer()
+        {
+            _cardId = CardIds.ArcaneDevourer;
+            _name = "Arcane Devourer";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 8;
+            _attack = 4;
+            _health = 8;
+            _tag = MinionTag.Elemental;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new AfterSpellActivation(new ChangeStats(SelectionConstants.OwnSelf, 2, 2), PlayerChoice.Player)
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new ArcaneDevourer();
+        }
+    }
 }

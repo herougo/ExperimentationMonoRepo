@@ -158,6 +158,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Sunwalker();
                 case CardIds.RavenholdtAssassin:
                     return new RavenholdtAssassin();
+                case CardIds.ArcaneDevourer:
+                    return new ArcaneDevourer();
 
                 case CardIds.DamagedGolem:
                     return new DamagedGolem();

@@ -83,6 +83,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string GadgetzanAuctioneer = "C070";
         public const string Sunwalker = "C071";
         public const string RavenholdtAssassin = "C072";
+        public const string ArcaneDevourer = "C073";
 
 
 

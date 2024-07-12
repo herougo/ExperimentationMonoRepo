@@ -452,5 +452,17 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestArcaneDevourer()
+        {
+            string actionText = @"end_turn
+play 0 0
+play 3
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.ArcaneDevourer, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }
