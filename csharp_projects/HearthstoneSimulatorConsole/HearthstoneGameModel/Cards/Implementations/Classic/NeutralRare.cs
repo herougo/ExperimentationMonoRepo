@@ -810,4 +810,29 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Sunwalker();
         }
     }
+
+    public class RavenholdtAssassin : MinionCard
+    {
+        public RavenholdtAssassin()
+        {
+            _cardId = CardIds.RavenholdtAssassin;
+            _name = "Ravenholdt Assassin";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 7;
+            _attack = 7;
+            _health = 5;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Stealth()
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new RavenholdtAssassin();
+        }
+    }
 }

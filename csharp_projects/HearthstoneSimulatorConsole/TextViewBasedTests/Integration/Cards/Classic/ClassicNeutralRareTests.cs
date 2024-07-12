@@ -435,5 +435,22 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestRavenholdtAssassin()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+end_turn
+attack 0 0
+attack 0 -1
+end_turn
+attack 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.RavenholdtAssassin, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }
