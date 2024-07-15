@@ -46,6 +46,7 @@
     <Compile Include="Cards\CardTypes\MinionCard.cs" />
     <Compile Include="Cards\CardTypes\SpellCard.cs" />
     <Compile Include="Cards\CardTypes\WeaponCard.cs" />
+    <Compile Include="Cards\Implementations\Classic\NeutralEpic.cs" />
     <Compile Include="Cards\Implementations\Classic\NeutralRare.cs" />
     <Compile Include="Cards\Implementations\Classic\Uncollectible.cs" />
     <Compile Include="Cards\Implementations\Fundamental.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Effects\ContinuousEffects\SetMaxHealth.cs" />
     <Compile Include="Effects\ContinuousEffects\SpellDamage.cs" />
     <Compile Include="Effects\HandContinuousEffects\ManaDiscount.cs" />
+    <Compile Include="Effects\JoinedOneTimeEffects\DestroyMinionAndBuff.cs" />
     <Compile Include="Effects\OneTimeEffects\ChangeStats.cs" />
     <Compile Include="Effects\OneTimeEffects\DestroyMinion.cs" />
     <Compile Include="Effects\OneTimeEffects\GiveContinuousEffect.cs" />

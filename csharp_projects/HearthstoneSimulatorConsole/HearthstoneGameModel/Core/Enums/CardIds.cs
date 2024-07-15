@@ -85,7 +85,9 @@ namespace HearthstoneGameModel.Core.Enums
         public const string RavenholdtAssassin = "C072";
         public const string ArcaneDevourer = "C073";
 
-
+        // Classic Neutral - Epic
+        public const string HungryCrab = "C074";
+        public const string Doomsayer = "C075";
 
         // Classic Uncollectible
         public const string DamagedGolem = "CU001";

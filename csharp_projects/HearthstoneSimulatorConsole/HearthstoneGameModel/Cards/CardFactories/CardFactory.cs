@@ -161,6 +161,11 @@ namespace HearthstoneGameModel.Cards.CardFactories
                 case CardIds.ArcaneDevourer:
                     return new ArcaneDevourer();
 
+                case CardIds.HungryCrab:
+                    return new HungryCrab();
+                case CardIds.Doomsayer:
+                    return new Doomsayer();
+
                 case CardIds.DamagedGolem:
                     return new DamagedGolem();
                 case CardIds.Squire:
