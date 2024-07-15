@@ -61,6 +61,7 @@
     <Compile Include="Core\Enums\CanAttackResponse.cs" />
     <Compile Include="Core\Enums\CardIds.cs" />
     <Compile Include="Core\Enums\CardType.cs" />
+    <Compile Include="Core\Enums\EMEffectType.cs" />
     <Compile Include="Core\Enums\EffectArea.cs" />
     <Compile Include="Core\Enums\EffectEvent.cs" />
     <Compile Include="Core\Enums\EffectTimeLimit.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Effects\ContinuousEffects\SetMaxHealth.cs" />
     <Compile Include="Effects\ContinuousEffects\SpellDamage.cs" />
     <Compile Include="Effects\HandContinuousEffects\ManaDiscount.cs" />
+    <Compile Include="Effects\JoinedOneTimeEffects\LoseDivineShieldsAndBuff.cs" />
     <Compile Include="Effects\JoinedOneTimeEffects\DestroyMinionAndBuff.cs" />
     <Compile Include="Effects\OneTimeEffects\ChangeStats.cs" />
     <Compile Include="Effects\OneTimeEffects\DestroyMinion.cs" />

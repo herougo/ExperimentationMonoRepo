@@ -12,6 +12,6 @@ namespace HearthstoneGameModel.Effects
 {
     public abstract class ContinuousEffect : EMEffect
     {
-        
+
     }
 }

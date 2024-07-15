@@ -70,4 +70,29 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Doomsayer();
         }
     }
+
+    public class BloodKnight : MinionCard
+    {
+        public BloodKnight()
+        {
+            _cardId = CardIds.BloodKnight;
+            _name = "Blood Knight";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 3;
+            _attack = 3;
+            _health = 3;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new LoseDivineShieldsAndBuff(SelectionConstants.AllMinions, SelectionConstants.OwnSelf, 3, 3))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new BloodKnight();
+        }
+    }
 }

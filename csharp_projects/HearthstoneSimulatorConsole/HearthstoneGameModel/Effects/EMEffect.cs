@@ -66,6 +66,11 @@ namespace HearthstoneGameModel.Effects
             get { return _priority; }
         }
 
+        public virtual EMEffectType EffectType
+        {
+            get { return EMEffectType.Other; }
+        }
+
         public virtual void AdjustStats(CardSlot cardSlot)
         {
 

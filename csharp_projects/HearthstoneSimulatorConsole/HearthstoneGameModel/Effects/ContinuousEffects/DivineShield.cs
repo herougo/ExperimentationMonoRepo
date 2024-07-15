@@ -56,6 +56,11 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
             
         }
 
+        public override EMEffectType EffectType
+        {
+            get { return EMEffectType.DivineShield; }
+        }
+
         public override EMEffect Copy()
         {
             return new DivineShield();

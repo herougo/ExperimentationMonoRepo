@@ -44,5 +44,24 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestBloodKnight()
+        {
+            string actionText = @"play 0 0
+play 0 1
+play 0 2
+play 0 3
+hero_power
+select 0 0
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.BloodKnight, CardIds.ArgentSquire, CardIds.BloodKnight, CardIds.ArgentSquire,
+                CardIds.BloodKnight, CardIds.ArgentSquire, CardIds.MurlocTidecaller, CardIds.ArgentSquire
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Mage);
+            return Verify(log);
+        }
     }
 }

@@ -165,6 +165,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new HungryCrab();
                 case CardIds.Doomsayer:
                     return new Doomsayer();
+                case CardIds.BloodKnight:
+                    return new BloodKnight();
 
                 case CardIds.DamagedGolem:
                     return new DamagedGolem();
