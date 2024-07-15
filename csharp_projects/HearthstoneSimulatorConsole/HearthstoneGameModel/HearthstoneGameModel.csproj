@@ -151,6 +151,7 @@
     <Compile Include="Game\Utils\HSGameUtils.cs" />
     <Compile Include="Selections\CompoundSelections\UnionSlotSelection.cs" />
     <Compile Include="Selections\SelectionFilter.cs" />
+    <Compile Include="Selections\SelectionFilters\AttackAtLeastFilter.cs" />
     <Compile Include="Selections\SelectionFilters\AttackAtMostFilter.cs" />
     <Compile Include="Selections\SelectionFilters\LivingSelectionFilter.cs" />
     <Compile Include="Selections\SelectionFilters\OtherSelectionFilter.cs" />

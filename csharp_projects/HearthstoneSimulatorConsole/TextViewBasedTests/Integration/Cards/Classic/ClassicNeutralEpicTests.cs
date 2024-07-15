@@ -93,5 +93,26 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestBigGameHunter()
+        {
+            string actionText = @"play 0 0
+play 0 1
+play 0 2
+end_turn
+play 0 0
+select 0 0
+select 0 2
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.MurlocWarleader, CardIds.MurlocWarleader, CardIds.MurlocWarleader, CardIds.MurlocWarleader,
+                CardIds.HungryCrab, CardIds.BloodKnight, CardIds.ArgentSquire, CardIds.ArgentSquire
+            };
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.BigGameHunter, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }

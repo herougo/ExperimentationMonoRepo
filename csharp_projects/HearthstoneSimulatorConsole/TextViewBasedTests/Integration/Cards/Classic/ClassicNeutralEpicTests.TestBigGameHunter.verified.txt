@@ -1,0 +1,134 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+1: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+2: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+3: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Argent Squire', Mana=1, 1 / 1)
+1: CardSlot('Argent Squire', Mana=1, 1 / 1)
+2: CardSlot('Blood Knight', Mana=3, 3 / 3)
+3: CardSlot('Hungry Crab', Mana=1, 1 / 2)
+
+0 plays Argent Squire
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+1: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+2: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+3: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Argent Squire', Mana=1, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 9 / 10
+Weapon: None
+0: CardSlot('Argent Squire', Mana=1, 1 / 1)
+1: CardSlot('Blood Knight', Mana=3, 3 / 3)
+2: CardSlot('Hungry Crab', Mana=1, 1 / 2)
+
+0 plays Argent Squire
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+1: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+2: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+3: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Argent Squire', Mana=1, 1 / 1)
+	1: CardSlot('Argent Squire', Mana=1, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Blood Knight', Mana=3, 3 / 3)
+1: CardSlot('Hungry Crab', Mana=1, 1 / 2)
+
+0 plays Blood Knight
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+1: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+2: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+3: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Argent Squire', Mana=1, 1 / 1)
+	1: CardSlot('Argent Squire', Mana=1, 1 / 1)
+	2: CardSlot('Blood Knight', Mana=3, 9 / 9)
+
+Player (0) - health: 30, armour: 0, mana: 5 / 10
+Weapon: None
+0: CardSlot('Hungry Crab', Mana=1, 1 / 2)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+1: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+2: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+3: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Argent Squire', Mana=1, 1 / 1)
+	1: CardSlot('Argent Squire', Mana=1, 1 / 1)
+	2: CardSlot('Blood Knight', Mana=3, 9 / 9)
+
+Player (0) - health: 30, armour: 0, mana: 5 / 10
+Weapon: None
+0: CardSlot('Hungry Crab', Mana=1, 1 / 2)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+1: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+2: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+3: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+
+	------------
+	0: CardSlot('Argent Squire', Mana=1, 1 / 1)
+	1: CardSlot('Argent Squire', Mana=1, 1 / 1)
+	2: CardSlot('Blood Knight', Mana=3, 9 / 9)
+
+Player (0) - health: 30, armour: 0, mana: 5 / 10
+Weapon: None
+0: CardSlot('Hungry Crab', Mana=1, 1 / 2)
+
+1 plays Big Game Hunter
+ERROR: selected card is not one of the possible options
+Player 0's C076 died
+Opponent (1) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+1: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+2: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+
+	0: CardSlot('Big Game Hunter', Mana=4, 4 / 2)
+	------------
+	0: CardSlot('Argent Squire', Mana=1, 1 / 1)
+	1: CardSlot('Argent Squire', Mana=1, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 5 / 10
+Weapon: None
+0: CardSlot('Hungry Crab', Mana=1, 1 / 2)
+
+Game Over: Player 0 Wins

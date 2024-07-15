@@ -154,4 +154,29 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new SouthseaCaptain();
         }
     }
+
+    public class BigGameHunter : MinionCard
+    {
+        public BigGameHunter()
+        {
+            _cardId = CardIds.BigGameHunter;
+            _name = "Big Game Hunter";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 4;
+            _attack = 4;
+            _health = 2;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new DestroyMinion(new SelectCharacterFrom(SelectionConstants.AllOtherMinions & new AttackAtLeastFilter(7))))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new BigGameHunter();
+        }
+    }
 }
