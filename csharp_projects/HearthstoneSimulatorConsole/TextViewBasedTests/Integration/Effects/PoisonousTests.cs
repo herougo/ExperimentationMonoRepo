@@ -8,7 +8,7 @@ using TextViewBasedTests.Utils;
 
 namespace TextViewBasedTests.Integration.Effects
 {
-    public class Poisonous
+    public class PoisonousTests
     {
         [Fact]
         public Task TestPoisonousWithDivineShield()

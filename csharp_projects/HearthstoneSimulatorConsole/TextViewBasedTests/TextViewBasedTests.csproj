@@ -27,4 +27,25 @@
     <ProjectReference Include="..\TextView\TextView.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Integration\Effects\PoisonousTests.TestPoisonousWithDivineShield.verified.txt">
+      <DependentUpon>PoisonousTests.cs</DependentUpon>
+    </None>
+    <None Update="Integration\Effects\SwapAttackAndHealthTests.TestZeroAttack.verified.txt">
+      <DependentUpon>SwapAttackAndHealthTests.cs</DependentUpon>
+    </None>
+    <None Update="Integration\Effects\SwapAttackAndHealthTests.Test4_2_ThenSilence.verified.txt">
+      <DependentUpon>SwapAttackAndHealthTests.cs</DependentUpon>
+    </None>
+    <None Update="Integration\Effects\SwapAttackAndHealthTests.Test4_2.verified.txt">
+      <DependentUpon>SwapAttackAndHealthTests.cs</DependentUpon>
+    </None>
+    <None Update="Integration\Effects\SwapAttackAndHealthTests.Test23_ThenSilence.verified.txt">
+      <DependentUpon>SwapAttackAndHealthTests.cs</DependentUpon>
+    </None>
+    <None Update="Integration\Effects\SwapAttackAndHealthTests.Test23_Damage_ThenSilence.verified.txt">
+      <DependentUpon>SwapAttackAndHealthTests.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+
 </Project>

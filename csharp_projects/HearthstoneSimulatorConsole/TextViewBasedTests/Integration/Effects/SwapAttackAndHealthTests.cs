@@ -8,7 +8,7 @@ using TextViewBasedTests.Utils;
 
 namespace TextViewBasedTests.Integration.Effects
 {
-    public class SwapAttackAndHealth
+    public class SwapAttackAndHealthTests
     {
         [Fact]
         public Task Test4_2()
