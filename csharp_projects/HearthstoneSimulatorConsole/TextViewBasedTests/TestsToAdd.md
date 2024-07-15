@@ -84,8 +84,8 @@ Missing Tests
 ### Specific Cases
 
 - [ ] Timelimited effect then switch players (e.g. sleep)
-- [ ] change weapon attack outside destruction/equipping
-- [ ] Crazed Alchemist with 3 mana pirate buff guy
+- [x] change weapon attack outside destruction/equipping
+- [x] Crazed Alchemist with 3 mana pirate buff guy
 - [ ] trying to add multiple Divine Shields to one minion
 
 

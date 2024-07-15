@@ -119,5 +119,30 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Mage);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestSouthseaCaptainSwap()
+        {
+            string actionText = @"play 0 0
+play 1 1
+play 0 2
+select 0 0
+end_turn
+play 0 0
+select 0 1
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.SouthseaCaptain, CardIds.CrazedAlchemist, CardIds.SouthseaCaptain, CardIds.CrazedAlchemist,
+                CardIds.SouthseaCaptain, CardIds.CrazedAlchemist, CardIds.SouthseaCaptain
+            };
+            List<string> cardIdList1 = new List<string>
+            {
+                CardIds.IronbeakOwl, CardIds.IronbeakOwl, CardIds.IronbeakOwl, CardIds.IronbeakOwl,
+                CardIds.IronbeakOwl, CardIds.IronbeakOwl, CardIds.IronbeakOwl
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Mage);
+            return Verify(log);
+        }
     }
 }
