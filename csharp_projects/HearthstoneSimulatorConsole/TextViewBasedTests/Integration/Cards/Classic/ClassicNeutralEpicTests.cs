@@ -81,5 +81,17 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestSouthseaCaptain()
+        {
+            string actionText = @"play 0 0
+play 0 1
+play 0 2
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.SouthseaCaptain, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }

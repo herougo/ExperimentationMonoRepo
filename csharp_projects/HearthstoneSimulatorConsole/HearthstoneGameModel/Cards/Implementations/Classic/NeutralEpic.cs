@@ -125,4 +125,33 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new MurlocWarleader();
         }
     }
+
+    public class SouthseaCaptain : MinionCard
+    {
+        public SouthseaCaptain()
+        {
+            _cardId = CardIds.SouthseaCaptain;
+            _name = "Southsea Captain";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 3;
+            _attack = 3;
+            _health = 3;
+            _tag = MinionTag.Pirate;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new ContinuousSelectionFieldEffect(
+                    SelectionConstants.AllOtherFriendlyMinions & new TagSelectionFilter(MinionTag.Pirate),
+                    new Buff(1, 1)
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new SouthseaCaptain();
+        }
+    }
 }
