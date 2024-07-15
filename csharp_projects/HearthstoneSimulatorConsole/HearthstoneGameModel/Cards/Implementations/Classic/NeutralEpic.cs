@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using HearthstoneGameModel.Effects.JoinedOneTimeEffects;
 using HearthstoneGameModel.Selections.SelectionFilters;
 using HearthstoneGameModel.Selections.SlotSelections;
+using HearthstoneGameModel.Effects.ContinuousEffects;
 
 namespace HearthstoneGameModel.Cards.Implementations.Classic
 {
@@ -93,6 +94,35 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new BloodKnight();
+        }
+    }
+
+    public class MurlocWarleader : MinionCard
+    {
+        public MurlocWarleader()
+        {
+            _cardId = CardIds.MurlocWarleader;
+            _name = "Murloc Warleader";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 3;
+            _attack = 3;
+            _health = 3;
+            _tag = MinionTag.Murloc;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new ContinuousSelectionFieldEffect(
+                    SelectionConstants.AllOtherFriendlyMinions & new TagSelectionFilter(MinionTag.Murloc),
+                    new BuffAttack(2)
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new MurlocWarleader();
         }
     }
 }

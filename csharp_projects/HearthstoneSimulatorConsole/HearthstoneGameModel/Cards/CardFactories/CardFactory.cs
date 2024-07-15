@@ -167,6 +167,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Doomsayer();
                 case CardIds.BloodKnight:
                     return new BloodKnight();
+                case CardIds.MurlocWarleader:
+                    return new MurlocWarleader();
 
                 case CardIds.DamagedGolem:
                     return new DamagedGolem();
