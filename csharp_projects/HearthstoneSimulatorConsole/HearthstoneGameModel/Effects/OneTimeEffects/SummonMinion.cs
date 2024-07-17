@@ -18,7 +18,7 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
             int player = affectedCardSlot.Player;
             if (game.Battleboard.HasRoom(player))
             {
-                CardSlot newMinionCardSlot = _minion.CreateCardSlot(player, game);
+                MinionCardSlot newMinionCardSlot = (MinionCardSlot)_minion.CreateCardSlot(player, game);
                 game.CardMover.SummonMinion(newMinionCardSlot);
             }
             return null;

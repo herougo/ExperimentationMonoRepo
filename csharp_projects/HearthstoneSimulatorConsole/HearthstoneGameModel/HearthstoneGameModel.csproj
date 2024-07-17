@@ -82,6 +82,7 @@
     <Compile Include="Effects\HandContinuousEffects\ManaDiscount.cs" />
     <Compile Include="Effects\JoinedOneTimeEffects\LoseDivineShieldsAndBuff.cs" />
     <Compile Include="Effects\JoinedOneTimeEffects\DestroyMinionAndBuff.cs" />
+    <Compile Include="Effects\OneTimeEffects\BecomeMinionCopy.cs" />
     <Compile Include="Effects\OneTimeEffects\ChangeStats.cs" />
     <Compile Include="Effects\OneTimeEffects\DestroyMinion.cs" />
     <Compile Include="Effects\OneTimeEffects\GiveContinuousEffect.cs" />

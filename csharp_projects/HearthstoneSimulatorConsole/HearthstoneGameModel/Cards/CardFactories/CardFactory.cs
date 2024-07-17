@@ -173,6 +173,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new SouthseaCaptain();
                 case CardIds.BigGameHunter:
                     return new BigGameHunter();
+                case CardIds.FacelessManipulator:
+                    return new FacelessManipulator();
 
                 case CardIds.DamagedGolem:
                     return new DamagedGolem();

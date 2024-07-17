@@ -35,6 +35,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string AttackerInflictDamage = "attacker_inflict_damage";
         public const string DefenderInflictDamage = "defender_inflict_damage";
         public const string WhenCardPlayed = "when_card_played";
+        public const string MinionTransformed = "minion_transformed";
 
     }
 }

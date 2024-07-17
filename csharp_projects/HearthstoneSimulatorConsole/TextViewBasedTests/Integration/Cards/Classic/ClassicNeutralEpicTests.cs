@@ -114,5 +114,28 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestFacelessManipulator()
+        {
+            string actionText = @"play 0 0
+play 0 1
+play 0 2
+select 0 1
+end_turn
+play 0 0
+select 0 0
+end_turn
+attack 2 0
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.MurlocWarleader, CardIds.MurlocWarleader, CardIds.MurlocWarleader, CardIds.MurlocWarleader,
+                CardIds.MurlocWarleader, CardIds.FacelessManipulator, CardIds.MurlocWarleader, CardIds.ArgentSquire
+            };
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.FacelessManipulator, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Mage);
+            return Verify(log);
+        }
     }
 }

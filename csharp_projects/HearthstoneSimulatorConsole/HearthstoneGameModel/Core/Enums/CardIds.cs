@@ -92,6 +92,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string MurlocWarleader = "C077";
         public const string SouthseaCaptain = "C078";
         public const string BigGameHunter = "C079";
+        public const string FacelessManipulator = "C080";
 
 
         // Classic Uncollectible

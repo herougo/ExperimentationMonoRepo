@@ -1,5 +1,6 @@
 ﻿using HearthstoneGameModel.Cards.CardTypes;
 using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Effects.ContinuousEffects;
 using HearthstoneGameModel.Game.EffectManagement;
 using System;
 using System.Collections.Generic;
@@ -50,6 +51,47 @@ namespace HearthstoneGameModel.Game.CardSlots
             return result;
         }
 
+        public EffectManagerNodePlan InPlayCopyFrom(MinionCardSlot selectedCardSlot)
+        {
+            Game.EffectManager.PopEffectsBySlot(this);
+
+            Card = selectedCardSlot.Card.Copy();
+            TypedCard = (MinionCard)Card;
+
+            Mana = selectedCardSlot.Mana;
+            Attack = selectedCardSlot.Attack;
+            MaxHealth = selectedCardSlot.MaxHealth;
+            Health = selectedCardSlot.Health;
+
+            // AttacksThisTurn
+            // HasSleep
+            // NumFrozen
+            // NumWindfury
+            // NumCharge
+            // NumStealth
+            // NumTaunt
+            // NumElusive
+            // NumCantAttackEffect
+
+            IsDestroyed = selectedCardSlot.IsDestroyed;
+
+            EffectManagerNodePlan plan = new EffectManagerNodePlan();
+            foreach (EffectManagerNode emNode in selectedCardSlot.GetEMNodes())
+            {
+                if (!emNode.Effect.IsExternal)
+                {
+                    Game.EffectManager.AddEffect(new EffectManagerNode(
+                        emNode.Effect.Copy(), this, this, emNode.Silenceable
+                    ));
+                }
+            }
+            AddSleepEffectManagerNode();
+
+
+            plan.EffectEventArgs.Add(new EffectEventArgs(EffectEvent.MinionTransformed));
+            return plan;
+        }
+
         public override void UpdateStats()
         {
             Mana = TypedCard.Mana;
@@ -80,6 +122,18 @@ namespace HearthstoneGameModel.Game.CardSlots
                * damaged & buffed:       2           3        4          3              3
                * damaged, existing buff: 3           4        4          4              3
              */
+        }
+
+        public void AddSleepEffectManagerNode()
+        {
+            if (HasSleep)
+            {
+                return;
+            }
+            EffectManagerNode sleepEmNode = new EffectManagerNode(
+                new Sleep(), this, this, false
+            );
+            Game.EffectManager.AddEffect(sleepEmNode);
         }
     }
 }

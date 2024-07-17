@@ -87,6 +87,7 @@ Missing Tests
 - [x] change weapon attack outside destruction/equipping
 - [x] Crazed Alchemist with 3 mana pirate buff guy
 - [ ] trying to add multiple Divine Shields to one minion
+- [ ] Minion copy and Murloc Warleader
 
 
 

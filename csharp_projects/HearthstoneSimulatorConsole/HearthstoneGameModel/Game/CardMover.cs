@@ -49,7 +49,7 @@ namespace HearthstoneGameModel.Game
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.CardPlayed, cardSlot));
         }
 
-        private void playMinion(CardSlot cardSlot, int destinationIndex)
+        private void playMinion(MinionCardSlot cardSlot, int destinationIndex)
         {
             _game.Battleboard.AddCards(
                 cardSlot.Player, new List<CardSlot> { cardSlot },
@@ -59,10 +59,7 @@ namespace HearthstoneGameModel.Game
             _game.EffectManager.AddInPlayEffects(cardSlot);
 
             // prevent attacking on the turn it's summoned (via Sleep effect)
-            EffectManagerNode sleepEmNode = new EffectManagerNode(
-                new Sleep(), cardSlot, cardSlot, false
-            );
-            _game.EffectManager.AddEffect(sleepEmNode);
+            cardSlot.AddSleepEffectManagerNode();
 
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionPutInPlay, cardSlot));
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.WhenCardPlayed, cardSlot));
@@ -165,7 +162,7 @@ namespace HearthstoneGameModel.Game
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.WeaponEquipped, cardSlot));
         }
 
-        public void SummonMinion(CardSlot cardSlot)
+        public void SummonMinion(MinionCardSlot cardSlot)
         {
             _game.Battleboard.AddCards(cardSlot.Player, new List<CardSlot>{ cardSlot });
 
@@ -175,11 +172,7 @@ namespace HearthstoneGameModel.Game
             _game.EffectManager.AddInPlayEffects(cardSlot);
 
             // prevent attacking on the turn it's summoned (via Sleep effect)
-            EffectManagerNode sleepEmNode = new EffectManagerNode(
-                new Sleep(), cardSlot, cardSlot, false
-            );
-            _game.EffectManager.AddEffect(sleepEmNode);
-
+            cardSlot.AddSleepEffectManagerNode();
 
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionPutInPlay, cardSlot));
             // (no battlecry event)

@@ -65,7 +65,7 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
                     }
                 }
                 MinionCard selectedMinion = _minionOptions[selectedIndex];
-                CardSlot newMinionCardSlot = selectedMinion.CreateCardSlot(player, game);
+                MinionCardSlot newMinionCardSlot = (MinionCardSlot)selectedMinion.CreateCardSlot(player, game);
                 game.CardMover.SummonMinion(newMinionCardSlot);
             }
             return null;

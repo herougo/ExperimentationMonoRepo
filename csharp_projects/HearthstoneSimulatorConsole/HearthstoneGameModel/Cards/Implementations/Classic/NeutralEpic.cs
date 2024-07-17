@@ -179,4 +179,29 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new BigGameHunter();
         }
     }
+
+    public class FacelessManipulator : MinionCard
+    {
+        public FacelessManipulator()
+        {
+            _cardId = CardIds.FacelessManipulator;
+            _name = "Faceless Manipulator";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 5;
+            _attack = 3;
+            _health = 3;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new BecomeMinionCopy(new SelectCharacterFrom(SelectionConstants.AllOtherMinions)))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new FacelessManipulator();
+        }
+    }
 }

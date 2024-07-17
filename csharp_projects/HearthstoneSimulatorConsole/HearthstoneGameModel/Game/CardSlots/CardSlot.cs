@@ -8,6 +8,8 @@ using HearthstoneGameModel.Cards;
 using HearthstoneGameModel.Cards.CardFactories;
 using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Game.EffectManagement;
+using HearthstoneGameModel.Effects;
+using HearthstoneGameModel.Effects.ContinuousEffects;
 
 namespace HearthstoneGameModel.Game.CardSlots
 {
