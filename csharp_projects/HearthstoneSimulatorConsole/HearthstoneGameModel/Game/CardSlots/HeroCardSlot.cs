@@ -29,8 +29,9 @@ namespace HearthstoneGameModel.Game.CardSlots
             : base(cardId, player, game) {
             TypedCard = (HeroCard)Card;
         }
-        public override EffectManagerNodePlan TakeDamage(int amount)
+        public override EffectManagerNodePlan TakeDamage()
         {
+            int amount = TempDamageToTake;
             PlayerMetadata playerMetadata = Game.PlayerMetadata[Player];
 
             int damageToHealth = Math.Max(amount - playerMetadata.Armour, 0);

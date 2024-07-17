@@ -33,8 +33,10 @@ namespace HearthstoneGameModel.Game.CardSlots
             Health = TypedCard.Health;
         }
 
-        public override EffectManagerNodePlan TakeDamage(int amount)
+        public override EffectManagerNodePlan TakeDamage()
         {
+            int amount = TempDamageToTake;
+
             Health -= amount;
             EffectManagerNodePlan plan = new EffectManagerNodePlan();
             if (amount > 0)

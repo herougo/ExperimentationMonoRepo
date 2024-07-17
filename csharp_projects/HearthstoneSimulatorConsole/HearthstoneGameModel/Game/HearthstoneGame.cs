@@ -237,25 +237,23 @@ namespace HearthstoneGameModel.Game
         {
             UIManager.ReceiveUIEvent(new AttackUIEvent(attackerCardSlot, defenderCardSlot));
             attackerCardSlot.AttacksThisTurn += 1;
-            GameMetadata.AttackerDamageTaken = defenderCardSlot.Attack;
-            GameMetadata.DefenderDamageTaken = attackerCardSlot.Attack;
-            EffectManager.SendEvent(new EffectEventArgs(EffectEvent.AfterAttackerInitialCombatDamage, attackerCardSlot));
-            EffectManager.SendEvent(new EffectEventArgs(EffectEvent.AfterDefenderInitialCombatDamage, defenderCardSlot));
+            attackerCardSlot.TempDamageToTake = defenderCardSlot.Attack;
+            defenderCardSlot.TempDamageToTake = attackerCardSlot.Attack;
+            EffectManager.SendEvent(new EffectEventArgs(EffectEvent.DamagePreparation, attackerCardSlot));
+            EffectManager.SendEvent(new EffectEventArgs(EffectEvent.DamagePreparation, defenderCardSlot));
 
-            EffectManagerNodePlan attackerPlan = attackerCardSlot.TakeDamage(GameMetadata.AttackerDamageTaken);
+            EffectManagerNodePlan attackerPlan = attackerCardSlot.TakeDamage();
             attackerPlan.Perform(EffectManager);
-            EffectManager.SendEvent(new EffectEventArgs(EffectEvent.DefenderInflictDamage, new List<CardSlot>() { defenderCardSlot, attackerCardSlot }));
-            EffectManagerNodePlan defenderPlan = defenderCardSlot.TakeDamage(GameMetadata.DefenderDamageTaken);
+            EffectManagerNodePlan defenderPlan = defenderCardSlot.TakeDamage();
             defenderPlan.Perform(EffectManager);
-            EffectManager.SendEvent(new EffectEventArgs(EffectEvent.AttackerInflictDamage, new List<CardSlot>() { attackerCardSlot, defenderCardSlot }));
+            EffectManager.SendEvent(new EffectEventArgs(EffectEvent.InflictDamage, new List<CardSlot>() { defenderCardSlot, attackerCardSlot }));
+            EffectManager.SendEvent(new EffectEventArgs(EffectEvent.InflictDamage, new List<CardSlot>() { attackerCardSlot, defenderCardSlot }));
 
+            attackerCardSlot.TempDamageToTake = 0;
+            defenderCardSlot.TempDamageToTake = 0;
 
             EffectManager.SendEvent(new EffectEventArgs(EffectEvent.AfterAttackerAttacked, attackerCardSlot)); // TODO: after KillIfNecessary
             EffectManager.SendEvent(EffectEvent.AfterCombatDamage);
-            if (attackerCardSlot.CardType == CardType.Minion && defenderCardSlot.CardType == CardType.Minion)
-            {
-                
-            }
 
             if (attackerCardSlot.CardType == CardType.Hero
                 && Weapons[attackerCardSlot.Player] != null)
@@ -318,6 +316,32 @@ namespace HearthstoneGameModel.Game
                 {
                     UIManager.LogError(ex.Message);
                 }
+            }
+        }
+
+        public void DealDamage(CardSlot sourceSlot, List<BattlerCardSlot> targetSlots, int amount)
+        {
+            foreach (BattlerCardSlot targetSlot in targetSlots)
+            {
+                targetSlot.TempDamageToTake = amount;
+            }
+
+            foreach (BattlerCardSlot targetSlot in targetSlots)
+            {
+                EffectManager.SendEvent(new EffectEventArgs(EffectEvent.DamagePreparation, targetSlot));
+            }
+
+            EffectManagerNodePlan targetPlan = new EffectManagerNodePlan();
+            foreach (BattlerCardSlot targetSlot in targetSlots)
+            {
+                targetPlan.Update(targetSlot.TakeDamage());
+            }
+            targetPlan.Perform(EffectManager);
+
+            foreach (BattlerCardSlot targetSlot in targetSlots)
+            {
+                EffectManager.SendEvent(new EffectEventArgs(EffectEvent.InflictDamage, new List<CardSlot>() { targetSlot, sourceSlot }));
+                targetSlot.TempDamageToTake = 0;
             }
         }
     }

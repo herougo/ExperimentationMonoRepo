@@ -12,8 +12,8 @@ namespace HearthstoneGameModel.Core.Enums
         public const string EndTurn = "end_turn";
         public const string WeaponDestroyed = "weapon_destroyed";
         public const string WeaponEquipped = "weapon_equipped";
-        public const string AfterAttackerInitialCombatDamage = "after_attacker_initial_combat_damage";
-        public const string AfterDefenderInitialCombatDamage = "after_defender_initial_combat_damage";
+        // public const string AfterAttackerInitialCombatDamage = "after_attacker_initial_combat_damage";
+        // public const string AfterDefenderInitialCombatDamage = "after_defender_initial_combat_damage";
         public const string AfterAttackerAttacked = "after_attacker_attacked";
         public const string AfterCombatDamage = "after_combat_damage";
         public const string CalculateStats = "calculate_stats";
@@ -32,10 +32,12 @@ namespace HearthstoneGameModel.Core.Enums
         public const string CardMovedToHand = "card_moved_to_hand";
         public const string CardPlayed = "card_played";
         public const string SetHealth = "set_health";
-        public const string AttackerInflictDamage = "attacker_inflict_damage";
-        public const string DefenderInflictDamage = "defender_inflict_damage";
+        // public const string AttackerInflictDamage = "attacker_inflict_damage";
+        // public const string DefenderInflictDamage = "defender_inflict_damage";
+        public const string InflictDamage = "inflict_damage";
         public const string WhenCardPlayed = "when_card_played";
         public const string MinionTransformed = "minion_transformed";
+        public const string DamagePreparation = "damage_preparation";
 
     }
 }

@@ -27,9 +27,11 @@ namespace HearthstoneGameModel.Game.CardSlots
         public int NumElusive = 0;
         public int NumCantAttackEffect = 0;
 
+        public int TempDamageToTake = 0;
+
         public BattlerCardSlot(string cardId, int player, HearthstoneGame game)
             : base(cardId, player, game) { }
-        public abstract EffectManagerNodePlan TakeDamage(int amount);
+        public abstract EffectManagerNodePlan TakeDamage();
 
         public bool IsFrozen
         {

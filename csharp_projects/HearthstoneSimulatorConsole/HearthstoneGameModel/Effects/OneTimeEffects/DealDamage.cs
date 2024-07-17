@@ -29,15 +29,11 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
         public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot)
         {
             List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
-            EffectManagerNodePlan plan = new EffectManagerNodePlan();
+            List<BattlerCardSlot> typedSelectedCardSlots = selectedCardSlots.Select(x => (BattlerCardSlot)x).ToList();
 
-            foreach (CardSlot selectedCardSlot in selectedCardSlots)
-            {
-                BattlerCardSlot typedCardSlot = (BattlerCardSlot)selectedCardSlot;
-                plan.Update(typedCardSlot.TakeDamage(_amount));
-            }
+            game.DealDamage(affectedCardSlot, typedSelectedCardSlots, _amount);
 
-            return plan;
+            return null;
         }
 
         public override OneTimeEffect Copy()

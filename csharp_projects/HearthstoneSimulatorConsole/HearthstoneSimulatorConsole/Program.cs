@@ -7,7 +7,7 @@ using TextView;
 List<string> cardIdList0 = new List<string>
 {
     CardIds.HungryCrab, CardIds.MurlocTidecaller, CardIds.HungryCrab, CardIds.MurlocTidecaller,
-    CardIds.HungryCrab, CardIds.MurlocTidecaller, CardIds.FacelessManipulator, CardIds.ArgentSquire
+    CardIds.HungryCrab, CardIds.MurlocTidecaller, CardIds.FacelessManipulator, CardIds.RagingWorgen
 };
 string hsClass0 = "hero_mage";
 Decklist decklist0 = new Decklist(cardIdList0, hsClass0);

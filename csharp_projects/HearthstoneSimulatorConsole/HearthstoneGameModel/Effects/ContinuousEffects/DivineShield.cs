@@ -16,8 +16,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
         public DivineShield()
         {
             _eventsReceived = new List<string> {
-                EffectEvent.AfterAttackerInitialCombatDamage,
-                EffectEvent.AfterDefenderInitialCombatDamage
+                EffectEvent.DamagePreparation
             };
             _requiresSlotMatchForEvent = true;
         }
@@ -28,21 +27,11 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
         {
             CheckValidEvent(effectEvent);
             bool removeEmNode = false;
-            if (effectEvent == EffectEvent.AfterAttackerInitialCombatDamage)
+            BattlerCardSlot cardSlot = (BattlerCardSlot)emNode.AffectedSlot;
+            if (cardSlot.TempDamageToTake != 0)
             {
-                if (game.GameMetadata.AttackerDamageTaken != 0)
-                {
-                    game.GameMetadata.AttackerDamageTaken = 0;
-                    removeEmNode = true;
-                }
-            }
-            else if (effectEvent == EffectEvent.AfterDefenderInitialCombatDamage)
-            {
-                if (game.GameMetadata.DefenderDamageTaken != 0)
-                {
-                    game.GameMetadata.DefenderDamageTaken = 0;
-                    removeEmNode = true;
-                }
+                cardSlot.TempDamageToTake = 0;
+                removeEmNode = true;
             }
 
             if (removeEmNode)

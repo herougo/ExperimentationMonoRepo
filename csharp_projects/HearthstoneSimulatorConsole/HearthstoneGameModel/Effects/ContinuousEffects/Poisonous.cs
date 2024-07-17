@@ -13,7 +13,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
     public class Poisonous : ContinuousEffect
     {
         public Poisonous() {
-            _eventsReceived = new List<string> { EffectEvent.AttackerInflictDamage, EffectEvent.DefenderInflictDamage };
+            _eventsReceived = new List<string> { EffectEvent.InflictDamage };
             _requiresSlotMatchForEvent = true;
         }
 
@@ -22,10 +22,10 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
             CheckValidEvent(effectEvent);
             if (eventSlots[1].CardType == CardType.Minion)
             {
-                if ((effectEvent == EffectEvent.AttackerInflictDamage && game.GameMetadata.DefenderDamageTaken > 0)
-                    || (effectEvent == EffectEvent.DefenderInflictDamage && game.GameMetadata.AttackerDamageTaken > 0))
+                MinionCardSlot damagedMinion = (MinionCardSlot)eventSlots[1];
+                if (damagedMinion.TempDamageToTake > 0)
                 {
-                    ((MinionCardSlot)eventSlots[1]).IsDestroyed = true;
+                    damagedMinion.IsDestroyed = true;
                 }
             }
             return null;

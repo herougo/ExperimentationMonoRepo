@@ -44,3 +44,8 @@ What about Health buffs? -> should work
 
 ### a) Multiple event slots
 
+## 5) Resolving DealDamage and DivineShield
+
+### a) Events triggered right away (no plan) while in DealDamage
+
+like NEffects
