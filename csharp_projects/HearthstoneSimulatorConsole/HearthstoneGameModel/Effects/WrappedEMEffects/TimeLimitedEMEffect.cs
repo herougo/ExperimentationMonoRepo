@@ -14,12 +14,22 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
     public class TimeLimitedEMEffect : WrappedEMEffect
     {
         EffectTimeLimit _untilWhen;
+        bool _addTimeLimitedToNewEffects;
 
         public TimeLimitedEMEffect(EMEffect effect, EffectTimeLimit untilWhen)
             : base(effect)
         {
             _untilWhen = untilWhen;
             _eventsReceived.Add(EffectEvent.EndTurn);
+            _addTimeLimitedToNewEffects = true;
+        }
+
+        public TimeLimitedEMEffect(EMEffect effect, EffectTimeLimit untilWhen, bool addTimeLimitedToNewEffects)
+            : base(effect)
+        {
+            _untilWhen = untilWhen;
+            _eventsReceived.Add(EffectEvent.EndTurn);
+            _addTimeLimitedToNewEffects = addTimeLimitedToNewEffects;
         }
 
         private bool isTimeUp(int endingTurn, int affectedSlotPlayer)
@@ -51,12 +61,15 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
             EffectManagerNode emNode, List<CardSlot> eventSlots)
         {
             CheckValidEvent(effectEvent);
-            if (effectEvent == EffectEvent.EndTurn
-                && isTimeUp(game.GameMetadata.Turn, emNode.AffectedSlot.Player))
+            if (effectEvent == EffectEvent.EndTurn)
             {
-                EffectManagerNodePlan plan = new EffectManagerNodePlan();
-                plan.ToRemove.Add(emNode);
-                return plan;
+                if (isTimeUp(game.GameMetadata.Turn, emNode.AffectedSlot.Player))
+                {
+                    EffectManagerNodePlan plan = new EffectManagerNodePlan();
+                    plan.ToRemove.Add(emNode);
+                    return plan;
+                }
+                return null;
             }
             else if (_effect.EventsReceived.Contains(effectEvent))
             {
@@ -72,7 +85,12 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
             {
                 foreach (EffectManagerNode toAddNode in plan.ToAdd)
                 {
-                    toAddNode.Effect = new TimeLimitedEMEffect(toAddNode.Effect, _untilWhen);
+                    EMEffect effectToAdd = toAddNode.Effect;
+                    if (_addTimeLimitedToNewEffects)
+                    {
+                        effectToAdd = new TimeLimitedEMEffect(toAddNode.Effect, _untilWhen);
+                    }
+                    toAddNode.Effect = effectToAdd;
                 }
             }
             return plan;
@@ -80,7 +98,7 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
 
         public override EMEffect Copy()
         {
-            return new TimeLimitedEMEffect(_effect.Copy(), _untilWhen);
+            return new TimeLimitedEMEffect(_effect.Copy(), _untilWhen, _addTimeLimitedToNewEffects);
         }
 
         public override void AdjustStats(CardSlot cardSlot)

@@ -18,7 +18,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.Bite;
             _name = "Bite";
-            _hsClass = HSClass.Neutral;
+            _hsClass = HSClass.Druid;
             _mana = 4;
             _collectible = false;
 

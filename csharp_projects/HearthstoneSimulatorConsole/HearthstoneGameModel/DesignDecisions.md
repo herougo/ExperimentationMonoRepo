@@ -53,3 +53,5 @@ like NEffects
 ## 6) Resolving Lorewalker Cho
 
 ### a) Add eventSlots to Execute
+
+## 7) Decided to add an option for TimeLimitedEMEffect to not add time-limited to new effects (for Millhouse Manastorm)

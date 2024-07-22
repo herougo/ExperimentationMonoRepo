@@ -39,5 +39,22 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestMillhouseManastorm()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 1
+end_turn
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.Bite, CardIds.Bite, CardIds.Bite, CardIds.Bite,
+                CardIds.Bite, CardIds.Bite, CardIds.Bite, CardIds.MillhouseManastorm
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }

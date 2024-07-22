@@ -183,6 +183,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new BloodmageThalnos();
                 case CardIds.LorewalkerCho:
                     return new LorewalkerCho();
+                case CardIds.MillhouseManastorm:
+                    return new MillhouseManastorm();
 
                 case CardIds.Bite:
                     return new Bite();

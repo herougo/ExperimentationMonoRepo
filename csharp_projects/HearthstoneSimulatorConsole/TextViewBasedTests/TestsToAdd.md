@@ -90,6 +90,7 @@ Missing Tests
 - [x] Crazed Alchemist with 3 mana pirate buff guy
 - [ ] trying to add multiple Divine Shields to one minion
 - [ ] Minion copy and Murloc Warleader
+- [ ] Millhouse Manastorm not discount until next turn
 
 
 

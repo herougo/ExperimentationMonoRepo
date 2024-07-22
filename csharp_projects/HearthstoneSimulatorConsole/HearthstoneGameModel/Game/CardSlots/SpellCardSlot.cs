@@ -1,8 +1,10 @@
 ﻿using HearthstoneGameModel.Cards.CardFactories;
 using HearthstoneGameModel.Cards.CardTypes;
 using HearthstoneGameModel.Effects;
+using HearthstoneGameModel.Game.EffectManagement;
 using HearthstoneGameModel.Utils;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,21 @@ namespace HearthstoneGameModel.Game.CardSlots
             TypedCard = (SpellCard)Card;
         }
 
+        public override void UpdateStats()
+        {
+            Mana = TypedCard.Mana;
+
+            foreach (EffectManagerNode emNode in GetEMNodes())
+            {
+                emNode.Effect.AdjustStats(this);
+            }
+
+            Mana = Math.Max(0, Mana);
+        }
+
         public override string ToString()
         {
-            return $"CardSlot('{Card.Name}', Mana={Card.Mana})";
+            return $"CardSlot('{Card.Name}', Mana={Mana})";
         }
     }
 }

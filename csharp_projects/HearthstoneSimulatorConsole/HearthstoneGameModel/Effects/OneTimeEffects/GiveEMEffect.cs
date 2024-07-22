@@ -11,18 +11,18 @@ using System.Threading.Tasks;
 
 namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
-    public class GiveContinuousEffect : OneTimeEffect
+    public class GiveEMEffect : OneTimeEffect
     {
         SlotSelection _selection;
-        List<ContinuousEffect> _effects;
+        List<EMEffect> _effects;
 
-        public GiveContinuousEffect(SlotSelection selection, ContinuousEffect effect)
+        public GiveEMEffect(SlotSelection selection, EMEffect effect)
         {
             _selection = selection;
-            _effects = new List<ContinuousEffect> { effect };
+            _effects = new List<EMEffect> { effect };
         }
 
-        public GiveContinuousEffect(SlotSelection selection, List<ContinuousEffect> effects)
+        public GiveEMEffect(SlotSelection selection, List<EMEffect> effects)
         {
             _selection = selection;
             _effects = effects;
@@ -35,7 +35,7 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 
             foreach (CardSlot selectedCardSlot in selectedCardSlots)
             {
-                foreach (ContinuousEffect effect in _effects)
+                foreach (EMEffect effect in _effects)
                 {
                     EffectManagerNode newEmNode = new EffectManagerNode(
                         effect.Copy(), selectedCardSlot, originCardSlot, true
@@ -48,12 +48,12 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 
         public override OneTimeEffect Copy()
         {
-            List<ContinuousEffect> effectsCopy = new List<ContinuousEffect>();
-            foreach (ContinuousEffect effect in _effects)
+            List<EMEffect> effectsCopy = new List<EMEffect>();
+            foreach (EMEffect effect in _effects)
             {
-                effectsCopy.Add((ContinuousEffect)effect.Copy());
+                effectsCopy.Add(effect.Copy());
             }
-            return new GiveContinuousEffect(_selection.Copy(), effectsCopy);
+            return new GiveEMEffect(_selection.Copy(), effectsCopy);
         }
     }
 }

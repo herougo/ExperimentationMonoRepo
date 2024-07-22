@@ -2,8 +2,10 @@
 using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ContinuousEffects;
+using HearthstoneGameModel.Effects.HandContinuousEffects;
 using HearthstoneGameModel.Effects.OneTimeEffects;
 using HearthstoneGameModel.Effects.TriggerEffects;
+using HearthstoneGameModel.Effects.WrappedEMEffects;
 using HearthstoneGameModel.Selections;
 using System;
 using System.Collections.Generic;
@@ -61,6 +63,38 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new LorewalkerCho();
+        }
+    }
+
+    public class MillhouseManastorm : MinionCard
+    {
+        public MillhouseManastorm()
+        {
+            _cardId = CardIds.MillhouseManastorm;
+            _name = "Millhouse Manastorm";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 2;
+            _attack = 4;
+            _health = 4;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new GiveEMEffect(
+                    SelectionConstants.Opponent,
+                    new TimeLimitedEMEffect(
+                        new ContinuousSelectionFieldEffect(SelectionConstants.PlayerHandSpells, new ManaSet(0)),
+                        EffectTimeLimit.EndOfPlayerTurn,
+                        false
+                    )
+                ))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new MillhouseManastorm();
         }
     }
 }

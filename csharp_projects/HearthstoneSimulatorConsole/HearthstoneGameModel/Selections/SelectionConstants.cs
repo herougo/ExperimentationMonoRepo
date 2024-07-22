@@ -71,6 +71,10 @@ namespace HearthstoneGameModel.Selections
             new HandSelection(PlayerChoice.Both)
             & new CardTypeSelectionFilter(CardType.Minion)
         );
+        public static SlotSelection PlayerHandSpells = (
+            new HandSelection(PlayerChoice.Player)
+            & new CardTypeSelectionFilter(CardType.Spell)
+        );
 
     }
 }

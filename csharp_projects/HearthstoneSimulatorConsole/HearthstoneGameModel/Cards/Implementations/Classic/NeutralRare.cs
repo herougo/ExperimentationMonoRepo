@@ -350,7 +350,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Battlecry(new GiveContinuousEffect(SelectionConstants.AdjacentMinions, new Taunt()))
+                new Battlecry(new GiveEMEffect(SelectionConstants.AdjacentMinions, new Taunt()))
             };
         }
 
@@ -593,7 +593,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Battlecry(new GiveContinuousEffect(SelectionConstants.AdjacentMinions, new SpellDamage(1)))
+                new Battlecry(new GiveEMEffect(SelectionConstants.AdjacentMinions, new SpellDamage(1)))
             };
         }
 
@@ -618,9 +618,9 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Battlecry(new GiveContinuousEffect(
+                new Battlecry(new GiveEMEffect(
                     SelectionConstants.AdjacentMinions,
-                    new List<ContinuousEffect>{ new Taunt(), new Buff(1, 1)}
+                    new List<EMEffect>{ new Taunt(), new Buff(1, 1)}
                 ))
             };
         }
