@@ -46,6 +46,7 @@
     <Compile Include="Cards\CardTypes\MinionCard.cs" />
     <Compile Include="Cards\CardTypes\SpellCard.cs" />
     <Compile Include="Cards\CardTypes\WeaponCard.cs" />
+    <Compile Include="Cards\Implementations\Classic\Druid.cs" />
     <Compile Include="Cards\Implementations\Classic\NeutralEpic.cs" />
     <Compile Include="Cards\Implementations\Classic\NeutralLegendary.cs" />
     <Compile Include="Cards\Implementations\Classic\NeutralRare.cs" />

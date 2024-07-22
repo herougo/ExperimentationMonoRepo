@@ -1,0 +1,132 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Bite', Mana=4)
+1: CardSlot('Bite', Mana=4)
+2: CardSlot('Bite', Mana=4)
+3: CardSlot('Bite', Mana=4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Bite', Mana=4)
+1: CardSlot('Bite', Mana=4)
+2: CardSlot('Bite', Mana=4)
+3: CardSlot('Bite', Mana=4)
+
+0 plays Bite
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Bite', Mana=4)
+1: CardSlot('Bite', Mana=4)
+2: CardSlot('Bite', Mana=4)
+3: CardSlot('Bite', Mana=4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 4, mana: 6 / 10
+Weapon: None
+0: CardSlot('Bite', Mana=4)
+1: CardSlot('Bite', Mana=4)
+2: CardSlot('Bite', Mana=4)
+
+CardSlot('Druid', Mana=0)
+	attacks CardSlot('Druid', Mana=0)
+Opponent (1) - health: 26, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Bite', Mana=4)
+1: CardSlot('Bite', Mana=4)
+2: CardSlot('Bite', Mana=4)
+3: CardSlot('Bite', Mana=4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 4, mana: 6 / 10
+Weapon: None
+0: CardSlot('Bite', Mana=4)
+1: CardSlot('Bite', Mana=4)
+2: CardSlot('Bite', Mana=4)
+
+Opponent (1) - health: 26, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Bite', Mana=4)
+1: CardSlot('Bite', Mana=4)
+2: CardSlot('Bite', Mana=4)
+3: CardSlot('Bite', Mana=4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 4, mana: 6 / 10
+Weapon: None
+0: CardSlot('Bite', Mana=4)
+1: CardSlot('Bite', Mana=4)
+2: CardSlot('Bite', Mana=4)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 26, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Bite', Mana=4)
+1: CardSlot('Bite', Mana=4)
+2: CardSlot('Bite', Mana=4)
+3: CardSlot('Bite', Mana=4)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Bite', Mana=4)
+
+	------------
+
+Player (0) - health: 30, armour: 4, mana: 6 / 10
+Weapon: None
+0: CardSlot('Bite', Mana=4)
+1: CardSlot('Bite', Mana=4)
+2: CardSlot('Bite', Mana=4)
+
+Opponent (1) - health: 26, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Bite', Mana=4)
+1: CardSlot('Bite', Mana=4)
+2: CardSlot('Bite', Mana=4)
+3: CardSlot('Bite', Mana=4)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Bite', Mana=4)
+
+	------------
+
+Player (0) - health: 30, armour: 4, mana: 6 / 10
+Weapon: None
+0: CardSlot('Bite', Mana=4)
+1: CardSlot('Bite', Mana=4)
+2: CardSlot('Bite', Mana=4)
+
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 26, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Bite', Mana=4)
+1: CardSlot('Bite', Mana=4)
+2: CardSlot('Bite', Mana=4)
+3: CardSlot('Bite', Mana=4)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Bite', Mana=4)
+
+	------------
+
+Player (0) - health: 30, armour: 4, mana: 10 / 10
+Weapon: None
+0: CardSlot('Bite', Mana=4)
+1: CardSlot('Bite', Mana=4)
+2: CardSlot('Bite', Mana=4)
+3: CardSlot('Bite', Mana=4)
+
+ERROR: attacker has 0 attack
+Game Over: Player 1 Wins

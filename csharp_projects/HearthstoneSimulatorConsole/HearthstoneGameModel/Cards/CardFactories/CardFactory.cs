@@ -184,6 +184,9 @@ namespace HearthstoneGameModel.Cards.CardFactories
                 case CardIds.LorewalkerCho:
                     return new LorewalkerCho();
 
+                case CardIds.Bite:
+                    return new Bite();
+
                 case CardIds.DamagedGolem:
                     return new DamagedGolem();
                 case CardIds.Squire:

@@ -99,6 +99,10 @@ namespace HearthstoneGameModel.Core.Enums
         // Classic Neutral - Legendary
         public const string BloodmageThalnos = "C083";
         public const string LorewalkerCho = "C084";
+        public const string MillhouseManastorm = "C085";
+
+        // Classic Druid
+        public const string Bite = "C1XX";
 
 
         // Classic Uncollectible
