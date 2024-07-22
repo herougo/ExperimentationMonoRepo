@@ -18,13 +18,13 @@ namespace HearthstoneGameModel.Effects
         }
 
         public override EffectManagerNodePlan Execute(
-            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
+            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots
         )
         {
             EffectManagerNodePlan plan = new EffectManagerNodePlan();
             foreach (OneTimeEffect effect in _effects)
             {
-                EffectManagerNodePlan newPlan = effect.Execute(game, affectedCardSlot, originCardSlot);
+                EffectManagerNodePlan newPlan = effect.Execute(game, affectedCardSlot, originCardSlot, eventSlots);
                 plan.Update(newPlan);
             }
             if (plan.IsEmpty)

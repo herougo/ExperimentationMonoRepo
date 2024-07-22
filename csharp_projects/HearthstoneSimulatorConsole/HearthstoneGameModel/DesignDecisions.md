@@ -49,3 +49,7 @@ What about Health buffs? -> should work
 ### a) Events triggered right away (no plan) while in DealDamage
 
 like NEffects
+
+## 6) Resolving Lorewalker Cho
+
+### a) Add eventSlots to Execute

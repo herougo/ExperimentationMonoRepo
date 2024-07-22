@@ -36,7 +36,7 @@ namespace HearthstoneGameModel.Effects.JoinedOneTimeEffects
             }
         }
 
-        public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot)
+        public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots)
         {
             // Lose DivineShields
             List<CardSlot> slotsToLoseDivineShields = _loseDivineShieldsSelection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);

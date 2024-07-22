@@ -2,6 +2,7 @@
 using HearthstoneGameModel.Game;
 using HearthstoneGameModel.Game.CardSlots;
 using HearthstoneGameModel.Game.EffectManagement;
+using System.Collections.Generic;
 
 namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
@@ -12,7 +13,7 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
         public SummonMinion(MinionCard minion) { _minion = minion; }
 
         public override EffectManagerNodePlan Execute(
-            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
+            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots
         )
         {
             int player = affectedCardSlot.Player;

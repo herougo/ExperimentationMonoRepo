@@ -29,7 +29,7 @@ namespace HearthstoneGameModel.Effects.TriggerEffects
                 CheckValidEvent(effectEvent);
                 if (HSGameUtils.IsPlayerAffected(emNode.AffectedSlot.Player, eventSlots[0].Player, _playerChoice))
                 {
-                    EffectManagerNodePlan result = _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot);
+                    EffectManagerNodePlan result = _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot, eventSlots);
                     return result;
                 }
                 return null;

@@ -46,10 +46,10 @@ namespace HearthstoneGameModel.Effects.WrappedOneTimeEffects
         }
 
         public override EffectManagerNodePlan Execute(
-            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
+            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots
         )
         {
-            EffectManagerNodePlan plan = _effect.Execute(game, affectedCardSlot, originCardSlot);
+            EffectManagerNodePlan plan = _effect.Execute(game, affectedCardSlot, originCardSlot, eventSlots);
             if (plan != null)
             {
                 foreach (EffectManagerNode toAddNode in plan.ToAdd)

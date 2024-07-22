@@ -28,7 +28,7 @@ namespace HearthstoneGameModel.Effects
             EffectManagerNode emNode, List<CardSlot> eventSlots)
         {
             CheckValidEvent(effectEvent);
-            return _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot);
+            return _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot, eventSlots);
         }
     }
 }

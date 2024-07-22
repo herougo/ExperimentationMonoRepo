@@ -19,7 +19,7 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
             _selection = selection;
         }
 
-        public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot)
+        public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots)
         {
             List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
             game.CardMover.ReturnMinionsToHand(affectedCardSlot.Player, selectedCardSlots);

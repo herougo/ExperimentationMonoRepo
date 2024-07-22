@@ -39,7 +39,9 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
             _healthAmount = healthAmount;
         }
 
-        public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot)
+        public override EffectManagerNodePlan Execute(
+            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots
+        )
         {
             List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
             List<EffectManagerNode> emNodesToAdd = new List<EffectManagerNode>();

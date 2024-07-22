@@ -38,4 +38,29 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new BloodmageThalnos();
         }
     }
+
+    public class LorewalkerCho : MinionCard
+    {
+        public LorewalkerCho()
+        {
+            _cardId = CardIds.LorewalkerCho;
+            _name = "Lorewalker Cho";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 2;
+            _attack = 0;
+            _health = 4;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new AfterSpellActivation(new AddEventSlotCopyToHand(PlayerChoice.Opponent), PlayerChoice.Both)
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new LorewalkerCho();
+        }
+    }
 }

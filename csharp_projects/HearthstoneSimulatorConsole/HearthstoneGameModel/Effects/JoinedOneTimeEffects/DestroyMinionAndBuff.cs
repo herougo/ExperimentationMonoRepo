@@ -36,7 +36,9 @@ namespace HearthstoneGameModel.Effects.JoinedOneTimeEffects
             }
         }
 
-        public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot)
+        public override EffectManagerNodePlan Execute(
+            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots
+        )
         {
             // Destroy
             List<CardSlot> slotsToDestroy = _destroySelection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);

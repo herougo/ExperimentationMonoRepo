@@ -19,10 +19,10 @@ namespace HearthstoneGameModel.Effects
         }
 
         public override EffectManagerNodePlan Execute(
-            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
+            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots
         )
         {
-            return _effect.Execute(game, affectedCardSlot, originCardSlot);
+            return _effect.Execute(game, affectedCardSlot, originCardSlot, eventSlots);
         }
 
         public override OneTimeEffect Copy()

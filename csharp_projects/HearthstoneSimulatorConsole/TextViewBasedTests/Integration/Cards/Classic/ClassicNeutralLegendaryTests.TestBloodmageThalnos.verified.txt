@@ -139,7 +139,7 @@ Weapon: None
 
 CardSlot('Bloodmage Thalnos', Mana=2, 1 / 1)
 	attacks CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
-Player 0's 083 died
+Player 0's C083 died
 Player 1's HU002 died
 Opponent (1) - health: 30, armour: 0, mana: 8 / 10
 Weapon: None

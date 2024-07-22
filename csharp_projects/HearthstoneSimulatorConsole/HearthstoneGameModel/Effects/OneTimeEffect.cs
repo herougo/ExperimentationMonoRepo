@@ -12,7 +12,7 @@ namespace HearthstoneGameModel.Effects
     public abstract class OneTimeEffect
     {
         public abstract EffectManagerNodePlan Execute(
-            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
+            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots
         );
 
         public abstract OneTimeEffect Copy();

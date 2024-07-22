@@ -27,7 +27,7 @@ namespace HearthstoneGameModel.Effects.TriggerEffects
             {
                 return null;
             }
-            return _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot);
+            return _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot, eventSlots);
         }
 
         public override EMEffect Copy()

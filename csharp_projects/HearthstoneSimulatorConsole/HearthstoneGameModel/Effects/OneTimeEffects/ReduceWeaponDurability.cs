@@ -33,7 +33,7 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
             _amount = amount;
         }
 
-        public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot)
+        public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots)
         {
             int player = affectedCardSlot.Player;
             if (_opposing)

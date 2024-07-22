@@ -181,6 +181,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
 
                 case CardIds.BloodmageThalnos:
                     return new BloodmageThalnos();
+                case CardIds.LorewalkerCho:
+                    return new LorewalkerCho();
 
                 case CardIds.DamagedGolem:
                     return new DamagedGolem();

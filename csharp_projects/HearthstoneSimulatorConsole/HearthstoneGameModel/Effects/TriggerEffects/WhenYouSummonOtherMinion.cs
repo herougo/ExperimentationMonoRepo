@@ -32,7 +32,7 @@ namespace HearthstoneGameModel.Effects.TriggerEffects
             MinionCard minionCard = (MinionCard)eventSlots[0].Card;
             if (HSGameUtils.MatchesTag(_desiredTag, minionCard.Tag) && emNode.AffectedSlot != eventSlots[0])
             {
-                EffectManagerNodePlan result = _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot);
+                EffectManagerNodePlan result = _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot, eventSlots);
                 return result;
             }
             return null;

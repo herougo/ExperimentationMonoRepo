@@ -23,6 +23,14 @@ namespace HearthstoneGameModel.Game.Utils
             );
         }
 
+        public static int ComputePlayer(int player, PlayerChoice playerChoice)
+        {
+            if (playerChoice == PlayerChoice.Opponent) {
+                return 1 - player;
+            }
+            return player;
+        }
+
         public static bool MatchesTag(MinionTag desiredTag, MinionTag actualTag)
         {
             return (
