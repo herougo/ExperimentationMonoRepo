@@ -143,6 +143,7 @@
     <Compile Include="Effects\WrappedEMEffects\ExternalEffect.cs" />
     <Compile Include="Effects\WrappedOneTimeEffect.cs" />
     <Compile Include="Effects\WrappedOneTimeEffects\NEffects.cs" />
+    <Compile Include="Effects\WrappedOneTimeEffects\OneInXChanceEffect.cs" />
     <Compile Include="Effects\WrappedOneTimeEffects\TimeLimitedOneTimeEffect.cs" />
     <Compile Include="Game\Action\ArrayStringActionReader.cs" />
     <Compile Include="Game\CardSlots\BattlerCardSlot.cs" />

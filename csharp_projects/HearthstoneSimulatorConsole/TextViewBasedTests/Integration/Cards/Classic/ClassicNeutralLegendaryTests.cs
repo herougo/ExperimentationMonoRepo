@@ -56,5 +56,22 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestNatPagle()
+        {
+            string actionText = @"play 0 0
+play 0 1
+end_turn
+play 0 0
+play 0 1
+end_turn
+end_turn
+end_turn
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.NatPagle, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }

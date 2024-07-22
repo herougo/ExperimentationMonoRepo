@@ -1,0 +1,261 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+3: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+3: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+0 plays Nat Pagle
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+3: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+0 plays Nat Pagle
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+3: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+3: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+3: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+	------------
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+1 plays Nat Pagle
+Opponent (1) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	------------
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+1 plays Nat Pagle
+Opponent (1) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	------------
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+Opponent (1) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	------------
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	------------
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+Opponent (1) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	------------
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+4: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	------------
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+4: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	------------
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+4: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	------------
+	0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+	1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+1: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+2: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+3: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+4: CardSlot('Nat Pagle', Mana=2, 0 / 4)
+
+Game Over: Player 1 Wins

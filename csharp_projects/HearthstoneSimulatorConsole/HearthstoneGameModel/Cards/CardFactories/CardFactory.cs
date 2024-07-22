@@ -185,6 +185,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new LorewalkerCho();
                 case CardIds.MillhouseManastorm:
                     return new MillhouseManastorm();
+                case CardIds.NatPagle:
+                    return new NatPagle();
 
                 case CardIds.Bite:
                     return new Bite();
