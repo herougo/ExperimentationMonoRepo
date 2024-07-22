@@ -13,6 +13,10 @@ using HearthstoneGameModel.Effects.JoinedOneTimeEffects;
 using HearthstoneGameModel.Selections.SelectionFilters;
 using HearthstoneGameModel.Selections.SlotSelections;
 using HearthstoneGameModel.Effects.ContinuousEffects;
+using HearthstoneGameModel.Effects.HandContinuousEffects;
+using HearthstoneGameModel.Effects.WrappedEMEffects;
+using HearthstoneGameModel.ValueMonitors;
+using HearthstoneGameModel.Values;
 
 namespace HearthstoneGameModel.Cards.Implementations.Classic
 {
@@ -202,6 +206,34 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new FacelessManipulator();
+        }
+    }
+
+    public class SeaGiant : MinionCard
+    {
+        public SeaGiant()
+        {
+            _cardId = CardIds.SeaGiant;
+            _name = "Sea Giant";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 10;
+            _attack = 8;
+            _health = 8;
+
+            _inHandEffects = new List<EMEffect>
+            {
+                new ContinuousMonitorEffect(
+                    new ManaChange(new BattleboardMinionsIntValue(), -1),
+                    new BattleboardMinionsIntValueMonitor()
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new SeaGiant();
         }
     }
 }

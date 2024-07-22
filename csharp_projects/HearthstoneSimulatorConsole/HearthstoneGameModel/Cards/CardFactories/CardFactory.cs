@@ -176,6 +176,10 @@ namespace HearthstoneGameModel.Cards.CardFactories
                 case CardIds.FacelessManipulator:
                     return new FacelessManipulator();
 
+                case CardIds.SeaGiant:
+                    return new SeaGiant();
+
+
                 case CardIds.DamagedGolem:
                     return new DamagedGolem();
                 case CardIds.Squire:

@@ -76,6 +76,7 @@ Missing Cards
 - [ ] Pint-Sized Summoner
 - [ ] Alarm-o-Bot
 - [ ] SI:7 Infiltrator
+- [ ] Barrens Stablehand
 
 Missing Tests
 

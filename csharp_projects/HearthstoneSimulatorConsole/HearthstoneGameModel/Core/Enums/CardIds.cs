@@ -93,6 +93,8 @@ namespace HearthstoneGameModel.Core.Enums
         public const string SouthseaCaptain = "C078";
         public const string BigGameHunter = "C079";
         public const string FacelessManipulator = "C080";
+        public const string BarrensStablehand = "C081";
+        public const string SeaGiant = "C082";
 
 
         // Classic Uncollectible

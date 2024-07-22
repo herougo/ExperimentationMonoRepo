@@ -137,5 +137,26 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Mage);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestSeaGiant()
+        {
+            string actionText = @"play 0 0
+play 0 1
+play 0 2
+hero_power
+end_turn
+hero_power
+play 0 0
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.SeaGiant, CardIds.SeaGiant, CardIds.SeaGiant, CardIds.SeaGiant,
+                CardIds.SeaGiant, CardIds.ArgentSquire, CardIds.ArgentSquire, CardIds.ArgentSquire
+            };
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.SeaGiant, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }
