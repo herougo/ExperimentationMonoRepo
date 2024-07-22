@@ -179,6 +179,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                 case CardIds.SeaGiant:
                     return new SeaGiant();
 
+                case CardIds.BloodmageThalnos:
+                    return new BloodmageThalnos();
 
                 case CardIds.DamagedGolem:
                     return new DamagedGolem();

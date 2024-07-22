@@ -96,6 +96,9 @@ namespace HearthstoneGameModel.Core.Enums
         public const string BarrensStablehand = "C081";
         public const string SeaGiant = "C082";
 
+        // Classic Neutral - Legendary
+        public const string BloodmageThalnos = "083";
+
 
         // Classic Uncollectible
         public const string DamagedGolem = "CU001";

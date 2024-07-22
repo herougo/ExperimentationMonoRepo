@@ -81,6 +81,7 @@ Missing Cards
 Missing Tests
 
 - [ ] Ancient Mage (spell damage)
+- [ ] (partial) Bloodmage Thalnos
 
 ### Specific Cases
 
