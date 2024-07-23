@@ -1,0 +1,104 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('King Mukla', Mana=3, 5 / 5)
+1: CardSlot('King Mukla', Mana=3, 5 / 5)
+2: CardSlot('King Mukla', Mana=3, 5 / 5)
+3: CardSlot('King Mukla', Mana=3, 5 / 5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('King Mukla', Mana=3, 5 / 5)
+1: CardSlot('King Mukla', Mana=3, 5 / 5)
+2: CardSlot('King Mukla', Mana=3, 5 / 5)
+3: CardSlot('King Mukla', Mana=3, 5 / 5)
+
+0 plays King Mukla
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('King Mukla', Mana=3, 5 / 5)
+1: CardSlot('King Mukla', Mana=3, 5 / 5)
+2: CardSlot('King Mukla', Mana=3, 5 / 5)
+3: CardSlot('King Mukla', Mana=3, 5 / 5)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Banana', Mana=1)
+6: CardSlot('Banana', Mana=1)
+
+	------------
+	0: CardSlot('King Mukla', Mana=3, 5 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('King Mukla', Mana=3, 5 / 5)
+1: CardSlot('King Mukla', Mana=3, 5 / 5)
+2: CardSlot('King Mukla', Mana=3, 5 / 5)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('King Mukla', Mana=3, 5 / 5)
+1: CardSlot('King Mukla', Mana=3, 5 / 5)
+2: CardSlot('King Mukla', Mana=3, 5 / 5)
+3: CardSlot('King Mukla', Mana=3, 5 / 5)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Banana', Mana=1)
+6: CardSlot('Banana', Mana=1)
+
+	------------
+	0: CardSlot('King Mukla', Mana=3, 5 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('King Mukla', Mana=3, 5 / 5)
+1: CardSlot('King Mukla', Mana=3, 5 / 5)
+2: CardSlot('King Mukla', Mana=3, 5 / 5)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('King Mukla', Mana=3, 5 / 5)
+1: CardSlot('King Mukla', Mana=3, 5 / 5)
+2: CardSlot('King Mukla', Mana=3, 5 / 5)
+3: CardSlot('King Mukla', Mana=3, 5 / 5)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Banana', Mana=1)
+6: CardSlot('Banana', Mana=1)
+7: CardSlot('King Mukla', Mana=3, 5 / 5)
+
+	------------
+	0: CardSlot('King Mukla', Mana=3, 5 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('King Mukla', Mana=3, 5 / 5)
+1: CardSlot('King Mukla', Mana=3, 5 / 5)
+2: CardSlot('King Mukla', Mana=3, 5 / 5)
+
+1 plays Banana
+Opponent (1) - health: 30, armour: 0, mana: 9 / 10
+Weapon: None
+0: CardSlot('King Mukla', Mana=3, 5 / 5)
+1: CardSlot('King Mukla', Mana=3, 5 / 5)
+2: CardSlot('King Mukla', Mana=3, 5 / 5)
+3: CardSlot('King Mukla', Mana=3, 5 / 5)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Banana', Mana=1)
+6: CardSlot('King Mukla', Mana=3, 5 / 5)
+
+	------------
+	0: CardSlot('King Mukla', Mana=3, 6 / 6)
+
+Player (0) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('King Mukla', Mana=3, 5 / 5)
+1: CardSlot('King Mukla', Mana=3, 5 / 5)
+2: CardSlot('King Mukla', Mana=3, 5 / 5)
+
+Game Over: Player 0 Wins

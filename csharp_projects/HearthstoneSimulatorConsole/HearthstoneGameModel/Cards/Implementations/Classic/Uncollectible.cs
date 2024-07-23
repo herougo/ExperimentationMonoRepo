@@ -8,6 +8,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Selections;
+using HearthstoneGameModel.Selections.SlotSelections;
+using HearthstoneGameModel.Effects.ContinuousEffects;
 
 namespace HearthstoneGameModel.Cards.Implementations.Classic
 {
@@ -72,6 +75,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Imp();
         }
     }
+
     public class VioletApprentice : MinionCard
     {
         public VioletApprentice()
@@ -89,6 +93,28 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new VioletApprentice();
+        }
+    }
+
+    public class Banana : SpellCard
+    {
+        public Banana()
+        {
+            _cardId = CardIds.Banana;
+            _name = "Banana";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 1;
+            _whenPlayedEffect = new GiveEMEffect(
+                new SelectCharacterFrom(SelectionConstants.AllMinions),
+                new Buff(1, 1)
+            );
+        }
+
+        public override Card Copy()
+        {
+            return new Banana();
         }
     }
 }

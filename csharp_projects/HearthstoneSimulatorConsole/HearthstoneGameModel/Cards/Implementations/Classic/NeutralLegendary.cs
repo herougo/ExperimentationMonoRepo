@@ -1,4 +1,5 @@
-﻿using HearthstoneGameModel.Cards.CardTypes;
+﻿using HearthstoneGameModel.CardGeneration;
+using HearthstoneGameModel.Cards.CardTypes;
 using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ContinuousEffects;
@@ -121,6 +122,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new NatPagle();
+        }
+    }
+
+    public class KingMukla : MinionCard
+    {
+        public KingMukla()
+        {
+            _cardId = CardIds.KingMukla;
+            _name = "King Mukla";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 3;
+            _attack = 5;
+            _health = 5;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new AddCardToHand(new ConstantCardGenerator(new Banana()), PlayerChoice.Opponent, 2))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new KingMukla();
         }
     }
 }

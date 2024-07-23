@@ -101,6 +101,8 @@ namespace HearthstoneGameModel.Core.Enums
         public const string LorewalkerCho = "C084";
         public const string MillhouseManastorm = "C085";
         public const string NatPagle = "C086";
+        public const string Brightwing = "C087";
+        public const string KingMukla = "C088";
 
         // Classic Druid
         public const string Bite = "C1XX";
@@ -111,6 +113,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string Squire = "CU002";
         public const string Imp = "CU003";
         public const string VioletApprentice = "CU004";
+        public const string Banana = "CU005";
 
         // Heroes
         public const string Priest = "hero_priest";

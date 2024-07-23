@@ -21,10 +21,10 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 
         public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots)
         {
-            CardSlot spellCardSlot = eventSlots[0];
-            int player = spellCardSlot.Player;
+            CardSlot cardSlot = eventSlots[0];
+            int player = cardSlot.Player;
             int receivingPlayer = HSGameUtils.ComputePlayer(player, _toPlayer);
-            game.CreateCardAndAddToHand(receivingPlayer, spellCardSlot.Card);
+            game.CreateCardAndAddToHand(receivingPlayer, cardSlot.Card);
             return null;
         }
 

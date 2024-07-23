@@ -187,6 +187,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new MillhouseManastorm();
                 case CardIds.NatPagle:
                     return new NatPagle();
+                case CardIds.KingMukla:
+                    return new KingMukla();
 
                 case CardIds.Bite:
                     return new Bite();
@@ -199,6 +201,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Imp();
                 case CardIds.VioletApprentice:
                     return new VioletApprentice();
+                case CardIds.Banana:
+                    return new Banana();
 
                 case CardIds.Priest:
                     return new Priest();
