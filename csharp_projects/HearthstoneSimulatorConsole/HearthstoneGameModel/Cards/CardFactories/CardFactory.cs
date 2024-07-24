@@ -189,6 +189,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new NatPagle();
                 case CardIds.KingMukla:
                     return new KingMukla();
+                case CardIds.TinkmasterOverspark:
+                    return new TinkmasterOverspark();
 
                 case CardIds.Bite:
                     return new Bite();
@@ -203,6 +205,10 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new VioletApprentice();
                 case CardIds.Banana:
                     return new Banana();
+                case CardIds.Squirrel:
+                    return new Squirrel();
+                case CardIds.Devilsaur:
+                    return new Devilsaur();
 
                 case CardIds.Priest:
                     return new Priest();

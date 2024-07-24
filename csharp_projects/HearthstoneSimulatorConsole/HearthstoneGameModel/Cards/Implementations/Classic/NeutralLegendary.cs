@@ -9,6 +9,7 @@ using HearthstoneGameModel.Effects.TriggerEffects;
 using HearthstoneGameModel.Effects.WrappedEMEffects;
 using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
 using HearthstoneGameModel.Selections;
+using HearthstoneGameModel.Selections.SlotSelections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -147,6 +148,34 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new KingMukla();
+        }
+    }
+
+    public class TinkmasterOverspark : MinionCard
+    {
+        public TinkmasterOverspark()
+        {
+            _cardId = CardIds.TinkmasterOverspark;
+            _name = "Tinkmaster Overspark";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 3;
+            _attack = 3;
+            _health = 3;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new TransformInPlayMinion(
+                    new RandomCharacterFrom(SelectionConstants.AllOtherMinions),
+                    new RandomCardFrom(new List<Card> { new Squirrel(), new Devilsaur() })
+                ))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new TinkmasterOverspark();
         }
     }
 }

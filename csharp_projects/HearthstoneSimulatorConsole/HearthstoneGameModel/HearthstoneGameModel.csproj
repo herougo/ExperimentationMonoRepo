@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CardGeneration\ConstantCardGenerator.cs" />
     <Compile Include="CardGeneration\ICardGenerator.cs" />
+    <Compile Include="CardGeneration\RandomCardFrom.cs" />
     <Compile Include="Cards\Card.cs" />
     <Compile Include="Cards\CardFactories\CardFactory.cs" />
     <Compile Include="Cards\CardTypes\HeroCard.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Effects\OneTimeEffects\GiveEMEffect.cs" />
     <Compile Include="Effects\OneTimeEffects\ReduceWeaponDurability.cs" />
     <Compile Include="Effects\OneTimeEffects\SwapAttackAndHealth.cs" />
+    <Compile Include="Effects\OneTimeEffects\TransformInPlayMinion.cs" />
     <Compile Include="Effects\TriggerEffects\AfterSpellActivation.cs" />
     <Compile Include="Effects\TriggerEffects\WhenACharacterIsHealed.cs" />
     <Compile Include="Effects\TriggerEffects\WhenOtherCardPlayed.cs" />

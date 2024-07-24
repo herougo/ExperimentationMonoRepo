@@ -117,4 +117,46 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Banana();
         }
     }
+
+    public class Squirrel : MinionCard
+    {
+        public Squirrel()
+        {
+            _cardId = CardIds.Squirrel;
+            _name = "Squirrel";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 1;
+            _attack = 1;
+            _health = 1;
+            _tag = MinionTag.Beast;
+        }
+
+        public override Card Copy()
+        {
+            return new Squirrel();
+        }
+    }
+
+    public class Devilsaur : MinionCard
+    {
+        public Devilsaur()
+        {
+            _cardId = CardIds.Devilsaur;
+            _name = "Devilsaur";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 5;
+            _attack = 5;
+            _health = 5;
+            _tag = MinionTag.Beast;
+        }
+
+        public override Card Copy()
+        {
+            return new Devilsaur();
+        }
+    }
 }

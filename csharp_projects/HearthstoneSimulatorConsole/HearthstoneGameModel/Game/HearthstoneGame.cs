@@ -344,5 +344,25 @@ namespace HearthstoneGameModel.Game
                 targetSlot.TempDamageToTake = 0;
             }
         }
+
+        public EffectManagerNodePlan InPlayTransform(MinionCardSlot cardInPlay, Card transformFinalForm)
+        {
+            CardSlot transformFinalFormSlot = transformFinalForm.CreateCardSlot(cardInPlay.Player, this);
+
+            // replace slot
+            Battleboard.ReplaceCardSlot(cardInPlay, transformFinalFormSlot);
+            CardMover.SendCardToLimbo(cardInPlay);
+            EffectManager.PopEffectsBySlot(cardInPlay);
+            CardMover.RemoveCardSlot(cardInPlay);
+
+            // In-play changes
+            EffectManager.AddInPlayEffects(cardInPlay);
+            cardInPlay.AddSleepEffectManagerNode();
+
+            // other
+            EffectManagerNodePlan plan = new EffectManagerNodePlan();
+            plan.EffectEventArgs.Add(new EffectEventArgs(EffectEvent.MinionTransformed, transformFinalFormSlot));
+            return plan;
+        }
     }
 }

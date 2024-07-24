@@ -1,4 +1,5 @@
-﻿using HearthstoneGameModel.Cards.CardTypes;
+﻿using HearthstoneGameModel.Cards;
+using HearthstoneGameModel.Cards.CardTypes;
 using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects.ContinuousEffects;
 using HearthstoneGameModel.Game.EffectManagement;

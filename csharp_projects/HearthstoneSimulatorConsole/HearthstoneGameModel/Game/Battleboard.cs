@@ -55,6 +55,18 @@ namespace HearthstoneGameModel.Game
             _boards[player].Pop(originalBoardIndex);
         }
 
+        public void ReplaceCardSlot(CardSlot cardSlot, CardSlot replaceWith)
+        {
+            // remove from the board
+            int player = cardSlot.Player;
+            int originalBoardIndex = _cardSlotToBoardIndex[cardSlot];
+
+            _cardSlotToBoardIndex.Remove(cardSlot);
+            _cardSlotToBoardIndex[replaceWith] = originalBoardIndex;
+
+            _boards[player][originalBoardIndex] = replaceWith;
+        }
+
         public int BoardLen(int player)
         {
             return _boards[player].Count;

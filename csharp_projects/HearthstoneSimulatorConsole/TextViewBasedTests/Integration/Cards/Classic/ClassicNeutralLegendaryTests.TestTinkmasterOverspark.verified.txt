@@ -1,0 +1,171 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+1: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+2: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+3: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+1: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+2: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+3: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+
+0 plays Dire Wolf Alpha
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+1: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+2: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+3: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+1: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+2: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+
+0 plays Dire Wolf Alpha
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+1: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+2: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+3: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Dire Wolf Alpha', Mana=2, 3 / 2)
+	1: CardSlot('Dire Wolf Alpha', Mana=2, 3 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+1: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+
+0 plays Dire Wolf Alpha
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+1: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+2: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+3: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Dire Wolf Alpha', Mana=2, 3 / 2)
+	1: CardSlot('Dire Wolf Alpha', Mana=2, 4 / 2)
+	2: CardSlot('Dire Wolf Alpha', Mana=2, 3 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 4 / 10
+Weapon: None
+0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+1: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+2: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+3: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Dire Wolf Alpha', Mana=2, 3 / 2)
+	1: CardSlot('Dire Wolf Alpha', Mana=2, 4 / 2)
+	2: CardSlot('Dire Wolf Alpha', Mana=2, 3 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 4 / 10
+Weapon: None
+0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+1: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+2: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+3: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+
+	------------
+	0: CardSlot('Dire Wolf Alpha', Mana=2, 3 / 2)
+	1: CardSlot('Dire Wolf Alpha', Mana=2, 4 / 2)
+	2: CardSlot('Dire Wolf Alpha', Mana=2, 3 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 4 / 10
+Weapon: None
+0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+
+1 plays Tinkmaster Overspark
+Opponent (1) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+1: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+2: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+
+	0: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+	------------
+	0: CardSlot('Dire Wolf Alpha', Mana=2, 3 / 2)
+	1: CardSlot('Dire Wolf Alpha', Mana=2, 3 / 2)
+	2: CardSlot('Devilsaur', Mana=5, 6 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 4 / 10
+Weapon: None
+0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+
+1 plays Tinkmaster Overspark
+Opponent (1) - health: 30, armour: 0, mana: 4 / 10
+Weapon: None
+0: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+1: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+
+	0: CardSlot('Devilsaur', Mana=5, 5 / 5)
+	1: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+	------------
+	0: CardSlot('Dire Wolf Alpha', Mana=2, 3 / 2)
+	1: CardSlot('Dire Wolf Alpha', Mana=2, 3 / 2)
+	2: CardSlot('Devilsaur', Mana=5, 6 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 4 / 10
+Weapon: None
+0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+
+1 plays Tinkmaster Overspark
+Opponent (1) - health: 30, armour: 0, mana: 1 / 10
+Weapon: None
+0: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+1: CardSlot('Coin', Mana=0)
+2: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+
+	0: CardSlot('Devilsaur', Mana=5, 5 / 5)
+	1: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+	2: CardSlot('Tinkmaster Overspark', Mana=3, 3 / 3)
+	------------
+	0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+	1: CardSlot('Devilsaur', Mana=5, 6 / 5)
+	2: CardSlot('Devilsaur', Mana=5, 5 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 4 / 10
+Weapon: None
+0: CardSlot('Dire Wolf Alpha', Mana=2, 2 / 2)
+
+Game Over: Player 0 Wins

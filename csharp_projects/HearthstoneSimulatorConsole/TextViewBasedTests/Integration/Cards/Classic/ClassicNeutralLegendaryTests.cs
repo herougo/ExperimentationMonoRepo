@@ -86,5 +86,22 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestTinkmasterOverspark()
+        {
+            string actionText = @"play 0 0
+play 0 1
+play 0 2
+end_turn
+play 0 0
+play 0 1
+play 0 2
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.DireWolfAlpha, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.TinkmasterOverspark, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }
