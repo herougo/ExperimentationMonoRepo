@@ -191,6 +191,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new KingMukla();
                 case CardIds.TinkmasterOverspark:
                     return new TinkmasterOverspark();
+                case CardIds.CaptainGreenskin:
+                    return new CaptainGreenskin();
 
                 case CardIds.Bite:
                     return new Bite();

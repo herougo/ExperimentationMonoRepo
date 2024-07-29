@@ -178,4 +178,30 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new TinkmasterOverspark();
         }
     }
+
+    public class CaptainGreenskin : MinionCard
+    {
+        public CaptainGreenskin()
+        {
+            _cardId = CardIds.CaptainGreenskin;
+            _name = "Captain Greenskin";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 5;
+            _attack = 5;
+            _health = 4;
+            _tag = MinionTag.Pirate;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new GiveEMEffect(SelectionConstants.PlayerWeapon, new BuffWeapon(1, 1)))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new CaptainGreenskin();
+        }
+    }
 }

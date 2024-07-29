@@ -103,5 +103,21 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestCaptainGreenskin()
+        {
+            string actionText = @"hero_power
+play 0 0
+attack -1 -1
+end_turn
+hero_power
+attack -1 -1
+play 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.CaptainGreenskin, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Rogue);
+            return Verify(log);
+        }
     }
 }

@@ -19,6 +19,7 @@ namespace HearthstoneGameModel.Game.CardSlots
         public int Attack;
 
         public int Durability;
+        public int MaxDurability;
 
         public WeaponCardSlot(string cardId, int player, HearthstoneGame game)
             : base(cardId, player, game)
@@ -26,6 +27,7 @@ namespace HearthstoneGameModel.Game.CardSlots
             TypedCard = (WeaponCard)Card;
             Attack = TypedCard.Attack;
             Durability = TypedCard.Durability;
+            MaxDurability = TypedCard.Durability;
         }
 
         public override string ToString()
@@ -37,6 +39,9 @@ namespace HearthstoneGameModel.Game.CardSlots
         {
             int prevAttack = Attack;
             Attack = TypedCard.Attack;
+            int prevDurability = Durability;
+            int prevMaxDurability = MaxDurability;
+            MaxDurability = TypedCard.Durability;
 
             foreach (EffectManagerNode emNode in GetEMNodes())
             {
@@ -44,8 +49,13 @@ namespace HearthstoneGameModel.Game.CardSlots
             }
 
             Attack = Math.Max(0, Attack);
+            int newDurability = Math.Min(
+                prevDurability + Math.Max(0, MaxDurability - prevMaxDurability),
+                MaxDurability
+            );
+            Durability = newDurability;
 
-            if (prevAttack != Attack)
+            if (prevAttack != Attack || prevDurability != Durability)
             {
                 Game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.WeaponChangeStats, this));
             }

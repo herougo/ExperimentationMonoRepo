@@ -79,6 +79,7 @@
     <Compile Include="Core\Exceptions.cs" />
     <Compile Include="Effects\ActivatedEffect.cs" />
     <Compile Include="Effects\ActivatedEffects\HeroPowerEffect.cs" />
+    <Compile Include="Effects\ContinuousEffects\BuffWeapon.cs" />
     <Compile Include="Effects\ContinuousEffects\CantAttack.cs" />
     <Compile Include="Effects\ContinuousEffects\Poisonous.cs" />
     <Compile Include="Effects\ContinuousEffects\SetAttack.cs" />
