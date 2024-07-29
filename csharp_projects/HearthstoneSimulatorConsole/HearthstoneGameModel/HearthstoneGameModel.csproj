@@ -94,6 +94,7 @@
     <Compile Include="Effects\OneTimeEffects\BecomeMinionCopy.cs" />
     <Compile Include="Effects\OneTimeEffects\ChangeStats.cs" />
     <Compile Include="Effects\OneTimeEffects\DestroyMinion.cs" />
+    <Compile Include="Effects\OneTimeEffects\DestroyWeaponAndDrawDurability.cs" />
     <Compile Include="Effects\OneTimeEffects\GiveEMEffect.cs" />
     <Compile Include="Effects\OneTimeEffects\ReduceWeaponDurability.cs" />
     <Compile Include="Effects\OneTimeEffects\SwapAttackAndHealth.cs" />

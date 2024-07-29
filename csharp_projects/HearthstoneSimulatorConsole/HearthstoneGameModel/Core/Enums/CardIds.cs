@@ -105,6 +105,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string KingMukla = "C088";
         public const string TinkmasterOverspark = "C089";
         public const string CaptainGreenskin = "C090";
+        public const string HarrisonJones = "C091";
 
         // Classic Druid
         public const string Bite = "C1XX";

@@ -1,0 +1,116 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+1: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+2: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+3: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+1: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+2: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+3: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+
+0 plays Harrison Jones
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+1: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+2: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+3: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 5 / 10
+Weapon: None
+0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+1: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+2: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+1: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+2: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+3: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: Rogue Dagger 1/2, 1 attack, 2 durability
+0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+1: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+2: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+1: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+2: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+3: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: Rogue Dagger 1/2, 1 attack, 2 durability
+0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+1: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+2: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+1: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+2: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+3: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+
+	------------
+	0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: Rogue Dagger 1/2, 1 attack, 2 durability
+0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+1: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+2: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+
+1 plays Harrison Jones
+Opponent (1) - health: 30, armour: 0, mana: 5 / 10
+Weapon: None
+0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+1: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+2: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+5: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+6: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+
+	0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+	------------
+	0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+1: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+2: CardSlot('Harrison Jones', Mana=5, 5 / 4)
+
+Game Over: Player 0 Wins

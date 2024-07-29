@@ -204,4 +204,29 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new CaptainGreenskin();
         }
     }
+
+    public class HarrisonJones : MinionCard
+    {
+        public HarrisonJones()
+        {
+            _cardId = CardIds.HarrisonJones;
+            _name = "Harrison Jones";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 5;
+            _attack = 5;
+            _health = 4;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new DestroyWeaponAndDrawDurability(PlayerChoice.Opponent, PlayerChoice.Player))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new HarrisonJones();
+        }
+    }
 }
