@@ -254,4 +254,29 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new CairneBloodhoof();
         }
     }
+
+    public class Hogger : MinionCard
+    {
+        public Hogger()
+        {
+            _cardId = CardIds.Hogger;
+            _name = "Hogger";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 6;
+            _attack = 4;
+            _health = 4;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new OnTurnEnd(new SummonMinion(new Gnoll()))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new Hogger();
+        }
+    }
 }

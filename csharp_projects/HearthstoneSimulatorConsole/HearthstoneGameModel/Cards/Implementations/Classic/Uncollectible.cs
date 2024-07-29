@@ -179,4 +179,26 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new BaineBloodhoof();
         }
     }
+
+    public class Gnoll : MinionCard
+    {
+        public Gnoll()
+        {
+            _cardId = CardIds.Gnoll;
+            _name = "Gnoll";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 2;
+            _attack = 2;
+            _health = 2;
+
+            _inPlayEffects = new List<EMEffect> { new Taunt() };
+        }
+
+        public override Card Copy()
+        {
+            return new Gnoll();
+        }
+    }
 }

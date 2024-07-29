@@ -147,5 +147,17 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestHogger()
+        {
+            string actionText = @"play 0 0
+end_turn
+end_turn
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.Hogger, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }

@@ -1,0 +1,122 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Hogger', Mana=6, 4 / 4)
+1: CardSlot('Hogger', Mana=6, 4 / 4)
+2: CardSlot('Hogger', Mana=6, 4 / 4)
+3: CardSlot('Hogger', Mana=6, 4 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Hogger', Mana=6, 4 / 4)
+1: CardSlot('Hogger', Mana=6, 4 / 4)
+2: CardSlot('Hogger', Mana=6, 4 / 4)
+3: CardSlot('Hogger', Mana=6, 4 / 4)
+
+0 plays Hogger
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Hogger', Mana=6, 4 / 4)
+1: CardSlot('Hogger', Mana=6, 4 / 4)
+2: CardSlot('Hogger', Mana=6, 4 / 4)
+3: CardSlot('Hogger', Mana=6, 4 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Hogger', Mana=6, 4 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 4 / 10
+Weapon: None
+0: CardSlot('Hogger', Mana=6, 4 / 4)
+1: CardSlot('Hogger', Mana=6, 4 / 4)
+2: CardSlot('Hogger', Mana=6, 4 / 4)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Hogger', Mana=6, 4 / 4)
+1: CardSlot('Hogger', Mana=6, 4 / 4)
+2: CardSlot('Hogger', Mana=6, 4 / 4)
+3: CardSlot('Hogger', Mana=6, 4 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Hogger', Mana=6, 4 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 4 / 10
+Weapon: None
+0: CardSlot('Hogger', Mana=6, 4 / 4)
+1: CardSlot('Hogger', Mana=6, 4 / 4)
+2: CardSlot('Hogger', Mana=6, 4 / 4)
+
+0 summons Gnoll
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Hogger', Mana=6, 4 / 4)
+1: CardSlot('Hogger', Mana=6, 4 / 4)
+2: CardSlot('Hogger', Mana=6, 4 / 4)
+3: CardSlot('Hogger', Mana=6, 4 / 4)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Hogger', Mana=6, 4 / 4)
+
+	------------
+	0: CardSlot('Hogger', Mana=6, 4 / 4)
+	1: CardSlot('Gnoll', Mana=2, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 4 / 10
+Weapon: None
+0: CardSlot('Hogger', Mana=6, 4 / 4)
+1: CardSlot('Hogger', Mana=6, 4 / 4)
+2: CardSlot('Hogger', Mana=6, 4 / 4)
+
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Hogger', Mana=6, 4 / 4)
+1: CardSlot('Hogger', Mana=6, 4 / 4)
+2: CardSlot('Hogger', Mana=6, 4 / 4)
+3: CardSlot('Hogger', Mana=6, 4 / 4)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Hogger', Mana=6, 4 / 4)
+
+	------------
+	0: CardSlot('Hogger', Mana=6, 4 / 4)
+	1: CardSlot('Gnoll', Mana=2, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 4 / 10
+Weapon: None
+0: CardSlot('Hogger', Mana=6, 4 / 4)
+1: CardSlot('Hogger', Mana=6, 4 / 4)
+2: CardSlot('Hogger', Mana=6, 4 / 4)
+
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Hogger', Mana=6, 4 / 4)
+1: CardSlot('Hogger', Mana=6, 4 / 4)
+2: CardSlot('Hogger', Mana=6, 4 / 4)
+3: CardSlot('Hogger', Mana=6, 4 / 4)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Hogger', Mana=6, 4 / 4)
+
+	------------
+	0: CardSlot('Hogger', Mana=6, 4 / 4)
+	1: CardSlot('Gnoll', Mana=2, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Hogger', Mana=6, 4 / 4)
+1: CardSlot('Hogger', Mana=6, 4 / 4)
+2: CardSlot('Hogger', Mana=6, 4 / 4)
+3: CardSlot('Hogger', Mana=6, 4 / 4)
+
+Game Over: Player 1 Wins
