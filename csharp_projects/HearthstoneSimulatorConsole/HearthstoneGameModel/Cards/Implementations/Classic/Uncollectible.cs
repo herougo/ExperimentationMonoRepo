@@ -159,4 +159,24 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Devilsaur();
         }
     }
+
+    public class BaineBloodhoof : MinionCard
+    {
+        public BaineBloodhoof()
+        {
+            _cardId = CardIds.BaineBloodhoof;
+            _name = "Baine Bloodhoof";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 5;
+            _attack = 5;
+            _health = 5;
+        }
+
+        public override Card Copy()
+        {
+            return new BaineBloodhoof();
+        }
+    }
 }

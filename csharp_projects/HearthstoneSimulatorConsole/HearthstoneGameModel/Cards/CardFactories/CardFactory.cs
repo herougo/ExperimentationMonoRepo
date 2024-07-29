@@ -195,6 +195,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new CaptainGreenskin();
                 case CardIds.HarrisonJones:
                     return new HarrisonJones();
+                case CardIds.CairneBloodhoof:
+                    return new CairneBloodhoof();
 
                 case CardIds.Bite:
                     return new Bite();
@@ -213,6 +215,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Squirrel();
                 case CardIds.Devilsaur:
                     return new Devilsaur();
+                case CardIds.BaineBloodhoof:
+                    return new BaineBloodhoof();
 
                 case CardIds.Priest:
                     return new Priest();

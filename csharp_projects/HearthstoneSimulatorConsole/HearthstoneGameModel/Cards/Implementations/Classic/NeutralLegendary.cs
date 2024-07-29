@@ -229,4 +229,29 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new HarrisonJones();
         }
     }
+
+    public class CairneBloodhoof : MinionCard
+    {
+        public CairneBloodhoof()
+        {
+            _cardId = CardIds.CairneBloodhoof;
+            _name = "Cairne Bloodhoof";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 6;
+            _attack = 5;
+            _health = 5;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Deathrattle(new SummonMinion(new BaineBloodhoof()))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new CairneBloodhoof();
+        }
+    }
 }
