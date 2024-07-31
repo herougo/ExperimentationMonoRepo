@@ -413,4 +413,29 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new HighInquisitorWhitemane();
         }
     }
+
+    public class Gruul : MinionCard
+    {
+        public Gruul()
+        {
+            _cardId = CardIds.Gruul;
+            _name = "Gruul";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 8;
+            _attack = 7;
+            _health = 7;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new OnTurnEnd(new ChangeStats(SelectionConstants.OwnSelf, 1, 1), PlayerChoice.Both)
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new Gruul();
+        }
+    }
 }

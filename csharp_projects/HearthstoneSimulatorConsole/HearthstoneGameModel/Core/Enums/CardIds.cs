@@ -113,6 +113,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string Xavius = "C096";
         public const string BaronGeddon = "C097";
         public const string HighInquisitorWhitemane = "C098";
+        public const string Gruul = "C099";
 
         // Classic Druid
         public const string Bite = "C1XX";
