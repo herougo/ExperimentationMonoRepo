@@ -316,6 +316,8 @@ play 0 0
 hero_power
 play 0 1
 play 2
+end_turn
+play 0 0
 concede";
             List<string> cardIdList0 = Enumerable.Repeat(CardIds.QuestingAdventurer, 30).ToList();
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);

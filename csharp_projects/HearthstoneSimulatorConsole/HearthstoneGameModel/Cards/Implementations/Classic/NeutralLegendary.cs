@@ -336,4 +336,30 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new TheBeast();
         }
     }
+
+    public class Xavius : MinionCard
+    {
+        public Xavius()
+        {
+            _cardId = CardIds.Xavius;
+            _name = "Xavius";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 6;
+            _attack = 7;
+            _health = 5;
+            _tag = MinionTag.Demon;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new WhenOtherCardPlayed(new SummonMinion(new XavianSatyr()), PlayerChoice.Player)
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new Xavius();
+        }
+    }
 }

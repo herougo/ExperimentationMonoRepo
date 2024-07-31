@@ -221,4 +221,26 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new PipQuickwit();
         }
     }
+
+    public class XavianSatyr : MinionCard
+    {
+        public XavianSatyr()
+        {
+            _cardId = CardIds.XavianSatyr;
+            _name = "Xavian Satyr";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 1;
+            _attack = 2;
+            _health = 1;
+
+            _tag = MinionTag.Demon;
+        }
+
+        public override Card Copy()
+        {
+            return new XavianSatyr();
+        }
+    }
 }

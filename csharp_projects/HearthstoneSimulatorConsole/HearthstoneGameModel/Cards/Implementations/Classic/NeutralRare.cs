@@ -568,7 +568,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new WhenOtherCardPlayed(new ChangeStats(SelectionConstants.OwnSelf, 1, 1))
+                new WhenOtherCardPlayed(new ChangeStats(SelectionConstants.OwnSelf, 1, 1), PlayerChoice.Player)
             };
         }
 

@@ -7,15 +7,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Game.Utils;
 
 namespace HearthstoneGameModel.Effects.TriggerEffects
 {
     public class WhenOtherCardPlayed : TriggerEffect
     {
-        public WhenOtherCardPlayed(OneTimeEffect effect)
+        PlayerChoice _playerMatch;
+
+        public WhenOtherCardPlayed(OneTimeEffect effect, PlayerChoice playerMatch)
             :base(effect)
         {
             _eventsReceived = new List<string> { EffectEvent.WhenCardPlayed };
+            _playerMatch = playerMatch;
         }
 
         public override EffectManagerNodePlan SendEvent(
@@ -27,12 +31,19 @@ namespace HearthstoneGameModel.Effects.TriggerEffects
             {
                 return null;
             }
+            int eventPlayer = eventSlots[0].Player;
+            int effectPlayer = emNode.AffectedSlot.Player;
+
+            if (!HSGameUtils.IsPlayerAffected(effectPlayer, eventPlayer, _playerMatch))
+            {
+                return null;
+            }
             return _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot, eventSlots);
         }
 
         public override EMEffect Copy()
         {
-            return new WhenOtherCardPlayed(_effect.Copy());
+            return new WhenOtherCardPlayed(_effect.Copy(), _playerMatch);
         }
     }
 }

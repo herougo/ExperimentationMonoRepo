@@ -203,6 +203,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new TheBeast();
                 case CardIds.TheBlackKnight:
                     return new TheBlackKnight();
+                case CardIds.Xavius:
+                    return new Xavius();
 
 
                 case CardIds.Bite:
@@ -228,6 +230,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Gnoll();
                 case CardIds.PipQuickwit:
                     return new PipQuickwit();
+                case CardIds.XavianSatyr:
+                    return new XavianSatyr();
 
                 case CardIds.Priest:
                     return new Priest();
