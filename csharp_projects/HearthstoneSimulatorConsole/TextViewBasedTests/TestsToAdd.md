@@ -91,6 +91,7 @@ Missing Tests
 - [ ] trying to add multiple Divine Shields to one minion
 - [ ] Minion copy and Murloc Warleader
 - [ ] Millhouse Manastorm not discount until next turn
+- [ ] Alexstrasza with 8 max HP
 
 
 

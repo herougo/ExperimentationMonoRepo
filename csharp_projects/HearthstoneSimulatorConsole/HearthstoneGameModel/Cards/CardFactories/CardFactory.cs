@@ -211,6 +211,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new HighInquisitorWhitemane();
                 case CardIds.Gruul:
                     return new Gruul();
+                case CardIds.Alexstrasza:
+                    return new Alexstrasza();
 
 
                 case CardIds.Bite:

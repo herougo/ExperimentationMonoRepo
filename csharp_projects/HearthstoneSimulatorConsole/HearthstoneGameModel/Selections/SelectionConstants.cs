@@ -56,6 +56,10 @@ namespace HearthstoneGameModel.Selections
 
         public static SlotSelection Player = new HeroSelection(PlayerChoice.Player);
         public static SlotSelection Opponent = new HeroSelection(PlayerChoice.Opponent);
+        public static SlotSelection BothPlayers = (
+            new HeroSelection(PlayerChoice.Player) +
+            new HeroSelection(PlayerChoice.Opponent)
+        );
         public static SlotSelection OwnSelf = new OwnSelf();
         
         public static SlotSelection AdjacentMinions = new AdjacentMinions();

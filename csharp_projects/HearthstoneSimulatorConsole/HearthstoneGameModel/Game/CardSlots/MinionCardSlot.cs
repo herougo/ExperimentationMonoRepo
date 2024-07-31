@@ -124,6 +124,9 @@ namespace HearthstoneGameModel.Game.CardSlots
                * buffed:                 3           4        4          3              4
                * damaged & buffed:       2           3        4          3              3
                * damaged, existing buff: 3           4        4          4              3
+              
+               * Alexstrasza 8 max hp:   15          15       15         8              15
+               * Alexstrasza 25 max hp:  15          15       25         25             15
              */
         }
 

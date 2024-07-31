@@ -438,4 +438,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Gruul();
         }
     }
+
+    public class Alexstrasza : MinionCard
+    {
+        public Alexstrasza()
+        {
+            _cardId = CardIds.Alexstrasza;
+            _name = "Alexstrasza";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 9;
+            _attack = 8;
+            _health = 8;
+
+            _tag = MinionTag.Dragon;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new SetRemainingHealth(new SelectCharacterFrom(SelectionConstants.BothPlayers), 15))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new Gruul();
+        }
+    }
 }

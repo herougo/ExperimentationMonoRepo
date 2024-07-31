@@ -100,6 +100,7 @@
     <Compile Include="Effects\OneTimeEffects\SummonFriendlyMinionsThatDiedThisTurn.cs" />
     <Compile Include="Effects\OneTimeEffects\SwapAttackAndHealth.cs" />
     <Compile Include="Effects\OneTimeEffects\TransformInPlayMinion.cs" />
+    <Compile Include="Effects\OneTimeEffects\SetRemainingHealth.cs" />
     <Compile Include="Effects\TriggerEffects\AfterSpellActivation.cs" />
     <Compile Include="Effects\TriggerEffects\WhenACharacterIsHealed.cs" />
     <Compile Include="Effects\TriggerEffects\WhenOtherCardPlayed.cs" />
