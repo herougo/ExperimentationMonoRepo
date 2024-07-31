@@ -362,4 +362,30 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Xavius();
         }
     }
+
+    public class BaronGeddon : MinionCard
+    {
+        public BaronGeddon()
+        {
+            _cardId = CardIds.BaronGeddon;
+            _name = "Baron Geddon";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 7;
+            _attack = 7;
+            _health = 7;
+            _tag = MinionTag.Elemental;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new OnTurnEnd(new DealDamage(SelectionConstants.AllOtherCharacters, 2))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new Xavius();
+        }
+    }
 }

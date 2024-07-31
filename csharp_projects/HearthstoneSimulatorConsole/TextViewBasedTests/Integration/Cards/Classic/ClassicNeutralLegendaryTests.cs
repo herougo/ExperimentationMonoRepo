@@ -211,5 +211,24 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
+
+
+        [Fact]
+        public Task TestBaronGeddon()
+        {
+            string actionText = @"hero_power
+end_turn
+play 0 0
+play 0 1
+end_turn
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.SunfuryProtector, CardIds.SunfuryProtector, CardIds.SunfuryProtector, CardIds.SunfuryProtector,
+                CardIds.SunfuryProtector, CardIds.SunfuryProtector, CardIds.SunfuryProtector, CardIds.BaronGeddon
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }
