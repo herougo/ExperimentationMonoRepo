@@ -201,4 +201,24 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Gnoll();
         }
     }
+
+    public class PipQuickwit : MinionCard
+    {
+        public PipQuickwit()
+        {
+            _cardId = CardIds.PipQuickwit;
+            _name = "Pip Quickwit";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 3;
+            _attack = 3;
+            _health = 3;
+        }
+
+        public override Card Copy()
+        {
+            return new PipQuickwit();
+        }
+    }
 }

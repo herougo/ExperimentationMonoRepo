@@ -199,6 +199,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new CairneBloodhoof();
                 case CardIds.Hogger:
                     return new Hogger();
+                case CardIds.TheBeast:
+                    return new TheBeast();
 
                 case CardIds.Bite:
                     return new Bite();
@@ -221,6 +223,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new BaineBloodhoof();
                 case CardIds.Gnoll:
                     return new Gnoll();
+                case CardIds.PipQuickwit:
+                    return new PipQuickwit();
 
                 case CardIds.Priest:
                     return new Priest();

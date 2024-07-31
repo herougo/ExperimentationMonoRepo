@@ -25,10 +25,17 @@ namespace HearthstoneGameModel.Game.Utils
 
         public static int ComputePlayer(int player, PlayerChoice playerChoice)
         {
-            if (playerChoice == PlayerChoice.Opponent) {
-                return 1 - player;
+            switch (playerChoice)
+            {
+                case PlayerChoice.Player:
+                    return player;
+                case PlayerChoice.Opponent:
+                    return 1 - player;
+                case PlayerChoice.Both:
+                    throw new ArgumentException("ComputePlayer cannot handle PlayerChoice.Both");
+                default:
+                    throw new NotImplementedException();
             }
-            return player;
         }
 
         public static bool MatchesTag(MinionTag desiredTag, MinionTag actualTag)

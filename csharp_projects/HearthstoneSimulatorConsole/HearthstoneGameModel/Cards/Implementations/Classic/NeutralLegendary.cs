@@ -279,4 +279,30 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Hogger();
         }
     }
+
+    public class TheBeast : MinionCard
+    {
+        public TheBeast()
+        {
+            _cardId = CardIds.TheBeast;
+            _name = "The Beast";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 6;
+            _attack = 9;
+            _health = 7;
+            _tag = MinionTag.Beast;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Deathrattle(new SummonMinion(new PipQuickwit(), PlayerChoice.Opponent))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new TheBeast();
+        }
+    }
 }
