@@ -212,7 +212,6 @@ concede";
             return Verify(log);
         }
 
-
         [Fact]
         public Task TestBaronGeddon()
         {
@@ -226,6 +225,25 @@ concede";
             {
                 CardIds.SunfuryProtector, CardIds.SunfuryProtector, CardIds.SunfuryProtector, CardIds.SunfuryProtector,
                 CardIds.SunfuryProtector, CardIds.SunfuryProtector, CardIds.SunfuryProtector, CardIds.BaronGeddon
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestHighInquisitorWhitemane()
+        {
+            string actionText = @"hero_power
+end_turn
+play 1 0
+end_turn
+attack 0 0
+play 0 0
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.HighInquisitorWhitemane
             };
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);

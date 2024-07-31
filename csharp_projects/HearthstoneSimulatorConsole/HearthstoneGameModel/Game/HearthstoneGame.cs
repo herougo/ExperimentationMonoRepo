@@ -38,7 +38,7 @@ namespace HearthstoneGameModel.Game
 
         public UIManager UIManager;
 
-        public List<GraveyardTrackerEntry> GraveyardTracker;
+        public GraveyardTracker GraveyardTracker;
 
         public HearthstoneGame(HearthstoneGameArgs args)
         {
@@ -60,6 +60,7 @@ namespace HearthstoneGameModel.Game
             EffectManager = null;
             GameMetadata = null;
             PlayerMetadata = null;
+            GraveyardTracker = null;
             CardMover = new CardMover(this);
         }
 
@@ -110,6 +111,7 @@ namespace HearthstoneGameModel.Game
                 player.SetupHeroPower();
             }
             Battleboard = new Battleboard(this);
+            GraveyardTracker = new GraveyardTracker();
 
             addBasePlayerEffects(0);
             addBasePlayerEffects(1);

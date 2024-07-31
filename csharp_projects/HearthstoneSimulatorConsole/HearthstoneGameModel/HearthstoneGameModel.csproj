@@ -97,6 +97,7 @@
     <Compile Include="Effects\OneTimeEffects\DestroyWeaponAndDrawDurability.cs" />
     <Compile Include="Effects\OneTimeEffects\GiveEMEffect.cs" />
     <Compile Include="Effects\OneTimeEffects\ReduceWeaponDurability.cs" />
+    <Compile Include="Effects\OneTimeEffects\SummonFriendlyMinionsThatDiedThisTurn.cs" />
     <Compile Include="Effects\OneTimeEffects\SwapAttackAndHealth.cs" />
     <Compile Include="Effects\OneTimeEffects\TransformInPlayMinion.cs" />
     <Compile Include="Effects\TriggerEffects\AfterSpellActivation.cs" />
@@ -161,6 +162,8 @@
     <Compile Include="Game\EffectManagement\EffectManagerNodeList.cs" />
     <Compile Include="Game\EffectManagement\EffectManagerNodePlan.cs" />
     <Compile Include="Game\EffectManagement\EventCardSlotToEMNodeListDictionary.cs" />
+    <Compile Include="Game\GraveyardTracker.cs" />
+    <Compile Include="Game\GraveyardTrackerEntry.cs" />
     <Compile Include="Game\Utils\HSGameUtils.cs" />
     <Compile Include="Selections\CompoundSelections\UnionSlotSelection.cs" />
     <Compile Include="Selections\SelectionFilter.cs" />

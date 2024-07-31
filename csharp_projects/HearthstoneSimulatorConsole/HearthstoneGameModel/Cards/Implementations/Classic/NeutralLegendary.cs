@@ -385,7 +385,32 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
         public override Card Copy()
         {
-            return new Xavius();
+            return new BaronGeddon();
+        }
+    }
+
+    public class HighInquisitorWhitemane : MinionCard
+    {
+        public HighInquisitorWhitemane()
+        {
+            _cardId = CardIds.HighInquisitorWhitemane;
+            _name = "High Inquisitor Whitemane";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 6;
+            _attack = 5;
+            _health = 7;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new SummonFriendlyMinionsThatDiedThisTurn())
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new HighInquisitorWhitemane();
         }
     }
 }

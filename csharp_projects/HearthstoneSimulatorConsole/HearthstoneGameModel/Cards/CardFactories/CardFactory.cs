@@ -207,6 +207,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Xavius();
                 case CardIds.BaronGeddon:
                     return new BaronGeddon();
+                case CardIds.HighInquisitorWhitemane:
+                    return new HighInquisitorWhitemane();
 
 
                 case CardIds.Bite:
