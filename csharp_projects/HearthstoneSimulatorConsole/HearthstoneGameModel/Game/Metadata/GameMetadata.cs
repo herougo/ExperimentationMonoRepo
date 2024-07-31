@@ -11,5 +11,6 @@ namespace HearthstoneGameModel.Game.Metadata
         public int WhoGoesFirst = 0;
         public int Turn = 0;
         public bool ReadyToEndTurn = false;
+        public int TurnCount = 0;
     }
 }

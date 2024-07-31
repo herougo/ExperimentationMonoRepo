@@ -100,6 +100,9 @@ namespace HearthstoneGameModel.Game
             {
 
                 _game.EffectManager.PopEffectsBySlot(cardSlot);
+                _game.GraveyardTracker.Add(
+                    new GraveyardTrackerEntry(cardSlot.Card.Copy(), cardSlot.Player, _game.GameMetadata.TurnCount)
+                );
                 RemoveCardSlot(cardSlot);
             }
         }

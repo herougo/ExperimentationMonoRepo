@@ -38,6 +38,8 @@ namespace HearthstoneGameModel.Game
 
         public UIManager UIManager;
 
+        public List<GraveyardTrackerEntry> GraveyardTracker;
+
         public HearthstoneGame(HearthstoneGameArgs args)
         {
             Decklists = args.Decklists;
@@ -83,6 +85,7 @@ namespace HearthstoneGameModel.Game
                 new PlayerMetadata()
             };
             GameMetadata.WhoGoesFirst = 0;
+            GameMetadata.TurnCount = 0;
             int whoGoesSecond = HearthstoneConstants.NumberOfPlayers - 1;
             Hands = new Pile[HearthstoneConstants.NumberOfPlayers]
             {
@@ -149,7 +152,7 @@ namespace HearthstoneGameModel.Game
         {
             try
             {
-                for (int i = 0; i < HearthstoneConstants.MaxTurnNum; i++)
+                while (GameMetadata.TurnCount < HearthstoneConstants.MaxTurnNum)
                 {
                     EffectManager.SendEvent(EffectEvent.StartTurn);
                     UIManager.ReceiveUIEvent(new StartTurnUIEvent());
@@ -160,6 +163,7 @@ namespace HearthstoneGameModel.Game
                     EffectManager.SendEvent(EffectEvent.EndTurn);
 
                     GameMetadata.Turn = 1 - GameMetadata.Turn;
+                    GameMetadata.TurnCount += 1;
                 }
             }
             catch (GameOverException)
