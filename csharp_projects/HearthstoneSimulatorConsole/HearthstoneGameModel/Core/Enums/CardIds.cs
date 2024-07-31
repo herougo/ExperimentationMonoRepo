@@ -109,6 +109,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string CairneBloodhoof = "C092";
         public const string Hogger = "C093";
         public const string TheBeast = "C094";
+        public const string TheBlackKnight = "C095";
 
         // Classic Druid
         public const string Bite = "C1XX";

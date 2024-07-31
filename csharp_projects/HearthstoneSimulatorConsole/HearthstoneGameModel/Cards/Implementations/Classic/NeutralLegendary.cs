@@ -9,6 +9,7 @@ using HearthstoneGameModel.Effects.TriggerEffects;
 using HearthstoneGameModel.Effects.WrappedEMEffects;
 using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
 using HearthstoneGameModel.Selections;
+using HearthstoneGameModel.Selections.SelectionFilters;
 using HearthstoneGameModel.Selections.SlotSelections;
 using System;
 using System.Collections.Generic;
@@ -297,6 +298,36 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _inPlayEffects = new List<EMEffect>
             {
                 new Deathrattle(new SummonMinion(new PipQuickwit(), PlayerChoice.Opponent))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new TheBeast();
+        }
+    }
+
+    public class TheBlackKnight : MinionCard
+    {
+        public TheBlackKnight()
+        {
+            _cardId = CardIds.TheBlackKnight;
+            _name = "The Black Knight";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 4;
+            _attack = 4;
+            _health = 4;
+            _tag = MinionTag.Undead;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new DestroyMinion(
+                    new SelectCharacterFrom(
+                        SelectionConstants.OtherLivingEnemyMinions & new TauntFilter()
+                    )
+                ))
             };
         }
 

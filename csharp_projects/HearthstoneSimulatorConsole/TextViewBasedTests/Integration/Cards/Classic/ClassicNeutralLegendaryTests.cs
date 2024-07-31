@@ -173,5 +173,25 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestTheBlackKnight()
+        {
+            string actionText = @"play 0 0
+play 0 1
+end_turn
+play 0 0
+select 0 0
+select 0 -1
+select 0 2
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.Hogger, CardIds.TheBlackKnight, CardIds.Hogger, CardIds.TheBlackKnight,
+                CardIds.Hogger, CardIds.TheBlackKnight, CardIds.Hogger, CardIds.TheBlackKnight
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }

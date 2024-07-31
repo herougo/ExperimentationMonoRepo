@@ -53,6 +53,11 @@ namespace HearthstoneGameModel.Game.CardSlots
             get { return NumStealth > 0; }
         }
 
+        public bool HasTaunt
+        {
+            get { return NumTaunt > 0; }
+        }
+
         public bool HasCantAttackEffect
         {
             get { return NumCantAttackEffect > 0; }

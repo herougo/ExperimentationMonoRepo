@@ -169,6 +169,7 @@
     <Compile Include="Selections\SelectionFilters\LivingSelectionFilter.cs" />
     <Compile Include="Selections\SelectionFilters\OtherSelectionFilter.cs" />
     <Compile Include="Selections\SelectionFilters\TagSelectionFilter.cs" />
+    <Compile Include="Selections\SelectionFilters\TauntFilter.cs" />
     <Compile Include="Selections\SlotSelections\BoardSelection.cs" />
     <Compile Include="Selections\CompoundSelections\FilteredSelection.cs" />
     <Compile Include="Selections\SelectionFilters\CardTypeSelectionFilter.cs" />

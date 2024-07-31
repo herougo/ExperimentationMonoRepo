@@ -201,6 +201,9 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Hogger();
                 case CardIds.TheBeast:
                     return new TheBeast();
+                case CardIds.TheBlackKnight:
+                    return new TheBlackKnight();
+
 
                 case CardIds.Bite:
                     return new Bite();
