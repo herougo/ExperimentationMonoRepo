@@ -213,6 +213,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Gruul();
                 case CardIds.Alexstrasza:
                     return new Alexstrasza();
+                case CardIds.Malygos:
+                    return new Malygos();
 
 
                 case CardIds.Bite:

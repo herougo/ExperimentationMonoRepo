@@ -82,6 +82,7 @@ Missing Tests
 
 - [ ] Ancient Mage (spell damage)
 - [ ] (partial) Bloodmage Thalnos
+- [ ] Malygos
 
 ### Specific Cases
 

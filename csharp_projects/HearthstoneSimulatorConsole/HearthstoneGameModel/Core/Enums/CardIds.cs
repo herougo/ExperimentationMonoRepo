@@ -115,6 +115,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string HighInquisitorWhitemane = "C098";
         public const string Gruul = "C099";
         public const string Alexstrasza = "C100";
+        public const string Malygos = "C101";
 
 
         // Classic Druid

@@ -462,7 +462,34 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
         public override Card Copy()
         {
-            return new Gruul();
+            return new Alexstrasza();
+        }
+    }
+
+    public class Malygos : MinionCard
+    {
+        public Malygos()
+        {
+            _cardId = CardIds.Malygos;
+            _name = "Malygos";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 9;
+            _attack = 4;
+            _health = 12;
+
+            _tag = MinionTag.Dragon;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new SpellDamage(5)
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new Malygos();
         }
     }
 }
