@@ -492,4 +492,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Malygos();
         }
     }
+
+    public class Onyxia : MinionCard
+    {
+        public Onyxia()
+        {
+            _cardId = CardIds.Onyxia;
+            _name = "Onyxia";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 9;
+            _attack = 8;
+            _health = 8;
+
+            _tag = MinionTag.Dragon;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new SummonMinionUntilFull(new Whelp()))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new Onyxia();
+        }
+    }
 }

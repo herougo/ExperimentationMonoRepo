@@ -243,4 +243,26 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new XavianSatyr();
         }
     }
+
+    public class Whelp : MinionCard
+    {
+        public Whelp()
+        {
+            _cardId = CardIds.Whelp;
+            _name = "Whelp";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 1;
+            _attack = 1;
+            _health = 1;
+
+            _tag = MinionTag.Dragon;
+        }
+
+        public override Card Copy()
+        {
+            return new Whelp();
+        }
+    }
 }

@@ -296,5 +296,15 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestOnyxia()
+        {
+            string actionText = @"play 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.Onyxia, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }

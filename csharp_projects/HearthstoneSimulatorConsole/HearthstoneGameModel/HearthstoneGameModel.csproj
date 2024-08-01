@@ -100,6 +100,7 @@
     <Compile Include="Effects\OneTimeEffects\GiveEMEffect.cs" />
     <Compile Include="Effects\OneTimeEffects\ReduceWeaponDurability.cs" />
     <Compile Include="Effects\OneTimeEffects\SummonFriendlyMinionsThatDiedThisTurn.cs" />
+    <Compile Include="Effects\OneTimeEffects\SummonMinionUntilFull.cs" />
     <Compile Include="Effects\OneTimeEffects\SwapAttackAndHealth.cs" />
     <Compile Include="Effects\OneTimeEffects\TransformInPlayMinion.cs" />
     <Compile Include="Effects\OneTimeEffects\SetRemainingHealth.cs" />
