@@ -80,9 +80,9 @@ Missing Cards
 
 Missing Tests
 
-- [ ] Ancient Mage (spell damage)
-- [ ] (partial) Bloodmage Thalnos
-- [ ] Malygos
+- [x] Ancient Mage (spell damage)
+- [x] (partial) Bloodmage Thalnos
+- [x] Malygos
 
 ### Specific Cases
 

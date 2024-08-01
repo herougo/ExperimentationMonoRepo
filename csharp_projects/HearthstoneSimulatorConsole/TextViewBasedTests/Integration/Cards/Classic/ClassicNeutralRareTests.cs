@@ -323,6 +323,23 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
+        [Fact]
+        public Task TestAncientMage()
+        {
+            string actionText = @"play 0 0
+play 0 1
+play 0 1
+play 0
+select 0 1
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.EarthShock,
+                CardIds.AncientMage, CardIds.AncientMage, CardIds.AngryChicken
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Shaman);
+            return Verify(log);
+        }
 
         [Fact]
         public Task TestDefenderOfArgus()

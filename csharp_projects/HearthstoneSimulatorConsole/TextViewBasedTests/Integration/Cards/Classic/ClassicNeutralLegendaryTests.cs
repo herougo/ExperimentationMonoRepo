@@ -16,12 +16,19 @@ namespace TextViewBasedTests.Integration.Cards.Classic
         {
             string actionText = @"play 0 0
 end_turn
-hero_power
+play 0 0
 end_turn
+play 0
+select 1 0
 attack 0 0
 concede";
-            List<string> cardIdList0 = Enumerable.Repeat(CardIds.BloodmageThalnos, 30).ToList();
-            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.EarthShock, CardIds.EarthShock, CardIds.EarthShock, CardIds.EarthShock,
+                CardIds.EarthShock, CardIds.EarthShock, CardIds.EarthShock, CardIds.BloodmageThalnos
+            };
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.SilvermoonGuardian, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
             return Verify(log);
         }
 
@@ -268,6 +275,24 @@ concede";
 select 0 -1
 concede";
             List<string> cardIdList0 = Enumerable.Repeat(CardIds.Alexstrasza, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestMalygos()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+play 0
+select 0 0
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.EarthShock, CardIds.EarthShock, CardIds.EarthShock, CardIds.EarthShock,
+                CardIds.EarthShock, CardIds.EarthShock, CardIds.EarthShock, CardIds.Malygos
+            };
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
