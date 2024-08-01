@@ -220,6 +220,9 @@ namespace HearthstoneGameModel.Cards.CardFactories
                 case CardIds.Bite:
                     return new Bite();
 
+                case CardIds.EarthShock:
+                    return new EarthShock();
+
                 case CardIds.DamagedGolem:
                     return new DamagedGolem();
                 case CardIds.Squire:

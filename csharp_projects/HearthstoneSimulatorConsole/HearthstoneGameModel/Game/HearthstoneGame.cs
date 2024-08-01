@@ -327,6 +327,10 @@ namespace HearthstoneGameModel.Game
 
         public void DealDamage(CardSlot sourceSlot, List<BattlerCardSlot> targetSlots, int amount)
         {
+            if (sourceSlot.CardType == CardType.Spell)
+            {
+                amount += PlayerMetadata[sourceSlot.Player].SpellDamage;
+            }
             foreach (BattlerCardSlot targetSlot in targetSlots)
             {
                 targetSlot.TempDamageToTake = amount;

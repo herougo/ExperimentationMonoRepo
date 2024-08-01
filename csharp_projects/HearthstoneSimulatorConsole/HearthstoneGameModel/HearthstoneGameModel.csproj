@@ -53,6 +53,7 @@
     <Compile Include="Cards\Implementations\Classic\NeutralEpic.cs" />
     <Compile Include="Cards\Implementations\Classic\NeutralLegendary.cs" />
     <Compile Include="Cards\Implementations\Classic\NeutralRare.cs" />
+    <Compile Include="Cards\Implementations\Classic\Shaman.cs" />
     <Compile Include="Cards\Implementations\Classic\Uncollectible.cs" />
     <Compile Include="Cards\Implementations\Fundamental.cs" />
     <Compile Include="Cards\Implementations\Heroes\OriginalHeroes.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Effects\OneTimeEffects\AddEventSlotCopyToHand.cs" />
     <Compile Include="Effects\OneTimeEffects\BecomeMinionCopy.cs" />
     <Compile Include="Effects\OneTimeEffects\ChangeStats.cs" />
+    <Compile Include="Effects\OneTimeEffects\SilenceAndDealDamage.cs" />
     <Compile Include="Effects\OneTimeEffects\DestroyMinion.cs" />
     <Compile Include="Effects\OneTimeEffects\DestroyWeaponAndDrawDurability.cs" />
     <Compile Include="Effects\OneTimeEffects\GiveEMEffect.cs" />

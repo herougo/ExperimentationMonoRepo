@@ -121,6 +121,9 @@ namespace HearthstoneGameModel.Core.Enums
         // Classic Druid
         public const string Bite = "C1XX";
 
+        // Classic Rogue
+        public const string EarthShock = "C3XX";
+
 
         // Classic Uncollectible
         public const string DamagedGolem = "CU001";
