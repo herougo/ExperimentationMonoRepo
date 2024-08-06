@@ -306,5 +306,32 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestYsera()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+play 0
+play 0 1
+play 0
+select 1 1
+select 1 0
+play 0
+select 0 0
+end_turn
+play 0 1
+end_turn
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.Ysera, 30).ToList();
+            List<string> cardIdList1 = new List<string>
+            {
+                CardIds.Dream, CardIds.Dream, CardIds.Dream, CardIds.Dream,
+                CardIds.Nightmare, CardIds.LaughingSister, CardIds.YseraAwakens, CardIds.EmeraldDrake
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Paladin);
+            return Verify(log);
+        }
     }
 }

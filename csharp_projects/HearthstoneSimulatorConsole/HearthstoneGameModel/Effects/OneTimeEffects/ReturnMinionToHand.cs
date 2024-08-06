@@ -22,7 +22,11 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
         public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots)
         {
             List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
-            game.CardMover.ReturnMinionsToHand(affectedCardSlot.Player, selectedCardSlots);
+            List<CardSlot> selectedCardSlotsPlayer0 = selectedCardSlots.Where(x => x.Player == 0).ToList();
+            List<CardSlot> selectedCardSlotsPlayer1 = selectedCardSlots.Where(x => x.Player == 1).ToList();
+            
+            game.CardMover.ReturnMinionsToHand(0, selectedCardSlotsPlayer0);
+            game.CardMover.ReturnMinionsToHand(1, selectedCardSlotsPlayer1);
 
             return null;
         }

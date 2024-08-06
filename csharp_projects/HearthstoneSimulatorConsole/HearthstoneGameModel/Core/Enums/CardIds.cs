@@ -117,6 +117,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string Alexstrasza = "C100";
         public const string Malygos = "C101";
         public const string Onyxia = "C102";
+        public const string Ysera = "C103";
 
 
         // Classic Druid
@@ -139,6 +140,11 @@ namespace HearthstoneGameModel.Core.Enums
         public const string PipQuickwit = "CU010";
         public const string XavianSatyr = "CU011";
         public const string Whelp = "CU012";
+        public const string Dream = "CU013";
+        public const string Nightmare = "CU014";
+        public const string LaughingSister = "CU015";
+        public const string YseraAwakens = "CU016";
+        public const string EmeraldDrake = "CU017";
 
         // Heroes
         public const string Priest = "hero_priest";

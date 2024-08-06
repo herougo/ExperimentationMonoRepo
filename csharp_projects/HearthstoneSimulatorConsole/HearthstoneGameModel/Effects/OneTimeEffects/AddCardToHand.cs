@@ -19,6 +19,13 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
         PlayerChoice _toPlayer;
         int _numCopies;
 
+        public AddCardToHand(ICardGenerator cardGenerator)
+        {
+            _cardGenerator = cardGenerator;
+            _toPlayer = PlayerChoice.Player;
+            _numCopies = 1;
+        }
+
         public AddCardToHand(ICardGenerator cardGenerator, PlayerChoice toPlayer)
         {
             _cardGenerator = cardGenerator;

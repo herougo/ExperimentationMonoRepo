@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using HearthstoneGameModel.Selections;
 using HearthstoneGameModel.Selections.SlotSelections;
 using HearthstoneGameModel.Effects.ContinuousEffects;
+using HearthstoneGameModel.Selections.SelectionFilters;
 
 namespace HearthstoneGameModel.Cards.Implementations.Classic
 {
@@ -263,6 +264,124 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new Whelp();
+        }
+    }
+
+    public class Dream : SpellCard
+    {
+        public Dream()
+        {
+            _cardId = CardIds.Dream;
+            _name = "Dream";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 0;
+            _school = SpellSchool.Nature;
+
+            _whenPlayedEffect = new ReturnMinionToHand(new SelectCharacterFrom(
+                SelectionConstants.AllMinions
+            ));
+        }
+
+        public override Card Copy()
+        {
+            return new Dream();
+        }
+    }
+
+    public class Nightmare : SpellCard
+    {
+        public Nightmare()
+        {
+            _cardId = CardIds.Nightmare;
+            _name = "Nightmare";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 0;
+            _school = SpellSchool.Shadow;
+
+            _whenPlayedEffect = new GiveEMEffect(
+                new SelectCharacterFrom(SelectionConstants.AllMinions),
+                new List<EMEffect> {
+                    new Buff(5, 5),
+                    new OnTurnStart(new DestroyMinion(SelectionConstants.OwnSelf), PlayerChoice.Player)
+                }
+            );
+        }
+
+        public override Card Copy()
+        {
+            return new Nightmare();
+        }
+    }
+
+    public class LaughingSister : MinionCard
+    {
+        public LaughingSister()
+        {
+            _cardId = CardIds.LaughingSister;
+            _name = "Laughing Sister";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 2;
+            _attack = 3;
+            _health = 5;
+
+            _inPlayEffects = new List<EMEffect> { new Elusive() };
+        }
+
+        public override Card Copy()
+        {
+            return new LaughingSister();
+        }
+    }
+
+    public class YseraAwakens : SpellCard
+    {
+        public YseraAwakens()
+        {
+            _cardId = CardIds.YseraAwakens;
+            _name = "Ysera Awakens";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 2;
+            _school = SpellSchool.Nature;
+
+            _whenPlayedEffect = new DealDamage(
+                SelectionConstants.AllCharacters & new NotNamedYseraFilter(),
+                5
+            );
+        }
+
+        public override Card Copy()
+        {
+            return new Nightmare();
+        }
+    }
+
+    public class EmeraldDrake : MinionCard
+    {
+        public EmeraldDrake()
+        {
+            _cardId = CardIds.EmeraldDrake;
+            _name = "Emerald Drake";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 4;
+            _attack = 7;
+            _health = 6;
+
+            _tag = MinionTag.Dragon;
+        }
+
+        public override Card Copy()
+        {
+            return new EmeraldDrake();
         }
     }
 }

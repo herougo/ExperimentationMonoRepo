@@ -217,6 +217,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Malygos();
                 case CardIds.Onyxia:
                     return new Onyxia();
+                case CardIds.Ysera:
+                    return new Ysera();
 
                 case CardIds.Bite:
                     return new Bite();
@@ -248,6 +250,16 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new XavianSatyr();
                 case CardIds.Whelp:
                     return new Whelp();
+                case CardIds.Dream:
+                    return new Dream();
+                case CardIds.Nightmare:
+                    return new Nightmare();
+                case CardIds.LaughingSister:
+                    return new LaughingSister();
+                case CardIds.YseraAwakens:
+                    return new YseraAwakens();
+                case CardIds.EmeraldDrake:
+                    return new EmeraldDrake();
 
                 case CardIds.Priest:
                     return new Priest();

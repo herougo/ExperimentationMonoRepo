@@ -519,4 +519,39 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Onyxia();
         }
     }
+
+    public class Ysera : MinionCard
+    {
+        public Ysera()
+        {
+            _cardId = CardIds.Ysera;
+            _name = "Ysera";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 9;
+            _attack = 4;
+            _health = 12;
+
+            _tag = MinionTag.Dragon;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new OnTurnEnd(
+                    new AddCardToHand(
+                        new RandomCardFrom(new List<Card> {
+                            new Dream(), new Nightmare(), new LaughingSister(),
+                            new YseraAwakens(), new EmeraldDrake()
+                        })
+                    ),
+                    PlayerChoice.Player
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new Ysera();
+        }
+    }
 }

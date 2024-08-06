@@ -76,6 +76,7 @@
     <Compile Include="Core\Enums\HSClass.cs" />
     <Compile Include="Core\Enums\MinionTag.cs" />
     <Compile Include="Core\Enums\PlayerChoice.cs" />
+    <Compile Include="Core\Enums\SpellSchool.cs" />
     <Compile Include="Core\Enums\UIEventType.cs" />
     <Compile Include="Core\Exceptions.cs" />
     <Compile Include="Effects\ActivatedEffect.cs" />
@@ -173,6 +174,7 @@
     <Compile Include="Selections\SelectionFilter.cs" />
     <Compile Include="Selections\SelectionFilters\AttackAtLeastFilter.cs" />
     <Compile Include="Selections\SelectionFilters\AttackAtMostFilter.cs" />
+    <Compile Include="Selections\SelectionFilters\NotNamedYseraFilter.cs" />
     <Compile Include="Selections\SelectionFilters\LivingSelectionFilter.cs" />
     <Compile Include="Selections\SelectionFilters\OtherSelectionFilter.cs" />
     <Compile Include="Selections\SelectionFilters\TagSelectionFilter.cs" />
