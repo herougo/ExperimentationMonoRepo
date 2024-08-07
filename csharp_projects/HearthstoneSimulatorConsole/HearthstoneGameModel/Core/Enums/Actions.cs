@@ -14,5 +14,6 @@ namespace HearthstoneGameModel.Core.Enums
         public const string Select = "select";
         public const string HeroPower = "hero_power";
         public const string Concede = "concede";
+        public const string Choose = "choose";
     }
 }

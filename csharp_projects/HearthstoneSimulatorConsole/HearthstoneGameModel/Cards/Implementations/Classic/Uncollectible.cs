@@ -384,4 +384,25 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new EmeraldDrake();
         }
     }
+
+    public class Panther : MinionCard
+    {
+        public Panther()
+        {
+            _cardId = CardIds.Panther;
+            _name = "Panther";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 2;
+            _attack = 3;
+            _health = 2;
+            _tag = MinionTag.Beast;
+        }
+
+        public override Card Copy()
+        {
+            return new Panther();
+        }
+    }
 }

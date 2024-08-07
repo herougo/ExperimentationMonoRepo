@@ -1,0 +1,137 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Power of the Wild', Mana=2)
+1: CardSlot('Power of the Wild', Mana=2)
+2: CardSlot('Power of the Wild', Mana=2)
+3: CardSlot('Power of the Wild', Mana=2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Power of the Wild', Mana=2)
+1: CardSlot('Power of the Wild', Mana=2)
+2: CardSlot('Power of the Wild', Mana=2)
+3: CardSlot('Power of the Wild', Mana=2)
+
+0 plays Power of the Wild
+0 summons Panther
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Power of the Wild', Mana=2)
+1: CardSlot('Power of the Wild', Mana=2)
+2: CardSlot('Power of the Wild', Mana=2)
+3: CardSlot('Power of the Wild', Mana=2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Panther', Mana=2, 3 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Power of the Wild', Mana=2)
+1: CardSlot('Power of the Wild', Mana=2)
+2: CardSlot('Power of the Wild', Mana=2)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Power of the Wild', Mana=2)
+1: CardSlot('Power of the Wild', Mana=2)
+2: CardSlot('Power of the Wild', Mana=2)
+3: CardSlot('Power of the Wild', Mana=2)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Panther', Mana=2, 3 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Power of the Wild', Mana=2)
+1: CardSlot('Power of the Wild', Mana=2)
+2: CardSlot('Power of the Wild', Mana=2)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Power of the Wild', Mana=2)
+1: CardSlot('Power of the Wild', Mana=2)
+2: CardSlot('Power of the Wild', Mana=2)
+3: CardSlot('Power of the Wild', Mana=2)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Power of the Wild', Mana=2)
+
+	------------
+	0: CardSlot('Panther', Mana=2, 3 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Power of the Wild', Mana=2)
+1: CardSlot('Power of the Wild', Mana=2)
+2: CardSlot('Power of the Wild', Mana=2)
+
+1 plays Power of the Wild
+1 summons Panther
+Opponent (1) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Power of the Wild', Mana=2)
+1: CardSlot('Power of the Wild', Mana=2)
+2: CardSlot('Power of the Wild', Mana=2)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Power of the Wild', Mana=2)
+
+	0: CardSlot('Panther', Mana=2, 3 / 2)
+	------------
+	0: CardSlot('Panther', Mana=2, 3 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Power of the Wild', Mana=2)
+1: CardSlot('Power of the Wild', Mana=2)
+2: CardSlot('Power of the Wild', Mana=2)
+
+1 plays Power of the Wild
+1 summons Panther
+Opponent (1) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Power of the Wild', Mana=2)
+1: CardSlot('Power of the Wild', Mana=2)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Power of the Wild', Mana=2)
+
+	0: CardSlot('Panther', Mana=2, 3 / 2)
+	1: CardSlot('Panther', Mana=2, 3 / 2)
+	------------
+	0: CardSlot('Panther', Mana=2, 3 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Power of the Wild', Mana=2)
+1: CardSlot('Power of the Wild', Mana=2)
+2: CardSlot('Power of the Wild', Mana=2)
+
+1 plays Power of the Wild
+Opponent (1) - health: 30, armour: 0, mana: 4 / 10
+Weapon: None
+0: CardSlot('Power of the Wild', Mana=2)
+1: CardSlot('Coin', Mana=0)
+2: CardSlot('Power of the Wild', Mana=2)
+
+	0: CardSlot('Panther', Mana=2, 4 / 3)
+	1: CardSlot('Panther', Mana=2, 4 / 3)
+	------------
+	0: CardSlot('Panther', Mana=2, 3 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Power of the Wild', Mana=2)
+1: CardSlot('Power of the Wild', Mana=2)
+2: CardSlot('Power of the Wild', Mana=2)
+
+Game Over: Player 0 Wins

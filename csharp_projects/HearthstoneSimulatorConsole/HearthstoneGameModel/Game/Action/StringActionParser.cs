@@ -41,6 +41,8 @@ namespace HearthstoneGameModel.Game.Action
                     return ParseSelectAction(split);
                 case Actions.Concede:
                     return new ConcedeAction();
+                case Actions.Choose:
+                    return ParseChooseAction(split);
                 default:
                     throw new NotImplementedException("Unhandled Action: " + actionType);
             }
@@ -241,7 +243,7 @@ namespace HearthstoneGameModel.Game.Action
         {
             if (actionSplit.Length != 3)
             {
-                throw new ActionException("Attack actions need 2 arguments.");
+                throw new ActionException("Select actions need 2 arguments.");
             }
 
             int playerIndex, boardIndex;
@@ -262,6 +264,26 @@ namespace HearthstoneGameModel.Game.Action
             }
 
             return new SelectAction(targetSlot);
+        }
+
+        public ChooseAction ParseChooseAction(string[] actionSplit)
+        {
+            if (actionSplit.Length != 2)
+            {
+                throw new ActionException("Choose actions needs 1 argument.");
+            }
+
+            int choiceIndex;
+            try
+            {
+                choiceIndex = Int32.Parse(actionSplit[1]);
+            }
+            catch
+            {
+                throw new ActionException("Invalid choose action argument type");
+            }
+
+            return new ChooseAction(choiceIndex);
         }
     }
 }

@@ -122,6 +122,7 @@ namespace HearthstoneGameModel.Core.Enums
 
 
         // Classic Druid
+        public const string PowerOfTheWild = "C105";
         public const string Bite = "C1XX";
 
         // Classic Rogue
@@ -146,6 +147,8 @@ namespace HearthstoneGameModel.Core.Enums
         public const string LaughingSister = "CU015";
         public const string YseraAwakens = "CU016";
         public const string EmeraldDrake = "CU017";
+
+        public const string Panther = "CU018";
 
         // Heroes
         public const string Priest = "hero_priest";

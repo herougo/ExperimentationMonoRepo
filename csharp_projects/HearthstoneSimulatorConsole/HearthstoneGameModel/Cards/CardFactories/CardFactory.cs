@@ -222,6 +222,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                 case CardIds.Deathwing:
                     return new Deathwing();
 
+                case CardIds.PowerOfTheWild:
+                    return new PowerOfTheWild();
                 case CardIds.Bite:
                     return new Bite();
 
@@ -262,6 +264,9 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new YseraAwakens();
                 case CardIds.EmeraldDrake:
                     return new EmeraldDrake();
+
+                case CardIds.Panther:
+                    return new Panther();
 
                 case CardIds.Priest:
                     return new Priest();

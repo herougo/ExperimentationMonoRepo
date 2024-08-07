@@ -11,6 +11,24 @@ namespace TextViewBasedTests.Integration.Cards.Classic
     public class ClassicDruidTests
     {
         [Fact]
+        public Task TestPowerOfTheWild()
+        {
+            string actionText = @"play 0
+choose 1
+end_turn
+play 0
+choose 1
+play 0
+choose 1
+play 0
+choose 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.PowerOfTheWild, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Druid);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestBite()
         {
             string actionText = @"play 0

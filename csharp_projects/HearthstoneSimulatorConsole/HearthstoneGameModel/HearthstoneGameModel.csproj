@@ -95,6 +95,7 @@
     <Compile Include="Effects\OneTimeEffects\AddEventSlotCopyToHand.cs" />
     <Compile Include="Effects\OneTimeEffects\BecomeMinionCopy.cs" />
     <Compile Include="Effects\OneTimeEffects\ChangeStats.cs" />
+    <Compile Include="Effects\OneTimeEffects\ChooseOne.cs" />
     <Compile Include="Effects\OneTimeEffects\DiscardCards.cs" />
     <Compile Include="Effects\OneTimeEffects\SilenceAndDealDamage.cs" />
     <Compile Include="Effects\OneTimeEffects\DestroyMinion.cs" />

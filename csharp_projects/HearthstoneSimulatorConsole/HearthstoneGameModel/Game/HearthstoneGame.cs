@@ -325,6 +325,31 @@ namespace HearthstoneGameModel.Game
             }
         }
 
+        public int GetChoiceFromAction(int numChoices, int player)
+        {
+            DecisionMaker decisionMaker = DecisionMakers[player];
+            while (true)
+            {
+                try
+                {
+                    IAction action = decisionMaker.GetAction();
+                    ChooseAction choiceAction = (ChooseAction)action;
+                    int choice = choiceAction.Choice;
+
+                    if (choice < 0 || numChoices <= choice)
+                    {
+                        throw new ActionException("choice is not one of the possible options");
+                    }
+
+                    return choice;
+                }
+                catch (ActionException ex)
+                {
+                    UIManager.LogError(ex.Message);
+                }
+            }
+        }
+
         public void DealDamage(CardSlot sourceSlot, List<BattlerCardSlot> targetSlots, int amount)
         {
             if (sourceSlot.CardType == CardType.Spell)

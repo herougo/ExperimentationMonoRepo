@@ -115,4 +115,23 @@ namespace HearthstoneGameModel.Game.Action
 
         public void Perform(HearthstoneGame game) { }
     }
+
+    public class ChooseAction : IAction
+    {
+        int _choice;
+
+        public ChooseAction(int choice)
+        {
+            _choice = choice;
+        }
+
+        public int Choice { get { return _choice; } }
+
+        public string ActionType
+        {
+            get { return Actions.Choose; }
+        }
+
+        public void Perform(HearthstoneGame game) { }
+    }
 }
