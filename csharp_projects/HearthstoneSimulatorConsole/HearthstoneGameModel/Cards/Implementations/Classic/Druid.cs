@@ -5,6 +5,7 @@ using HearthstoneGameModel.Effects.ContinuousEffects;
 using HearthstoneGameModel.Effects.OneTimeEffects;
 using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
 using HearthstoneGameModel.Selections;
+using HearthstoneGameModel.Selections.SlotSelections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,33 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _whenPlayedEffect = new ChooseOne(
                 new GiveEMEffect(SelectionConstants.AllFriendlyMinions, new Buff(1, 1)),
                 new SummonMinion(new Panther())
+            );
+        }
+
+        public override Card Copy()
+        {
+            return new PowerOfTheWild();
+        }
+    }
+
+    public class Wrath : SpellCard
+    {
+        public Wrath()
+        {
+            _cardId = CardIds.Wrath;
+            _name = "Wrath";
+            _hsClass = HSClass.Druid;
+            _mana = 2;
+            _collectible = true;
+
+            _school = SpellSchool.Nature;
+
+            _whenPlayedEffect = new ChooseOne(
+                new DealDamage(new SelectCharacterFrom(SelectionConstants.AllMinions), 3),
+                new OneTimeEffectSequence(new List<OneTimeEffect> { 
+                    new DealDamage(new SelectCharacterFrom(SelectionConstants.AllMinions), 1),
+                    new DrawCards(SelectionConstants.Player, 1)
+                })
             );
         }
 

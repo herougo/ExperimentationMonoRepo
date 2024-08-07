@@ -29,6 +29,24 @@ concede";
         }
 
         [Fact]
+        public Task TestWrath()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0
+choose 1
+select 0 0
+play 0
+choose 0
+select 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.Gruul, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.Wrath, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Druid);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestBite()
         {
             string actionText = @"play 0

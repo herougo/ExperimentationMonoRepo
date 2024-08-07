@@ -123,6 +123,7 @@ namespace HearthstoneGameModel.Core.Enums
 
         // Classic Druid
         public const string PowerOfTheWild = "C105";
+        public const string Wrath = "C106";
         public const string Bite = "C1XX";
 
         // Classic Rogue

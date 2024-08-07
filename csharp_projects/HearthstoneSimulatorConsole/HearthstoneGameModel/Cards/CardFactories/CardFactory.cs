@@ -224,6 +224,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
 
                 case CardIds.PowerOfTheWild:
                     return new PowerOfTheWild();
+                case CardIds.Wrath:
+                    return new Wrath();
                 case CardIds.Bite:
                     return new Bite();
 
