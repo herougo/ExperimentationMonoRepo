@@ -38,6 +38,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string WhenCardPlayed = "when_card_played";
         public const string MinionTransformed = "minion_transformed";
         public const string DamagePreparation = "damage_preparation";
+        public const string CardDiscarded = "card_discarded";
 
     }
 }

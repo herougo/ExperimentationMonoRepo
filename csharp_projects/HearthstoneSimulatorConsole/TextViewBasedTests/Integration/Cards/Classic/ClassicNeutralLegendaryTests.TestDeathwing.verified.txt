@@ -1,0 +1,241 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+0 summons Silver Hand Recruit
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+	------------
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+1 summons Silver Hand Recruit
+Opponent (1) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+	------------
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+Opponent (1) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+	------------
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+	------------
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+0 summons Silver Hand Recruit
+Opponent (1) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+	------------
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+	1: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+Opponent (1) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+	------------
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+	1: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Deathwing', Mana=10, 12 / 12)
+6: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+	------------
+	0: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+	1: CardSlot('Silver Hand Recruit', Mana=1, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+1 plays Deathwing
+Player 1 discarded Deathwing
+Player 0's HU002 died
+Player 0's HU002 died
+Player 1's HU002 died
+Player 1 discarded Deathwing
+Player 1 discarded Deathwing
+Player 1 discarded Coin
+Player 1 discarded Deathwing
+Player 1 discarded Deathwing
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+
+	0: CardSlot('Deathwing', Mana=10, 12 / 12)
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+Game Over: Player 0 Wins

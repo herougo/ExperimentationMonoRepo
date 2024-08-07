@@ -79,6 +79,7 @@ namespace HearthstoneGameModel.Selections
             new HandSelection(PlayerChoice.Player)
             & new CardTypeSelectionFilter(CardType.Spell)
         );
+        public static SlotSelection PlayerHand = new HandSelection(PlayerChoice.Player);
 
     }
 }

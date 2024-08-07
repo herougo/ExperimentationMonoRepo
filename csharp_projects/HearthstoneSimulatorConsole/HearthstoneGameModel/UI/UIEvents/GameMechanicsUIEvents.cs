@@ -173,4 +173,24 @@ namespace HearthstoneGameModel.UI.UIEvents
             get { return UIEventType.MinionReturnedToHand; }
         }
     }
+
+    public class CardDiscardedUIEvent : UIEvent
+    {
+        int _player;
+        string _cardName;
+
+        public CardDiscardedUIEvent(int player, string cardName)
+        {
+            _player = player;
+            _cardName = cardName;
+        }
+
+        public int Player { get { return _player; } }
+        public string CardName { get { return _cardName; } }
+
+        public override UIEventType EventType
+        {
+            get { return UIEventType.CardDiscarded; }
+        }
+    }
 }

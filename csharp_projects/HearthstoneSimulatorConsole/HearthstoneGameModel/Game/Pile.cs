@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using HearthstoneGameModel.Game.CardSlots;
 
 namespace HearthstoneGameModel.Game
@@ -49,6 +50,20 @@ namespace HearthstoneGameModel.Game
             CardSlot result = _data[index];
             _data.RemoveAt(index);
             return result;
+        }
+
+        public void PopByCardSlots(List<CardSlot> cardSlots)
+        {
+            HashSet<CardSlot> cardSlotHashSet = cardSlots.ToHashSet();
+
+            for (int i = Count - 1; i >= 0; i--)
+            {
+                CardSlot slot = this[i];
+                if (cardSlotHashSet.Contains(slot))
+                {
+                    Pop(i);
+                }
+            }
         }
 
         public CardSlot DrawCard()

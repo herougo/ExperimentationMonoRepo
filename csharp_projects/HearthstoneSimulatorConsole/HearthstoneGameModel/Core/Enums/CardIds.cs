@@ -118,6 +118,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string Malygos = "C101";
         public const string Onyxia = "C102";
         public const string Ysera = "C103";
+        public const string Deathwing = "C104";
 
 
         // Classic Druid

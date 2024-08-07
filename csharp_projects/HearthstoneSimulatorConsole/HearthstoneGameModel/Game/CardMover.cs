@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ContinuousEffects;
@@ -213,6 +214,33 @@ namespace HearthstoneGameModel.Game
             }
 
             KillMinions(toDie);
+        }
+
+        public void DiscardCards(List<CardSlot> cardSlots)
+        {
+            List<CardSlot> cardSlots0 = cardSlots.Where(x => x.Player == 0).ToList();
+            List<CardSlot> cardSlots1 = cardSlots.Where(x => x.Player == 1).ToList();
+
+            _game.Hands[0].PopByCardSlots(cardSlots0);
+            _game.Hands[1].PopByCardSlots(cardSlots1);
+            foreach (CardSlot cardSlot in cardSlots)
+            {
+                SendCardToLimbo(cardSlot);
+            }
+            
+            foreach (CardSlot cardSlot in cardSlots)
+            {
+                _game.UIManager.ReceiveUIEvent(
+                    new CardDiscardedUIEvent(cardSlot.Player, cardSlot.Card.Name)
+                );
+                _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.CardDiscarded, cardSlot));
+            }
+
+            foreach (CardSlot cardSlot in cardSlots)
+            {
+                _game.EffectManager.PopEffectsBySlot(cardSlot);
+                RemoveCardSlot(cardSlot);
+            }
         }
     }
 }

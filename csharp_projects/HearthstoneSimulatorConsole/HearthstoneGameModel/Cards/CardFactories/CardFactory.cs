@@ -219,6 +219,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Onyxia();
                 case CardIds.Ysera:
                     return new Ysera();
+                case CardIds.Deathwing:
+                    return new Deathwing();
 
                 case CardIds.Bite:
                     return new Bite();

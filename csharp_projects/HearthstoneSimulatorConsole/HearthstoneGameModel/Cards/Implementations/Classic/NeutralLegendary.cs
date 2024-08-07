@@ -554,4 +554,36 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Ysera();
         }
     }
+
+    public class Deathwing : MinionCard
+    {
+        public Deathwing()
+        {
+            _cardId = CardIds.Deathwing;
+            _name = "Deathwing";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 10;
+            _attack = 12;
+            _health = 12;
+
+            _tag = MinionTag.Dragon;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new Battlecry(new OneTimeEffectSequence(
+                    new List<OneTimeEffect>{
+                        new DestroyMinion(SelectionConstants.AllOtherMinions),
+                        new DiscardCards(SelectionConstants.PlayerHand)
+                    })
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new Deathwing();
+        }
+    }
 }

@@ -155,5 +155,10 @@ namespace TextView
         {
             LogText($"{cardName} returned to player {player}'s hand\n");
         }
+
+        public void LogCardDiscarded(int player, string cardName)
+        {
+            LogText($"Player {player} discarded {cardName}\n");
+        }
     }
 }

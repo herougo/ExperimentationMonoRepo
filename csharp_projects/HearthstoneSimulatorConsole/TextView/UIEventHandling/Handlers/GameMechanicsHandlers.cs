@@ -197,4 +197,23 @@ namespace TextView.UIEventHandling.Handlers
             _textUiManager.TextUILogger.LogGameState();
         }
     }
+
+    public class CardDiscardedUIEventHandler : UIEventHandler
+    {
+        CardDiscardedUIEvent _uiEvent;
+        TextUIManager _textUiManager;
+
+        public CardDiscardedUIEventHandler(
+            CardDiscardedUIEvent uiEvent, TextUIManager textUIManager
+        )
+        {
+            _uiEvent = uiEvent;
+            _textUiManager = textUIManager;
+        }
+
+        public override void Handle(HearthstoneGame game)
+        {
+            _textUiManager.TextUILogger.LogCardDiscarded(_uiEvent.Player, _uiEvent.CardName);
+        }
+    }
 }

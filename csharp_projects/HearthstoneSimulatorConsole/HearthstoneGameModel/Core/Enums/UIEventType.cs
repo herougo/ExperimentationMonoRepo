@@ -20,6 +20,7 @@ namespace HearthstoneGameModel.Core.Enums
         Attack = 7,
         MinionDied = 8,
         CardBurned = 9,
-        MinionReturnedToHand = 10
+        MinionReturnedToHand = 10,
+        CardDiscarded = 11
     }
 }

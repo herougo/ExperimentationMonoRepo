@@ -39,6 +39,8 @@ namespace TextView.UIEventHandling
                     return new CardBurnedUIEventHandler((CardBurnedUIEvent)uiEvent, textUiManager);
                 case UIEventType.MinionReturnedToHand:
                     return new MinionReturnedToHandUIEventHandler((MinionReturnedToHandUIEvent)uiEvent, textUiManager);
+                case UIEventType.CardDiscarded:
+                    return new CardDiscardedUIEventHandler((CardDiscardedUIEvent)uiEvent, textUiManager);
             }
             throw new NotImplementedException();
         }
