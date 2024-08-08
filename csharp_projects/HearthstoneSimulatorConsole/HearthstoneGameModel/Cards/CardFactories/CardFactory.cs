@@ -226,6 +226,11 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new PowerOfTheWild();
                 case CardIds.Wrath:
                     return new Wrath();
+                case CardIds.MarkOfNature:
+                    return new MarkOfNature();
+                case CardIds.SoulOfTheForest:
+                    return new SoulOfTheForest();
+
                 case CardIds.Bite:
                     return new Bite();
 
@@ -269,6 +274,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
 
                 case CardIds.Panther:
                     return new Panther();
+                case CardIds.TreantClassic:
+                    return new TreantClassic();
 
                 case CardIds.Priest:
                     return new Priest();

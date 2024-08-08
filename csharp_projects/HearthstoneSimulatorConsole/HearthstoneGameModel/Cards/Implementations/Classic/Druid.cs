@@ -3,6 +3,7 @@ using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ContinuousEffects;
 using HearthstoneGameModel.Effects.OneTimeEffects;
+using HearthstoneGameModel.Effects.TriggerEffects;
 using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
 using HearthstoneGameModel.Selections;
 using HearthstoneGameModel.Selections.SlotSelections;
@@ -61,6 +62,60 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new PowerOfTheWild();
+        }
+    }
+
+    public class MarkOfNature : SpellCard
+    {
+        public MarkOfNature()
+        {
+            _cardId = CardIds.MarkOfNature;
+            _name = "Mark of Nature";
+            _hsClass = HSClass.Druid;
+            _mana = 3;
+            _collectible = true;
+
+            _school = SpellSchool.Nature;
+
+            _whenPlayedEffect = new ChooseOne(
+                new ChangeAttack(new SelectCharacterFrom(SelectionConstants.AllMinions), 4),
+                new GiveEMEffect(
+                    new SelectCharacterFrom(SelectionConstants.AllMinions),
+                    new List<EMEffect>
+                    {
+                        new BuffHealth(4), new Taunt()
+                    }
+                )
+            );
+        }
+
+        public override Card Copy()
+        {
+            return new MarkOfNature();
+        }
+    }
+
+    public class SoulOfTheForest : SpellCard
+    {
+        public SoulOfTheForest()
+        {
+            _cardId = CardIds.SoulOfTheForest;
+            _name = "Soul of the Forest";
+            _hsClass = HSClass.Druid;
+            _mana = 3;
+            _collectible = true;
+
+            _school = SpellSchool.Nature;
+
+            _whenPlayedEffect = new GiveEMEffect(
+                SelectionConstants.AllFriendlyMinions,
+                new Deathrattle(new SummonMinion(new TreantClassic()))
+            );
+        }
+
+        public override Card Copy()
+        {
+            return new SoulOfTheForest();
         }
     }
 

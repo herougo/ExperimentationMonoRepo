@@ -405,4 +405,24 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Panther();
         }
     }
+
+    public class TreantClassic : MinionCard
+    {
+        public TreantClassic()
+        {
+            _cardId = CardIds.TreantClassic;
+            _name = "Treant";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 1;
+            _attack = 2;
+            _health = 2;
+        }
+
+        public override Card Copy()
+        {
+            return new TreantClassic();
+        }
+    }
 }

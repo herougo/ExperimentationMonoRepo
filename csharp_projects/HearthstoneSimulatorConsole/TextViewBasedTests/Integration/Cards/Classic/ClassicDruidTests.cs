@@ -47,6 +47,49 @@ concede";
         }
 
         [Fact]
+        public Task TestMarkOfNature()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0
+choose 1
+select 0 0
+play 0
+choose 0
+select 0 0
+hero_power
+attack -1 -1
+attack -1 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.Gruul, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.MarkOfNature, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Druid);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestSoulOfTheForest()
+        {
+            string actionText = @"play 0 0
+play 0 0
+end_turn
+play 0 0
+play 0 0
+play 0
+end_turn
+attack 0 1
+attack 0 0
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
+                CardIds.SoulOfTheForest, CardIds.SoulOfTheForest, CardIds.AngryChicken, CardIds.AngryChicken
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Druid);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestBite()
         {
             string actionText = @"play 0

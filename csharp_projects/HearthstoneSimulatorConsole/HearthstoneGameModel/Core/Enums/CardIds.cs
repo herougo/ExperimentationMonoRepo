@@ -124,6 +124,8 @@ namespace HearthstoneGameModel.Core.Enums
         // Classic Druid
         public const string PowerOfTheWild = "C105";
         public const string Wrath = "C106";
+        public const string MarkOfNature = "C107";
+        public const string SoulOfTheForest = "C108";
         public const string Bite = "C1XX";
 
         // Classic Rogue
@@ -150,6 +152,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string EmeraldDrake = "CU017";
 
         public const string Panther = "CU018";
+        public const string TreantClassic = "CU019";
 
         // Heroes
         public const string Priest = "hero_priest";
