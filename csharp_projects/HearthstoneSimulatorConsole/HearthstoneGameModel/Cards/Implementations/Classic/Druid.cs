@@ -1,4 +1,5 @@
-﻿using HearthstoneGameModel.Cards.CardTypes;
+﻿using HearthstoneGameModel.CardGeneration;
+using HearthstoneGameModel.Cards.CardTypes;
 using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ContinuousEffects;
@@ -116,6 +117,37 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new SoulOfTheForest();
+        }
+    }
+
+    public class DruidOfTheClaw : MinionCard
+    {
+        public DruidOfTheClaw()
+        {
+            _cardId = CardIds.DruidOfTheClaw;
+            _name = "Druid of the Claw";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 6;
+            _attack = 4;
+            _health = 6;
+
+            _inPlayEffects = new List<EMEffect> {
+                new ChooseOneTrigger(new ChooseOne(new List<OneTimeEffect> {
+                    new TransformInPlayMinion(
+                        SelectionConstants.OwnSelf,
+                        new ConstantCardGenerator(new DruidOfTheClawCatForm())),
+                    new TransformInPlayMinion(
+                        SelectionConstants.OwnSelf,
+                        new ConstantCardGenerator(new DruidOfTheClawBearForm()))
+                }))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new DruidOfTheClaw();
         }
     }
 

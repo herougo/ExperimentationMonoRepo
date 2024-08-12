@@ -90,6 +90,30 @@ concede";
         }
 
         [Fact]
+        public Task TestDruidOfTheClaw()
+        {
+            string actionText = @"play 0 0
+choose 1
+end_turn
+play 0 0
+play 0 0
+play 0 0
+end_turn
+play 0 1
+choose 0
+attack 1 -1
+attack 1 0
+end_turn
+attack 0 1
+attack 0 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.DruidOfTheClaw, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.AngryChicken, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Druid);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestBite()
         {
             string actionText = @"play 0

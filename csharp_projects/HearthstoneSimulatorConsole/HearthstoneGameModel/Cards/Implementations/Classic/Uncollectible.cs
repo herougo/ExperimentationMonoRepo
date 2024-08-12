@@ -425,4 +425,52 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new TreantClassic();
         }
     }
+
+    public class DruidOfTheClawBearForm : MinionCard
+    {
+        public DruidOfTheClawBearForm()
+        {
+            _cardId = CardIds.DruidOfTheClawBearForm;
+            _name = "Druid of the Claw";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 6;
+            _attack = 4;
+            _health = 9;
+
+            _tag = MinionTag.Beast;
+
+            _inPlayEffects = new List<EMEffect> { new Taunt() };
+        }
+
+        public override Card Copy()
+        {
+            return new DruidOfTheClawBearForm();
+        }
+    }
+
+    public class DruidOfTheClawCatForm : MinionCard
+    {
+        public DruidOfTheClawCatForm()
+        {
+            _cardId = CardIds.DruidOfTheClawCatForm;
+            _name = "Druid of the Claw";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 6;
+            _attack = 7;
+            _health = 6;
+
+            _tag = MinionTag.Beast;
+
+            _inPlayEffects = new List<EMEffect> { new Rush() };
+        }
+
+        public override Card Copy()
+        {
+            return new DruidOfTheClawCatForm();
+        }
+    }
 }

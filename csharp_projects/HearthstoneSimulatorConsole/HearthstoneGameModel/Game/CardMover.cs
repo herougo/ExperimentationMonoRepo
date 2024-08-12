@@ -65,6 +65,7 @@ namespace HearthstoneGameModel.Game
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionPutInPlay, cardSlot));
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.WhenCardPlayed, cardSlot));
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionBattlecry, cardSlot));
+            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionChooseOne, cardSlot));
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionSummoned, cardSlot));
         }
 

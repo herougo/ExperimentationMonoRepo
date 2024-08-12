@@ -93,6 +93,7 @@ Missing Tests
 - [ ] Minion copy and Murloc Warleader
 - [ ] Millhouse Manastorm not discount until next turn
 - [ ] Alexstrasza with 8 max HP
+- [ ] Deathrattle summoning where the minion died
 
 
 

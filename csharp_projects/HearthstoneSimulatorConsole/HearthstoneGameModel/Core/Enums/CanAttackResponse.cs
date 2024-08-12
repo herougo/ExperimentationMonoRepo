@@ -15,6 +15,7 @@ namespace HearthstoneGameModel.Core.Enums
         ZeroAttack = 4,
         DisobeysTaunt = 5,
         Frozen = 6,
-        CantAttackEffect = 7
+        CantAttackEffect = 7,
+        RushSleepAttackingFace = 8
     }
 }

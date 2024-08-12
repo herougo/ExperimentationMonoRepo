@@ -382,7 +382,7 @@ namespace HearthstoneGameModel.Game
 
         public EffectManagerNodePlan InPlayTransform(MinionCardSlot cardInPlay, Card transformFinalForm)
         {
-            CardSlot transformFinalFormSlot = transformFinalForm.CreateCardSlot(cardInPlay.Player, this);
+            MinionCardSlot transformFinalFormSlot = (MinionCardSlot)transformFinalForm.CreateCardSlot(cardInPlay.Player, this);
 
             // replace slot
             Battleboard.ReplaceCardSlot(cardInPlay, transformFinalFormSlot);
@@ -391,8 +391,8 @@ namespace HearthstoneGameModel.Game
             CardMover.RemoveCardSlot(cardInPlay);
 
             // In-play changes
-            EffectManager.AddInPlayEffects(cardInPlay);
-            cardInPlay.AddSleepEffectManagerNode();
+            EffectManager.AddInPlayEffects(transformFinalFormSlot);
+            transformFinalFormSlot.AddSleepEffectManagerNode();
 
             // other
             EffectManagerNodePlan plan = new EffectManagerNodePlan();

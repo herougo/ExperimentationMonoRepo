@@ -230,6 +230,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new MarkOfNature();
                 case CardIds.SoulOfTheForest:
                     return new SoulOfTheForest();
+                case CardIds.DruidOfTheClaw:
+                    return new DruidOfTheClaw();
 
                 case CardIds.Bite:
                     return new Bite();
@@ -276,6 +278,10 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Panther();
                 case CardIds.TreantClassic:
                     return new TreantClassic();
+                case CardIds.DruidOfTheClawBearForm:
+                    return new DruidOfTheClawBearForm();
+                case CardIds.DruidOfTheClawCatForm:
+                    return new DruidOfTheClawCatForm();
 
                 case CardIds.Priest:
                     return new Priest();

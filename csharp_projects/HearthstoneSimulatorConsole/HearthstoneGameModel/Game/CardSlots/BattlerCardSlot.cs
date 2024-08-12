@@ -26,6 +26,7 @@ namespace HearthstoneGameModel.Game.CardSlots
         public int NumTaunt = 0;
         public int NumElusive = 0;
         public int NumCantAttackEffect = 0;
+        public int NumRush = 0;
 
         public int TempDamageToTake = 0;
 
@@ -63,6 +64,11 @@ namespace HearthstoneGameModel.Game.CardSlots
             get { return NumCantAttackEffect > 0; }
         }
 
+        public bool HasRush
+        {
+            get { return NumRush > 0; }
+        }
+
         public int NumPossibleAttacksIgnoringFrozen
         {
             get
@@ -93,6 +99,10 @@ namespace HearthstoneGameModel.Game.CardSlots
                 else if (AttacksThisTurn >= NumPossibleAttacksIgnoringFrozen)
                 {
                     return CanAttackResponse.AttackedEnough;
+                }
+                else if (HasRush && Game.Battleboard.BoardLen(1 - Player) > 0)
+                {
+
                 }
                 else if (HasCharge)
                 {

@@ -117,7 +117,11 @@ namespace HearthstoneGameModel.Game.Action
                         throw new ActionException("attack disobeys taunt");
                     case CanAttackResponse.DefenderHasStealth:
                         throw new ActionException("defender cannot be attacked (stealth)");
+                    case CanAttackResponse.RushSleepAttackingFace:
+                        throw new ActionException("attacker with rush cannot attack face on the turn it's played");
+
                 }
+                throw new NotImplementedException();
             }
             return new AttackAction(attackerBattlerSlot, defenderBattlerSlot) ;
          }
@@ -142,6 +146,10 @@ namespace HearthstoneGameModel.Game.Action
             else if (defender.HasStealth)
             {
                 return CanAttackResponse.DefenderHasStealth;
+            }
+            else if (attacker.HasRush && attacker.HasSleep && defender.CardType == CardType.Hero)
+            {
+                return CanAttackResponse.RushSleepAttackingFace;
             }
 
             return CanAttackResponse.Yes;

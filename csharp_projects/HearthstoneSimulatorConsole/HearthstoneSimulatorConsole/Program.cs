@@ -6,8 +6,8 @@ using TextView;
 // List<string> cardIdList0 = Enumerable.Repeat(CardIds.DreadCorsair, 30).ToList();
 List<string> cardIdList0 = new List<string>
 {
-    CardIds.Bite, CardIds.Bite, CardIds.Bite, CardIds.Bite,
-    CardIds.Bite, CardIds.Bite, CardIds.Bite, CardIds.Deathwing
+    CardIds.DruidOfTheClaw, CardIds.DruidOfTheClaw, CardIds.DruidOfTheClaw, CardIds.DruidOfTheClaw,
+    CardIds.DruidOfTheClaw, CardIds.DruidOfTheClaw, CardIds.DruidOfTheClaw, CardIds.DruidOfTheClaw
 };
 string hsClass0 = "hero_druid";
 Decklist decklist0 = new Decklist(cardIdList0, hsClass0);
