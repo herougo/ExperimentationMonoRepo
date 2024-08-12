@@ -133,7 +133,8 @@ namespace HearthstoneGameModel.Core.Enums
         public const string KeeperOfTheGrove = "C113";
         public const string Starfall = "C114";
         public const string Nourish = "C115";
-
+        public const string ForceOfNature = "C116";
+        
 
         // Classic Rogue
         public const string EarthShock = "C3XX";

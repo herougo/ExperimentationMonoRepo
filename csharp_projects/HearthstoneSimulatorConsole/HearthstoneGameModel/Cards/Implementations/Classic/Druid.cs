@@ -297,4 +297,25 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Nourish();
         }
     }
+
+    public class ForceOfNature : SpellCard
+    {
+        public ForceOfNature()
+        {
+            _cardId = CardIds.ForceOfNature;
+            _name = "Force of Nature";
+            _hsClass = HSClass.Druid;
+            _mana = 5;
+            _collectible = true;
+
+            _school = SpellSchool.Nature;
+
+            _whenPlayedEffect = new NEffects(new SummonMinion(new TreantClassic()), 3);
+        }
+
+        public override Card Copy()
+        {
+            return new ForceOfNature();
+        }
+    }
 }

@@ -217,5 +217,15 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Druid);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestForceOfNature()
+        {
+            string actionText = @"play 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.ForceOfNature, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Druid);
+            return Verify(log);
+        }
     }
 }
