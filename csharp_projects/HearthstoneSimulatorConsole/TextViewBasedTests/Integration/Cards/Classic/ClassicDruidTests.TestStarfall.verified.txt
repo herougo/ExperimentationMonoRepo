@@ -1,0 +1,131 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Starfall', Mana=5)
+1: CardSlot('Starfall', Mana=5)
+2: CardSlot('Starfall', Mana=5)
+3: CardSlot('Starfall', Mana=5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+1: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+2: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+3: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+
+0 plays Mogushan Warden
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Starfall', Mana=5)
+1: CardSlot('Starfall', Mana=5)
+2: CardSlot('Starfall', Mana=5)
+3: CardSlot('Starfall', Mana=5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+
+Player (0) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+1: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+2: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+
+0 plays Mogushan Warden
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Starfall', Mana=5)
+1: CardSlot('Starfall', Mana=5)
+2: CardSlot('Starfall', Mana=5)
+3: CardSlot('Starfall', Mana=5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+	1: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+
+Player (0) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+1: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Starfall', Mana=5)
+1: CardSlot('Starfall', Mana=5)
+2: CardSlot('Starfall', Mana=5)
+3: CardSlot('Starfall', Mana=5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+	1: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+
+Player (0) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+1: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Starfall', Mana=5)
+1: CardSlot('Starfall', Mana=5)
+2: CardSlot('Starfall', Mana=5)
+3: CardSlot('Starfall', Mana=5)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Starfall', Mana=5)
+
+	------------
+	0: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+	1: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+
+Player (0) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+1: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+
+1 plays Starfall
+Opponent (1) - health: 30, armour: 0, mana: 5 / 10
+Weapon: None
+0: CardSlot('Starfall', Mana=5)
+1: CardSlot('Starfall', Mana=5)
+2: CardSlot('Starfall', Mana=5)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Starfall', Mana=5)
+
+	------------
+	0: CardSlot('Mogushan Warden', Mana=4, 1 / 2)
+	1: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+
+Player (0) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+1: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+
+1 plays Starfall
+Player 0's C029 died
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Starfall', Mana=5)
+1: CardSlot('Starfall', Mana=5)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Starfall', Mana=5)
+
+	------------
+	0: CardSlot('Mogushan Warden', Mana=4, 1 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+1: CardSlot('Mogushan Warden', Mana=4, 1 / 7)
+
+Game Over: Player 0 Wins

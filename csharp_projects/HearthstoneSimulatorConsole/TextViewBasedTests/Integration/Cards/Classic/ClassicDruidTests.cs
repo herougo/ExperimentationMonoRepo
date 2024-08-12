@@ -185,5 +185,23 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Druid);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestStarfall()
+        {
+            string actionText = @"play 0 0
+play 0 1
+end_turn
+play 0
+choose 0
+select 0 0
+play 0
+choose 1
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.MogushanWarden, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.Starfall, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Druid);
+            return Verify(log);
+        }
     }
 }

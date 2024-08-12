@@ -249,4 +249,28 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new KeeperOfTheGrove();
         }
     }
+
+    public class Starfall : SpellCard
+    {
+        public Starfall()
+        {
+            _cardId = CardIds.Starfall;
+            _name = "Starfall";
+            _hsClass = HSClass.Druid;
+            _mana = 5;
+            _collectible = true;
+
+            _school = SpellSchool.Arcane;
+
+            _whenPlayedEffect = new ChooseOne(
+                new DealDamage(new SelectCharacterFrom(SelectionConstants.AllMinions), 5),
+                new DealDamage(SelectionConstants.OtherLivingEnemyMinions, 2)
+            );
+        }
+
+        public override Card Copy()
+        {
+            return new Starfall();
+        }
+    }
 }
