@@ -232,6 +232,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new SoulOfTheForest();
                 case CardIds.DruidOfTheClaw:
                     return new DruidOfTheClaw();
+                case CardIds.GiftOfTheWild:
+                    return new GiftOfTheWild();
 
                 case CardIds.Bite:
                     return new Bite();

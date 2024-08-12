@@ -114,6 +114,26 @@ concede";
         }
 
         [Fact]
+        public Task TestGiftOfTheWild()
+        {
+            string actionText = @"play 0 0
+play 0 0
+play 0
+end_turn
+hero_power
+attack -1 -1
+attack -1 0
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
+                CardIds.AngryChicken, CardIds.GiftOfTheWild, CardIds.AngryChicken, CardIds.AngryChicken
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Druid);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestBite()
         {
             string actionText = @"play 0

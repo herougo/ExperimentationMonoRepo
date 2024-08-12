@@ -151,6 +151,30 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class GiftOfTheWild : SpellCard
+    {
+        public GiftOfTheWild()
+        {
+            _cardId = CardIds.GiftOfTheWild;
+            _name = "Gift of the Wild";
+            _hsClass = HSClass.Druid;
+            _mana = 8;
+            _collectible = true;
+
+            _school = SpellSchool.Nature;
+
+            _whenPlayedEffect = new GiveEMEffect(
+                SelectionConstants.AllFriendlyMinions,
+                new List<EMEffect> { new Buff(2, 2), new Taunt() }
+            );
+        }
+
+        public override Card Copy()
+        {
+            return new GiftOfTheWild();
+        }
+    }
+
     public class Bite : SpellCard
     {
         public Bite()
