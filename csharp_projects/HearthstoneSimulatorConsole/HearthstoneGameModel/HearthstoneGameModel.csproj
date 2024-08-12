@@ -229,6 +229,7 @@
     <Compile Include="Values\HandSizeIntValue.cs" />
     <Compile Include="Values\IIntValue.cs" />
     <Compile Include="Values\BattleboardMinionsIntValue.cs" />
+    <Compile Include="Values\PlayerAttackIntValue.cs" />
     <Compile Include="Values\OwnWeaponAttackIntValue.cs" />
   </ItemGroup>
   <ItemGroup />

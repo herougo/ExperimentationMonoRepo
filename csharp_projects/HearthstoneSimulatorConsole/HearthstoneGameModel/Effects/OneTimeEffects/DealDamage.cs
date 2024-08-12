@@ -8,22 +8,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Values;
 
 namespace HearthstoneGameModel.Effects.OneTimeEffects
 {
     public class DealDamage : OneTimeEffect
     {
         SlotSelection _selection;
-        int _amount;
+        IIntValue _amount;
 
         public DealDamage(SlotSelection selection, int amount)
         {
             _selection = selection;
-            _amount = amount;
+            _amount = new ConstIntValue(amount);
             if (amount <= 0)
             {
                 throw new ArgumentException("amount must be positive");
             }
+        }
+
+        public DealDamage(SlotSelection selection, IIntValue amount)
+        {
+            _selection = selection;
+            _amount = amount;
         }
 
         public override EffectManagerNodePlan Execute(
@@ -33,7 +40,8 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
             List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
             List<BattlerCardSlot> typedSelectedCardSlots = selectedCardSlots.Select(x => (BattlerCardSlot)x).ToList();
 
-            game.DealDamage(affectedCardSlot, typedSelectedCardSlots, _amount);
+            int amountValue = _amount.Get(game, affectedCardSlot);
+            game.DealDamage(affectedCardSlot, typedSelectedCardSlots, amountValue);
 
             return null;
         }

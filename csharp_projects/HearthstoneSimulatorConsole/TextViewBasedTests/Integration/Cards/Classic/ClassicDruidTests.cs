@@ -134,6 +134,25 @@ concede";
         }
 
         [Fact]
+        public Task TestSavagery()
+        {
+            string actionText = @"play 0 0
+play 0 0
+hero_power
+play 0
+select 0 -1
+select 0 0
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
+                CardIds.AngryChicken, CardIds.Savagery, CardIds.Shieldbearer, CardIds.Shieldbearer
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Druid);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestBite()
         {
             string actionText = @"play 0

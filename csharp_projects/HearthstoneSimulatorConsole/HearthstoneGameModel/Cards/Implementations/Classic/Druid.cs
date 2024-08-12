@@ -8,6 +8,7 @@ using HearthstoneGameModel.Effects.TriggerEffects;
 using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
 using HearthstoneGameModel.Selections;
 using HearthstoneGameModel.Selections.SlotSelections;
+using HearthstoneGameModel.Values;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -172,6 +173,28 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new GiftOfTheWild();
+        }
+    }
+
+    public class Savagery : SpellCard
+    {
+        public Savagery()
+        {
+            _cardId = CardIds.Savagery;
+            _name = "Savagery";
+            _hsClass = HSClass.Druid;
+            _mana = 1;
+            _collectible = true;
+
+            _whenPlayedEffect = new DealDamage(
+                new SelectCharacterFrom(SelectionConstants.AllMinions),
+                new PlayerAttackIntValue()
+            );
+        }
+
+        public override Card Copy()
+        {
+            return new Savagery();
         }
     }
 
