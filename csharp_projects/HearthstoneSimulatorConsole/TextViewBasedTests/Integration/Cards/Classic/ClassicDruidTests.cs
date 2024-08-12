@@ -203,5 +203,19 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Druid);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestNourish()
+        {
+            string actionText = @"play 0
+choose 0
+play 0
+choose 1
+hero_power
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.Nourish, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Druid);
+            return Verify(log);
+        }
     }
 }

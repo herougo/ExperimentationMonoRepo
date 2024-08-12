@@ -242,6 +242,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new KeeperOfTheGrove();
                 case CardIds.Starfall:
                     return new Starfall();
+                case CardIds.Nourish:
+                    return new Nourish();
 
                 case CardIds.EarthShock:
                     return new EarthShock();

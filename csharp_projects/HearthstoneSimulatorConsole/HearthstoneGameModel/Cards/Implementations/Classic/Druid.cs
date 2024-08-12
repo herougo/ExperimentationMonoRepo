@@ -273,4 +273,28 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Starfall();
         }
     }
+
+    public class Nourish : SpellCard
+    {
+        public Nourish()
+        {
+            _cardId = CardIds.Nourish;
+            _name = "Nourish";
+            _hsClass = HSClass.Druid;
+            _mana = 5;
+            _collectible = true;
+
+            _school = SpellSchool.Nature;
+
+            _whenPlayedEffect = new ChooseOne(
+                new GainManaCrystals(SelectionConstants.Player, 2),
+                new DrawCards(SelectionConstants.Player, 3)
+            );
+        }
+
+        public override Card Copy()
+        {
+            return new Nourish();
+        }
+    }
 }
