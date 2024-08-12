@@ -136,6 +136,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string ForceOfNature = "C116";
         public const string AncientOfLore = "C117";
         public const string AncientOfWar = "C118";
+        public const string Cenarius = "C119";
 
 
         // Classic Rogue
@@ -165,6 +166,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string TreantClassic = "CU019";
         public const string DruidOfTheClawBearForm = "CU020";
         public const string DruidOfTheClawCatForm = "CU021";
+        public const string TreantClassicTaunt = "CU022";
 
         // Heroes
         public const string Priest = "hero_priest";

@@ -375,4 +375,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new AncientOfWar();
         }
     }
+
+    public class Cenarius : MinionCard
+    {
+        public Cenarius()
+        {
+            _cardId = CardIds.Cenarius;
+            _name = "Cenarius";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 8;
+            _attack = 5;
+            _health = 8;
+
+            _inPlayEffects = new List<EMEffect> {
+                new ChooseOneTrigger(new ChooseOne(new List<OneTimeEffect> {
+                    new GiveEMEffect(SelectionConstants.AllOtherFriendlyMinions, new Buff(2, 2)),
+                    new NEffects(new SummonMinion(new TreantClassicTaunt()), 2)
+                }))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new Cenarius();
+        }
+    }
 }

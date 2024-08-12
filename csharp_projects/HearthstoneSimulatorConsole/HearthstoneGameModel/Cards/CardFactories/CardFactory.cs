@@ -250,6 +250,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new AncientOfLore();
                 case CardIds.AncientOfWar:
                     return new AncientOfWar();
+                case CardIds.Cenarius:
+                    return new Cenarius();
 
                 case CardIds.EarthShock:
                     return new EarthShock();
@@ -297,6 +299,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new DruidOfTheClawBearForm();
                 case CardIds.DruidOfTheClawCatForm:
                     return new DruidOfTheClawCatForm();
+                case CardIds.TreantClassicTaunt:
+                    return new TreantClassicTaunt();
 
                 case CardIds.Priest:
                     return new Priest();

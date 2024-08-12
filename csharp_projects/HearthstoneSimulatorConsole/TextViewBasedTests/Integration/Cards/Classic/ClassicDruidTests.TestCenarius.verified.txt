@@ -1,0 +1,196 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+3: CardSlot('Cenarius', Mana=8, 5 / 8)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+3: CardSlot('Cenarius', Mana=8, 5 / 8)
+
+0 plays Cenarius
+0 summons Treant
+0 summons Treant
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+3: CardSlot('Cenarius', Mana=8, 5 / 8)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Cenarius', Mana=8, 5 / 8)
+	1: CardSlot('Treant', Mana=1, 2 / 2)
+	2: CardSlot('Treant', Mana=1, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+3: CardSlot('Cenarius', Mana=8, 5 / 8)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Cenarius', Mana=8, 5 / 8)
+	1: CardSlot('Treant', Mana=1, 2 / 2)
+	2: CardSlot('Treant', Mana=1, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+3: CardSlot('Cenarius', Mana=8, 5 / 8)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Cenarius', Mana=8, 5 / 8)
+
+	------------
+	0: CardSlot('Cenarius', Mana=8, 5 / 8)
+	1: CardSlot('Treant', Mana=1, 2 / 2)
+	2: CardSlot('Treant', Mana=1, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+
+Opponent (1) - health: 30, armour: 1, mana: 8 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+3: CardSlot('Cenarius', Mana=8, 5 / 8)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Cenarius', Mana=8, 5 / 8)
+
+	------------
+	0: CardSlot('Cenarius', Mana=8, 5 / 8)
+	1: CardSlot('Treant', Mana=1, 2 / 2)
+	2: CardSlot('Treant', Mana=1, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+
+ERROR: attack disobeys taunt
+ERROR: attack disobeys taunt
+CardSlot('Druid', Mana=0)
+	attacks CardSlot('Treant', Mana=1, 2 / 2)
+Opponent (1) - health: 29, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+3: CardSlot('Cenarius', Mana=8, 5 / 8)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Cenarius', Mana=8, 5 / 8)
+
+	------------
+	0: CardSlot('Cenarius', Mana=8, 5 / 8)
+	1: CardSlot('Treant', Mana=1, 2 / 1)
+	2: CardSlot('Treant', Mana=1, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+
+Opponent (1) - health: 29, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+3: CardSlot('Cenarius', Mana=8, 5 / 8)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Cenarius', Mana=8, 5 / 8)
+
+	------------
+	0: CardSlot('Cenarius', Mana=8, 5 / 8)
+	1: CardSlot('Treant', Mana=1, 2 / 1)
+	2: CardSlot('Treant', Mana=1, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 29, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+3: CardSlot('Cenarius', Mana=8, 5 / 8)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Cenarius', Mana=8, 5 / 8)
+
+	------------
+	0: CardSlot('Cenarius', Mana=8, 5 / 8)
+	1: CardSlot('Treant', Mana=1, 2 / 1)
+	2: CardSlot('Treant', Mana=1, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+3: CardSlot('Cenarius', Mana=8, 5 / 8)
+
+0 plays Cenarius
+Opponent (1) - health: 29, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+3: CardSlot('Cenarius', Mana=8, 5 / 8)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Cenarius', Mana=8, 5 / 8)
+
+	------------
+	0: CardSlot('Cenarius', Mana=8, 5 / 8)
+	1: CardSlot('Cenarius', Mana=8, 7 / 10)
+	2: CardSlot('Treant', Mana=1, 4 / 3)
+	3: CardSlot('Treant', Mana=1, 4 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Cenarius', Mana=8, 5 / 8)
+1: CardSlot('Cenarius', Mana=8, 5 / 8)
+2: CardSlot('Cenarius', Mana=8, 5 / 8)
+
+Game Over: Player 1 Wins

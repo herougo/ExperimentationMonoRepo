@@ -473,4 +473,26 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new DruidOfTheClawCatForm();
         }
     }
+
+    public class TreantClassicTaunt : MinionCard
+    {
+        public TreantClassicTaunt()
+        {
+            _cardId = CardIds.TreantClassicTaunt;
+            _name = "Treant";
+            _hsClass = HeroClass.Neutral;
+            _collectible = false;
+
+            _mana = 1;
+            _attack = 2;
+            _health = 2;
+
+            _inPlayEffects = new List<EMEffect> { new Taunt() };
+        }
+
+        public override Card Copy()
+        {
+            return new TreantClassicTaunt();
+        }
+    }
 }

@@ -264,5 +264,24 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Druid);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestCenarius()
+        {
+            string actionText = @"play 0 0
+choose 1
+end_turn
+hero_power
+attack -1 -1
+attack -1 0
+attack -1 1
+end_turn
+play 0 0
+choose 0
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.Cenarius, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Druid);
+            return Verify(log);
+        }
     }
 }
