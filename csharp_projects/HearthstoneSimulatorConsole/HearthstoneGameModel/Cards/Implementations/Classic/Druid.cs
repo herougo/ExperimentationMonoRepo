@@ -345,4 +345,34 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new AncientOfLore();
         }
     }
+
+    public class AncientOfWar : MinionCard
+    {
+        public AncientOfWar()
+        {
+            _cardId = CardIds.AncientOfWar;
+            _name = "Ancient of War";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 7;
+            _attack = 5;
+            _health = 5;
+
+            _inPlayEffects = new List<EMEffect> {
+                new ChooseOneTrigger(new ChooseOne(new List<OneTimeEffect> {
+                    new ChangeAttack(SelectionConstants.OwnSelf, 5),
+                    new GiveEMEffect(SelectionConstants.OwnSelf, new List<EMEffect>
+                    {
+                        new BuffHealth(5), new Taunt()
+                    })
+                }))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new AncientOfWar();
+        }
+    }
 }

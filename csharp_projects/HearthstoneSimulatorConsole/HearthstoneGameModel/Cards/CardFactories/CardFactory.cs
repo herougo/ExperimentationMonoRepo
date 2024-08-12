@@ -248,6 +248,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new ForceOfNature();
                 case CardIds.AncientOfLore:
                     return new AncientOfLore();
+                case CardIds.AncientOfWar:
+                    return new AncientOfWar();
 
                 case CardIds.EarthShock:
                     return new EarthShock();

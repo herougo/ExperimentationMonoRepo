@@ -1,0 +1,136 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ancient of War', Mana=7, 5 / 5)
+1: CardSlot('Ancient of War', Mana=7, 5 / 5)
+2: CardSlot('Ancient of War', Mana=7, 5 / 5)
+3: CardSlot('Ancient of War', Mana=7, 5 / 5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Ancient of War', Mana=7, 5 / 5)
+1: CardSlot('Ancient of War', Mana=7, 5 / 5)
+2: CardSlot('Ancient of War', Mana=7, 5 / 5)
+3: CardSlot('Ancient of War', Mana=7, 5 / 5)
+
+0 plays Ancient of War
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ancient of War', Mana=7, 5 / 5)
+1: CardSlot('Ancient of War', Mana=7, 5 / 5)
+2: CardSlot('Ancient of War', Mana=7, 5 / 5)
+3: CardSlot('Ancient of War', Mana=7, 5 / 5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Ancient of War', Mana=7, 5 / 10)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Ancient of War', Mana=7, 5 / 5)
+1: CardSlot('Ancient of War', Mana=7, 5 / 5)
+2: CardSlot('Ancient of War', Mana=7, 5 / 5)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ancient of War', Mana=7, 5 / 5)
+1: CardSlot('Ancient of War', Mana=7, 5 / 5)
+2: CardSlot('Ancient of War', Mana=7, 5 / 5)
+3: CardSlot('Ancient of War', Mana=7, 5 / 5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Ancient of War', Mana=7, 5 / 10)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Ancient of War', Mana=7, 5 / 5)
+1: CardSlot('Ancient of War', Mana=7, 5 / 5)
+2: CardSlot('Ancient of War', Mana=7, 5 / 5)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Ancient of War', Mana=7, 5 / 5)
+1: CardSlot('Ancient of War', Mana=7, 5 / 5)
+2: CardSlot('Ancient of War', Mana=7, 5 / 5)
+3: CardSlot('Ancient of War', Mana=7, 5 / 5)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Ancient of War', Mana=7, 5 / 5)
+
+	------------
+	0: CardSlot('Ancient of War', Mana=7, 5 / 10)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Ancient of War', Mana=7, 5 / 5)
+1: CardSlot('Ancient of War', Mana=7, 5 / 5)
+2: CardSlot('Ancient of War', Mana=7, 5 / 5)
+
+1 plays Ancient of War
+Opponent (1) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Ancient of War', Mana=7, 5 / 5)
+1: CardSlot('Ancient of War', Mana=7, 5 / 5)
+2: CardSlot('Ancient of War', Mana=7, 5 / 5)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Ancient of War', Mana=7, 5 / 5)
+
+	0: CardSlot('Ancient of War', Mana=7, 10 / 5)
+	------------
+	0: CardSlot('Ancient of War', Mana=7, 5 / 10)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Ancient of War', Mana=7, 5 / 5)
+1: CardSlot('Ancient of War', Mana=7, 5 / 5)
+2: CardSlot('Ancient of War', Mana=7, 5 / 5)
+
+Opponent (1) - health: 30, armour: 1, mana: 1 / 10
+Weapon: None
+0: CardSlot('Ancient of War', Mana=7, 5 / 5)
+1: CardSlot('Ancient of War', Mana=7, 5 / 5)
+2: CardSlot('Ancient of War', Mana=7, 5 / 5)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Ancient of War', Mana=7, 5 / 5)
+
+	0: CardSlot('Ancient of War', Mana=7, 10 / 5)
+	------------
+	0: CardSlot('Ancient of War', Mana=7, 5 / 10)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Ancient of War', Mana=7, 5 / 5)
+1: CardSlot('Ancient of War', Mana=7, 5 / 5)
+2: CardSlot('Ancient of War', Mana=7, 5 / 5)
+
+ERROR: attack disobeys taunt
+CardSlot('Druid', Mana=0)
+	attacks CardSlot('Ancient of War', Mana=7, 5 / 10)
+Opponent (1) - health: 26, armour: 0, mana: 1 / 10
+Weapon: None
+0: CardSlot('Ancient of War', Mana=7, 5 / 5)
+1: CardSlot('Ancient of War', Mana=7, 5 / 5)
+2: CardSlot('Ancient of War', Mana=7, 5 / 5)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Ancient of War', Mana=7, 5 / 5)
+
+	0: CardSlot('Ancient of War', Mana=7, 10 / 5)
+	------------
+	0: CardSlot('Ancient of War', Mana=7, 5 / 9)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Ancient of War', Mana=7, 5 / 5)
+1: CardSlot('Ancient of War', Mana=7, 5 / 5)
+2: CardSlot('Ancient of War', Mana=7, 5 / 5)
+
+Game Over: Player 0 Wins
