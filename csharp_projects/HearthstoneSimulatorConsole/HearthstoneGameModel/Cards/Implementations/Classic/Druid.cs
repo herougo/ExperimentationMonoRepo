@@ -318,4 +318,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new ForceOfNature();
         }
     }
+
+    public class AncientOfLore : MinionCard
+    {
+        public AncientOfLore()
+        {
+            _cardId = CardIds.AncientOfLore;
+            _name = "Ancient of Lore";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 7;
+            _attack = 7;
+            _health = 7;
+
+            _inPlayEffects = new List<EMEffect> {
+                new ChooseOneTrigger(new ChooseOne(new List<OneTimeEffect> {
+                    new DrawCards(SelectionConstants.Player, 2),
+                    new Heal(new SelectCharacterFrom(SelectionConstants.AllOtherCharacters), 7)
+                }))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new AncientOfLore();
+        }
+    }
 }

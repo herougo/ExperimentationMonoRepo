@@ -1,0 +1,185 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+1: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+2: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+3: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+
+0 plays Ancient of Lore
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+1: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+2: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+3: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+4: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+1: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+2: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+3: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+4: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Deathwing', Mana=10, 12 / 12)
+1: CardSlot('Deathwing', Mana=10, 12 / 12)
+2: CardSlot('Deathwing', Mana=10, 12 / 12)
+3: CardSlot('Deathwing', Mana=10, 12 / 12)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Deathwing', Mana=10, 12 / 12)
+
+	------------
+	0: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+1: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+2: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+3: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+4: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+
+1 plays Deathwing
+Player 1 discarded Deathwing
+Player 0's C117 died
+Player 1 discarded Deathwing
+Player 1 discarded Deathwing
+Player 1 discarded Coin
+Player 1 discarded Deathwing
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+
+	0: CardSlot('Deathwing', Mana=10, 12 / 12)
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+1: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+2: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+3: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+4: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+
+	0: CardSlot('Deathwing', Mana=10, 12 / 12)
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 3 / 10
+Weapon: None
+0: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+1: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+2: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+3: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+4: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+
+	0: CardSlot('Deathwing', Mana=10, 12 / 12)
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+1: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+2: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+3: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+4: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+5: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+
+	0: CardSlot('Deathwing', Mana=10, 12 / 12)
+	------------
+
+Player (0) - health: 30, armour: 1, mana: 8 / 10
+Weapon: None
+0: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+1: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+2: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+3: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+4: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+5: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+
+CardSlot('Druid', Mana=0)
+	attacks CardSlot('Deathwing', Mana=10, 12 / 12)
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+
+	0: CardSlot('Deathwing', Mana=10, 12 / 11)
+	------------
+
+Player (0) - health: 19, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+1: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+2: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+3: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+4: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+5: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+
+0 plays Ancient of Lore
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+
+	0: CardSlot('Deathwing', Mana=10, 12 / 11)
+	------------
+	0: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+
+Player (0) - health: 26, armour: 0, mana: 1 / 10
+Weapon: None
+0: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+1: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+2: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+3: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+4: CardSlot('Ancient of Lore', Mana=7, 7 / 7)
+
+Game Over: Player 1 Wins

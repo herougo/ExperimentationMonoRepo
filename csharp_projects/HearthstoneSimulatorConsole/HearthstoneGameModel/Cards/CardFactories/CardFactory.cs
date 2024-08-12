@@ -246,6 +246,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Nourish();
                 case CardIds.ForceOfNature:
                     return new ForceOfNature();
+                case CardIds.AncientOfLore:
+                    return new AncientOfLore();
 
                 case CardIds.EarthShock:
                     return new EarthShock();
