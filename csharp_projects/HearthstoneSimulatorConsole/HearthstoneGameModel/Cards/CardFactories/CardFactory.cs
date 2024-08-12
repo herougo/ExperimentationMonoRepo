@@ -238,6 +238,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Savagery();
                 case CardIds.Bite:
                     return new Bite();
+                case CardIds.KeeperOfTheGrove:
+                    return new KeeperOfTheGrove();
 
                 case CardIds.EarthShock:
                     return new EarthShock();

@@ -165,5 +165,25 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Druid);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestKeeperOfTheGrove()
+        {
+            string actionText = @"play 0 0
+end_turn
+play 0 0
+choose 0
+select 0 -1
+play 0 0
+choose 1
+select 0 0
+hero_power
+attack -1 -1
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.Shieldbearer, 30).ToList();
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.KeeperOfTheGrove, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Druid);
+            return Verify(log);
+        }
     }
 }

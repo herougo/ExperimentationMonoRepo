@@ -222,4 +222,31 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Bite();
         }
     }
+
+    public class KeeperOfTheGrove : MinionCard
+    {
+        public KeeperOfTheGrove()
+        {
+            _cardId = CardIds.KeeperOfTheGrove;
+            _name = "Keeper of the Grove";
+            _hsClass = HeroClass.Neutral;
+            _collectible = true;
+
+            _mana = 4;
+            _attack = 2;
+            _health = 4;
+
+            _inPlayEffects = new List<EMEffect> {
+                new ChooseOneTrigger(new ChooseOne(new List<OneTimeEffect> {
+                    new DealDamage(new SelectCharacterFrom(SelectionConstants.AllCharacters), 2),
+                    new Silence(new SelectCharacterFrom(SelectionConstants.AllOtherMinions))
+                }))
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new KeeperOfTheGrove();
+        }
+    }
 }

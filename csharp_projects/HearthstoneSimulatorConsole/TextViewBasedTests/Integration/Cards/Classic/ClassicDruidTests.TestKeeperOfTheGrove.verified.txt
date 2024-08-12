@@ -1,0 +1,154 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+1: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+2: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+3: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+3: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+0 plays Shieldbearer
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+1: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+2: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+3: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 9 / 10
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+1: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+2: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+3: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 9 / 10
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+1: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+2: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+3: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+
+	------------
+	0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Player (0) - health: 30, armour: 0, mana: 9 / 10
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+1 plays Keeper of the Grove
+Opponent (1) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+1: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+2: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+
+	0: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+	------------
+	0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Player (0) - health: 28, armour: 0, mana: 9 / 10
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+1 plays Keeper of the Grove
+Opponent (1) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+1: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+
+	0: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+	1: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+	------------
+	0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Player (0) - health: 28, armour: 0, mana: 9 / 10
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Opponent (1) - health: 30, armour: 1, mana: 0 / 10
+Weapon: None
+0: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+1: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+
+	0: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+	1: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+	------------
+	0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Player (0) - health: 28, armour: 0, mana: 9 / 10
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+CardSlot('Druid', Mana=0)
+	attacks CardSlot('Druid', Mana=0)
+Opponent (1) - health: 30, armour: 1, mana: 0 / 10
+Weapon: None
+0: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+1: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+
+	0: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+	1: CardSlot('Keeper of the Grove', Mana=4, 2 / 4)
+	------------
+	0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Player (0) - health: 27, armour: 0, mana: 9 / 10
+Weapon: None
+0: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+1: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+2: CardSlot('Shieldbearer', Mana=1, 0 / 4)
+
+Game Over: Player 0 Wins
