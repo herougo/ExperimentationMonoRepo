@@ -129,7 +129,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string DruidOfTheClaw = "C109";
         public const string GiftOfTheWild = "C110";
         public const string Savagery = "C111";
-        public const string Bite = "C1XX";
+        public const string Bite = "C112";
 
         // Classic Rogue
         public const string EarthShock = "C3XX";
