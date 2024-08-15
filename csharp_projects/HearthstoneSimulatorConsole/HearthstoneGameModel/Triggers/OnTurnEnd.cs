@@ -8,43 +8,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Triggers;
 
-namespace HearthstoneGameModel.Effects.TriggerEffects
+namespace HearthstoneGameModel.Triggers
 {
-    public class OnTurnEnd : TriggerEffect
+    public class OnTurnEnd : Trigger
     {
         PlayerChoice _playerChoice;
 
-        public OnTurnEnd(OneTimeEffect effect, PlayerChoice playerChoice)
-            : base(effect)
+        public OnTurnEnd(PlayerChoice playerChoice)
         {
             _eventsReceived = new List<string> { EffectEvent.EndTurn };
             _playerChoice = playerChoice;
         }
 
-        public OnTurnEnd(OneTimeEffect effect)
-            : base(effect)
+        public OnTurnEnd()
         {
             _eventsReceived = new List<string> { EffectEvent.EndTurn };
             _playerChoice = PlayerChoice.Player;
         }
 
-        public override EffectManagerNodePlan SendEvent(
+        public override bool ShouldRun(
             string effectEvent, HearthstoneGame game,
             EffectManagerNode emNode, List<CardSlot> eventSlots)
         {
-            CheckValidEvent(effectEvent);
-            if (HSGameUtils.IsPlayerAffected(emNode.AffectedSlot.Player, game.GameMetadata.Turn, _playerChoice))
-            {
-                EffectManagerNodePlan result = _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot, eventSlots);
-                return result;
-            }
-            return null;
+            return HSGameUtils.IsPlayerAffected(emNode.AffectedSlot.Player, game.GameMetadata.Turn, _playerChoice);
         }
 
-        public override EMEffect Copy()
+        public override Trigger Copy()
         {
-            return new OnTurnEnd(_effect.Copy(), _playerChoice);
+            return new OnTurnEnd(_playerChoice);
         }
     }
 }

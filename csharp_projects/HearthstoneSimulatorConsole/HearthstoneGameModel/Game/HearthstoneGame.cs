@@ -13,7 +13,7 @@ using HearthstoneGameModel.Cards;
 using HearthstoneGameModel.Game.EffectManagement;
 using HearthstoneGameModel.UI;
 using HearthstoneGameModel.UI.UIEvents;
-using HearthstoneGameModel.Effects.TriggerEffects;
+using HearthstoneGameModel.Triggers;
 using HearthstoneGameModel.Effects.OneTimeEffects;
 using HearthstoneGameModel.Selections;
 using HearthstoneGameModel.Effects;
@@ -133,11 +133,26 @@ namespace HearthstoneGameModel.Game
 
         private void addBasePlayerEffects(int player)
         {
-            EMEffect drawEffect = new OnTurnStart(new DrawCards(SelectionConstants.Player, 1));
-            EMEffect gainManaEffect = new OnTurnStart(new GainManaCrystals(SelectionConstants.Player, 1));
-            EMEffect refreshManaEffect = new OnTurnStart(new RefreshAllManaCrystals(SelectionConstants.Player));
-            EMEffect refreshMinionAttacks = new OnTurnEnd(new RefreshAttacks(SelectionConstants.AllFriendlyCharacters));
-            EMEffect refreshHeroPower = new OnTurnEnd(new RefreshHeroPower(SelectionConstants.Player));
+            EMEffect drawEffect = new TriggerEffect(
+                new OnTurnStart(),
+                new DrawCards(SelectionConstants.Player, 1)
+            );
+            EMEffect gainManaEffect = new TriggerEffect(
+                new OnTurnStart(),
+                new GainManaCrystals(SelectionConstants.Player, 1)
+            );
+            EMEffect refreshManaEffect = new TriggerEffect(
+                new OnTurnStart(),
+                new RefreshAllManaCrystals(SelectionConstants.Player)
+            );
+            EMEffect refreshMinionAttacks = new TriggerEffect(
+                new OnTurnEnd(),
+                new RefreshAttacks(SelectionConstants.AllFriendlyCharacters)
+            );
+            EMEffect refreshHeroPower = new TriggerEffect(
+                    new OnTurnEnd(),
+                    new RefreshHeroPower(SelectionConstants.Player)
+            );
 
             List<EMEffect> effects = new List<EMEffect> {
                 drawEffect, gainManaEffect, refreshManaEffect, refreshMinionAttacks, refreshHeroPower

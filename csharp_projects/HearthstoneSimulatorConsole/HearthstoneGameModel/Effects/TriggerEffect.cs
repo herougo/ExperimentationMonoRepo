@@ -6,16 +6,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HearthstoneGameModel.Game.CardSlots;
+using HearthstoneGameModel.Triggers;
 
 namespace HearthstoneGameModel.Effects
 {
-    public abstract class TriggerEffect : EMEffect
+    public class TriggerEffect : EMEffect
     {
+        Trigger _trigger;
         protected OneTimeEffect _effect;
 
-        public TriggerEffect(OneTimeEffect effect)
+        public TriggerEffect(Trigger trigger, OneTimeEffect effect)
         {
+            _trigger = trigger;
+            loadTriggerProperties();
             _effect = effect;
+        }
+
+        private void loadTriggerProperties()
+        {
+            _eventsReceived.AddRange(_trigger.EventsReceived);
+            _requiresSlotMatchForEvent = _trigger.RequiresSlotMatchForEvent;
+            _requiresSlotPlayerMatchForEvent = _trigger.RequiresSlotPlayerMatchForEvent;
         }
 
         public override EffectManagerNodePlan Start(HearthstoneGame game, EffectManagerNode emNode)
@@ -28,7 +39,16 @@ namespace HearthstoneGameModel.Effects
             EffectManagerNode emNode, List<CardSlot> eventSlots)
         {
             CheckValidEvent(effectEvent);
+            if (!_trigger.ShouldRun(effectEvent, game, emNode, eventSlots))
+            {
+                return null;
+            }
             return _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot, eventSlots);
+        }
+
+        public override EMEffect Copy()
+        {
+            return new TriggerEffect(_trigger.Copy(), _effect.Copy());
         }
     }
 }

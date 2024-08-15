@@ -8,37 +8,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HearthstoneGameModel.Game.Utils;
+using HearthstoneGameModel.Triggers;
 
-namespace HearthstoneGameModel.Effects.TriggerEffects
+namespace HearthstoneGameModel.Triggers
 {
-    public class WhenOtherMinionDies : TriggerEffect
+    public class WhenOtherMinionDies : Trigger
     {
         PlayerChoice _playerChoice;
 
-        public WhenOtherMinionDies(OneTimeEffect effect, PlayerChoice playerChoice)
-            : base(effect)
+        public WhenOtherMinionDies(PlayerChoice playerChoice)
         {
             _eventsReceived = new List<string> { EffectEvent.MinionDies };
             _playerChoice = playerChoice;
         }
 
-        public override EffectManagerNodePlan SendEvent(
+        public override bool ShouldRun(
             string effectEvent, HearthstoneGame game,
             EffectManagerNode emNode, List<CardSlot> eventSlots)
         {
-            CheckValidEvent(effectEvent);
-            if (HSGameUtils.IsPlayerAffected(emNode.AffectedSlot.Player, eventSlots[0].Player, _playerChoice)
-                && eventSlots[0] != emNode.AffectedSlot)
-            {
-                EffectManagerNodePlan result = _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot, eventSlots);
-                return result;
-            }
-            return null;
+            return (
+                HSGameUtils.IsPlayerAffected(emNode.AffectedSlot.Player, eventSlots[0].Player, _playerChoice)
+                && eventSlots[0] != emNode.AffectedSlot
+            );
         }
 
-        public override EMEffect Copy()
+        public override Trigger Copy()
         {
-            return new WhenOtherMinionDies(_effect.Copy(), _playerChoice);
+            return new WhenOtherMinionDies(_playerChoice);
         }
     }
 }

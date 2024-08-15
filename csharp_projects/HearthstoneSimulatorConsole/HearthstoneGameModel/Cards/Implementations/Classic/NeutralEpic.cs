@@ -1,7 +1,7 @@
 ﻿using HearthstoneGameModel.Cards.CardTypes;
 using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects.OneTimeEffects;
-using HearthstoneGameModel.Effects.TriggerEffects;
+using HearthstoneGameModel.Triggers;
 using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Selections;
 using System;
@@ -36,12 +36,15 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Battlecry(new DestroyMinionAndBuff(
-                    new SelectCharacterFrom(SelectionConstants.AllOtherMinions & new TagSelectionFilter(MinionTag.Murloc)),
-                    SelectionConstants.OwnSelf,
-                    2,
-                    2
-                ))
+                new TriggerEffect(
+                    new Battlecry(),
+                    new DestroyMinionAndBuff(
+                        new SelectCharacterFrom(SelectionConstants.AllOtherMinions & new TagSelectionFilter(MinionTag.Murloc)),
+                        SelectionConstants.OwnSelf,
+                        2,
+                        2
+                    )
+                )
             };
         }
 
@@ -66,7 +69,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new OnTurnStart(new DestroyMinion(SelectionConstants.AllMinions), PlayerChoice.Player)
+                new TriggerEffect(
+                    new OnTurnStart(PlayerChoice.Player),
+                    new DestroyMinion(SelectionConstants.AllMinions)
+                )
             };
         }
 
@@ -91,7 +97,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Battlecry(new LoseDivineShieldsAndBuff(SelectionConstants.AllMinions, SelectionConstants.OwnSelf, 3, 3))
+                new TriggerEffect(
+                    new Battlecry(),
+                    new LoseDivineShieldsAndBuff(SelectionConstants.AllMinions, SelectionConstants.OwnSelf, 3, 3)
+                )
             };
         }
 
@@ -174,7 +183,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Battlecry(new DestroyMinion(new SelectCharacterFrom(SelectionConstants.AllOtherMinions & new AttackAtLeastFilter(7))))
+                new TriggerEffect(
+                    new Battlecry(),
+                    new DestroyMinion(new SelectCharacterFrom(SelectionConstants.AllOtherMinions & new AttackAtLeastFilter(7)))
+                )
             };
         }
 
@@ -199,7 +211,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Battlecry(new BecomeMinionCopy(new SelectCharacterFrom(SelectionConstants.AllOtherMinions)))
+                new TriggerEffect(
+                    new Battlecry(),
+                    new BecomeMinionCopy(new SelectCharacterFrom(SelectionConstants.AllOtherMinions))
+                )
             };
         }
 

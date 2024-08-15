@@ -4,7 +4,7 @@ using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ContinuousEffects;
 using HearthstoneGameModel.Effects.OneTimeEffects;
-using HearthstoneGameModel.Effects.TriggerEffects;
+using HearthstoneGameModel.Triggers;
 using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
 using HearthstoneGameModel.Selections;
 using HearthstoneGameModel.Selections.SlotSelections;
@@ -12,6 +12,7 @@ using HearthstoneGameModel.Values;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -111,7 +112,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _whenPlayedEffect = new GiveEMEffect(
                 SelectionConstants.AllFriendlyMinions,
-                new Deathrattle(new SummonMinion(new TreantClassic()))
+                new TriggerEffect(
+                    new Deathrattle(),
+                    new SummonMinion(new TreantClassic())
+                )
             );
         }
 
@@ -135,14 +139,17 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _health = 6;
 
             _inPlayEffects = new List<EMEffect> {
-                new ChooseOneTrigger(new ChooseOne(new List<OneTimeEffect> {
-                    new TransformInPlayMinion(
-                        SelectionConstants.OwnSelf,
-                        new ConstantCardGenerator(new DruidOfTheClawCatForm())),
-                    new TransformInPlayMinion(
-                        SelectionConstants.OwnSelf,
-                        new ConstantCardGenerator(new DruidOfTheClawBearForm()))
-                }))
+                new TriggerEffect(
+                    new ChooseOneTrigger(),
+                    new ChooseOne(new List<OneTimeEffect> {
+                        new TransformInPlayMinion(
+                            SelectionConstants.OwnSelf,
+                            new ConstantCardGenerator(new DruidOfTheClawCatForm())),
+                        new TransformInPlayMinion(
+                            SelectionConstants.OwnSelf,
+                            new ConstantCardGenerator(new DruidOfTheClawBearForm()))
+                    })
+                )
             };
         }
 
@@ -237,10 +244,13 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _health = 4;
 
             _inPlayEffects = new List<EMEffect> {
-                new ChooseOneTrigger(new ChooseOne(new List<OneTimeEffect> {
-                    new DealDamage(new SelectCharacterFrom(SelectionConstants.AllCharacters), 2),
-                    new Silence(new SelectCharacterFrom(SelectionConstants.AllOtherMinions))
-                }))
+                new TriggerEffect(
+                    new ChooseOneTrigger(),
+                    new ChooseOne(new List<OneTimeEffect> {
+                        new DealDamage(new SelectCharacterFrom(SelectionConstants.AllCharacters), 2),
+                        new Silence(new SelectCharacterFrom(SelectionConstants.AllOtherMinions))
+                    })
+                )
             };
         }
 
@@ -333,10 +343,13 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _health = 7;
 
             _inPlayEffects = new List<EMEffect> {
-                new ChooseOneTrigger(new ChooseOne(new List<OneTimeEffect> {
-                    new DrawCards(SelectionConstants.Player, 2),
-                    new Heal(new SelectCharacterFrom(SelectionConstants.AllOtherCharacters), 7)
-                }))
+                new TriggerEffect(
+                    new ChooseOneTrigger(),
+                    new ChooseOne(new List<OneTimeEffect> {
+                        new DrawCards(SelectionConstants.Player, 2),
+                        new Heal(new SelectCharacterFrom(SelectionConstants.AllOtherCharacters), 7)
+                    })
+                )
             };
         }
 
@@ -360,13 +373,16 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _health = 5;
 
             _inPlayEffects = new List<EMEffect> {
-                new ChooseOneTrigger(new ChooseOne(new List<OneTimeEffect> {
-                    new ChangeAttack(SelectionConstants.OwnSelf, 5),
-                    new GiveEMEffect(SelectionConstants.OwnSelf, new List<EMEffect>
-                    {
-                        new BuffHealth(5), new Taunt()
+                new TriggerEffect(
+                    new ChooseOneTrigger(),
+                    new ChooseOne(new List<OneTimeEffect> {
+                        new ChangeAttack(SelectionConstants.OwnSelf, 5),
+                        new GiveEMEffect(SelectionConstants.OwnSelf, new List<EMEffect>
+                        {
+                            new BuffHealth(5), new Taunt()
+                        })
                     })
-                }))
+                )
             };
         }
 
@@ -390,10 +406,13 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _health = 8;
 
             _inPlayEffects = new List<EMEffect> {
-                new ChooseOneTrigger(new ChooseOne(new List<OneTimeEffect> {
-                    new GiveEMEffect(SelectionConstants.AllOtherFriendlyMinions, new Buff(2, 2)),
-                    new NEffects(new SummonMinion(new TreantClassicTaunt()), 2)
-                }))
+                new TriggerEffect(
+                    new ChooseOneTrigger(),
+                    new ChooseOne(new List<OneTimeEffect> {
+                        new GiveEMEffect(SelectionConstants.AllOtherFriendlyMinions, new Buff(2, 2)),
+                        new NEffects(new SummonMinion(new TreantClassicTaunt()), 2)
+                    })
+                )
             };
         }
 

@@ -9,38 +9,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HearthstoneGameModel.Cards.CardTypes;
+using HearthstoneGameModel.Triggers;
 
-namespace HearthstoneGameModel.Effects.TriggerEffects
+namespace HearthstoneGameModel.Triggers
 {
-    public class WhenYouSummonOtherMinion : TriggerEffect
+    public class WhenYouSummonOtherMinion : Trigger
     {
         MinionTag _desiredTag;
 
-        public WhenYouSummonOtherMinion(OneTimeEffect effect, MinionTag desiredTag)
-            : base(effect)
+        public WhenYouSummonOtherMinion(MinionTag desiredTag)
         {
             _eventsReceived = new List<string> { EffectEvent.MinionSummoned };
             _requiresSlotPlayerMatchForEvent = true;
             _desiredTag = desiredTag;
         }
 
-        public override EffectManagerNodePlan SendEvent(
+        public override bool ShouldRun(
             string effectEvent, HearthstoneGame game,
             EffectManagerNode emNode, List<CardSlot> eventSlots)
         {
-            CheckValidEvent(effectEvent);
             MinionCard minionCard = (MinionCard)eventSlots[0].Card;
-            if (HSGameUtils.MatchesTag(_desiredTag, minionCard.Tag) && emNode.AffectedSlot != eventSlots[0])
-            {
-                EffectManagerNodePlan result = _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot, eventSlots);
-                return result;
-            }
-            return null;
+            return (
+                HSGameUtils.MatchesTag(_desiredTag, minionCard.Tag)
+                && emNode.AffectedSlot != eventSlots[0]
+            );
         }
 
-        public override EMEffect Copy()
+        public override Trigger Copy()
         {
-            return new WhenYouSummonOtherMinion(_effect.Copy(), _desiredTag);
+            return new WhenYouSummonOtherMinion(_desiredTag);
         }
     }
 }

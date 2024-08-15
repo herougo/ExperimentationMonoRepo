@@ -1,4 +1,5 @@
 ﻿using HearthstoneGameModel.Game.EffectManagement;
+using HearthstoneGameModel.Triggers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace HearthstoneGameModel.Effects
     {
         // these effects are "triggered" by events caused by user input (e.g. "hero_power")
 
-        public ActivatedEffect(OneTimeEffect effect)
-            : base(effect) { }
+        public ActivatedEffect(Trigger trigger, OneTimeEffect effect)
+            : base(trigger, effect) { }
     }
 }

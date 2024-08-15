@@ -8,36 +8,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HearthstoneGameModel.Triggers;
 
-namespace HearthstoneGameModel.Effects.TriggerEffects
+namespace HearthstoneGameModel.Triggers
 {
-    public class AfterSpellActivation : TriggerEffect
+    public class AfterSpellActivation : Trigger
     {
             PlayerChoice _playerChoice;
 
-            public AfterSpellActivation(OneTimeEffect effect, PlayerChoice playerChoice)
-                : base(effect)
+            public AfterSpellActivation(PlayerChoice playerChoice)
             {
                 _eventsReceived = new List<string> { EffectEvent.AfterSpellActivated };
                 _playerChoice = playerChoice;
             }
 
-            public override EffectManagerNodePlan SendEvent(
+            public override bool ShouldRun(
                 string effectEvent, HearthstoneGame game,
                 EffectManagerNode emNode, List<CardSlot> eventSlots)
             {
-                CheckValidEvent(effectEvent);
-                if (HSGameUtils.IsPlayerAffected(emNode.AffectedSlot.Player, eventSlots[0].Player, _playerChoice))
-                {
-                    EffectManagerNodePlan result = _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot, eventSlots);
-                    return result;
-                }
-                return null;
+                return HSGameUtils.IsPlayerAffected(emNode.AffectedSlot.Player, eventSlots[0].Player, _playerChoice);
             }
 
-            public override EMEffect Copy()
+            public override Trigger Copy()
             {
-                return new AfterSpellActivation(_effect.Copy(), _playerChoice);
+                return new AfterSpellActivation(_playerChoice);
             }
         
     }

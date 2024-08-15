@@ -5,7 +5,7 @@ using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ContinuousEffects;
 using HearthstoneGameModel.Effects.HandContinuousEffects;
 using HearthstoneGameModel.Effects.OneTimeEffects;
-using HearthstoneGameModel.Effects.TriggerEffects;
+using HearthstoneGameModel.Triggers;
 using HearthstoneGameModel.Effects.WrappedEMEffects;
 using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
 using HearthstoneGameModel.Selections;
@@ -35,7 +35,11 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new SpellDamage(1), new Deathrattle(new DrawCards(SelectionConstants.Player, 1))
+                new SpellDamage(1),
+                new TriggerEffect(
+                    new Deathrattle(),
+                    new DrawCards(SelectionConstants.Player, 1)
+                )
             };
         }
 
@@ -60,7 +64,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new AfterSpellActivation(new AddEventSlotCopyToHand(PlayerChoice.Opponent), PlayerChoice.Both)
+                new TriggerEffect(
+                    new AfterSpellActivation(PlayerChoice.Both),
+                    new AddEventSlotCopyToHand(PlayerChoice.Opponent)
+                )
             };
         }
 
@@ -85,14 +92,17 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Battlecry(new GiveEMEffect(
-                    SelectionConstants.Opponent,
-                    new TimeLimitedEMEffect(
-                        new ContinuousSelectionFieldEffect(SelectionConstants.PlayerHandSpells, new ManaSet(0)),
-                        EffectTimeLimit.EndOfPlayerTurn,
-                        false
+                new TriggerEffect(
+                    new Battlecry(),
+                    new GiveEMEffect(
+                        SelectionConstants.Opponent,
+                        new TimeLimitedEMEffect(
+                            new ContinuousSelectionFieldEffect(SelectionConstants.PlayerHandSpells, new ManaSet(0)),
+                            EffectTimeLimit.EndOfPlayerTurn,
+                            false
+                        )
                     )
-                ))
+                )
             };
         }
 
@@ -117,7 +127,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new OnTurnStart(new OneInXChanceEffect(new DrawCards(SelectionConstants.Player, 1), 2))
+                new TriggerEffect(
+                    new OnTurnStart(),
+                    new OneInXChanceEffect(new DrawCards(SelectionConstants.Player, 1), 2)
+                )
             };
         }
 
@@ -142,7 +155,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Battlecry(new AddCardToHand(new ConstantCardGenerator(new Banana()), PlayerChoice.Opponent, 2))
+                new TriggerEffect(
+                    new Battlecry(),
+                    new AddCardToHand(new ConstantCardGenerator(new Banana()), PlayerChoice.Opponent, 2)
+                )
             };
         }
 
@@ -167,10 +183,13 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Battlecry(new TransformInPlayMinion(
-                    new RandomCharacterFrom(SelectionConstants.AllOtherMinions),
-                    new RandomCardFrom(new List<Card> { new Squirrel(), new Devilsaur() })
-                ))
+                new TriggerEffect(
+                    new Battlecry(),
+                    new TransformInPlayMinion(
+                        new RandomCharacterFrom(SelectionConstants.AllOtherMinions),
+                        new RandomCardFrom(new List<Card> { new Squirrel(), new Devilsaur() })
+                    )
+                )
             };
         }
 
@@ -196,7 +215,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Battlecry(new GiveEMEffect(SelectionConstants.PlayerWeapon, new BuffWeapon(1, 1)))
+                new TriggerEffect(
+                    new Battlecry(),
+                    new GiveEMEffect(SelectionConstants.PlayerWeapon, new BuffWeapon(1, 1))
+                )
             };
         }
 
@@ -221,7 +243,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Battlecry(new DestroyWeaponAndDrawDurability(PlayerChoice.Opponent, PlayerChoice.Player))
+                new TriggerEffect(
+                    new Battlecry(),
+                    new DestroyWeaponAndDrawDurability(PlayerChoice.Opponent, PlayerChoice.Player)
+                )
             };
         }
 
@@ -246,7 +271,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Deathrattle(new SummonMinion(new BaineBloodhoof()))
+                new TriggerEffect(
+                    new Deathrattle(),
+                    new SummonMinion(new BaineBloodhoof())
+                )
             };
         }
 
@@ -271,7 +299,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new OnTurnEnd(new SummonMinion(new Gnoll()))
+                new TriggerEffect(
+                    new OnTurnEnd(),
+                    new SummonMinion(new Gnoll())
+                )
             };
         }
 
@@ -297,7 +328,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Deathrattle(new SummonMinion(new PipQuickwit(), PlayerChoice.Opponent))
+                new TriggerEffect(
+                    new Deathrattle(),
+                    new SummonMinion(new PipQuickwit(), PlayerChoice.Opponent)
+                )
             };
         }
 
@@ -323,11 +357,14 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Battlecry(new DestroyMinion(
-                    new SelectCharacterFrom(
-                        SelectionConstants.OtherLivingEnemyMinions & new TauntFilter()
+                new TriggerEffect(
+                    new Battlecry(),
+                    new DestroyMinion(
+                        new SelectCharacterFrom(
+                            SelectionConstants.OtherLivingEnemyMinions & new TauntFilter()
+                        )
                     )
-                ))
+                )
             };
         }
 
@@ -353,7 +390,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new WhenOtherCardPlayed(new SummonMinion(new XavianSatyr()), PlayerChoice.Player)
+                new TriggerEffect(
+                    new WhenOtherCardPlayed(PlayerChoice.Player),
+                    new SummonMinion(new XavianSatyr())
+                )
             };
         }
 
@@ -379,7 +419,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new OnTurnEnd(new DealDamage(SelectionConstants.AllOtherCharacters, 2))
+                new TriggerEffect(
+                    new OnTurnEnd(),
+                    new DealDamage(SelectionConstants.AllOtherCharacters, 2)
+                )
             };
         }
 
@@ -404,7 +447,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Battlecry(new SummonFriendlyMinionsThatDiedThisTurn())
+                new TriggerEffect(
+                    new Battlecry(),
+                    new SummonFriendlyMinionsThatDiedThisTurn()
+                )
             };
         }
 
@@ -429,7 +475,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new OnTurnEnd(new ChangeStats(SelectionConstants.OwnSelf, 1, 1), PlayerChoice.Both)
+                new TriggerEffect(
+                    new OnTurnEnd(PlayerChoice.Both),
+                    new ChangeStats(SelectionConstants.OwnSelf, 1, 1)
+                )
             };
         }
 
@@ -456,7 +505,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Battlecry(new SetRemainingHealth(new SelectCharacterFrom(SelectionConstants.BothPlayers), 15))
+                new TriggerEffect(
+                    new Battlecry(),
+                    new SetRemainingHealth(new SelectCharacterFrom(SelectionConstants.BothPlayers), 15)
+                )
             };
         }
 
@@ -510,7 +562,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Battlecry(new SummonMinionUntilFull(new Whelp()))
+                new TriggerEffect(
+                    new Battlecry(),
+                    new SummonMinionUntilFull(new Whelp())
+                )
             };
         }
 
@@ -537,14 +592,14 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new OnTurnEnd(
+                new TriggerEffect(
+                    new OnTurnEnd(PlayerChoice.Player),
                     new AddCardToHand(
                         new RandomCardFrom(new List<Card> {
                             new Dream(), new Nightmare(), new LaughingSister(),
                             new YseraAwakens(), new EmeraldDrake()
                         })
-                    ),
-                    PlayerChoice.Player
+                    )
                 )
             };
         }
@@ -572,11 +627,14 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                new Battlecry(new OneTimeEffectSequence(
-                    new List<OneTimeEffect>{
-                        new DestroyMinion(SelectionConstants.AllOtherMinions),
-                        new DiscardCards(SelectionConstants.PlayerHand)
-                    })
+                new TriggerEffect(
+                    new Battlecry(),
+                    new OneTimeEffectSequence(
+                        new List<OneTimeEffect>{
+                            new DestroyMinion(SelectionConstants.AllOtherMinions),
+                            new DiscardCards(SelectionConstants.PlayerHand)
+                        }
+                    )
                 )
             };
         }

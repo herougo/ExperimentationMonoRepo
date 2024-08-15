@@ -1,24 +1,24 @@
 ﻿using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
+using HearthstoneGameModel.Triggers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HearthstoneGameModel.Effects.TriggerEffects
+namespace HearthstoneGameModel.Triggers
 {
-    public class WhenACharacterIsHealed : TriggerEffect
+    public class WhenACharacterIsHealed : Trigger
     {
-        public WhenACharacterIsHealed(OneTimeEffect effect)
-            : base(effect)
+        public WhenACharacterIsHealed()
         {
             _eventsReceived = new List<string> { EffectEvent.CharacterHealed };
         }
 
-        public override EMEffect Copy()
+        public override Trigger Copy()
         {
-            return new WhenACharacterIsHealed(_effect.Copy());
+            return new WhenACharacterIsHealed();
         }
     }
 }

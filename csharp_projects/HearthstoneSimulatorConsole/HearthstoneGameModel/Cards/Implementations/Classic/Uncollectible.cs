@@ -1,7 +1,7 @@
 ﻿using HearthstoneGameModel.Cards.CardTypes;
 using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects.OneTimeEffects;
-using HearthstoneGameModel.Effects.TriggerEffects;
+using HearthstoneGameModel.Triggers;
 using HearthstoneGameModel.Effects;
 using System;
 using System.Collections.Generic;
@@ -306,7 +306,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
                 new SelectCharacterFrom(SelectionConstants.AllMinions),
                 new List<EMEffect> {
                     new Buff(5, 5),
-                    new OnTurnStart(new DestroyMinion(SelectionConstants.OwnSelf), PlayerChoice.Player)
+                    new TriggerEffect(
+                        new OnTurnStart(PlayerChoice.Player),
+                        new DestroyMinion(SelectionConstants.OwnSelf)
+                    )
                 }
             );
         }

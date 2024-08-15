@@ -3,7 +3,7 @@ using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ContinuousEffects;
 using HearthstoneGameModel.Effects.OneTimeEffects;
-using HearthstoneGameModel.Effects.TriggerEffects;
+using HearthstoneGameModel.Triggers;
 using HearthstoneGameModel.Game.EffectManagement;
 using HearthstoneGameModel.Selections;
 using HearthstoneGameModel.Selections.SlotSelections;
@@ -108,7 +108,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
             _attack = 0;
             _health = 2;
             _inPlayEffects = new List<EMEffect> {
-                new OnTurnEnd(new ChangeAttack(new RandomCharacterFrom(SelectionConstants.AllOtherFriendlyMinions), 1))
+                new TriggerEffect(
+                    new OnTurnEnd(),
+                    new ChangeAttack(new RandomCharacterFrom(SelectionConstants.AllOtherFriendlyMinions), 1)
+                )
             };
         }
 
@@ -131,7 +134,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Heroes
             _attack = 0;
             _health = 2;
             _inPlayEffects = new List<EMEffect> {
-                new OnTurnEnd(new Heal(SelectionConstants.AllFriendlyMinions, 1))
+                new TriggerEffect(
+                    new OnTurnEnd(),
+                    new Heal(SelectionConstants.AllFriendlyMinions, 1)
+                )
             };
         }
 

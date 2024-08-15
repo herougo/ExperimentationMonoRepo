@@ -8,42 +8,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HearthstoneGameModel.Game.Utils;
+using HearthstoneGameModel.Triggers;
 
 namespace HearthstoneGameModel.Effects.TriggerEffects
 {
-    public class WhenOtherCardPlayed : TriggerEffect
+    public class WhenOtherCardPlayed : Trigger
     {
         PlayerChoice _playerMatch;
 
-        public WhenOtherCardPlayed(OneTimeEffect effect, PlayerChoice playerMatch)
-            :base(effect)
+        public WhenOtherCardPlayed(PlayerChoice playerMatch)
         {
             _eventsReceived = new List<string> { EffectEvent.WhenCardPlayed };
             _playerMatch = playerMatch;
         }
 
-        public override EffectManagerNodePlan SendEvent(
+        public override bool ShouldRun(
             string effectEvent, HearthstoneGame game,
             EffectManagerNode emNode, List<CardSlot> eventSlots)
         {
-            CheckValidEvent(effectEvent);
             if (eventSlots[0] == emNode.AffectedSlot)
             {
-                return null;
+                return false;
             }
             int eventPlayer = eventSlots[0].Player;
             int effectPlayer = emNode.AffectedSlot.Player;
 
             if (!HSGameUtils.IsPlayerAffected(effectPlayer, eventPlayer, _playerMatch))
             {
-                return null;
+                return false;
             }
-            return _effect.Execute(game, emNode.AffectedSlot, emNode.OriginSlot, eventSlots);
+            return true;
         }
 
-        public override EMEffect Copy()
+        public override Trigger Copy()
         {
-            return new WhenOtherCardPlayed(_effect.Copy(), _playerMatch);
+            return new WhenOtherCardPlayed(_playerMatch);
         }
     }
 }
