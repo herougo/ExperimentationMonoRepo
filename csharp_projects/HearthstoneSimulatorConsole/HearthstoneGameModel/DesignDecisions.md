@@ -55,3 +55,37 @@ like NEffects
 ### a) Add eventSlots to Execute
 
 ## 7) Decided to add an option for TimeLimitedEMEffect to not add time-limited to new effects (for Millhouse Manastorm)
+
+
+
+
+
+# Unresolved
+
+## 8) Handling Secrets
+
+1) HearthstoneGame gets SecretManager[player]
+2) Attack action gets attack declaration, check, and attack
+3) Spell cards have _whenPlayedEffect = new CreateSecret(
+     new WhenAttacked(CardType.Minion, CardType.Hero),
+	 new DealDamage(SelectionConstants.AllLivingEnemies, 2)
+   )
+4) 
+
+### 8.1) Split trigger and effect?
+
+class Trigger {
+  public bool ShouldRun(...) {
+    
+  }
+}
+
+### 8.2) Handling Events
+
+1) Send to effect manager first, then secret
+
+### 8.3) What does SecretManager do?
+
+1) Plan to include "secret used"
+2) Copy of EffectManager? -> No, it needs to be its own thing.
+3) List< Secret >, Secret contains card slot, trigger and effect
