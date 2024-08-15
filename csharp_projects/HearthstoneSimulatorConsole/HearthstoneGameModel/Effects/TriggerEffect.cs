@@ -12,7 +12,7 @@ namespace HearthstoneGameModel.Effects
 {
     public class TriggerEffect : EMEffect
     {
-        Trigger _trigger;
+        protected Trigger _trigger;
         protected OneTimeEffect _effect;
 
         public TriggerEffect(Trigger trigger, OneTimeEffect effect)

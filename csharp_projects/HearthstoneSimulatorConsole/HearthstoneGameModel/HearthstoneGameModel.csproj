@@ -110,6 +110,7 @@
     <Compile Include="Effects\OneTimeEffects\SetRemainingHealth.cs" />
     <Compile Include="Triggers\AfterSpellActivation.cs" />
     <Compile Include="Triggers\ChooseOneTrigger.cs" />
+    <Compile Include="Triggers\HeroPowerActivation.cs" />
     <Compile Include="Triggers\Trigger.cs" />
     <Compile Include="Triggers\WhenACharacterIsHealed.cs" />
     <Compile Include="Triggers\WhenOtherCardPlayed.cs" />

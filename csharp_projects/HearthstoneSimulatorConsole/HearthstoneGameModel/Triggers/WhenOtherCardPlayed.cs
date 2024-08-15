@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using HearthstoneGameModel.Game.Utils;
 using HearthstoneGameModel.Triggers;
 
-namespace HearthstoneGameModel.Effects.TriggerEffects
+namespace HearthstoneGameModel.Triggers
 {
     public class WhenOtherCardPlayed : Trigger
     {

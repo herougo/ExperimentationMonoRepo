@@ -12,7 +12,7 @@ namespace HearthstoneGameModel.Effects
     {
         // these effects are "triggered" by events caused by user input (e.g. "hero_power")
 
-        public ActivatedEffect(Trigger trigger, OneTimeEffect effect)
-            : base(trigger, effect) { }
+        public ActivatedEffect(Trigger activation, OneTimeEffect effect)
+            : base(activation, effect) { }
     }
 }
