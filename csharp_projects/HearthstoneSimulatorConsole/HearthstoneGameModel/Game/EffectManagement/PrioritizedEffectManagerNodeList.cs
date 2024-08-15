@@ -10,27 +10,27 @@ namespace HearthstoneGameModel.Game.EffectManagement
 {
     public class PrioritizedEffectManagerNodeList : IEnumerable<EffectManagerNode>
     {
-        List<LinkedList<EffectManagerNode>> _linkedLists;
+        List<CustomLinkedList<EffectManagerNode>> _linkedLists;
         Dictionary<
             EffectManagerNode,
-            LinkedListNode<EffectManagerNode>
+            CustomLinkedListNode<EffectManagerNode>
         > _emNodeToLLNode;
 
         public PrioritizedEffectManagerNodeList() {
-            _linkedLists = new List<LinkedList<EffectManagerNode>>() {
-                new LinkedList<EffectManagerNode>(), new LinkedList<EffectManagerNode>()
+            _linkedLists = new List<CustomLinkedList<EffectManagerNode>>() {
+                new CustomLinkedList<EffectManagerNode>(), new CustomLinkedList<EffectManagerNode>()
             };
 
             _emNodeToLLNode = new Dictionary<
                 EffectManagerNode,
-                LinkedListNode<EffectManagerNode>
+                CustomLinkedListNode<EffectManagerNode>
             >();
         }
 
         public void Append(EffectManagerNode emNode)
         {
             int priority = emNode.Priority;
-            LinkedListNode<EffectManagerNode> node = new LinkedListNode<EffectManagerNode>(
+            CustomLinkedListNode<EffectManagerNode> node = new CustomLinkedListNode<EffectManagerNode>(
                 emNode, null, null
             );
             _emNodeToLLNode[emNode] = node;
@@ -44,16 +44,16 @@ namespace HearthstoneGameModel.Game.EffectManagement
             {
                 throw new Exception($"missing slot: {emNode.AffectedSlot.ToString()}");
             }
-            LinkedListNode<EffectManagerNode> llNode = _emNodeToLLNode[emNode];
+            CustomLinkedListNode<EffectManagerNode> llNode = _emNodeToLLNode[emNode];
             _linkedLists[priority].RemoveNode(llNode);
             _emNodeToLLNode.Remove(emNode);
         }
 
         public IEnumerator<EffectManagerNode> GetEnumerator()
         {
-            foreach (LinkedList<EffectManagerNode> linkedList in _linkedLists)
+            foreach (CustomLinkedList<EffectManagerNode> linkedList in _linkedLists)
             {
-                foreach (LinkedListNode<EffectManagerNode> node in linkedList)
+                foreach (CustomLinkedListNode<EffectManagerNode> node in linkedList)
                 {
                     yield return node.Val;
                 }

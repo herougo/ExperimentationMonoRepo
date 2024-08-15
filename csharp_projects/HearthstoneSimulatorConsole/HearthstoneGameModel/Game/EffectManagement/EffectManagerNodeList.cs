@@ -10,23 +10,23 @@ namespace HearthstoneGameModel.Game.EffectManagement
 {
     public class EffectManagerNodeList : IEnumerable<EffectManagerNode>
     {
-        LinkedList<EffectManagerNode> _linkedList;
+        CustomLinkedList<EffectManagerNode> _linkedList;
         Dictionary<
             EffectManagerNode,
-            LinkedListNode<EffectManagerNode>
+            CustomLinkedListNode<EffectManagerNode>
         > _emNodeToLLNode;
 
         public EffectManagerNodeList() {
-            _linkedList = new LinkedList<EffectManagerNode>();
+            _linkedList = new CustomLinkedList<EffectManagerNode>();
             _emNodeToLLNode = new Dictionary<
                 EffectManagerNode,
-                LinkedListNode<EffectManagerNode>
+                CustomLinkedListNode<EffectManagerNode>
             >();
         }
 
         public void Append(EffectManagerNode emNode)
         {
-            LinkedListNode<EffectManagerNode> node = new LinkedListNode<EffectManagerNode>(
+            CustomLinkedListNode<EffectManagerNode> node = new CustomLinkedListNode<EffectManagerNode>(
                 emNode, null, null
             );
             _emNodeToLLNode[emNode] = node;
@@ -39,14 +39,14 @@ namespace HearthstoneGameModel.Game.EffectManagement
             {
                 throw new Exception($"missing slot: {emNode.AffectedSlot.ToString()}");
             }
-            LinkedListNode<EffectManagerNode> llNode = _emNodeToLLNode[emNode];
+            CustomLinkedListNode<EffectManagerNode> llNode = _emNodeToLLNode[emNode];
             _linkedList.RemoveNode(llNode);
             _emNodeToLLNode.Remove(emNode);
         }
 
         public IEnumerator<EffectManagerNode> GetEnumerator()
         {
-            foreach (LinkedListNode<EffectManagerNode> node in _linkedList)
+            foreach (CustomLinkedListNode<EffectManagerNode> node in _linkedList)
             {
                 yield return node.Val;
             }

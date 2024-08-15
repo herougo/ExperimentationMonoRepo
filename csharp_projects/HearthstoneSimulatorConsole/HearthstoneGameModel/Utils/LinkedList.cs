@@ -8,25 +8,25 @@ using System.Threading.Tasks;
 
 namespace HearthstoneGameModel.Utils
 {
-    public class LinkedListNode<T>
+    public class CustomLinkedListNode<T>
     {
         public T Val;
-        public LinkedListNode<T> Prev;
-        public LinkedListNode<T> Next;
+        public CustomLinkedListNode<T> Prev;
+        public CustomLinkedListNode<T> Next;
 
-        public LinkedListNode(T val, LinkedListNode<T> prev, LinkedListNode<T> next)
+        public CustomLinkedListNode(T val, CustomLinkedListNode<T> prev, CustomLinkedListNode<T> next)
         {
             Val = val; Prev = prev; Next = next;
         }
     }
 
-    public class LinkedList<T> : IEnumerable<LinkedListNode<T>>
+    public class CustomLinkedList<T> : IEnumerable<CustomLinkedListNode<T>>
     {
-        public LinkedListNode<T> First = null;
-        public LinkedListNode<T> Last = null;
+        public CustomLinkedListNode<T> First = null;
+        public CustomLinkedListNode<T> Last = null;
         public int Length = 0;
 
-        public void AddNodeBefore(LinkedListNode<T> target, LinkedListNode<T> newNode)
+        public void AddNodeBefore(CustomLinkedListNode<T> target, CustomLinkedListNode<T> newNode)
         {
             if (target == null) // is last
             {
@@ -57,7 +57,7 @@ namespace HearthstoneGameModel.Utils
             Length++;
         }
 
-        public void RemoveNode(LinkedListNode<T> node)
+        public void RemoveNode(CustomLinkedListNode<T> node)
         {
             if (node.Prev == null) // is first
             {
@@ -78,9 +78,9 @@ namespace HearthstoneGameModel.Utils
             Length--;
         }
 
-        public IEnumerator<LinkedListNode<T>> GetEnumerator()
+        public IEnumerator<CustomLinkedListNode<T>> GetEnumerator()
         {
-            LinkedListNode<T> curr = First;
+            CustomLinkedListNode<T> curr = First;
             while (curr != null)
             {
                 yield return curr;
