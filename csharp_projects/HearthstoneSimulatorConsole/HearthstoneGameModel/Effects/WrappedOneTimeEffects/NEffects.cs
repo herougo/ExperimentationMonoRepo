@@ -27,7 +27,7 @@ namespace HearthstoneGameModel.Effects.WrappedOneTimeEffects
                 EffectManagerNodePlan plan = _effect.Execute(game, affectedCardSlot, originCardSlot, eventSlots);
                 if (plan != null)
                 {
-                    plan.Perform(game.EffectManager);
+                    plan.Perform(game);
                 }
             }
             return null;

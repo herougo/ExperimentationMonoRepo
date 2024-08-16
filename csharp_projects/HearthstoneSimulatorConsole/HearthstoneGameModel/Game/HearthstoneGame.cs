@@ -264,9 +264,9 @@ namespace HearthstoneGameModel.Game
             EffectManager.SendEvent(new EffectEventArgs(EffectEvent.DamagePreparation, defenderCardSlot));
 
             EffectManagerNodePlan attackerPlan = attackerCardSlot.TakeDamage();
-            attackerPlan.Perform(EffectManager);
+            attackerPlan.Perform(this);
             EffectManagerNodePlan defenderPlan = defenderCardSlot.TakeDamage();
-            defenderPlan.Perform(EffectManager);
+            defenderPlan.Perform(this);
             EffectManager.SendEvent(new EffectEventArgs(EffectEvent.InflictDamage, new List<CardSlot>() { defenderCardSlot, attackerCardSlot }));
             EffectManager.SendEvent(new EffectEventArgs(EffectEvent.InflictDamage, new List<CardSlot>() { attackerCardSlot, defenderCardSlot }));
 
@@ -386,7 +386,7 @@ namespace HearthstoneGameModel.Game
             {
                 targetPlan.Update(targetSlot.TakeDamage());
             }
-            targetPlan.Perform(EffectManager);
+            targetPlan.Perform(this);
 
             foreach (BattlerCardSlot targetSlot in targetSlots)
             {

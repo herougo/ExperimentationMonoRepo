@@ -76,6 +76,7 @@
     <Compile Include="Core\Enums\HSClass.cs" />
     <Compile Include="Core\Enums\MinionTag.cs" />
     <Compile Include="Core\Enums\PlayerChoice.cs" />
+    <Compile Include="Core\Enums\AddSecretResult.cs" />
     <Compile Include="Core\Enums\SpellSchool.cs" />
     <Compile Include="Core\Enums\UIEventType.cs" />
     <Compile Include="Core\Exceptions.cs" />
@@ -108,6 +109,8 @@
     <Compile Include="Effects\OneTimeEffects\SwapAttackAndHealth.cs" />
     <Compile Include="Effects\OneTimeEffects\TransformInPlayMinion.cs" />
     <Compile Include="Effects\OneTimeEffects\SetRemainingHealth.cs" />
+    <Compile Include="Game\SecretManagement\Secret.cs" />
+    <Compile Include="Game\SecretManagement\SecretManager.cs" />
     <Compile Include="Triggers\AfterSpellActivation.cs" />
     <Compile Include="Triggers\ChooseOneTrigger.cs" />
     <Compile Include="Triggers\HeroPowerActivation.cs" />

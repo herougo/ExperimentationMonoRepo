@@ -24,14 +24,14 @@ namespace HearthstoneGameModel.Triggers
 
         public override bool ShouldRun(
             string effectEvent, HearthstoneGame game,
-            EffectManagerNode emNode, List<CardSlot> eventSlots)
+            CardSlot affectedSlot, List<CardSlot> eventSlots)
         {
-            if (eventSlots[0] == emNode.AffectedSlot)
+            if (eventSlots[0] == affectedSlot)
             {
                 return false;
             }
             int eventPlayer = eventSlots[0].Player;
-            int effectPlayer = emNode.AffectedSlot.Player;
+            int effectPlayer = affectedSlot.Player;
 
             if (!HSGameUtils.IsPlayerAffected(effectPlayer, eventPlayer, _playerMatch))
             {

@@ -19,5 +19,6 @@ namespace HearthstoneGameModel.Game
         public const int HeroIndex = -1;
         public const int NullInt = -10;
         public const int HeroHealth = 30;
+        public const int MaxNumOfSecrets = 5;
     }
 }

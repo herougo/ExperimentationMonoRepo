@@ -21,7 +21,7 @@ namespace HearthstoneGameModel.Effects.ActivatedEffects
             EffectManagerNode emNode, List<CardSlot> eventSlots)
         {
             CheckValidEvent(effectEvent);
-            if (!_trigger.ShouldRun(effectEvent, game, emNode, eventSlots))
+            if (!_trigger.ShouldRun(effectEvent, game, emNode.AffectedSlot, eventSlots))
             {
                 return null;
             }

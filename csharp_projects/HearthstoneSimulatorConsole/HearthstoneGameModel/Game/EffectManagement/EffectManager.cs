@@ -20,7 +20,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
             _game = game;
         }
 
-        public void AddToEmNodeToEvents(EffectManagerNode emNode, string receivedEvent)
+        private void addToEmNodeToEvents(EffectManagerNode emNode, string receivedEvent)
         {
             if (!_emNodeToEvents.ContainsKey(emNode))
             {
@@ -29,7 +29,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
             _emNodeToEvents[emNode].Add(receivedEvent);
         }
 
-        public void AddToSlotToEmNodeList(EffectManagerNode emNode)
+        public void addToSlotToEmNodeList(EffectManagerNode emNode)
         {
             CardSlot slot = emNode.AffectedSlot;
             if (!_slotToEmNodeList.ContainsKey(slot))
@@ -44,20 +44,20 @@ namespace HearthstoneGameModel.Game.EffectManagement
             _emNodes.Add(emNode);
             foreach (string receivedEvent in emNode.Effect.EventsReceived)
             {
-                AddToEmNodeToEvents(emNode, receivedEvent);
+                addToEmNodeToEvents(emNode, receivedEvent);
                 _eventToEffectNodeList.Add(receivedEvent, emNode);
 
             }
-            AddToSlotToEmNodeList(emNode);
+            addToSlotToEmNodeList(emNode);
 
-            EffectManagerNodePlan plan = emNode.Start(_game, this);
+            EffectManagerNodePlan plan = emNode.Start(_game);
             performPlan(plan);
         }
 
         public void PopEffect(EffectManagerNode emNode)
         {
             CardSlot slot = emNode.AffectedSlot;
-            EffectManagerNodePlan plan = emNode.Stop(_game, this);
+            EffectManagerNodePlan plan = emNode.Stop(_game);
             if (_emNodeToEvents.ContainsKey(emNode))
             {
                 foreach (string effectEvent in _emNodeToEvents[emNode])
@@ -114,7 +114,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
             List<EffectManagerNode> relevantEMNodes = _eventToEffectNodeList.GetRelevantEMNodes(effectEvent, eventSlots[0]);
             foreach (EffectManagerNode emNode in relevantEMNodes)
             {
-                emNode.SendEvent(effectEvent, _game, this, eventSlots);
+                emNode.SendEvent(effectEvent, _game, eventSlots);
             }
             _game.KillIfNecessary();
         }
@@ -129,10 +129,17 @@ namespace HearthstoneGameModel.Game.EffectManagement
             SendEvent(args.EffectEvent, args.EventSlots);
         }
 
-        public void Execute(OneTimeEffect effect, HearthstoneGame game, CardSlot cardSlot)
+        public void Execute(OneTimeEffect effect, CardSlot cardSlot)
         {
             // Used for spells
-            EffectManagerNodePlan plan = effect.Execute(game, cardSlot, cardSlot, new List<CardSlot>());
+            EffectManagerNodePlan plan = effect.Execute(_game, cardSlot, cardSlot, new List<CardSlot>());
+            performPlan(plan);
+        }
+
+        public void Execute(OneTimeEffect effect, CardSlot cardSlot, List<CardSlot> eventSlots)
+        {
+            // Used for secrets
+            EffectManagerNodePlan plan = effect.Execute(_game, cardSlot, cardSlot, eventSlots);
             performPlan(plan);
         }
 
@@ -140,7 +147,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
         {
             if (plan != null)
             {
-                plan.Perform(this);
+                plan.Perform(_game);
                 _game.KillIfNecessary();
             }
         }

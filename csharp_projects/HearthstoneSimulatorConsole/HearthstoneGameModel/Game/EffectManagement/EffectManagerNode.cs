@@ -30,26 +30,25 @@ namespace HearthstoneGameModel.Game.EffectManagement
             _hash = HashGenerator.GetNextHash();
         }
 
-        public EffectManagerNodePlan Start(HearthstoneGame game, EffectManager effectManager)
+        public EffectManagerNodePlan Start(HearthstoneGame game)
         {
             EffectManagerNodePlan plan = Effect.Start(game, this);
             return plan;
         }
 
-        public EffectManagerNodePlan Stop(HearthstoneGame game, EffectManager effectManager)
+        public EffectManagerNodePlan Stop(HearthstoneGame game)
         {
             EffectManagerNodePlan plan = Effect.Stop(game, this);
             return plan;
         }
 
         public void SendEvent(
-            string effectEvent, HearthstoneGame game,
-            EffectManager effectManager, List<CardSlot> eventSlots)
+            string effectEvent, HearthstoneGame game, List<CardSlot> eventSlots)
         {
             EffectManagerNodePlan plan = Effect.SendEvent(effectEvent, game, this, eventSlots);
             if (plan != null)
             {
-                plan.Perform(effectManager);
+                plan.Perform(game);
             }
         }
 

@@ -31,9 +31,9 @@ namespace HearthstoneGameModel.Triggers
 
         public override bool ShouldRun(
             string effectEvent, HearthstoneGame game,
-            EffectManagerNode emNode, List<CardSlot> eventSlots)
+            CardSlot affectedSlot, List<CardSlot> eventSlots)
         {
-            return HSGameUtils.IsPlayerAffected(emNode.AffectedSlot.Player, game.GameMetadata.Turn, _playerChoice);
+            return HSGameUtils.IsPlayerAffected(affectedSlot.Player, game.GameMetadata.Turn, _playerChoice);
         }
 
         public override Trigger Copy()

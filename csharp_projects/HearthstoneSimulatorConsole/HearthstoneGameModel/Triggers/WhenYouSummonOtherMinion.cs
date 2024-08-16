@@ -26,12 +26,12 @@ namespace HearthstoneGameModel.Triggers
 
         public override bool ShouldRun(
             string effectEvent, HearthstoneGame game,
-            EffectManagerNode emNode, List<CardSlot> eventSlots)
+            CardSlot affectedSlot, List<CardSlot> eventSlots)
         {
             MinionCard minionCard = (MinionCard)eventSlots[0].Card;
             return (
                 HSGameUtils.MatchesTag(_desiredTag, minionCard.Tag)
-                && emNode.AffectedSlot != eventSlots[0]
+                && affectedSlot != eventSlots[0]
             );
         }
 

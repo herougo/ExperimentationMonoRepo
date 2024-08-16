@@ -22,7 +22,7 @@ namespace HearthstoneGameModel.Triggers
         public bool RequiresSlotPlayerMatchForEvent { get { return _requiresSlotPlayerMatchForEvent; } }
 
         public virtual bool ShouldRun(
-            string effectEvent, HearthstoneGame game, EffectManagerNode emNode, List<CardSlot> eventSlots
+            string effectEvent, HearthstoneGame game, CardSlot affectedSlot, List<CardSlot> eventSlots
         )
         {
             return true;

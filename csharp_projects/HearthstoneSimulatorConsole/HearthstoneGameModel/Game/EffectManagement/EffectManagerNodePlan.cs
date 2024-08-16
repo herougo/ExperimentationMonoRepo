@@ -35,15 +35,15 @@ namespace HearthstoneGameModel.Game.EffectManagement
             EffectEventArgs = new List<EffectEventArgs>();
         }
 
-        public void Perform(EffectManager effectManager)
+        public void Perform(HearthstoneGame game)
         {
             foreach (EffectManagerNode node in ToAdd)
             {
-                effectManager.AddEffect(node);
+                game.EffectManager.AddEffect(node);
             }
             foreach (EffectManagerNode node in ToRemove)
             {
-                effectManager.PopEffect(node);
+                game.EffectManager.PopEffect(node);
             }
             foreach (CardSlot cardSlot in UpdateStats)
             {
@@ -51,7 +51,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
             }
             foreach (EffectEventArgs args in EffectEventArgs)
             {
-                effectManager.SendEvent(args);
+                game.EffectManager.SendEvent(args);
             }
         }
 

@@ -56,12 +56,6 @@ like NEffects
 
 ## 7) Decided to add an option for TimeLimitedEMEffect to not add time-limited to new effects (for Millhouse Manastorm)
 
-
-
-
-
-# Unresolved
-
 ## 8) Handling Secrets
 
 1) HearthstoneGame gets SecretManager[player]

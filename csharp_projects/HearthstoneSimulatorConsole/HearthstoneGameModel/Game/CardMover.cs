@@ -76,7 +76,7 @@ namespace HearthstoneGameModel.Game
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.WhenCardPlayed, cardSlot));
 
             OneTimeEffect effect = cardSlot.TypedCard.WhenPlayedEffect;
-            _game.EffectManager.Execute(effect, _game, cardSlot);
+            _game.EffectManager.Execute(effect, cardSlot);
 
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.AfterSpellActivated, cardSlot));
             RemoveCardSlot(cardSlot);

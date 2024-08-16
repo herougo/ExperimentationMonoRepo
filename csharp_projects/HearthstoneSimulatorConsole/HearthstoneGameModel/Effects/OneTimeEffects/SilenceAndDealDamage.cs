@@ -45,7 +45,7 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
                     }
                 }
             }
-            plan.Perform(game.EffectManager);
+            plan.Perform(game);
 
             game.DealDamage(affectedCardSlot, typedSelectedCardSlots, _amount);
 
