@@ -31,7 +31,7 @@ namespace HearthstoneGameModel.Game
         public WeaponCardSlot[] Weapons;
         public Battleboard Battleboard;
 
-        public EffectManager EffectManager;
+        public ExtendedEffectManager EffectManager;
         public GameMetadata GameMetadata;
         public PlayerMetadata[] PlayerMetadata;
         public CardMover CardMover;
@@ -66,7 +66,7 @@ namespace HearthstoneGameModel.Game
 
         public void SetupGame(bool shuffleDecks, bool mulligan)
         {
-            EffectManager = new EffectManager(this);
+            EffectManager = new ExtendedEffectManager(this);
             Decks = new Pile[HearthstoneConstants.NumberOfPlayers]
             {
                 Decklists[0].ToPile(0, this),

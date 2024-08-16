@@ -10,11 +10,11 @@ namespace HearthstoneGameModel.Game.EffectManagement
 {
     public class EffectManager
     {
-        HearthstoneGame _game;
-        HashSet<EffectManagerNode> _emNodes = new HashSet<EffectManagerNode>();
-        Dictionary<EffectManagerNode, List<string>> _emNodeToEvents = new Dictionary<EffectManagerNode, List<string>>();
-        EventCardSlotToEMNodeListDictionary _eventToEffectNodeList = new EventCardSlotToEMNodeListDictionary();
-        Dictionary<CardSlot, PrioritizedEffectManagerNodeList> _slotToEmNodeList = new Dictionary<CardSlot, PrioritizedEffectManagerNodeList>();
+        protected HearthstoneGame _game;
+        protected HashSet<EffectManagerNode> _emNodes = new HashSet<EffectManagerNode>();
+        protected Dictionary<EffectManagerNode, List<string>> _emNodeToEvents = new Dictionary<EffectManagerNode, List<string>>();
+        protected EventCardSlotToEMNodeListDictionary _eventToEffectNodeList = new EventCardSlotToEMNodeListDictionary();
+        protected Dictionary<CardSlot, PrioritizedEffectManagerNodeList> _slotToEmNodeList = new Dictionary<CardSlot, PrioritizedEffectManagerNodeList>();
 
         public EffectManager(HearthstoneGame game) {
             _game = game;
@@ -109,7 +109,7 @@ namespace HearthstoneGameModel.Game.EffectManagement
             PopEffectsBySlot(cardSlot, false);
         }
 
-        public void SendEvent(string effectEvent, List<CardSlot> eventSlots)
+        public virtual void SendEvent(string effectEvent, List<CardSlot> eventSlots)
         {
             List<EffectManagerNode> relevantEMNodes = _eventToEffectNodeList.GetRelevantEMNodes(effectEvent, eventSlots[0]);
             foreach (EffectManagerNode emNode in relevantEMNodes)
