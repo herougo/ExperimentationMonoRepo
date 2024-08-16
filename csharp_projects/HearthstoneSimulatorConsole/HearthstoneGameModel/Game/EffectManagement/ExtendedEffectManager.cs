@@ -1,4 +1,5 @@
-﻿using HearthstoneGameModel.Game.CardSlots;
+﻿using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Game.CardSlots;
 using HearthstoneGameModel.Game.SecretManagement;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,12 @@ namespace HearthstoneGameModel.Game.EffectManagement
                 new PlayerSecretManager(game),
                 new PlayerSecretManager(game)
             };
+        }
+
+        public AddSecretResult AddSecret(Secret secret)
+        {
+            int player = secret.CardSlot.Player;
+            return PlayerSecretManagers[player].AddSecret(secret);
         }
 
         public override void SendEvent(string effectEvent, List<CardSlot> eventSlots)

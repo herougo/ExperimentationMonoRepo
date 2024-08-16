@@ -109,8 +109,9 @@
     <Compile Include="Effects\OneTimeEffects\SwapAttackAndHealth.cs" />
     <Compile Include="Effects\OneTimeEffects\TransformInPlayMinion.cs" />
     <Compile Include="Effects\OneTimeEffects\SetRemainingHealth.cs" />
+    <Compile Include="Game\EffectManagement\ExtendedEffectManager.cs" />
     <Compile Include="Game\SecretManagement\Secret.cs" />
-    <Compile Include="Game\SecretManagement\SecretManager.cs" />
+    <Compile Include="Game\SecretManagement\PlayerSecretManager.cs" />
     <Compile Include="Triggers\AfterSpellActivation.cs" />
     <Compile Include="Triggers\ChooseOneTrigger.cs" />
     <Compile Include="Triggers\HeroPowerActivation.cs" />
