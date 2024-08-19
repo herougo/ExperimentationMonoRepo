@@ -7,7 +7,7 @@ using TextView;
 List<string> cardIdList0 = new List<string>
 {
     CardIds.DruidOfTheClaw, CardIds.DruidOfTheClaw, CardIds.DruidOfTheClaw, CardIds.DruidOfTheClaw,
-    CardIds.DruidOfTheClaw, CardIds.DruidOfTheClaw, CardIds.DruidOfTheClaw, CardIds.ExplosiveTrap
+    CardIds.DruidOfTheClaw, CardIds.DruidOfTheClaw, CardIds.DruidOfTheClaw, CardIds.FreezingTrap
 };
 string hsClass0 = "hero_druid";
 Decklist decklist0 = new Decklist(cardIdList0, hsClass0);
