@@ -74,5 +74,20 @@ namespace HearthstoneGameModel.Game.Utils
             }
             return true;
         }
+
+        public static bool MatchesBattlerFilter(CardSlot slot, BattlerFilter filter, int player)
+        {
+            switch (filter)
+            {
+                case BattlerFilter.Any:
+                    return true;
+                case BattlerFilter.YourHero:
+                    return slot.CardType == CardType.Hero && slot.Player == player;
+                case BattlerFilter.EnemyMinion:
+                    return slot.CardType == CardType.Minion && slot.Player != player;
+                default:
+                    throw new NotImplementedException();
+            }
+        }
     }
 }

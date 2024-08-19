@@ -40,6 +40,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string DamagePreparation = "damage_preparation";
         public const string CardDiscarded = "card_discarded";
         public const string MinionChooseOne = "minion_choose_one";
+        public const string AttackDeclared = "attack_declared";
 
     }
 }

@@ -83,3 +83,5 @@ class Trigger {
 1) Plan to include "secret used"
 2) Copy of EffectManager? -> No, it needs to be its own thing.
 3) List< Secret >, Secret contains card slot, trigger and effect
+
+## 9) BattlerFilter enum instead of something else
