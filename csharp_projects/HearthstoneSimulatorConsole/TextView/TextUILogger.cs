@@ -2,6 +2,7 @@
 using HearthstoneGameModel.Game;
 using HearthstoneGameModel.Game.CardSlots;
 using HearthstoneGameModel.Game.Metadata;
+using HearthstoneGameModel.Game.SecretManagement;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -75,6 +76,7 @@ namespace TextView
             LogText($"mana: {oppCurrentMana} / {oppAvailableMana}\n");
 
             LogWeapon(_game.Weapons[opp]);
+            LogSecrets(1);
             LogHand(opp);
 
             LogText("\n");
@@ -90,8 +92,18 @@ namespace TextView
             LogText($"Player ({player}) - health: {playerSlot.Health}, armour: {playerMetadata.Armour}, ");
             LogText($"mana: {playerCurrentMana} / {playerAvailableMana}\n");
             LogWeapon(_game.Weapons[player]);
+            LogSecrets(0);
             LogHand(player);
             LogText("\n");
+        }
+
+        public void LogSecrets(int player)
+        {
+            int numSecrets = _game.EffectManager.PlayerSecretManagers[player].NumSecrets;
+            if (numSecrets > 0)
+            {
+                LogText($"Secrets: {numSecrets}\n");
+            }
         }
 
         public void LogPlayerGoingFirst()
@@ -159,6 +171,11 @@ namespace TextView
         public void LogCardDiscarded(int player, string cardName)
         {
             LogText($"Player {player} discarded {cardName}\n");
+        }
+
+        public void LogSecretRevealed(string cardName)
+        {
+            LogText($"Secret revealed: {cardName}\n");
         }
     }
 }

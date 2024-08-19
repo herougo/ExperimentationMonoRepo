@@ -104,7 +104,7 @@ namespace HearthstoneGameModel.Game.Utils
                 return false;
             }
 
-            return true
+            return true;
         }
     }
 }

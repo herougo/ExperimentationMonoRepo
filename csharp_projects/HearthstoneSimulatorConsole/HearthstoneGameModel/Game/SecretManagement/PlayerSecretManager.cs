@@ -3,6 +3,7 @@ using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Game.CardSlots;
 using HearthstoneGameModel.Game.EffectManagement;
 using HearthstoneGameModel.Triggers;
+using HearthstoneGameModel.UI.UIEvents;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,8 +49,12 @@ namespace HearthstoneGameModel.Game.SecretManagement
             string effectEvent, List<CardSlot> eventSlots
         )
         {
-            foreach (Secret secret in _secrets)
+            int i = -1;
+            while (i + 1 < _secrets.Count)
             {
+                i += 1;
+                Secret secret = _secrets[i];
+
                 if (!secret.Trigger.EventsReceived.Contains(effectEvent))
                 {
                     continue;
@@ -71,10 +76,17 @@ namespace HearthstoneGameModel.Game.SecretManagement
                     continue;
                 }
 
+                _game.UIManager.ReceiveUIEvent(new SecretRevealedUIEvent(secret.CardSlot.Card.Name));
                 _game.EffectManager.Execute(secret.OneTimeEffect, secret.CardSlot, eventSlots);
+
+                _secrets.RemoveAt(i);
+                i -= 1;
             }
         }
 
-
+        public int NumSecrets
+        {
+            get {  return _secrets.Count; }
+        }
     }
 }

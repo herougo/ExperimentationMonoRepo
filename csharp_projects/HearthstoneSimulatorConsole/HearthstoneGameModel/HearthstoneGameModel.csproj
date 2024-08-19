@@ -50,6 +50,7 @@
     <Compile Include="Cards\CardTypes\SpellCard.cs" />
     <Compile Include="Cards\CardTypes\WeaponCard.cs" />
     <Compile Include="Cards\Implementations\Classic\Druid.cs" />
+    <Compile Include="Cards\Implementations\Classic\Hunter.cs" />
     <Compile Include="Cards\Implementations\Classic\NeutralEpic.cs" />
     <Compile Include="Cards\Implementations\Classic\NeutralLegendary.cs" />
     <Compile Include="Cards\Implementations\Classic\NeutralRare.cs" />
@@ -207,6 +208,7 @@
     <Compile Include="UI\UIEvent.cs" />
     <Compile Include="UI\UIEventHandler.cs" />
     <Compile Include="UI\UIEvents\ActionUIEvents.cs" />
+    <Compile Include="UI\UIEvents\CardEffectUIEvents.cs" />
     <Compile Include="UI\UIEvents\GameMechanicsUIEvents.cs" />
     <Compile Include="UI\UIManager.cs" />
     <Compile Include="Game\Action\Actions.cs" />

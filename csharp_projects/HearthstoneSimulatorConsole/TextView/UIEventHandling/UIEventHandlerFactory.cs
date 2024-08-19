@@ -41,6 +41,10 @@ namespace TextView.UIEventHandling
                     return new MinionReturnedToHandUIEventHandler((MinionReturnedToHandUIEvent)uiEvent, textUiManager);
                 case UIEventType.CardDiscarded:
                     return new CardDiscardedUIEventHandler((CardDiscardedUIEvent)uiEvent, textUiManager);
+
+                // CardEffectUIEvents
+                case UIEventType.SecretRevealed:
+                    return new SecretRevealedUIEventHandler((SecretRevealedUIEvent)uiEvent, textUiManager);
             }
             throw new NotImplementedException();
         }

@@ -21,6 +21,9 @@ namespace HearthstoneGameModel.Core.Enums
         MinionDied = 8,
         CardBurned = 9,
         MinionReturnedToHand = 10,
-        CardDiscarded = 11
+        CardDiscarded = 11,
+
+        // CardEffectUIEvents
+        SecretRevealed = 12
     }
 }
