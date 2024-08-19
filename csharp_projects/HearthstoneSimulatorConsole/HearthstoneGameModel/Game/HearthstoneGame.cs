@@ -18,6 +18,7 @@ using HearthstoneGameModel.Effects.OneTimeEffects;
 using HearthstoneGameModel.Selections;
 using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Cards.Implementations;
+using HearthstoneGameModel.Game.Utils;
 
 namespace HearthstoneGameModel.Game
 {
@@ -268,7 +269,30 @@ namespace HearthstoneGameModel.Game
 
         public void Attack(BattlerCardSlot attackerCardSlot, BattlerCardSlot defenderCardSlot)
         {
+            attackDeclaration(attackerCardSlot, defenderCardSlot);
+
+            KillIfNecessary();
+            if (!HSGameUtils.CanBattle(attackerCardSlot, defenderCardSlot, this))
+            {
+                return;
+            }
+
+            attackExecution(attackerCardSlot, defenderCardSlot);
+
+            KillIfNecessary();
+        }
+
+        private void attackDeclaration(BattlerCardSlot attackerCardSlot, BattlerCardSlot defenderCardSlot)
+        {
             UIManager.ReceiveUIEvent(new AttackUIEvent(attackerCardSlot, defenderCardSlot));
+            EffectManager.SendEvent(new EffectEventArgs(
+                EffectEvent.AttackDeclared,
+                new List<CardSlot>() { attackerCardSlot, defenderCardSlot }
+            ));
+        }
+
+        private void attackExecution(BattlerCardSlot attackerCardSlot, BattlerCardSlot defenderCardSlot)
+        {
             attackerCardSlot.AttacksThisTurn += 1;
             attackerCardSlot.TempDamageToTake = defenderCardSlot.Attack;
             defenderCardSlot.TempDamageToTake = attackerCardSlot.Attack;
@@ -293,8 +317,6 @@ namespace HearthstoneGameModel.Game
             {
                 ReduceDurability(attackerCardSlot.Player);
             }
-
-            KillIfNecessary();
         }
 
         public void ReduceDurability(int player)
