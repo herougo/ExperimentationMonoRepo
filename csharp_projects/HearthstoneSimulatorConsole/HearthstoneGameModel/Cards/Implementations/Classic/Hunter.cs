@@ -1,8 +1,10 @@
 ﻿using HearthstoneGameModel.Cards.CardTypes;
 using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ContinuousEffects;
 using HearthstoneGameModel.Effects.OneTimeEffects;
 using HearthstoneGameModel.Selections;
+using HearthstoneGameModel.Selections.SlotSelections;
 using HearthstoneGameModel.Triggers;
 using System;
 using System.Collections.Generic;

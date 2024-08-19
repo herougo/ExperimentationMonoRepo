@@ -27,7 +27,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.AngryChicken;
             _name = "Angry Chicken";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 1;
@@ -55,7 +55,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.BloodsailCorsair;
             _name = "Bloodsail Corsair";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 1;
@@ -83,7 +83,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.Lightwarden;
             _name = "Lightwarden";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 1;
@@ -111,7 +111,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.MurlocTidecaller;
             _name = "Murloc Tidecaller";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
             
             _mana = 1;
@@ -140,7 +140,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.Secretkeeper;
             _name = "Secretkeeper";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 1;
@@ -165,7 +165,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.YoungPriestess;
             _name = "Young Priestess";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 1;
@@ -193,7 +193,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.AncientWatcher;
             _name = "Ancient Watcher";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 2;
@@ -218,7 +218,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.CrazedAlchemist;
             _name = "Crazed Alchemist";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 2;
@@ -247,7 +247,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.KnifeJuggler;
             _name = "Knife Juggler";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 2;
@@ -275,7 +275,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.ManaAddict;
             _name = "Mana Addict";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 2;
@@ -306,7 +306,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.ManaWraith;
             _name = "Mana Wraith";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 2;
@@ -334,7 +334,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.MasterSwordsmith;
             _name = "Master Swordsmith";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 2;
@@ -362,7 +362,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.SunfuryProtector;
             _name = "Sunfury Protector";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 2;
@@ -390,7 +390,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.WildPyromancer;
             _name = "Wild Pyromancer";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 2;
@@ -419,7 +419,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.ArcaneGolem;
             _name = "Arcane Golem";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 3;
@@ -448,7 +448,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.ColdlightSeer;
             _name = "Coldlight Seer";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 3;
@@ -481,7 +481,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.Demolisher;
             _name = "Demolisher";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 3;
@@ -513,7 +513,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.EmperorCobra;
             _name = "Emperor Cobra";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 3;
@@ -539,7 +539,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.ImpMaster;
             _name = "Imp Master";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 3;
@@ -570,7 +570,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.InjuredBlademaster;
             _name = "Injured Blademaster";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 3;
@@ -598,7 +598,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.QuestingAdventurer;
             _name = "Questing Adventurer";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 3;
@@ -626,7 +626,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.AncientMage;
             _name = "Ancient Mage";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 4;
@@ -654,7 +654,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.DefenderOfArgus;
             _name = "Defender Of Argus";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 4;
@@ -685,7 +685,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.TwilightDrake;
             _name = "Twilight Drake";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 4;
@@ -714,7 +714,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.VioletTeacher;
             _name = "Violet Teacher";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 4;
@@ -742,7 +742,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.Abomination;
             _name = "Abomination";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 5;
@@ -772,7 +772,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.StampedingKodo;
             _name = "Stampeding Kodo";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 5;
@@ -803,7 +803,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.ArgentCommander;
             _name = "Argent Commander";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 6;
@@ -828,7 +828,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.GadgetzanAuctioneer;
             _name = "Gadgetzan Auctioneer";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 6;
@@ -856,7 +856,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.Sunwalker;
             _name = "Sunwalker";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 6;
@@ -881,7 +881,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.RavenholdtAssassin;
             _name = "Ravenholdt Assassin";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 7;
@@ -906,7 +906,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.ArcaneDevourer;
             _name = "Arcane Devourer";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 8;

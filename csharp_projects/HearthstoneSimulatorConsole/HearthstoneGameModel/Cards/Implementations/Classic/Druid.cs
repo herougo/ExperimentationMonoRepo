@@ -131,7 +131,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.DruidOfTheClaw;
             _name = "Druid of the Claw";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Druid;
             _collectible = true;
 
             _mana = 6;
@@ -236,7 +236,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.KeeperOfTheGrove;
             _name = "Keeper of the Grove";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Druid;
             _collectible = true;
 
             _mana = 4;
@@ -335,7 +335,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.AncientOfLore;
             _name = "Ancient of Lore";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Druid;
             _collectible = true;
 
             _mana = 7;
@@ -365,7 +365,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.AncientOfWar;
             _name = "Ancient of War";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Druid;
             _collectible = true;
 
             _mana = 7;
@@ -398,7 +398,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.Cenarius;
             _name = "Cenarius";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Druid;
             _collectible = true;
 
             _mana = 8;

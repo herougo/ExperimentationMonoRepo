@@ -15,26 +15,37 @@ namespace HearthstoneGameModel.Triggers
     public class WhenOtherMinionDies : Trigger
     {
         PlayerChoice _playerChoice;
+        MinionTag _minionTag;
 
         public WhenOtherMinionDies(PlayerChoice playerChoice)
         {
             _eventsReceived = new List<string> { EffectEvent.MinionDies };
             _playerChoice = playerChoice;
+            _minionTag = MinionTag.Any;
+        }
+
+        public WhenOtherMinionDies(PlayerChoice playerChoice, MinionTag minionTag)
+        {
+            _eventsReceived = new List<string> { EffectEvent.MinionDies };
+            _playerChoice = playerChoice;
+            _minionTag = minionTag;
         }
 
         public override bool ShouldRun(
             string effectEvent, HearthstoneGame game,
             CardSlot affectedSlot, List<CardSlot> eventSlots)
         {
+            MinionCardSlot slot = (MinionCardSlot)eventSlots[0];
             return (
-                HSGameUtils.IsPlayerAffected(affectedSlot.Player, eventSlots[0].Player, _playerChoice)
-                && eventSlots[0] != affectedSlot
+                HSGameUtils.IsPlayerAffected(affectedSlot.Player, slot.Player, _playerChoice)
+                && HSGameUtils.MatchesTag(_minionTag, slot.TypedCard.Tag)
+                && slot != affectedSlot
             );
         }
 
         public override Trigger Copy()
         {
-            return new WhenOtherMinionDies(_playerChoice);
+            return new WhenOtherMinionDies(_playerChoice, _minionTag);
         }
     }
 }

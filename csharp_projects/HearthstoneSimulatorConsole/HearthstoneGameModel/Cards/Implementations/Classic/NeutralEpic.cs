@@ -26,7 +26,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.HungryCrab;
             _name = "Hungry Crab";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 1;
@@ -60,7 +60,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.Doomsayer;
             _name = "Doomsayer";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 2;
@@ -88,7 +88,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.BloodKnight;
             _name = "Blood Knight";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 3;
@@ -116,7 +116,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.MurlocWarleader;
             _name = "Murloc Warleader";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 3;
@@ -145,7 +145,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.SouthseaCaptain;
             _name = "Southsea Captain";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 3;
@@ -174,7 +174,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.BigGameHunter;
             _name = "Big Game Hunter";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 4;
@@ -202,7 +202,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.FacelessManipulator;
             _name = "Faceless Manipulator";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 5;
@@ -230,7 +230,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         {
             _cardId = CardIds.SeaGiant;
             _name = "Sea Giant";
-            _hsClass = HeroClass.Neutral;
+            _hsClass = HSClass.Neutral;
             _collectible = true;
 
             _mana = 10;

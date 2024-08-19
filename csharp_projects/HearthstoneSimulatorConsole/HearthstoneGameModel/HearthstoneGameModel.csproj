@@ -73,7 +73,6 @@
     <Compile Include="Core\Enums\EffectArea.cs" />
     <Compile Include="Core\Enums\EffectEvent.cs" />
     <Compile Include="Core\Enums\EffectTimeLimit.cs" />
-    <Compile Include="Core\Enums\HeroClass.cs" />
     <Compile Include="Cards\Implementations\Classic\NeutralCommon.cs" />
     <Compile Include="Core\Enums\HSClass.cs" />
     <Compile Include="Core\Enums\MinionTag.cs" />
