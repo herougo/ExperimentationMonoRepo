@@ -22,6 +22,8 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _mana = 2;
             _collectible = true;
 
+            _school = SpellSchool.Fire;
+
             _whenPlayedEffect = new CreateSecret(
                 new WhenAttackDeclared(BattlerFilter.Any, BattlerFilter.YourHero),
                 new DealDamage(SelectionConstants.OtherLivingEnemies, 2)
@@ -31,6 +33,32 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new ExplosiveTrap();
+        }
+    }
+
+    public class FreezingTrap : SpellCard
+    {
+        public FreezingTrap()
+        {
+            _cardId = CardIds.FreezingTrap;
+            _name = "Freezing Trap";
+            _hsClass = HSClass.Hunter;
+            _mana = 2;
+            _collectible = true;
+
+            _school = SpellSchool.Frost;
+
+            _whenPlayedEffect = new CreateSecret(
+                new WhenAttackDeclared(BattlerFilter.EnemyMinion, BattlerFilter.Any),
+                new ReturnMinionToHandAndChangeMana(
+                    SelectionConstants.EventSlot0, 2
+                )
+            );
+        }
+
+        public override Card Copy()
+        {
+            return new FreezingTrap();
         }
     }
 }

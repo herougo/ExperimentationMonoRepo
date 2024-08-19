@@ -255,6 +255,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
 
                 case CardIds.ExplosiveTrap:
                     return new ExplosiveTrap();
+                case CardIds.FreezingTrap:
+                    return new FreezingTrap();
 
                 case CardIds.EarthShock:
                     return new EarthShock();
