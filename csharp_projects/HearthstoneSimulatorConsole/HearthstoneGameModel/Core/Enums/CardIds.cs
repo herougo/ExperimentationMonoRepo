@@ -138,8 +138,10 @@ namespace HearthstoneGameModel.Core.Enums
         public const string AncientOfWar = "C118";
         public const string Cenarius = "C119";
 
+        // Classic Hunter
+        public const string ExplosiveTrap = "C120";
 
-        // Classic Rogue
+        // Classic Shaman
         public const string EarthShock = "C3XX";
 
 

@@ -236,6 +236,18 @@ namespace HearthstoneGameModel.Game
             }
         }
 
+        public int SlotToIndex(CardSlot slot)
+        {
+            if (slot.CardType == CardType.Hero)
+            {
+                return HearthstoneConstants.HeroIndex;
+            }
+            else
+            {
+                return Battleboard.CardSlotToBoardIndex(slot);
+            }
+        }
+
         public void CheckGameOver()
         {
             bool player0Dead = !Players[0].IsAlive;

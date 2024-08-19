@@ -253,6 +253,9 @@ namespace HearthstoneGameModel.Cards.CardFactories
                 case CardIds.Cenarius:
                     return new Cenarius();
 
+                case CardIds.ExplosiveTrap:
+                    return new ExplosiveTrap();
+
                 case CardIds.EarthShock:
                     return new EarthShock();
 

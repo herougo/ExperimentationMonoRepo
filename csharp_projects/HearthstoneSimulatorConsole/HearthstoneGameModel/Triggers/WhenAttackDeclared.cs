@@ -39,7 +39,17 @@ namespace HearthstoneGameModel.Triggers
                 return false;
             }
 
-            // TODO: check if battlers are alive??
+            if (!attacker.IsAlive || !defender.IsAlive)
+            {
+                return false;
+            }
+
+            // an attacker or defender is not on the field anymore
+            if (game.SlotToIndex(attacker) == HearthstoneConstants.NullInt
+                || game.SlotToIndex(defender) == HearthstoneConstants.NullInt)
+            {
+                return false;
+            }
 
             return true;
         }
