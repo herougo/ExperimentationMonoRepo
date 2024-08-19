@@ -21,7 +21,7 @@ namespace HearthstoneGameModel.Selections.SlotSelections
         }
 
         public override List<CardSlot> GetSelectedCardSlots(
-            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
+            HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots
         )
         {
             CardSlot cardSlot = affectedCardSlot;

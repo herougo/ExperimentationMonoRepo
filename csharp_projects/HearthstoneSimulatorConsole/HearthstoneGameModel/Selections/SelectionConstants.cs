@@ -81,5 +81,7 @@ namespace HearthstoneGameModel.Selections
         );
         public static SlotSelection PlayerHand = new HandSelection(PlayerChoice.Player);
 
+        public static SlotSelection EventSlot0 = new EventSlotSelection(0);
+
     }
 }

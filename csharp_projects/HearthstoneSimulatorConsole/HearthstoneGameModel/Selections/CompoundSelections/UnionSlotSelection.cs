@@ -22,11 +22,11 @@ namespace HearthstoneGameModel.Selections.CompoundSelections
         }
 
         public override List<CardSlot> GetSelectedCardSlots
-            (HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
+            (HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots
         )
         {
-            List<CardSlot> results = _selection1.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
-            results.AddRange(_selection2.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot));
+            List<CardSlot> results = _selection1.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot, eventSlots);
+            results.AddRange(_selection2.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot, eventSlots));
             return results;
         }
 

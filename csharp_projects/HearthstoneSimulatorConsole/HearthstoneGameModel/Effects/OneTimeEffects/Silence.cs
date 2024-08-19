@@ -23,7 +23,7 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
         )
         {
             EffectManagerNodePlan plan = new EffectManagerNodePlan();
-            List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
+            List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot, eventSlots);
             
             foreach (CardSlot slot in selectedCardSlots)
             {

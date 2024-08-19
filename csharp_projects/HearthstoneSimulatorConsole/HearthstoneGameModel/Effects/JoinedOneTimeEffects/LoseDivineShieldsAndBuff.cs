@@ -39,7 +39,9 @@ namespace HearthstoneGameModel.Effects.JoinedOneTimeEffects
         public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots)
         {
             // Lose DivineShields
-            List<CardSlot> slotsToLoseDivineShields = _loseDivineShieldsSelection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
+            List<CardSlot> slotsToLoseDivineShields = _loseDivineShieldsSelection.GetSelectedCardSlots(
+                game, affectedCardSlot, originCardSlot, eventSlots
+            );
             List<EffectManagerNode> divineShields = new List<EffectManagerNode>();
 
             if (slotsToLoseDivineShields.Count == 0)
@@ -63,7 +65,7 @@ namespace HearthstoneGameModel.Effects.JoinedOneTimeEffects
             plan.ToRemove.AddRange(divineShields);
 
             // Buff
-            List<CardSlot> selectedCardSlots = _buffSelection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
+            List<CardSlot> selectedCardSlots = _buffSelection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot, eventSlots);
             List<EffectManagerNode> emNodesToAdd = new List<EffectManagerNode>();
             int attackAmountValue = _attackBuff * divineShields.Count;
             int healthAmountValue = _healthBuff * divineShields.Count;

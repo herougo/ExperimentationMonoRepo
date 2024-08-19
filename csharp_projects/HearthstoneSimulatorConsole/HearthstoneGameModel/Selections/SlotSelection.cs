@@ -18,7 +18,7 @@ namespace HearthstoneGameModel.Selections
         public List<string> EventsReceived { get {  return _eventsReceived; } }
 
         public abstract List<CardSlot> GetSelectedCardSlots
-            (HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
+            (HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots
         );
         public static SlotSelection operator +(SlotSelection a, SlotSelection b) {
             return new UnionSlotSelection(a, b);

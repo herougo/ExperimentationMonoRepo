@@ -21,10 +21,10 @@ namespace HearthstoneGameModel.Selections
         }
 
         public override List<CardSlot> GetSelectedCardSlots
-            (HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot
+            (HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots
         )
         {
-            List<CardSlot> results = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
+            List<CardSlot> results = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot, eventSlots);
             results = _filter.Filter(results, game, affectedCardSlot);
             return results;
         }

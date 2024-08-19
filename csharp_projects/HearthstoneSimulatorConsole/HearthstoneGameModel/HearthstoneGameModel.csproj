@@ -102,6 +102,7 @@
     <Compile Include="Effects\OneTimeEffects\ChooseOne.cs" />
     <Compile Include="Effects\OneTimeEffects\CreateSecret.cs" />
     <Compile Include="Effects\OneTimeEffects\DiscardCards.cs" />
+    <Compile Include="Effects\OneTimeEffects\ReturnMinionToHandAndChangeMana.cs" />
     <Compile Include="Effects\OneTimeEffects\SilenceAndDealDamage.cs" />
     <Compile Include="Effects\OneTimeEffects\DestroyMinion.cs" />
     <Compile Include="Effects\OneTimeEffects\DestroyWeaponAndDrawDurability.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="Game\EffectManagement\ExtendedEffectManager.cs" />
     <Compile Include="Game\SecretManagement\Secret.cs" />
     <Compile Include="Game\SecretManagement\PlayerSecretManager.cs" />
+    <Compile Include="Selections\SlotSelections\EventSlotSelection.cs" />
     <Compile Include="Triggers\AfterSpellActivation.cs" />
     <Compile Include="Triggers\ChooseOneTrigger.cs" />
     <Compile Include="Triggers\HeroPowerActivation.cs" />

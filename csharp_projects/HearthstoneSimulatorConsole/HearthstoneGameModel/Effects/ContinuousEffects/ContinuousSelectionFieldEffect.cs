@@ -30,7 +30,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
         {
             HashSet<CardSlot> prevSelectedSlots = _memoryCurrentSelection.Keys.ToHashSet<CardSlot>();
             HashSet<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(
-                game, emNode.AffectedSlot, emNode.OriginSlot
+                game, emNode.AffectedSlot, emNode.OriginSlot, new List<CardSlot>()
             ).ToHashSet();
 
             EffectManagerNodePlan plan = new EffectManagerNodePlan();

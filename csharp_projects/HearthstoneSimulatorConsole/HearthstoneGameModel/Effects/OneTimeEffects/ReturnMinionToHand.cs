@@ -21,7 +21,7 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 
         public override EffectManagerNodePlan Execute(HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots)
         {
-            List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
+            List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot, eventSlots);
             List<CardSlot> selectedCardSlotsPlayer0 = selectedCardSlots.Where(x => x.Player == 0).ToList();
             List<CardSlot> selectedCardSlotsPlayer1 = selectedCardSlots.Where(x => x.Player == 1).ToList();
             

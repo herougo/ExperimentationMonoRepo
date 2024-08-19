@@ -41,7 +41,7 @@ namespace HearthstoneGameModel.Effects.JoinedOneTimeEffects
         )
         {
             // Destroy
-            List<CardSlot> slotsToDestroy = _destroySelection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
+            List<CardSlot> slotsToDestroy = _destroySelection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot, eventSlots);
 
             if (slotsToDestroy.Count == 0)
             {
@@ -54,7 +54,7 @@ namespace HearthstoneGameModel.Effects.JoinedOneTimeEffects
             }
 
             // Buff
-            List<CardSlot> selectedCardSlots = _buffSelection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
+            List<CardSlot> selectedCardSlots = _buffSelection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot, eventSlots);
             List<EffectManagerNode> emNodesToAdd = new List<EffectManagerNode>();
             int attackAmountValue = _attackBuff;
             int healthAmountValue = _healthBuff;

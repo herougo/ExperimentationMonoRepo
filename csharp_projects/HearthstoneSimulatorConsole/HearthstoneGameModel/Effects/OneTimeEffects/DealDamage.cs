@@ -37,7 +37,7 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
             HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots
         )
         {
-            List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
+            List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot, eventSlots);
             List<BattlerCardSlot> typedSelectedCardSlots = selectedCardSlots.Select(x => (BattlerCardSlot)x).ToList();
 
             int amountValue = _amount.Get(game, affectedCardSlot);

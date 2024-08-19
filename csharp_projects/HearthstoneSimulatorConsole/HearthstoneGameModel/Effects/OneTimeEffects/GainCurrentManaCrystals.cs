@@ -30,7 +30,7 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
             HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots
         )
         {
-            List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot);
+            List<CardSlot> selectedCardSlots = _selection.GetSelectedCardSlots(game, affectedCardSlot, originCardSlot, eventSlots);
             foreach (CardSlot slot in selectedCardSlots)
             {
                 int player = slot.Player;

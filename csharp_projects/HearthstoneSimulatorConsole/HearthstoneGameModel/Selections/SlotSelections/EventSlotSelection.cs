@@ -1,5 +1,5 @@
-﻿using HearthstoneGameModel.Game.CardSlots;
-using HearthstoneGameModel.Game.EffectManagement;
+﻿using HearthstoneGameModel.Core.Enums;
+using HearthstoneGameModel.Game.CardSlots;
 using HearthstoneGameModel.Game;
 using System;
 using System.Collections.Generic;
@@ -9,19 +9,25 @@ using System.Threading.Tasks;
 
 namespace HearthstoneGameModel.Selections.SlotSelections
 {
-    public class OwnSelf : SlotSelection
+    public class EventSlotSelection : SlotSelection
     {
+        int _index;
+
+        public EventSlotSelection(int index)
+        {
+            _index = index;
+        }
+
         public override List<CardSlot> GetSelectedCardSlots(
             HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots
         )
         {
-            CardSlot cardSlot = affectedCardSlot;
-            return new List<CardSlot> { cardSlot };
+            return new List<CardSlot> { eventSlots[_index] };
         }
 
         public override SlotSelection Copy()
         {
-            return new OwnSelf();
+            return new EventSlotSelection(_index);
         }
     }
 }
