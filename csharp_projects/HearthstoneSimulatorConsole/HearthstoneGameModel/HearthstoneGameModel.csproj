@@ -165,6 +165,7 @@
     <Compile Include="Triggers\OnTurnEnd.cs" />
     <Compile Include="Triggers\OnTurnStart.cs" />
     <Compile Include="Triggers\WhenOtherMinionDies.cs" />
+    <Compile Include="Triggers\WhenOpponentPlaysLivingMinion.cs" />
     <Compile Include="Triggers\WhenYouSummonOtherMinion.cs" />
     <Compile Include="Effects\WrappedEMEffects\ContinuousMonitorEffect.cs" />
     <Compile Include="Effects\WrappedEMEffects\TimeLimitedEMEffect.cs" />

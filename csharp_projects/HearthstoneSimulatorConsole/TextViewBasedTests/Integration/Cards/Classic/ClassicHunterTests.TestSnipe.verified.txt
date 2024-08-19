@@ -1,0 +1,115 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Snipe', Mana=2)
+1: CardSlot('Cairne Bloodhoof', Mana=6, 5 / 5)
+2: CardSlot('Blood Knight', Mana=3, 3 / 3)
+3: CardSlot('Blood Knight', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Snipe', Mana=2)
+1: CardSlot('Cairne Bloodhoof', Mana=6, 5 / 5)
+2: CardSlot('Blood Knight', Mana=3, 3 / 3)
+3: CardSlot('Blood Knight', Mana=3, 3 / 3)
+
+0 plays Snipe
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Snipe', Mana=2)
+1: CardSlot('Cairne Bloodhoof', Mana=6, 5 / 5)
+2: CardSlot('Blood Knight', Mana=3, 3 / 3)
+3: CardSlot('Blood Knight', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+Secrets: 1
+0: CardSlot('Cairne Bloodhoof', Mana=6, 5 / 5)
+1: CardSlot('Blood Knight', Mana=3, 3 / 3)
+2: CardSlot('Blood Knight', Mana=3, 3 / 3)
+
+0 plays Cairne Bloodhoof
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Snipe', Mana=2)
+1: CardSlot('Cairne Bloodhoof', Mana=6, 5 / 5)
+2: CardSlot('Blood Knight', Mana=3, 3 / 3)
+3: CardSlot('Blood Knight', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Cairne Bloodhoof', Mana=6, 5 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+Secrets: 1
+0: CardSlot('Blood Knight', Mana=3, 3 / 3)
+1: CardSlot('Blood Knight', Mana=3, 3 / 3)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Snipe', Mana=2)
+1: CardSlot('Cairne Bloodhoof', Mana=6, 5 / 5)
+2: CardSlot('Blood Knight', Mana=3, 3 / 3)
+3: CardSlot('Blood Knight', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Cairne Bloodhoof', Mana=6, 5 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+Secrets: 1
+0: CardSlot('Blood Knight', Mana=3, 3 / 3)
+1: CardSlot('Blood Knight', Mana=3, 3 / 3)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Snipe', Mana=2)
+1: CardSlot('Cairne Bloodhoof', Mana=6, 5 / 5)
+2: CardSlot('Blood Knight', Mana=3, 3 / 3)
+3: CardSlot('Blood Knight', Mana=3, 3 / 3)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+
+	------------
+	0: CardSlot('Cairne Bloodhoof', Mana=6, 5 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+Secrets: 1
+0: CardSlot('Blood Knight', Mana=3, 3 / 3)
+1: CardSlot('Blood Knight', Mana=3, 3 / 3)
+
+1 plays Cairne Bloodhoof
+Secret revealed: Snipe
+Opponent (1) - health: 30, armour: 0, mana: 4 / 10
+Weapon: None
+0: CardSlot('Snipe', Mana=2)
+1: CardSlot('Blood Knight', Mana=3, 3 / 3)
+2: CardSlot('Blood Knight', Mana=3, 3 / 3)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+
+	0: CardSlot('Cairne Bloodhoof', Mana=6, 5 / 1)
+	------------
+	0: CardSlot('Cairne Bloodhoof', Mana=6, 5 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 2 / 10
+Weapon: None
+0: CardSlot('Blood Knight', Mana=3, 3 / 3)
+1: CardSlot('Blood Knight', Mana=3, 3 / 3)
+
+Game Over: Player 0 Wins

@@ -61,4 +61,26 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new FreezingTrap();
         }
     }
+
+    public class Snipe : SpellCard
+    {
+        public Snipe()
+        {
+            _cardId = CardIds.Snipe;
+            _name = "Snipe";
+            _hsClass = HSClass.Hunter;
+            _mana = 2;
+            _collectible = true;
+
+            _whenPlayedEffect = new CreateSecret(
+                new WhenOpponentPlaysLivingMinion(),
+                new DealDamage(SelectionConstants.EventSlot0, 4)
+            );
+        }
+
+        public override Card Copy()
+        {
+            return new Snipe();
+        }
+    }
 }

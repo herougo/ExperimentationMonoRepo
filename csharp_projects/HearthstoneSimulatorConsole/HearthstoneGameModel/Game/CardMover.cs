@@ -62,10 +62,10 @@ namespace HearthstoneGameModel.Game
             // prevent attacking on the turn it's summoned (via Sleep effect)
             cardSlot.AddSleepEffectManagerNode();
 
+            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionChooseOne, cardSlot));
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionPutInPlay, cardSlot));
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.WhenCardPlayed, cardSlot));
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionBattlecry, cardSlot));
-            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionChooseOne, cardSlot));
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionSummoned, cardSlot));
         }
 

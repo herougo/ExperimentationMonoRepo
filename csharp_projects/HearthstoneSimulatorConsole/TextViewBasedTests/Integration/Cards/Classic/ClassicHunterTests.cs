@@ -56,5 +56,22 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Rogue);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestSnipe()
+        {
+            string actionText = @"play 0
+play 0 0
+end_turn
+play 1 0
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
+                CardIds.BloodKnight, CardIds.BloodKnight, CardIds.CairneBloodhoof, CardIds.Snipe
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
+            return Verify(log);
+        }
     }
 }
