@@ -238,8 +238,8 @@ namespace HearthstoneGameModel.Game
 
         public void CheckGameOver()
         {
-            bool player0Dead = Players[0].Health <= 0;
-            bool player1Dead = Players[1].Health <= 0;
+            bool player0Dead = !Players[0].IsAlive;
+            bool player1Dead = !Players[1].IsAlive;
             if (!player0Dead && !player1Dead)
             {
                 return;
@@ -306,7 +306,7 @@ namespace HearthstoneGameModel.Game
                     if (slot.CardType == CardType.Minion)
                     {
                         MinionCardSlot minionSlot = (MinionCardSlot)slot;
-                        if (minionSlot.Health <= 0 || minionSlot.IsDestroyed) {
+                        if (!minionSlot.IsAlive) {
                             minionsToKill.Add(slot);
                         }
                     }

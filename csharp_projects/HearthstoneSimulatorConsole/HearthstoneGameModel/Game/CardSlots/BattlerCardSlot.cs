@@ -30,6 +30,8 @@ namespace HearthstoneGameModel.Game.CardSlots
 
         public int TempDamageToTake = 0;
 
+        public bool IsDestroyed = false;
+
         public BattlerCardSlot(string cardId, int player, HearthstoneGame game)
             : base(cardId, player, game) { }
         public abstract EffectManagerNodePlan TakeDamage();
@@ -132,6 +134,11 @@ namespace HearthstoneGameModel.Game.CardSlots
         public bool HasElusive
         {
             get { return NumElusive > 0; }
+        }
+
+        public bool IsAlive
+        {
+            get { return Health > 0 && !IsDestroyed; }
         }
     }
 }

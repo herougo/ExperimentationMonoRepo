@@ -20,7 +20,7 @@ namespace HearthstoneGameModel.Selections.SelectionFilters
                         || slot.CardType == CardType.Hero)
                     {
                         BattlerCardSlot battlerCardSlot = (BattlerCardSlot)slot;
-                        if (battlerCardSlot.Health <= 0)
+                        if (!battlerCardSlot.IsAlive)
                         {
                             return false;
                         }
