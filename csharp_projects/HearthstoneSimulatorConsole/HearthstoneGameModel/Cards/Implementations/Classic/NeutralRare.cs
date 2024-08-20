@@ -149,7 +149,10 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
 
             _inPlayEffects = new List<EMEffect>
             {
-                // TODO
+                new TriggerEffect(
+                    new WhenSecretPlayed(),
+                    new ChangeStats(SelectionConstants.OwnSelf, 1, 1)
+                )
             };
         }
 

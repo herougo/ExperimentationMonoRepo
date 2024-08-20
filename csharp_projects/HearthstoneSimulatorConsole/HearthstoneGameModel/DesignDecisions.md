@@ -68,11 +68,13 @@ like NEffects
 
 ### 8.1) Split trigger and effect?
 
+```C#
 class Trigger {
   public bool ShouldRun(...) {
     
   }
 }
+```
 
 ### 8.2) Handling Events
 
@@ -85,3 +87,39 @@ class Trigger {
 3) List< Secret >, Secret contains card slot, trigger and effect
 
 ## 9) BattlerFilter enum instead of something else
+
+# Unresolved
+
+## 10) SendEventArgs instead of N arguments
+
+```C#
+// OneTimeEffect
+public abstract EffectManagerNodePlan Execute(
+	HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots
+);
+// Selection
+public abstract List<CardSlot> GetSelectedCardSlots
+    (HearthstoneGame game, CardSlot affectedCardSlot, CardSlot originCardSlot, List<CardSlot> eventSlots
+);
+// Continuous and Trigger
+public override EffectManagerNodePlan SendEvent(
+    string effectEvent, HearthstoneGame game,
+    EffectManagerNode emNode, List<CardSlot> eventSlots);
+// EffectManager
+public virtual void SendEvent(string effectEvent, List<CardSlot> eventSlots)
+{
+    ...
+    emNode.SendEvent(effectEvent, _game, eventSlots);
+    ...
+}
+// HearthstoneGame attack declaration
+UIManager.ReceiveUIEvent(new AttackUIEvent(attackerCardSlot, defenderCardSlot));
+EffectManager.SendEvent(new EffectEventArgs(
+    EffectEvent.AttackDeclared,
+    new List<CardSlot>() { attackerCardSlot, defenderCardSlot }
+));
+```
+
+1 idea
+1) EffectEventArgs(effectEvent, game, eventSlots)
+2) 

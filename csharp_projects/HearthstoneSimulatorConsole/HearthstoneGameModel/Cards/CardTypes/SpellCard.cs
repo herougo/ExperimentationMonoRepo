@@ -14,6 +14,7 @@ namespace HearthstoneGameModel.Cards.CardTypes
     {
         protected OneTimeEffect _whenPlayedEffect;
         protected SpellSchool _school = SpellSchool.None;
+        protected SpellType _spellType = SpellType.Normal;
         
         public OneTimeEffect WhenPlayedEffect { get { return _whenPlayedEffect; } }
 
@@ -25,5 +26,7 @@ namespace HearthstoneGameModel.Cards.CardTypes
         {
             return new SpellCardSlot(_cardId, player, game);
         }
+
+        public SpellType SpellType { get { return _spellType; } }
     }
 }

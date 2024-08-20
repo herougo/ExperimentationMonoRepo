@@ -72,7 +72,7 @@ Tricky Effects
 
 Missing Cards
 
-- [ ] Secretkeeper
+- [x] Secretkeeper
 - [ ] Pint-Sized Summoner
 - [ ] Alarm-o-Bot
 - [ ] SI:7 Infiltrator

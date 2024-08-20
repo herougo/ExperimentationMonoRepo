@@ -44,22 +44,6 @@ concede";
         }
 
         [Fact]
-        public Task TestYoungPriestess()
-        {
-            string actionText = @"play 0 0
-play 0 1
-end_turn
-concede";
-            List<string> cardIdList0 = new List<string>
-            {
-                CardIds.YoungPriestess, CardIds.Wisp, CardIds.YoungPriestess, CardIds.Wisp,
-                CardIds.YoungPriestess, CardIds.Wisp, CardIds.YoungPriestess
-            };
-            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
-            return Verify(log);
-        }
-
-        [Fact]
         public Task TestLightwarden()
         {
             string actionText = @"hero_power
@@ -89,6 +73,41 @@ play 0 3
 hero_power
 concede";
             List<string> cardIdList0 = Enumerable.Repeat(CardIds.MurlocTidecaller, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestSecretkeeper()
+        {
+            string actionText = @"play 0 0
+play 0
+play 0
+play 0
+end_turn
+play 1
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.Secretkeeper, CardIds.Secretkeeper, CardIds.Secretkeeper, CardIds.Snipe,
+                CardIds.FreezingTrap, CardIds.ExplosiveTrap, CardIds.Secretkeeper
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestYoungPriestess()
+        {
+            string actionText = @"play 0 0
+play 0 1
+end_turn
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.YoungPriestess, CardIds.Wisp, CardIds.YoungPriestess, CardIds.Wisp,
+                CardIds.YoungPriestess, CardIds.Wisp, CardIds.YoungPriestess
+            };
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
             return Verify(log);
         }

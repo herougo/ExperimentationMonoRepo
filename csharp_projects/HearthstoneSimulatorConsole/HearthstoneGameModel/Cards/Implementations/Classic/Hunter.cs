@@ -26,6 +26,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _mana = 2;
             _collectible = true;
 
+            _spellType = SpellType.Secret;
             _school = SpellSchool.Fire;
 
             _whenPlayedEffect = new CreateSecret(
@@ -50,6 +51,7 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _mana = 2;
             _collectible = true;
 
+            _spellType = SpellType.Secret;
             _school = SpellSchool.Frost;
 
             _whenPlayedEffect = new CreateSecret(
@@ -75,6 +77,8 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             _hsClass = HSClass.Hunter;
             _mana = 2;
             _collectible = true;
+
+            _spellType = SpellType.Secret;
 
             _whenPlayedEffect = new CreateSecret(
                 new WhenOpponentPlaysLivingMinion(),

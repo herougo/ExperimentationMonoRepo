@@ -79,6 +79,7 @@
     <Compile Include="Core\Enums\PlayerChoice.cs" />
     <Compile Include="Core\Enums\AddSecretResult.cs" />
     <Compile Include="Core\Enums\SpellSchool.cs" />
+    <Compile Include="Core\Enums\SpellType.cs" />
     <Compile Include="Core\Enums\UIEventType.cs" />
     <Compile Include="Core\Exceptions.cs" />
     <Compile Include="Effects\ActivatedEffect.cs" />
@@ -167,6 +168,7 @@
     <Compile Include="Triggers\OnTurnStart.cs" />
     <Compile Include="Triggers\WhenOtherMinionDies.cs" />
     <Compile Include="Triggers\WhenOpponentPlaysLivingMinion.cs" />
+    <Compile Include="Triggers\WhenSecretPlayed.cs" />
     <Compile Include="Triggers\WhenYouSummonOtherMinion.cs" />
     <Compile Include="Effects\WrappedEMEffects\ContinuousMonitorEffect.cs" />
     <Compile Include="Effects\WrappedEMEffects\TimeLimitedEMEffect.cs" />
