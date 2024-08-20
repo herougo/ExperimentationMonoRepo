@@ -73,5 +73,46 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestScavengingHyena()
+        {
+            string actionText = @"play 0 0
+play 0 1
+play 0 2
+end_turn
+play 0 0
+play 0 1
+play 0 2
+end_turn
+attack 2 2
+attack 1 1
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.ScavengingHyena, CardIds.ScavengingHyena
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestDeadlyShot()
+        {
+            string actionText = @"play 2 0
+play 2 1
+end_turn
+play 0
+play 0
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
+                CardIds.AngryChicken, CardIds.ScavengingHyena, CardIds.DeadlyShot, CardIds.DeadlyShot
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
+            return Verify(log);
+        }
     }
 }

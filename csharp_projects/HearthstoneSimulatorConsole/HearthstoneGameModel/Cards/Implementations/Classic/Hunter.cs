@@ -3,6 +3,7 @@ using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ContinuousEffects;
 using HearthstoneGameModel.Effects.OneTimeEffects;
+using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
 using HearthstoneGameModel.Selections;
 using HearthstoneGameModel.Selections.SlotSelections;
 using HearthstoneGameModel.Triggers;
@@ -83,6 +84,56 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new Snipe();
+        }
+    }
+
+    public class ScavengingHyena : MinionCard
+    {
+        public ScavengingHyena()
+        {
+            _cardId = CardIds.ScavengingHyena;
+            _name = "Scavenging Hyena";
+            _hsClass = HSClass.Hunter;
+            _collectible = true;
+
+            _mana = 2;
+            _attack = 2;
+            _health = 2;
+
+            _tag = MinionTag.Beast;
+
+            _inPlayEffects = new List<EMEffect> {
+                new TriggerEffect(
+                    new WhenOtherMinionDies(PlayerChoice.Player, MinionTag.Beast),
+                    new GiveEMEffect(SelectionConstants.OwnSelf, new Buff(2, 1))
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new ScavengingHyena();
+        }
+    }
+
+    public class DeadlyShot : SpellCard
+    {
+        public DeadlyShot()
+        {
+            _cardId = CardIds.DeadlyShot;
+            _name = "Deadly Shot";
+            _hsClass = HSClass.Hunter;
+            _mana = 3;
+            _collectible = true;
+
+            _whenPlayedEffect = new DestroyMinion(
+                new RandomCharacterFrom(SelectionConstants.OtherLivingEnemyMinions)
+            );
+        }
+
+        public override Card Copy()
+        {
+            return new DeadlyShot();
         }
     }
 }

@@ -259,6 +259,10 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new FreezingTrap();
                 case CardIds.Snipe:
                     return new Snipe();
+                case CardIds.ScavengingHyena:
+                    return new ScavengingHyena();
+                case CardIds.DeadlyShot:
+                    return new DeadlyShot();
 
                 case CardIds.EarthShock:
                     return new EarthShock();

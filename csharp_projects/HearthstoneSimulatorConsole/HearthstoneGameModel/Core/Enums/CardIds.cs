@@ -142,6 +142,9 @@ namespace HearthstoneGameModel.Core.Enums
         public const string ExplosiveTrap = "C120";
         public const string FreezingTrap = "C121";
         public const string Snipe = "C122";
+        public const string ScavengingHyena = "C123";
+        public const string DeadlyShot = "C124";
+        
 
         // Classic Shaman
         public const string EarthShock = "C3XX";
