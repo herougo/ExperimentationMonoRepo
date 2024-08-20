@@ -1,0 +1,160 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+1: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+2: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+3: CardSlot('Unleash the Hounds', Mana=3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+1: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+2: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+3: CardSlot('Unleash the Hounds', Mana=3)
+
+0 plays Angry Chicken
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+1: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+2: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+3: CardSlot('Unleash the Hounds', Mana=3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 9 / 10
+Weapon: None
+0: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+1: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+2: CardSlot('Unleash the Hounds', Mana=3)
+
+0 plays Angry Chicken
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+1: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+2: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+3: CardSlot('Unleash the Hounds', Mana=3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+	1: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+1: CardSlot('Unleash the Hounds', Mana=3)
+
+0 plays Scavenging Hyena
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+1: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+2: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+3: CardSlot('Unleash the Hounds', Mana=3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+	1: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+	2: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Unleash the Hounds', Mana=3)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+1: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+2: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+3: CardSlot('Unleash the Hounds', Mana=3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+	1: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+	2: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Unleash the Hounds', Mana=3)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+1: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+2: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+3: CardSlot('Unleash the Hounds', Mana=3)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+
+	------------
+	0: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+	1: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+	2: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Unleash the Hounds', Mana=3)
+
+1 plays Unleash the Hounds
+1 summons Hound
+1 summons Hound
+1 summons Hound
+Opponent (1) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+1: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+2: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+
+	0: CardSlot('Hound', Mana=1, 1 / 1)
+	1: CardSlot('Hound', Mana=1, 1 / 1)
+	2: CardSlot('Hound', Mana=1, 1 / 1)
+	------------
+	0: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+	1: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+	2: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Unleash the Hounds', Mana=3)
+
+CardSlot('Hound', Mana=1, 1 / 1)
+	attacks CardSlot('Hunter', Mana=0)
+Opponent (1) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+0: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+1: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+2: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+
+	0: CardSlot('Hound', Mana=1, 1 / 1)
+	1: CardSlot('Hound', Mana=1, 1 / 1)
+	2: CardSlot('Hound', Mana=1, 1 / 1)
+	------------
+	0: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+	1: CardSlot('Angry Chicken', Mana=1, 1 / 1)
+	2: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+
+Player (0) - health: 29, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Unleash the Hounds', Mana=3)
+
+Game Over: Player 0 Wins

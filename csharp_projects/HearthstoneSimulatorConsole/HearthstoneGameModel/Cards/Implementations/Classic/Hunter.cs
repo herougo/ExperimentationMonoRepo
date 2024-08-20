@@ -7,6 +7,7 @@ using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
 using HearthstoneGameModel.Selections;
 using HearthstoneGameModel.Selections.SlotSelections;
 using HearthstoneGameModel.Triggers;
+using HearthstoneGameModel.Values;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -134,6 +135,28 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new DeadlyShot();
+        }
+    }
+
+    public class UnleashTheHounds : SpellCard
+    {
+        public UnleashTheHounds()
+        {
+            _cardId = CardIds.UnleashTheHounds;
+            _name = "Unleash the Hounds";
+            _hsClass = HSClass.Hunter;
+            _mana = 3;
+            _collectible = true;
+
+            _whenPlayedEffect = new NEffects(
+                new SummonMinion(new Hound()),
+                new BattleboardMinionsIntValue(PlayerChoice.Opponent)
+            );
+        }
+
+        public override Card Copy()
+        {
+            return new UnleashTheHounds();
         }
     }
 }

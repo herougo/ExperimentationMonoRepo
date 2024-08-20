@@ -114,5 +114,24 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestUnleashTheHounds()
+        {
+            string actionText = @"play 0 0
+play 0 1
+play 0 2
+end_turn
+play 3
+attack 0 -1
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
+                CardIds.UnleashTheHounds, CardIds.ScavengingHyena, CardIds.AngryChicken, CardIds.AngryChicken
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
+            return Verify(log);
+        }
     }
 }

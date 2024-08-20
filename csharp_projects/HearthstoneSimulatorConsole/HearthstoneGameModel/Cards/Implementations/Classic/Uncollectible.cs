@@ -498,4 +498,28 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new TreantClassicTaunt();
         }
     }
+
+    public class Hound : MinionCard
+    {
+        public Hound()
+        {
+            _cardId = CardIds.Hound;
+            _name = "Hound";
+            _hsClass = HSClass.Hunter;
+            _collectible = false;
+
+            _mana = 1;
+            _attack = 1;
+            _health = 1;
+
+            _tag = MinionTag.Beast;
+
+            _inPlayEffects = new List<EMEffect> { new Charge() };
+        }
+
+        public override Card Copy()
+        {
+            return new Hound();
+        }
+    }
 }

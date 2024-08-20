@@ -263,6 +263,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new ScavengingHyena();
                 case CardIds.DeadlyShot:
                     return new DeadlyShot();
+                case CardIds.UnleashTheHounds:
+                    return new UnleashTheHounds();
 
                 case CardIds.EarthShock:
                     return new EarthShock();
@@ -312,6 +314,9 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new DruidOfTheClawCatForm();
                 case CardIds.TreantClassicTaunt:
                     return new TreantClassicTaunt();
+
+                case CardIds.Hound:
+                    return new Hound();
 
                 case CardIds.Priest:
                     return new Priest();
