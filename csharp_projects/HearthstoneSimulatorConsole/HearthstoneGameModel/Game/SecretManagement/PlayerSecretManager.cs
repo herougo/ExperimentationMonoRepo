@@ -82,7 +82,7 @@ namespace HearthstoneGameModel.Game.SecretManagement
                 }
 
                 _game.UIManager.ReceiveUIEvent(new SecretRevealedUIEvent(secret.CardSlot.Card.Name));
-                _game.EffectManager.Execute(secret.OneTimeEffect, secret.CardSlot, eventSlots);
+                _game.EffectManager.ExecuteSecret(secret, eventSlots);
 
                 _secrets.RemoveAt(i);
                 i -= 1;

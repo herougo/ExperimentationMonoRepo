@@ -1,5 +1,6 @@
 ﻿using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Game.CardSlots;
+using HearthstoneGameModel.Game.SecretManagement;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -129,17 +130,15 @@ namespace HearthstoneGameModel.Game.EffectManagement
             SendEvent(args.EffectEvent, args.EventSlots);
         }
 
-        public void Execute(OneTimeEffect effect, CardSlot cardSlot)
+        public void ExecuteSpell(OneTimeEffect effect, CardSlot cardSlot)
         {
-            // Used for spells
             EffectManagerNodePlan plan = effect.Execute(_game, cardSlot, cardSlot, new List<CardSlot>());
             performPlan(plan);
         }
 
-        public void Execute(OneTimeEffect effect, CardSlot cardSlot, List<CardSlot> eventSlots)
+        public void ExecuteSecret(Secret secret, List<CardSlot> eventSlots)
         {
-            // Used for secrets
-            EffectManagerNodePlan plan = effect.Execute(_game, cardSlot, cardSlot, eventSlots);
+            EffectManagerNodePlan plan = secret.OneTimeEffect.Execute(_game, secret.CardSlot, secret.CardSlot, eventSlots);
             performPlan(plan);
         }
 
