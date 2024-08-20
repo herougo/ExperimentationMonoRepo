@@ -45,6 +45,11 @@ namespace HearthstoneGameModel.Game.SecretManagement
             return AddSecretResult.Success;
         }
 
+        public void DestroyAllSecrets()
+        {
+            _secrets.Clear();
+        }
+
         public void SendEvent(
             string effectEvent, List<CardSlot> eventSlots
         )

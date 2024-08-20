@@ -133,5 +133,26 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestFlare()
+        {
+            string actionText = @"play 0 0
+play 0
+end_turn
+play 0 0
+play 0
+end_turn
+play 0
+attack 0 0
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
+                CardIds.Flare, CardIds.Flare, CardIds.ExplosiveTrap, CardIds.WorgenInfiltrator
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
+            return Verify(log);
+        }
     }
 }

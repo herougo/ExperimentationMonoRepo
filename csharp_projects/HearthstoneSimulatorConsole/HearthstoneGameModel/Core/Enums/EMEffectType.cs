@@ -9,6 +9,7 @@ namespace HearthstoneGameModel.Core.Enums
     public enum EMEffectType : int
     {
         Other = 0,
-        DivineShield = 1
+        DivineShield = 1,
+        Stealth = 2
     }
 }

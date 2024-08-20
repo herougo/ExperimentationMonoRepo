@@ -265,6 +265,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new DeadlyShot();
                 case CardIds.UnleashTheHounds:
                     return new UnleashTheHounds();
+                case CardIds.Flare:
+                    return new Flare();
 
                 case CardIds.EarthShock:
                     return new EarthShock();

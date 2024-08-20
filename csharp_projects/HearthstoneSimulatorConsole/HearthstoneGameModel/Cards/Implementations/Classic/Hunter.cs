@@ -159,4 +159,28 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new UnleashTheHounds();
         }
     }
+
+    public class Flare : SpellCard
+    {
+        public Flare()
+        {
+            _cardId = CardIds.Flare;
+            _name = "Flare";
+            _hsClass = HSClass.Hunter;
+            _mana = 1;
+            _collectible = true;
+
+            _whenPlayedEffect = new OneTimeEffectSequence(new List<OneTimeEffect>
+            {
+                new LoseEMEffect(SelectionConstants.AllMinions, EMEffectType.Stealth),
+                new DestroyAllSecrets(PlayerChoice.Opponent),
+                new DrawCards(SelectionConstants.Player, 1)
+            });
+        }
+
+        public override Card Copy()
+        {
+            return new Flare();
+        }
+    }
 }

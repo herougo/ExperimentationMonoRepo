@@ -47,6 +47,11 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
             return plan;
         }
 
+        public override EMEffectType EffectType
+        {
+            get { return EMEffectType.Stealth; }
+        }
+
         public override EMEffect Copy()
         {
             return new Stealth();
