@@ -25,25 +25,7 @@ namespace HearthstoneGameModel.Selections.SlotSelections
         )
         {
             CardSlot cardSlot = affectedCardSlot;
-            int player = cardSlot.Player;
-            List<CardSlot> result = new List<CardSlot>();
-            int boardIndex = game.Battleboard.CardSlotToBoardIndex(cardSlot);
-
-            if (boardIndex == HearthstoneConstants.NullInt)
-            {
-                return result;
-            }
-
-            if (boardIndex > 0)
-            {
-                result.Add(game.IndexToSlot(player, boardIndex - 1));
-            }
-            int boardLen = game.Battleboard.BoardLen(player);
-            if (boardIndex < boardLen - 1)
-            {
-                result.Add(game.IndexToSlot(player, boardIndex + 1));
-            }
-            return result;
+            return game.Battleboard.GetNeighboursAsList(cardSlot);
         }
 
         public override SlotSelection Copy()

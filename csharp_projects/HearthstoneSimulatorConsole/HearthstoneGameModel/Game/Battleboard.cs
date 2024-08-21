@@ -129,7 +129,7 @@ namespace HearthstoneGameModel.Game
             int boardIndex = CardSlotToBoardIndex(slot);
             if (boardIndex == HearthstoneConstants.NullInt)
             {
-                return null;
+                return new Tuple<CardSlot, CardSlot>(null, null);
             }
 
             int boardLen = BoardLen(slot.Player);
@@ -146,6 +146,21 @@ namespace HearthstoneGameModel.Game
             }
 
             return new Tuple<CardSlot, CardSlot>(leftNeighbour, rightNeighbour);
+        }
+
+        public List<CardSlot> GetNeighboursAsList(CardSlot slot)
+        {
+            Tuple<CardSlot, CardSlot> neighbours = _game.Battleboard.GetNeighbours(slot);
+            List<CardSlot> result = new List<CardSlot>();
+            if (neighbours.Item1 != null)
+            {
+                result.Add(neighbours.Item1);
+            }
+            if (neighbours.Item2 != null)
+            {
+                result.Add(neighbours.Item2);
+            }
+            return result;
         }
     }
 }
