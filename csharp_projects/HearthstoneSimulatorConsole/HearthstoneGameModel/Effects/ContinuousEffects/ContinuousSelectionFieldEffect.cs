@@ -84,6 +84,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
             {
                 plan.ToRemove.Add(_memoryCurrentSelection[slot]);
             }
+            _memoryCurrentSelection.Clear();
             return plan;
         }
 
