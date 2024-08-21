@@ -147,6 +147,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string UnleashTheHounds = "C125";
         public const string Flare = "C126";
         public const string EaglehornBow = "C127";
+        public const string ExplosiveShot = "C128";
 
 
         // Classic Shaman

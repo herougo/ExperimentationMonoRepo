@@ -172,5 +172,25 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestExplosiveShot()
+        {
+            string actionText = @"play 0 0
+play 0 1
+play 0 2
+play 0 3
+end_turn
+play 5
+select 0 2
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
+                CardIds.ExplosiveShot, CardIds.Shieldbearer, CardIds.MogushanWarden, CardIds.Shieldbearer, CardIds.Shieldbearer
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
+            return Verify(log);
+        }
     }
 }

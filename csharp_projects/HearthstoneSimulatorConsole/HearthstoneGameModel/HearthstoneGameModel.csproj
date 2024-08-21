@@ -103,6 +103,7 @@
     <Compile Include="Effects\OneTimeEffects\ChangeStats.cs" />
     <Compile Include="Effects\OneTimeEffects\ChooseOne.cs" />
     <Compile Include="Effects\OneTimeEffects\CreateSecret.cs" />
+    <Compile Include="Effects\OneTimeEffects\DealDamageToAdjacentMinions.cs" />
     <Compile Include="Effects\OneTimeEffects\DestroyAllSecrets.cs" />
     <Compile Include="Effects\OneTimeEffects\DiscardCards.cs" />
     <Compile Include="Effects\OneTimeEffects\LoseEMEffect.cs" />

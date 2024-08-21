@@ -123,5 +123,29 @@ namespace HearthstoneGameModel.Game
         {
             return BoardLen(player) < _game.PlayerMetadata[player].BattleboardLimit;
         }
+
+        public Tuple<CardSlot, CardSlot> GetNeighbours(CardSlot slot)
+        {
+            int boardIndex = CardSlotToBoardIndex(slot);
+            if (boardIndex == HearthstoneConstants.NullInt)
+            {
+                return null;
+            }
+
+            int boardLen = BoardLen(slot.Player);
+
+            CardSlot leftNeighbour = null;
+            if (boardIndex > 0)
+            {
+                leftNeighbour = _boards[slot.Player][boardIndex - 1];
+            }
+            CardSlot rightNeighbour = null;
+            if (boardIndex + 1 < boardLen)
+            {
+                rightNeighbour = _boards[slot.Player][boardIndex + 1];
+            }
+
+            return new Tuple<CardSlot, CardSlot>(leftNeighbour, rightNeighbour);
+        }
     }
 }

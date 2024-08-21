@@ -215,4 +215,32 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new EaglehornBow();
         }
     }
+
+    public class ExplosiveShot : SpellCard
+    {
+        public ExplosiveShot()
+        {
+            _cardId = CardIds.ExplosiveShot;
+            _name = "Explosive Shot";
+            _hsClass = HSClass.Hunter;
+            _mana = 5;
+            _collectible = true;
+
+            _school = SpellSchool.Fire;
+
+            _whenPlayedEffect = new OneTimeEffectSequence(new List<OneTimeEffect>
+            {
+                new DealDamageToAdjacentMinions(
+                    new SelectCharacterFrom(SelectionConstants.AllMinions), 2, 5, 2
+                )
+            });
+        }
+
+        public override Card Copy()
+        {
+            return new ExplosiveShot();
+        }
+    }
+
+    
 }
