@@ -359,6 +359,37 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
+    public class PintSizedSummoner : MinionCard
+    {
+        public PintSizedSummoner()
+        {
+            _cardId = CardIds.PintSizedSummoner;
+            _name = "Pint-Sized Summoner";
+            _hsClass = HSClass.Neutral;
+            _collectible = true;
+
+            _mana = 2;
+            _attack = 2;
+            _health = 2;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new ConditionalEffect(
+                    new WhileMinionPlayCountEquals(0),
+                    new ContinuousSelectionFieldEffect(
+                        SelectionConstants.PlayerHandMinions,
+                        new ManaChange(1, -1)
+                    )
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new MasterSwordsmith();
+        }
+    }
+
     public class SunfuryProtector : MinionCard
     {
         public SunfuryProtector()

@@ -207,6 +207,20 @@ concede";
         }
 
         [Fact]
+        public Task TestPintSizedSummoner()
+        {
+            string actionText = @"play 0 0
+end_turn
+end_turn
+play 0 1
+play 0 2
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.PintSizedSummoner, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Paladin);
+            return Verify(log);
+        }
+
+        [Fact]
         public Task TestSunfuryProtector()
         {
             string actionText = @"play 0 0

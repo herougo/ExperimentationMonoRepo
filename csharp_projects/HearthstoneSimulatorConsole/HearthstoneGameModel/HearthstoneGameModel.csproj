@@ -62,6 +62,7 @@
     <Compile Include="Conditions\AndCondition.cs" />
     <Compile Include="Conditions\ICondition.cs" />
     <Compile Include="Conditions\OrCondition.cs" />
+    <Compile Include="Conditions\WhileMinionPlayCountEquals.cs" />
     <Compile Include="Conditions\WhileSelfDamaged.cs" />
     <Compile Include="Conditions\WhileWeaponEquipped.cs" />
     <Compile Include="Core\Enums\Actions.cs" />
@@ -104,6 +105,7 @@
     <Compile Include="Effects\OneTimeEffects\DestroyAllSecrets.cs" />
     <Compile Include="Effects\OneTimeEffects\DiscardCards.cs" />
     <Compile Include="Effects\OneTimeEffects\LoseEMEffect.cs" />
+    <Compile Include="Effects\OneTimeEffects\ResetTurnPlayerMetadata.cs" />
     <Compile Include="Effects\OneTimeEffects\ReturnMinionToHandAndChangeMana.cs" />
     <Compile Include="Effects\OneTimeEffects\SilenceAndDealDamage.cs" />
     <Compile Include="Effects\OneTimeEffects\DestroyMinion.cs" />

@@ -146,6 +146,10 @@ namespace HearthstoneGameModel.Game
                 new OnTurnStart(),
                 new RefreshAllManaCrystals(SelectionConstants.Player)
             );
+            EMEffect resetTurnPlayerMetadata = new TriggerEffect(
+                new OnTurnStart(),
+                new ResetTurnPlayerMetadata()
+            );
             EMEffect refreshMinionAttacks = new TriggerEffect(
                 new OnTurnEnd(),
                 new RefreshAttacks(SelectionConstants.AllFriendlyCharacters)
@@ -156,7 +160,7 @@ namespace HearthstoneGameModel.Game
             );
 
             List<EMEffect> effects = new List<EMEffect> {
-                drawEffect, gainManaEffect, refreshManaEffect, refreshMinionAttacks, refreshHeroPower
+                drawEffect, gainManaEffect, refreshManaEffect, resetTurnPlayerMetadata, refreshMinionAttacks, refreshHeroPower
             };
             
             foreach (EMEffect effect in effects)

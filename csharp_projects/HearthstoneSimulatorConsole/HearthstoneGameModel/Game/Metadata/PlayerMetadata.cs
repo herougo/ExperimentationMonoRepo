@@ -18,5 +18,8 @@ namespace HearthstoneGameModel.Game.Metadata
         public int MaximumMana = 0;
         public int Armour = 0;
         public bool HeroPowerUsedThisTurn = false;
+
+        // Turn Metadata
+        public int MinionPlayCount = 0;
     }
 }

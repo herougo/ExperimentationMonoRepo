@@ -67,6 +67,8 @@ namespace HearthstoneGameModel.Game
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.WhenCardPlayed, cardSlot));
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionBattlecry, cardSlot));
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionSummoned, cardSlot));
+
+            _game.PlayerMetadata[_game.GameMetadata.Turn].MinionPlayCount += 1;
         }
 
         private void playSpell(SpellCardSlot cardSlot)

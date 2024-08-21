@@ -117,7 +117,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new ManaWraith();
                 case CardIds.MasterSwordsmith:
                     return new MasterSwordsmith();
-
+                case CardIds.PintSizedSummoner:
+                    return new PintSizedSummoner();
                 case CardIds.SunfuryProtector:
                     return new SunfuryProtector();
                 case CardIds.WildPyromancer:
