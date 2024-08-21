@@ -85,6 +85,7 @@
     <Compile Include="Core\Exceptions.cs" />
     <Compile Include="Effects\ActivatedEffect.cs" />
     <Compile Include="Effects\ActivatedEffects\HeroPowerEffect.cs" />
+    <Compile Include="Effects\ContinuousEffects\BuffDurability.cs" />
     <Compile Include="Effects\ContinuousEffects\BuffWeapon.cs" />
     <Compile Include="Effects\ContinuousEffects\CantAttack.cs" />
     <Compile Include="Effects\ContinuousEffects\Poisonous.cs" />
@@ -105,6 +106,7 @@
     <Compile Include="Effects\OneTimeEffects\DestroyAllSecrets.cs" />
     <Compile Include="Effects\OneTimeEffects\DiscardCards.cs" />
     <Compile Include="Effects\OneTimeEffects\LoseEMEffect.cs" />
+    <Compile Include="Effects\OneTimeEffects\GainWeaponDurability.cs" />
     <Compile Include="Effects\OneTimeEffects\ResetTurnPlayerMetadata.cs" />
     <Compile Include="Effects\OneTimeEffects\ReturnMinionToHandAndChangeMana.cs" />
     <Compile Include="Effects\OneTimeEffects\SilenceAndDealDamage.cs" />
@@ -171,6 +173,7 @@
     <Compile Include="Triggers\WhenOtherMinionDies.cs" />
     <Compile Include="Triggers\WhenOpponentPlaysLivingMinion.cs" />
     <Compile Include="Triggers\WhenSecretPlayed.cs" />
+    <Compile Include="Triggers\WhenSecretRevealed.cs" />
     <Compile Include="Triggers\WhenYouSummonOtherMinion.cs" />
     <Compile Include="Effects\WrappedEMEffects\ContinuousMonitorEffect.cs" />
     <Compile Include="Effects\WrappedEMEffects\TimeLimitedEMEffect.cs" />

@@ -187,4 +187,32 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Flare();
         }
     }
+
+    public class EaglehornBow : WeaponCard
+    {
+        public EaglehornBow()
+        {
+            _cardId = CardIds.EaglehornBow;
+            _name = "Eaglehorn Bow";
+            _hsClass = HSClass.Hunter;
+            _collectible = true;
+
+            _mana = 3;
+            _attack = 3;
+            _durability = 2;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new TriggerEffect(
+                    new WhenSecretRevealed(PlayerChoice.Player),
+                    new GainWeaponDurability(1, false)
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new EaglehornBow();
+        }
+    }
 }

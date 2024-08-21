@@ -44,6 +44,9 @@ namespace HearthstoneGameModel.Game
                 case CardType.Spell:
                     playSpell((SpellCardSlot)cardSlot);
                     break;
+                case CardType.Weapon:
+                    playWeapon((WeaponCardSlot)cardSlot);
+                    break;
                 default:
                     throw new NotImplementedException("PlayCard");
             }
@@ -82,6 +85,16 @@ namespace HearthstoneGameModel.Game
 
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.AfterSpellActivated, cardSlot));
             RemoveCardSlot(cardSlot);
+        }
+
+        private void playWeapon(WeaponCardSlot cardSlot)
+        {
+            EquipWeapon(_game.GameMetadata.Turn, cardSlot);
+            _game.EffectManager.AddInPlayEffects(cardSlot);
+
+            // _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionChooseOne, cardSlot));
+            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.WhenCardPlayed, cardSlot));
+            // _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionBattlecry, cardSlot));
         }
 
         public void KillMinions(List<CardSlot> cardSlots)

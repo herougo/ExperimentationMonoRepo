@@ -154,5 +154,23 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestEaglehornBow()
+        {
+            string actionText = @"play 0
+play 0
+end_turn
+play 0
+play 1 0
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.Snipe, CardIds.EaglehornBow
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
+            return Verify(log);
+        }
     }
 }

@@ -269,6 +269,9 @@ namespace HearthstoneGameModel.Cards.CardFactories
                 case CardIds.Flare:
                     return new Flare();
 
+                case CardIds.EaglehornBow:
+                    return new EaglehornBow();
+
                 case CardIds.EarthShock:
                     return new EarthShock();
 

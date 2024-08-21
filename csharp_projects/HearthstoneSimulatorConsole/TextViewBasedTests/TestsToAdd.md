@@ -73,10 +73,11 @@ Tricky Effects
 Missing Cards
 
 - [x] Secretkeeper
-- [ ] Pint-Sized Summoner
+- [x] Pint-Sized Summoner
 - [ ] Alarm-o-Bot
 - [ ] SI:7 Infiltrator
 - [ ] Barrens Stablehand
+- [ ] Misdirection
 
 Missing Tests
 

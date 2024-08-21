@@ -6,10 +6,10 @@ using TextView;
 // List<string> cardIdList0 = Enumerable.Repeat(CardIds.DreadCorsair, 30).ToList();
 List<string> cardIdList0 = new List<string>
 {
-    CardIds.DruidOfTheClaw, CardIds.DruidOfTheClaw, CardIds.DruidOfTheClaw, CardIds.DruidOfTheClaw,
-    CardIds.PintSizedSummoner, CardIds.PintSizedSummoner, CardIds.PintSizedSummoner, CardIds.PintSizedSummoner
+    CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
+    CardIds.AngryChicken, CardIds.AngryChicken, CardIds.Snipe, CardIds.EaglehornBow
 };
-string hsClass0 = "hero_druid";
+string hsClass0 = "hero_hunter";
 Decklist decklist0 = new Decklist(cardIdList0, hsClass0);
 Decklist decklist1 = new Decklist(cardIdList0, hsClass0);
 ConsoleActionReader actionGetter = new ConsoleActionReader();

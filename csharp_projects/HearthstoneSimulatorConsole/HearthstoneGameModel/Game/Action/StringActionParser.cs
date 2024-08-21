@@ -159,7 +159,7 @@ namespace HearthstoneGameModel.Game.Action
         {
             if (actionSplit.Length == 1)
             {
-                throw new ActionException("PlayCard actions need at least 1 arugment");
+                throw new ActionException("PlayCard actions need at least 1 argument");
             }
 
             string cardInHandIndexString = actionSplit[1];
@@ -189,7 +189,7 @@ namespace HearthstoneGameModel.Game.Action
             {
                 if (actionSplit.Length != 3)
                 {
-                    throw new ActionException("PlayCard actions for minions need 2 arugments");
+                    throw new ActionException("PlayCard actions for minions need 2 arguments");
                 }
 
                 string destinationIndexString = actionSplit[2];
@@ -220,7 +220,15 @@ namespace HearthstoneGameModel.Game.Action
             {
                 if (actionSplit.Length != 2)
                 {
-                    throw new ActionException("PlayCard actions for spells need 1 arugment");
+                    throw new ActionException("PlayCard actions for spells need 1 argument");
+                }
+                return new PlayCardAction(cardInHandIndex, HearthstoneConstants.NullInt);
+            }
+            else if (cardSlot.CardType == CardType.Weapon)
+            {
+                if (actionSplit.Length != 2)
+                {
+                    throw new ActionException("PlayCard actions for weapons need 1 argument");
                 }
                 return new PlayCardAction(cardInHandIndex, HearthstoneConstants.NullInt);
             }
