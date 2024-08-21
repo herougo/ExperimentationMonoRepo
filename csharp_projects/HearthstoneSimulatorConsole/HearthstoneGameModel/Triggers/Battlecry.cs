@@ -15,7 +15,7 @@ namespace HearthstoneGameModel.Triggers
     {
         public Battlecry()
         {
-            _eventsReceived = new List<string> { EffectEvent.MinionBattlecry };
+            _eventsReceived = new List<string> { EffectEvent.Battlecry };
             _requiresSlotMatchForEvent = true;
         }
 

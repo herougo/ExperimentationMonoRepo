@@ -68,7 +68,7 @@ namespace HearthstoneGameModel.Game
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionChooseOne, cardSlot));
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionPutInPlay, cardSlot));
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.WhenCardPlayed, cardSlot));
-            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionBattlecry, cardSlot));
+            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.Battlecry, cardSlot));
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionSummoned, cardSlot));
 
             _game.PlayerMetadata[_game.GameMetadata.Turn].MinionPlayCount += 1;
@@ -94,7 +94,7 @@ namespace HearthstoneGameModel.Game
 
             // _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionChooseOne, cardSlot));
             _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.WhenCardPlayed, cardSlot));
-            // _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.MinionBattlecry, cardSlot));
+            _game.EffectManager.SendEvent(new EffectEventArgs(EffectEvent.Battlecry, cardSlot));
         }
 
         public void KillMinions(List<CardSlot> cardSlots)

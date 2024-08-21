@@ -18,7 +18,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string AfterCombatDamage = "after_combat_damage";
         public const string CalculateStats = "calculate_stats";
         public const string MinionPutInPlay = "minion_put_in_play";
-        public const string MinionBattlecry = "minion_battlecry";
+        public const string Battlecry = "battlecry";
         public const string MinionSummoned = "minion_summoned";
         public const string MinionDies = "minion_dies";
         public const string ActivateHeroPower = "activate_hero_power";
