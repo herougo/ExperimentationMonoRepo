@@ -278,6 +278,10 @@ namespace HearthstoneGameModel.Game
             KillIfNecessary();
             if (!HSGameUtils.CanBattle(attackerCardSlot, defenderCardSlot, this))
             {
+                EffectManager.SendEvent(new EffectEventArgs(
+                    EffectEvent.AttackAborted,
+                    new List<CardSlot>() { attackerCardSlot, defenderCardSlot }
+                ));
                 return;
             }
 
@@ -289,6 +293,10 @@ namespace HearthstoneGameModel.Game
         private void attackDeclaration(BattlerCardSlot attackerCardSlot, BattlerCardSlot defenderCardSlot)
         {
             UIManager.ReceiveUIEvent(new AttackUIEvent(attackerCardSlot, defenderCardSlot));
+            EffectManager.SendEvent(new EffectEventArgs(
+                EffectEvent.BeforeAttackDeclared,
+                new List<CardSlot>() { attackerCardSlot, defenderCardSlot }
+            ));
             EffectManager.SendEvent(new EffectEventArgs(
                 EffectEvent.AttackDeclared,
                 new List<CardSlot>() { attackerCardSlot, defenderCardSlot }
@@ -314,7 +322,10 @@ namespace HearthstoneGameModel.Game
             defenderCardSlot.TempDamageToTake = 0;
 
             EffectManager.SendEvent(new EffectEventArgs(EffectEvent.AfterAttackerAttacked, attackerCardSlot)); // TODO: after KillIfNecessary
-            EffectManager.SendEvent(EffectEvent.AfterCombatDamage);
+            EffectManager.SendEvent(
+                EffectEvent.AttackFinished,
+                new List<CardSlot>() { attackerCardSlot, defenderCardSlot }
+            );
 
             if (attackerCardSlot.CardType == CardType.Hero
                 && Weapons[attackerCardSlot.Player] != null)

@@ -11,10 +11,9 @@ using HearthstoneGameModel.Core.Enums;
 
 namespace HearthstoneGameModel.Conditions
 {
-    public class WhileMinionPlayCountEquals : ICondition
+    public class WhileMinionPlayCountEquals : Condition
     {
         private int _desiredCount;
-        private List<string> _eventsReceived;
 
         public WhileMinionPlayCountEquals(int desiredCount)
         {
@@ -22,21 +21,15 @@ namespace HearthstoneGameModel.Conditions
             _desiredCount = desiredCount;
         }
 
-        public List<string> EventsReceived
-        {
-            get
-            {
-                return _eventsReceived;
-            }
-        }
-
-        public bool Evaluate(HearthstoneGame game, EffectManagerNode emNode)
+        public override bool Evaluate(
+            string effectEvent, HearthstoneGame game, EffectManagerNode emNode, List<CardSlot> eventSlots
+        )
         {
             int player = emNode.AffectedSlot.Player;
             return game.PlayerMetadata[player].MinionPlayCount == _desiredCount;
         }
 
-        public ICondition Copy()
+        public override Condition Copy()
         {
             return new WhileMinionPlayCountEquals(_desiredCount);
         }

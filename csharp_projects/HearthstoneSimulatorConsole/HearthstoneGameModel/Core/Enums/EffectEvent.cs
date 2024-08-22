@@ -15,7 +15,7 @@ namespace HearthstoneGameModel.Core.Enums
         // public const string AfterAttackerInitialCombatDamage = "after_attacker_initial_combat_damage";
         // public const string AfterDefenderInitialCombatDamage = "after_defender_initial_combat_damage";
         public const string AfterAttackerAttacked = "after_attacker_attacked";
-        public const string AfterCombatDamage = "after_combat_damage";
+        public const string AttackFinished = "attack_finished";
         public const string CalculateStats = "calculate_stats";
         public const string MinionPutInPlay = "minion_put_in_play";
         public const string Battlecry = "battlecry";
@@ -42,6 +42,8 @@ namespace HearthstoneGameModel.Core.Enums
         public const string MinionChooseOne = "minion_choose_one";
         public const string AttackDeclared = "attack_declared";
         public const string SecretRevealed = "secret_revealed";
+        public const string AttackAborted = "attack_aborted";
+        public const string BeforeAttackDeclared = "before_attack_declared";
 
     }
 }

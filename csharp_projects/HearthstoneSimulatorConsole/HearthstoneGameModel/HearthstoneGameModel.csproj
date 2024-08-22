@@ -60,8 +60,9 @@
     <Compile Include="Cards\Implementations\Heroes\OriginalHeroes.cs" />
     <Compile Include="Cards\Implementations\Heroes\Uncollectible.cs" />
     <Compile Include="Conditions\AndCondition.cs" />
-    <Compile Include="Conditions\ICondition.cs" />
+    <Compile Include="Conditions\Condition.cs" />
     <Compile Include="Conditions\OrCondition.cs" />
+    <Compile Include="Conditions\WhileAttacking.cs" />
     <Compile Include="Conditions\WhileMinionPlayCountEquals.cs" />
     <Compile Include="Conditions\WhileSelfDamaged.cs" />
     <Compile Include="Conditions\WhileWeaponEquipped.cs" />

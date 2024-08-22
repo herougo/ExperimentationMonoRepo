@@ -126,6 +126,10 @@ EffectManager.SendEvent(new EffectEventArgs(
     EffectEvent.AttackDeclared,
     new List<CardSlot>() { attackerCardSlot, defenderCardSlot }
 ));
+// Condition
+public bool Evaluate(
+    string effectEvent, HearthstoneGame game, EffectManagerNode emNode, List<CardSlot> eventSlots
+);
 ```
 
 1 idea

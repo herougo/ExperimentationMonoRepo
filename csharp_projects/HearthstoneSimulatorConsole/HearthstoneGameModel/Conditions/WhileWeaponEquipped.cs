@@ -10,10 +10,8 @@ using HearthstoneGameModel.Core.Enums;
 
 namespace HearthstoneGameModel.Conditions
 {
-    public class WhileWeaponEquipped : ICondition
+    public class WhileWeaponEquipped : Condition
     {
-        List<string> _eventsReceived;
-
         public WhileWeaponEquipped()
         {
             _eventsReceived = new List<string> { 
@@ -21,21 +19,15 @@ namespace HearthstoneGameModel.Conditions
             };
         }
 
-        public List<string> EventsReceived
-        {
-            get
-            {
-                return _eventsReceived;
-            }
-        }
-
-        public bool Evaluate(HearthstoneGame game, EffectManagerNode emNode)
+        public override bool Evaluate(
+            string effectEvent, HearthstoneGame game, EffectManagerNode emNode, List<CardSlot> eventSlots
+        )
         {
             int player = emNode.AffectedSlot.Player;
             return game.Weapons[player] != null;
         }
 
-        public ICondition Copy()
+        public override Condition Copy()
         {
             return new WhileWeaponEquipped();
         }

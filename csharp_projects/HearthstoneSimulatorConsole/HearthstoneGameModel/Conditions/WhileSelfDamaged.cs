@@ -10,31 +10,23 @@ using HearthstoneGameModel.Core.Enums;
 
 namespace HearthstoneGameModel.Conditions
 {
-    public class WhileSelfDamaged : ICondition
+    public class WhileSelfDamaged : Condition
     {
-        List<string> _eventsReceived;
-
         public WhileSelfDamaged()
         {
             _eventsReceived = new List<string> { EffectEvent.DamageTaken, EffectEvent.CharacterHealed, EffectEvent.SetHealth };
         }
 
-        public List<string> EventsReceived
-        {
-            get
-            {
-                return _eventsReceived;
-            }
-        }
-
-        public bool Evaluate(HearthstoneGame game, EffectManagerNode emNode)
+        public override bool Evaluate(
+            string effectEvent, HearthstoneGame game, EffectManagerNode emNode, List<CardSlot> eventSlots
+        )
         {
             CardSlot slot = emNode.AffectedSlot;
             BattlerCardSlot typedSlot = (BattlerCardSlot)slot;
             return typedSlot.Health < typedSlot.MaxHealth;
         }
 
-        public ICondition Copy()
+        public override Condition Copy()
         {
             return new WhileSelfDamaged();
         }

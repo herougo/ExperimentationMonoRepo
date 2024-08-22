@@ -97,6 +97,7 @@ Missing Tests
 - [ ] Deathrattle summoning where the minion died
 - [ ] Immune negating taunt
 - [ ] Immune vs targeting
+- [ ] WhileAttacking attack aborted
 
 
 

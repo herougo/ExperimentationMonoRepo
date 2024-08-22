@@ -13,10 +13,10 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
 {
     public class ConditionalEffect : WrappedEMEffect
     {
-        protected ICondition _condition;
+        protected Condition _condition;
         protected bool _memoryCurrentCondEval = false;
 
-        public ConditionalEffect(ICondition condition, EMEffect effect)
+        public ConditionalEffect(Condition condition, EMEffect effect)
         : base(effect)
         {
             _condition = condition;
@@ -24,10 +24,12 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
             _eventsReceived.AddRange(_condition.EventsReceived);
         }
 
-        private EffectManagerNodePlan checkConditionAndAffectEffect(HearthstoneGame game, EffectManagerNode emNode)
+        private EffectManagerNodePlan checkConditionAndAffectEffect(
+            string effectEvent, HearthstoneGame game, EffectManagerNode emNode, List<CardSlot> eventSlots
+        )
         {
             bool prevEval = _memoryCurrentCondEval;
-            _memoryCurrentCondEval = _condition.Evaluate(game, emNode);
+            _memoryCurrentCondEval = _condition.Evaluate(effectEvent, game, emNode, eventSlots);
 
             if (prevEval != _memoryCurrentCondEval) {
                 EffectManagerNodePlan plan;
@@ -52,7 +54,7 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
             EffectManagerNodePlan plan = new EffectManagerNodePlan();
             if (_condition.EventsReceived.Contains(effectEvent))
             {
-                plan.Update(checkConditionAndAffectEffect(game, emNode));
+                plan.Update(checkConditionAndAffectEffect(effectEvent, game, emNode, eventSlots));
             }
             if (_memoryCurrentCondEval && _effect.EventsReceived.Contains(effectEvent))
             {
@@ -63,7 +65,7 @@ namespace HearthstoneGameModel.Effects.WrappedEMEffects
 
         public override EffectManagerNodePlan Start(HearthstoneGame game, EffectManagerNode emNode)
         {
-            return checkConditionAndAffectEffect(game, emNode);
+            return checkConditionAndAffectEffect(null, game, emNode, new List<CardSlot>());
         }
 
         public override EffectManagerNodePlan Stop(HearthstoneGame game, EffectManagerNode emNode)
