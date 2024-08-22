@@ -21,5 +21,18 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Mage);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestWeaponAttackWeapon()
+        {
+            string actionText = @"hero_power
+end_turn
+hero_power
+attack -1 -1
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.ArgentSquire, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Rogue);
+            return Verify(log);
+        }
     }
 }

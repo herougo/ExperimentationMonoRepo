@@ -58,7 +58,7 @@ namespace HearthstoneGameModel.Game.CardSlots
 
         public override void UpdateStats()
         {
-            if (Game.Weapons[Player] != null)
+            if (Game.Weapons[Player] != null && Game.GameMetadata.Turn == Player)
             {
                 Attack = Game.Weapons[Player].Attack;
             }

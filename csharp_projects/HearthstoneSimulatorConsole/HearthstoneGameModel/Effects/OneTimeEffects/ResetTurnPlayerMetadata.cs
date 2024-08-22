@@ -17,7 +17,10 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
         {
             int player = affectedCardSlot.Player;
             game.PlayerMetadata[player].MinionPlayCount = 0;
-            return null;
+            EffectManagerNodePlan plan = new EffectManagerNodePlan();
+            plan.UpdateStats.Add(game.Players[0]);
+            plan.UpdateStats.Add(game.Players[1]);
+            return plan;
         }
 
         public override OneTimeEffect Copy()

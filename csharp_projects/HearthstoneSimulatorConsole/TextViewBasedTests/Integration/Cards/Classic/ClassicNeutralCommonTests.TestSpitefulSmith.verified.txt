@@ -191,7 +191,7 @@ Weapon: Rogue Dagger 1/2, 3 attack, 1 durability
 
 CardSlot('Rogue', Mana=0)
 	attacks CardSlot('Rogue', Mana=0)
-Opponent (1) - health: 24, armour: 0, mana: 8 / 10
+Opponent (1) - health: 22, armour: 0, mana: 8 / 10
 Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -203,14 +203,14 @@ Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 	------------
 	0: CardSlot('Spiteful Smith', Mana=5, 4 / 5)
 
-Player (0) - health: 29, armour: 0, mana: 10 / 10
+Player (0) - health: 30, armour: 0, mana: 10 / 10
 Weapon: None
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 2: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 3: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 
-Opponent (1) - health: 24, armour: 0, mana: 8 / 10
+Opponent (1) - health: 22, armour: 0, mana: 8 / 10
 Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -222,7 +222,7 @@ Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 	------------
 	0: CardSlot('Spiteful Smith', Mana=5, 4 / 5)
 
-Player (0) - health: 29, armour: 0, mana: 10 / 10
+Player (0) - health: 30, armour: 0, mana: 10 / 10
 Weapon: None
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -232,7 +232,7 @@ Weapon: None
 -------------------------------------------
 1 turn
 -------------------------------------------
-Opponent (1) - health: 24, armour: 0, mana: 10 / 10
+Opponent (1) - health: 22, armour: 0, mana: 10 / 10
 Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -245,14 +245,14 @@ Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 	------------
 	0: CardSlot('Spiteful Smith', Mana=5, 4 / 5)
 
-Player (0) - health: 29, armour: 0, mana: 10 / 10
+Player (0) - health: 30, armour: 0, mana: 10 / 10
 Weapon: None
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 2: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 3: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 
-Opponent (1) - health: 24, armour: 0, mana: 10 / 10
+Opponent (1) - health: 22, armour: 0, mana: 10 / 10
 Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -265,7 +265,7 @@ Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 	------------
 	0: CardSlot('Spiteful Smith', Mana=5, 4 / 5)
 
-Player (0) - health: 29, armour: 0, mana: 10 / 10
+Player (0) - health: 30, armour: 0, mana: 10 / 10
 Weapon: None
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -275,7 +275,7 @@ Weapon: None
 -------------------------------------------
 0 turn
 -------------------------------------------
-Opponent (1) - health: 24, armour: 0, mana: 10 / 10
+Opponent (1) - health: 22, armour: 0, mana: 10 / 10
 Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -288,7 +288,7 @@ Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 	------------
 	0: CardSlot('Spiteful Smith', Mana=5, 4 / 5)
 
-Player (0) - health: 29, armour: 0, mana: 10 / 10
+Player (0) - health: 30, armour: 0, mana: 10 / 10
 Weapon: None
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -297,7 +297,7 @@ Weapon: None
 4: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 
 ERROR: attacker has 0 attack
-Opponent (1) - health: 24, armour: 0, mana: 10 / 10
+Opponent (1) - health: 22, armour: 0, mana: 10 / 10
 Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -310,7 +310,7 @@ Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 	------------
 	0: CardSlot('Spiteful Smith', Mana=5, 4 / 5)
 
-Player (0) - health: 29, armour: 0, mana: 8 / 10
+Player (0) - health: 30, armour: 0, mana: 8 / 10
 Weapon: Rogue Dagger 1/2, 3 attack, 2 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -320,7 +320,7 @@ Weapon: Rogue Dagger 1/2, 3 attack, 2 durability
 
 CardSlot('Rogue', Mana=0)
 	attacks CardSlot('Rogue', Mana=0)
-Opponent (1) - health: 23, armour: 0, mana: 10 / 10
+Opponent (1) - health: 21, armour: 0, mana: 10 / 10
 Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -333,7 +333,7 @@ Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 	------------
 	0: CardSlot('Spiteful Smith', Mana=5, 4 / 5)
 
-Player (0) - health: 28, armour: 0, mana: 8 / 10
+Player (0) - health: 30, armour: 0, mana: 8 / 10
 Weapon: Rogue Dagger 1/2, 3 attack, 1 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -341,7 +341,7 @@ Weapon: Rogue Dagger 1/2, 3 attack, 1 durability
 3: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 4: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 
-Opponent (1) - health: 23, armour: 0, mana: 10 / 10
+Opponent (1) - health: 21, armour: 0, mana: 10 / 10
 Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -354,7 +354,7 @@ Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 	------------
 	0: CardSlot('Spiteful Smith', Mana=5, 4 / 5)
 
-Player (0) - health: 28, armour: 0, mana: 8 / 10
+Player (0) - health: 30, armour: 0, mana: 8 / 10
 Weapon: Rogue Dagger 1/2, 3 attack, 1 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -365,7 +365,7 @@ Weapon: Rogue Dagger 1/2, 3 attack, 1 durability
 -------------------------------------------
 1 turn
 -------------------------------------------
-Opponent (1) - health: 23, armour: 0, mana: 10 / 10
+Opponent (1) - health: 21, armour: 0, mana: 10 / 10
 Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -379,7 +379,7 @@ Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 	------------
 	0: CardSlot('Spiteful Smith', Mana=5, 4 / 5)
 
-Player (0) - health: 28, armour: 0, mana: 8 / 10
+Player (0) - health: 30, armour: 0, mana: 8 / 10
 Weapon: Rogue Dagger 1/2, 3 attack, 1 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -387,7 +387,7 @@ Weapon: Rogue Dagger 1/2, 3 attack, 1 durability
 3: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 4: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 
-Opponent (1) - health: 23, armour: 0, mana: 10 / 10
+Opponent (1) - health: 21, armour: 0, mana: 10 / 10
 Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -401,7 +401,7 @@ Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 	------------
 	0: CardSlot('Spiteful Smith', Mana=5, 4 / 5)
 
-Player (0) - health: 28, armour: 0, mana: 8 / 10
+Player (0) - health: 30, armour: 0, mana: 8 / 10
 Weapon: Rogue Dagger 1/2, 3 attack, 1 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -412,7 +412,7 @@ Weapon: Rogue Dagger 1/2, 3 attack, 1 durability
 -------------------------------------------
 0 turn
 -------------------------------------------
-Opponent (1) - health: 23, armour: 0, mana: 10 / 10
+Opponent (1) - health: 21, armour: 0, mana: 10 / 10
 Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -426,7 +426,7 @@ Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 	------------
 	0: CardSlot('Spiteful Smith', Mana=5, 4 / 5)
 
-Player (0) - health: 28, armour: 0, mana: 10 / 10
+Player (0) - health: 30, armour: 0, mana: 10 / 10
 Weapon: Rogue Dagger 1/2, 3 attack, 1 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -435,7 +435,7 @@ Weapon: Rogue Dagger 1/2, 3 attack, 1 durability
 4: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 5: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 
-Opponent (1) - health: 23, armour: 0, mana: 10 / 10
+Opponent (1) - health: 21, armour: 0, mana: 10 / 10
 Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
@@ -449,7 +449,7 @@ Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
 	------------
 	0: CardSlot('Spiteful Smith', Mana=5, 4 / 5)
 
-Player (0) - health: 28, armour: 0, mana: 8 / 10
+Player (0) - health: 30, armour: 0, mana: 8 / 10
 Weapon: Rogue Dagger 1/2, 3 attack, 2 durability
 0: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
 1: CardSlot('Spiteful Smith', Mana=5, 4 / 6)
