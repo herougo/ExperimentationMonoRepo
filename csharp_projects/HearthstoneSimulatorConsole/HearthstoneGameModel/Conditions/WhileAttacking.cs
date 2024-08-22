@@ -14,7 +14,9 @@ namespace HearthstoneGameModel.Conditions
     {
         public WhileAttacking()
         {
-            _eventsReceived = new List<string> { EffectEvent.BeforeAttackDeclared, EffectEvent.AttackFinished, EffectEvent.AttackAborted };
+            _eventsReceived = new List<string> {
+                EffectEvent.BeforeAttackDeclared, EffectEvent.AttackFinished, EffectEvent.AttackAborted
+            };
         }
 
         public override bool Evaluate(
@@ -23,8 +25,10 @@ namespace HearthstoneGameModel.Conditions
         {
             CardSlot slot = emNode.AffectedSlot;
 
-            return effectEvent == EffectEvent.AttackDeclared
-                && (eventSlots.Count > 0 && emNode.AffectedSlot == eventSlots[0]);
+            bool result =  effectEvent == EffectEvent.BeforeAttackDeclared
+                           && (eventSlots.Count > 0 && slot == eventSlots[0]);
+
+            return result;
         }
 
         public override Condition Copy()

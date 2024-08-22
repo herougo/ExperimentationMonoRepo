@@ -7,12 +7,11 @@ using TextView;
 List<string> cardIdList0 = new List<string>
 {
     CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
-    CardIds.ScavengingHyena, CardIds.SavannahHighmane, CardIds.ScavengingHyena, CardIds.ScavengingHyena
+    CardIds.AngryChicken, CardIds.AngryChicken, CardIds.ExplosiveTrap, CardIds.GladiatorsLongbow
 };
-List<string> cardIdList1 = Enumerable.Repeat(CardIds.ExplosiveShot, 30).ToList();
 string hsClass0 = "hero_hunter";
 Decklist decklist0 = new Decklist(cardIdList0, hsClass0);
-Decklist decklist1 = new Decklist(cardIdList1, hsClass0);
+Decklist decklist1 = new Decklist(cardIdList0, hsClass0);
 ConsoleActionReader actionGetter = new ConsoleActionReader();
 PlayerDecisionMaker decisionMaker0 = new PlayerDecisionMaker(actionGetter);
 PlayerDecisionMaker decisionMaker1 = new PlayerDecisionMaker(actionGetter);

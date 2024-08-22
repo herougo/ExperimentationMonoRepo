@@ -261,5 +261,26 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestGladiatorsLongbow()
+        {
+            string actionText = @"play 0
+play 0
+end_turn
+play 0
+attack -1 -1
+play 1 0
+end_turn
+attack -1 0
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.ExplosiveTrap, CardIds.GladiatorsLongbow
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
+            return Verify(log);
+        }
     }
 }

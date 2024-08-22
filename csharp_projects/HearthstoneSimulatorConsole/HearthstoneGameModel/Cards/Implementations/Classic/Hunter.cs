@@ -1,4 +1,5 @@
 ﻿using HearthstoneGameModel.Cards.CardTypes;
+using HearthstoneGameModel.Conditions;
 using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ContinuousEffects;
@@ -323,6 +324,37 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new SnakeTrap();
+        }
+    }
+
+    public class GladiatorsLongbow : WeaponCard
+    {
+        public GladiatorsLongbow()
+        {
+            _cardId = CardIds.GladiatorsLongbow;
+            _name = "Gladiator's Longbow";
+            _hsClass = HSClass.Hunter;
+            _collectible = true;
+
+            _mana = 7;
+            _attack = 5;
+            _durability = 2;
+
+            _inPlayEffects = new List<EMEffect>
+            {
+                new ContinuousSelectionFieldEffect(
+                    SelectionConstants.Player,
+                    new ConditionalEffect(
+                        new WhileAttacking(),
+                        new Immune()
+                    )
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new GladiatorsLongbow();
         }
     }
 }

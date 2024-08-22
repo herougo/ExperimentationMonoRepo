@@ -279,6 +279,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new BestialWrath();
                 case CardIds.SnakeTrap:
                     return new SnakeTrap();
+                case CardIds.GladiatorsLongbow:
+                    return new GladiatorsLongbow();
 
                 case CardIds.EarthShock:
                     return new EarthShock();
