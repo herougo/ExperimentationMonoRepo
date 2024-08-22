@@ -357,4 +357,30 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new GladiatorsLongbow();
         }
     }
+
+    public class KingKrush : MinionCard
+    {
+        public KingKrush()
+        {
+            _cardId = CardIds.KingKrush;
+            _name = "King Krush";
+            _hsClass = HSClass.Hunter;
+            _collectible = true;
+
+            _mana = 9;
+            _attack = 8;
+            _health = 8;
+
+            _tag = MinionTag.Beast;
+
+            _inPlayEffects = new List<EMEffect> {
+                new Charge()
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new KingKrush();
+        }
+    }
 }

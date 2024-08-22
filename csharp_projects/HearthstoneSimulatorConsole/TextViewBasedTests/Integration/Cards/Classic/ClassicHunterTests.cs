@@ -282,5 +282,20 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestKingKrush()
+        {
+            string actionText = @"play 0 0
+attack 0 -1
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.KingKrush
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
+            return Verify(log);
+        }
     }
 }
