@@ -19,6 +19,7 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
                 EffectEvent.DamagePreparation
             };
             _requiresSlotMatchForEvent = true;
+            _priority = 1;
         }
 
         public override EffectManagerNodePlan SendEvent(
@@ -42,7 +43,6 @@ namespace HearthstoneGameModel.Effects.ContinuousEffects
             }
 
             return null;
-            
         }
 
         public override EMEffectType EffectType

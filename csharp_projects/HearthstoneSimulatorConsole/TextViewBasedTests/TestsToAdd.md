@@ -95,6 +95,8 @@ Missing Tests
 - [ ] Millhouse Manastorm not discount until next turn
 - [ ] Alexstrasza with 8 max HP
 - [ ] Deathrattle summoning where the minion died
+- [ ] Immune negating taunt
+- [ ] Immune vs targeting
 
 
 

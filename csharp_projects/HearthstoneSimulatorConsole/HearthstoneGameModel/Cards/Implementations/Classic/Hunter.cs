@@ -3,8 +3,10 @@ using HearthstoneGameModel.Core.Enums;
 using HearthstoneGameModel.Effects;
 using HearthstoneGameModel.Effects.ContinuousEffects;
 using HearthstoneGameModel.Effects.OneTimeEffects;
+using HearthstoneGameModel.Effects.WrappedEMEffects;
 using HearthstoneGameModel.Effects.WrappedOneTimeEffects;
 using HearthstoneGameModel.Selections;
+using HearthstoneGameModel.Selections.SelectionFilters;
 using HearthstoneGameModel.Selections.SlotSelections;
 using HearthstoneGameModel.Triggers;
 using HearthstoneGameModel.Values;
@@ -270,6 +272,33 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         public override Card Copy()
         {
             return new SavannahHighmane();
+        }
+    }
+
+    public class BestialWrath : SpellCard
+    {
+        public BestialWrath()
+        {
+            _cardId = CardIds.BestialWrath;
+            _name = "Bestial Wrath";
+            _hsClass = HSClass.Hunter;
+            _mana = 1;
+            _collectible = true;
+
+            _whenPlayedEffect = new GiveEMEffect(
+                new SelectCharacterFrom(
+                    SelectionConstants.AllOtherFriendlyMinions & new TagSelectionFilter(MinionTag.Beast)
+                ),
+                new List<EMEffect> { 
+                    new TimeLimitedEMEffect(new BuffAttack(2), EffectTimeLimit.EndOfTurn),
+                    new TimeLimitedEMEffect(new Immune(), EffectTimeLimit.EndOfTurn)
+                }
+            );  
+        }
+
+        public override Card Copy()
+        {
+            return new BestialWrath();
         }
     }
 }

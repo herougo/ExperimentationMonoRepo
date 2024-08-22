@@ -88,6 +88,7 @@
     <Compile Include="Effects\ContinuousEffects\BuffDurability.cs" />
     <Compile Include="Effects\ContinuousEffects\BuffWeapon.cs" />
     <Compile Include="Effects\ContinuousEffects\CantAttack.cs" />
+    <Compile Include="Effects\ContinuousEffects\Immune.cs" />
     <Compile Include="Effects\ContinuousEffects\Poisonous.cs" />
     <Compile Include="Effects\ContinuousEffects\Rush.cs" />
     <Compile Include="Effects\ContinuousEffects\SetAttack.cs" />

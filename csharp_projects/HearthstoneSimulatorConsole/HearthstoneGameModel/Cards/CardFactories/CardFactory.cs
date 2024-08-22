@@ -275,6 +275,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new ExplosiveShot();
                 case CardIds.SavannahHighmane:
                     return new SavannahHighmane();
+                case CardIds.BestialWrath:
+                    return new BestialWrath();
 
                 case CardIds.EarthShock:
                     return new EarthShock();

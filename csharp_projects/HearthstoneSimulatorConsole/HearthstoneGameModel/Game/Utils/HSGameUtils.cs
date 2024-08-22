@@ -54,6 +54,10 @@ namespace HearthstoneGameModel.Game.Utils
             {
                 return false;
             }
+            if (slot.HasImmune && playerDoingTargeting != slot.Player)
+            {
+                return false;
+            }
             return !slot.HasElusive;
         }
 
@@ -63,12 +67,20 @@ namespace HearthstoneGameModel.Game.Utils
             {
                 return false;
             }
+            if (slot.HasImmune && playerDoingTargeting != slot.Player)
+            {
+                return false;
+            }
             return !slot.HasElusive;
         }
 
         public static bool TargetableWithMinionEffect(BattlerCardSlot slot, int playerDoingTargeting)
         {
             if (slot.HasStealth && playerDoingTargeting != slot.Player)
+            {
+                return false;
+            }
+            if (slot.HasImmune && playerDoingTargeting != slot.Player)
             {
                 return false;
             }

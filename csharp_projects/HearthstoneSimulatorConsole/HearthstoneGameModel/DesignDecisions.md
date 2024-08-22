@@ -88,6 +88,14 @@ class Trigger {
 
 ## 9) BattlerFilter enum instead of something else
 
+## 11) Immune
+
+Requirements
+
+- can't be damaged
+- opponent can't target them (modify SelectCharacterFrom)
+- negates taunt
+
 # Unresolved
 
 ## 10) SendEventArgs instead of N arguments

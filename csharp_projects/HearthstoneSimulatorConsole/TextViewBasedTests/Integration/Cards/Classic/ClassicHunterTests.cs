@@ -214,5 +214,32 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Hunter);
             return Verify(log);
         }
+
+
+
+        [Fact]
+        public Task TestBestialWrath()
+        {
+            string actionText = @"play 0 0
+play 0 1
+end_turn
+play 0 0
+play 0 1
+end_turn
+play 0
+select 1 0
+select 0 1
+select 0 0
+attack 0 0
+end_turn
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
+                CardIds.BestialWrath, CardIds.BestialWrath, CardIds.ArgentSquire, CardIds.ScavengingHyena
+            };
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
+            return Verify(log);
+        }
     }
 }

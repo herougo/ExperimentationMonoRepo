@@ -27,6 +27,7 @@ namespace HearthstoneGameModel.Game.CardSlots
         public int NumElusive = 0;
         public int NumCantAttackEffect = 0;
         public int NumRush = 0;
+        public int NumImmune = 0;
 
         public int TempDamageToTake = 0;
 
@@ -139,6 +140,11 @@ namespace HearthstoneGameModel.Game.CardSlots
         public bool IsAlive
         {
             get { return Health > 0 && !IsDestroyed; }
+        }
+
+        public bool HasImmune
+        {
+            get { return NumImmune > 0; }
         }
     }
 }
