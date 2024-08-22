@@ -1,0 +1,153 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Explosive Shot', Mana=5)
+1: CardSlot('Explosive Shot', Mana=5)
+2: CardSlot('Explosive Shot', Mana=5)
+3: CardSlot('Explosive Shot', Mana=5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+1: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+2: CardSlot('Savannah Highmane', Mana=6, 7 / 5)
+3: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+
+0 plays Scavenging Hyena
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Explosive Shot', Mana=5)
+1: CardSlot('Explosive Shot', Mana=5)
+2: CardSlot('Explosive Shot', Mana=5)
+3: CardSlot('Explosive Shot', Mana=5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 8 / 10
+Weapon: None
+0: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+1: CardSlot('Savannah Highmane', Mana=6, 7 / 5)
+2: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+
+0 plays Scavenging Hyena
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Explosive Shot', Mana=5)
+1: CardSlot('Explosive Shot', Mana=5)
+2: CardSlot('Explosive Shot', Mana=5)
+3: CardSlot('Explosive Shot', Mana=5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+	1: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 6 / 10
+Weapon: None
+0: CardSlot('Savannah Highmane', Mana=6, 7 / 5)
+1: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+
+0 plays Savannah Highmane
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Explosive Shot', Mana=5)
+1: CardSlot('Explosive Shot', Mana=5)
+2: CardSlot('Explosive Shot', Mana=5)
+3: CardSlot('Explosive Shot', Mana=5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+	1: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+	2: CardSlot('Savannah Highmane', Mana=6, 7 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Explosive Shot', Mana=5)
+1: CardSlot('Explosive Shot', Mana=5)
+2: CardSlot('Explosive Shot', Mana=5)
+3: CardSlot('Explosive Shot', Mana=5)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+	0: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+	1: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+	2: CardSlot('Savannah Highmane', Mana=6, 7 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Explosive Shot', Mana=5)
+1: CardSlot('Explosive Shot', Mana=5)
+2: CardSlot('Explosive Shot', Mana=5)
+3: CardSlot('Explosive Shot', Mana=5)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Explosive Shot', Mana=5)
+
+	------------
+	0: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+	1: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+	2: CardSlot('Savannah Highmane', Mana=6, 7 / 5)
+
+Player (0) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+
+1 plays Explosive Shot
+Player 0's C123 died
+Player 0's C129 died
+0 summons Hyena
+0 summons Hyena
+Opponent (1) - health: 30, armour: 0, mana: 5 / 10
+Weapon: None
+0: CardSlot('Explosive Shot', Mana=5)
+1: CardSlot('Explosive Shot', Mana=5)
+2: CardSlot('Explosive Shot', Mana=5)
+3: CardSlot('Coin', Mana=0)
+4: CardSlot('Explosive Shot', Mana=5)
+
+	------------
+	0: CardSlot('Scavenging Hyena', Mana=2, 6 / 4)
+	1: CardSlot('Hyena', Mana=2, 2 / 2)
+	2: CardSlot('Hyena', Mana=2, 2 / 2)
+
+Player (0) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+
+1 plays Explosive Shot
+Player 0's CU024 died
+Player 0's CU024 died
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Explosive Shot', Mana=5)
+1: CardSlot('Explosive Shot', Mana=5)
+2: CardSlot('Coin', Mana=0)
+3: CardSlot('Explosive Shot', Mana=5)
+
+	------------
+	0: CardSlot('Scavenging Hyena', Mana=2, 10 / 6)
+
+Player (0) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Scavenging Hyena', Mana=2, 2 / 2)
+
+Game Over: Player 0 Wins

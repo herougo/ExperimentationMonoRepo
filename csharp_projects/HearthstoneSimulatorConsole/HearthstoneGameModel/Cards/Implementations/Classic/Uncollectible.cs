@@ -522,4 +522,26 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new Hound();
         }
     }
+
+    public class Hyena : MinionCard
+    {
+        public Hyena()
+        {
+            _cardId = CardIds.Hyena;
+            _name = "Hyena";
+            _hsClass = HSClass.Hunter;
+            _collectible = false;
+
+            _mana = 2;
+            _attack = 2;
+            _health = 2;
+
+            _tag = MinionTag.Beast;
+        }
+
+        public override Card Copy()
+        {
+            return new Hyena();
+        }
+    }
 }

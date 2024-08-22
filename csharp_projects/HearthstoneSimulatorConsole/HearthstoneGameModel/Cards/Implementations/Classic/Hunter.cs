@@ -242,5 +242,34 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
         }
     }
 
-    
+
+
+    public class SavannahHighmane : MinionCard
+    {
+        public SavannahHighmane()
+        {
+            _cardId = CardIds.SavannahHighmane;
+            _name = "Savannah Highmane";
+            _hsClass = HSClass.Hunter;
+            _collectible = true;
+
+            _mana = 6;
+            _attack = 7;
+            _health = 5;
+
+            _tag = MinionTag.Beast;
+
+            _inPlayEffects = new List<EMEffect> {
+                new TriggerEffect(
+                    new Deathrattle(),
+                    new NEffects(new SummonMinion(new Hyena()), 2)
+                )
+            };
+        }
+
+        public override Card Copy()
+        {
+            return new SavannahHighmane();
+        }
+    }
 }

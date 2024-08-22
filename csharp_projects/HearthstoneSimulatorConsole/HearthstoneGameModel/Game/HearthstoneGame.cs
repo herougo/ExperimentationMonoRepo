@@ -405,15 +405,48 @@ namespace HearthstoneGameModel.Game
 
         public void DealDamage(CardSlot sourceSlot, List<BattlerCardSlot> targetSlots, int amount)
         {
+            // Note: This has 2 definitions with respect to the amount argument. Be sure to change the
+            //       other when changing this one.
             if (sourceSlot.CardType == CardType.Spell)
             {
                 amount += PlayerMetadata[sourceSlot.Player].SpellDamage;
             }
-            foreach (BattlerCardSlot targetSlot in targetSlots)
+            for (int i = 0; i < targetSlots.Count; i++)
             {
-                targetSlot.TempDamageToTake = amount;
+                targetSlots[i].TempDamageToTake = amount;
             }
 
+            inflictDamage(sourceSlot, targetSlots);
+        }
+
+        public void DealDamage(CardSlot sourceSlot, List<BattlerCardSlot> targetSlots, List<int> amounts)
+        {
+            // Note: This has 2 definitions with respect to the amount argument. Be sure to change the
+            //       other when changing this one.
+            List<int> amountsCopy = amounts.ToList();
+
+            if (amountsCopy.Count != targetSlots.Count)
+            {
+                throw new ArgumentException("DealDamage: targetSlots and amounts size mismatch");
+            }
+
+            if (sourceSlot.CardType == CardType.Spell)
+            {
+                for (int i = 0; i < amountsCopy.Count; i++)
+                {
+                    amountsCopy[i] += PlayerMetadata[sourceSlot.Player].SpellDamage;
+                }
+            }
+            for (int i = 0; i < targetSlots.Count; i++)
+            {
+                targetSlots[i].TempDamageToTake = amountsCopy[i];
+            }
+
+            inflictDamage(sourceSlot, targetSlots);
+        }
+
+        private void inflictDamage(CardSlot sourceSlot, List<BattlerCardSlot> targetSlots)
+        {
             foreach (BattlerCardSlot targetSlot in targetSlots)
             {
                 EffectManager.SendEvent(new EffectEventArgs(EffectEvent.DamagePreparation, targetSlot));

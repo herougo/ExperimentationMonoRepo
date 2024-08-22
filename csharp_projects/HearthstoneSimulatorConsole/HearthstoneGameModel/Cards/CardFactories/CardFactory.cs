@@ -273,6 +273,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new EaglehornBow();
                 case CardIds.ExplosiveShot:
                     return new ExplosiveShot();
+                case CardIds.SavannahHighmane:
+                    return new SavannahHighmane();
 
                 case CardIds.EarthShock:
                     return new EarthShock();
@@ -325,6 +327,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
 
                 case CardIds.Hound:
                     return new Hound();
+                case CardIds.Hyena:
+                    return new Hyena();
 
                 case CardIds.Priest:
                     return new Priest();

@@ -192,5 +192,27 @@ concede";
             string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
             return Verify(log);
         }
+
+        [Fact]
+        public Task TestSavannahHighmane()
+        {
+            string actionText = @"play 0 0
+play 0 1
+play 0 2
+end_turn
+play 0
+select 0 2
+play 0
+select 0 2
+concede";
+            List<string> cardIdList0 = new List<string>
+            {
+                CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
+                CardIds.ScavengingHyena, CardIds.SavannahHighmane, CardIds.ScavengingHyena, CardIds.ScavengingHyena
+            };
+            List<string> cardIdList1 = Enumerable.Repeat(CardIds.ExplosiveShot, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList1, true, CardIds.Hunter);
+            return Verify(log);
+        }
     }
 }

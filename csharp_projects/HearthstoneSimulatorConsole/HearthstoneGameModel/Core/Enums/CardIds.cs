@@ -148,6 +148,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string Flare = "C126";
         public const string EaglehornBow = "C127";
         public const string ExplosiveShot = "C128";
+        public const string SavannahHighmane = "C129";
 
 
         // Classic Shaman
@@ -178,7 +179,9 @@ namespace HearthstoneGameModel.Core.Enums
         public const string DruidOfTheClawBearForm = "CU020";
         public const string DruidOfTheClawCatForm = "CU021";
         public const string TreantClassicTaunt = "CU022";
+
         public const string Hound = "CU023";
+        public const string Hyena = "CU024";
 
         // Heroes
         public const string Priest = "hero_priest";

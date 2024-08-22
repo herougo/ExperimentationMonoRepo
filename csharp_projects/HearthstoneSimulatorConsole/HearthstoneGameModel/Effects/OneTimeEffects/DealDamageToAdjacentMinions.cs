@@ -64,7 +64,7 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
             {
                 throw new Exception("DealDamageToAdjacentMinions: must target 1 minion");
             }
-            MinionCardSlot cardSlot = (MinionCardSlot) selectedCardSlot;
+            MinionCardSlot cardSlot = (MinionCardSlot)selectedCardSlot;
 
             int boardIndex = game.Battleboard.CardSlotToBoardIndex(cardSlot);
 
@@ -75,25 +75,24 @@ namespace HearthstoneGameModel.Effects.OneTimeEffects
 
             Tuple<CardSlot, CardSlot> neighbours = game.Battleboard.GetNeighbours(cardSlot);
 
-            attemptDealDamage(game, affectedCardSlot, cardSlot, _centreAmount);
-            attemptDealDamage(game, affectedCardSlot, neighbours.Item1, _leftAmount);
-            attemptDealDamage(game, affectedCardSlot, neighbours.Item2, _rightAmount);
+            List<BattlerCardSlot> targetCardSlots = new List<BattlerCardSlot> { cardSlot };
+            List<int> targetAmounts = new List<int> { _centreAmount.Get(game, affectedCardSlot) };
+
+            if (neighbours.Item1 != null && neighbours.Item1.CardType == CardType.Minion)
+            {
+                targetCardSlots.Add((BattlerCardSlot)neighbours.Item1);
+                targetAmounts.Add(_leftAmount.Get(game, affectedCardSlot));
+            }
+
+            if (neighbours.Item2 != null && neighbours.Item2.CardType == CardType.Minion)
+            {
+                targetCardSlots.Add((BattlerCardSlot)neighbours.Item2);
+                targetAmounts.Add(_rightAmount.Get(game, affectedCardSlot));
+            }
+
+            game.DealDamage(cardSlot, targetCardSlots, targetAmounts);
 
             return null;
-        }
-
-        private void attemptDealDamage(HearthstoneGame game, CardSlot sourceCardSlot, CardSlot targetCardSlot, IIntValue amount)
-        {
-            if (targetCardSlot == null)
-            {
-                return;
-            }
-            if (targetCardSlot.CardType != CardType.Minion)
-            {
-                return;
-            }
-            int calculcatedAmount = amount.Get(game, sourceCardSlot);
-            game.DealDamage(sourceCardSlot, new List<BattlerCardSlot> { (MinionCardSlot)targetCardSlot }, calculcatedAmount);
         }
 
         public override OneTimeEffect Copy()
