@@ -10,6 +10,7 @@ namespace HearthstoneGameModel.Core.Enums
     {
         Any = 0,
         YourHero = 1,
-        EnemyMinion = 2
+        EnemyMinion = 2,
+        YourMinion = 3
     }
 }

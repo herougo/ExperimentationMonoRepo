@@ -301,4 +301,28 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new BestialWrath();
         }
     }
+
+    public class SnakeTrap : SpellCard
+    {
+        public SnakeTrap()
+        {
+            _cardId = CardIds.SnakeTrap;
+            _name = "Snake Trap";
+            _hsClass = HSClass.Hunter;
+            _mana = 2;
+            _collectible = true;
+
+            _spellType = SpellType.Secret;
+
+            _whenPlayedEffect = new CreateSecret(
+                new WhenAttackDeclared(BattlerFilter.Any, BattlerFilter.YourMinion),
+                new NEffects(new SummonMinion(new Snake()), 3)
+            );
+        }
+
+        public override Card Copy()
+        {
+            return new SnakeTrap();
+        }
+    }
 }

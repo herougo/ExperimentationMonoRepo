@@ -150,6 +150,7 @@ namespace HearthstoneGameModel.Core.Enums
         public const string ExplosiveShot = "C128";
         public const string SavannahHighmane = "C129";
         public const string BestialWrath = "C130";
+        public const string SnakeTrap = "C131";
 
 
         // Classic Shaman
@@ -183,6 +184,7 @@ namespace HearthstoneGameModel.Core.Enums
 
         public const string Hound = "CU023";
         public const string Hyena = "CU024";
+        public const string Snake = "CU025";
 
         // Heroes
         public const string Priest = "hero_priest";

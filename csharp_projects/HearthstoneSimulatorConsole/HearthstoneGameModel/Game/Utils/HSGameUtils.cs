@@ -97,6 +97,8 @@ namespace HearthstoneGameModel.Game.Utils
                     return slot.CardType == CardType.Hero && slot.Player == player;
                 case BattlerFilter.EnemyMinion:
                     return slot.CardType == CardType.Minion && slot.Player != player;
+                case BattlerFilter.YourMinion:
+                    return slot.CardType == CardType.Minion && slot.Player == player;
                 default:
                     throw new NotImplementedException();
             }

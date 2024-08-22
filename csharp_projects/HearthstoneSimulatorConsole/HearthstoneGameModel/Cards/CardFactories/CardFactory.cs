@@ -277,6 +277,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new SavannahHighmane();
                 case CardIds.BestialWrath:
                     return new BestialWrath();
+                case CardIds.SnakeTrap:
+                    return new SnakeTrap();
 
                 case CardIds.EarthShock:
                     return new EarthShock();
@@ -331,6 +333,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new Hound();
                 case CardIds.Hyena:
                     return new Hyena();
+                case CardIds.Snake:
+                    return new Snake();
 
                 case CardIds.Priest:
                     return new Priest();
