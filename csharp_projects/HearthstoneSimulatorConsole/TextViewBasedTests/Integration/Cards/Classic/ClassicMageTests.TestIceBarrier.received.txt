@@ -1,0 +1,116 @@
+﻿0 goes first
+-------------------------------------------
+0 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ice Barrier', Mana=3)
+1: CardSlot('Ice Barrier', Mana=3)
+2: CardSlot('Ice Barrier', Mana=3)
+3: CardSlot('Ice Barrier', Mana=3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Ice Barrier', Mana=3)
+1: CardSlot('Ice Barrier', Mana=3)
+2: CardSlot('Ice Barrier', Mana=3)
+3: CardSlot('Ice Barrier', Mana=3)
+
+0 plays Ice Barrier
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ice Barrier', Mana=3)
+1: CardSlot('Ice Barrier', Mana=3)
+2: CardSlot('Ice Barrier', Mana=3)
+3: CardSlot('Ice Barrier', Mana=3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+Secrets: 1
+0: CardSlot('Ice Barrier', Mana=3)
+1: CardSlot('Ice Barrier', Mana=3)
+2: CardSlot('Ice Barrier', Mana=3)
+
+Opponent (1) - health: 30, armour: 0, mana: 0 / 10
+Weapon: None
+0: CardSlot('Ice Barrier', Mana=3)
+1: CardSlot('Ice Barrier', Mana=3)
+2: CardSlot('Ice Barrier', Mana=3)
+3: CardSlot('Ice Barrier', Mana=3)
+4: CardSlot('Coin', Mana=0)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+Secrets: 1
+0: CardSlot('Ice Barrier', Mana=3)
+1: CardSlot('Ice Barrier', Mana=3)
+2: CardSlot('Ice Barrier', Mana=3)
+
+-------------------------------------------
+1 turn
+-------------------------------------------
+Opponent (1) - health: 30, armour: 0, mana: 10 / 10
+Weapon: None
+0: CardSlot('Ice Barrier', Mana=3)
+1: CardSlot('Ice Barrier', Mana=3)
+2: CardSlot('Ice Barrier', Mana=3)
+3: CardSlot('Ice Barrier', Mana=3)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Ice Barrier', Mana=3)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+Secrets: 1
+0: CardSlot('Ice Barrier', Mana=3)
+1: CardSlot('Ice Barrier', Mana=3)
+2: CardSlot('Ice Barrier', Mana=3)
+
+Opponent (1) - health: 30, armour: 0, mana: 8 / 10
+Weapon: Rogue Dagger 1/2, 1 attack, 2 durability
+0: CardSlot('Ice Barrier', Mana=3)
+1: CardSlot('Ice Barrier', Mana=3)
+2: CardSlot('Ice Barrier', Mana=3)
+3: CardSlot('Ice Barrier', Mana=3)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Ice Barrier', Mana=3)
+
+	------------
+
+Player (0) - health: 30, armour: 0, mana: 7 / 10
+Weapon: None
+Secrets: 1
+0: CardSlot('Ice Barrier', Mana=3)
+1: CardSlot('Ice Barrier', Mana=3)
+2: CardSlot('Ice Barrier', Mana=3)
+
+CardSlot('Rogue', Mana=0)
+	attacks CardSlot('Rogue', Mana=0)
+Secret revealed: Ice Barrier
+Opponent (1) - health: 30, armour: 0, mana: 8 / 10
+Weapon: Rogue Dagger 1/2, 1 attack, 1 durability
+0: CardSlot('Ice Barrier', Mana=3)
+1: CardSlot('Ice Barrier', Mana=3)
+2: CardSlot('Ice Barrier', Mana=3)
+3: CardSlot('Ice Barrier', Mana=3)
+4: CardSlot('Coin', Mana=0)
+5: CardSlot('Ice Barrier', Mana=3)
+
+	------------
+
+Player (0) - health: 30, armour: 7, mana: 7 / 10
+Weapon: None
+0: CardSlot('Ice Barrier', Mana=3)
+1: CardSlot('Ice Barrier', Mana=3)
+2: CardSlot('Ice Barrier', Mana=3)
+
+Game Over: Player 0 Wins

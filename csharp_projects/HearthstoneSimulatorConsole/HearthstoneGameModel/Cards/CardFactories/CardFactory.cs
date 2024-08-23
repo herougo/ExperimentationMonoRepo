@@ -288,6 +288,8 @@ namespace HearthstoneGameModel.Cards.CardFactories
                     return new ManaWyrm();
                 case CardIds.SorcerersApprentice:
                     return new SorcerersApprentice();
+                case CardIds.IceBarrier:
+                    return new IceBarrier();
 
                 case CardIds.EarthShock:
                     return new EarthShock();

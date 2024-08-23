@@ -78,6 +78,7 @@ Missing Cards
 - [ ] SI:7 Infiltrator
 - [ ] Barrens Stablehand
 - [ ] Misdirection
+- [ ] Tome of Intellect
 
 Missing Tests
 

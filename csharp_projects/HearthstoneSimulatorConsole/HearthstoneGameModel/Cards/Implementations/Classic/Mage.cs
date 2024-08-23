@@ -67,4 +67,29 @@ namespace HearthstoneGameModel.Cards.Implementations.Classic
             return new SorcerersApprentice();
         }
     }
+
+    public class IceBarrier : SpellCard
+    {
+        public IceBarrier()
+        {
+            _cardId = CardIds.IceBarrier;
+            _name = "Ice Barrier";
+            _hsClass = HSClass.Mage;
+            _mana = 3;
+            _collectible = true;
+
+            _spellType = SpellType.Secret;
+            _school = SpellSchool.Frost;
+
+            _whenPlayedEffect = new CreateSecret(
+                new WhenAttackDeclared(BattlerFilter.Any, BattlerFilter.YourHero),
+                new GainArmour(SelectionConstants.Player, 8)
+            );
+        }
+
+        public override Card Copy()
+        {
+            return new IceBarrier();
+        }
+    }
 }

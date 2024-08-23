@@ -113,7 +113,7 @@ Weapon: None
 
 1 plays Explosive Shot
 Player 0's C123 died
-Player 0's C129 died
+Player 0's C130 died
 0 summons Hyena
 0 summons Hyena
 Opponent (1) - health: 30, armour: 0, mana: 5 / 10

@@ -146,18 +146,20 @@ namespace HearthstoneGameModel.Core.Enums
         public const string DeadlyShot = "C124";
         public const string UnleashTheHounds = "C125";
         public const string Flare = "C126";
-        public const string EaglehornBow = "C127";
-        public const string ExplosiveShot = "C128";
-        public const string SavannahHighmane = "C129";
-        public const string BestialWrath = "C130";
-        public const string SnakeTrap = "C131";
-        public const string GladiatorsLongbow = "C132";
-        public const string KingKrush = "C133";
+        public const string Misdirection = "C127";
+        public const string EaglehornBow = "C128";
+        public const string ExplosiveShot = "C129";
+        public const string SavannahHighmane = "C130";
+        public const string BestialWrath = "C131";
+        public const string SnakeTrap = "C132";
+        public const string GladiatorsLongbow = "C133";
+        public const string KingKrush = "C134";
 
         // Classic Mage
-        public const string ManaWyrm = "C134";
-        public const string SorcerersApprentice = "C135";
-
+        public const string TomeOfIntellect = "C135";
+        public const string ManaWyrm = "C135";
+        public const string SorcerersApprentice = "C136";
+        public const string IceBarrier = "C137";
 
         // Classic Shaman
         public const string EarthShock = "C3XX";

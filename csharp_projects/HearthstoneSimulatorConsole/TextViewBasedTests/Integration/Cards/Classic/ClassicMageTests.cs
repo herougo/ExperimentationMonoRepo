@@ -23,7 +23,7 @@ concede";
                 CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
                 CardIds.AngryChicken, CardIds.Snipe, CardIds.ExplosiveTrap, CardIds.ManaWyrm
             };
-            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Mage);
             return Verify(log);
         }
 
@@ -40,7 +40,20 @@ concede";
                 CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken, CardIds.AngryChicken,
                 CardIds.AngryChicken, CardIds.Snipe, CardIds.ExplosiveTrap, CardIds.SorcerersApprentice
             };
-            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Hunter);
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Mage);
+            return Verify(log);
+        }
+
+        [Fact]
+        public Task TestIceBarrier()
+        {
+            string actionText = @"play 0
+end_turn
+hero_power
+attack -1 -1
+concede";
+            List<string> cardIdList0 = Enumerable.Repeat(CardIds.IceBarrier, 30).ToList();
+            string log = TestGameUtils.RunGame(actionText, cardIdList0, cardIdList0, true, CardIds.Rogue);
             return Verify(log);
         }
     }
