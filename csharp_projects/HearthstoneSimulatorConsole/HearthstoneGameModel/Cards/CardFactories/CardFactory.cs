@@ -284,6 +284,11 @@ namespace HearthstoneGameModel.Cards.CardFactories
                 case CardIds.KingKrush:
                     return new KingKrush();
 
+                case CardIds.ManaWyrm:
+                    return new ManaWyrm();
+                case CardIds.SorcerersApprentice:
+                    return new SorcerersApprentice();
+
                 case CardIds.EarthShock:
                     return new EarthShock();
 

@@ -51,6 +51,7 @@
     <Compile Include="Cards\CardTypes\WeaponCard.cs" />
     <Compile Include="Cards\Implementations\Classic\Druid.cs" />
     <Compile Include="Cards\Implementations\Classic\Hunter.cs" />
+    <Compile Include="Cards\Implementations\Classic\Mage.cs" />
     <Compile Include="Cards\Implementations\Classic\NeutralEpic.cs" />
     <Compile Include="Cards\Implementations\Classic\NeutralLegendary.cs" />
     <Compile Include="Cards\Implementations\Classic\NeutralRare.cs" />

@@ -154,6 +154,10 @@ namespace HearthstoneGameModel.Core.Enums
         public const string GladiatorsLongbow = "C132";
         public const string KingKrush = "C133";
 
+        // Classic Mage
+        public const string ManaWyrm = "C134";
+        public const string SorcerersApprentice = "C135";
+
 
         // Classic Shaman
         public const string EarthShock = "C3XX";

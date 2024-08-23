@@ -98,6 +98,7 @@ Missing Tests
 - [ ] Immune negating taunt
 - [ ] Immune vs targeting
 - [ ] WhileAttacking attack aborted
+- [ ] Gladiator's Longbow, Bestial Wrath, and Misdirection with no minions
 
 
 
