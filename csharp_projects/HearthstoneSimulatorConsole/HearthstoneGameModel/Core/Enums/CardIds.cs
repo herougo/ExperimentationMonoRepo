@@ -160,6 +160,10 @@ namespace HearthstoneGameModel.Core.Enums
         public const string ManaWyrm = "C135";
         public const string SorcerersApprentice = "C136";
         public const string IceBarrier = "C137";
+        public const string MirrorEntity = "C138";
+        public const string ConeOfCold = "C139";
+        public const string Counterspell = "C140";
+        public const string KirinTorMage = "C141";
 
         // Classic Shaman
         public const string EarthShock = "C3XX";
