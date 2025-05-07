@@ -43,3 +43,5 @@ csharp_projects/HearthstoneSimulatorConsole/TextView/bin/
 csharp_projects/HearthstoneSimulatorConsole/TextView/obj/
 csharp_projects/HearthstoneSimulatorConsole/TextViewBasedTests/bin/
 csharp_projects/HearthstoneSimulatorConsole/TextViewBasedTests/obj/
+
+react_projects/render-experiments/node_modules
