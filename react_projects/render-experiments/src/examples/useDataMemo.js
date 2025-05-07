@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo, useState } from 'react';
 
-const useData = () => {
+const useDataMemo = () => {
     const [count, setCount] = useState(0);
     const [error, setError] = useState(0);
 
@@ -10,11 +10,13 @@ const useData = () => {
         setCount((count) => count+1)
     }, []);
 
-    return {
-        count,
-        error,
-        onClick
-    };
+    return useMemo(() => {
+        return {
+            count,
+            error,
+            onClick
+        };
+    }, dependencies);
 };
 
-export default useData;
+export default useDataMemo;

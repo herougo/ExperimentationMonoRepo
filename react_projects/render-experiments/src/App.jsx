@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import Example3 from './examples/Example3'
+import Example4 from './examples/Example4'
 
 function App() {
   return (
     <div>
-      <Example3></Example3>
+      <Example4></Example4>
     </div>
   )
 }
