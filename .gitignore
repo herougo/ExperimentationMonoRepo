@@ -49,3 +49,7 @@ react_projects/render-experiments/node_modules
 csharp_projects/ModernWinFormsApp/.vs/
 csharp_projects/ModernWinFormsApp/ModernWinFormsApp/bin/
 csharp_projects/ModernWinFormsApp/ModernWinFormsApp/obj/
+
+csharp_projects/NetFrameworkWinFormsApp/.vs/
+csharp_projects/NetFrameworkWinFormsApp/NetFrameworkWinFormsApp/bin/
+csharp_projects/NetFrameworkWinFormsApp/NetFrameworkWinFormsApp/obj/
