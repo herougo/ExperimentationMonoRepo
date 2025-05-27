@@ -1,4 +1,4 @@
-﻿namespace NetFrameworkWinFormsApp
+﻿namespace ModernizedWinFormsApp
 {
     partial class Form1
     {
