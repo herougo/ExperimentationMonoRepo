@@ -55,3 +55,7 @@ csharp_projects/NetFrameworkWinFormsApp/NetFrameworkWinFormsApp/bin/
 csharp_projects/NetFrameworkWinFormsApp/NetFrameworkWinFormsApp/obj/
 csharp_projects/NetFrameworkWinFormsApp/ModernizedWinFormsApp/bin/
 csharp_projects/NetFrameworkWinFormsApp/ModernizedWinFormsApp/obj/
+
+csharp_projects/WorkerService1/.vs/
+csharp_projects/WorkerService1/WorkerService1/bin/
+csharp_projects/WorkerService1/WorkerService1/obj/
