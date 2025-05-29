@@ -8,8 +8,8 @@ builder.Services.AddWindowsService(options =>
     options.ServiceName = ".NET Joke Service";
 });
 
-LoggerProviderOptions.RegisterProviderOptions<
-    EventLogSettings, EventLogLoggerProvider>(builder.Services);
+// LoggerProviderOptions.RegisterProviderOptions<
+//     EventLogSettings, EventLogLoggerProvider>(builder.Services);
 
 builder.Services.AddSingleton<JokeService>();
 builder.Services.AddHostedService<WindowsBackgroundService>();
