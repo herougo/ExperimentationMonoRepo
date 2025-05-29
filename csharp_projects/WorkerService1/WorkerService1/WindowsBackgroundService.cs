@@ -1,4 +1,4 @@
-namespace App.WindowsService;
+namespace WorkerService1;
 
 public sealed class WindowsBackgroundService(
     JokeService jokeService,
