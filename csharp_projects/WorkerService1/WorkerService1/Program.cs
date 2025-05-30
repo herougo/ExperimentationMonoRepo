@@ -1,7 +1,8 @@
+using CliWrap;
 using Microsoft.Extensions.Logging.Configuration;
 using Microsoft.Extensions.Logging.EventLog;
+using Serilog;
 using WorkerService1;
-using CliWrap;
 
 const string ServiceName = ".NET Joke Service";
 
@@ -37,17 +38,38 @@ if (args is { Length: 1 })
     return;
 }
 
-HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
-builder.Services.AddWindowsService(options =>
+string logPath = Path.Combine(AppContext.BaseDirectory, "logs/myapp.txt");
+Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .WriteTo.Console()
+                .WriteTo.File(logPath, rollingInterval: RollingInterval.Day)
+                .CreateLogger();
+
+try
 {
-    options.ServiceName = ".NET Joke Service";
-});
+    Log.Information("Starting up...");
+    HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
+    builder.Logging.ClearProviders();
+    builder.Logging.AddSerilog(Log.Logger);
+    builder.Services.AddWindowsService(options =>
+    {
+        options.ServiceName = ".NET Joke Service";
+    });
 
-// LoggerProviderOptions.RegisterProviderOptions<
-//     EventLogSettings, EventLogLoggerProvider>(builder.Services);
+    // LoggerProviderOptions.RegisterProviderOptions<
+    //     EventLogSettings, EventLogLoggerProvider>(builder.Services);
 
-builder.Services.AddSingleton<JokeService>();
-builder.Services.AddHostedService<WindowsBackgroundService>();
+    builder.Services.AddSingleton<JokeService>();
+    builder.Services.AddHostedService<WindowsBackgroundService>();
 
-IHost host = builder.Build();
-host.Run();
+    IHost host = builder.Build();
+    host.Run();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Application start-up failed");
+}
+finally
+{
+    Log.CloseAndFlush();
+}

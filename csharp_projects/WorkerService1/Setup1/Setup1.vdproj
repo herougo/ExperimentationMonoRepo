@@ -171,7 +171,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup1"
         "ProductCode" = "8:{3F7431E6-A4CD-462E-8856-565D316D7DBA}"
-        "PackageCode" = "8:{B4E4DFE9-B722-43BE-B2E8-C33477F4CD39}"
+        "PackageCode" = "8:{529E76D6-9620-4303-A732-D27C8DD3D881}"
         "UpgradeCode" = "8:{FD45C547-38A2-4ACD-B6B5-CD4A4788AA8D}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
