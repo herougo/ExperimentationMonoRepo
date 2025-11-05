@@ -61,3 +61,14 @@ csharp_projects/WorkerService1/WorkerService1/bin/
 csharp_projects/WorkerService1/WorkerService1/obj/
 csharp_projects/WorkerService1/Setup1/Debug/
 csharp_projects/WorkerService1/Setup1/Release/
+
+csharp_projects/CodeParsingExperiment/.vs/
+csharp_projects/CodeParsingExperiment/CodeParsing/bin/
+csharp_projects/CodeParsingExperiment/CodeParsingExperiment/bin/
+csharp_projects/CodeParsingExperiment/CodeParsingExperimentNet9/bin/
+csharp_projects/CodeParsingExperiment/CodeParsingNet9/bin/
+csharp_projects/CodeParsingExperiment/CodeParsing/obj/
+csharp_projects/CodeParsingExperiment/CodeParsingExperiment/obj/
+csharp_projects/CodeParsingExperiment/CodeParsingExperimentNet9/obj/
+csharp_projects/CodeParsingExperiment/CodeParsingNet9/obj/
+csharp_projects/CodeParsingExperiment/packages/
