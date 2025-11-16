@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SimpleCodeManipulator": {
+      "commandName": "Project",
+      "commandLineArgs": "method-dependency-graph \"C:\\Users\\henri\\Documents\\01 - Backup 1 - MSI\\01 - Documents\\00 - Main\\Softlinx\\DummyProject\\src\\DummyProject\\DummyProject.sln\" Utility,Utility.Standard output\\"
+    }
+  }
+}
