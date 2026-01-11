@@ -11,13 +11,12 @@ namespace CodeParsingNet9.CodeBaseManagement.Metadata.Source.DataTypes
 {
     internal class SourceMetadataFileNode : INode
     {
-        private string _filePath;
-        private List<IFileNodeMember>? _content = null;
+        public readonly string FilePath;
+        public readonly List<IFileNodeMember> Content = new List<IFileNodeMember>();
 
         public SourceMetadataFileNode(string filePath, Document doc, IdGenerator idGenerator)
         {
-            _filePath = filePath;
-            _content = new List<IFileNodeMember>();
+            FilePath = filePath;
 
             var rootNode = CodeUtils.GetRootNode(doc);
             var namespaceNode = CodeUtils.GetNamespaceNode(rootNode);
@@ -26,15 +25,15 @@ namespace CodeParsingNet9.CodeBaseManagement.Metadata.Source.DataTypes
             {
                 if (member is ClassDeclarationSyntax classDeclaration)
                 {
-                    _content.Add(new SourceMetadataClassNode(classDeclaration, idGenerator));
+                    Content.Add(new SourceMetadataClassNode(classDeclaration, idGenerator));
                 }
                 else if (member is EnumDeclarationSyntax enumDeclaration)
                 {
-                    _content.Add(new SourceMetadataEnumNode(enumDeclaration, idGenerator));
+                    Content.Add(new SourceMetadataEnumNode(enumDeclaration, idGenerator));
                 }
                 else if (member is InterfaceDeclarationSyntax interfaceDeclaration)
                 {
-                    _content.Add(new SourceMetadataInterfaceNode(interfaceDeclaration, idGenerator));
+                    Content.Add(new SourceMetadataInterfaceNode(interfaceDeclaration, idGenerator));
                 }
             }
         }

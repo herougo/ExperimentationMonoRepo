@@ -23,33 +23,31 @@ namespace CodeParsingNet9.CodeBaseManagement.Metadata.Source.DataTypes
     {
         public readonly string Name;
         public readonly string Id;
-        private List<IClassNodeMember>? _content = null;
-        private readonly SourceMetadataClassNodeMetadata Metadata = new SourceMetadataClassNodeMetadata();
+        public readonly List<IClassNodeMember>? Content  = new List<IClassNodeMember>();
+        public readonly SourceMetadataClassNodeMetadata Metadata = new SourceMetadataClassNodeMetadata();
 
         public SourceMetadataClassNode(ClassDeclarationSyntax classNode, IdGenerator idGenerator)
         {
             Id = idGenerator.GetNext();
             Name = classNode.Identifier.Text;
 
-            _content = new List<IClassNodeMember>();
-
             foreach (var member in classNode.Members)
             {
                 if (member is ClassDeclarationSyntax classDeclaration)
                 {
-                    _content.Add(new SourceMetadataClassNode(classDeclaration, idGenerator));
+                    Content.Add(new SourceMetadataClassNode(classDeclaration, idGenerator));
                 }
                 else if (member is EnumDeclarationSyntax enumDeclaration)
                 {
-                    _content.Add(new SourceMetadataEnumNode(enumDeclaration, idGenerator));
+                    Content.Add(new SourceMetadataEnumNode(enumDeclaration, idGenerator));
                 }
                 else if (member is InterfaceDeclarationSyntax interfaceDeclaration)
                 {
-                    _content.Add(new SourceMetadataInterfaceNode(interfaceDeclaration, idGenerator));
+                    Content.Add(new SourceMetadataInterfaceNode(interfaceDeclaration, idGenerator));
                 }
                 else if (member is MethodDeclarationSyntax methodDeclaration)
                 {
-                    _content.Add(new SourceMetadataMethodNode(methodDeclaration, idGenerator));
+                    Content.Add(new SourceMetadataMethodNode(methodDeclaration, idGenerator));
                 }
             }
         }
