@@ -10,8 +10,8 @@ namespace CodeParsingNet9.CodeBaseManagement
 {
     public class MigrationManager
     {
-        private CodeRepositoryManager _sourceRepo;
-        private CodeRepositoryManager _destRepo;
+        private CodeBaseManager _sourceCodeBase;
+        private CodeBaseManager _destCodeBase;
 
         public MigrationManager(string metadataPath)
         {
@@ -21,8 +21,8 @@ namespace CodeParsingNet9.CodeBaseManagement
             string sourceRepoPath = JsonUtils.GetPropertyString(root, "source_repo_path");
             string destRepoPath = JsonUtils.GetPropertyString(root, "dest_repo_path");
 
-            _sourceRepo = new CodeRepositoryManager(sourceRepoPath);
-            _destRepo = new CodeRepositoryManager(destRepoPath);
+            _sourceCodeBase = new CodeBaseManager(sourceRepoPath);
+            _destCodeBase = new CodeBaseManager(destRepoPath);
         }
 
 
