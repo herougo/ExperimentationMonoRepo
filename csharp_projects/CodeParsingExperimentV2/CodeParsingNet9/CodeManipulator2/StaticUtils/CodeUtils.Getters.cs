@@ -149,5 +149,32 @@ namespace CodeParsingNet9.CodeManipulator2.StaticUtils
             if (result == null) throw new Exception("missing semantic model");
             return result;
         }
+
+        public static string GetSolutionFilePathFromDirectory(string directory)
+        {
+            if (!Directory.Exists(directory))
+            {
+                throw new ArgumentException($"GetSolutionFilePathFromDirectory: {directory} is not a directory");
+            }
+
+            int numSolutionFiles = 0;
+            string result = "";
+
+            foreach (string filePath in Directory.GetFiles(directory))
+            {
+                if (filePath.EndsWith(".sln"))
+                {
+                    numSolutionFiles++;
+                    result = filePath;
+                }
+            }
+
+            if (numSolutionFiles != 1)
+            {
+                throw new Exception($"GetSolutionFilePathFromDirectory: the number of .sln files is not 1 ({numSolutionFiles})");
+            }
+
+            return result;
+        }
     }
 }
