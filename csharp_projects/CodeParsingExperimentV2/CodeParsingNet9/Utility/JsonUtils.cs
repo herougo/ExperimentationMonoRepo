@@ -29,7 +29,7 @@ namespace CodeParsingNet9.Utility
                 throw new Exception($"Missing key: {key}");
             }
 
-            return result;
+            return (int)result;
         }
     }
 }

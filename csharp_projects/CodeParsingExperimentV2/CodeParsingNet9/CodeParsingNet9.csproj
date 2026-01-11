@@ -17,4 +17,8 @@
     <PackageReference Include="Microsoft.CodeAnalysis.Workspaces.MSBuild" Version="4.14.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CodeBaseManagement\Metadata\Mapping\" />
+  </ItemGroup>
+
 </Project>
