@@ -23,17 +23,17 @@ namespace CodeParsingNet9.CodeBaseManagement.Metadata.Source.DataTypes
 
             foreach (var member in namespaceNode.Members)
             {
-                if (member is ClassDeclarationSyntax classDeclaration)
+                switch (member)
                 {
-                    Content.Add(new SourceMetadataClassNode(classDeclaration, idGenerator));
-                }
-                else if (member is EnumDeclarationSyntax enumDeclaration)
-                {
-                    Content.Add(new SourceMetadataEnumNode(enumDeclaration, idGenerator));
-                }
-                else if (member is InterfaceDeclarationSyntax interfaceDeclaration)
-                {
-                    Content.Add(new SourceMetadataInterfaceNode(interfaceDeclaration, idGenerator));
+                    case ClassDeclarationSyntax classDeclaration:
+                        Content.Add(new SourceMetadataClassNode(classDeclaration, idGenerator));
+                        break;
+                    case EnumDeclarationSyntax enumDeclaration:
+                        Content.Add(new SourceMetadataEnumNode(enumDeclaration, idGenerator));
+                        break;
+                    case InterfaceDeclarationSyntax interfaceDeclaration:
+                        Content.Add(new SourceMetadataInterfaceNode(interfaceDeclaration, idGenerator));
+                        break;
                 }
             }
         }

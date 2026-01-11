@@ -33,24 +33,23 @@ namespace CodeParsingNet9.CodeBaseManagement.Metadata.Source.DataTypes
 
             foreach (var member in classNode.Members)
             {
-                if (member is ClassDeclarationSyntax classDeclaration)
+                switch (member)
                 {
-                    Content.Add(new SourceMetadataClassNode(classDeclaration, idGenerator));
-                }
-                else if (member is EnumDeclarationSyntax enumDeclaration)
-                {
-                    Content.Add(new SourceMetadataEnumNode(enumDeclaration, idGenerator));
-                }
-                else if (member is InterfaceDeclarationSyntax interfaceDeclaration)
-                {
-                    Content.Add(new SourceMetadataInterfaceNode(interfaceDeclaration, idGenerator));
-                }
-                else if (member is MethodDeclarationSyntax methodDeclaration)
-                {
-                    Content.Add(new SourceMetadataMethodNode(methodDeclaration, idGenerator));
+                    case ClassDeclarationSyntax classDeclaration:
+                        Content.Add(new SourceMetadataClassNode(classDeclaration, idGenerator));
+                        break;
+                    case EnumDeclarationSyntax enumDeclaration:
+                        Content.Add(new SourceMetadataEnumNode(enumDeclaration, idGenerator));
+                        break;
+                    case InterfaceDeclarationSyntax interfaceDeclaration:
+                        Content.Add(new SourceMetadataInterfaceNode(interfaceDeclaration, idGenerator));
+                        break;
+
+                    case MethodDeclarationSyntax methodDeclaration:
+                        Content.Add(new SourceMetadataMethodNode(methodDeclaration, idGenerator));
+                        break;
                 }
             }
         }
-
     }
 }
