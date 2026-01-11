@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,11 +23,10 @@ namespace CodeParsingNet9.CodeBaseManagement.Metadata.Source.DataTypes
         public readonly string Id;
         private readonly SourceMetadataInterfaceNodeMetadata Metadata = new SourceMetadataInterfaceNodeMetadata();
 
-        public SourceMetadataInterfaceNode(InterfaceDeclarationSyntax interfaceNode, string id)
+        public SourceMetadataInterfaceNode(InterfaceDeclarationSyntax interfaceNode, IdGenerator idGenerator)
         {
-            Id = id;
+            Id = idGenerator.GetNext();
             Name = interfaceNode.Identifier.Text;
-            // TODO: populate content
         }
     }
 }

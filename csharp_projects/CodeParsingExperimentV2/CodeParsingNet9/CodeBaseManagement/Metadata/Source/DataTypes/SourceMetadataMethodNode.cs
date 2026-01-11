@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,15 +18,15 @@ namespace CodeParsingNet9.CodeBaseManagement.Metadata.Source.DataTypes
         public string? IndirectExportedMethods { get; set; } = null;
     }
 
-    internal class SourceMetdataMethodNode : INode, IClassNodeMember
+    internal class SourceMetadataMethodNode : INode, IClassNodeMember
     {
         public readonly string Name;
         public readonly string Id;
         private readonly SourceMetadataMethodNodeMetadata Metadata = new SourceMetadataMethodNodeMetadata();
 
-        public SourceMetdataMethodNode(MethodDeclarationSyntax methodNode, string id)
+        public SourceMetadataMethodNode(MethodDeclarationSyntax methodNode, IdGenerator idGenerator)
         {
-            Id = id;
+            Id = idGenerator.GetNext();
             Name = methodNode.Identifier.Text;
         }
     }

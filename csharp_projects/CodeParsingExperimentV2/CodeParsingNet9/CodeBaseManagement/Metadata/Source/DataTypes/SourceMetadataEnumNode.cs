@@ -13,9 +13,9 @@ namespace CodeParsingNet9.CodeBaseManagement.Metadata.Source.DataTypes
         public readonly string Id;
         private readonly SourceMetadataMethodNodeMetadata Metadata = new SourceMetadataMethodNodeMetadata();
 
-        public SourceMetadataEnumNode(EnumDeclarationSyntax enumNode, string id)
+        public SourceMetadataEnumNode(EnumDeclarationSyntax enumNode, IdGenerator idGenerator)
         {
-            Id = id;
+            Id = idGenerator.GetNext();
             Name = enumNode.Identifier.Text;
         }
     }
