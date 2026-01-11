@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace CodeParsingNet9.CodeBaseManagement.Metadata.Source.DataTypes
 {
-    internal interface INode
+    internal interface ISourceMetadataNode
     {
     }
 
-    internal interface IClassNodeMember : INode
+    internal interface ISourceMetadataClassNodeMember : ISourceMetadataNode
     {
 
     }
 
-    internal interface IFileNodeMember : INode
+    internal interface ISourceMetadataFileNodeMember : ISourceMetadataNode
     {
 
     }

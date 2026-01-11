@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CodeParsingNet9.CodeBaseManagement.Metadata.Source.DataTypes
 {
-    internal class SourceMetadataEnumNode : INode, IFileNodeMember, IClassNodeMember
+    internal class SourceMetadataEnumNode : ISourceMetadataNode, ISourceMetadataFileNodeMember, ISourceMetadataClassNodeMember
     {
         public readonly string Name;
         public readonly string Id;

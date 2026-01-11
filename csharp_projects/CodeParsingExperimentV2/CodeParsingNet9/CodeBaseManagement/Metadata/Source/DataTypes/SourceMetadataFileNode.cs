@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace CodeParsingNet9.CodeBaseManagement.Metadata.Source.DataTypes
 {
-    internal class SourceMetadataFileNode : INode
+    internal class SourceMetadataFileNode : ISourceMetadataNode
     {
         public readonly string FilePath;
-        public readonly List<IFileNodeMember> Content = new List<IFileNodeMember>();
+        public readonly List<ISourceMetadataFileNodeMember> Content = new List<ISourceMetadataFileNodeMember>();
 
         public SourceMetadataFileNode(string filePath, Document doc, IdGenerator idGenerator)
         {

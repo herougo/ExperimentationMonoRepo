@@ -15,7 +15,7 @@ namespace CodeParsingNet9.CodeBaseManagement.Metadata.Source.DataTypes
         public string? IndirectExportedMethods { get; set; } = null;
     }
 
-    internal class SourceMetadataInterfaceNode : INode, IClassNodeMember, IFileNodeMember
+    internal class SourceMetadataInterfaceNode : ISourceMetadataNode, ISourceMetadataClassNodeMember, ISourceMetadataFileNodeMember
     {
         // TODO: adapt to have content
 

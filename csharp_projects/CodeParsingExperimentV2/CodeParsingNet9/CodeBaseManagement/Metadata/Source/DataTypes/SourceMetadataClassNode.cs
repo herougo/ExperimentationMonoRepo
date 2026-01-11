@@ -19,11 +19,11 @@ namespace CodeParsingNet9.CodeBaseManagement.Metadata.Source.DataTypes
     }
 
 
-    internal class SourceMetadataClassNode : INode, IFileNodeMember, IClassNodeMember
+    internal class SourceMetadataClassNode : ISourceMetadataNode, ISourceMetadataFileNodeMember, ISourceMetadataClassNodeMember
     {
         public readonly string Name;
         public readonly string Id;
-        public readonly List<IClassNodeMember>? Content  = new List<IClassNodeMember>();
+        public readonly List<ISourceMetadataClassNodeMember>? Content  = new List<ISourceMetadataClassNodeMember>();
         public readonly SourceMetadataClassNodeMetadata Metadata = new SourceMetadataClassNodeMetadata();
 
         public SourceMetadataClassNode(ClassDeclarationSyntax classNode, IdGenerator idGenerator)
