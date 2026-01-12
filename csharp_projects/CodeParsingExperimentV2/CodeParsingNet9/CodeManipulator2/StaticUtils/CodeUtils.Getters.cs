@@ -1,4 +1,5 @@
-﻿using CodeParsingNet9.Utility;
+﻿using CodeParsingNet9.Graphs.FullDependency;
+using CodeParsingNet9.Utility;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
@@ -207,6 +208,12 @@ namespace CodeParsingNet9.CodeManipulator2.StaticUtils
 
                 case IMethodSymbol _:
                     return CodeBlockNodeType.Method;
+
+                case IFieldSymbol _:
+                    return CodeBlockNodeType.FieldDeclaration;
+
+                case IPropertySymbol _:
+                    return CodeBlockNodeType.PropertyDeclaration;
 
                 default:
                     return CodeBlockNodeType.Other;
