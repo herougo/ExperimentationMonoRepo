@@ -9,8 +9,6 @@ using System.Threading.Tasks;
 
 namespace CodeParsingNet9.Graphs.FullDependency
 {
-
-
     public partial class FullDependencyGraph
     {
         public readonly Dictionary<CodeBlockNode, HashSet<CodeBlockArc>> DirectedEdges = new Dictionary<CodeBlockNode, HashSet<CodeBlockArc>>(new CodeBlockNodeComparer());
@@ -28,6 +26,16 @@ namespace CodeParsingNet9.Graphs.FullDependency
             return node;
         }
 
+        private CodeBlockNode GetNode(ISymbol symbol)
+        {
+            AllNodes.TryGetValue(symbol, out var node);
+            if (node == null)
+            {
+                throw new Exception("Missing node");
+            }
+            return node;
+        }
+
         private CodeBlockArc AddDirectedEdge(CodeBlockNode codeBlockIn, CodeBlockNode codeBlockOut, CodeBlockArcType codeBlockArcType)
         {
             var arc = new CodeBlockArc(codeBlockIn, codeBlockOut, codeBlockArcType);
@@ -37,50 +45,28 @@ namespace CodeParsingNet9.Graphs.FullDependency
             return arc;
         }
 
+        private CodeBlockArc? AddDirectedEdgeIfMissing(CodeBlockNode codeBlockIn, CodeBlockNode codeBlockOut, CodeBlockArcType codeBlockArcType)
+        {
+            if (!HasDirectedEdge(codeBlockIn, codeBlockOut, codeBlockArcType))
+            {
+                AddDirectedEdge(codeBlockIn, codeBlockOut, codeBlockArcType);
+            }
+
+            return null;
+        }
+
+        private bool HasDirectedEdge(CodeBlockNode codeBlockIn, CodeBlockNode codeBlockOut, CodeBlockArcType codeBlockArcType)
+        {
+            return DirectedEdges[codeBlockIn].Contains(new CodeBlockArc(codeBlockIn, codeBlockOut, codeBlockArcType));
+        }
+
         public async Task BuildAsync(List<Project> projects, Dictionary<string, Compilation> compilations)
         {
             await BuildAllNodesAndMemberArcs(projects);
 
+            await BuildMethodArcs(projects);
 
-            foreach (var project in projects)
-            {
-                var compilation = compilations[project.Name];
-
-                // Analyze all method declarations in all syntax trees
-                foreach (var document in project.Documents)
-                {
-                    var syntaxRoot = await document.GetSyntaxRootAsync();
-                    if (syntaxRoot == null) continue;
-
-                    var semanticModel = await document.GetSemanticModelAsync();
-                    if (semanticModel == null) continue;
-
-                    var methods = syntaxRoot.DescendantNodes().OfType<MethodDeclarationSyntax>();
-
-                    foreach (var methodDecl in methods)
-                    {
-                        var methodSymbol = semanticModel.GetDeclaredSymbol(methodDecl) as IMethodSymbol;
-                        if (methodSymbol == null) continue;
-
-                        var callerNode = GetOrAddNode(methodSymbol);
-
-                        // find all invocation expressions in this method body
-                        var invocations = methodDecl.DescendantNodes().OfType<InvocationExpressionSyntax>();
-
-                        foreach (var invocation in invocations)
-                        {
-                            var targetSymbol = semanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
-                            if (targetSymbol == null) continue;
-
-                            var calleeNode = GetOrAddNode(targetSymbol);
-
-                            // add edge caller -> callee
-                            if (!edges[callerNode].Contains(calleeNode))
-                                edges[callerNode].Add(calleeNode);
-                        }
-                    }
-                }
-            }
+            await BuildTypeArcs(projects);
         }
     }
 }
