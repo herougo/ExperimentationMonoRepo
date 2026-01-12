@@ -1,4 +1,5 @@
-﻿using Microsoft.CodeAnalysis;
+﻿using CodeParsingNet9.CodeManipulator2.StaticUtils;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.Collections.Generic;
@@ -62,7 +63,7 @@ namespace CodeParsingNet9.CodeManipulator
 
                 foreach (var methodDecl in methods)
                 {
-                    var methodSymbol = semanticModel.GetDeclaredSymbol(methodDecl) as IMethodSymbol;
+                    var methodSymbol = CodeUtils.GetDeclaredSymbol(methodDecl, semanticModel) as IMethodSymbol;
                     if (methodSymbol == null) continue;
 
                     var callerNode = GetOrAddNode(methodSymbol, allNodes, edges);

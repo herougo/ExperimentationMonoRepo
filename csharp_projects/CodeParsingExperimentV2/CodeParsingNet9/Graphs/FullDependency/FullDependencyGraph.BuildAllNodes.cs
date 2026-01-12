@@ -37,7 +37,7 @@ namespace CodeParsingNet9.Graphs.FullDependency
 
         private async Task<CodeBlockNode?> BuildAllMemberNodesRecursively(MemberDeclarationSyntax node, SemanticModel semanticModel)
         {
-            var symbol = semanticModel.GetDeclaredSymbol(node);
+            var symbol = CodeUtils.GetDeclaredSymbol(node, semanticModel);
             if (symbol == null)
             {
                 return null;

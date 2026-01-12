@@ -1,4 +1,5 @@
-﻿using CodeParsingNet9.CodeManipulator2.SyntaxWalkers;
+﻿using CodeParsingNet9.CodeManipulator2.StaticUtils;
+using CodeParsingNet9.CodeManipulator2.SyntaxWalkers;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -33,7 +34,7 @@ namespace CodeParsingNet9.Graphs.FullDependency
                     var methods = syntaxRoot.DescendantNodes().OfType<MethodDeclarationSyntax>();
                     foreach (var methodDecl in methods)
                     {
-                        var methodSymbol = semanticModel.GetDeclaredSymbol(methodDecl) as IMethodSymbol;
+                        var methodSymbol = CodeUtils.GetDeclaredSymbol(methodDecl, semanticModel) as IMethodSymbol;
                         if (methodSymbol == null) continue;
 
                         var callerNode = GetNode(methodSymbol);
@@ -53,7 +54,7 @@ namespace CodeParsingNet9.Graphs.FullDependency
                     var fields = syntaxRoot.DescendantNodes().OfType<FieldDeclarationSyntax>();
                     foreach (var fieldDecl in fields)
                     {
-                        var fieldSymbol = semanticModel.GetDeclaredSymbol(fieldDecl) as IFieldSymbol;
+                        var fieldSymbol = CodeUtils.GetDeclaredSymbol(fieldDecl, semanticModel) as IFieldSymbol;
                         if (fieldSymbol == null) continue;
 
                         var fieldNode = GetNode(fieldSymbol);
@@ -67,7 +68,7 @@ namespace CodeParsingNet9.Graphs.FullDependency
                     var properties = syntaxRoot.DescendantNodes().OfType<PropertyDeclarationSyntax>();
                     foreach (var propertyDecl in properties)
                     {
-                        var propertySymbol = semanticModel.GetDeclaredSymbol(propertyDecl) as IFieldSymbol;
+                        var propertySymbol = CodeUtils.GetDeclaredSymbol(propertyDecl, semanticModel) as IFieldSymbol;
                         if (propertySymbol == null) continue;
 
                         var propertyNode = GetNode(propertySymbol);

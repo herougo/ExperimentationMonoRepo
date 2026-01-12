@@ -42,7 +42,7 @@ namespace CodeParsingNet9.CodeManipulator2.StaticUtils
 
                     foreach (var methodDecl in methods)
                     {
-                        var methodSymbol = semanticModel.GetDeclaredSymbol(methodDecl) as IMethodSymbol;
+                        var methodSymbol = GetDeclaredSymbol(methodDecl, semanticModel) as IMethodSymbol;
                         if (methodSymbol == null) continue;
 
                         var callerNode = GetOrAddNode(methodSymbol, allNodes, edges);

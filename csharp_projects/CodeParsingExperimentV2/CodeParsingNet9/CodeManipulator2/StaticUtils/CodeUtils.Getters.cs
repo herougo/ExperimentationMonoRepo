@@ -1,6 +1,7 @@
 ﻿using CodeParsingNet9.Graphs.FullDependency;
 using CodeParsingNet9.Utility;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.Collections.Generic;
@@ -218,6 +219,21 @@ namespace CodeParsingNet9.CodeManipulator2.StaticUtils
                 default:
                     return CodeBlockNodeType.Other;
             }
+        }
+
+        public static ISymbol? GetDeclaredSymbol(MemberDeclarationSyntax node, SemanticModel semanticModel)
+        {
+            if (node is FieldDeclarationSyntax fieldDeclaration)
+            {
+                // Handle: int x, y;
+                if (fieldDeclaration.Declaration.Variables.Count != 1)
+                {
+                    return null;
+                }
+                return semanticModel.GetDeclaredSymbol(fieldDeclaration.Declaration.Variables[0]);
+            }
+
+            return semanticModel.GetDeclaredSymbol(node);
         }
     }
 }
