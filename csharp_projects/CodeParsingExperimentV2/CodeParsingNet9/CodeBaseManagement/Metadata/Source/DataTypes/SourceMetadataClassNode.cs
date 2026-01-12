@@ -1,4 +1,5 @@
-﻿using Microsoft.CodeAnalysis;
+﻿using CodeParsingNet9.CodeManipulator2.StaticUtils;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ namespace CodeParsingNet9.CodeBaseManagement.Metadata.Source.DataTypes
             Id = idGenerator.GetNext();
             Name = classNode.Identifier.Text;
 
-            foreach (var member in classNode.Members)
+            foreach (var member in CodeUtils.GetChildren(classNode))
             {
                 switch (member)
                 {

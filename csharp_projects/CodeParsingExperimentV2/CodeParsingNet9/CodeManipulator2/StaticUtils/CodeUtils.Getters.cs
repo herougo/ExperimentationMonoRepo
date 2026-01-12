@@ -176,5 +176,41 @@ namespace CodeParsingNet9.CodeManipulator2.StaticUtils
 
             return result;
         }
+
+        public static string GetSymbolId(ISymbol symbol)
+        {
+            return symbol.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat);
+        }
+
+        public static CodeBlockNodeType GetSymbolType(ISymbol symbol)
+        {
+            if (symbol == null)
+                return CodeBlockNodeType.Other;
+
+            switch (symbol)
+            {
+                case INamedTypeSymbol namedType:
+                    switch (namedType.TypeKind)
+                    {
+                        case TypeKind.Class:
+                            return CodeBlockNodeType.Class;
+
+                        case TypeKind.Interface:
+                            return CodeBlockNodeType.Interface;
+
+                        case TypeKind.Enum:
+                            return CodeBlockNodeType.Enum;
+
+                        default:
+                            return CodeBlockNodeType.Other;
+                    }
+
+                case IMethodSymbol _:
+                    return CodeBlockNodeType.Method;
+
+                default:
+                    return CodeBlockNodeType.Other;
+            }
+        }
     }
 }

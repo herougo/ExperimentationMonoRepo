@@ -19,9 +19,8 @@ namespace CodeParsingNet9.CodeBaseManagement.Metadata.Source.DataTypes
             FilePath = filePath;
 
             var rootNode = CodeUtils.GetRootNode(doc);
-            var namespaceNode = CodeUtils.GetNamespaceNode(rootNode);
-
-            foreach (var member in namespaceNode.Members)
+            
+            foreach (var member in CodeUtils.GetChildren(rootNode))
             {
                 switch (member)
                 {
