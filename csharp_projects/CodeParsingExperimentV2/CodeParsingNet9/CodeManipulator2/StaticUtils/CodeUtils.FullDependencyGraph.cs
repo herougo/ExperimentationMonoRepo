@@ -11,18 +11,6 @@ namespace CodeParsingNet9.CodeManipulator2.StaticUtils
 {
     public static partial class CodeUtils
     {
-        public static async Task<FullDependencyGraph> BuildFullDependencyGraphAsync(
-            Solution solution, Dictionary<string, Compilation> compilations
-        )
-        {
-            return await BuildFullDependencyGraphAsync(solution.Projects.ToList(), compilations);
-        }
-
-        public static async Task<FullDependencyGraph> BuildFullDependencyGraphAsync(
-            List<Project> projects, Dictionary<string, Compilation> compilations
-        )
-        {
-            
-        }
+        
     }
 }

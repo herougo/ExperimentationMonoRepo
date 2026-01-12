@@ -16,6 +16,24 @@ namespace CodeParsingNet9.Graphs.FullDependency
         ContainedMember = 2
     }
 
+    public static class CodeBlockArcTypeUtils
+    {
+        public static string ToString(CodeBlockArcType codeBlockArcType)
+        {
+            switch (codeBlockArcType)
+            {
+                case CodeBlockArcType.MethodInvocation:
+                    return "MethodInvocation";
+                case CodeBlockArcType.TypeUsage:
+                    return "TypeUsage";
+                case CodeBlockArcType.ContainedMember:
+                    return "ContainedMember";
+            }
+
+            return codeBlockArcType.ToString();
+        }
+    }
+
     public class CodeBlockArc
     {
         public readonly CodeBlockNode InNode;

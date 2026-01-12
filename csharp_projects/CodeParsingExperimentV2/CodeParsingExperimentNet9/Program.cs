@@ -3,6 +3,7 @@
 using CodeParsingNet9.CodeManipulator;
 using CodeParsingNet9.CodeManipulator2;
 using CodeParsingNet9.CodeManipulator2.StaticUtils;
+using CodeParsingNet9.Graphs.FullDependency;
 using CodeParsingNet9.Utility;
 
 
@@ -78,7 +79,7 @@ if (false)
     }
 }
 
-if (true)
+if (false)
 {
     var graph = await CodeUtils.BuildMethodDependencyGraphAsync(parser2.GetSolution(), parser2.GetCompilations());
     var project = parser2.GetProjectByName("Utility.Standard");
@@ -137,6 +138,38 @@ if (true)
 
 }
 
+if (true)
+{
+    FullDependencyGraph graph = new FullDependencyGraph();
+    await graph.BuildAsync(parser2.GetSolution().Projects.ToList());
+
+    foreach (var node in graph.AllNodes.Values)
+    {
+        var arcs = graph.DirectedEdges[node];
+
+        Console.WriteLine(node.ToString());
+
+        List<CodeBlockArcType> types = new List<CodeBlockArcType>() {
+            CodeBlockArcType.ContainedMember, CodeBlockArcType.TypeUsage, CodeBlockArcType.MethodInvocation
+        };
+        foreach (var type in types)
+        {
+            var arcsFiltered = arcs.Where(x => x.Type == type).ToList();
+
+            if (arcsFiltered.Count == 0)
+            {
+                continue;
+            }
+
+            Console.WriteLine("\t" + CodeBlockArcTypeUtils.ToString(type));
+            foreach (var arc in arcsFiltered)
+            {
+                Console.WriteLine("\t\t" + arc.OutNode.ToString());
+            }
+        }
+        
+    }
+}
 
 
 

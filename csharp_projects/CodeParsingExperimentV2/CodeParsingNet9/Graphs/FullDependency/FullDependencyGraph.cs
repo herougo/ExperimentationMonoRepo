@@ -60,7 +60,7 @@ namespace CodeParsingNet9.Graphs.FullDependency
             return DirectedEdges[codeBlockIn].Contains(new CodeBlockArc(codeBlockIn, codeBlockOut, codeBlockArcType));
         }
 
-        public async Task BuildAsync(List<Project> projects, Dictionary<string, Compilation> compilations)
+        public async Task BuildAsync(List<Project> projects)
         {
             await BuildAllNodesAndMemberArcs(projects);
 
