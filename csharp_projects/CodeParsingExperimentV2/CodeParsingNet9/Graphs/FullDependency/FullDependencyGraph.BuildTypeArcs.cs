@@ -37,7 +37,7 @@ namespace CodeParsingNet9.Graphs.FullDependency
                         var methodSymbol = CodeUtils.GetDeclaredSymbol(methodDecl, semanticModel) as IMethodSymbol;
                         if (methodSymbol == null) continue;
 
-                        var callerNode = GetNode(methodSymbol);
+                        var methodNode = GetNode(methodSymbol);
 
                         var walker = new TypeUsageWalker(semanticModel, default);
                         walker.Visit(methodDecl);
@@ -46,7 +46,7 @@ namespace CodeParsingNet9.Graphs.FullDependency
                         {
                             var typeNode = GetOrAddNode(type);
 
-                            AddDirectedEdgeIfMissing(typeNode, callerNode, CodeBlockArcType.TypeUsage);
+                            AddDirectedEdgeIfMissing(typeNode, methodNode, CodeBlockArcType.TypeUsage);
                         }
                     }
 
